@@ -32,7 +32,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            height: 100vh;
+            min-height: 100vh;
             overflow-x: hidden;
             overflow-y: auto;
             color: var(--light);
@@ -61,7 +61,7 @@
             background-repeat: no-repeat;
             opacity: 0;
             transition: opacity 1.5s ease-in-out;
-            filter: brightness(0.4);
+            filter: brightness(0.2) contrast(1.1);
         }
 
         /* Animated Elements */
@@ -117,45 +117,46 @@
         /* Header Styles */
         header {
             text-align: center;
-            padding: 40px 20px 20px;
+            padding: 30px 20px 20px;
             position: relative;
             z-index: 1;
         }
 
         .logo-container {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
         }
 
         .logo-circle {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             background: var(--light);
             display: flex;
             justify-content: center;
             align-items: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            margin-right: 20px;
+            margin-bottom: 15px;
             animation: pulse 2s infinite;
             border: 3px solid var(--accent-pink);
         }
 
         .logo-circle img {
-            width: 80px;
+            width: 70px;
             height: auto;
             border-radius: 8px;
         }
 
         .school-name {
-            text-align: left;
+            text-align: center;
         }
 
         header h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-size: 2.2rem;
             font-weight: 700;
             background: linear-gradient(to right, #fff, var(--light-pink));
             -webkit-background-clip: text;
@@ -164,12 +165,13 @@
             margin-bottom: 5px;
             animation: fadeInDown 1.2s ease forwards;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            line-height: 1.2;
         }
 
         header h2 {
             color: var(--light-pink);
             margin-bottom: 10px;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-weight: 500;
             animation: fadeInUp 1.2s ease forwards;
             letter-spacing: 1px;
@@ -181,24 +183,25 @@
         }
 
         .contact-info p {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin: 2px 0;
+            line-height: 1.4;
         }
 
         .welcome-container {
             max-width: 800px;
-            margin: 30px auto;
-            padding: 25px;
+            margin: 25px auto;
+            padding: 20px;
             background: rgba(139, 69, 19, 0.2);
             backdrop-filter: blur(10px);
-            border-radius: 20px;
+            border-radius: 16px;
             border: 1px solid rgba(233, 30, 99, 0.3);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             animation: slideInUp 1.5s ease forwards;
         }
 
         .welcome-title {
-            font-size: 2rem;
+            font-size: 1.7rem;
             margin-bottom: 15px;
             color: var(--light-pink);
             text-align: center;
@@ -206,7 +209,7 @@
         }
 
         .welcome-text {
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 1.6;
             margin-bottom: 15px;
             text-align: center;
@@ -223,37 +226,37 @@
 
         .info-item {
             flex: 1;
-            min-width: 200px;
+            min-width: 150px;
             text-align: center;
-            padding: 10px;
+            padding: 10px 5px;
         }
 
         .info-item i {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 8px;
             color: var(--light-pink);
         }
 
         .info-item p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 25px;
-            padding: 40px 20px 100px;
+            gap: 15px;
+            padding: 30px 15px 80px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         /* SUBJECT CARDS */
         .subject-card {
-            width: 220px;
-            height: 140px;
-            padding: 25px;
-            border-radius: 16px;
+            width: 160px;
+            height: 120px;
+            padding: 20px 15px;
+            border-radius: 12px;
             background: var(--card-gradient);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(233, 30, 99, 0.3);
@@ -283,34 +286,36 @@
         }
 
         .subject-card:hover {
-            transform: translateY(-10px) scale(1.05);
+            transform: translateY(-8px) scale(1.05);
             box-shadow: 0 15px 30px rgba(139, 69, 19, 0.4);
             background: linear-gradient(135deg, rgba(233, 30, 99, 0.8), rgba(139, 69, 19, 0.9));
             border-color: rgba(255, 255, 255, 0.5);
         }
 
         .subject-card i {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
+            font-size: 1.8rem;
+            margin-bottom: 12px;
             color: var(--light-pink);
         }
 
         .subject-card a {
             text-decoration: none;
             color: #fff;
-            font-size: 1.15rem;
+            font-size: 1rem;
             font-weight: 600;
             z-index: 1;
+            text-align: center;
         }
 
         footer {
             text-align: center;
-            padding: 25px;
-            font-size: 0.9rem;
+            padding: 20px 15px;
+            font-size: 0.85rem;
             margin-top: 20px;
             background: rgba(93, 64, 55, 0.5);
             backdrop-filter: blur(10px);
             border-top: 1px solid rgba(233, 30, 99, 0.3);
+            line-height: 1.4;
         }
 
         /* ANIMATIONS */
@@ -345,31 +350,78 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.2rem;
-            }
-            
+        @media (min-width: 768px) {
             .logo-container {
-                flex-direction: column;
+                flex-direction: row;
             }
             
-            .school-name {
-                text-align: center;
-                margin-top: 15px;
-            }
-            
-            .welcome-title {
-                font-size: 1.7rem;
-            }
-            
-            .subject-card {
-                width: 160px;
+            .logo-circle {
+                margin-right: 20px;
+                margin-bottom: 0;
+                width: 120px;
                 height: 120px;
             }
             
-            .exam-info {
-                flex-direction: column;
+            .logo-circle img {
+                width: 80px;
+            }
+            
+            .school-name {
+                text-align: left;
+            }
+            
+            header h1 {
+                font-size: 2.8rem;
+            }
+            
+            header h2 {
+                font-size: 1.3rem;
+            }
+            
+            .welcome-container {
+                padding: 25px;
+            }
+            
+            .welcome-title {
+                font-size: 2rem;
+            }
+            
+            .welcome-text {
+                font-size: 1.1rem;
+            }
+            
+            .subject-card {
+                width: 200px;
+                height: 130px;
+            }
+            
+            .subject-card i {
+                font-size: 2rem;
+            }
+            
+            .subject-card a {
+                font-size: 1.1rem;
+            }
+            
+            .container {
+                gap: 20px;
+                padding: 40px 20px 100px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .subject-card {
+                width: 220px;
+                height: 140px;
+                padding: 25px;
+            }
+            
+            .subject-card i {
+                font-size: 2.2rem;
+            }
+            
+            .subject-card a {
+                font-size: 1.15rem;
             }
         }
     </style>
