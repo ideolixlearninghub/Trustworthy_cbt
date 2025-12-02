@@ -9,55 +9,59 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url('https://source.unsplash.com/1600x900/?education,students,books') no-repeat center center fixed;
-      background-size: cover;
+      background: #f5f5f5;
     }
 
-    .overlay {
-      background: rgba(0, 0, 0, 0.55);
-      position: fixed;
-      inset: 0;
+    .header {
+      background: brown;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .logo {
+      width: 110px;
+      margin-bottom: 10px;
     }
 
     .container {
-      position: relative;
-      z-index: 2;
-      max-width: 700px;
-      margin: 60px auto;
+      max-width: 900px;
+      margin: 40px auto;
       background: white;
-      padding: 35px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
-      text-align: center;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     }
 
     h1 {
       color: brown;
-      font-size: 30px;
+      font-size: 28px;
       margin-bottom: 10px;
+      text-align: center;
     }
 
     p {
+      text-align: center;
+      color: #444;
       font-size: 16px;
-      color: #333;
-      margin-bottom: 25px;
-      line-height: 1.6;
+      line-height: 1.5;
+      margin-bottom: 30px;
     }
 
-    h3 {
-      color: #e91e63;
+    .subjects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-gap: 15px;
       margin-top: 20px;
-      font-size: 20px;
     }
 
     .subjects a {
-      display: block;
-      margin: 10px 0;
-      padding: 12px;
       background: brown;
+      padding: 14px;
       color: white;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 8px;
+      text-align: center;
       font-size: 18px;
       transition: 0.3s;
     }
@@ -65,35 +69,53 @@
     .subjects a:hover {
       background: #e91e63;
     }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #555;
+    }
   </style>
 </head>
 
 <body>
-  <div class="overlay"></div>
+
+  <!-- HEADER WITH LOGO -->
+  <div class="header">
+    <img src="https://www.ideolixlearninghub.com/assets/img/logo.png" class="logo" alt="Logo">
+    <h2>Trustworthy College CBT Portal</h2>
+  </div>
 
   <div class="container">
-    <h1>Welcome to Trustworthy College CBT Portal</h1>
+    <h1>Welcome to the Examination Portal</h1>
 
     <p>
-      This portal is designed to help all students prepare effectively for the upcoming examinations.
-      Select your subject below to begin your computer-based test.  
-      Read each question carefully and submit when you are done.
+      This platform is designed to help you practise and prepare for your school examinations.
+      Select your subject below to begin your computer-based test. Read each question carefully
+      and submit when you are done.
     </p>
 
-    <h3>Select a Subject</h3>
-
     <div class="subjects">
+
+      <a href="Yoruba/index.html">Yoruba</a>
       <a href="biology/index.html">Biology</a>
       <a href="chemistry/index.html">Chemistry</a>
       <a href="civic_education/index.html">Civic Education</a>
       <a href="data_processing/index.html">Data Processing</a>
       <a href="economics/index.html">Economics</a>
-      <a href="english/index.html">English</a>
+      <a href="english_language/index.html">English Language</a>
+      <a href="government/index.html">Government</a>
+      <a href="islamic_studies/index.html">Islamic Studies</a>
+      <a href="lit_in_english/index.html">Literature in English</a>
       <a href="mathematics/index.html">Mathematics</a>
       <a href="physics/index.html">Physics</a>
-      <a href="Yoruba/index.html">Yoruba</a> <!-- FIXED LINK -->
+
     </div>
   </div>
+
+  <footer>
+    © 2025 Trustworthy College • Powered by Ideolix Learning Hub
+  </footer>
 
 </body>
 </html>
