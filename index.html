@@ -1,711 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - CBT Examination Portal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trustworthy College CBT Portal</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://source.unsplash.com/1600x900/?education,students,books') no-repeat center center fixed;
+      background-size: cover;
+    }
 
-    <style>
-        * { 
-            margin: 0; 
-            padding: 0; 
-            box-sizing: border-box; 
-        }
+    .overlay {
+      background: rgba(0, 0, 0, 0.55);
+      position: fixed;
+      inset: 0;
+    }
 
-        :root {
-            --primary-brown: #8B4513;
-            --dark-brown: #5D4037;
-            --medium-brown: #A1887F;
-            --light-brown: #D7CCC8;
-            --accent-gold: #D4AF37;
-            --light-gold: #F9E076;
-            --gradient: linear-gradient(135deg, var(--primary-brown), var(--dark-brown));
-            --card-gradient: linear-gradient(135deg, rgba(139, 69, 19, 0.9), rgba(93, 64, 55, 0.8));
-            --light: #f8f9fa;
-            --dark: #121212;
-        }
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 60px auto;
+      background: white;
+      padding: 35px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+      text-align: center;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            min-height: 100vh;
-            overflow-x: hidden;
-            color: var(--light);
-            position: relative;
-            background: var(--dark);
-        }
+    h1 {
+      color: brown;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
 
-        /* Background Slideshow */
-        .bg-slideshow {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            overflow: hidden;
-        }
+    p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
 
-        .bg-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-            filter: brightness(0.15) contrast(1.1);
-        }
+    h3 {
+      color: #e91e63;
+      margin-top: 20px;
+      font-size: 20px;
+    }
 
-        /* Header Styles */
-        header {
-            text-align: center;
-            padding: 30px 20px 20px;
-            position: relative;
-            z-index: 1;
-        }
+    .subjects a {
+      display: block;
+      margin: 10px 0;
+      padding: 12px;
+      background: brown;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
 
-        .logo-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .logo-circle {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: var(--light);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            margin-bottom: 15px;
-            animation: pulse 2s infinite;
-            border: 3px solid var(--accent-gold);
-        }
-
-        .logo-circle img {
-            width: 70px;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .school-name {
-            text-align: center;
-        }
-
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            font-weight: 700;
-            background: linear-gradient(to right, #fff, var(--light-gold));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 5px;
-            animation: fadeInDown 1.2s ease forwards;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            line-height: 1.2;
-        }
-
-        header h2 {
-            color: var(--light-gold);
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-            font-weight: 500;
-            animation: fadeInUp 1.2s ease forwards;
-            letter-spacing: 1px;
-        }
-
-        .contact-info {
-            margin-top: 10px;
-            animation: fadeIn 2s ease forwards;
-        }
-
-        .contact-info p {
-            font-size: 0.9rem;
-            margin: 2px 0;
-            line-height: 1.4;
-        }
-
-        /* Welcome Container - Redesigned */
-        .welcome-container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 30px 25px;
-            background: rgba(139, 69, 19, 0.15);
-            backdrop-filter: blur(15px);
-            border-radius: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-            animation: slideInUp 1.5s ease forwards;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .welcome-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-gold), var(--light-gold), var(--accent-gold));
-            border-radius: 20px 20px 0 0;
-        }
-
-        .welcome-title {
-            font-size: 1.9rem;
-            margin-bottom: 20px;
-            color: var(--light-gold);
-            text-align: center;
-            font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .welcome-text {
-            font-size: 1.05rem;
-            line-height: 1.7;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #f0f0f0;
-        }
-
-        .highlight-box {
-            background: rgba(212, 175, 55, 0.1);
-            border-left: 4px solid var(--accent-gold);
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .highlight-box p {
-            margin: 0;
-            font-weight: 500;
-            color: var(--light-gold);
-        }
-
-        .exam-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .info-item {
-            background: rgba(93, 64, 55, 0.3);
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease, background 0.3s ease;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-        }
-
-        .info-item:hover {
-            transform: translateY(-5px);
-            background: rgba(139, 69, 19, 0.3);
-            border-color: rgba(212, 175, 55, 0.3);
-        }
-
-        .info-item i {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--light-gold);
-        }
-
-        .info-item p {
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        /* Subjects Section */
-        .subjects-section {
-            padding: 20px 15px 60px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 1.8rem;
-            color: var(--light-gold);
-            margin-bottom: 30px;
-            font-weight: 600;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
-            border-radius: 3px;
-        }
-
-        .subjects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 20px;
-            justify-content: center;
-        }
-
-        /* Subject Cards - Enhanced */
-        .subject-card {
-            height: 140px;
-            padding: 25px 15px;
-            border-radius: 15px;
-            background: var(--card-gradient);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            opacity: 0;
-            transform: translateY(30px);
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .subject-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.7s ease;
-        }
-
-        .subject-card:hover::before {
-            left: 100%;
-        }
-
-        .subject-card:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.4);
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(139, 69, 19, 0.9));
-            border-color: rgba(212, 175, 55, 0.5);
-        }
-
-        .subject-card i {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: var(--light-gold);
-            transition: transform 0.3s ease;
-        }
-
-        .subject-card:hover i {
-            transform: scale(1.2);
-        }
-
-        .subject-card a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.1rem;
-            font-weight: 600;
-            z-index: 1;
-            text-align: center;
-            transition: color 0.3s ease;
-        }
-
-        .subject-card:hover a {
-            color: var(--light-gold);
-        }
-
-        .subject-count {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(212, 175, 55, 0.9);
-            color: var(--dark-brown);
-            font-size: 0.8rem;
-            font-weight: 700;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px 15px;
-            font-size: 0.85rem;
-            margin-top: 30px;
-            background: rgba(93, 64, 55, 0.3);
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-            line-height: 1.4;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            margin-top: 15px;
-        }
-
-        .footer-links a {
-            color: var(--light-gold);
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 0.9rem;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
-        /* ANIMATIONS */
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideInUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes cardEntrance {
-            from { opacity: 0; transform: translateY(40px) scale(0.9); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
-
-        /* Responsive Design */
-        @media (min-width: 768px) {
-            .logo-container {
-                flex-direction: row;
-            }
-            
-            .logo-circle {
-                margin-right: 20px;
-                margin-bottom: 0;
-                width: 120px;
-                height: 120px;
-            }
-            
-            .logo-circle img {
-                width: 80px;
-            }
-            
-            .school-name {
-                text-align: left;
-            }
-            
-            header h1 {
-                font-size: 2.8rem;
-            }
-            
-            header h2 {
-                font-size: 1.3rem;
-            }
-            
-            .welcome-container {
-                padding: 35px 30px;
-            }
-            
-            .welcome-title {
-                font-size: 2.2rem;
-            }
-            
-            .welcome-text {
-                font-size: 1.15rem;
-            }
-            
-            .subjects-grid {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            }
-            
-            .subject-card {
-                height: 150px;
-            }
-            
-            .subject-card a {
-                font-size: 1.15rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .subjects-grid {
-                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            }
-            
-            .subject-card {
-                height: 160px;
-                padding: 30px 20px;
-            }
-            
-            .subject-card i {
-                font-size: 2.2rem;
-            }
-            
-            .subject-card a {
-                font-size: 1.2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .subjects-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .subject-card {
-                height: 130px;
-                padding: 20px 10px;
-            }
-            
-            .subject-card i {
-                font-size: 1.8rem;
-            }
-            
-            .subject-card a {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    .subjects a:hover {
+      background: #e91e63;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Background Slideshow -->
-    <div class="bg-slideshow">
-        <div class="bg-slide" style="background-image:url('https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); opacity: 1;"></div>
-        <div class="bg-slide" style="background-image:url('https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80')"></div>
-        <div class="bg-slide" style="background-image:url('https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')"></div>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <h1>Welcome to Trustworthy College CBT Portal</h1>
+
+    <p>
+      This portal is designed to help all students prepare effectively for the upcoming examinations.
+      Select your subject below to begin your computer-based test.  
+      Read each question carefully and submit when you are done.
+    </p>
+
+    <h3>Select a Subject</h3>
+
+    <div class="subjects">
+      <a href="biology/index.html">Biology</a>
+      <a href="chemistry/index.html">Chemistry</a>
+      <a href="civic_education/index.html">Civic Education</a>
+      <a href="data_processing/index.html">Data Processing</a>
+      <a href="economics/index.html">Economics</a>
+      <a href="english/index.html">English</a>
+      <a href="mathematics/index.html">Mathematics</a>
+      <a href="physics/index.html">Physics</a>
+      <a href="Yoruba/index.html">Yoruba</a> <!-- FIXED LINK -->
     </div>
+  </div>
 
-    <header>
-        <div class="logo-container">
-            <div class="logo-circle">
-                <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" alt="The Trustworthy College Logo">
-            </div>
-            <div class="school-name">
-                <h1>THE TRUSTWORTHY COLLEGE</h1>
-                <h2>MOTTO: NURTURE FOR PIETY</h2>
-            </div>
-        </div>
-
-        <div class="contact-info">
-            <p>Email: trustworthysch16@gmail.com</p>
-            <p>Address: No. 1 CTCS Avenue, Coca-Cola Junction, Orimerunmu, Mowe, Ogun State</p>
-        </div>
-    </header>
-
-    <main>
-        <div class="welcome-container">
-            <h2 class="welcome-title">🎓 Welcome to Your First Term Examination</h2>
-            
-            <p class="welcome-text">Dear esteemed students, welcome to the First Term Computer-Based Test (CBT) examination for the 2025/2026 Academic Session. This digital platform has been designed to provide you with a modern, efficient, and fair examination experience.</p>
-            
-            <div class="highlight-box">
-                <p><i class="fas fa-lightbulb"></i> IMPORTANT: Ensure you have a stable internet connection and read all instructions carefully before beginning any examination.</p>
-            </div>
-            
-            <p class="welcome-text">Select your examination subject from the comprehensive list below. Each examination contains carefully curated questions designed to assess your understanding of the curriculum.</p>
-            
-            <div class="exam-info">
-                <div class="info-item">
-                    <i class="fas fa-calendar-alt"></i>
-                    <p>First Term Examination</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <p>2025/2026 Academic Session</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-clock"></i>
-                    <p>1 Hour Per Subject</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-laptop"></i>
-                    <p>Computer-Based Test</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="subjects-section">
-            <h2 class="section-title">📚 Select Your Examination Subject</h2>
-            
-            <div class="subjects-grid">
-                <!-- Core Sciences -->
-                <div class="subject-card">
-                    <span class="subject-count">40</span>
-                    <i class="fas fa-square-root-alt"></i>
-                    <a href="mathematics/index.html">Mathematics</a>
-                </div>
-                <div class="subject-card">
-                    <span class="subject-count">40</span>
-                    <i class="fas fa-language"></i>
-                    <a href="english_language/index.html">English Language</a>
-                </div>
-                <div class="subject-card">
-                    <span class="subject-count">40</span>
-                    <i class="fas fa-dna"></i>
-                    <a href="biology/index.html">Biology</a>
-                </div>
-                <div class="subject-card">
-                    <span class="subject-count">40</span>
-                    <i class="fas fa-atom"></i>
-                    <a href="physics/index.html">Physics</a>
-                </div>
-                <div class="subject-card">
-                    <span class="subject-count">40</span>
-                    <i class="fas fa-flask"></i>
-                    <a href="chemistry/index.html">Chemistry</a>
-                </div>
-                
-                <!-- Social Sciences -->
-                <div class="subject-card">
-                    <span class="subject-count">40</span>
-                    <i class="fas fa-landmark"></i>
-                    <a href="government/index.html">Government</a>
-                </div>
-                <div class="subject-card">
-                    <span class="subject-count">40</span>
-                    <i class="fas fa-user-graduate"></i>
-                    <a href="civic_education/index.html">Civic Education</a>
-                </div>
-                <div class="subject-card">
-                    <span class="subject-count">40</span>
-                    <i class="fas fa-chart-line"></i>
-                    <a href="economics/index.html">Economics</a>
-                </div>
-                
-                <!-- Technical Subjects -->
-                <div class="subject-card">
-                    <span class="subject-count">40</span>
-                    <i class="fas fa-database"></i>
-                    <a href="data_processing/index.html">Data Processing</a>
-                </div>
-                
-                <!-- Languages and Arts -->
-                <div class="subject-card">
-                    <span class="subject-count">40</span>
-                    <i class="fas fa-font"></i>
-                    <a href="yoruba/index.html">Yoruba Language</a>
-                </div>
-                <div class="subject-card">
-                    <span class="subject-count">40</span>
-                    <i class="fas fa-book-open"></i>
-                    <a href="lit_in_english/index.html">Literature in English</a>
-                </div>
-                
-                <!-- Religious Studies -->
-                <div class="subject-card">
-                    <span class="subject-count">40</span>
-                    <i class="fas fa-mosque"></i>
-                    <a href="islamic_studies/index.html">Islamic Studies</a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>© 2025 The Trustworthy College | First Term CBT Examination Portal</p>
-            <p>Email: trustworthysch16@gmail.com | Address: No. 1 CTCS Avenue, Coca-Cola Junction, Orimerunmu, Mowe, Ogun State</p>
-            <div class="footer-links">
-                <a href="#"><i class="fas fa-shield-alt"></i> Academic Integrity Policy</a>
-                <a href="#"><i class="fas fa-question-circle"></i> Technical Support</a>
-                <a href="#"><i class="fas fa-exclamation-triangle"></i> Examination Guidelines</a>
-            </div>
-            <p style="margin-top: 15px; font-size: 0.8rem; color: var(--light-brown);">
-                <i class="fas fa-laptop-code"></i> Powered by The Trustworthy College ICT Department
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        // Background slideshow
-        const slides = document.querySelectorAll('.bg-slide');
-        let current = 0;
-        
-        function nextSlide() {
-            slides[current].style.opacity = 0;
-            current = (current + 1) % slides.length;
-            slides[current].style.opacity = 1;
-        }
-        
-        // Start slideshow
-        setInterval(nextSlide, 6000);
-        
-        // Card entrance animation with staggered delay
-        const cards = document.querySelectorAll('.subject-card');
-        cards.forEach((c, i) => {
-            setTimeout(() => {
-                c.style.opacity = 1;
-                c.style.transform = 'translateY(0)';
-                c.style.animation = 'cardEntrance 0.6s ease forwards';
-            }, 200 + i * 80);
-        });
-        
-        // Add click sound effect (optional)
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                // Optional: Add a subtle click effect
-                card.style.transform = 'translateY(-10px) scale(1.05)';
-                setTimeout(() => {
-                    card.style.transform = 'translateY(-10px) scale(1.05)';
-                }, 150);
-            });
-        });
-        
-        // Update active subject count
-        document.addEventListener('DOMContentLoaded', () => {
-            const totalSubjects = document.querySelectorAll('.subject-card').length;
-            const subjectCountElements = document.querySelectorAll('.subject-count');
-            
-            // All subjects have 40 questions as per your structure
-            subjectCountElements.forEach(el => {
-                el.textContent = '40';
-            });
-        });
-    </script>
 </body>
 </html>
