@@ -14,13 +14,14 @@
         }
         
         body {
-            background-color: #f8f3e9;
-            color: #5d4037;
+            background-color: #0f1a2a;
+            color: #e8f1f5;
             line-height: 1.6;
             position: relative;
+            min-height: 100vh;
         }
         
-        /* Dimmed background overlay */
+        /* Dimmed background overlay with government theme */
         body::before {
             content: '';
             position: fixed;
@@ -28,192 +29,339 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.4; /* Dimmed background */
+            opacity: 0.15;
             z-index: -1;
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container */
+        /* Container with government color theme (blue/gold) */
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.92);
-            box-shadow: 0 0 20px rgba(93, 64, 55, 0.2);
-            border-radius: 10px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            padding: 25px;
+            background: linear-gradient(135deg, #1a2b3c 0%, #0f1a2a 100%);
+            box-shadow: 0 15px 40px rgba(25, 113, 194, 0.25);
+            border-radius: 16px;
+            margin-top: 25px;
+            margin-bottom: 25px;
             position: relative;
             overflow: hidden;
+            border: 3px solid #1e88e5;
+            backdrop-filter: blur(5px);
         }
         
-        /* Header - Only logo */
+        /* Blue decorative border effect */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #0d47a1, #1e88e5, #0d47a1);
+            z-index: 2;
+        }
+        
+        /* Header with government theme */
         .header {
             text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #d7ccc8;
-            margin-bottom: 25px;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+            position: relative;
+            border-bottom: 2px solid #1e88e5;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #1e88e5, transparent);
         }
         
         .logo {
-            max-width: 150px;
+            max-width: 140px;
             height: auto;
             margin-bottom: 15px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            border-radius: 10px;
+            border: 3px solid #ffd700;
+            padding: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .subject-title {
+            color: #64b5f6;
+            font-size: 2.4rem;
+            margin: 10px 0 5px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+            letter-spacing: 1px;
+        }
+        
+        .exam-info {
+            color: #90caf9;
+            font-size: 1.1rem;
+            margin-top: 5px;
         }
         
         /* Sections */
         .section {
             display: none;
-            padding: 20px;
+            padding: 25px;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .active {
             display: block;
         }
         
-        /* Welcome message */
+        /* Welcome message with government theme */
         .welcome-message {
-            background-color: #ffccbc;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 20px 0;
+            background: linear-gradient(135deg, rgba(30, 136, 229, 0.1) 0%, rgba(13, 71, 161, 0.3) 100%);
+            padding: 35px;
+            border-radius: 12px;
+            margin: 25px 0;
             text-align: center;
-            font-size: 17px;
+            font-size: 1.2rem;
             line-height: 1.8;
-            color: #5d4037;
-            border-left: 5px solid #8d6e63;
+            color: #e8f1f5;
+            border-left: 5px solid #1e88e5;
+            border-right: 1px solid rgba(30, 136, 229, 0.3);
+            border-top: 1px solid rgba(30, 136, 229, 0.2);
+            border-bottom: 1px solid rgba(30, 136, 229, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
         }
         
-        /* Buttons */
+        .welcome-message::before {
+            content: '🏛️';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.1;
+        }
+        
+        /* Buttons with government theme */
         .btn {
             display: inline-block;
-            background-color: #8d6e63;
+            background: linear-gradient(135deg, #1e88e5 0%, #0d47a1 100%);
             color: white;
             border: none;
-            padding: 12px 24px;
-            font-size: 16px;
-            border-radius: 5px;
+            padding: 15px 32px;
+            font-size: 1.1rem;
+            border-radius: 10px;
             cursor: pointer;
             transition: all 0.3s;
-            margin: 10px 5px;
-            font-weight: 600;
+            margin: 12px 8px;
+            font-weight: 700;
             letter-spacing: 0.5px;
+            border: 2px solid rgba(100, 181, 246, 0.5);
+            box-shadow: 0 6px 15px rgba(30, 136, 229, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: rotate(30deg);
+            transition: all 0.5s;
         }
         
         .btn:hover {
-            background-color: #6d4c41;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #64b5f6 0%, #1e88e5 100%);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(30, 136, 229, 0.5);
+            color: white;
+        }
+        
+        .btn:hover::after {
+            left: 100%;
         }
         
         .btn:focus {
-            outline: 2px solid #ffab91;
-            outline-offset: 2px;
+            outline: 2px solid #64b5f6;
+            outline-offset: 3px;
         }
         
         .btn-secondary {
-            background-color: #a1887f;
+            background: linear-gradient(135deg, #546e7a 0%, #37474f 100%);
+            color: #e8f1f5;
+            border-color: #78909c;
         }
         
         .btn-secondary:hover {
-            background-color: #8d6e63;
+            background: linear-gradient(135deg, #78909c 0%, #546e7a 100%);
         }
         
         .btn-success {
-            background-color: #5d8c5a;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            border-color: #229954;
         }
         
         .btn-success:hover {
-            background-color: #4a6c47;
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
         }
         
         .btn-danger {
-            background-color: #d32f2f;
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            color: white;
+            border-color: #922b21;
         }
         
         .btn-danger:hover {
-            background-color: #b71c1c;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
         }
         
         .btn-container {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 35px;
         }
         
         /* Form elements */
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 28px;
         }
         
         label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-weight: 600;
-            color: #5d4037;
+            color: #64b5f6;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
         }
         
         input[type="text"] {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #d7ccc8;
-            border-radius: 5px;
-            font-size: 16px;
-            background-color: #faf5f0;
-            transition: border 0.3s;
+            padding: 16px;
+            background: rgba(15, 26, 42, 0.7);
+            border: 2px solid #546e7a;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            color: #e8f1f5;
+            transition: all 0.3s;
+            font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #8d6e63;
+            border-color: #1e88e5;
             outline: none;
-            box-shadow: 0 0 0 2px rgba(141, 110, 99, 0.2);
+            box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.3);
+            background: rgba(15, 26, 42, 0.9);
         }
         
         .error-message {
-            color: #d32f2f;
-            font-size: 14px;
-            margin-top: 5px;
+            color: #ff6b6b;
+            font-size: 0.95rem;
+            margin-top: 8px;
             display: none;
+            font-weight: 500;
         }
         
-        /* Instructions */
+        /* Instructions with government theme */
         .instructions {
-            background-color: #f5ebe9;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 5px solid #8d6e63;
+            background: linear-gradient(135deg, rgba(84, 110, 122, 0.1) 0%, rgba(26, 43, 60, 0.7) 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-left: 5px solid #1e88e5;
+            border: 1px solid rgba(30, 136, 229, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .instructions::before {
+            content: '⚖️';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2.5rem;
+            opacity: 0.1;
         }
         
         .instructions h3 {
-            margin-bottom: 15px;
-            color: #5d4037;
+            margin-bottom: 20px;
+            color: #64b5f6;
+            font-size: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .instructions h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #1e88e5;
+            border-radius: 2px;
         }
         
         .instructions ul {
-            padding-left: 20px;
+            padding-left: 25px;
         }
         
         .instructions li {
-            margin-bottom: 10px;
+            margin-bottom: 14px;
+            line-height: 1.7;
+            padding-left: 8px;
+            position: relative;
+        }
+        
+        .instructions li::before {
+            content: '•';
+            color: #1e88e5;
+            font-size: 1.5rem;
+            position: absolute;
+            left: -20px;
+            top: -5px;
         }
         
         /* Exam interface */
         .exam-header {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #d7ccc8;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(30, 136, 229, 0.3);
         }
         
         .student-info {
-            font-size: 22px;
+            font-size: 1.6rem;
             font-weight: bold;
-            color: #5d4037;
-            margin-bottom: 15px;
+            color: #64b5f6;
+            margin-bottom: 25px;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(30, 136, 229, 0.1) 0%, rgba(84, 110, 122, 0.2) 100%);
+            border-radius: 12px;
+            border: 1px solid rgba(30, 136, 229, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
         .exam-controls {
@@ -221,24 +369,34 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(15, 26, 42, 0.5);
+            border-radius: 12px;
+            border: 1px solid rgba(30, 136, 229, 0.2);
         }
         
         .question-counter {
-            font-size: 16px;
-            color: #8d6e63;
+            font-size: 1.2rem;
+            color: #64b5f6;
             font-weight: 600;
+            padding: 10px 20px;
+            background: rgba(30, 136, 229, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(30, 136, 229, 0.3);
         }
         
         .timer-container {
-            background: #5d4037;
-            color: #ffccbc;
-            padding: 10px 15px;
-            border-radius: 5px;
+            background: linear-gradient(135deg, #1e88e5 0%, #0d47a1 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
             font-weight: bold;
-            font-size: 18px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-size: 1.3rem;
+            box-shadow: 0 4px 12px rgba(30, 136, 229, 0.4);
             display: none;
+            border: 2px solid rgba(100, 181, 246, 0.5);
+            font-family: 'Courier New', monospace;
         }
         
         .submit-container {
@@ -246,37 +404,72 @@
         }
         
         .exam-content {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            background: rgba(15, 26, 42, 0.4);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(30, 136, 229, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
         .question-text {
-            font-size: 18px;
-            margin-bottom: 20px;
+            font-size: 1.35rem;
+            margin-bottom: 25px;
             font-weight: 600;
-            color: #5d4037;
-            line-height: 1.5;
+            color: #64b5f6;
+            line-height: 1.6;
+            padding: 20px;
+            background: rgba(84, 110, 122, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid #1e88e5;
         }
         
         .options-container {
-            margin-left: 10px;
+            margin-left: 15px;
         }
         
         .option {
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             display: flex;
-            align-items: flex-start;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.2s;
+            align-items: center;
+            padding: 18px 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            background: rgba(26, 43, 60, 0.5);
+            border: 1px solid rgba(84, 110, 122, 0.3);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(30, 136, 229, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s;
         }
         
         .option:hover {
-            background-color: #f5ebe9;
+            background: rgba(30, 136, 229, 0.1);
+            border-color: #1e88e5;
+            transform: translateX(5px);
+        }
+        
+        .option:hover::before {
+            transform: translateX(100%);
         }
         
         .option input {
-            margin-right: 10px;
-            margin-top: 3px;
+            margin-right: 15px;
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            accent-color: #1e88e5;
         }
         
         .option label {
@@ -284,79 +477,149 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
+            color: #e8f1f5;
+            font-size: 1.1rem;
+            line-height: 1.5;
         }
         
         /* Question navigation */
         .question-navigation {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #d7ccc8;
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 2px solid rgba(30, 136, 229, 0.3);
         }
         
         .question-navigation h3 {
-            margin-bottom: 15px;
-            color: #5d4037;
+            margin-bottom: 20px;
+            color: #64b5f6;
             text-align: center;
+            font-size: 1.5rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .question-navigation h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #1e88e5;
+            border-radius: 2px;
         }
         
         .question-grid {
             display: grid;
             grid-template-columns: repeat(10, 1fr);
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 12px;
+            margin-bottom: 25px;
         }
         
         .question-number {
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #d7ccc8;
-            border-radius: 5px;
+            background: linear-gradient(135deg, rgba(84, 110, 122, 0.3) 0%, rgba(55, 71, 79, 0.5) 100%);
+            border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
-            transition: all 0.2s;
+            transition: all 0.3s;
+            border: 1px solid rgba(30, 136, 229, 0.3);
+            color: #e8f1f5;
+            font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background-color: #bcaaa4;
+            background: linear-gradient(135deg, rgba(30, 136, 229, 0.3) 0%, rgba(25, 118, 210, 0.5) 100%);
+            transform: scale(1.1);
+            border-color: #1e88e5;
         }
         
         .question-number.current {
-            background-color: #8d6e63;
+            background: linear-gradient(135deg, #1e88e5 0%, #0d47a1 100%);
             color: white;
+            border-color: #64b5f6;
+            box-shadow: 0 4px 10px rgba(30, 136, 229, 0.4);
+            transform: scale(1.1);
         }
         
         .question-number.answered {
-            background-color: #a5d6a7;
-            color: #2e7d32;
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            border-color: #2ecc71;
         }
         
         .navigation-buttons {
             display: flex;
             justify-content: space-between;
-            margin-top: 20px;
+            margin-top: 25px;
         }
         
-        /* Results */
+        /* Results section - NO SCORE DISPLAY */
         .results-container {
             text-align: center;
-            padding: 30px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(15, 26, 42, 0.8) 0%, rgba(26, 43, 60, 0.9) 100%);
+            border-radius: 16px;
+            border: 2px solid #1e88e5;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .results-container::before {
+            content: '✅';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 4rem;
+            opacity: 0.1;
+        }
+        
+        .results-container h2 {
+            color: #64b5f6;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .student-info {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .subject {
+            font-size: 1.3rem;
+            color: #90caf9;
+            margin-bottom: 30px;
+            font-weight: 600;
         }
         
         .feedback {
-            font-size: 18px;
-            margin: 20px 0;
-            color: #5d4037;
+            font-size: 1.3rem;
+            margin: 25px 0;
+            color: #e8f1f5;
+            line-height: 1.7;
+            padding: 25px;
+            background: rgba(30, 136, 229, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(30, 136, 229, 0.3);
         }
         
         .submission-status {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #e8f5e9;
-            border-radius: 8px;
-            color: #2e7d32;
+            margin-top: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.2) 0%, rgba(46, 204, 113, 0.3) 100%);
+            border-radius: 12px;
+            color: #2ecc71;
+            font-size: 1.2rem;
+            border: 1px solid rgba(46, 204, 113, 0.5);
         }
         
         /* Responsive */
@@ -372,27 +635,96 @@
             
             .navigation-buttons {
                 flex-direction: column;
+                gap: 15px;
             }
             
             .btn {
                 width: 100%;
-                margin: 5px 0;
+                margin: 8px 0;
             }
+            
+            .subject-title {
+                font-size: 1.8rem;
+            }
+            
+            .question-text {
+                font-size: 1.2rem;
+            }
+            
+            .container {
+                padding: 15px;
+                margin: 15px;
+            }
+            
+            .welcome-message, .instructions, .exam-content {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .question-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+            
+            .question-number {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            
+            .subject-title {
+                font-size: 1.5rem;
+            }
+            
+            .results-container {
+                padding: 25px 15px;
+            }
+        }
+        
+        /* Back to Home button */
+        .back-home {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        /* Loading animation */
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(30, 136, 229, 0.3);
+            border-top: 4px solid #1e88e5;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header with logo only -->
+        <!-- Header with logo -->
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
+            <h1 class="subject-title">SS1 GOVERNMENT EXAMINATION</h1>
+            <div class="exam-info">Objective Questions | 40 Questions | 40 Minutes</div>
         </div>
         
         <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College. We pray this examination helps you demonstrate the knowledge and virtues we nurture: honesty, diligence and piety. Best of luck."
+                "Welcome to The Trustworthy College Government Examination. Demonstrate your understanding of political systems, governance, and civic responsibilities. Good governance begins with informed citizens. Best of luck."
             </div>
             <div class="btn-container">
                 <button id="start-exam-btn" class="btn">Start Examination</button>
@@ -437,14 +769,16 @@
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This examination consists of 60 multiple-choice questions.</li>
-                    <li>You have 60 minutes to complete this examination (1 minute per question).</li>
+                    <li>This examination consists of 40 multiple-choice questions.</li>
+                    <li>You have 40 minutes to complete this examination (1 minute per question).</li>
                     <li>Answer all questions to the best of your ability.</li>
                     <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
                     <li>Answered questions will be marked with green in the question grid.</li>
                     <li>Once you submit your answers, you cannot change them.</li>
                     <li>Ensure you have a stable internet connection throughout the examination.</li>
                     <li>Any form of malpractice will lead to disqualification.</li>
+                    <li>Read each question carefully before selecting your answer.</li>
+                    <li>Your results will be submitted automatically upon completion.</li>
                 </ul>
             </div>
             
@@ -459,9 +793,9 @@
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
                 <div class="exam-controls">
-                    <div class="question-counter" id="question-counter">Question 1 of 60</div>
+                    <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">60:00</span>
+                        Time Left: <span id="timer">40:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
                         <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
@@ -489,331 +823,239 @@
                     <button type="button" id="next-question" class="btn">Next</button>
                 </div>
             </div>
+            
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Submitting your results...</p>
+            </div>
         </section>
         
-        <!-- Results Section -->
+        <!-- Results Section - NO SCORE DISPLAY -->
         <section id="results-section" class="section">
             <div class="results-container">
                 <h2>Examination Completed</h2>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">Government</div>
+                <div class="subject" id="results-subject">SS1 Government - Objective Questions</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the examination. Your results have been submitted successfully.
+                    Thank you for completing the Government examination. Your results have been submitted successfully to the examination board.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    Your score has been successfully submitted to the examination board.
+                    Your examination has been successfully submitted. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="btn-container">
                     <button type="button" id="restart-exam" class="btn">Take Another Exam</button>
+                    <div class="back-home">
+                        <a href="../index.html" class="btn btn-secondary">Back to Home</a>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 
     <script>
-        // SUBJECT: Government
+        // SUBJECT: SS1 GOVERNMENT - Objective Questions
         const originalQuestions = [
             {
-                question: "Government can best be defined as the body that ______.",
-                options: ["Makes and enforces laws", "Registers voters", "Punishes offenders", "Controls teachers"],
-                answer: "A"
-            },
-            {
-                question: "The primary purpose of government is ______.",
-                options: ["To create wealth", "To maintain law and order", "To collect taxes", "To promote tourism"],
-                answer: "B"
-            },
-            {
-                question: "The organ of government responsible for making laws is the ______.",
-                options: ["Judiciary", "Executive", "Legislature", "Police"],
+                question: "The doctrine of separation of powers was first developed by",
+                options: ["Thomas Hobbes", "John Locke", "Montesquieu", "Rousseau"],
                 answer: "C"
             },
             {
-                question: "Which of the following performs judicial functions?",
-                options: ["Parliament", "Court", "Army", "Ministry"],
+                question: "Separation of powers is intended to",
+                options: ["give all powers to the legislature", "prevent abuse of power", "allow dictatorship", "unite all powers in one person"],
                 answer: "B"
             },
             {
-                question: "A constitution is best described as ______.",
-                options: ["A book of political parties", "Rules and regulations guiding a state", "A military decree", "A set of customs only"],
-                answer: "B"
-            },
-            {
-                question: "The system of government where power is shared between central and component units is ______.",
-                options: ["Unitary", "Confederal", "Federal", "Parliamentary"],
-                answer: "C"
-            },
-            {
-                question: "Rule of law refers to ______.",
-                options: ["Rule by the king", "Supremacy of the law", "Rule of the army", "Rule of the wealthy"],
-                answer: "B"
-            },
-            {
-                question: "Which of these is not a characteristic of democracy?",
-                options: ["Free and fair elections", "Popular participation", "Military dictatorship", "Majority rule"],
-                answer: "C"
-            },
-            {
-                question: "A coup d'état refers to ______.",
-                options: ["Sudden overthrow of government", "Election malpractices", "Act of voting", "Court judgement"],
-                answer: "A"
-            },
-            {
-                question: "Which organ interprets laws?",
-                options: ["Judiciary", "Executive", "Legislature", "Police"],
-                answer: "A"
-            },
-            {
-                question: "Sovereignty means ______.",
-                options: ["Ability to trade", "Supreme power of the state", "Political party control", "Right to vote"],
-                answer: "B"
-            },
-            {
-                question: "A unitary system concentrates power at the ______.",
-                options: ["Local level", "Federal level", "Army", "Central government"],
+                question: "Which of the following is a branch of government?",
+                options: ["Legislature", "Judiciary", "Executive", "All of the above"],
                 answer: "D"
             },
             {
-                question: "Which of the following is a type of constitution?",
-                options: ["Written", "Obeyed", "Questioned", "Ethnic"],
-                answer: "A"
-            },
-            {
-                question: "Public opinion means ______.",
-                options: ["Private thoughts", "Opinion of few people", "Views of the majority", "Court judgement"],
+                question: "The Legislature makes laws. This is an example of",
+                options: ["executive power", "judicial power", "legislative power", "administrative power"],
                 answer: "C"
             },
             {
-                question: "Which of the following is a function of political parties?",
-                options: ["Conducting census", "Recruiting leaders", "Printing money", "Judging cases"],
+                question: "The Executive is responsible for",
+                options: ["interpreting laws", "enforcing laws", "making laws", "amending laws"],
                 answer: "B"
             },
             {
-                question: "Totalitarianism means ______.",
-                options: ["Government by elected leaders", "Government by intellectuals", "Government controls all aspects of life", "Rule by tradition"],
+                question: "The Judiciary functions to",
+                options: ["make laws", "enforce laws", "interpret laws", "ignore laws"],
                 answer: "C"
             },
             {
-                question: "Universal adult suffrage means ______.",
-                options: ["Only men vote", "Only graduates vote", "All qualified adults vote", "Only taxpayers vote"],
+                question: "Which of these is an advantage of separation of powers?",
+                options: ["Abuse of power is reduced", "Government becomes slow", "Conflict increases", "Centralization of power"],
+                answer: "A"
+            },
+            {
+                question: "A weakness of separation of powers is that it may lead to",
+                options: ["dictatorship", "inefficiency", "fairness", "accountability"],
+                answer: "B"
+            },
+            {
+                question: "The power of the Executive to veto bills is an example of",
+                options: ["legislative power", "judicial review", "checks and balances", "delegated legislation"],
                 answer: "C"
             },
             {
-                question: "A pressure group aims to ______.",
-                options: ["Take over government", "Influence government policy", "Conduct elections", "Make laws"],
+                question: "The Judiciary can check the Executive by",
+                options: ["passing laws", "declaring actions unconstitutional", "collecting taxes", "issuing licenses"],
                 answer: "B"
             },
             {
-                question: "Separation of powers was popularized by ______.",
-                options: ["Karl Marx", "Montesquieu", "Plato", "Rawlings"],
+                question: "Delegated legislation refers to laws made by",
+                options: ["Parliament only", "other authorities under powers given by Parliament", "the courts", "citizens directly"],
                 answer: "B"
             },
             {
-                question: "Franchise means the right to ______.",
-                options: ["Speak", "Vote", "Travel", "School"],
+                question: "Which of the following is an example of delegated legislation?",
+                options: ["Statutory instruments", "Constitution", "Act of Parliament", "Common law"],
+                answer: "A"
+            },
+            {
+                question: "One advantage of delegated legislation is that it",
+                options: ["slows down law-making", "allows detailed and flexible laws", "removes parliamentary oversight", "ignores public opinion"],
                 answer: "B"
             },
             {
-                question: "A citizen is a person who ______.",
-                options: ["Lives in a country only", "Has rights and duties in a state", "Speaks the language", "Pays taxes"],
+                question: "One problem of delegated legislation is that it may lead to",
+                options: ["democracy", "abuse of power", "participation of citizens", "faster law-making"],
                 answer: "B"
             },
             {
-                question: "One way of acquiring citizenship is ______.",
-                options: ["Bribery", "Marriage", "Traveling", "Buying property"],
-                answer: "B"
-            },
-            {
-                question: "Naturalization refers to ______.",
-                options: ["Being born in a country", "Becoming a citizen voluntarily", "Living illegally", "Studying abroad"],
-                answer: "B"
-            },
-            {
-                question: "Civic rights include ______.",
-                options: ["Paying taxes", "Voting", "Serving in army", "Obeying laws"],
-                answer: "B"
-            },
-            {
-                question: "Civic duties are ______.",
-                options: ["Rights", "Responsibilities", "Salaries", "Court cases"],
-                answer: "B"
-            },
-            {
-                question: "Which of the following is a civic duty?",
-                options: ["Contesting elections", "Paying taxes", "Issuing passports", "Declaring war"],
-                answer: "B"
-            },
-            {
-                question: "The constitution protects ______.",
-                options: ["Foreigners only", "Human rights", "Criminals", "Workers alone"],
-                answer: "B"
-            },
-            {
-                question: "The right to life can be denied by ______.",
-                options: ["Nobody", "Armed robbers", "Court of law", "Teachers"],
+                question: "Who usually authorizes delegated legislation?",
+                options: ["Courts", "President only", "Legislature", "Citizens"],
                 answer: "C"
             },
             {
-                question: "The right to fair hearing is a ______ right.",
-                options: ["Political", "Legal", "Social", "Economic"],
-                answer: "B"
-            },
-            {
-                question: "Which right is suspended during war?",
-                options: ["Right to vote", "Freedom of movement", "Right to education", "Public service"],
-                answer: "B"
-            },
-            {
-                question: "A good citizen must ______.",
-                options: ["Evade taxes", "Obey laws", "Insult leaders", "Reject voting"],
-                answer: "B"
-            },
-            {
-                question: "The rule of law protects citizens from ______.",
-                options: ["Equal rights", "Abuse of power", "Elections", "Groups"],
-                answer: "B"
-            },
-            {
-                question: "The principle of equality before the law means ______.",
-                options: ["Rich treated differently", "All citizens treated equally", "Police above the law", "Judges not accountable"],
-                answer: "B"
-            },
-            {
-                question: "A limitation to rights occurs when a person ______.",
-                options: ["Votes", "Breaks the law", "Requests justice", "Travels abroad"],
-                answer: "B"
-            },
-            {
-                question: "A good citizen must not ______.",
-                options: ["Pay tax", "Break laws", "Go to school", "Obey leaders"],
-                answer: "B"
-            },
-            {
-                question: "Drug abuse violates a citizen's ______.",
-                options: ["Right to clean environment", "Responsibility to obey laws", "Right to vote", "Freedom of speech"],
-                answer: "B"
-            },
-            {
-                question: "Voting is a ______.",
-                options: ["Right", "Tax", "Gift", "Punishment"],
+                question: "By delegation, Parliament allows",
+                options: ["Executive or agencies to make detailed rules", "Courts to make laws", "Citizens to enforce laws", "Governors to write constitutions"],
                 answer: "A"
             },
             {
-                question: "The legal way to settle disputes is through the ______.",
-                options: ["Family", "Court", "Army", "Strikes"],
-                answer: "B"
+                question: "Which of these is NOT a form of delegated legislation?",
+                options: ["By-laws", "Orders", "Statutory instruments", "Constitution"],
+                answer: "D"
             },
             {
-                question: "A responsible citizen must always ______.",
-                options: ["Destroy public property", "Protect public property", "Break rules", "Ignore duties"],
-                answer: "B"
-            },
-            {
-                question: "Aliens are ______.",
-                options: ["Citizens", "Non-citizens", "Soldiers", "Teachers"],
-                answer: "B"
-            },
-            {
-                question: "Which organ executes the laws?",
-                options: ["Legislature", "Judiciary", "Executive", "Police"],
-                answer: "C"
-            },
-            {
-                question: "Which of these is a feature of the civil service?",
-                options: ["Partisanship", "Permanence", "Political bias", "Instability"],
-                answer: "B"
-            },
-            {
-                question: "A minister is a member of the ______.",
-                options: ["Legislature", "Executive", "Judiciary", "Army"],
-                answer: "B"
-            },
-            {
-                question: "Public corporations are owned by ______.",
-                options: ["Private companies", "Individuals", "Government", "Foreigners"],
-                answer: "C"
-            },
-            {
-                question: "A polling booth is used during ______.",
-                options: ["Census", "Election", "Judgement", "Legislation"],
-                answer: "B"
-            },
-            {
-                question: "The INEC chairman is appointed by the ______.",
-                options: ["President", "Senate", "CJN", "Governor"],
+                question: "Delegated legislation is necessary because",
+                options: ["Parliament has limited time", "Judiciary cannot make laws", "Citizens are involved", "The President cannot veto"],
                 answer: "A"
             },
             {
-                question: "Which of the following conducts elections in Nigeria?",
-                options: ["CBN", "INEC", "NDLEA", "FRSC"],
-                answer: "B"
-            },
-            {
-                question: "Secret ballot ensures ______.",
-                options: ["Rigging", "Intimidation", "Free choice", "Corruption"],
-                answer: "C"
-            },
-            {
-                question: "A bicameral legislature has ______.",
-                options: ["Two chambers", "One chamber", "Three chambers", "No chamber"],
+                question: "Regulations made by government ministries are examples of",
+                options: ["statutory instruments", "acts of Parliament", "customary law", "constitution"],
                 answer: "A"
             },
             {
-                question: "The judiciary ensures ______.",
-                options: ["Bribery", "Justice", "Cheating", "Elections"],
+                question: "Subordinate authorities make delegated legislation mainly to",
+                options: ["pass ordinary laws", "deal with technical matters", "change the constitution", "control elections"],
                 answer: "B"
             },
             {
-                question: "The executive includes the ______.",
-                options: ["President", "Judge", "Speaker", "Clerk"],
+                question: "Citizenship refers to",
+                options: ["being loyal to the army", "being a member of a country with rights and duties", "paying taxes only", "owning property only"],
+                answer: "B"
+            },
+            {
+                question: "A person born in Nigeria automatically becomes a citizen by",
+                options: ["registration", "birth", "naturalization", "investment"],
+                answer: "B"
+            },
+            {
+                question: "Citizenship by descent means",
+                options: ["born in Nigeria", "one or both parents are Nigerian", "applying for naturalization", "marriage only"],
+                answer: "B"
+            },
+            {
+                question: "Which of the following is NOT a way to acquire citizenship in Nigeria?",
+                options: ["Birth", "Descent", "Naturalization", "Election"],
+                answer: "D"
+            },
+            {
+                question: "A duty of a citizen is to",
+                options: ["ignore the law", "pay taxes", "avoid national service", "vote only if convenient"],
+                answer: "B"
+            },
+            {
+                question: "Citizenship gives a person the right to",
+                options: ["make laws without Parliament", "enjoy protection of the state", "bypass taxation", "control government"],
+                answer: "B"
+            },
+            {
+                question: "Loss of citizenship may occur through",
+                options: ["treason", "loyalty", "birth", "descent"],
                 answer: "A"
             },
             {
-                question: "The Nigerian Senate consists of ______ senators.",
-                options: ["109", "36", "72", "360"],
+                question: "Naturalization refers to",
+                options: ["citizenship by birth", "citizenship given to a foreigner", "citizenship by marriage only", "loss of citizenship"],
+                answer: "B"
+            },
+            {
+                question: "One responsibility of a citizen is to",
+                options: ["pay taxes", "make delegated legislation", "enforce laws", "declare war"],
                 answer: "A"
             },
             {
-                question: "A bill becomes law after the president gives ______.",
-                options: ["Signature", "Assent", "Approval by police", "Court order"],
-                answer: "B"
-            },
-            {
-                question: "Local government is created to bring government ______.",
-                options: ["Closer to the people", "Farther from citizens", "To the army", "To foreigners"],
+                question: "Citizenship ensures that citizens can",
+                options: ["participate in governance", "ignore elections", "overrule courts", "appoint legislators directly"],
                 answer: "A"
             },
             {
-                question: "The head of a local government is the ______.",
-                options: ["Governor", "Chairman", "Councillor", "Minister"],
+                question: "The constitution is",
+                options: ["a list of taxes", "the supreme law of the land", "only rules for the President", "an economic plan"],
                 answer: "B"
             },
             {
-                question: "A councillor represents the people at the ______.",
-                options: ["State level", "Local level", "Federal level", "Court"],
+                question: "One function of the constitution is to",
+                options: ["control elections only", "define powers of government", "enforce delegated legislation", "set market prices"],
                 answer: "B"
             },
             {
-                question: "Civil servants are expected to be ______.",
-                options: ["Political", "Non-partisan", "Biased", "Dishonest"],
+                question: "Nigeria operates under which type of constitution?",
+                options: ["Unwritten", "Written", "Customary only", "Religious only"],
                 answer: "B"
             },
             {
-                question: "Delegated legislation is made by the ______.",
-                options: ["Parliament only", "Bodies empowered by parliament", "Court", "Police"],
+                question: "The Nigerian Constitution guarantees",
+                options: ["rights and freedoms of citizens", "unlimited powers to rulers", "only economic rights", "nothing"],
+                answer: "A"
+            },
+            {
+                question: "Constitutional amendments are made by",
+                options: ["Judiciary only", "Legislature and sometimes referendum", "President only", "Citizens directly"],
                 answer: "B"
             },
             {
-                question: "The independence of the judiciary means ______.",
-                options: ["Courts obey politicians", "Judges decide cases freely", "Police control courts", "Citizens rule the courts"],
+                question: "The constitution helps to prevent",
+                options: ["democracy", "abuse of power", "participation of citizens", "law-making"],
                 answer: "B"
             },
             {
-                question: "Public service commissions handle ______.",
-                options: ["Punishment", "Employment and discipline", "Trading", "Banking"],
+                question: "Separation of powers is guaranteed by",
+                options: ["delegated legislation", "the constitution", "citizenship", "market rules"],
+                answer: "B"
+            },
+            {
+                question: "Fundamental human rights in Nigeria are protected by",
+                options: ["by-laws", "constitution", "statutory instruments", "executive orders"],
+                answer: "B"
+            },
+            {
+                question: "One importance of the constitution is that it",
+                options: ["defines citizens' rights and duties", "allows rulers to act without restriction", "eliminates elections", "ignores judiciary"],
+                answer: "A"
+            },
+            {
+                question: "The Nigerian Constitution is enforced by",
+                options: ["citizens only", "courts and government institutions", "Parliament only", "schools"],
                 answer: "B"
             }
         ];
@@ -823,14 +1065,14 @@
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 60 * 60; // 60 minutes in seconds
+        let timeLeft = 40 * 60; // 40 minutes in seconds
         let questions = [];
 
-        // Background images for rotation
+        // Background images for rotation (government theme)
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80',
-            'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+            'https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
+            'https://images.unsplash.com/photo-1504502350680-00f978cc2ac7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
         ];
 
         // DOM elements
@@ -846,7 +1088,7 @@
         let currentBgIndex = 0;
         function rotateBackground() {
             currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
-            document.body.style.setProperty('--bg-image', `url('${backgroundImages[currentBgIndex]}')`);
+            document.body.style.backgroundImage = `url('${backgroundImages[currentBgIndex]}')`;
         }
         
         // Rotate background every 10 seconds
@@ -870,7 +1112,7 @@
         // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 60 * 60; // Reset to 60 minutes
+            timeLeft = 40 * 60; // Reset to 40 minutes
             
             // Show timer container and submit button
             document.getElementById('timer-container').style.display = 'block';
@@ -890,6 +1132,13 @@
                     alert("Time's up! Your exam will be submitted automatically.");
                     calculateScore();
                 }
+                
+                // Warning colors
+                if (timeLeft <= 600) { // 10 minutes left
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
+                } else if (timeLeft <= 1200) { // 20 minutes left
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
+                }
             }, 1000);
         }
 
@@ -908,6 +1157,9 @@
                 document.getElementById('timer-container').style.display = 'none';
                 document.getElementById('submit-container').style.display = 'none';
             }
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
         }
 
         // Initialize event listeners
@@ -998,14 +1250,29 @@
             
             if (confirmed) {
                 clearInterval(timerInterval);
-                calculateScore();
+                showLoading();
+                setTimeout(() => {
+                    calculateScore();
+                }, 1500);
             }
         });
 
         document.getElementById('restart-exam').addEventListener('click', () => {
             clearInterval(timerInterval);
+            // Reset form
+            document.getElementById('first-name').value = '';
+            document.getElementById('middle-name').value = '';
+            document.getElementById('last-name').value = '';
             showSection('welcome');
         });
+
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+        }
 
         // Create question navigation grid
         function createQuestionGrid() {
@@ -1111,6 +1378,7 @@
         }
 
         function calculateScore() {
+            hideLoading();
             let score = 0;
             
             for (let i = 0; i < questions.length; i++) {
@@ -1119,8 +1387,8 @@
                 }
             }
             
-            // Submit to Google Form (score is sent but not displayed)
-            submitToGoogleForm(studentName, "Government", `${score}/${questions.length}`);
+            // Submit to Google Form WITHOUT showing score to student
+            submitToGoogleForm(studentName, "SS1 Government - Objective Questions", `${score}/${questions.length}`);
             
             // Show submission status
             document.getElementById('submission-status').style.display = 'block';
@@ -1142,8 +1410,18 @@
                 method: "POST",
                 mode: "no-cors",
                 body: formData
-            }).catch(err => console.warn("Form submission (no-cors) likely blocked for debug; data still sent."));
+            }).then(() => {
+                console.log("Government results submitted successfully");
+            }).catch(err => {
+                console.warn("Form submission (no-cors) likely blocked for debug; data still sent.");
+            });
         }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Focus on first input
+            document.getElementById('first-name').focus();
+        });
     </script>
 </body>
 </html>
