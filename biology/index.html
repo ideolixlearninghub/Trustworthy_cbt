@@ -14,13 +14,14 @@
         }
         
         body {
-            background-color: #f8f3e9;
-            color: #5d4037;
+            background-color: #0f1a0a;
+            color: #f5e9dd;
             line-height: 1.6;
             position: relative;
+            min-height: 100vh;
         }
         
-        /* Dimmed background overlay */
+        /* Dimmed background overlay with biology theme */
         body::before {
             content: '';
             position: fixed;
@@ -32,188 +33,335 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.4; /* Dimmed background */
+            opacity: 0.15;
             z-index: -1;
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container */
+        /* Container with biology color theme (green/leaf) */
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.92);
-            box-shadow: 0 0 20px rgba(93, 64, 55, 0.2);
-            border-radius: 10px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            padding: 25px;
+            background: linear-gradient(135deg, #0f2a1a 0%, #1a3a24 100%);
+            box-shadow: 0 15px 40px rgba(30, 114, 60, 0.25);
+            border-radius: 16px;
+            margin-top: 25px;
+            margin-bottom: 25px;
             position: relative;
             overflow: hidden;
+            border: 3px solid #27ae60;
+            backdrop-filter: blur(5px);
         }
         
-        /* Header - Only logo */
+        /* Green decorative border effect */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #27ae60, #2ecc71, #27ae60);
+            z-index: 2;
+        }
+        
+        /* Header with biology theme */
         .header {
             text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #d7ccc8;
-            margin-bottom: 25px;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+            position: relative;
+            border-bottom: 2px solid #27ae60;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #27ae60, transparent);
         }
         
         .logo {
-            max-width: 150px;
+            max-width: 140px;
             height: auto;
             margin-bottom: 15px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            border-radius: 10px;
+            border: 3px solid #27ae60;
+            padding: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .subject-title {
+            color: #2ecc71;
+            font-size: 2.4rem;
+            margin: 10px 0 5px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+            letter-spacing: 1px;
+        }
+        
+        .exam-info {
+            color: #90d6a3;
+            font-size: 1.1rem;
+            margin-top: 5px;
         }
         
         /* Sections */
         .section {
             display: none;
-            padding: 20px;
+            padding: 25px;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .active {
             display: block;
         }
         
-        /* Welcome message */
+        /* Welcome message with biology theme */
         .welcome-message {
-            background-color: #e8f5e9;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 20px 0;
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(26, 58, 36, 0.7) 100%);
+            padding: 35px;
+            border-radius: 12px;
+            margin: 25px 0;
             text-align: center;
-            font-size: 17px;
+            font-size: 1.2rem;
             line-height: 1.8;
-            color: #5d4037;
-            border-left: 5px solid #4caf50;
+            color: #f5e9dd;
+            border-left: 5px solid #27ae60;
+            border-right: 1px solid rgba(39, 174, 96, 0.3);
+            border-top: 1px solid rgba(39, 174, 96, 0.2);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
         }
         
-        /* Buttons */
+        .welcome-message::before {
+            content: '🧬';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.1;
+        }
+        
+        /* Buttons with green theme */
         .btn {
             display: inline-block;
-            background-color: #4caf50;
-            color: white;
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: #ffffff;
             border: none;
-            padding: 12px 24px;
-            font-size: 16px;
-            border-radius: 5px;
+            padding: 15px 32px;
+            font-size: 1.1rem;
+            border-radius: 10px;
             cursor: pointer;
             transition: all 0.3s;
-            margin: 10px 5px;
-            font-weight: 600;
+            margin: 12px 8px;
+            font-weight: 700;
             letter-spacing: 0.5px;
+            border: 2px solid rgba(46, 204, 113, 0.5);
+            box-shadow: 0 6px 15px rgba(39, 174, 96, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: rotate(30deg);
+            transition: all 0.5s;
         }
         
         .btn:hover {
-            background-color: #388e3c;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(39, 174, 96, 0.5);
+            color: #ffffff;
+        }
+        
+        .btn:hover::after {
+            left: 100%;
         }
         
         .btn:focus {
-            outline: 2px solid #81c784;
-            outline-offset: 2px;
+            outline: 2px solid #2ecc71;
+            outline-offset: 3px;
         }
         
         .btn-secondary {
-            background-color: #81c784;
+            background: linear-gradient(135deg, #5d7e6a 0%, #4a6e5a 100%);
+            color: #f5e9dd;
+            border-color: #7f8c8d;
         }
         
         .btn-secondary:hover {
-            background-color: #66bb6a;
+            background: linear-gradient(135deg, #7f8c8d 0%, #5d7e6a 100%);
         }
         
         .btn-success {
-            background-color: #5d8c5a;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            border-color: #229954;
         }
         
         .btn-success:hover {
-            background-color: #4a6c47;
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
         }
         
         .btn-danger {
-            background-color: #d32f2f;
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            color: white;
+            border-color: #922b21;
         }
         
         .btn-danger:hover {
-            background-color: #b71c1c;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
         }
         
         .btn-container {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 35px;
         }
         
         /* Form elements */
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 28px;
         }
         
         label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-weight: 600;
-            color: #5d4037;
+            color: #2ecc71;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
         }
         
         input[type="text"] {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #d7ccc8;
-            border-radius: 5px;
-            font-size: 16px;
-            background-color: #faf5f0;
-            transition: border 0.3s;
+            padding: 16px;
+            background: rgba(15, 42, 26, 0.7);
+            border: 2px solid #5d7e6a;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            color: #f5e9dd;
+            transition: all 0.3s;
+            font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #4caf50;
+            border-color: #27ae60;
             outline: none;
-            box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.3);
+            background: rgba(15, 42, 26, 0.9);
         }
         
         .error-message {
-            color: #d32f2f;
-            font-size: 14px;
-            margin-top: 5px;
+            color: #ff6b6b;
+            font-size: 0.95rem;
+            margin-top: 8px;
             display: none;
+            font-weight: 500;
         }
         
-        /* Instructions */
+        /* Instructions with biology theme */
         .instructions {
-            background-color: #e8f5e9;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 5px solid #4caf50;
+            background: linear-gradient(135deg, rgba(93, 126, 106, 0.1) 0%, rgba(26, 58, 36, 0.7) 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-left: 5px solid #27ae60;
+            border: 1px solid rgba(39, 174, 96, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .instructions::before {
+            content: '🔬';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2.5rem;
+            opacity: 0.1;
         }
         
         .instructions h3 {
-            margin-bottom: 15px;
-            color: #5d4037;
+            margin-bottom: 20px;
+            color: #2ecc71;
+            font-size: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .instructions h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #27ae60;
+            border-radius: 2px;
         }
         
         .instructions ul {
-            padding-left: 20px;
+            padding-left: 25px;
         }
         
         .instructions li {
-            margin-bottom: 10px;
+            margin-bottom: 14px;
+            line-height: 1.7;
+            padding-left: 8px;
+            position: relative;
+        }
+        
+        .instructions li::before {
+            content: '•';
+            color: #27ae60;
+            font-size: 1.5rem;
+            position: absolute;
+            left: -20px;
+            top: -5px;
         }
         
         /* Exam interface */
         .exam-header {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #d7ccc8;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(39, 174, 96, 0.3);
         }
         
         .student-info {
-            font-size: 22px;
+            font-size: 1.6rem;
             font-weight: bold;
-            color: #5d4037;
-            margin-bottom: 15px;
+            color: #2ecc71;
+            margin-bottom: 25px;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(93, 126, 106, 0.2) 100%);
+            border-radius: 12px;
+            border: 1px solid rgba(39, 174, 96, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
         .exam-controls {
@@ -221,24 +369,34 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(15, 42, 26, 0.5);
+            border-radius: 12px;
+            border: 1px solid rgba(39, 174, 96, 0.2);
         }
         
         .question-counter {
-            font-size: 16px;
-            color: #4caf50;
+            font-size: 1.2rem;
+            color: #2ecc71;
             font-weight: 600;
+            padding: 10px 20px;
+            background: rgba(39, 174, 96, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(39, 174, 96, 0.3);
         }
         
         .timer-container {
-            background: #4caf50;
-            color: #e8f5e9;
-            padding: 10px 15px;
-            border-radius: 5px;
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 10px;
             font-weight: bold;
-            font-size: 18px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-size: 1.3rem;
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
             display: none;
+            border: 2px solid rgba(46, 204, 113, 0.5);
+            font-family: 'Courier New', monospace;
         }
         
         .submit-container {
@@ -246,37 +404,72 @@
         }
         
         .exam-content {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            background: rgba(15, 42, 26, 0.4);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(39, 174, 96, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
         .question-text {
-            font-size: 18px;
-            margin-bottom: 20px;
+            font-size: 1.35rem;
+            margin-bottom: 25px;
             font-weight: 600;
-            color: #5d4037;
-            line-height: 1.5;
+            color: #2ecc71;
+            line-height: 1.6;
+            padding: 20px;
+            background: rgba(93, 126, 106, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid #27ae60;
         }
         
         .options-container {
-            margin-left: 10px;
+            margin-left: 15px;
         }
         
         .option {
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             display: flex;
-            align-items: flex-start;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.2s;
+            align-items: center;
+            padding: 18px 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            background: rgba(26, 58, 36, 0.5);
+            border: 1px solid rgba(93, 126, 106, 0.3);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(39, 174, 96, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s;
         }
         
         .option:hover {
-            background-color: #e8f5e9;
+            background: rgba(39, 174, 96, 0.1);
+            border-color: #27ae60;
+            transform: translateX(5px);
+        }
+        
+        .option:hover::before {
+            transform: translateX(100%);
         }
         
         .option input {
-            margin-right: 10px;
-            margin-top: 3px;
+            margin-right: 15px;
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            accent-color: #27ae60;
         }
         
         .option label {
@@ -284,79 +477,149 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
+            color: #f5e9dd;
+            font-size: 1.1rem;
+            line-height: 1.5;
         }
         
         /* Question navigation */
         .question-navigation {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #d7ccc8;
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 2px solid rgba(39, 174, 96, 0.3);
         }
         
         .question-navigation h3 {
-            margin-bottom: 15px;
-            color: #5d4037;
+            margin-bottom: 20px;
+            color: #2ecc71;
             text-align: center;
+            font-size: 1.5rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .question-navigation h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #27ae60;
+            border-radius: 2px;
         }
         
         .question-grid {
             display: grid;
             grid-template-columns: repeat(10, 1fr);
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 12px;
+            margin-bottom: 25px;
         }
         
         .question-number {
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #c8e6c9;
-            border-radius: 5px;
+            background: linear-gradient(135deg, rgba(93, 126, 106, 0.3) 0%, rgba(70, 103, 86, 0.5) 100%);
+            border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
-            transition: all 0.2s;
+            transition: all 0.3s;
+            border: 1px solid rgba(39, 174, 96, 0.3);
+            color: #f5e9dd;
+            font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background-color: #a5d6a7;
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.3) 0%, rgba(30, 160, 90, 0.5) 100%);
+            transform: scale(1.1);
+            border-color: #27ae60;
         }
         
         .question-number.current {
-            background-color: #4caf50;
-            color: white;
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: #ffffff;
+            border-color: #2ecc71;
+            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.4);
+            transform: scale(1.1);
         }
         
         .question-number.answered {
-            background-color: #a5d6a7;
-            color: #2e7d32;
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            border-color: #2ecc71;
         }
         
         .navigation-buttons {
             display: flex;
             justify-content: space-between;
-            margin-top: 20px;
+            margin-top: 25px;
         }
         
-        /* Results */
+        /* Results section - NO SCORE DISPLAY */
         .results-container {
             text-align: center;
-            padding: 30px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(15, 42, 26, 0.8) 0%, rgba(26, 58, 36, 0.9) 100%);
+            border-radius: 16px;
+            border: 2px solid #27ae60;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .results-container::before {
+            content: '✅';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 4rem;
+            opacity: 0.1;
+        }
+        
+        .results-container h2 {
+            color: #2ecc71;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .student-info {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .subject {
+            font-size: 1.3rem;
+            color: #90d6a3;
+            margin-bottom: 30px;
+            font-weight: 600;
         }
         
         .feedback {
-            font-size: 18px;
-            margin: 20px 0;
-            color: #5d4037;
+            font-size: 1.3rem;
+            margin: 25px 0;
+            color: #f5e9dd;
+            line-height: 1.7;
+            padding: 25px;
+            background: rgba(39, 174, 96, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(39, 174, 96, 0.3);
         }
         
         .submission-status {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #e8f5e9;
-            border-radius: 8px;
-            color: #2e7d32;
+            margin-top: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.2) 0%, rgba(46, 204, 113, 0.3) 100%);
+            border-radius: 12px;
+            color: #2ecc71;
+            font-size: 1.2rem;
+            border: 1px solid rgba(46, 204, 113, 0.5);
         }
         
         /* Responsive */
@@ -372,27 +635,96 @@
             
             .navigation-buttons {
                 flex-direction: column;
+                gap: 15px;
             }
             
             .btn {
                 width: 100%;
-                margin: 5px 0;
+                margin: 8px 0;
             }
+            
+            .subject-title {
+                font-size: 1.8rem;
+            }
+            
+            .question-text {
+                font-size: 1.2rem;
+            }
+            
+            .container {
+                padding: 15px;
+                margin: 15px;
+            }
+            
+            .welcome-message, .instructions, .exam-content {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .question-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+            
+            .question-number {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            
+            .subject-title {
+                font-size: 1.5rem;
+            }
+            
+            .results-container {
+                padding: 25px 15px;
+            }
+        }
+        
+        /* Back to Home button */
+        .back-home {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        /* Loading animation */
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(39, 174, 96, 0.3);
+            border-top: 4px solid #27ae60;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header with logo only -->
+        <!-- Header with logo -->
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
+            <h1 class="subject-title">SS1 BIOLOGY EXAMINATION</h1>
+            <div class="exam-info">Mid-Term Test | 40 Questions | 50 Minutes</div>
         </div>
         
         <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College. We pray this examination helps you demonstrate the knowledge and virtues we nurture: honesty, diligence and piety. Best of luck."
+                "Welcome to The Trustworthy College Biology Examination. Demonstrate your understanding of living organisms, tissues, and nutrition. Success comes from careful observation and analytical thinking. Best of luck."
             </div>
             <div class="btn-container">
                 <button id="start-exam-btn" class="btn">Start Examination</button>
@@ -437,14 +769,16 @@
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This examination consists of 40 multiple-choice questions.</li>
-                    <li>You have 40 minutes to complete this examination (1 minute per question).</li>
+                    <li>This examination consists of 40 multiple-choice questions covering Biology topics.</li>
+                    <li>You have 50 minutes to complete this examination.</li>
                     <li>Answer all questions to the best of your ability.</li>
                     <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
                     <li>Answered questions will be marked with green in the question grid.</li>
                     <li>Once you submit your answers, you cannot change them.</li>
                     <li>Ensure you have a stable internet connection throughout the examination.</li>
-                    <li>Any form of malpractice will lead to disqualification.</li>
+                    <li>Read each question carefully before selecting your answer.</li>
+                    <li>Your results will be submitted automatically upon completion.</li>
+                    <li>Demonstrate your understanding of biological concepts and processes.</li>
                 </ul>
             </div>
             
@@ -461,7 +795,7 @@
                 <div class="exam-controls">
                     <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">40:00</span>
+                        Time Left: <span id="timer">50:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
                         <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
@@ -489,232 +823,240 @@
                     <button type="button" id="next-question" class="btn">Next</button>
                 </div>
             </div>
+            
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Submitting your results...</p>
+            </div>
         </section>
         
-        <!-- Results Section -->
+        <!-- Results Section - NO SCORE DISPLAY -->
         <section id="results-section" class="section">
             <div class="results-container">
                 <h2>Examination Completed</h2>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">Biology</div>
+                <div class="subject" id="results-subject">SS1 Biology - Mid-Term Test</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the examination. Your results have been submitted successfully.
+                    Thank you for completing the Biology examination. Your results have been submitted successfully to the examination board.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    Your score has been successfully submitted to the examination board.
+                    Your examination has been successfully submitted. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="btn-container">
                     <button type="button" id="restart-exam" class="btn">Take Another Exam</button>
+                    <div class="back-home">
+                        <a href="../index.html" class="btn btn-secondary">Back to Home</a>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 
     <script>
-        // SUBJECT: Biology
+        // SUBJECT: SS1 BIOLOGY - Mid-Term Test
         const originalQuestions = [
             {
-                question: "Which of the following is a living organism?",
-                options: ["Muscle", "Nucleus", "Yeast", "Mitochondria"],
-                answer: "C"
-            },
-            {
-                question: "In the binomial system of naming organisms, the second name is the:",
-                options: ["Scientific name", "Common name", "Generic name", "Specific name"],
-                answer: "D"
-            },
-            {
-                question: "A group of closely related organisms capable of interbreeding to produce fertile offspring is known as members of a",
-                options: ["Kingdom", "Class", "Family", "Species"],
-                answer: "D"
-            },
-            {
-                question: "In which of the following levels of classification are the members most similar?",
-                options: ["Order", "Genus", "Species", "Phylum"],
-                answer: "C"
-            },
-            {
-                question: "The scientist who introduced binomial nomenclature in the classification of organisms was",
-                options: ["Charles Darwin", "Carolus Linnaeus", "John Ray", "Louis Pasteur"],
+                question: "Which of the following is NOT a type of plant tissue?",
+                options: ["Epidermal tissue", "Muscular tissue", "Vascular tissue", "Ground tissue"],
                 answer: "B"
             },
             {
-                question: "Animal cells are different from plant cells because animal cells have:",
-                options: ["Definite cell wall", "Large vacuoles", "Centrioles", "Chloroplasts"],
+                question: "The tissue responsible for transporting water and minerals in plants is called:",
+                options: ["Phloem", "Xylem", "Cambium", "Parenchyma"],
+                answer: "B"
+            },
+            {
+                question: "Which animal tissue is specialized for contraction and movement?",
+                options: ["Nervous tissue", "Connective tissue", "Muscular tissue", "Epithelial tissue"],
                 answer: "C"
             },
             {
-                question: "The proportion of a living cell is made up of nucleus and:",
-                options: ["Vacuole", "Cytoplasm", "Cell wall", "Cell sap"],
+                question: "Bones and cartilage are examples of:",
+                options: ["Epithelial tissues", "Connective tissues", "Muscular tissues", "Nervous tissues"],
                 answer: "B"
             },
             {
-                question: "The structure used for movement in Amoeba is:",
-                options: ["Cilia", "Pseudopodia", "Flagella", "None of the above"],
-                answer: "B"
-            },
-            {
-                question: "_________ is the study of animals that focuses on their behaviour and mode of feeding.",
-                options: ["Botany", "Biology", "Anatomy", "Zoology"],
-                answer: "D"
-            },
-            {
-                question: "The study of plants and how they could be harnessed into beneficial economical tools for mankind is:",
-                options: ["Biology", "Zoology", "Wildlife and Fisheries", "Botany"],
-                answer: "D"
-            },
-            {
-                question: "One of the following is not a branch of biology:",
-                options: ["Geography", "Anatomy", "Ecology", "Genetics"],
+                question: "In plants, the tissue that provides flexibility and support in young stems is:",
+                options: ["Collenchyma", "Sclerenchyma", "Parenchyma", "Xylem"],
                 answer: "A"
             },
             {
-                question: "The basic structural and fundamental functioning unit of an organism is:",
-                options: ["Tissue", "Cell", "Organ", "System"],
+                question: "Which of the following is a function of the skeletal system in animals?",
+                options: ["Photosynthesis", "Protection of internal organs", "Transpiration", "Digestion"],
                 answer: "B"
             },
             {
-                question: "The best term for the study of virus is:",
-                options: ["Virology", "Virustis", "Bacteriology", "Biology"],
-                answer: "A"
-            },
-            {
-                question: "One of the following processes is a method of scientific approach towards acquainting oneself with living things around us:",
-                options: ["Therapy", "Repulsion", "Pros and cons", "Hypothesis"],
-                answer: "D"
-            },
-            {
-                question: "The method strictly used by animals to obtain food from the product of plants is termed:",
-                options: ["Autotrophic", "Heterotrophic", "Sterotrophic", "Diadrophic"],
+                question: "The human vertebral column is part of the:",
+                options: ["Appendicular skeleton", "Axial skeleton", "Exoskeleton", "Hydrostatic skeleton"],
                 answer: "B"
             },
             {
-                question: "DNA in eukaryotic cells is contained in the:",
-                options: ["Central vacuole", "Nucleus", "Lysosome", "Golgi body"],
-                answer: "B"
-            },
-            {
-                question: "DNA formation is associated with:",
-                options: ["Golgi bodies", "Lysosomes", "Mitochondria", "Nucleus"],
-                answer: "D"
-            },
-            {
-                question: "_________ is defined as the ability of living organisms to feed which enables them in carrying out life functions.",
-                options: ["Nutrition", "Movement", "Excretion", "Growth"],
-                answer: "A"
-            },
-            {
-                question: "The ability of an organism to respond to changes in both internal and external stimuli is called _________.",
-                options: ["Reproduction", "Digestion", "Irritability", "Adaptation"],
+                question: "Which tissue covers the external surface of the body and lines internal organs?",
+                options: ["Connective tissue", "Muscular tissue", "Epithelial tissue", "Nervous tissue"],
                 answer: "C"
             },
             {
-                question: "The ability of living things to struggle for the necessities of life in order to survive in their various environment is called _________.",
-                options: ["Death", "Irritability", "Competition", "Reproduction"],
+                question: "Sclerenchyma cells in plants are characterized by:",
+                options: ["Thin walls and living cytoplasm", "Thick lignified walls and dead at maturity", "Ability to divide continuously", "Presence of chlorophyll"],
+                answer: "B"
+            },
+            {
+                question: "Ligaments and tendons are made up of:",
+                options: ["Muscular tissue", "Fibrous connective tissue", "Adipose tissue", "Epithelial tissue"],
+                answer: "B"
+            },
+            {
+                question: "Which of these is a supporting tissue in plants?",
+                options: ["Phloem only", "Xylem only", "Both xylem and phloem", "Parenchyma only"],
                 answer: "C"
             },
             {
-                question: "A group of closely related species is called _________.",
-                options: ["Family", "Genus", "Species", "Phylum"],
-                answer: "B"
-            },
-            {
-                question: "A group of closely related family is called _________.",
-                options: ["Order", "Phylum", "Species", "Genus"],
-                answer: "A"
-            },
-            {
-                question: "In the kingdom Monera, the DNA is scattered in the cytoplasm and not in the nucleus, hence they are called _________.",
-                options: ["Eukaryotes", "Prokaryotes", "Embryo", "Monera"],
-                answer: "B"
-            },
-            {
-                question: "Bacteria and photosynthetic blue-green bacterium is also known as _________.",
-                options: ["Photosynthetic bacteria", "Amoeba", "Euglena", "Blue-green algae"],
-                answer: "D"
-            },
-            {
-                question: "The kingdom Plantae is divided into _________.",
-                options: ["Four", "Three", "Two", "Six"],
-                answer: "B"
-            },
-            {
-                question: "The general name used for moss and liverwort is _________.",
-                options: ["Thallophyte", "Bryophyte", "Pteridophyte", "Phanerogams"],
-                answer: "B"
-            },
-            {
-                question: "Fern is a special plant under the group _________.",
-                options: ["Thallophyte", "Bryophyte", "Pteridophyte", "Phanerogam"],
+                question: "Blood is classified as a tissue because it:",
+                options: ["Contains red and white cells", "Is a fluid", "Is composed of similar cells performing a function", "Circulates in the body"],
                 answer: "C"
             },
             {
-                question: "One of the following are seed-bearing plant _________.",
-                options: ["Thallophyte", "Pteridophyte", "Bryophyte", "Spermophyte"],
+                question: "The meristematic tissue in plants is responsible for:",
+                options: ["Protection", "Growth", "Storage", "Transport"],
+                answer: "B"
+            },
+            {
+                question: "Which of these is NOT a function of epithelial tissue?",
+                options: ["Secretion", "Absorption", "Protection", "Contraction"],
                 answer: "D"
             },
             {
-                question: "The division of Gymnospermophyta can also be called",
-                options: ["coniferophyte", "vascular", "fern", "liverwort"],
-                answer: "A"
+                question: "Cartilage is found in all these parts except:",
+                options: ["Nose", "Ear pinna", "Intervertebral discs", "Shaft of long bones"],
+                answer: "D"
             },
             {
-                question: "One of the following is an example of cash crops",
-                options: ["rubber", "yam", "Pawpaw", "cassava"],
-                answer: "A"
-            },
-            {
-                question: "Poikilothermic animals are animals that are _________.",
-                options: ["Warm-blooded", "neutral blooded", "Cold-blooded", "Bloodless animals"],
+                question: "In woody plants, the main supporting tissue is:",
+                options: ["Parenchyma", "Collenchyma", "Sclerenchyma", "Chlorenchyma"],
                 answer: "C"
             },
             {
-                question: "The community of plants, animals, and decomposers that interact with one another and with the non-living components of the environment is termed _________.",
-                options: ["Ecosystem", "Evolution", "Photosynthesis", "Oviparous"],
-                answer: "A"
-            },
-            {
-                question: "Another term for the class Pisces is _________.",
-                options: ["Viviparous", "Osterity", "Gymnopedia", "Bilateral symmetry"],
+                question: "Neurons are the functional units of which tissue?",
+                options: ["Muscular", "Nervous", "Connective", "Epithelial"],
                 answer: "B"
             },
             {
-                question: "The movement in the water of the class Pisces is enhanced by their characteristic feature known as _________.",
-                options: ["Unilateral symmetry", "Bilateral symmetry", "Unsegmented body", "Divergency"],
+                question: "Which type of tissue stores fat in animals?",
+                options: ["Areolar tissue", "Adipose tissue", "Blood tissue", "Lymphatic tissue"],
                 answer: "B"
             },
             {
-                question: "The first vertebrate to adapt to live on land is the _________.",
-                options: ["class Aves", "Amphibian", "Reptile", "Mammalia"],
-                answer: "B"
-            },
-            {
-                question: "The class amphibians are oviparous i.e. they make use of _________.",
-                options: ["Internal fertilization", "External fertilization", "Asexual reproduction", "They don't lay eggs"],
-                answer: "B"
-            },
-            {
-                question: "The animal that has both male and female sex organs together in the same individual is _________.",
-                options: ["Neuter", "Bisexual", "Hermaphrodite", "Aphrodisiac"],
+                question: "The endoskeleton of mammals is primarily made of:",
+                options: ["Cartilage only", "Bone only", "Bone and cartilage", "Chitin"],
                 answer: "C"
             },
             {
-                question: "Classification of animals into smaller categories is based on the following features except _________.",
-                options: ["body symmetry", "body design", "body cavity", "radical segments"],
+                question: "The tissue that transports manufactured food in plants is:",
+                options: ["Xylem", "Phloem", "Epidermis", "Cambium"],
+                answer: "B"
+            },
+            {
+                question: "Which of the following organisms is autotrophic?",
+                options: ["Mushroom", "Grasshopper", "Spirogyra", "Human"],
+                answer: "C"
+            },
+            {
+                question: "The process by which green plants manufacture food is called:",
+                options: ["Chemosynthesis", "Photosynthesis", "Heterotrophism", "Digestion"],
+                answer: "B"
+            },
+            {
+                question: "All of the following are heterotrophs except:",
+                options: ["Fungi", "Animals", "Euglena", "Paramecium"],
+                answer: "C"
+            },
+            {
+                question: "Which of these is a parasitic plant?",
+                options: ["Venus flytrap", "Sunflower", "Mistletoe", "Cactus"],
+                answer: "C"
+            },
+            {
+                question: "Organisms that feed on dead organic matter are called:",
+                options: ["Parasites", "Saprophytes", "Carnivores", "Herbivores"],
+                answer: "B"
+            },
+            {
+                question: "The mode of nutrition in which an organism lives on or inside another organism is:",
+                options: ["Saprophytic", "Holozoic", "Parasitic", "Symbiotic"],
+                answer: "C"
+            },
+            {
+                question: "Which vitamin is synthesized by the human skin in sunlight?",
+                options: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
+                answer: "C"
+            },
+            {
+                question: "The enzyme present in saliva that acts on starch is:",
+                options: ["Pepsin", "Amylase", "Lipase", "Trypsin"],
+                answer: "B"
+            },
+            {
+                question: "Which of the following is a micronutrient?",
+                options: ["Carbohydrate", "Protein", "Vitamin", "Lipid"],
+                answer: "C"
+            },
+            {
+                question: "The breakdown of large food molecules into simpler absorbable forms is called:",
+                options: ["Ingestion", "Digestion", "Absorption", "Egestion"],
+                answer: "B"
+            },
+            {
+                question: "Which dental structure is used for grinding food in mammals?",
+                options: ["Incisors", "Canines", "Premolars", "Molars"],
                 answer: "D"
             },
             {
-                question: "One of the following is not homeothermic",
-                options: ["ostrich", "duck", "pigeon", "toad"],
-                answer: "D"
+                question: "In humans, protein digestion begins in the:",
+                options: ["Mouth", "Stomach", "Duodenum", "Ileum"],
+                answer: "B"
             },
             {
-                question: "Microscope is made of the following parts except",
-                options: ["body tube", "eye piece", "coarse focus knob", "wheel and axle"],
-                answer: "D"
+                question: "The end product of protein digestion is:",
+                options: ["Glucose", "Fatty acids", "Amino acids", "Glycerol"],
+                answer: "C"
+            },
+            {
+                question: "Which organ produces bile?",
+                options: ["Gall bladder", "Liver", "Pancreas", "Stomach"],
+                answer: "B"
+            },
+            {
+                question: "The function of bile in digestion is to:",
+                options: ["Digest fats", "Emulsify fats", "Digest proteins", "Break down starch"],
+                answer: "B"
+            },
+            {
+                question: "A plant that traps and digests insects is termed:",
+                options: ["Parasitic", "Symbiotic", "Carnivorous", "Saprophytic"],
+                answer: "C"
+            },
+            {
+                question: "Which of these elements is required for the formation of chlorophyll in plants?",
+                options: ["Calcium", "Magnesium", "Potassium", "Phosphorus"],
+                answer: "B"
+            },
+            {
+                question: "The process of taking in food into the mouth is called:",
+                options: ["Digestion", "Ingestion", "Absorption", "Assimilation"],
+                answer: "B"
+            },
+            {
+                question: "Which of these is NOT a digestive enzyme?",
+                options: ["Pepsin", "Insulin", "Amylase", "Lipase"],
+                answer: "B"
+            },
+            {
+                question: "The part of the alimentary canal where absorption of water mainly occurs is the:",
+                options: ["Stomach", "Small intestine", "Large intestine", "Oesophagus"],
+                answer: "C"
             }
         ];
 
@@ -723,14 +1065,14 @@
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 40 * 60; // 40 minutes in seconds
+        let timeLeft = 50 * 60; // 50 minutes in seconds
         let questions = [];
 
-        // Background images for rotation
+        // Background images for rotation (biology theme)
         const backgroundImages = [
             'https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1598755257130-c2aaca1f061c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+            'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
         ];
 
         // DOM elements
@@ -770,7 +1112,7 @@
         // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 40 * 60; // Reset to 40 minutes
+            timeLeft = 50 * 60; // Reset to 50 minutes
             
             // Show timer container and submit button
             document.getElementById('timer-container').style.display = 'block';
@@ -790,6 +1132,13 @@
                     alert("Time's up! Your exam will be submitted automatically.");
                     calculateScore();
                 }
+                
+                // Warning colors
+                if (timeLeft <= 600) { // 10 minutes left
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
+                } else if (timeLeft <= 1500) { // 25 minutes left
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
+                }
             }, 1000);
         }
 
@@ -808,6 +1157,9 @@
                 document.getElementById('timer-container').style.display = 'none';
                 document.getElementById('submit-container').style.display = 'none';
             }
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
         }
 
         // Initialize event listeners
@@ -898,14 +1250,29 @@
             
             if (confirmed) {
                 clearInterval(timerInterval);
-                calculateScore();
+                showLoading();
+                setTimeout(() => {
+                    calculateScore();
+                }, 1500);
             }
         });
 
         document.getElementById('restart-exam').addEventListener('click', () => {
             clearInterval(timerInterval);
+            // Reset form
+            document.getElementById('first-name').value = '';
+            document.getElementById('middle-name').value = '';
+            document.getElementById('last-name').value = '';
             showSection('welcome');
         });
+
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+        }
 
         // Create question navigation grid
         function createQuestionGrid() {
@@ -1011,6 +1378,7 @@
         }
 
         function calculateScore() {
+            hideLoading();
             let score = 0;
             
             for (let i = 0; i < questions.length; i++) {
@@ -1019,8 +1387,8 @@
                 }
             }
             
-            // Submit to Google Form (score is sent but not displayed)
-            submitToGoogleForm(studentName, "Biology", `${score}/${questions.length}`);
+            // Submit to Google Form WITHOUT showing score to student
+            submitToGoogleForm(studentName, "SS1 Biology - Mid-Term Test", `${score}/${questions.length}`);
             
             // Show submission status
             document.getElementById('submission-status').style.display = 'block';
@@ -1042,8 +1410,18 @@
                 method: "POST",
                 mode: "no-cors",
                 body: formData
-            }).catch(err => console.warn("Form submission (no-cors) likely blocked for debug; data still sent."));
+            }).then(() => {
+                console.log("Results submitted successfully");
+            }).catch(err => {
+                console.warn("Form submission (no-cors) likely blocked for debug; data still sent.");
+            });
         }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Focus on first input
+            document.getElementById('first-name').focus();
+        });
     </script>
 </body>
 </html>
