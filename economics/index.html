@@ -3,1147 +3,1276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Economics CBT Exam</title>
+    <title>Trustworthy College CBT Examination Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Reset and base styles */
+        /* Modern CSS Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
         }
-        
+
         body {
-            background-color: #f8f3e9;
-            color: #5d4037;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2c1810 0%, #3a2418 100%);
+            color: #e0d6d0;
             line-height: 1.6;
-            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
-        
-        /* Dimmed background overlay */
-        body::before {
+
+        /* Header with gradient */
+        .header {
+            background: linear-gradient(135deg, #4a2c1a 0%, #3a2418 30%, #2c1810 100%);
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 25px rgba(44, 24, 16, 0.5);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 3px solid #8b4513;
+        }
+
+        .header::before {
             content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(139, 69, 19, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 69, 19, 0.1) 0%, transparent 50%);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            border: 4px solid #d2691e;
+            transition: all 0.4s ease;
+            margin-bottom: 10px;
+        }
+
+        .logo:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+        }
+
+        .logo-text {
+            color: #ffcc99;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .school-info {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .school-name {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 5px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .school-name::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 3px;
+            background: linear-gradient(to right, #8b4513, #d2691e, #8b4513);
+            border-radius: 2px;
+        }
+
+        .school-tagline {
+            font-size: 1.4rem;
+            color: #d2b48c;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 15px;
+        }
+
+        /* Password Overlay */
+        .password-overlay {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            opacity: 0.4; /* Dimmed background */
-            z-index: -1;
-            transition: background-image 1.5s ease-in-out;
+            background: rgba(28, 15, 8, 0.98);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
         }
-        
-        /* Container */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.92);
-            box-shadow: 0 0 20px rgba(93, 64, 55, 0.2);
-            border-radius: 10px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+
+        .password-container {
+            background: linear-gradient(135deg, #3a2418 0%, #4a2c1a 100%);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+            border: 3px solid #8b4513;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .password-icon {
+            font-size: 4rem;
+            color: #d2691e;
+            margin-bottom: 25px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .password-title {
+            color: #ffcc99;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .password-subtitle {
+            color: #d2b48c;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .password-input-container {
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .password-input {
+            width: 100%;
+            padding: 18px 20px;
+            background: rgba(28, 15, 8, 0.9);
+            border: 2px solid #5a3825;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .password-input:focus {
+            outline: none;
+            border-color: #d2691e;
+            box-shadow: 0 0 0 3px rgba(210, 105, 30, 0.3);
+        }
+
+        .password-input::placeholder {
+            color: #a1887f;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #d2b48c;
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .toggle-password:hover {
+            color: #ffcc99;
+        }
+
+        .password-btn {
+            background: linear-gradient(135deg, #8b4513 0%, #d2691e 100%);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.4);
+            margin-top: 10px;
+        }
+
+        .password-btn:hover {
+            background: linear-gradient(135deg, #d2691e 0%, #8b4513 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.6);
+        }
+
+        .error-message {
+            color: #ff6b6b;
+            margin-top: 15px;
+            font-size: 1rem;
+            min-height: 24px;
+            display: none;
+        }
+
+        .access-granted {
+            color: #6bff8d;
+            margin-top: 15px;
+            font-size: 1rem;
+            min-height: 24px;
+            display: none;
+        }
+
+        .password-hint {
+            color: #a1887f;
+            font-size: 0.9rem;
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(139, 69, 19, 0.3);
+        }
+
+        .contact-admin {
+            background: rgba(28, 15, 8, 0.5);
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+            color: #d2b48c;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: none; /* Hidden until password is entered */
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            background: linear-gradient(135deg, #3a2418 0%, #4a2c1a 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(44, 24, 16, 0.4);
+            border: 2px solid #5a3825;
             position: relative;
             overflow: hidden;
         }
-        
-        /* Header - Only logo */
-        .header {
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #d7ccc8;
+
+        .welcome-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(210, 105, 30, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .welcome-section::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -50%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(139, 69, 19, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .welcome-title {
+            color: #ffcc99;
+            font-size: 2.5rem;
             margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+            z-index: 1;
         }
-        
-        .logo {
-            max-width: 150px;
-            height: auto;
-            margin-bottom: 15px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+
+        .welcome-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(to right, #8b4513, #d2691e, #8b4513);
+            border-radius: 2px;
         }
-        
-        /* Sections */
-        .section {
-            display: none;
-            padding: 20px;
-        }
-        
-        .active {
-            display: block;
-        }
-        
-        /* Welcome message */
+
         .welcome-message {
-            background-color: #ffccbc;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 20px 0;
+            font-size: 1.2rem;
             text-align: center;
-            font-size: 17px;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            color: #e0d6d0;
             line-height: 1.8;
-            color: #5d4037;
-            border-left: 5px solid #8d6e63;
+            z-index: 1;
+            position: relative;
         }
-        
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            background-color: #8d6e63;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin: 10px 5px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-        
-        .btn:hover {
-            background-color: #6d4c41;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .btn:focus {
-            outline: 2px solid #ffab91;
-            outline-offset: 2px;
-        }
-        
-        .btn-secondary {
-            background-color: #a1887f;
-        }
-        
-        .btn-secondary:hover {
-            background-color: #8d6e63;
-        }
-        
-        .btn-success {
-            background-color: #5d8c5a;
-        }
-        
-        .btn-success:hover {
-            background-color: #4a6c47;
-        }
-        
-        .btn-danger {
-            background-color: #d32f2f;
-        }
-        
-        .btn-danger:hover {
-            background-color: #b71c1c;
-        }
-        
-        .btn-container {
-            text-align: center;
-            margin-top: 30px;
-        }
-        
-        /* Form elements */
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #5d4037;
-        }
-        
-        input[type="text"] {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #d7ccc8;
-            border-radius: 5px;
-            font-size: 16px;
-            background-color: #faf5f0;
-            transition: border 0.3s;
-        }
-        
-        input[type="text"]:focus {
-            border-color: #8d6e63;
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(141, 110, 99, 0.2);
-        }
-        
-        .error-message {
-            color: #d32f2f;
-            font-size: 14px;
-            margin-top: 5px;
-            display: none;
-        }
-        
-        /* Instructions */
-        .instructions {
-            background-color: #f5ebe9;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 5px solid #8d6e63;
-        }
-        
-        .instructions h3 {
-            margin-bottom: 15px;
-            color: #5d4037;
-        }
-        
-        .instructions ul {
-            padding-left: 20px;
-        }
-        
-        .instructions li {
-            margin-bottom: 10px;
-        }
-        
-        /* Exam interface */
-        .exam-header {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #d7ccc8;
-        }
-        
-        .student-info {
-            font-size: 22px;
-            font-weight: bold;
-            color: #5d4037;
-            margin-bottom: 15px;
-        }
-        
-        .exam-controls {
+
+        .exam-info {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .question-counter {
-            font-size: 16px;
-            color: #8d6e63;
-            font-weight: 600;
-        }
-        
-        .timer-container {
-            background: #5d4037;
-            color: #ffccbc;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 18px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            display: none;
-        }
-        
-        .submit-container {
-            display: none;
-        }
-        
-        .exam-content {
-            margin-bottom: 30px;
-        }
-        
-        .question-text {
-            font-size: 18px;
-            margin-bottom: 20px;
-            font-weight: 600;
-            color: #5d4037;
-            line-height: 1.5;
-        }
-        
-        .options-container {
-            margin-left: 10px;
-        }
-        
-        .option {
-            margin-bottom: 12px;
-            display: flex;
-            align-items: flex-start;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.2s;
-        }
-        
-        .option:hover {
-            background-color: #f5ebe9;
-        }
-        
-        .option input {
-            margin-right: 10px;
-            margin-top: 3px;
-        }
-        
-        .option label {
-            font-weight: normal;
-            margin-bottom: 0;
-            cursor: pointer;
-            flex: 1;
-        }
-        
-        /* Question navigation */
-        .question-navigation {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #d7ccc8;
-        }
-        
-        .question-navigation h3 {
-            margin-bottom: 15px;
-            color: #5d4037;
-            text-align: center;
-        }
-        
-        .question-grid {
-            display: grid;
-            grid-template-columns: repeat(10, 1fr);
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        
-        .question-number {
-            width: 35px;
-            height: 35px;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            background-color: #d7ccc8;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.2s;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            z-index: 1;
+            position: relative;
         }
-        
-        .question-number:hover {
-            background-color: #bcaaa4;
-        }
-        
-        .question-number.current {
-            background-color: #8d6e63;
-            color: white;
-        }
-        
-        .question-number.answered {
-            background-color: #a5d6a7;
-            color: #2e7d32;
-        }
-        
-        .navigation-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-        
-        /* Results */
-        .results-container {
+
+        .info-card {
+            background: linear-gradient(135deg, #4a2c1a 0%, #3a2418 100%);
+            padding: 25px 20px;
+            border-radius: 15px;
             text-align: center;
-            padding: 30px;
+            min-width: 200px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid #5a3825;
+            transition: all 0.3s ease;
         }
-        
-        .feedback {
-            font-size: 18px;
-            margin: 20px 0;
-            color: #5d4037;
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            border-color: #d2691e;
         }
-        
-        .submission-status {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #e8f5e9;
+
+        .info-icon {
+            font-size: 3rem;
+            color: #d2691e;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-text {
+            font-weight: 700;
+            color: #ffcc99;
+            font-size: 1.1rem;
+        }
+
+        /* Subjects Grid */
+        .subjects-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: #ffcc99;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(to right, #8b4513, #d2691e);
+            border-radius: 2px;
+        }
+
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .subject-card {
+            background: linear-gradient(135deg, #3a2418 0%, #4a2c1a 100%);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(44, 24, 16, 0.5);
+            transition: all 0.4s ease;
+            position: relative;
+            cursor: pointer;
+            border: 2px solid #5a3825;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(44, 24, 16, 0.7);
+            border-color: #d2691e;
+        }
+
+        .subject-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(to right, #8b4513, #d2691e, #8b4513);
+        }
+
+        .subject-header {
+            background: linear-gradient(135deg, #5a3825 0%, #4a2c1a 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subject-header::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+        }
+
+        .subject-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 1;
+        }
+
+        .subject-name {
+            font-size: 1.7rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .subject-details {
+            padding: 30px 25px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .subject-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #d2b48c;
+            font-weight: 600;
+        }
+
+        .subject-stats span {
+            padding: 8px 15px;
+            background: rgba(90, 56, 37, 0.5);
+            border-radius: 10px;
+            border: 1px solid #6b4a35;
+        }
+
+        .subject-desc {
+            color: #e0d6d0;
+            margin-bottom: 25px;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .subject-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b4513 0%, #d2691e 100%);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: 2px solid #a0522d;
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.4);
+            letter-spacing: 1px;
+        }
+
+        .subject-btn:hover {
+            background: linear-gradient(135deg, #d2691e 0%, #8b4513 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.6);
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #2c1810 0%, #3a2418 100%);
+            color: #d2b48c;
+            padding: 50px 20px 30px;
+            text-align: center;
+            margin-top: 80px;
+            border-top: 3px solid #8b4513;
+            position: relative;
+            overflow: hidden;
+            display: none; /* Hidden until password is entered */
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #8b4513, transparent);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-logo {
+            width: 120px;
+            margin-bottom: 25px;
             border-radius: 8px;
-            color: #2e7d32;
+            border: 3px solid #8b4513;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
-        
-        /* Responsive */
+
+        .footer-text {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+            color: #e0d6d0;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(139, 69, 19, 0.3);
+            padding-top: 25px;
+            font-size: 1rem;
+            color: #d2b48c;
+        }
+
+        .copyright a {
+            color: #ffcc99;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .copyright a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Lock Icon for Password Protection */
+        .subject-card.locked .subject-header {
+            background: linear-gradient(135deg, #5a3825 0%, #4a2c1a 100%);
+            opacity: 0.7;
+        }
+
+        .subject-card.locked .subject-icon::after {
+            content: '🔒';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            font-size: 1.5rem;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            padding: 5px;
+        }
+
+        /* Lock overlay */
+        .lock-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(44, 24, 16, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            border-radius: 18px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .lock-icon {
+            font-size: 3rem;
+            color: #d2691e;
+            margin-bottom: 15px;
+        }
+
+        .lock-text {
+            color: #ffcc99;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .lock-subtext {
+            color: #d2b48c;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .school-name {
+                font-size: 2.5rem;
+            }
+            
+            .school-tagline {
+                font-size: 1.2rem;
+            }
+            
+            .welcome-section {
+                padding: 30px;
+            }
+            
+            .welcome-title {
+                font-size: 2.2rem;
+            }
+            
+            .subjects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .password-container {
+                padding: 40px 30px;
+            }
+        }
+
         @media (max-width: 768px) {
-            .question-grid {
-                grid-template-columns: repeat(5, 1fr);
+            .exam-info {
+                gap: 20px;
             }
             
-            .exam-controls {
+            .info-card {
+                min-width: 160px;
+                padding: 20px 15px;
+            }
+            
+            .subject-card {
+                max-width: 350px;
+                margin: 0 auto;
+            }
+            
+            .logo {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .password-title {
+                font-size: 1.8rem;
+            }
+            
+            .password-container {
+                padding: 30px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .subjects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .school-name {
+                font-size: 2rem;
+            }
+            
+            .welcome-title {
+                font-size: 1.8rem;
+            }
+            
+            .subject-stats {
                 flex-direction: column;
-                align-items: stretch;
+                gap: 15px;
             }
             
-            .navigation-buttons {
-                flex-direction: column;
+            .logo {
+                width: 110px;
+                height: 110px;
             }
             
-            .btn {
-                width: 100%;
-                margin: 5px 0;
+            .password-container {
+                padding: 25px 20px;
+            }
+            
+            .password-title {
+                font-size: 1.6rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header with logo only -->
-        <div class="header">
-            <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
-                 alt="The Trustworthy College logo" class="logo">
+    <!-- Password Overlay (Shown first) -->
+    <div class="password-overlay" id="passwordOverlay">
+        <div class="password-container">
+            <div class="password-icon">🔒</div>
+            <h2 class="password-title">Restricted Access</h2>
+            <p class="password-subtitle">Authorized personnel only. Enter password to continue.</p>
+            
+            <div class="password-input-container">
+                <input type="password" 
+                       id="passwordInput" 
+                       class="password-input" 
+                       placeholder="Enter security password"
+                       autocomplete="off"
+                       autofocus>
+                <button type="button" class="toggle-password" id="togglePassword">
+                    <i class="fas fa-eye"></i>
+                </button>
+            </div>
+            
+            <button class="password-btn" id="submitPassword">
+                <i class="fas fa-unlock-alt"></i> Verify & Enter
+            </button>
+            
+            <div class="error-message" id="errorMessage">
+                Incorrect password. Please try again.
+            </div>
+            
+            <div class="access-granted" id="accessGranted">
+                ✓ Authentication successful. Redirecting...
+            </div>
+            
+            <div class="password-hint">
+                <p>For authorized students only</p>
+                <div class="contact-admin">
+                    <i class="fas fa-info-circle"></i> Contact your teacher or administrator for access credentials
+                </div>
+            </div>
         </div>
-        
-        <!-- Welcome Section -->
-        <section id="welcome-section" class="section active">
-            <div class="welcome-message">
-                "Welcome to The Trustworthy College. We pray this examination helps you demonstrate the knowledge and virtues we nurture: honesty, diligence and piety. Best of luck."
-            </div>
-            <div class="btn-container">
-                <button id="start-exam-btn" class="btn">Start Examination</button>
-            </div>
-        </section>
-        
-        <!-- Student Information Section -->
-        <section id="student-info-section" class="section">
-            <h2>Student Information</h2>
-            <p>Please provide your details to continue with the examination.</p>
-            
-            <form id="student-info-form">
-                <div class="form-group">
-                    <label for="first-name">First Name *</label>
-                    <input type="text" id="first-name" required>
-                    <div class="error-message" id="first-name-error">First name is required</div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="middle-name">Middle Name *</label>
-                    <input type="text" id="middle-name" required>
-                    <div class="error-message" id="middle-name-error">Middle name is required</div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="last-name">Last Name *</label>
-                    <input type="text" id="last-name" required>
-                    <div class="error-message" id="last-name-error">Last name is required</div>
-                </div>
-                
-                <div class="btn-container">
-                    <button type="button" id="back-to-welcome" class="btn btn-secondary">Back</button>
-                    <button type="button" id="continue-to-instructions" class="btn">Continue</button>
-                </div>
-            </form>
-        </section>
-        
-        <!-- Instructions Section -->
-        <section id="instructions-section" class="section">
-            <h2>Examination Instructions</h2>
-            
-            <div class="instructions">
-                <h3>Important Notes:</h3>
-                <ul>
-                    <li>This examination consists of 60 multiple-choice questions.</li>
-                    <li>You have 60 minutes to complete this examination (1 minute per question).</li>
-                    <li>Answer all questions to the best of your ability.</li>
-                    <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
-                    <li>Answered questions will be marked with green in the question grid.</li>
-                    <li>Once you submit your answers, you cannot change them.</li>
-                    <li>Ensure you have a stable internet connection throughout the examination.</li>
-                    <li>Any form of malpractice will lead to disqualification.</li>
-                </ul>
-            </div>
-            
-            <div class="btn-container">
-                <button type="button" id="back-to-student-info" class="btn btn-secondary">Back</button>
-                <button type="button" id="begin-test" class="btn">Begin Test</button>
-            </div>
-        </section>
-        
-        <!-- Exam Interface Section -->
-        <section id="exam-section" class="section">
-            <div class="exam-header">
-                <div class="student-info" id="display-student-name"></div>
-                <div class="exam-controls">
-                    <div class="question-counter" id="question-counter">Question 1 of 60</div>
-                    <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">60:00</span>
-                    </div>
-                    <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="exam-content">
-                <div class="question-text" id="question-text"></div>
-                
-                <div class="options-container" id="options-container">
-                    <!-- Options will be populated by JavaScript -->
-                </div>
-            </div>
-            
-            <!-- Question navigation grid after question content -->
-            <div class="question-navigation">
-                <h3>Question Navigation</h3>
-                <div class="question-grid" id="question-grid">
-                    <!-- Question numbers will be populated by JavaScript -->
-                </div>
-                
-                <div class="navigation-buttons">
-                    <button type="button" id="prev-question" class="btn btn-secondary">Previous</button>
-                    <button type="button" id="next-question" class="btn">Next</button>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Results Section -->
-        <section id="results-section" class="section">
-            <div class="results-container">
-                <h2>Examination Completed</h2>
-                <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">Economics</div>
-                
-                <div class="feedback" id="feedback-message">
-                    Thank you for completing the examination. Your results have been submitted successfully.
-                </div>
-                
-                <div class="submission-status" id="submission-status">
-                    Your score has been successfully submitted to the examination board.
-                </div>
-                
-                <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn">Take Another Exam</button>
-                </div>
-            </div>
-        </section>
     </div>
 
+    <!-- Header with Logo and School Name -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
+                     alt="The Trustworthy College Logo" class="logo">
+                <div class="logo-text">Secure Examination Portal</div>
+            </div>
+            <div class="school-info">
+                <h1 class="school-name">THE TRUSTWORTHY COLLEGE</h1>
+                <p class="school-tagline">Computer-Based Test Portal</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content (Hidden until password is entered) -->
+    <main class="main-container" id="mainContent">
+        <!-- Welcome Section -->
+        <section class="welcome-section animate">
+            <h2 class="welcome-title">Welcome to Our Examination Portal</h2>
+            <p class="welcome-message">
+                This platform is designed to help you practice and prepare for your school examinations. 
+                Select your subject below to begin your computer-based test. Each exam contains 40 questions 
+                with a 40-minute time limit. Read each question carefully and submit when you are done.
+            </p>
+            
+            <div class="exam-info">
+                <div class="info-card">
+                    <div class="info-icon">⏱️</div>
+                    <div class="info-text">40 Minutes Each</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">❓</div>
+                    <div class="info-text">40 Questions</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📊</div>
+                    <div class="info-text">Instant Results</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🔒</div>
+                    <div class="info-text">Secure Access</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subjects Grid -->
+        <section class="subjects-section">
+            <h2 class="section-title">Select Your Subject</h2>
+            
+            <div class="subjects-grid">
+                <!-- Subject 1: Yoruba -->
+                <div class="subject-card animate">
+                    <div class="subject-header">
+                        <div class="subject-icon">🇳🇬</div>
+                        <div class="subject-name">Yoruba Language</div>
+                    </div>
+                    <div class="subject-details">
+                        <div class="subject-stats">
+                            <span>40 Questions</span>
+                            <span>40 Minutes</span>
+                        </div>
+                        <p class="subject-desc">Test your knowledge of Yoruba language, culture, grammar and literature.</p>
+                        <a href="Yoruba/index.html" class="subject-btn">Start Exam</a>
+                    </div>
+                </div>
+
+                <!-- Subject 2: Biology -->
+                <div class="subject-card animate">
+                    <div class="subject-header">
+                        <div class="subject-icon">🧬</div>
+                        <div class="subject-name">Biology</div>
+                    </div>
+                    <div class="subject-details">
+                        <div class="subject-stats">
+                            <span>40 Questions</span>
+                            <span>40 Minutes</span>
+                        </div>
+                        <p class="subject-desc">Life sciences, human anatomy, botany, zoology and genetics.</p>
+                        <a href="biology/index.html" class="subject-btn">Start Exam</a>
+                    </div>
+                </div>
+
+                <!-- Subject 3: Chemistry -->
+                <div class="subject-card animate">
+                    <div class="subject-header">
+                        <div class="subject-icon">🧪</div>
+                        <div class="subject-name">Chemistry</div>
+                    </div>
+                    <div class="subject-details">
+                        <div class="subject-stats">
+                            <span>40 Questions</span>
+                            <span>40 Minutes</span>
+                        </div>
+                        <p class="subject-desc">Chemical reactions, periodic table, organic and inorganic chemistry.</p>
+                        <a href="chemistry/index.html" class="subject-btn">Start Exam</a>
+                    </div>
+                </div>
+
+                <!-- Subject 4: Physics -->
+                <div class="subject-card animate">
+                    <div class="subject-header">
+                        <div class="subject-icon">⚛️</div>
+                        <div class="subject-name">Physics</div>
+                    </div>
+                    <div class="subject-details">
+                        <div class="subject-stats">
+                            <span>40 Questions</span>
+                            <span>40 Minutes</span>
+                        </div>
+                        <p class="subject-desc">Mechanics, thermodynamics, electricity, optics and modern physics.</p>
+                        <a href="physics/index.html" class="subject-btn">Start Exam</a>
+                    </div>
+                </div>
+
+                <!-- Subject 5: Mathematics -->
+                <div class="subject-card animate">
+                    <div class="subject-header">
+                        <div class="subject-icon">📐</div>
+                        <div class="subject-name">Mathematics</div>
+                    </div>
+                    <div class="subject-details">
+                        <div class="subject-stats">
+                            <span>40 Questions</span>
+                            <span>40 Minutes</span>
+                        </div>
+                        <p class="subject-desc">Algebra, geometry, calculus, trigonometry and statistics.</p>
+                        <a href="mathematics/index.html" class="subject-btn">Start Exam</a>
+                    </div>
+                </div>
+
+                <!-- Subject 6: English Language -->
+                <div class="subject-card animate">
+                    <div class="subject-header">
+                        <div class="subject-icon">📚</div>
+                        <div class="subject-name">English Language</div>
+                    </div>
+                    <div class="subject-details">
+                        <div class="subject-stats">
+                            <span>40 Questions</span>
+                            <span>40 Minutes</span>
+                        </div>
+                        <p class="subject-desc">Grammar, comprehension, vocabulary, composition and literature.</p>
+                        <a href="english_language/index.html" class="subject-btn">Start Exam</a>
+                    </div>
+                </div>
+
+                <!-- Subject 7: Literature in English -->
+                <div class="subject-card animate">
+                    <div class="subject-header">
+                        <div class="subject-icon">🎭</div>
+                        <div class="subject-name">Literature in English</div>
+                    </div>
+                    <div class="subject-details">
+                        <div class="subject-stats">
+                            <span>40 Questions</span>
+                            <span>40 Minutes</span>
+                        </div>
+                        <p class="subject-desc">Prose, poetry, drama, literary devices and critical analysis.</p>
+                        <a href="lit_in_english/index.html" class="subject-btn">Start Exam</a>
+                    </div>
+                </div>
+
+                <!-- Subject 8: Economics -->
+                <div class="subject-card animate">
+                    <div class="subject-header">
+                        <div class="subject-icon">📈</div>
+                        <div class="subject-name">Economics</div>
+                    </div>
+                    <div class="subject-details">
+                        <div class="subject-stats">
+                            <span>40 Questions</span>
+                            <span>40 Minutes</span>
+                        </div>
+                        <p class="subject-desc">Microeconomics, macroeconomics, economic theories and policies.</p>
+                        <a href="economics/index.html" class="subject-btn">Start Exam</a>
+                    </div>
+                </div>
+
+                <!-- Subject 9: Government -->
+                <div class="subject-card animate">
+                    <div class="subject-header">
+                        <div class="subject-icon">🏛️</div>
+                        <div class="subject-name">Government</div>
+                    </div>
+                    <div class="subject-details">
+                        <div class="subject-stats">
+                            <span>40 Questions</span>
+                            <span>40 Minutes</span>
+                        </div>
+                        <p class="subject-desc">Political systems, governance, constitutions and civic administration.</p>
+                        <a href="government/index.html" class="subject-btn">Start Exam</a>
+                    </div>
+                </div>
+
+                <!-- Subject 10: Civic Education -->
+                <div class="subject-card animate">
+                    <div class="subject-header">
+                        <div class="subject-icon">👥</div>
+                        <div class="subject-name">Civic Education</div>
+                    </div>
+                    <div class="subject-details">
+                        <div class="subject-stats">
+                            <span>40 Questions</span>
+                            <span>40 Minutes</span>
+                        </div>
+                        <p class="subject-desc">Citizenship, rights, responsibilities, ethics and national values.</p>
+                        <a href="civic_education/index.html" class="subject-btn">Start Exam</a>
+                    </div>
+                </div>
+
+                <!-- Subject 11: Islamic Studies -->
+                <div class="subject-card animate">
+                    <div class="subject-header">
+                        <div class="subject-icon">☪️</div>
+                        <div class="subject-name">Islamic Studies</div>
+                    </div>
+                    <div class="subject-details">
+                        <div class="subject-stats">
+                            <span>40 Questions</span>
+                            <span>40 Minutes</span>
+                        </div>
+                        <p class="subject-desc">Quranic studies, Hadith, Islamic history, ethics and jurisprudence.</p>
+                        <a href="islamic_studies/index.html" class="subject-btn">Start Exam</a>
+                    </div>
+                </div>
+
+                <!-- Subject 12: Data Processing -->
+                <div class="subject-card animate">
+                    <div class="subject-header">
+                        <div class="subject-icon">💻</div>
+                        <div class="subject-name">Data Processing</div>
+                    </div>
+                    <div class="subject-details">
+                        <div class="subject-stats">
+                            <span>40 Questions</span>
+                            <span>40 Minutes</span>
+                        </div>
+                        <p class="subject-desc">Computer fundamentals, databases, programming and information systems.</p>
+                        <a href="data_processing/index.html" class="subject-btn">Start Exam</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Hidden until password is entered) -->
+    <footer class="footer" id="pageFooter">
+        <div class="footer-content">
+            <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
+                 alt="The Trustworthy College Logo" class="footer-logo">
+            <p class="footer-text">
+                The Trustworthy College is dedicated to academic excellence through innovative teaching methods 
+                and modern educational technology. Our CBT portal ensures students are thoroughly prepared 
+                for both internal assessments and external examinations.
+            </p>
+            <div class="copyright">
+                © 2025 The Trustworthy College • Powered by 
+                <a href="https://www.ideolixlearninghub.com" target="_blank">Ideolix Learning Hub</a>
+            </div>
+        </div>
+    </footer>
+
     <script>
-        // SUBJECT: Economics
-        const originalQuestions = [
-            {
-                question: "Economics is best defined as the study of ______.",
-                options: ["Money and banking", "How people use scarce resources", "How to make profit", "Trading activities"],
-                answer: "B"
-            },
-            {
-                question: "The central economic problem is ______.",
-                options: ["Opportunity cost", "Scarcity", "Inflation", "Unemployment"],
-                answer: "B"
-            },
-            {
-                question: "Human wants are ______.",
-                options: ["Limited", "Unlimited", "Constant", "Decreasing"],
-                answer: "B"
-            },
-            {
-                question: "Scarcity means ______.",
-                options: ["Excess supply", "Limited resources", "Unlimited resources", "Overproduction"],
-                answer: "B"
-            },
-            {
-                question: "Capital as a factor of production refers to ______.",
-                options: ["Machines and tools", "Raw materials", "Land", "Consumer"],
-                answer: "A"
-            },
-            {
-                question: "A list of wants arranged in order of priority is called ______.",
-                options: ["Budget", "Scale of preference", "Demand schedule", "Opportunity scale"],
-                answer: "B"
-            },
-            {
-                question: "Which of the following is not a basic economic problem?",
-                options: ["What to produce", "How to produce", "For whom to produce", "Where to export"],
-                answer: "D"
-            },
-            {
-                question: "The entrepreneur is responsible for ______.",
-                options: ["Manual labour", "Organizing others factor", "Providing land", "Consuming goods"],
-                answer: "B"
-            },
-            {
-                question: "Microeconomics deals with ______.",
-                options: ["National income", "Individual units", "Inflation", "Economic growth"],
-                answer: "B"
-            },
-            {
-                question: "Macroeconomics deals with ______.",
-                options: ["Individual households", "Firms", "The entire economy", "A single industry"],
-                answer: "C"
-            },
-            {
-                question: "The reward for labour is ______.",
-                options: ["Rent", "Wage", "Profit", "Interest"],
-                answer: "B"
-            },
-            {
-                question: "The reward for capital is ______.",
-                options: ["Profit", "Rent", "Interest", "Wage"],
-                answer: "C"
-            },
-            {
-                question: "The reward for land is ______.",
-                options: ["Rent", "Wage", "Interest", "Profit"],
-                answer: "A"
-            },
-            {
-                question: "The reward for entrepreneurship is ______.",
-                options: ["Rent", "Profit", "Wage", "Dividend"],
-                answer: "B"
-            },
-            {
-                question: "A mixed economy is made up of ______.",
-                options: ["Only public ownership", "Only private ownership", "Both private and public ownership", "No ownership"],
-                answer: "C"
-            },
-            {
-                question: "A diagram used to show how one variable changes with another is called ______.",
-                options: ["Index", "Table", "Chart", "Graph"],
-                answer: "D"
-            },
-            {
-                question: "In a socialist economy, decisions are made by ______.",
-                options: ["Firms", "Market forces", "Government", "Consumers"],
-                answer: "C"
-            },
-            {
-                question: "Direct production is mainly for ______.",
-                options: ["Exchange", "Personal use", "Sale", "Export"],
-                answer: "B"
-            },
-            {
-                question: "Indirect production is mainly for ______.",
-                options: ["Family consumption", "Personal use", "Exchange", "Wastage"],
-                answer: "C"
-            },
-            {
-                question: "A list of wants arranged in order of important is ______.",
-                options: ["Scale of demand", "Scale of preference", "Scale of production", "Table of choice"],
-                answer: "B"
-            },
-            {
-                question: "Demand curve slopes ______.",
-                options: ["Upwards", "Horizontally", "Downwards", "Vertically"],
-                answer: "C"
-            },
-            {
-                question: "A worker who uses physical effort to work is called ______.",
-                options: ["Mental worker", "Unskilled labour", "Skilled labour", "Driver"],
-                answer: "B"
-            },
-            {
-                question: "Money performs the function of a medium of ______.",
-                options: ["Bargaining", "Production", "Exchange", "Distribution"],
-                answer: "C"
-            },
-            {
-                question: "The science aspect of economics refers to its use of ______.",
-                options: ["Guesswork", "Experiment", "Observation and reasoning", "Propaganda"],
-                answer: "C"
-            },
-            {
-                question: "Economics as an art means ______.",
-                options: ["It is based on painting", "It applies knowledge to solve problems", "It is imaginary", "It is easy to learn"],
-                answer: "B"
-            },
-            {
-                question: "Which of these is a free good?",
-                options: ["Air", "Rice", "Clothes", "Phones"],
-                answer: "A"
-            },
-            {
-                question: "The mean score is ______. (Scores: 1,2,3,4,5,6; Frequency: 2,4,10,8,5,1)",
-                options: ["3.43", "4.34", "3.34", "4.33"],
-                answer: "A"
-            },
-            {
-                question: "The modal score is ______. (Scores: 1,2,3,4,5,6; Frequency: 2,4,10,8,5,1)",
-                options: ["2", "3", "4", "5"],
-                answer: "B"
-            },
-            {
-                question: "The median score is ______. (Scores: 1,2,3,4,5,6; Frequency: 2,4,10,8,5,1)",
-                options: ["2", "3", "4", "5"],
-                answer: "B"
-            },
-            {
-                question: "The law of demand states that ______.",
-                options: ["Price rises, demand rises", "Price falls, demand falls", "Price rises, demand falls", "Supply rises, price rises"],
-                answer: "C"
-            },
-            {
-                question: "A change in price leads to ______.",
-                options: ["Shift in demand", "Change of taste", "Increase in income", "Movement along the demand curve"],
-                answer: "D"
-            },
-            {
-                question: "Choice arises because ______.",
-                options: ["Wants are limited", "Resource are unlimited", "Resource are scares", "Money is abundant"],
-                answer: "C"
-            },
-            {
-                question: "Inflation means ______.",
-                options: ["Steady price", "General rise in price", "Fall in price", "Stable demand"],
-                answer: "B"
-            },
-            {
-                question: "Production is classified into ______ sectoral.",
-                options: ["Two", "Three", "Four", "Five"],
-                answer: "B"
-            },
-            {
-                question: "Mining is part of ______ production?",
-                options: ["Industrial", "Secondary", "Primary", "Tertiary"],
-                answer: "C"
-            },
-            {
-                question: "Labour efficiency deals with ______.",
-                options: ["Height", "Skill", "Age", "Weight"],
-                answer: "B"
-            },
-            {
-                question: "Which of these is an advantage of a mixed economy?",
-                options: ["No competition", "Combines strengths of private and public sectors", "Prices are fixed by government only", "Everyone is equal"],
-                answer: "B"
-            },
-            {
-                question: "Which of the following is a career in economics ______.",
-                options: ["Economist", "Lawyer", "Mechanic", "Doctor"],
-                answer: "A"
-            },
-            {
-                question: "One of the following is not an importance of opportunity cost to an individual.",
-                options: ["Judicious use of resources", "To make wise choice", "To make decisions", "To decide the method of production"],
-                answer: "D"
-            },
-            {
-                question: "One of the following is NOT an example of bar chart ______.",
-                options: ["Simple", "Component", "Rigid", "Multiple"],
-                answer: "C"
-            },
-            {
-                question: "Given that Q= 42-2P, find the value of Q when P = #3.",
-                options: ["32", "30", "36", "24"],
-                answer: "C"
-            },
-            {
-                question: "Given that Q= 42-2P, find the value of Q when P = #2.",
-                options: ["38", "32", "20", "28"],
-                answer: "A"
-            },
-            {
-                question: "A teacher in a school is an example of ______.",
-                options: ["Skilled labour", "Unskilled labour", "Professional labour", "Capital"],
-                answer: "A"
-            },
-            {
-                question: "What is the median of the following scores; 12,8,15,9,3,7 and 1?",
-                options: ["3", "12", "8", "9"],
-                answer: "C"
-            },
-            {
-                question: "A diagram that arranges wants in priority is ______.",
-                options: ["Budget line", "Scale of preference", "Demand curve", "Total product curve"],
-                answer: "B"
-            },
-            {
-                question: "The scarcity of resources brings about ______.",
-                options: ["Abundance", "Choice", "Waste", "Money"],
-                answer: "B"
-            },
-            {
-                question: "The law of demand states that price and quantity demanded are ______.",
-                options: ["Inverse", "Equal", "Direct", "Constant"],
-                answer: "A"
-            },
-            {
-                question: "How many types of production do we have?",
-                options: ["3", "4", "2", "5"],
-                answer: "C"
-            },
-            {
-                question: "Mining is an example of ______ production.",
-                options: ["Tertiary", "Secondary", "Primary", "Physical"],
-                answer: "C"
-            },
-            {
-                question: "Wages is paid to ______.",
-                options: ["Capital", "Labour", "Land", "Entrepreneurs"],
-                answer: "B"
-            },
-            {
-                question: "The process of using goods to satisfy human wants is called ______.",
-                options: ["Production", "Consumption", "Distribution", "Exchange"],
-                answer: "B"
-            },
-            {
-                question: "Tax is paid to ______.",
-                options: ["Private individuals", "Government", "Businesses", "Traders"],
-                answer: "B"
-            },
-            {
-                question: "Economic growth means an increase in ______.",
-                options: ["Population", "Crime", "Output", "Prices"],
-                answer: "C"
-            },
-            {
-                question: "The problem of 'for whom to produce' relates to ______.",
-                options: ["Distribution", "Production", "Exchange", "Advertising"],
-                answer: "A"
-            },
-            {
-                question: "A production method that uses more labour than machines is ______.",
-                options: ["Capital intensive", "Labour intensive", "Skilled intensive", "Profit intensive"],
-                answer: "B"
-            },
-            {
-                question: "Goods sold quickly at low prices are ______.",
-                options: ["Luxury goods", "Durable Goods", "Fast-moving consumer goods", "Capital goods"],
-                answer: "C"
-            },
-            {
-                question: "Tertiary production provides ______.",
-                options: ["Food", "Service", "Raw materials", "Tools"],
-                answer: "B"
-            },
-            {
-                question: "A firm is ______?",
-                options: ["Group of people", "Place of worship", "Office", "Business organization"],
-                answer: "D"
-            },
-            {
-                question: "A scale of preference helps a consumer to ______.",
-                options: ["Waste money", "Avoid choice", "Arrange wants", "Increase scarcity"],
-                answer: "C"
-            },
-            {
-                question: "A decrease in supply leads to ______.",
-                options: ["Lower prices", "Constant prices", "Higher prices", "Negative prices"],
-                answer: "C"
-            }
-        ];
+        // Password Configuration
+        const CORRECT_PASSWORD = "f09b302c@2TS2026";
+        const MAX_ATTEMPTS = 5;
+        let attempts = 0;
+        let lockoutTime = null;
+        const LOCKOUT_DURATION = 300000; // 5 minutes in milliseconds
 
-        // Application state
-        let currentQuestionIndex = 0;
-        let userAnswers = [];
-        let studentName = "";
-        let timerInterval;
-        let timeLeft = 60 * 60; // 60 minutes in seconds
-        let questions = [];
+        // DOM Elements
+        const passwordOverlay = document.getElementById('passwordOverlay');
+        const passwordInput = document.getElementById('passwordInput');
+        const togglePassword = document.getElementById('togglePassword');
+        const submitPassword = document.getElementById('submitPassword');
+        const errorMessage = document.getElementById('errorMessage');
+        const accessGranted = document.getElementById('accessGranted');
+        const mainContent = document.getElementById('mainContent');
+        const pageFooter = document.getElementById('pageFooter');
 
-        // Background images for rotation
-        const backgroundImages = [
-            'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80',
-            'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
-        ];
-
-        // DOM elements
-        const sections = {
-            welcome: document.getElementById('welcome-section'),
-            studentInfo: document.getElementById('student-info-section'),
-            instructions: document.getElementById('instructions-section'),
-            exam: document.getElementById('exam-section'),
-            results: document.getElementById('results-section')
-        };
-
-        // Initialize background rotation
-        let currentBgIndex = 0;
-        function rotateBackground() {
-            currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
-            document.body.style.setProperty('--bg-image', `url('${backgroundImages[currentBgIndex]}')`);
-        }
-        
-        // Rotate background every 10 seconds
-        setInterval(rotateBackground, 10000);
-
-        // Shuffle questions array
-        function shuffleQuestions() {
-            // Create a copy of the original questions
-            questions = [...originalQuestions];
-            
-            // Shuffle the questions using Fisher-Yates algorithm
-            for (let i = questions.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [questions[i], questions[j]] = [questions[j], questions[i]];
-            }
-            
-            // Initialize userAnswers array with null values
-            userAnswers = Array(questions.length).fill(null);
-        }
-
-        // Timer function
-        function startTimer() {
-            clearInterval(timerInterval);
-            timeLeft = 60 * 60; // Reset to 60 minutes
-            
-            // Show timer container and submit button
-            document.getElementById('timer-container').style.display = 'block';
-            document.getElementById('submit-container').style.display = 'block';
-            
-            timerInterval = setInterval(() => {
-                timeLeft--;
+        // Check if user is locked out
+        function checkLockout() {
+            const lockoutData = localStorage.getItem('trustworthyCollegeLockout');
+            if (lockoutData) {
+                const { timestamp } = JSON.parse(lockoutData);
+                const timeElapsed = Date.now() - timestamp;
                 
-                const minutes = Math.floor(timeLeft / 60);
-                const seconds = timeLeft % 60;
-                
-                document.getElementById('timer').textContent = 
-                    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-                
-                if (timeLeft <= 0) {
-                    clearInterval(timerInterval);
-                    alert("Time's up! Your exam will be submitted automatically.");
-                    calculateScore();
+                if (timeElapsed < LOCKOUT_DURATION) {
+                    const remainingMinutes = Math.ceil((LOCKOUT_DURATION - timeElapsed) / 60000);
+                    showError(`Too many failed attempts. Please try again in ${remainingMinutes} minute${remainingMinutes !== 1 ? 's' : ''}.`);
+                    submitPassword.disabled = true;
+                    passwordInput.disabled = true;
+                    return true;
+                } else {
+                    // Lockout expired
+                    localStorage.removeItem('trustworthyCollegeLockout');
+                    localStorage.removeItem('trustworthyCollegeAttempts');
                 }
-            }, 1000);
-        }
-
-        // Navigation functions
-        function showSection(sectionName) {
-            // Hide all sections
-            Object.values(sections).forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Show the requested section
-            sections[sectionName].classList.add('active');
-            
-            // Hide timer and submit button if not in exam section
-            if (sectionName !== 'exam') {
-                document.getElementById('timer-container').style.display = 'none';
-                document.getElementById('submit-container').style.display = 'none';
             }
+            return false;
         }
 
-        // Initialize event listeners
-        document.getElementById('start-exam-btn').addEventListener('click', () => {
-            showSection('studentInfo');
+        // Toggle password visibility
+        togglePassword.addEventListener('click', function() {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
         });
 
-        document.getElementById('back-to-welcome').addEventListener('click', () => {
-            showSection('welcome');
+        // Submit password
+        submitPassword.addEventListener('click', checkPassword);
+        passwordInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
         });
 
-        document.getElementById('continue-to-instructions').addEventListener('click', () => {
-            // Validate form
-            const firstName = document.getElementById('first-name').value.trim();
-            const middleName = document.getElementById('middle-name').value.trim();
-            const lastName = document.getElementById('last-name').value.trim();
+        function checkPassword() {
+            // Check lockout first
+            if (checkLockout()) {
+                return;
+            }
+
+            const enteredPassword = passwordInput.value.trim();
             
-            let isValid = true;
+            if (enteredPassword === '') {
+                showError('Please enter the access password');
+                return;
+            }
+
+            // Get current attempt count from localStorage
+            let currentAttempts = parseInt(localStorage.getItem('trustworthyCollegeAttempts') || '0');
             
-            if (!firstName) {
-                document.getElementById('first-name-error').style.display = 'block';
-                isValid = false;
+            if (enteredPassword === CORRECT_PASSWORD) {
+                // Password correct
+                accessGranted.style.display = 'block';
+                errorMessage.style.display = 'none';
+                submitPassword.innerHTML = '<i class="fas fa-check"></i> Access Granted';
+                submitPassword.style.background = 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)';
+                submitPassword.disabled = true;
+                passwordInput.disabled = true;
+                
+                // Reset attempts on successful login
+                localStorage.removeItem('trustworthyCollegeAttempts');
+                localStorage.removeItem('trustworthyCollegeLockout');
+                
+                // Hide password overlay with delay
+                setTimeout(() => {
+                    passwordOverlay.style.opacity = '0';
+                    setTimeout(() => {
+                        passwordOverlay.style.display = 'none';
+                        // Show main content
+                        mainContent.style.display = 'block';
+                        pageFooter.style.display = 'block';
+                        
+                        // Add animation to cards
+                        const cards = document.querySelectorAll('.subject-card');
+                        cards.forEach((card, index) => {
+                            setTimeout(() => {
+                                card.classList.add('animate');
+                            }, index * 100);
+                        });
+                    }, 500);
+                }, 1500);
+                
+                // Store session in localStorage (expires in 24 hours)
+                const sessionData = {
+                    authenticated: true,
+                    timestamp: Date.now()
+                };
+                localStorage.setItem('trustworthyCollegeAccess', JSON.stringify(sessionData));
+                
             } else {
-                document.getElementById('first-name-error').style.display = 'none';
-            }
-            
-            if (!middleName) {
-                document.getElementById('middle-name-error').style.display = 'block';
-                isValid = false;
-            } else {
-                document.getElementById('middle-name-error').style.display = 'none';
-            }
-            
-            if (!lastName) {
-                document.getElementById('last-name-error').style.display = 'block';
-                isValid = false;
-            } else {
-                document.getElementById('last-name-error').style.display = 'none';
-            }
-            
-            if (isValid) {
-                studentName = `${firstName} ${middleName} ${lastName}`;
-                showSection('instructions');
-            }
-        });
-
-        document.getElementById('back-to-student-info').addEventListener('click', () => {
-            showSection('studentInfo');
-        });
-
-        document.getElementById('begin-test').addEventListener('click', () => {
-            // Initialize exam with shuffled questions
-            shuffleQuestions();
-            currentQuestionIndex = 0;
-            
-            // Display student name
-            document.getElementById('display-student-name').textContent = studentName;
-            document.getElementById('results-student-name').textContent = studentName;
-            
-            // Create question navigation grid
-            createQuestionGrid();
-            
-            // Load first question
-            loadQuestion(currentQuestionIndex);
-            
-            // Start timer
-            startTimer();
-            
-            showSection('exam');
-        });
-
-        document.getElementById('prev-question').addEventListener('click', () => {
-            if (currentQuestionIndex > 0) {
-                currentQuestionIndex--;
-                loadQuestion(currentQuestionIndex);
-            }
-        });
-
-        document.getElementById('next-question').addEventListener('click', () => {
-            if (currentQuestionIndex < questions.length - 1) {
-                currentQuestionIndex++;
-                loadQuestion(currentQuestionIndex);
-            }
-        });
-
-        document.getElementById('submit-exam').addEventListener('click', () => {
-            const confirmed = confirm("Are you sure you want to submit? You will not be able to change your answers after this.");
-            
-            if (confirmed) {
-                clearInterval(timerInterval);
-                calculateScore();
-            }
-        });
-
-        document.getElementById('restart-exam').addEventListener('click', () => {
-            clearInterval(timerInterval);
-            showSection('welcome');
-        });
-
-        // Create question navigation grid
-        function createQuestionGrid() {
-            const questionGrid = document.getElementById('question-grid');
-            questionGrid.innerHTML = '';
-            
-            for (let i = 0; i < questions.length; i++) {
-                const questionNumber = document.createElement('div');
-                questionNumber.className = 'question-number';
-                questionNumber.textContent = i + 1;
-                questionNumber.dataset.index = i;
+                // Password incorrect
+                currentAttempts++;
+                attempts = currentAttempts;
+                localStorage.setItem('trustworthyCollegeAttempts', currentAttempts.toString());
                 
-                // Mark if answered
-                if (userAnswers[i] !== null) {
-                    questionNumber.classList.add('answered');
+                const remaining = MAX_ATTEMPTS - currentAttempts;
+                
+                if (currentAttempts >= MAX_ATTEMPTS) {
+                    // Lock the user out
+                    const lockoutData = {
+                        timestamp: Date.now()
+                    };
+                    localStorage.setItem('trustworthyCollegeLockout', JSON.stringify(lockoutData));
+                    showError('Maximum attempts exceeded. Please try again in 5 minutes.');
+                    submitPassword.disabled = true;
+                    passwordInput.disabled = true;
+                } else {
+                    showError(`Incorrect password. ${remaining} attempt${remaining !== 1 ? 's' : ''} remaining.`);
                 }
                 
-                // Mark current question
-                if (i === currentQuestionIndex) {
-                    questionNumber.classList.add('current');
-                }
+                // Shake animation for wrong password
+                passwordInput.style.animation = 'none';
+                setTimeout(() => {
+                    passwordInput.style.animation = 'shake 0.5s';
+                }, 10);
                 
-                questionNumber.addEventListener('click', () => {
-                    currentQuestionIndex = parseInt(questionNumber.dataset.index);
-                    loadQuestion(currentQuestionIndex);
-                });
-                
-                questionGrid.appendChild(questionNumber);
+                // Clear input
+                passwordInput.value = '';
+                passwordInput.focus();
             }
         }
 
-        // Update question navigation grid
-        function updateQuestionGrid() {
-            const questionNumbers = document.querySelectorAll('.question-number');
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessage.style.display = 'block';
+            accessGranted.style.display = 'none';
             
-            questionNumbers.forEach((number, index) => {
-                number.classList.remove('current');
-                number.classList.remove('answered');
-                
-                if (index === currentQuestionIndex) {
-                    number.classList.add('current');
-                }
-                
-                if (userAnswers[index] !== null) {
-                    number.classList.add('answered');
-                }
-            });
+            // Shake animation for error
+            errorMessage.style.animation = 'none';
+            setTimeout(() => {
+                errorMessage.style.animation = 'shake 0.5s';
+            }, 10);
         }
 
-        // Exam functionality
-        function loadQuestion(index) {
-            const question = questions[index];
-            
-            // Update question counter
-            document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
-            
-            // Set question text
-            document.getElementById('question-text').textContent = question.question;
-            
-            // Clear options container
-            const optionsContainer = document.getElementById('options-container');
-            optionsContainer.innerHTML = '';
-            
-            // Create option elements
-            question.options.forEach((option, optionIndex) => {
-                const optionDiv = document.createElement('div');
-                optionDiv.className = 'option';
-                
-                const optionId = `option-${index}-${optionIndex}`;
-                
-                const radio = document.createElement('input');
-                radio.type = 'radio';
-                radio.name = `question-${index}`;
-                radio.id = optionId;
-                radio.value = String.fromCharCode(65 + optionIndex); // A, B, C, D
-                
-                // Check if this option was previously selected
-                if (userAnswers[index] === radio.value) {
-                    radio.checked = true;
-                }
-                
-                radio.addEventListener('change', () => {
-                    userAnswers[index] = radio.value;
-                    updateQuestionGrid();
-                });
-                
-                const label = document.createElement('label');
-                label.htmlFor = optionId;
-                label.textContent = `${String.fromCharCode(65 + optionIndex)}. ${option}`;
-                
-                optionDiv.appendChild(radio);
-                optionDiv.appendChild(label);
-                
-                optionsContainer.appendChild(optionDiv);
-            });
-            
-            // Update navigation buttons
-            document.getElementById('prev-question').disabled = index === 0;
-            document.getElementById('next-question').disabled = index === questions.length - 1;
-            
-            // Update question grid
-            updateQuestionGrid();
-        }
-
-        function calculateScore() {
-            let score = 0;
-            
-            for (let i = 0; i < questions.length; i++) {
-                if (userAnswers[i] === questions[i].answer) {
-                    score++;
-                }
+        // Check for existing valid session
+        document.addEventListener('DOMContentLoaded', function() {
+            // First check lockout
+            if (checkLockout()) {
+                return;
             }
-            
-            // Submit to Google Form (score is sent but not displayed)
-            submitToGoogleForm(studentName, "Economics", `${score}/${questions.length}`);
-            
-            // Show submission status
-            document.getElementById('submission-status').style.display = 'block';
-            
-            showSection('results');
-        }
 
-        // Google Form submission function
-        function submitToGoogleForm(fullName, subject, score) {
-            const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
-            const formData = new FormData();
-            formData.append("entry.862885683", fullName);
-            formData.append("entry.1545021484", "SS1");
-            formData.append("entry.1558221900", subject);
-            formData.append("entry.2022160530", score);
+            try {
+                const sessionData = JSON.parse(localStorage.getItem('trustworthyCollegeAccess'));
+                if (sessionData && sessionData.authenticated) {
+                    const sessionAge = Date.now() - sessionData.timestamp;
+                    const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000;
+                    
+                    if (sessionAge < TWENTY_FOUR_HOURS) {
+                        // Valid session exists, bypass password
+                        passwordOverlay.style.display = 'none';
+                        mainContent.style.display = 'block';
+                        pageFooter.style.display = 'block';
+                        
+                        // Animate cards
+                        const cards = document.querySelectorAll('.subject-card');
+                        cards.forEach((card, index) => {
+                            setTimeout(() => {
+                                card.classList.add('animate');
+                            }, index * 100);
+                        });
+                    } else {
+                        // Session expired
+                        localStorage.removeItem('trustworthyCollegeAccess');
+                    }
+                }
+            } catch (e) {
+                // Invalid session data, proceed with password
+                console.log('No valid session found');
+            }
 
-            // Use no-cors so browser will not block cross-origin form POST
-            fetch(formURL, {
-                method: "POST",
-                mode: "no-cors",
-                body: formData
-            }).catch(err => console.warn("Form submission (no-cors) likely blocked for debug; data still sent."));
-        }
+            // Update copyright year
+            const yearElement = document.querySelector('.copyright');
+            if (yearElement) {
+                const currentYear = new Date().getFullYear();
+                yearElement.innerHTML = yearElement.innerHTML.replace('2025', currentYear);
+            }
+
+            // Focus on password input
+            passwordInput.focus();
+        });
+
+        // Add shake animation for errors
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                20%, 40%, 60%, 80% { transform: translateX(5px); }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
