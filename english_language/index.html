@@ -14,14 +14,14 @@
         }
         
         body {
-            background-color: #1a0f0a;
+            background-color: #0a0f1a;
             color: #f5e9dd;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
         }
         
-        /* Dimmed background overlay with literature theme */
+        /* Dimmed background overlay with English literature theme */
         body::before {
             content: '';
             position: fixed;
@@ -29,7 +29,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80');
+            background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2028&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -38,23 +38,23 @@
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container with literature color theme (blue/gold) */
+        /* Container with English literature color theme (burgundy/gold) */
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #0f1a2a 0%, #1a2c3a 100%);
-            box-shadow: 0 15px 40px rgba(30, 60, 114, 0.25);
+            background: linear-gradient(135deg, #1a0a14 0%, #2a1a24 100%);
+            box-shadow: 0 15px 40px rgba(140, 60, 100, 0.25);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #2a6fb7;
+            border: 3px solid #8e44ad;
             backdrop-filter: blur(5px);
         }
         
-        /* Blue decorative border effect */
+        /* Burgundy decorative border effect */
         .container::before {
             content: '';
             position: absolute;
@@ -62,17 +62,17 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #2a6fb7, #3498db, #2a6fb7);
+            background: linear-gradient(90deg, #8e44ad, #9b59b6, #8e44ad);
             z-index: 2;
         }
         
-        /* Header with literature theme */
+        /* Header with English literature theme */
         .header {
             text-align: center;
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #2a6fb7;
+            border-bottom: 2px solid #8e44ad;
         }
         
         .header::after {
@@ -83,7 +83,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #2a6fb7, transparent);
+            background: linear-gradient(to right, transparent, #8e44ad, transparent);
         }
         
         .logo {
@@ -92,7 +92,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #2a6fb7;
+            border: 3px solid #8e44ad;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -103,7 +103,7 @@
         }
         
         .subject-title {
-            color: #3498db;
+            color: #9b59b6;
             font-size: 2.4rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
@@ -111,7 +111,7 @@
         }
         
         .exam-info {
-            color: #a0c8e6;
+            color: #bb8fce;
             font-size: 1.1rem;
             margin-top: 5px;
         }
@@ -132,9 +132,9 @@
             display: block;
         }
         
-        /* Welcome message with literature theme */
+        /* Welcome message with English literature theme */
         .welcome-message {
-            background: linear-gradient(135deg, rgba(42, 111, 183, 0.1) 0%, rgba(26, 44, 58, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(142, 68, 173, 0.1) 0%, rgba(42, 26, 36, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
@@ -142,10 +142,10 @@
             font-size: 1.2rem;
             line-height: 1.8;
             color: #f5e9dd;
-            border-left: 5px solid #2a6fb7;
-            border-right: 1px solid rgba(42, 111, 183, 0.3);
-            border-top: 1px solid rgba(42, 111, 183, 0.2);
-            border-bottom: 1px solid rgba(42, 111, 183, 0.3);
+            border-left: 5px solid #8e44ad;
+            border-right: 1px solid rgba(142, 68, 173, 0.3);
+            border-top: 1px solid rgba(142, 68, 173, 0.2);
+            border-bottom: 1px solid rgba(142, 68, 173, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
@@ -160,10 +160,10 @@
             opacity: 0.1;
         }
         
-        /* Buttons with blue theme */
+        /* Buttons with burgundy theme */
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #2a6fb7 0%, #1a5799 100%);
+            background: linear-gradient(135deg, #8e44ad 0%, #732d91 100%);
             color: #ffffff;
             border: none;
             padding: 15px 32px;
@@ -174,8 +174,8 @@
             margin: 12px 8px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(52, 152, 219, 0.5);
-            box-shadow: 0 6px 15px rgba(42, 111, 183, 0.3);
+            border: 2px solid rgba(155, 89, 182, 0.5);
+            box-shadow: 0 6px 15px rgba(142, 68, 173, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -193,9 +193,9 @@
         }
         
         .btn:hover {
-            background: linear-gradient(135deg, #3498db 0%, #2a6fb7 100%);
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(42, 111, 183, 0.5);
+            box-shadow: 0 10px 25px rgba(142, 68, 173, 0.5);
             color: #ffffff;
         }
         
@@ -204,18 +204,18 @@
         }
         
         .btn:focus {
-            outline: 2px solid #3498db;
+            outline: 2px solid #9b59b6;
             outline-offset: 3px;
         }
         
         .btn-secondary {
-            background: linear-gradient(135deg, #5d6d7e 0%, #4a5f6e 100%);
+            background: linear-gradient(135deg, #6d5d7e 0%, #5a4a6e 100%);
             color: #f5e9dd;
             border-color: #7f8c8d;
         }
         
         .btn-secondary:hover {
-            background: linear-gradient(135deg, #7f8c8d 0%, #5d6d7e 100%);
+            background: linear-gradient(135deg, #7f8c8d 0%, #6d5d7e 100%);
         }
         
         .btn-success {
@@ -252,7 +252,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #3498db;
+            color: #9b59b6;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -260,8 +260,8 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(15, 26, 42, 0.7);
-            border: 2px solid #5d6d7e;
+            background: rgba(26, 10, 20, 0.7);
+            border: 2px solid #6d5d7e;
             border-radius: 10px;
             font-size: 1.1rem;
             color: #f5e9dd;
@@ -270,10 +270,10 @@
         }
         
         input[type="text"]:focus {
-            border-color: #2a6fb7;
+            border-color: #8e44ad;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(42, 111, 183, 0.3);
-            background: rgba(15, 26, 42, 0.9);
+            box-shadow: 0 0 0 3px rgba(142, 68, 173, 0.3);
+            background: rgba(26, 10, 20, 0.9);
         }
         
         .error-message {
@@ -284,14 +284,14 @@
             font-weight: 500;
         }
         
-        /* Instructions with literature theme */
+        /* Instructions with English literature theme */
         .instructions {
-            background: linear-gradient(135deg, rgba(93, 109, 126, 0.1) 0%, rgba(26, 44, 58, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(109, 93, 126, 0.1) 0%, rgba(42, 26, 36, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid #2a6fb7;
-            border: 1px solid rgba(42, 111, 183, 0.2);
+            border-left: 5px solid #8e44ad;
+            border: 1px solid rgba(142, 68, 173, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
@@ -307,7 +307,7 @@
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #3498db;
+            color: #9b59b6;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -320,7 +320,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #2a6fb7;
+            background: #8e44ad;
             border-radius: 2px;
         }
         
@@ -337,7 +337,7 @@
         
         .instructions li::before {
             content: '•';
-            color: #2a6fb7;
+            color: #8e44ad;
             font-size: 1.5rem;
             position: absolute;
             left: -20px;
@@ -348,19 +348,19 @@
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(42, 111, 183, 0.3);
+            border-bottom: 2px solid rgba(142, 68, 173, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #3498db;
+            color: #9b59b6;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(42, 111, 183, 0.1) 0%, rgba(93, 109, 126, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(142, 68, 173, 0.1) 0%, rgba(109, 93, 126, 0.2) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(42, 111, 183, 0.3);
+            border: 1px solid rgba(142, 68, 173, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -371,31 +371,31 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(15, 26, 42, 0.5);
+            background: rgba(26, 10, 20, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(42, 111, 183, 0.2);
+            border: 1px solid rgba(142, 68, 173, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #3498db;
+            color: #9b59b6;
             font-weight: 600;
             padding: 10px 20px;
-            background: rgba(42, 111, 183, 0.1);
+            background: rgba(142, 68, 173, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(42, 111, 183, 0.3);
+            border: 1px solid rgba(142, 68, 173, 0.3);
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #2a6fb7 0%, #1a5799 100%);
+            background: linear-gradient(135deg, #8e44ad 0%, #732d91 100%);
             color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(42, 111, 183, 0.4);
+            box-shadow: 0 4px 12px rgba(142, 68, 173, 0.4);
             display: none;
-            border: 2px solid rgba(52, 152, 219, 0.5);
+            border: 2px solid rgba(155, 89, 182, 0.5);
             font-family: 'Courier New', monospace;
         }
         
@@ -405,10 +405,10 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(15, 26, 42, 0.4);
+            background: rgba(26, 10, 20, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(42, 111, 183, 0.2);
+            border: 1px solid rgba(142, 68, 173, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -416,12 +416,12 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #3498db;
+            color: #9b59b6;
             line-height: 1.6;
             padding: 20px;
-            background: rgba(93, 109, 126, 0.1);
+            background: rgba(109, 93, 126, 0.1);
             border-radius: 10px;
-            border-left: 4px solid #2a6fb7;
+            border-left: 4px solid #8e44ad;
         }
         
         .options-container {
@@ -435,8 +435,8 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(26, 44, 58, 0.5);
-            border: 1px solid rgba(93, 109, 126, 0.3);
+            background: rgba(42, 26, 36, 0.5);
+            border: 1px solid rgba(109, 93, 126, 0.3);
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -449,14 +449,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(42, 111, 183, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(142, 68, 173, 0.1), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(42, 111, 183, 0.1);
-            border-color: #2a6fb7;
+            background: rgba(142, 68, 173, 0.1);
+            border-color: #8e44ad;
             transform: translateX(5px);
         }
         
@@ -469,7 +469,7 @@
             width: 22px;
             height: 22px;
             cursor: pointer;
-            accent-color: #2a6fb7;
+            accent-color: #8e44ad;
         }
         
         .option label {
@@ -486,12 +486,12 @@
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(42, 111, 183, 0.3);
+            border-top: 2px solid rgba(142, 68, 173, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #3498db;
+            color: #9b59b6;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -508,7 +508,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: #2a6fb7;
+            background: #8e44ad;
             border-radius: 2px;
         }
         
@@ -525,27 +525,27 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(93, 109, 126, 0.3) 0%, rgba(70, 86, 103, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(109, 93, 126, 0.3) 0%, rgba(86, 70, 103, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(42, 111, 183, 0.3);
+            border: 1px solid rgba(142, 68, 173, 0.3);
             color: #f5e9dd;
             font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background: linear-gradient(135deg, rgba(42, 111, 183, 0.3) 0%, rgba(30, 90, 160, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(142, 68, 173, 0.3) 0%, rgba(115, 45, 145, 0.5) 100%);
             transform: scale(1.1);
-            border-color: #2a6fb7;
+            border-color: #8e44ad;
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #2a6fb7 0%, #1a5799 100%);
+            background: linear-gradient(135deg, #8e44ad 0%, #732d91 100%);
             color: #ffffff;
-            border-color: #3498db;
-            box-shadow: 0 4px 10px rgba(42, 111, 183, 0.4);
+            border-color: #9b59b6;
+            box-shadow: 0 4px 10px rgba(142, 68, 173, 0.4);
             transform: scale(1.1);
         }
         
@@ -565,9 +565,9 @@
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(15, 26, 42, 0.8) 0%, rgba(26, 44, 58, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(26, 10, 20, 0.8) 0%, rgba(42, 26, 36, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #2a6fb7;
+            border: 2px solid #8e44ad;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
@@ -583,7 +583,7 @@
         }
         
         .results-container h2 {
-            color: #3498db;
+            color: #9b59b6;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -596,7 +596,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #a0c8e6;
+            color: #bb8fce;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -607,9 +607,9 @@
             color: #f5e9dd;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(42, 111, 183, 0.1);
+            background: rgba(142, 68, 173, 0.1);
             border-radius: 12px;
-            border: 1px solid rgba(42, 111, 183, 0.3);
+            border: 1px solid rgba(142, 68, 173, 0.3);
         }
         
         .submission-status {
@@ -696,8 +696,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(42, 111, 183, 0.3);
-            border-top: 4px solid #2a6fb7;
+            border: 4px solid rgba(142, 68, 173, 0.3);
+            border-top: 4px solid #8e44ad;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -717,14 +717,14 @@
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title">SS1 ENGLISH LANGUAGE EXAMINATION</h1>
-            <div class="exam-info">Second Term Mid Term Test | 40 Questions | 40 Minutes</div>
+            <h1 class="subject-title">SSS I ENGLISH LANGUAGE EXAMINATION</h1>
+            <div class="exam-info">Midterm Examination | 40 Questions | 40 Minutes</div>
         </div>
         
         <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College English Language Examination. Demonstrate your mastery of grammar, vocabulary, and written communication. Success comes from careful reading and thoughtful responses. Best of luck."
+                "Welcome to The Trustworthy College English Language Examination. Demonstrate your mastery of grammar, sentence structure, and linguistic concepts. Success comes from careful reading and analytical thinking. Best of luck."
             </div>
             <div class="btn-container">
                 <button id="start-exam-btn" class="btn">Start Examination</button>
@@ -778,7 +778,7 @@
                     <li>Ensure you have a stable internet connection throughout the examination.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li>Demonstrate your understanding of grammar, vocabulary, and language usage.</li>
+                    <li>Demonstrate your understanding of tense forms, verb phrases, clauses, and parts of speech.</li>
                 </ul>
             </div>
             
@@ -835,7 +835,7 @@
             <div class="results-container">
                 <h2>Examination Completed</h2>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SS1 English Language - Second Term</div>
+                <div class="subject" id="results-subject">SSS I English Language - Midterm Examination</div>
                 
                 <div class="feedback" id="feedback-message">
                     Thank you for completing the English Language examination. Your results have been submitted successfully to the examination board.
@@ -856,207 +856,207 @@
     </div>
 
     <script>
-        // SUBJECT: SS1 ENGLISH LANGUAGE - Second Term Mid Term Test
+        // SUBJECT: SSS I ENGLISH LANGUAGE - Midterm Examination
         const originalQuestions = [
             {
-                question: "The simple present tense is used to express",
-                options: ["past actions", "habitual actions", "ongoing actions", "planned future events"],
+                question: "Which of the following sentences is in the simple present tense?",
+                options: ["She is singing a song.", "They play football every Saturday.", "He has finished his work.", "We were studying yesterday."],
                 answer: "B"
             },
             {
-                question: "She ___ her homework every day.",
-                options: ["do", "does", "doing", "did"],
-                answer: "B"
-            },
-            {
-                question: "The simple past tense of go is",
-                options: ["goes", "gone", "went", "going"],
+                question: "Identify the tense form in this sentence: 'The students will have submitted their projects by next Friday.'",
+                options: ["Simple Future", "Future Continuous", "Future Perfect", "Future Perfect Continuous"],
                 answer: "C"
             },
             {
-                question: "Which sentence is in the simple present tense?",
-                options: ["He is reading a book.", "They play football every Saturday.", "She was cooking.", "We went to the park."],
-                answer: "B"
-            },
-            {
-                question: "In the simple present tense, verbs with he/she/it take",
-                options: ["–ed", "–s or –es", "–ing", "–en"],
-                answer: "B"
-            },
-            {
-                question: "The simple future tense is usually formed with",
-                options: ["will + verb", "is/am/are + verb + ing", "verb + ed", "has + verb"],
+                question: "Choose the correct past perfect tense form of the verb.",
+                options: ["She had left before I arrived.", "She has left before I arrive.", "She left before I had arrived.", "She leaves before I arrived."],
                 answer: "A"
             },
             {
-                question: "“I ___ my uncle yesterday.” (visit)",
-                options: ["visit", "visited", "visits", "visiting"],
+                question: "'They are building a new house.' What tense is used here?",
+                options: ["Present Perfect", "Present Continuous", "Simple Present", "Past Continuous"],
                 answer: "B"
             },
             {
-                question: "Which of these is a simple present sentence?",
-                options: ["She went to school.", "He is cooking dinner.", "They eat rice daily.", "I will travel tomorrow."],
+                question: "Which sentence is in the present perfect continuous tense?",
+                options: ["I have written a letter.", "I have been writing a letter for an hour.", "I wrote a letter.", "I am writing a letter."],
+                answer: "B"
+            },
+            {
+                question: "The past tense of the verb 'seek' is:",
+                options: ["seeked", "sought", "saught", "seeks"],
+                answer: "B"
+            },
+            {
+                question: "Which option correctly changes 'She drives carefully' to the simple past tense?",
+                options: ["She driven carefully.", "She is driving carefully.", "She drove carefully.", "She has driven carefully."],
                 answer: "C"
             },
             {
-                question: "The simple past tense of take is",
-                options: ["taked", "took", "taken", "takes"],
+                question: "Identify the tense: 'I had been waiting for two hours when the bus finally came.'",
+                options: ["Past Perfect", "Past Perfect Continuous", "Past Continuous", "Present Perfect Continuous"],
                 answer: "B"
             },
             {
-                question: "“He usually ___ early.”",
-                options: ["wake", "wakes", "waking", "woken"],
+                question: "The future continuous tense of 'I eat' is:",
+                options: ["I will eat.", "I will be eating.", "I will have eaten.", "I am eating."],
                 answer: "B"
             },
             {
-                question: "The present perfect tense is formed with",
-                options: ["have/has + past participle", "is/am/are + verb + ing", "will + verb", "verb + ed"],
+                question: "'He does not understand the lesson.' The tense of this sentence is:",
+                options: ["Present Perfect", "Simple Present", "Present Continuous", "Past Simple"],
+                answer: "B"
+            },
+            {
+                question: "What is the verb phrase in this sentence? 'The teacher might have been joking about the test.'",
+                options: ["might have", "have been joking", "might have been joking", "been joking"],
+                answer: "C"
+            },
+            {
+                question: "Identify the verb phrase: 'You must complete your assignment.'",
+                options: ["must", "complete", "must complete", "your assignment"],
+                answer: "C"
+            },
+            {
+                question: "'She has been nominated for an award.' The verb phrase is:",
+                options: ["has been", "nominated", "has been nominated", "for an award"],
+                answer: "C"
+            },
+            {
+                question: "In the sentence, 'The birds are chirping melodiously,' the verb phrase is:",
+                options: ["are", "chirping", "are chirping", "melodiously"],
+                answer: "C"
+            },
+            {
+                question: "Which of these contains a verb phrase?",
+                options: ["under the table", "the clever girl", "could have seen", "very quickly"],
+                answer: "C"
+            },
+            {
+                question: "'That problem could have been solved easily.' The verb phrase is:",
+                options: ["could have", "been solved", "could have been solved", "solved easily"],
+                answer: "C"
+            },
+            {
+                question: "What is the verb phrase? 'They will not be attending the meeting.'",
+                options: ["will not", "be attending", "will not be attending", "attending the meeting"],
+                answer: "C"
+            },
+            {
+                question: "Identify the verb phrase in this question: 'Have you seen my new book?'",
+                options: ["Have", "you seen", "Have you seen", "seen my new book"],
+                answer: "C"
+            },
+            {
+                question: "'I do not believe that story.' The verb phrase is:",
+                options: ["do not", "believe", "do not believe", "that story"],
+                answer: "C"
+            },
+            {
+                question: "Which of the following is NOT a verb phrase?",
+                options: ["might go", "has written", "in the room", "should have told"],
+                answer: "C"
+            },
+            {
+                question: "'I know the man who came here.' The underlined part is a/an:",
+                options: ["Main clause", "Subordinate clause", "Noun phrase", "Prepositional phrase"],
+                answer: "B"
+            },
+            {
+                question: "Which of these is a main clause?",
+                options: ["When the rain stopped", "Because she was ill", "He passed his exams", "Whom I met yesterday"],
+                answer: "C"
+            },
+            {
+                question: "'That he failed the exam surprised everyone.' The underlined clause is:",
+                options: ["A main clause", "A subordinate clause", "A coordinating clause", "A verb phrase"],
+                answer: "B"
+            },
+            {
+                question: "'We left after the movie ended.' The underlined part is a:",
+                options: ["Main clause", "Subordinate clause", "Independent clause", "Noun clause"],
+                answer: "B"
+            },
+            {
+                question: "The clause 'whose book was stolen' in 'This is the boy whose book was stolen' is:",
+                options: ["A main clause", "A subordinate clause", "A sentence", "A prepositional phrase"],
+                answer: "B"
+            },
+            {
+                question: "A clause that expresses a complete thought and can stand alone is called a/an:",
+                options: ["Subordinate clause", "Main clause", "Phrasal clause", "Conditional clause"],
+                answer: "B"
+            },
+            {
+                question: "'If you study hard, you will succeed.' The first part is a/an:",
+                options: ["Main clause", "Subordinate clause", "Noun clause", "Independent clause"],
+                answer: "B"
+            },
+            {
+                question: "In the sentence 'She said that she was busy,' the underlined clause is:",
+                options: ["A main clause", "A subordinate clause", "A coordinate clause", "An adjectival phrase"],
+                answer: "B"
+            },
+            {
+                question: "Which part of this sentence is the subordinate clause? 'The house which was built last year is huge.'",
+                options: ["The house is huge", "which was built last year", "last year is huge", "The house which"],
+                answer: "B"
+            },
+            {
+                question: "'We eat so that we may live.' The underlined clause is:",
+                options: ["A main clause", "A subordinate clause", "An independent clause", "A coordinating clause"],
+                answer: "B"
+            },
+            {
+                question: "What part of speech is the underlined word? 'She speaks very quickly.'",
+                options: ["Adjective", "Adverb", "Preposition", "Conjunction"],
+                answer: "B"
+            },
+            {
+                question: "'The frightened child ran home.' The word 'frightened' is a/an:",
+                options: ["Adverb", "Past tense verb", "Adjective (participle)", "Noun"],
+                answer: "C"
+            },
+            {
+                question: "Identify the preposition in: 'The book is on the shelf beside the desk.'",
+                options: ["book", "on", "shelf", "the"],
+                answer: "B"
+            },
+            {
+                question: "The word 'and' in 'Bread and butter' is a:",
+                options: ["Preposition", "Conjunction", "Interjection", "Adjective"],
+                answer: "B"
+            },
+            {
+                question: "'Wow! That was an amazing performance.' The word 'Wow' is a/an:",
+                options: ["Adjective", "Interjection", "Noun", "Adverb"],
+                answer: "B"
+            },
+            {
+                question: "In the sentence 'He works diligently,' the word 'diligently' is an:",
+                options: ["Adjective", "Adverb", "Noun", "Verb"],
+                answer: "B"
+            },
+            {
+                question: "What is the part of speech of 'who' in: 'The man who called you is my uncle.'",
+                options: ["Relative Pronoun", "Interrogative Pronoun", "Conjunction", "Adverb"],
                 answer: "A"
             },
             {
-                question: "Which sentence is in the present perfect tense?",
-                options: ["She has finished her homework.", "She is finishing her homework.", "She finished her homework.", "She will finish her homework."],
-                answer: "A"
-            },
-            {
-                question: "The past perfect tense is formed using",
-                options: ["had + past participle", "has + verb + ing", "was + verb + ing", "will + have + verb"],
-                answer: "A"
-            },
-            {
-                question: "“They ___ already left when I arrived.”",
-                options: ["had", "have", "has", "will"],
-                answer: "A"
-            },
-            {
-                question: "The future perfect tense expresses an action that",
-                options: ["is ongoing now", "will be completed before a future time", "happened yesterday", "is habitual"],
+                question: "The word 'running' in 'Running is good exercise' functions as a:",
+                options: ["Present participle", "Gerund (Noun)", "Verb", "Adjective"],
                 answer: "B"
             },
             {
-                question: "“I ___ finished the work by 5 p.m.”",
-                options: ["have", "had", "will have", "am"],
+                question: "'Oh, I didn't see you there.' The word 'Oh' is a/an:",
+                options: ["Pronoun", "Conjunction", "Interjection", "Preposition"],
                 answer: "C"
             },
             {
-                question: "Which tense is used in the sentence: “She has been studying since morning”?",
-                options: ["Present perfect continuous", "Simple present", "Simple past", "Future perfect"],
-                answer: "A"
-            },
-            {
-                question: "“By next week, he ___ completed the project.”",
-                options: ["has", "had", "will have", "is"],
+                question: "'They bravely fought the enemy.' The word 'bravely' is:",
+                options: ["A noun", "An adjective", "An adverb", "A verb"],
                 answer: "C"
-            },
-            {
-                question: "The past perfect tense usually expresses",
-                options: ["a future action", "an action completed before another past action", "a habitual action", "an ongoing action"],
-                answer: "B"
-            },
-            {
-                question: "Which of these is in the present perfect tense?",
-                options: ["I eat rice daily.", "I have eaten rice.", "I am eating rice.", "I will eat rice."],
-                answer: "B"
-            },
-            {
-                question: "An informal letter is written to",
-                options: ["a government official", "a company manager", "a close friend", "the principal"],
-                answer: "C"
-            },
-            {
-                question: "The salutation of an informal letter is usually",
-                options: ["Dear Sir", "My dear friend", "Yours faithfully", "To whom it may concern"],
-                answer: "B"
-            },
-            {
-                question: "Which part is usually found at the top right corner of an informal letter?",
-                options: ["Date", "Address of the recipient", "Body", "Salutation"],
-                answer: "A"
-            },
-            {
-                question: "The correct ending for an informal letter is",
-                options: ["Yours faithfully", "Yours sincerely", "Yours lovingly", "Yours obediently"],
-                answer: "C"
-            },
-            {
-                question: "Informal letters are usually written in",
-                options: ["formal language", "friendly language", "legal language", "business language"],
-                answer: "B"
-            },
-            {
-                question: "Which of the following expressions is suitable in an informal letter?",
-                options: ["I am directed to inform you…", "I wish to apply…", "How are you doing?", "With reference to your letter…"],
-                answer: "C"
-            },
-            {
-                question: "The body of an informal letter contains",
-                options: ["the signature", "the address", "the main message", "the date"],
-                answer: "C"
-            },
-            {
-                question: "An informal letter is mainly written to",
-                options: ["communicate personal messages", "apply for a job", "make complaints", "give legal notice"],
-                answer: "A"
-            },
-            {
-                question: "Which of the following is NOT part of an informal letter?",
-                options: ["Salutation", "Body", "Reference number", "Closing"],
-                answer: "C"
-            },
-            {
-                question: "The writer's address is written",
-                options: ["top left", "top right", "bottom left", "bottom right"],
-                answer: "B"
-            },
-            {
-                question: "The word mosque refers to",
-                options: ["a market", "a place of worship for Muslims", "a school", "a home"],
-                answer: "B"
-            },
-            {
-                question: "The word imam refers to",
-                options: ["a type of prayer", "a leader of Muslim prayer", "a holy book", "a religious festival"],
-                answer: "B"
-            },
-            {
-                question: "Qur'an is",
-                options: ["a place of worship", "the holy book of Islam", "a type of food", "a festival"],
-                answer: "B"
-            },
-            {
-                question: "Salah refers to",
-                options: ["fasting", "daily prayer", "charity", "pilgrimage"],
-                answer: "B"
-            },
-            {
-                question: "Zakat is",
-                options: ["a prayer", "fasting in Ramadan", "giving charity to the needy", "a religious festival"],
-                answer: "C"
-            },
-            {
-                question: "Hajj is",
-                options: ["a daily prayer", "pilgrimage to Mecca", "a religious tax", "a type of worship"],
-                answer: "B"
-            },
-            {
-                question: "Which of these is NOT a pillar of Islam?",
-                options: ["Shahada", "Salah", "Zakat", "Lent"],
-                answer: "D"
-            },
-            {
-                question: "Ramadan is a month of",
-                options: ["celebration only", "fasting", "pilgrimage", "charity only"],
-                answer: "B"
-            },
-            {
-                question: "The Arabic word 'Masjid' means",
-                options: ["school", "mosque", "market", "home"],
-                answer: "B"
-            },
-            {
-                question: "Shahada refers to",
-                options: ["prayer", "declaration of faith", "charity", "pilgrimage"],
-                answer: "B"
             }
         ];
 
@@ -1068,11 +1068,11 @@
         let timeLeft = 40 * 60; // 40 minutes in seconds
         let questions = [];
 
-        // Background images for rotation (literature theme)
+        // Background images for rotation (English literature theme)
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80',
+            'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2028&q=80',
             'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80',
-            'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2028&q=80'
+            'https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80'
         ];
 
         // DOM elements
@@ -1388,7 +1388,7 @@
             }
             
             // Submit to Google Form WITHOUT showing score to student
-            submitToGoogleForm(studentName, "SS1 English Language - Second Term", `${score}/${questions.length}`);
+            submitToGoogleForm(studentName, "SSS I English Language - Midterm Examination", `${score}/${questions.length}`);
             
             // Show submission status
             document.getElementById('submission-status').style.display = 'block';
@@ -1401,7 +1401,7 @@
             const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
             const formData = new FormData();
             formData.append("entry.862885683", fullName);
-            formData.append("entry.1545021484", "SS1");
+            formData.append("entry.1545021484", "SSS I");
             formData.append("entry.1558221900", subject);
             formData.append("entry.2022160530", score);
 
