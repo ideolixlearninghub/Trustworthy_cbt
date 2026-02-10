@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Literature-in-English CBT Exam</title>
+    <title>The Trustworthy College - Literature in English CBT Exam</title>
     <style>
         /* Reset and base styles */
         * {
@@ -14,13 +14,14 @@
         }
         
         body {
-            background-color: #f8f3e9;
-            color: #5d4037;
+            background-color: #1a0f0f;
+            color: #f5e9dd;
             line-height: 1.6;
             position: relative;
+            min-height: 100vh;
         }
         
-        /* Dimmed background overlay */
+        /* Dimmed background overlay with literature theme */
         body::before {
             content: '';
             position: fixed;
@@ -28,192 +29,339 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2028&q=80');
+            background-image: url('https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.4; /* Dimmed background */
+            opacity: 0.15;
             z-index: -1;
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container */
+        /* Container with literature color theme (burgundy/gold) */
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.92);
-            box-shadow: 0 0 20px rgba(93, 64, 55, 0.2);
-            border-radius: 10px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            padding: 25px;
+            background: linear-gradient(135deg, #2a0f1a 0%, #3a1824 100%);
+            box-shadow: 0 15px 40px rgba(140, 40, 70, 0.25);
+            border-radius: 16px;
+            margin-top: 25px;
+            margin-bottom: 25px;
             position: relative;
             overflow: hidden;
+            border: 3px solid #c0392b;
+            backdrop-filter: blur(5px);
         }
         
-        /* Header - Only logo */
+        /* Burgundy decorative border effect */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #c0392b, #e74c3c, #c0392b);
+            z-index: 2;
+        }
+        
+        /* Header with literature theme */
         .header {
             text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #d7ccc8;
-            margin-bottom: 25px;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+            position: relative;
+            border-bottom: 2px solid #c0392b;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #c0392b, transparent);
         }
         
         .logo {
-            max-width: 150px;
+            max-width: 140px;
             height: auto;
             margin-bottom: 15px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            border-radius: 10px;
+            border: 3px solid #c0392b;
+            padding: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .subject-title {
+            color: #e74c3c;
+            font-size: 2.4rem;
+            margin: 10px 0 5px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+            letter-spacing: 1px;
+        }
+        
+        .exam-info {
+            color: #d6a0a6;
+            font-size: 1.1rem;
+            margin-top: 5px;
         }
         
         /* Sections */
         .section {
             display: none;
-            padding: 20px;
+            padding: 25px;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .active {
             display: block;
         }
         
-        /* Welcome message */
+        /* Welcome message with literature theme */
         .welcome-message {
-            background-color: #f3e5f5;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 20px 0;
+            background: linear-gradient(135deg, rgba(192, 57, 43, 0.1) 0%, rgba(58, 24, 36, 0.7) 100%);
+            padding: 35px;
+            border-radius: 12px;
+            margin: 25px 0;
             text-align: center;
-            font-size: 17px;
+            font-size: 1.2rem;
             line-height: 1.8;
-            color: #5d4037;
-            border-left: 5px solid #7b1fa2;
+            color: #f5e9dd;
+            border-left: 5px solid #c0392b;
+            border-right: 1px solid rgba(192, 57, 43, 0.3);
+            border-top: 1px solid rgba(192, 57, 43, 0.2);
+            border-bottom: 1px solid rgba(192, 57, 43, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
         }
         
-        /* Buttons */
+        .welcome-message::before {
+            content: '📖';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.1;
+        }
+        
+        /* Buttons with burgundy theme */
         .btn {
             display: inline-block;
-            background-color: #7b1fa2;
-            color: white;
+            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+            color: #ffffff;
             border: none;
-            padding: 12px 24px;
-            font-size: 16px;
-            border-radius: 5px;
+            padding: 15px 32px;
+            font-size: 1.1rem;
+            border-radius: 10px;
             cursor: pointer;
             transition: all 0.3s;
-            margin: 10px 5px;
-            font-weight: 600;
+            margin: 12px 8px;
+            font-weight: 700;
             letter-spacing: 0.5px;
+            border: 2px solid rgba(231, 76, 60, 0.5);
+            box-shadow: 0 6px 15px rgba(192, 57, 43, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: rotate(30deg);
+            transition: all 0.5s;
         }
         
         .btn:hover {
-            background-color: #6a1b9a;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(192, 57, 43, 0.5);
+            color: #ffffff;
+        }
+        
+        .btn:hover::after {
+            left: 100%;
         }
         
         .btn:focus {
-            outline: 2px solid #ba68c8;
-            outline-offset: 2px;
+            outline: 2px solid #e74c3c;
+            outline-offset: 3px;
         }
         
         .btn-secondary {
-            background-color: #ab47bc;
+            background: linear-gradient(135deg, #7e5d6d 0%, #6e4a5a 100%);
+            color: #f5e9dd;
+            border-color: #8d7f8c;
         }
         
         .btn-secondary:hover {
-            background-color: #9c27b0;
+            background: linear-gradient(135deg, #8d7f8c 0%, #7e5d6d 100%);
         }
         
         .btn-success {
-            background-color: #5d8c5a;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            border-color: #229954;
         }
         
         .btn-success:hover {
-            background-color: #4a6c47;
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
         }
         
         .btn-danger {
-            background-color: #d32f2f;
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            color: white;
+            border-color: #922b21;
         }
         
         .btn-danger:hover {
-            background-color: #b71c1c;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
         }
         
         .btn-container {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 35px;
         }
         
         /* Form elements */
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 28px;
         }
         
         label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-weight: 600;
-            color: #5d4037;
+            color: #e74c3c;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
         }
         
         input[type="text"] {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #d7ccc8;
-            border-radius: 5px;
-            font-size: 16px;
-            background-color: #faf5f0;
-            transition: border 0.3s;
+            padding: 16px;
+            background: rgba(26, 15, 26, 0.7);
+            border: 2px solid #7e5d6d;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            color: #f5e9dd;
+            transition: all 0.3s;
+            font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #7b1fa2;
+            border-color: #c0392b;
             outline: none;
-            box-shadow: 0 0 0 2px rgba(123, 31, 162, 0.2);
+            box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.3);
+            background: rgba(26, 15, 26, 0.9);
         }
         
         .error-message {
-            color: #d32f2f;
-            font-size: 14px;
-            margin-top: 5px;
+            color: #ff6b6b;
+            font-size: 0.95rem;
+            margin-top: 8px;
             display: none;
+            font-weight: 500;
         }
         
-        /* Instructions */
+        /* Instructions with literature theme */
         .instructions {
-            background-color: #f3e5f5;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 5px solid #7b1fa2;
+            background: linear-gradient(135deg, rgba(126, 93, 109, 0.1) 0%, rgba(58, 24, 36, 0.7) 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-left: 5px solid #c0392b;
+            border: 1px solid rgba(192, 57, 43, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .instructions::before {
+            content: '🎭';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2.5rem;
+            opacity: 0.1;
         }
         
         .instructions h3 {
-            margin-bottom: 15px;
-            color: #5d4037;
+            margin-bottom: 20px;
+            color: #e74c3c;
+            font-size: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .instructions h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #c0392b;
+            border-radius: 2px;
         }
         
         .instructions ul {
-            padding-left: 20px;
+            padding-left: 25px;
         }
         
         .instructions li {
-            margin-bottom: 10px;
+            margin-bottom: 14px;
+            line-height: 1.7;
+            padding-left: 8px;
+            position: relative;
+        }
+        
+        .instructions li::before {
+            content: '•';
+            color: #c0392b;
+            font-size: 1.5rem;
+            position: absolute;
+            left: -20px;
+            top: -5px;
         }
         
         /* Exam interface */
         .exam-header {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #d7ccc8;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(192, 57, 43, 0.3);
         }
         
         .student-info {
-            font-size: 22px;
+            font-size: 1.6rem;
             font-weight: bold;
-            color: #5d4037;
-            margin-bottom: 15px;
+            color: #e74c3c;
+            margin-bottom: 25px;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(192, 57, 43, 0.1) 0%, rgba(126, 93, 109, 0.2) 100%);
+            border-radius: 12px;
+            border: 1px solid rgba(192, 57, 43, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
         .exam-controls {
@@ -221,24 +369,34 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(26, 15, 26, 0.5);
+            border-radius: 12px;
+            border: 1px solid rgba(192, 57, 43, 0.2);
         }
         
         .question-counter {
-            font-size: 16px;
-            color: #7b1fa2;
+            font-size: 1.2rem;
+            color: #e74c3c;
             font-weight: 600;
+            padding: 10px 20px;
+            background: rgba(192, 57, 43, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(192, 57, 43, 0.3);
         }
         
         .timer-container {
-            background: #7b1fa2;
-            color: #f3e5f5;
-            padding: 10px 15px;
-            border-radius: 5px;
+            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 10px;
             font-weight: bold;
-            font-size: 18px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-size: 1.3rem;
+            box-shadow: 0 4px 12px rgba(192, 57, 43, 0.4);
             display: none;
+            border: 2px solid rgba(231, 76, 60, 0.5);
+            font-family: 'Courier New', monospace;
         }
         
         .submit-container {
@@ -246,37 +404,72 @@
         }
         
         .exam-content {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            background: rgba(26, 15, 26, 0.4);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(192, 57, 43, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
         .question-text {
-            font-size: 18px;
-            margin-bottom: 20px;
+            font-size: 1.35rem;
+            margin-bottom: 25px;
             font-weight: 600;
-            color: #5d4037;
-            line-height: 1.5;
+            color: #e74c3c;
+            line-height: 1.6;
+            padding: 20px;
+            background: rgba(126, 93, 109, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid #c0392b;
         }
         
         .options-container {
-            margin-left: 10px;
+            margin-left: 15px;
         }
         
         .option {
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             display: flex;
-            align-items: flex-start;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.2s;
+            align-items: center;
+            padding: 18px 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            background: rgba(58, 24, 36, 0.5);
+            border: 1px solid rgba(126, 93, 109, 0.3);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(192, 57, 43, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s;
         }
         
         .option:hover {
-            background-color: #f3e5f5;
+            background: rgba(192, 57, 43, 0.1);
+            border-color: #c0392b;
+            transform: translateX(5px);
+        }
+        
+        .option:hover::before {
+            transform: translateX(100%);
         }
         
         .option input {
-            margin-right: 10px;
-            margin-top: 3px;
+            margin-right: 15px;
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            accent-color: #c0392b;
         }
         
         .option label {
@@ -284,79 +477,149 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
+            color: #f5e9dd;
+            font-size: 1.1rem;
+            line-height: 1.5;
         }
         
         /* Question navigation */
         .question-navigation {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #d7ccc8;
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 2px solid rgba(192, 57, 43, 0.3);
         }
         
         .question-navigation h3 {
-            margin-bottom: 15px;
-            color: #5d4037;
+            margin-bottom: 20px;
+            color: #e74c3c;
             text-align: center;
+            font-size: 1.5rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .question-navigation h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #c0392b;
+            border-radius: 2px;
         }
         
         .question-grid {
             display: grid;
             grid-template-columns: repeat(10, 1fr);
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 12px;
+            margin-bottom: 25px;
         }
         
         .question-number {
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #e1bee7;
-            border-radius: 5px;
+            background: linear-gradient(135deg, rgba(126, 93, 109, 0.3) 0%, rgba(103, 70, 86, 0.5) 100%);
+            border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
-            transition: all 0.2s;
+            transition: all 0.3s;
+            border: 1px solid rgba(192, 57, 43, 0.3);
+            color: #f5e9dd;
+            font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background-color: #ce93d8;
+            background: linear-gradient(135deg, rgba(192, 57, 43, 0.3) 0%, rgba(169, 50, 38, 0.5) 100%);
+            transform: scale(1.1);
+            border-color: #c0392b;
         }
         
         .question-number.current {
-            background-color: #7b1fa2;
-            color: white;
+            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+            color: #ffffff;
+            border-color: #e74c3c;
+            box-shadow: 0 4px 10px rgba(192, 57, 43, 0.4);
+            transform: scale(1.1);
         }
         
         .question-number.answered {
-            background-color: #a5d6a7;
-            color: #2e7d32;
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            border-color: #2ecc71;
         }
         
         .navigation-buttons {
             display: flex;
             justify-content: space-between;
-            margin-top: 20px;
+            margin-top: 25px;
         }
         
-        /* Results */
+        /* Results section - NO SCORE DISPLAY */
         .results-container {
             text-align: center;
-            padding: 30px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(26, 15, 26, 0.8) 0%, rgba(58, 24, 36, 0.9) 100%);
+            border-radius: 16px;
+            border: 2px solid #c0392b;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .results-container::before {
+            content: '✅';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 4rem;
+            opacity: 0.1;
+        }
+        
+        .results-container h2 {
+            color: #e74c3c;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .student-info {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .subject {
+            font-size: 1.3rem;
+            color: #d6a0a6;
+            margin-bottom: 30px;
+            font-weight: 600;
         }
         
         .feedback {
-            font-size: 18px;
-            margin: 20px 0;
-            color: #5d4037;
+            font-size: 1.3rem;
+            margin: 25px 0;
+            color: #f5e9dd;
+            line-height: 1.7;
+            padding: 25px;
+            background: rgba(192, 57, 43, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(192, 57, 43, 0.3);
         }
         
         .submission-status {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #e8f5e9;
-            border-radius: 8px;
-            color: #2e7d32;
+            margin-top: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.2) 0%, rgba(46, 204, 113, 0.3) 100%);
+            border-radius: 12px;
+            color: #2ecc71;
+            font-size: 1.2rem;
+            border: 1px solid rgba(46, 204, 113, 0.5);
         }
         
         /* Responsive */
@@ -372,27 +635,96 @@
             
             .navigation-buttons {
                 flex-direction: column;
+                gap: 15px;
             }
             
             .btn {
                 width: 100%;
-                margin: 5px 0;
+                margin: 8px 0;
             }
+            
+            .subject-title {
+                font-size: 1.8rem;
+            }
+            
+            .question-text {
+                font-size: 1.2rem;
+            }
+            
+            .container {
+                padding: 15px;
+                margin: 15px;
+            }
+            
+            .welcome-message, .instructions, .exam-content {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .question-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+            
+            .question-number {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            
+            .subject-title {
+                font-size: 1.5rem;
+            }
+            
+            .results-container {
+                padding: 25px 15px;
+            }
+        }
+        
+        /* Back to Home button */
+        .back-home {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        /* Loading animation */
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(192, 57, 43, 0.3);
+            border-top: 4px solid #c0392b;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header with logo only -->
+        <!-- Header with logo -->
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
+            <h1 class="subject-title">LITERATURE IN ENGLISH EXAMINATION</h1>
+            <div class="exam-info">Mid-Term Test | 40 Questions | 45 Minutes</div>
         </div>
         
         <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College. We pray this examination helps you demonstrate the knowledge and virtues we nurture: honesty, diligence and piety. Best of luck."
+                "Welcome to The Trustworthy College Literature in English Examination. Explore the richness of African drama, literary appreciation, and dramatic texts. Success comes from understanding themes, characters, and cultural contexts. Best of luck."
             </div>
             <div class="btn-container">
                 <button id="start-exam-btn" class="btn">Start Examination</button>
@@ -437,14 +769,16 @@
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This examination consists of 40 multiple-choice questions.</li>
-                    <li>You have 40 minutes to complete this examination (1 minute per question).</li>
+                    <li>This examination consists of 40 multiple-choice questions covering Literature in English.</li>
+                    <li>You have 45 minutes to complete this examination.</li>
                     <li>Answer all questions to the best of your ability.</li>
                     <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
                     <li>Answered questions will be marked with green in the question grid.</li>
                     <li>Once you submit your answers, you cannot change them.</li>
                     <li>Ensure you have a stable internet connection throughout the examination.</li>
-                    <li>Any form of malpractice will lead to disqualification.</li>
+                    <li>Read each question carefully before selecting your answer.</li>
+                    <li>Your results will be submitted automatically upon completion.</li>
+                    <li>Demonstrate your understanding of African drama, literary appreciation, and the prescribed text.</li>
                 </ul>
             </div>
             
@@ -461,7 +795,7 @@
                 <div class="exam-controls">
                     <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">40:00</span>
+                        Time Left: <span id="timer">45:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
                         <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
@@ -489,232 +823,240 @@
                     <button type="button" id="next-question" class="btn">Next</button>
                 </div>
             </div>
+            
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Submitting your results...</p>
+            </div>
         </section>
         
-        <!-- Results Section -->
+        <!-- Results Section - NO SCORE DISPLAY -->
         <section id="results-section" class="section">
             <div class="results-container">
                 <h2>Examination Completed</h2>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">Literature-in-English</div>
+                <div class="subject" id="results-subject">Literature in English - Mid-Term Test</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the examination. Your results have been submitted successfully.
+                    Thank you for completing the Literature in English examination. Your results have been submitted successfully to the examination board.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    Your score has been successfully submitted to the examination board.
+                    Your examination has been successfully submitted. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="btn-container">
                     <button type="button" id="restart-exam" class="btn">Take Another Exam</button>
+                    <div class="back-home">
+                        <a href="../index.html" class="btn btn-secondary">Back to Home</a>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 
     <script>
-        // SUBJECT: Literature-in-English
+        // SUBJECT: LITERATURE IN ENGLISH - Mid-Term Test
         const originalQuestions = [
             {
-                question: "Literature is best defined as the ______.",
-                options: ["study of life through written works", "study of numbers", "study of foreign languages", "study of history"],
-                answer: "A"
-            },
-            {
-                question: "The three major genres of literature are ______.",
-                options: ["Prose, Speech, and Poetry", "Prose, Drama, and Poetry", "Poetry, Drama, and Fiction", "Drama, Fiction, and Essays"],
+                question: "African drama originated mainly from",
+                options: ["European festivals", "Religious rituals and festivals", "Written novels", "Modern cinema"],
                 answer: "B"
             },
             {
-                question: "The written form of a story told in sentences and paragraphs is called _____.",
-                options: ["Drama", "Poetry", "Prose", "Rhetoric"],
-                answer: "C"
-            },
-            {
-                question: "The genre of literature meant to be performed on stage is called ______.",
-                options: ["Drama", "Prose", "Poetry", "Fiction"],
-                answer: "A"
-            },
-            {
-                question: "A literary work written in lines and stanzas is known as ______.",
-                options: ["Prose", "Poetry", "Drama", "Nonfiction"],
+                question: "One major feature of traditional African drama is the use of",
+                options: ["Flashbacks", "Chorus and chants", "Soliloquy only", "Narration alone"],
                 answer: "B"
             },
             {
-                question: "Literature is important because it helps to ______.",
-                options: ["improve handwriting", "develop imagination", "reduce vocabulary", "destroy culture"],
+                question: "African drama is best described as",
+                options: ["Individualistic", "Communal in nature", "Scientific", "Abstract"],
                 answer: "B"
             },
             {
-                question: "Which of these is not a function of literature?",
-                options: ["Entertainment", "Education", "Cultural preservation", "Road construction"],
+                question: "Which of the following is NOT a feature of African drama?",
+                options: ["Music", "Dance", "Masquerades", "Silent reading"],
                 answer: "D"
             },
             {
-                question: "The ability of literature to teach moral lessons is known as its ______.",
-                options: ["didactic function", "dramatic effect", "poetic license", "narrative style"],
+                question: "The performers in traditional African drama are usually",
+                options: ["Trained actors only", "Community members", "Foreigners", "Professional comedians"],
+                answer: "B"
+            },
+            {
+                question: "African drama often teaches",
+                options: ["Mathematics", "Moral lessons", "Grammar rules", "Science facts"],
+                answer: "B"
+            },
+            {
+                question: "One major difference between African drama and European drama is that African drama",
+                options: ["Rejects music", "Is more ritualistic", "Has no audience", "Is always written"],
+                answer: "B"
+            },
+            {
+                question: "Costumes in African drama are mainly used to",
+                options: ["Beautify the stage only", "Show social status and roles", "Waste time", "Entertain children"],
+                answer: "B"
+            },
+            {
+                question: "The language used in African drama is often",
+                options: ["Latin", "Artificial", "Indigenous", "Technical"],
+                answer: "C"
+            },
+            {
+                question: "Traditional African drama performances are mostly held",
+                options: ["In classrooms", "On television", "In palaces and village squares", "In cinemas"],
+                answer: "C"
+            },
+            {
+                question: "Which of the following is a theme common in African drama?",
+                options: ["Space travel", "Individualism", "Marriage and family life", "Robotics"],
+                answer: "C"
+            },
+            {
+                question: "African drama emphasizes",
+                options: ["Written scripts only", "Participation of the audience", "Silence", "Isolation"],
+                answer: "B"
+            },
+            {
+                question: "The origin of African drama is closely linked to",
+                options: ["Colonization", "Religion and culture", "Newspapers", "Technology"],
+                answer: "B"
+            },
+            {
+                question: "A major purpose of African drama is to",
+                options: ["Entertain and educate", "Confuse the audience", "Promote foreign culture", "Encourage violence"],
                 answer: "A"
             },
             {
-                question: "One major feature of poetry is ______.",
-                options: ["dialogue", "rhyme and rhythm", "cast list", "chapters"],
+                question: "African drama reflects",
+                options: ["Western ideology", "African traditions and values", "Scientific theories", "Modern technology"],
                 answer: "B"
             },
             {
-                question: "A key characteristic of drama is the use of ______.",
-                options: ["dialogue and stage directions", "rhyme and stanzas", "footnotes", "chapters"],
+                question: "Literary appreciation is the ability to",
+                options: ["Memorize texts", "Understand and enjoy literature", "Write novels", "Act drama"],
+                answer: "B"
+            },
+            {
+                question: "One important aspect of literary appreciation is",
+                options: ["Plot analysis", "Handwriting", "Dictation", "Pronunciation"],
                 answer: "A"
             },
             {
-                question: "Prose fiction is mainly written in ______.",
-                options: ["acts and scenes", "paragraphs and chapters", "rhymes and stanzas", "speeches and instructions"],
+                question: "The theme of a literary work refers to",
+                options: ["The writer's handwriting", "The central idea of the work", "The length of the text", "The title only"],
                 answer: "B"
             },
             {
-                question: "An extended fictional story usually in chapters is called a ______.",
-                options: ["poem", "play", "novel", "fable"],
+                question: "Characters in a literary work are",
+                options: ["The setting", "The events", "The people or animals in the story", "The language"],
                 answer: "C"
             },
             {
-                question: "A short fictional story with fewer characters is a ______.",
-                options: ["novel", "short story", "drama", "stanza"],
+                question: "The setting of a literary work refers to",
+                options: ["The conflict", "Time and place of the story", "The theme", "The mood"],
                 answer: "B"
             },
             {
-                question: "A story that explains natural events with supernatural characters is a ______.",
-                options: ["myth", "biography", "diary", "journal"],
-                answer: "A"
-            },
-            {
-                question: "A poem that expresses strong personal emotions is called ______.",
-                options: ["narrative poem", "lyrical poem", "epic", "drama"],
+                question: "A plot is best described as",
+                options: ["The language used", "The arrangement of events", "The author's background", "The title"],
                 answer: "B"
             },
             {
-                question: "A long narrative poem about the adventures of a hero is a/an ______.",
-                options: ["lyric", "epic", "elegy", "ode"],
+                question: "Literary devices are used mainly to",
+                options: ["Confuse readers", "Beautify and enrich the text", "Increase pages", "Avoid meaning"],
                 answer: "B"
             },
             {
-                question: "The people who take part in a story are called ______.",
-                options: ["settings", "plots", "characters", "themes"],
+                question: "Mood in literature refers to",
+                options: ["The author's age", "The emotional atmosphere of the work", "The characters' names", "The title"],
+                answer: "B"
+            },
+            {
+                question: "The style of a writer refers to",
+                options: ["His clothes", "His unique way of writing", "His nationality", "His handwriting"],
+                answer: "B"
+            },
+            {
+                question: "Conflict in a literary work means",
+                options: ["Peaceful agreement", "Struggle between opposing forces", "The setting", "The theme"],
+                answer: "B"
+            },
+            {
+                question: "Marriage of Anansewa was written by",
+                options: ["Chinua Achebe", "Wole Soyinka", "Efua Sutherland", "Ola Rotimi"],
                 answer: "C"
             },
             {
-                question: "The time and place of a story is its ______.",
-                options: ["plot", "setting", "theme", "conflict"],
+                question: "The play Marriage of Anansewa is based on",
+                options: ["A myth", "A folktale", "A novel", "A poem"],
                 answer: "B"
             },
             {
-                question: "The events arranged in a logical order in a story are called ______.",
-                options: ["plot", "character", "setting", "chorus"],
-                answer: "A"
-            },
-            {
-                question: "The central idea of a literary work is its ______.",
-                options: ["theme", "setting", "conflict", "style"],
-                answer: "A"
-            },
-            {
-                question: "The struggle between opposing forces in a story is the ______.",
-                options: ["theme", "plot", "conflict", "character"],
-                answer: "C"
-            },
-            {
-                question: "The narrator of a story is known as the ______.",
-                options: ["playwright", "speaker", "narrator/persona", "actor"],
-                answer: "C"
-            },
-            {
-                question: "When a narrator uses 'I' in telling a story, it is ______ point of view.",
-                options: ["second-person", "third-person", "first-person", "objective"],
-                answer: "C"
-            },
-            {
-                question: "A story that has a narrator who is not part of the events uses ______ point of view.",
-                options: ["first-person", "third-person", "subjective", "personal"],
+                question: "Ananse is portrayed in the play as",
+                options: ["Honest and generous", "Clever and greedy", "Lazy and foolish", "Shy and timid"],
                 answer: "B"
             },
             {
-                question: "The sequence of events leading to the highest tension in a story is called ______.",
-                options: ["resolution", "exposition", "climax", "setting"],
+                question: "Ananse's main aim in Acts One and Two is to",
+                options: ["Educate his daughter", "Find the richest suitor", "Travel abroad", "Avoid marriage"],
+                answer: "B"
+            },
+            {
+                question: "Anansewa is Ananse's",
+                options: ["Wife", "Sister", "Daughter", "Niece"],
                 answer: "C"
             },
             {
-                question: "The problem in a story is usually solved at the ______.",
-                options: ["conflict", "rising action", "falling action", "resolution"],
-                answer: "D"
-            },
-            {
-                question: "Fiction refers to stories that are mainly ______.",
-                options: ["real", "imagined", "historical", "scientific"],
+                question: "In Act One, Ananse writes letters to",
+                options: ["His friends", "Several chiefs", "His wife", "His daughter"],
                 answer: "B"
             },
             {
-                question: "Nonfiction refers to works that are based on ______.",
-                options: ["imagination", "fantasy", "facts and real events", "rhyme"],
+                question: "The letters sent by Ananse were meant to",
+                options: ["Insult the chiefs", "Invite them to a festival", "Seek suitors for Anansewa", "Declare war"],
                 answer: "C"
             },
             {
-                question: "A story about a person's life written by another person is a ______.",
-                options: ["diary", "autobiography", "biography", "memoir"],
+                question: "Ananse uses Anansewa mainly to",
+                options: ["Show love", "Gain wealth", "Teach morals", "Punish chiefs"],
+                answer: "B"
+            },
+            {
+                question: "The setting of Marriage of Anansewa reflects",
+                options: ["European society", "Modern American life", "Traditional African society", "Asian culture"],
                 answer: "C"
             },
             {
-                question: "A story of one's life written by oneself is an ______.",
-                options: ["autobiography", "biography", "epic", "ode"],
-                answer: "A"
-            },
-            {
-                question: "Which of the following is a work of fiction?",
-                options: ["Legend", "Newspaper", "Textbook", "Biography"],
-                answer: "A"
-            },
-            {
-                question: "Which of these is a nonfiction work?",
-                options: ["Fairy tale", "Fable", "Autobiography", "Folktale"],
-                answer: "C"
-            },
-            {
-                question: "A story that teaches a moral lesson and often has animals as characters is a ______.",
-                options: ["legend", "fable", "biography", "folk drama"],
+                question: "Ananse's character best represents",
+                options: ["Selflessness", "Greed and trickery", "Kindness", "Courage"],
                 answer: "B"
             },
             {
-                question: "A story passed down orally from one generation to another is a ______.",
-                options: ["diary", "folktale", "ode", "article"],
+                question: "In Acts One and Two, Anansewa is portrayed as",
+                options: ["Rebellious", "Obedient", "Wicked", "Aggressive"],
                 answer: "B"
             },
             {
-                question: "A nonfiction book that teaches a school subject is a ______.",
-                options: ["legend", "textbook", "fable", "play"],
+                question: "The play uses storytelling mainly to",
+                options: ["Bore the audience", "Reflect African oral tradition", "Replace dialogue", "End the play quickly"],
                 answer: "B"
             },
             {
-                question: "A literary work that recounts real events in chronological order is a ______.",
-                options: ["novel", "historical narrative", "epic", "myth"],
+                question: "One theme evident in Acts One and Two is",
+                options: ["Betrayal", "Greed", "War", "Colonialism"],
                 answer: "B"
             },
             {
-                question: "A story that explains the origin of a place or practice is known as ______.",
-                options: ["short story", "legend", "lyric", "ode"],
+                question: "The language of the play is",
+                options: ["Technical", "Simple and conversational", "Scientific", "Poetic only"],
                 answer: "B"
             },
             {
-                question: "A written record of daily events kept by a person is a ______.",
-                options: ["diary", "myth", "play", "novel"],
-                answer: "A"
-            },
-            {
-                question: "Which of the following is not a prose form?",
-                options: ["Novel", "Short story", "Drama", "Biography"],
-                answer: "C"
-            },
-            {
-                question: "Literature helps preserve ______.",
-                options: ["cultural heritage", "agriculture", "engineering", "mathematics"],
-                answer: "A"
+                question: "The role of the narrator in the play is to",
+                options: ["Act as a villain", "Guide and comment on events", "Fight characters", "End the play abruptly"],
+                answer: "B"
             }
         ];
 
@@ -723,13 +1065,13 @@
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 40 * 60; // 40 minutes in seconds
+        let timeLeft = 45 * 60; // 45 minutes in seconds
         let questions = [];
 
-        // Background images for rotation
+        // Background images for rotation (literature theme)
         const backgroundImages = [
+            'https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80',
             'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2028&q=80',
-            'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80',
             'https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2098&q=80'
         ];
 
@@ -770,7 +1112,7 @@
         // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 40 * 60; // Reset to 40 minutes
+            timeLeft = 45 * 60; // Reset to 45 minutes
             
             // Show timer container and submit button
             document.getElementById('timer-container').style.display = 'block';
@@ -790,6 +1132,13 @@
                     alert("Time's up! Your exam will be submitted automatically.");
                     calculateScore();
                 }
+                
+                // Warning colors
+                if (timeLeft <= 600) { // 10 minutes left
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
+                } else if (timeLeft <= 1350) { // 22.5 minutes left
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
+                }
             }, 1000);
         }
 
@@ -808,6 +1157,9 @@
                 document.getElementById('timer-container').style.display = 'none';
                 document.getElementById('submit-container').style.display = 'none';
             }
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
         }
 
         // Initialize event listeners
@@ -898,14 +1250,29 @@
             
             if (confirmed) {
                 clearInterval(timerInterval);
-                calculateScore();
+                showLoading();
+                setTimeout(() => {
+                    calculateScore();
+                }, 1500);
             }
         });
 
         document.getElementById('restart-exam').addEventListener('click', () => {
             clearInterval(timerInterval);
+            // Reset form
+            document.getElementById('first-name').value = '';
+            document.getElementById('middle-name').value = '';
+            document.getElementById('last-name').value = '';
             showSection('welcome');
         });
+
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+        }
 
         // Create question navigation grid
         function createQuestionGrid() {
@@ -1011,6 +1378,7 @@
         }
 
         function calculateScore() {
+            hideLoading();
             let score = 0;
             
             for (let i = 0; i < questions.length; i++) {
@@ -1019,8 +1387,8 @@
                 }
             }
             
-            // Submit to Google Form (score is sent but not displayed)
-            submitToGoogleForm(studentName, "Literature-in-English", `${score}/${questions.length}`);
+            // Submit to Google Form WITHOUT showing score to student
+            submitToGoogleForm(studentName, "Literature in English - Mid-Term Test", `${score}/${questions.length}`);
             
             // Show submission status
             document.getElementById('submission-status').style.display = 'block';
@@ -1042,8 +1410,18 @@
                 method: "POST",
                 mode: "no-cors",
                 body: formData
-            }).catch(err => console.warn("Form submission (no-cors) likely blocked for debug; data still sent."));
+            }).then(() => {
+                console.log("Results submitted successfully");
+            }).catch(err => {
+                console.warn("Form submission (no-cors) likely blocked for debug; data still sent.");
+            });
         }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Focus on first input
+            document.getElementById('first-name').focus();
+        });
     </script>
 </body>
 </html>
