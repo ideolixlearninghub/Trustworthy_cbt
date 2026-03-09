@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Mathematics CBT Exam</title>
+    <title>The Trustworthy College - Mathematics SSS1 Examination</title>
     <style>
         /* Reset and base styles */
         * {
@@ -14,8 +14,8 @@
         }
         
         body {
-            background-color: #1a0f1a;
-            color: #f5e9dd;
+            background-color: #1a1a2a;
+            color: #e0e0f0;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
@@ -29,7 +29,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -38,23 +38,23 @@
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container with mathematics color theme (purple/blue) */
+        /* Container with mathematics theme (purple/blue) */
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #1a0f2a 0%, #2a1a3a 100%);
-            box-shadow: 0 15px 40px rgba(100, 60, 140, 0.25);
+            background: linear-gradient(135deg, #2a1a3a 0%, #1a2a4a 100%);
+            box-shadow: 0 15px 40px rgba(142, 68, 173, 0.25);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #8e44ad;
+            border: 3px solid #9b59b6;
             backdrop-filter: blur(5px);
         }
         
-        /* Purple decorative border effect */
+        /* Purple decorative border */
         .container::before {
             content: '';
             position: absolute;
@@ -62,17 +62,17 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #8e44ad, #9b59b6, #8e44ad);
+            background: linear-gradient(90deg, #9b59b6, #3498db, #9b59b6);
             z-index: 2;
         }
         
-        /* Header with mathematics theme */
+        /* Header */
         .header {
             text-align: center;
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #8e44ad;
+            border-bottom: 2px solid #9b59b6;
         }
         
         .header::after {
@@ -83,7 +83,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #8e44ad, transparent);
+            background: linear-gradient(to right, transparent, #9b59b6, transparent);
         }
         
         .logo {
@@ -92,7 +92,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #8e44ad;
+            border: 3px solid #9b59b6;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -103,7 +103,7 @@
         }
         
         .subject-title {
-            color: #9b59b6;
+            color: #c39bd3;
             font-size: 2.4rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
@@ -111,9 +111,20 @@
         }
         
         .exam-info {
-            color: #bb8fce;
+            color: #a3c6e4;
             font-size: 1.1rem;
             margin-top: 5px;
+        }
+        
+        .term-info {
+            background: linear-gradient(135deg, #9b59b620, #3498db40);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #c39bd3;
+            border: 1px solid #9b59b660;
         }
         
         /* Sections */
@@ -132,20 +143,20 @@
             display: block;
         }
         
-        /* Welcome message with mathematics theme */
+        /* Welcome message */
         .welcome-message {
-            background: linear-gradient(135deg, rgba(142, 68, 173, 0.1) 0%, rgba(42, 26, 58, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(26, 42, 74, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #f5e9dd;
-            border-left: 5px solid #8e44ad;
-            border-right: 1px solid rgba(142, 68, 173, 0.3);
-            border-top: 1px solid rgba(142, 68, 173, 0.2);
-            border-bottom: 1px solid rgba(142, 68, 173, 0.3);
+            color: #e0e0f0;
+            border-left: 5px solid #9b59b6;
+            border-right: 1px solid rgba(155, 89, 182, 0.3);
+            border-top: 1px solid rgba(155, 89, 182, 0.2);
+            border-bottom: 1px solid rgba(155, 89, 182, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
@@ -160,10 +171,10 @@
             opacity: 0.1;
         }
         
-        /* Buttons with purple theme */
+        /* Buttons */
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #8e44ad 0%, #732d91 100%);
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
             color: #ffffff;
             border: none;
             padding: 15px 32px;
@@ -175,7 +186,7 @@
             font-weight: 700;
             letter-spacing: 0.5px;
             border: 2px solid rgba(155, 89, 182, 0.5);
-            box-shadow: 0 6px 15px rgba(142, 68, 173, 0.3);
+            box-shadow: 0 6px 15px rgba(155, 89, 182, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -193,49 +204,24 @@
         }
         
         .btn:hover {
-            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            background: linear-gradient(135deg, #ae7ac9 0%, #9b59b6 100%);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(142, 68, 173, 0.5);
+            box-shadow: 0 10px 25px rgba(155, 89, 182, 0.5);
             color: #ffffff;
         }
         
-        .btn:hover::after {
-            left: 100%;
-        }
-        
-        .btn:focus {
-            outline: 2px solid #9b59b6;
-            outline-offset: 3px;
-        }
-        
         .btn-secondary {
-            background: linear-gradient(135deg, #6d5d7e 0%, #5a4a6e 100%);
-            color: #f5e9dd;
-            border-color: #7f8c8d;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            border-color: #3498db;
         }
         
         .btn-secondary:hover {
-            background: linear-gradient(135deg, #7f8c8d 0%, #6d5d7e 100%);
+            background: linear-gradient(135deg, #5dade2 0%, #3498db 100%);
         }
         
         .btn-success {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            color: white;
-            border-color: #229954;
-        }
-        
-        .btn-success:hover {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
-        }
-        
-        .btn-danger {
-            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
-            color: white;
-            border-color: #922b21;
-        }
-        
-        .btn-danger:hover {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            border-color: #e67e22;
         }
         
         .btn-container {
@@ -252,7 +238,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #9b59b6;
+            color: #c39bd3;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -260,20 +246,20 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(26, 15, 42, 0.7);
-            border: 2px solid #6d5d7e;
+            background: rgba(42, 26, 58, 0.7);
+            border: 2px solid #5d7e9e;
             border-radius: 10px;
             font-size: 1.1rem;
-            color: #f5e9dd;
+            color: #e0e0f0;
             transition: all 0.3s;
             font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #8e44ad;
+            border-color: #9b59b6;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(142, 68, 173, 0.3);
-            background: rgba(26, 15, 42, 0.9);
+            box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.3);
+            background: rgba(42, 26, 58, 0.9);
         }
         
         .error-message {
@@ -284,20 +270,20 @@
             font-weight: 500;
         }
         
-        /* Instructions with mathematics theme */
+        /* Instructions */
         .instructions {
-            background: linear-gradient(135deg, rgba(109, 93, 126, 0.1) 0%, rgba(42, 26, 58, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(26, 42, 74, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid #8e44ad;
-            border: 1px solid rgba(142, 68, 173, 0.2);
+            border-left: 5px solid #3498db;
+            border: 1px solid rgba(52, 152, 219, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
         
         .instructions::before {
-            content: '🧮';
+            content: '📏';
             position: absolute;
             top: 20px;
             right: 20px;
@@ -307,7 +293,7 @@
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #9b59b6;
+            color: #3498db;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -320,7 +306,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #8e44ad;
+            background: #3498db;
             border-radius: 2px;
         }
         
@@ -337,7 +323,7 @@
         
         .instructions li::before {
             content: '•';
-            color: #8e44ad;
+            color: #3498db;
             font-size: 1.5rem;
             position: absolute;
             left: -20px;
@@ -348,19 +334,19 @@
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(142, 68, 173, 0.3);
+            border-bottom: 2px solid rgba(155, 89, 182, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #9b59b6;
+            color: #c39bd3;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(142, 68, 173, 0.1) 0%, rgba(109, 93, 126, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(52, 152, 219, 0.2) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(142, 68, 173, 0.3);
+            border: 1px solid rgba(155, 89, 182, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -371,29 +357,29 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(26, 15, 42, 0.5);
+            background: rgba(42, 26, 58, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(142, 68, 173, 0.2);
+            border: 1px solid rgba(155, 89, 182, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #9b59b6;
+            color: #c39bd3;
             font-weight: 600;
             padding: 10px 20px;
-            background: rgba(142, 68, 173, 0.1);
+            background: rgba(155, 89, 182, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(142, 68, 173, 0.3);
+            border: 1px solid rgba(155, 89, 182, 0.3);
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #8e44ad 0%, #732d91 100%);
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
             color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(142, 68, 173, 0.4);
+            box-shadow: 0 4px 12px rgba(155, 89, 182, 0.4);
             display: none;
             border: 2px solid rgba(155, 89, 182, 0.5);
             font-family: 'Courier New', monospace;
@@ -405,10 +391,10 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(26, 15, 42, 0.4);
+            background: rgba(42, 26, 58, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(142, 68, 173, 0.2);
+            border: 1px solid rgba(155, 89, 182, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -416,12 +402,12 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #9b59b6;
+            color: #c39bd3;
             line-height: 1.6;
             padding: 20px;
-            background: rgba(109, 93, 126, 0.1);
+            background: rgba(52, 152, 219, 0.1);
             border-radius: 10px;
-            border-left: 4px solid #8e44ad;
+            border-left: 4px solid #3498db;
         }
         
         .options-container {
@@ -435,8 +421,8 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(42, 26, 58, 0.5);
-            border: 1px solid rgba(109, 93, 126, 0.3);
+            background: rgba(26, 42, 74, 0.5);
+            border: 1px solid rgba(93, 126, 158, 0.3);
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -449,14 +435,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(142, 68, 173, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(155, 89, 182, 0.1), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(142, 68, 173, 0.1);
-            border-color: #8e44ad;
+            background: rgba(155, 89, 182, 0.1);
+            border-color: #9b59b6;
             transform: translateX(5px);
         }
         
@@ -469,7 +455,7 @@
             width: 22px;
             height: 22px;
             cursor: pointer;
-            accent-color: #8e44ad;
+            accent-color: #9b59b6;
         }
         
         .option label {
@@ -477,7 +463,7 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
-            color: #f5e9dd;
+            color: #e0e0f0;
             font-size: 1.1rem;
             line-height: 1.5;
         }
@@ -486,12 +472,12 @@
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(142, 68, 173, 0.3);
+            border-top: 2px solid rgba(155, 89, 182, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #9b59b6;
+            color: #c39bd3;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -508,7 +494,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: #8e44ad;
+            background: #3498db;
             border-radius: 2px;
         }
         
@@ -525,34 +511,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(109, 93, 126, 0.3) 0%, rgba(86, 70, 103, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(26, 42, 74, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(142, 68, 173, 0.3);
-            color: #f5e9dd;
+            border: 1px solid rgba(155, 89, 182, 0.3);
+            color: #e0e0f0;
             font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background: linear-gradient(135deg, rgba(142, 68, 173, 0.3) 0%, rgba(115, 45, 145, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.3) 0%, rgba(142, 68, 173, 0.5) 100%);
             transform: scale(1.1);
-            border-color: #8e44ad;
+            border-color: #9b59b6;
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #8e44ad 0%, #732d91 100%);
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
             color: #ffffff;
-            border-color: #9b59b6;
-            box-shadow: 0 4px 10px rgba(142, 68, 173, 0.4);
+            border-color: #c39bd3;
+            box-shadow: 0 4px 10px rgba(155, 89, 182, 0.4);
             transform: scale(1.1);
         }
         
         .question-number.answered {
-            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
             color: white;
-            border-color: #2ecc71;
+            border-color: #f1c40f;
         }
         
         .navigation-buttons {
@@ -561,13 +547,13 @@
             margin-top: 25px;
         }
         
-        /* Results section - NO SCORE DISPLAY */
+        /* Results section */
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(26, 15, 42, 0.8) 0%, rgba(42, 26, 58, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(42, 26, 58, 0.8) 0%, rgba(26, 42, 74, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #8e44ad;
+            border: 2px solid #9b59b6;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
@@ -583,7 +569,7 @@
         }
         
         .results-container h2 {
-            color: #9b59b6;
+            color: #c39bd3;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -596,7 +582,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #bb8fce;
+            color: #a3c6e4;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -604,22 +590,22 @@
         .feedback {
             font-size: 1.3rem;
             margin: 25px 0;
-            color: #f5e9dd;
+            color: #e0e0f0;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(142, 68, 173, 0.1);
+            background: rgba(155, 89, 182, 0.1);
             border-radius: 12px;
-            border: 1px solid rgba(142, 68, 173, 0.3);
+            border: 1px solid rgba(155, 89, 182, 0.3);
         }
         
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(39, 174, 96, 0.2) 0%, rgba(46, 204, 113, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(241, 196, 15, 0.2) 0%, rgba(243, 156, 18, 0.3) 100%);
             border-radius: 12px;
-            color: #2ecc71;
+            color: #f1c40f;
             font-size: 1.2rem;
-            border: 1px solid rgba(46, 204, 113, 0.5);
+            border: 1px solid rgba(241, 196, 15, 0.5);
         }
         
         /* Responsive */
@@ -682,13 +668,11 @@
             }
         }
         
-        /* Back to Home button */
         .back-home {
             margin-top: 20px;
             text-align: center;
         }
         
-        /* Loading animation */
         .loading {
             display: none;
             text-align: center;
@@ -696,8 +680,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(142, 68, 173, 0.3);
-            border-top: 4px solid #8e44ad;
+            border: 4px solid rgba(155, 89, 182, 0.3);
+            border-top: 4px solid #9b59b6;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -713,18 +697,19 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header with logo -->
+        <!-- Header -->
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
             <h1 class="subject-title">SSS1 MATHEMATICS EXAMINATION</h1>
-            <div class="exam-info">Mid-Term Test | 40 Questions | 1 Hour</div>
+            <div class="exam-info">Second Term | 2025/2026 Session</div>
+            <div class="term-info">40 Questions | 30 Minutes</div>
         </div>
         
         <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Mathematics Examination. Demonstrate your understanding of geometric construction, angles, and mathematical reasoning. Success comes from logical thinking and precise calculations. Best of luck."
+                "Welcome to The Trustworthy College Mathematics Examination. This test covers Geometric Construction, Angles, Triangles, Quadrilaterals, Congruence, Locus, and Trigonometry. Demonstrate your understanding of mathematical principles and problem-solving. Best of luck."
             </div>
             <div class="btn-container">
                 <button id="start-exam-btn" class="btn">Start Examination</button>
@@ -770,15 +755,15 @@
                 <h3>Important Notes:</h3>
                 <ul>
                     <li>This examination consists of 40 multiple-choice questions covering Mathematics topics.</li>
-                    <li>You have 1 hour (60 minutes) to complete this examination.</li>
+                    <li>You have 30 minutes to complete this examination.</li>
                     <li>Answer all questions to the best of your ability.</li>
                     <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
-                    <li>Answered questions will be marked with green in the question grid.</li>
+                    <li>Answered questions will be marked with orange in the question grid.</li>
                     <li>Once you submit your answers, you cannot change them.</li>
                     <li>Ensure you have a stable internet connection throughout the examination.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li>Demonstrate your understanding of geometric construction, angles, triangles, and mathematical reasoning.</li>
+                    <li>This is the Second Term Examination for the 2025/2026 Academic Session.</li>
                 </ul>
             </div>
             
@@ -795,7 +780,7 @@
                 <div class="exam-controls">
                     <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">60:00</span>
+                        Time Left: <span id="timer">30:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
                         <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
@@ -811,7 +796,6 @@
                 </div>
             </div>
             
-            <!-- Question navigation grid after question content -->
             <div class="question-navigation">
                 <h3>Question Navigation</h3>
                 <div class="question-grid" id="question-grid">
@@ -830,12 +814,12 @@
             </div>
         </section>
         
-        <!-- Results Section - NO SCORE DISPLAY -->
+        <!-- Results Section -->
         <section id="results-section" class="section">
             <div class="results-container">
                 <h2>Examination Completed</h2>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SSS1 Mathematics - Mid-Term Test</div>
+                <div class="subject" id="results-subject">SSS1 Mathematics - Second Term 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
                     Thank you for completing the Mathematics examination. Your results have been submitted successfully to the examination board.
@@ -856,207 +840,224 @@
     </div>
 
     <script>
-        // SUBJECT: SSS1 MATHEMATICS - Mid-Term Test
+        // SSS1 MATHEMATICS - SECOND TERM 2025/2026
         const originalQuestions = [
+            // Geometric Construction and Instruments (Questions 1-4)
             {
-                question: "Which of the following is a required instrument for constructing an angle of 60°?",
-                options: ["Protractor only", "Compass and ruler only", "Set square only", "Divider only"],
+                question: "Which of the following instruments is mainly used for drawing circles and arcs?",
+                options: ["Protractor", "Compass", "Divider", "Set square"],
                 answer: "B"
             },
             {
-                question: "The line that divides an angle into two equal parts is called the:",
-                options: ["Median", "Perpendicular bisector", "Angle bisector", "Segment"],
-                answer: "C"
-            },
-            {
-                question: "An angle of 90° can be constructed by bisecting:",
-                options: ["45°", "180°", "120°", "30°"],
-                answer: "B"
-            },
-            {
-                question: "To construct a triangle, the minimum requirement is:",
-                options: ["2 sides and 1 angle", "3 angles", "3 sides", "2 angles and 1 side"],
+                question: "An angle of 60° can be constructed using",
+                options: ["Compass and ruler only", "Protractor only", "Divider only", "Set square only"],
                 answer: "A"
             },
             {
-                question: "The sum of the angles in a triangle is:",
-                options: ["360°", "180°", "90°", "270°"],
+                question: "The process of dividing an angle into two equal parts is called",
+                options: ["Trisection", "Bisection", "Division", "Measurement"],
                 answer: "B"
             },
             {
-                question: "In a triangle, the exterior angle equals the sum of:",
-                options: ["All interior angles", "The two opposite interior angles", "The two adjacent interior angles", "The base angles"],
+                question: "Which instrument is used for measuring angles?",
+                options: ["Compass", "Protractor", "Divider", "Ruler"],
+                answer: "B"
+            },
+            
+            // Angles and Triangles (Questions 5-10)
+            {
+                question: "The sum of the angles in a triangle is",
+                options: ["90°", "180°", "270°", "360°"],
                 answer: "B"
             },
             {
-                question: "The locus of points equidistant from two fixed points is the:",
-                options: ["Angle bisector", "Perpendicular bisector of the line joining them", "Circle", "Straight line parallel to them"],
+                question: "If two angles of a triangle are 40° and 60°, the third angle is",
+                options: ["70°", "80°", "90°", "100°"],
                 answer: "B"
             },
             {
-                question: "Which of the following angles can be constructed by bisecting 90°?",
-                options: ["30°", "60°", "45°", "120°"],
+                question: "An exterior angle of a triangle is equal to",
+                options: ["Sum of interior angles", "Difference of interior angles", "Sum of two opposite interior angles", "Product of interior angles"],
                 answer: "C"
             },
             {
-                question: "In triangle ABC, if angle A = 50° and angle B = 60°, then angle C is:",
-                options: ["70°", "50°", "110°", "80°"],
+                question: "Two parallel lines cut by a transversal produce equal",
+                options: ["Adjacent angles", "Corresponding angles", "Interior angles", "Exterior angles"],
+                answer: "B"
+            },
+            {
+                question: "Alternate interior angles between parallel lines are",
+                options: ["Equal", "Supplementary", "Complementary", "Different"],
                 answer: "A"
             },
             {
-                question: "The instrument used for drawing circles and arcs in construction is:",
-                options: ["Set square", "Protractor", "Compass", "Ruler"],
+                question: "Angles on a straight line add up to",
+                options: ["90°", "180°", "270°", "360°"],
+                answer: "B"
+            },
+            
+            // Quadrilaterals (Questions 11-14)
+            {
+                question: "The sum of interior angles of a quadrilateral is",
+                options: ["180°", "270°", "360°", "540°"],
                 answer: "C"
             },
             {
-                question: "To construct an angle of 30°, you can bisect:",
-                options: ["90°", "45°", "60°", "120°"],
+                question: "A quadrilateral with both pairs of opposite sides parallel is called",
+                options: ["Trapezium", "Kite", "Parallelogram", "Rhombus"],
                 answer: "C"
             },
             {
-                question: "The exterior angle of a triangle is 120°. If one of the opposite interior angles is 50°, the other is:",
-                options: ["70°", "60°", "170°", "50°"],
+                question: "Opposite angles of a parallelogram are",
+                options: ["Equal", "Supplementary", "Complementary", "Unequal"],
                 answer: "A"
             },
             {
-                question: "The locus of points equidistant from two intersecting straight lines is the:",
-                options: ["Perpendicular bisector", "Angle bisector", "Median", "Circle"],
+                question: "Diagonals of a parallelogram",
+                options: ["Are equal", "Bisect each other", "Are perpendicular", "Are unequal"],
+                answer: "B"
+            },
+            
+            // Congruence (Questions 15-17)
+            {
+                question: "Triangles that are identical in shape and size are",
+                options: ["Similar", "Congruent", "Equal", "Isosceles"],
                 answer: "B"
             },
             {
-                question: "In triangle XYZ, if angle X = 40° and angle Y = 80°, the exterior angle at Z is:",
-                options: ["60°", "120°", "100°", "140°"],
+                question: "Congruent triangles have",
+                options: ["Equal angles only", "Equal sides only", "Equal corresponding sides and angles", "Equal area only"],
+                answer: "C"
+            },
+            {
+                question: "Which condition proves triangle congruency?",
+                options: ["AAA", "SAS", "SSA", "ASS"],
+                answer: "B"
+            },
+            
+            // Locus (Questions 18-20)
+            {
+                question: "A locus is defined as",
+                options: ["A fixed point", "Path of a moving point", "Straight line", "Angle measurement"],
                 answer: "B"
             },
             {
-                question: "Which of the following quadrilaterals can be constructed if all four sides and one angle are known?",
-                options: ["Square", "Rectangle", "Parallelogram", "Trapezium"],
+                question: "The locus of points equidistant from two points is",
+                options: ["A circle", "A straight line", "Perpendicular bisector", "Angle bisector"],
+                answer: "C"
+            },
+            {
+                question: "The locus of points equidistant from two intersecting lines is",
+                options: ["Angle bisector", "Straight line", "Circle", "Triangle"],
+                answer: "A"
+            },
+            
+            // Trigonometry - Basic Ratios (Questions 21-25)
+            {
+                question: "The trigonometric ratio sin θ is defined as",
+                options: ["Opposite / Adjacent", "Adjacent / Hypotenuse", "Opposite / Hypotenuse", "Hypotenuse / Adjacent"],
+                answer: "C"
+            },
+            {
+                question: "The trigonometric ratio cos θ is",
+                options: ["Adjacent / Hypotenuse", "Opposite / Hypotenuse", "Opposite / Adjacent", "Hypotenuse / Opposite"],
+                answer: "A"
+            },
+            {
+                question: "The trigonometric ratio tan θ is",
+                options: ["Opposite / Hypotenuse", "Adjacent / Hypotenuse", "Opposite / Adjacent", "Hypotenuse / Adjacent"],
+                answer: "C"
+            },
+            {
+                question: "In a right-angled triangle, the longest side is the",
+                options: ["Adjacent", "Opposite", "Hypotenuse", "Base"],
+                answer: "C"
+            },
+            {
+                question: "If opposite side = 3 and hypotenuse = 5, then",
+                options: ["sinθ = 3/5", "sinθ = 5/3", "cosθ = 3/5", "tanθ = 5/3"],
+                answer: "A"
+            },
+            
+            // Trigonometry - Special Angles (Questions 26-35)
+            {
+                question: "sin 30° equals",
+                options: ["1", "1/2", "√3/2", "0"],
+                answer: "B"
+            },
+            {
+                question: "cos 60° equals",
+                options: ["1", "1/2", "√3/2", "0"],
+                answer: "B"
+            },
+            {
+                question: "sin 90° equals",
+                options: ["0", "1/2", "1", "√3/2"],
+                answer: "C"
+            },
+            {
+                question: "tan 45° equals",
+                options: ["0", "1", "√3", "1/2"],
+                answer: "B"
+            },
+            {
+                question: "cos 0° equals",
+                options: ["0", "1", "1/2", "√3"],
+                answer: "B"
+            },
+            {
+                question: "tan 60° equals",
+                options: ["1", "√3", "1/2", "0"],
+                answer: "B"
+            },
+            {
+                question: "sin 45° equals",
+                options: ["1/2", "√2/2", "√3/2", "1"],
+                answer: "B"
+            },
+            {
+                question: "cos 45° equals",
+                options: ["√2/2", "1/2", "√3/2", "1"],
+                answer: "A"
+            },
+            {
+                question: "tan 30° equals",
+                options: ["1/√3", "√3", "1", "1/2"],
+                answer: "A"
+            },
+            {
+                question: "Which of the following is a right angle?",
+                options: ["45°", "60°", "90°", "120°"],
+                answer: "C"
+            },
+            
+            // Angle Properties (Questions 36-38)
+            {
+                question: "The exterior angle of a triangle is always",
+                options: ["Greater than either interior opposite angle", "Equal to both interior angles", "Less than interior angles", "Equal to one interior angle"],
+                answer: "A"
+            },
+            {
+                question: "If two angles are complementary, their sum is",
+                options: ["90°", "180°", "270°", "360°"],
+                answer: "A"
+            },
+            {
+                question: "Angles around a point add up to",
+                options: ["90°", "180°", "270°", "360°"],
                 answer: "D"
             },
+            
+            // Inverse Trigonometry and Theorems (Questions 39-40)
             {
-                question: "Two lines are perpendicular if the angle between them is:",
-                options: ["45°", "90°", "180°", "60°"],
-                answer: "B"
-            },
-            {
-                question: "The interior angles of a triangle are in the ratio 2:3:5. The smallest angle is:",
-                options: ["36°", "60°", "72°", "90°"],
+                question: "If sinθ = 1/2, then θ equals",
+                options: ["30°", "45°", "60°", "90°"],
                 answer: "A"
             },
             {
-                question: "The point where the perpendicular bisectors of a triangle meet is called:",
-                options: ["Centroid", "Circumcentre", "Incentre", "Orthocentre"],
-                answer: "B"
-            },
-            {
-                question: "The angle which cannot be constructed using a compass and ruler alone is:",
-                options: ["45°", "30°", "60°", "50°"],
-                answer: "D"
-            },
-            {
-                question: "In triangle PQR, angle P = 55° and angle Q = 65°. What is angle R?",
-                options: ["60°", "50°", "70°", "120°"],
+                question: "The intercept theorem is mainly related to",
+                options: ["Parallel lines", "Circles", "Angles", "Quadrilaterals"],
                 answer: "A"
-            },
-            {
-                question: "The sum of the exterior angles of any polygon is:",
-                options: ["180°", "360°", "540°", "720°"],
-                answer: "B"
-            },
-            {
-                question: "Which of these is a method to construct a perpendicular line from a point to a line?",
-                options: ["Using a protractor", "Using a set square", "Using compass bisection", "Using a ruler only"],
-                answer: "C"
-            },
-            {
-                question: "A triangle with sides 6cm, 8cm, and 10cm is a:",
-                options: ["Equilateral triangle", "Isosceles triangle", "Right-angled triangle", "Obtuse-angled triangle"],
-                answer: "C"
-            },
-            {
-                question: "The locus of points at a given distance from a fixed point is a:",
-                options: ["Straight line", "Circle", "Rectangle", "Triangle"],
-                answer: "B"
-            },
-            {
-                question: "In an equilateral triangle, each interior angle measures:",
-                options: ["90°", "60°", "45°", "30°"],
-                answer: "B"
-            },
-            {
-                question: "If the exterior angle of a triangle is 130° and one interior opposite angle is 60°, the other interior opposite angle is:",
-                options: ["70°", "50°", "120°", "190°"],
-                answer: "A"
-            },
-            {
-                question: "Which of these is true about the perpendicular bisector of a line segment?",
-                options: ["It is parallel to the segment", "It divides the segment into two unequal parts", "It is perpendicular to the segment and passes through its midpoint", "It is always horizontal"],
-                answer: "C"
-            },
-            {
-                question: "Which angle is complementary to 30°?",
-                options: ["60°", "150°", "90°", "30°"],
-                answer: "A"
-            },
-            {
-                question: "The theorem stating \"The sum of angles in a triangle is 180°\" was proven by:",
-                options: ["Pythagoras", "Euclid", "Archimedes", "Newton"],
-                answer: "B"
-            },
-            {
-                question: "In a quadrilateral, the sum of interior angles is:",
-                options: ["180°", "360°", "540°", "720°"],
-                answer: "B"
-            },
-            {
-                question: "To construct an angle of 75°, you can add:",
-                options: ["30° + 45°", "60° + 15°", "90° - 15°", "50° + 25°"],
-                answer: "A"
-            },
-            {
-                question: "The point equidistant from the vertices of a triangle is the:",
-                options: ["Incentre", "Centroid", "Circumcentre", "Orthocentre"],
-                answer: "C"
-            },
-            {
-                question: "Which of the following is a necessary condition to construct a unique triangle?",
-                options: ["Three angles", "Two angles and one side", "Two sides and a non-included angle", "All of the above"],
-                answer: "B"
-            },
-            {
-                question: "If a triangle has angles x, 2x, and 3x, the value of x is:",
-                options: ["20°", "30°", "40°", "60°"],
-                answer: "B"
-            },
-            {
-                question: "The angle bisectors of a triangle meet at a point called:",
-                options: ["Centroid", "Orthocentre", "Circumcentre", "Incentre"],
-                answer: "D"
-            },
-            {
-                question: "The locus of points equidistant from two parallel lines is:",
-                options: ["A circle", "A line parallel to both and midway between them", "A perpendicular line", "A triangle"],
-                answer: "B"
-            },
-            {
-                question: "Which of these is an application of the exterior angle theorem?",
-                options: ["Finding unknown angles in a triangle", "Proving lines are parallel", "Constructing perpendiculars", "Drawing circles"],
-                answer: "A"
-            },
-            {
-                question: "In triangle ABC, angle A = 70°, angle B = 50°. What is the exterior angle at C?",
-                options: ["60°", "120°", "110°", "130°"],
-                answer: "B"
-            },
-            {
-                question: "The perpendicular from a point to a line is the:",
-                options: ["Longest segment from the point to the line", "Shortest segment from the point to the line", "Segment making any angle", "Segment parallel to the line"],
-                answer: "B"
-            },
-            {
-                question: "Which of the following is a step in constructing an angle of 45°?",
-                options: ["Draw a line and mark a point", "Construct 90° and then bisect it", "Construct 60° and subtract 15°", "Use a protractor directly"],
-                answer: "B"
             }
         ];
 
@@ -1065,14 +1066,14 @@
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 60 * 60; // 60 minutes in seconds (1 hour)
+        let timeLeft = 30 * 60; // 30 minutes in seconds
         let questions = [];
 
-        // Background images for rotation (mathematics theme)
+        // Background images for rotation
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80'
+            'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80'
         ];
 
         // DOM elements
@@ -1090,31 +1091,23 @@
             currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
             document.body.style.backgroundImage = `url('${backgroundImages[currentBgIndex]}')`;
         }
-        
-        // Rotate background every 10 seconds
         setInterval(rotateBackground, 10000);
 
-        // Shuffle questions array
+        // Shuffle questions
         function shuffleQuestions() {
-            // Create a copy of the original questions
             questions = [...originalQuestions];
-            
-            // Shuffle the questions using Fisher-Yates algorithm
             for (let i = questions.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [questions[i], questions[j]] = [questions[j], questions[i]];
             }
-            
-            // Initialize userAnswers array with null values
             userAnswers = Array(questions.length).fill(null);
         }
 
         // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 60 * 60; // Reset to 60 minutes (1 hour)
+            timeLeft = 30 * 60;
             
-            // Show timer container and submit button
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
             
@@ -1133,10 +1126,9 @@
                     calculateScore();
                 }
                 
-                // Warning colors
-                if (timeLeft <= 600) { // 10 minutes left
+                if (timeLeft <= 300) { // 5 minutes left
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
-                } else if (timeLeft <= 1800) { // 30 minutes left
+                } else if (timeLeft <= 600) { // 10 minutes left
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
                 }
             }, 1000);
@@ -1144,25 +1136,19 @@
 
         // Navigation functions
         function showSection(sectionName) {
-            // Hide all sections
             Object.values(sections).forEach(section => {
                 section.classList.remove('active');
             });
-            
-            // Show the requested section
             sections[sectionName].classList.add('active');
             
-            // Hide timer and submit button if not in exam section
             if (sectionName !== 'exam') {
                 document.getElementById('timer-container').style.display = 'none';
                 document.getElementById('submit-container').style.display = 'none';
             }
-            
-            // Scroll to top
             window.scrollTo(0, 0);
         }
 
-        // Initialize event listeners
+        // Event listeners
         document.getElementById('start-exam-btn').addEventListener('click', () => {
             showSection('studentInfo');
         });
@@ -1172,7 +1158,6 @@
         });
 
         document.getElementById('continue-to-instructions').addEventListener('click', () => {
-            // Validate form
             const firstName = document.getElementById('first-name').value.trim();
             const middleName = document.getElementById('middle-name').value.trim();
             const lastName = document.getElementById('last-name').value.trim();
@@ -1211,23 +1196,15 @@
         });
 
         document.getElementById('begin-test').addEventListener('click', () => {
-            // Initialize exam with shuffled questions
             shuffleQuestions();
             currentQuestionIndex = 0;
             
-            // Display student name
             document.getElementById('display-student-name').textContent = studentName;
             document.getElementById('results-student-name').textContent = studentName;
             
-            // Create question navigation grid
             createQuestionGrid();
-            
-            // Load first question
             loadQuestion(currentQuestionIndex);
-            
-            // Start timer
             startTimer();
-            
             showSection('exam');
         });
 
@@ -1250,7 +1227,7 @@
             
             if (confirmed) {
                 clearInterval(timerInterval);
-                showLoading();
+                document.getElementById('loading').style.display = 'block';
                 setTimeout(() => {
                     calculateScore();
                 }, 1500);
@@ -1259,22 +1236,12 @@
 
         document.getElementById('restart-exam').addEventListener('click', () => {
             clearInterval(timerInterval);
-            // Reset form
             document.getElementById('first-name').value = '';
             document.getElementById('middle-name').value = '';
             document.getElementById('last-name').value = '';
             showSection('welcome');
         });
 
-        function showLoading() {
-            document.getElementById('loading').style.display = 'block';
-        }
-
-        function hideLoading() {
-            document.getElementById('loading').style.display = 'none';
-        }
-
-        // Create question navigation grid
         function createQuestionGrid() {
             const questionGrid = document.getElementById('question-grid');
             questionGrid.innerHTML = '';
@@ -1285,12 +1252,10 @@
                 questionNumber.textContent = i + 1;
                 questionNumber.dataset.index = i;
                 
-                // Mark if answered
                 if (userAnswers[i] !== null) {
                     questionNumber.classList.add('answered');
                 }
                 
-                // Mark current question
                 if (i === currentQuestionIndex) {
                     questionNumber.classList.add('current');
                 }
@@ -1304,7 +1269,6 @@
             }
         }
 
-        // Update question navigation grid
         function updateQuestionGrid() {
             const questionNumbers = document.querySelectorAll('.question-number');
             
@@ -1322,21 +1286,15 @@
             });
         }
 
-        // Exam functionality
         function loadQuestion(index) {
             const question = questions[index];
             
-            // Update question counter
             document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
-            
-            // Set question text
             document.getElementById('question-text').textContent = question.question;
             
-            // Clear options container
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
             
-            // Create option elements
             question.options.forEach((option, optionIndex) => {
                 const optionDiv = document.createElement('div');
                 optionDiv.className = 'option';
@@ -1347,9 +1305,8 @@
                 radio.type = 'radio';
                 radio.name = `question-${index}`;
                 radio.id = optionId;
-                radio.value = String.fromCharCode(65 + optionIndex); // A, B, C, D
+                radio.value = String.fromCharCode(65 + optionIndex);
                 
-                // Check if this option was previously selected
                 if (userAnswers[index] === radio.value) {
                     radio.checked = true;
                 }
@@ -1365,20 +1322,17 @@
                 
                 optionDiv.appendChild(radio);
                 optionDiv.appendChild(label);
-                
                 optionsContainer.appendChild(optionDiv);
             });
             
-            // Update navigation buttons
             document.getElementById('prev-question').disabled = index === 0;
             document.getElementById('next-question').disabled = index === questions.length - 1;
             
-            // Update question grid
             updateQuestionGrid();
         }
 
         function calculateScore() {
-            hideLoading();
+            document.getElementById('loading').style.display = 'none';
             let score = 0;
             
             for (let i = 0; i < questions.length; i++) {
@@ -1387,16 +1341,11 @@
                 }
             }
             
-            // Submit to Google Form WITHOUT showing score to student
-            submitToGoogleForm(studentName, "SSS1 Mathematics - Mid-Term Test", `${score}/${questions.length}`);
-            
-            // Show submission status
+            submitToGoogleForm(studentName, "SSS1 Mathematics - Second Term 2025/2026", `${score}/${questions.length}`);
             document.getElementById('submission-status').style.display = 'block';
-            
             showSection('results');
         }
 
-        // Google Form submission function
         function submitToGoogleForm(fullName, subject, score) {
             const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
             const formData = new FormData();
@@ -1405,21 +1354,14 @@
             formData.append("entry.1558221900", subject);
             formData.append("entry.2022160530", score);
 
-            // Use no-cors so browser will not block cross-origin form POST
             fetch(formURL, {
                 method: "POST",
                 mode: "no-cors",
                 body: formData
-            }).then(() => {
-                console.log("Results submitted successfully");
-            }).catch(err => {
-                console.warn("Form submission (no-cors) likely blocked for debug; data still sent.");
-            });
+            }).catch(err => console.warn("Form submission:", err));
         }
 
-        // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
-            // Focus on first input
             document.getElementById('first-name').focus();
         });
     </script>
