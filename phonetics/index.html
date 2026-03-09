@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Trustworthy College - Phonetics SSS1 Examination</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #1a1a2a;
+            color: #f5e9dd;
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* Dimmed background overlay with phonetics theme */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.15;
+            z-index: -1;
+            transition: background-image 1.5s ease-in-out;
+        }
+        
+        /* Container with phonetics theme (purple/teal) */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 25px;
+            background: linear-gradient(135deg, #2a1a3a 0%, #1a3a3a 100%);
+            box-shadow: 0 15px 40px rgba(106, 13, 173, 0.25);
+            border-radius: 16px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #9b59b6;
+            backdrop-filter: blur(5px);
+        }
+        
+        /* Purple decorative border */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #9b59b6, #1abc9c, #9b59b6);
+            z-index: 2;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+            position: relative;
+            border-bottom: 2px solid #9b59b6;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #9b59b6, transparent);
+        }
+        
+        .logo {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            border-radius: 10px;
+            border: 3px solid #9b59b6;
+            padding: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .subject-title {
+            color: #c39bd3;
+            font-size: 2.4rem;
+            margin: 10px 0 5px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+            letter-spacing: 1px;
+        }
+        
+        .exam-info {
+            color: #a3e4d7;
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+        
+        .term-info {
+            background: linear-gradient(135deg, #9b59b620, #1abc9c40);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #d2b4de;
+            border: 1px solid #9b59b660;
+        }
+        
+        /* Sections */
+        .section {
+            display: none;
+            padding: 25px;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .active {
+            display: block;
+        }
+        
+        /* Welcome message */
+        .welcome-message {
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(26, 58, 58, 0.7) 100%);
+            padding: 35px;
+            border-radius: 12px;
+            margin: 25px 0;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #f5e9dd;
+            border-left: 5px solid #9b59b6;
+            border-right: 1px solid rgba(155, 89, 182, 0.3);
+            border-top: 1px solid rgba(155, 89, 182, 0.2);
+            border-bottom: 1px solid rgba(155, 89, 182, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .welcome-message::before {
+            content: '🔊';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.1;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: #ffffff;
+            border: none;
+            padding: 15px 32px;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 12px 8px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border: 2px solid rgba(155, 89, 182, 0.5);
+            box-shadow: 0 6px 15px rgba(155, 89, 182, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: rotate(30deg);
+            transition: all 0.5s;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(135deg, #ae7ac9 0%, #9b59b6 100%);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(155, 89, 182, 0.5);
+            color: #ffffff;
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%);
+            border-color: #1abc9c;
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-color: #229954;
+        }
+        
+        .btn-container {
+            text-align: center;
+            margin-top: 35px;
+        }
+        
+        /* Form elements */
+        .form-group {
+            margin-bottom: 28px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: #c39bd3;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 16px;
+            background: rgba(42, 26, 58, 0.7);
+            border: 2px solid #5d7e7e;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            color: #f5e9dd;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+        
+        input[type="text"]:focus {
+            border-color: #9b59b6;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.3);
+            background: rgba(42, 26, 58, 0.9);
+        }
+        
+        .error-message {
+            color: #ff6b6b;
+            font-size: 0.95rem;
+            margin-top: 8px;
+            display: none;
+            font-weight: 500;
+        }
+        
+        /* Instructions */
+        .instructions {
+            background: linear-gradient(135deg, rgba(22, 160, 133, 0.1) 0%, rgba(26, 58, 58, 0.7) 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-left: 5px solid #1abc9c;
+            border: 1px solid rgba(26, 188, 156, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .instructions::before {
+            content: '🎯';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2.5rem;
+            opacity: 0.1;
+        }
+        
+        .instructions h3 {
+            margin-bottom: 20px;
+            color: #1abc9c;
+            font-size: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .instructions h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #1abc9c;
+            border-radius: 2px;
+        }
+        
+        .instructions ul {
+            padding-left: 25px;
+        }
+        
+        .instructions li {
+            margin-bottom: 14px;
+            line-height: 1.7;
+            padding-left: 8px;
+            position: relative;
+        }
+        
+        .instructions li::before {
+            content: '•';
+            color: #1abc9c;
+            font-size: 1.5rem;
+            position: absolute;
+            left: -20px;
+            top: -5px;
+        }
+        
+        /* Exam interface */
+        .exam-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(155, 89, 182, 0.3);
+        }
+        
+        .student-info {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #c39bd3;
+            margin-bottom: 25px;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(22, 160, 133, 0.2) 100%);
+            border-radius: 12px;
+            border: 1px solid rgba(155, 89, 182, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .exam-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(42, 26, 58, 0.5);
+            border-radius: 12px;
+            border: 1px solid rgba(155, 89, 182, 0.2);
+        }
+        
+        .question-counter {
+            font-size: 1.2rem;
+            color: #c39bd3;
+            font-weight: 600;
+            padding: 10px 20px;
+            background: rgba(155, 89, 182, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(155, 89, 182, 0.3);
+        }
+        
+        .timer-container {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 12px rgba(155, 89, 182, 0.4);
+            display: none;
+            border: 2px solid rgba(155, 89, 182, 0.5);
+            font-family: 'Courier New', monospace;
+        }
+        
+        .submit-container {
+            display: none;
+        }
+        
+        .exam-content {
+            margin-bottom: 35px;
+            background: rgba(42, 26, 58, 0.4);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(155, 89, 182, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .question-text {
+            font-size: 1.35rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+            color: #c39bd3;
+            line-height: 1.6;
+            padding: 20px;
+            background: rgba(22, 160, 133, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid #1abc9c;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .options-container {
+            margin-left: 15px;
+        }
+        
+        .option {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            padding: 18px 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            background: rgba(26, 58, 58, 0.5);
+            border: 1px solid rgba(22, 160, 133, 0.3);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(155, 89, 182, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s;
+        }
+        
+        .option:hover {
+            background: rgba(155, 89, 182, 0.1);
+            border-color: #9b59b6;
+            transform: translateX(5px);
+        }
+        
+        .option:hover::before {
+            transform: translateX(100%);
+        }
+        
+        .option input {
+            margin-right: 15px;
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            accent-color: #9b59b6;
+        }
+        
+        .option label {
+            font-weight: normal;
+            margin-bottom: 0;
+            cursor: pointer;
+            flex: 1;
+            color: #f5e9dd;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            font-family: 'Courier New', monospace;
+        }
+        
+        /* Question navigation */
+        .question-navigation {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 2px solid rgba(155, 89, 182, 0.3);
+        }
+        
+        .question-navigation h3 {
+            margin-bottom: 20px;
+            color: #c39bd3;
+            text-align: center;
+            font-size: 1.5rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .question-navigation h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #1abc9c;
+            border-radius: 2px;
+        }
+        
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        
+        .question-number {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(22, 160, 133, 0.3) 0%, rgba(26, 58, 58, 0.5) 100%);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 1px solid rgba(155, 89, 182, 0.3);
+            color: #f5e9dd;
+            font-size: 1.1rem;
+        }
+        
+        .question-number:hover {
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.3) 0%, rgba(142, 68, 173, 0.5) 100%);
+            transform: scale(1.1);
+            border-color: #9b59b6;
+        }
+        
+        .question-number.current {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: #ffffff;
+            border-color: #c39bd3;
+            box-shadow: 0 4px 10px rgba(155, 89, 182, 0.4);
+            transform: scale(1.1);
+        }
+        
+        .question-number.answered {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            border-color: #2ecc71;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+        }
+        
+        /* Results section */
+        .results-container {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(42, 26, 58, 0.8) 0%, rgba(26, 58, 58, 0.9) 100%);
+            border-radius: 16px;
+            border: 2px solid #9b59b6;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .results-container::before {
+            content: '✅';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 4rem;
+            opacity: 0.1;
+        }
+        
+        .results-container h2 {
+            color: #c39bd3;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .student-info {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .subject {
+            font-size: 1.3rem;
+            color: #a3e4d7;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .feedback {
+            font-size: 1.3rem;
+            margin: 25px 0;
+            color: #f5e9dd;
+            line-height: 1.7;
+            padding: 25px;
+            background: rgba(155, 89, 182, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(155, 89, 182, 0.3);
+        }
+        
+        .submission-status {
+            margin-top: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.2) 0%, rgba(46, 204, 113, 0.3) 100%);
+            border-radius: 12px;
+            color: #2ecc71;
+            font-size: 1.2rem;
+            border: 1px solid rgba(46, 204, 113, 0.5);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .question-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+            
+            .exam-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+                margin: 8px 0;
+            }
+            
+            .subject-title {
+                font-size: 1.8rem;
+            }
+            
+            .question-text {
+                font-size: 1.2rem;
+            }
+            
+            .container {
+                padding: 15px;
+                margin: 15px;
+            }
+            
+            .welcome-message, .instructions, .exam-content {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .question-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+            
+            .question-number {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            
+            .subject-title {
+                font-size: 1.5rem;
+            }
+            
+            .results-container {
+                padding: 25px 15px;
+            }
+        }
+        
+        .back-home {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(155, 89, 182, 0.3);
+            border-top: 4px solid #9b59b6;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
+                 alt="The Trustworthy College logo" class="logo">
+            <h1 class="subject-title">SSS1 PHONETICS EXAMINATION</h1>
+            <div class="exam-info">Second Term | 2025/2026 Session</div>
+            <div class="term-info">40 Questions | 30 Minutes</div>
+        </div>
+        
+        <!-- Welcome Section -->
+        <section id="welcome-section" class="section active">
+            <div class="welcome-message">
+                "Welcome to The Trustworthy College Phonetics Examination. This test covers Consonant Clusters, Transcription, Syllables, and Syllable Structure. Demonstrate your understanding of speech sounds and their patterns. Best of luck."
+            </div>
+            <div class="btn-container">
+                <button id="start-exam-btn" class="btn">Start Examination</button>
+            </div>
+        </section>
+        
+        <!-- Student Information Section -->
+        <section id="student-info-section" class="section">
+            <h2>Student Information</h2>
+            <p>Please provide your details to continue with the examination.</p>
+            
+            <form id="student-info-form">
+                <div class="form-group">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" required>
+                    <div class="error-message" id="first-name-error">First name is required</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="middle-name">Middle Name *</label>
+                    <input type="text" id="middle-name" required>
+                    <div class="error-message" id="middle-name-error">Middle name is required</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" required>
+                    <div class="error-message" id="last-name-error">Last name is required</div>
+                </div>
+                
+                <div class="btn-container">
+                    <button type="button" id="back-to-welcome" class="btn btn-secondary">Back</button>
+                    <button type="button" id="continue-to-instructions" class="btn">Continue</button>
+                </div>
+            </form>
+        </section>
+        
+        <!-- Instructions Section -->
+        <section id="instructions-section" class="section">
+            <h2>Examination Instructions</h2>
+            
+            <div class="instructions">
+                <h3>Important Notes:</h3>
+                <ul>
+                    <li>This examination consists of 40 multiple-choice questions covering Phonetics topics.</li>
+                    <li>You have 30 minutes to complete this examination.</li>
+                    <li>Answer all questions to the best of your ability.</li>
+                    <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
+                    <li>Answered questions will be marked with green in the question grid.</li>
+                    <li>Once you submit your answers, you cannot change them.</li>
+                    <li>Ensure you have a stable internet connection throughout the examination.</li>
+                    <li>Read each question carefully before selecting your answer.</li>
+                    <li>Your results will be submitted automatically upon completion.</li>
+                    <li>This is the Second Term Examination for the 2025/2026 Academic Session.</li>
+                </ul>
+            </div>
+            
+            <div class="btn-container">
+                <button type="button" id="back-to-student-info" class="btn btn-secondary">Back</button>
+                <button type="button" id="begin-test" class="btn">Begin Test</button>
+            </div>
+        </section>
+        
+        <!-- Exam Interface Section -->
+        <section id="exam-section" class="section">
+            <div class="exam-header">
+                <div class="student-info" id="display-student-name"></div>
+                <div class="exam-controls">
+                    <div class="question-counter" id="question-counter">Question 1 of 40</div>
+                    <div class="timer-container" id="timer-container">
+                        Time Left: <span id="timer">30:00</span>
+                    </div>
+                    <div class="submit-container" id="submit-container">
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="exam-content">
+                <div class="question-text" id="question-text"></div>
+                
+                <div class="options-container" id="options-container">
+                    <!-- Options will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="question-navigation">
+                <h3>Question Navigation</h3>
+                <div class="question-grid" id="question-grid">
+                    <!-- Question numbers will be populated by JavaScript -->
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button type="button" id="prev-question" class="btn btn-secondary">Previous</button>
+                    <button type="button" id="next-question" class="btn">Next</button>
+                </div>
+            </div>
+            
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Submitting your results...</p>
+            </div>
+        </section>
+        
+        <!-- Results Section -->
+        <section id="results-section" class="section">
+            <div class="results-container">
+                <h2>Examination Completed</h2>
+                <div class="student-info" id="results-student-name"></div>
+                <div class="subject" id="results-subject">SSS1 Phonetics - Second Term 2025/2026</div>
+                
+                <div class="feedback" id="feedback-message">
+                    Thank you for completing the Phonetics examination. Your results have been submitted successfully to the examination board.
+                </div>
+                
+                <div class="submission-status" id="submission-status">
+                    Your examination has been successfully submitted. Results will be communicated through appropriate channels.
+                </div>
+                
+                <div class="btn-container">
+                    <button type="button" id="restart-exam" class="btn">Take Another Exam</button>
+                    <div class="back-home">
+                        <a href="../index.html" class="btn btn-secondary">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // SSS1 PHONETICS - SECOND TERM 2025/2026
+        const originalQuestions = [
+            // SECTION A: CONSONANT CLUSTERS (Questions 1-15)
+            {
+                question: "In the word 'spring', where does the consonant cluster /spr/ occur?",
+                options: ["Central", "Final", "Initial", "Medial"],
+                answer: "C"
+            },
+            {
+                question: "The consonant cluster in the word 'asked' is found in the:",
+                options: ["Initial position", "Pre-initial position", "Final position", "Central position"],
+                answer: "C"
+            },
+            {
+                question: "Identify the word that contains a two-consonant cluster in the final position.",
+                options: ["grape", "help", "scream", "text"],
+                answer: "B"
+            },
+            {
+                question: "Which of the following words has a consonant cluster in the central (medial) position?",
+                options: ["street", "next", "children", "ask"],
+                answer: "C"
+            },
+            {
+                question: "The word glimpsed /glimpst/ contains a consonant cluster in the:",
+                options: ["Initial position only", "Final position only", "Both initial and final positions", "Central position only"],
+                answer: "C"
+            },
+            {
+                question: "How many consonant sounds are in the initial cluster of the word 'splash'?",
+                options: ["Two", "Three", "Four", "One"],
+                answer: "B"
+            },
+            {
+                question: "Which of the following words contains a cluster of three consonant sounds in the final position?",
+                options: ["sixth", "hand", "desk", "spin"],
+                answer: "A"
+            },
+            {
+                question: "The final cluster in the word texts /tɛksts/ is an example of a:",
+                options: ["Two-consonant cluster", "Three-consonant cluster", "Four-consonant cluster", "Single consonant sound"],
+                answer: "C"
+            },
+            {
+                question: "Which word begins with a two-consonant cluster?",
+                options: ["school", "pray", "string", "at"],
+                answer: "B"
+            },
+            {
+                question: "The word 'twelfths' is famous for having a cluster of how many consonant sounds at the end?",
+                options: ["Two", "Three", "Four", "Five"],
+                answer: "C"
+            },
+            {
+                question: "Identify the word that has a two-consonant cluster in the initial position.",
+                options: ["ice", "scheme", "scream", "chief"],
+                answer: "B"
+            },
+            {
+                question: "In which of the following words is the final cluster /-nt/?",
+                options: ["meant", "mend", "melt", "nest"],
+                answer: "A"
+            },
+            {
+                question: "The word 'springs' /sprɪŋz/ contains which of the following?",
+                options: ["Initial 3-consonant cluster, final 2-consonant cluster", "Initial 2-consonant cluster, final 2-consonant cluster", "Initial 3-consonant cluster, final 1 consonant", "Initial 2-consonant cluster, final 3-consonant cluster"],
+                answer: "A"
+            },
+            {
+                question: "A word with the final four-consonant cluster /mpts/ is:",
+                options: ["prompts", "jumped", "glimpsed", "exempt"],
+                answer: "A"
+            },
+            {
+                question: "The initial sound in the word 'psychology' is a consonant cluster?",
+                options: ["Yes, it is /ps/.", "No, it begins with a single consonant sound /s/.", "Yes, it is /saɪ/.", "No, it begins with a vowel sound."],
+                answer: "B"
+            },
+            
+            // SECTION B: TRANSCRIPTION AND SYLLABLES (Questions 16-26)
+            {
+                question: "Which word is represented by the transcription /bɜ:θdeɪ/ ?",
+                options: ["Birthdate", "Birthday", "Both day", "Berth day"],
+                answer: "B"
+            },
+            {
+                question: "The transcription /sku:l/ stands for:",
+                options: ["Skull", "School", "Cool", "Scroll"],
+                answer: "B"
+            },
+            {
+                question: "What is the correct spelling of the word /ˈmɛsɪndʒə/ ?",
+                options: ["Messenger", "Message", "Manager", "Meringue"],
+                answer: "A"
+            },
+            {
+                question: "The word transcribed as /θriː/ is:",
+                options: ["Tree", "Three", "Free", "Through"],
+                answer: "B"
+            },
+            {
+                question: "The word for the transcription /dɪˈskraɪb/ is:",
+                options: ["Discord", "Describe", "Discovery", "Description"],
+                answer: "B"
+            },
+            {
+                question: "How many syllables does the word 'education' have?",
+                options: ["Two", "Three", "Four", "Five"],
+                answer: "C"
+            },
+            {
+                question: "Which of the following words has three syllables?",
+                options: ["immediately", "beautiful", "go", "table"],
+                answer: "B"
+            },
+            {
+                question: "The word 'strengths' has how many syllables?",
+                options: ["One", "Two", "Three", "Four"],
+                answer: "A"
+            },
+            {
+                question: "Select the word with the highest number of syllables.",
+                options: ["pronunciation", "comfortable", "responsibility", "international"],
+                answer: "C"
+            },
+            {
+                question: "Count the syllables in the word 'university'.",
+                options: ["Three", "Four", "Five", "Six"],
+                answer: "C"
+            },
+            {
+                question: "The word 'appreciation' contains:",
+                options: ["Four syllables", "Two syllables", "Three syllables", "Five syllables"],
+                answer: "D"
+            },
+            
+            // SECTION C: SYLLABLE STRUCTURE (Questions 27-40)
+            {
+                question: "In the monosyllabic word 'cat' /kæt/, what is the Peak of the syllable?",
+                options: ["/k/", "/æ/", "/t/", "/kæ/"],
+                answer: "B"
+            },
+            {
+                question: "The Onset of the syllable in the word 'play' /pleɪ/ is:",
+                options: ["/p/", "/leɪ/", "/pl/", "/eɪ/"],
+                answer: "C"
+            },
+            {
+                question: "Which of the following sounds mainly functions as the Peak in a syllable?",
+                options: ["A consonant", "A vowel", "A cluster", "Any letter"],
+                answer: "B"
+            },
+            {
+                question: "In the word 'sixth' /sɪksθ/, what constitutes the Coda?",
+                options: ["/s/", "/ɪ/", "/ksθ/", "/sɪ/"],
+                answer: "C"
+            },
+            {
+                question: "A word that has no onset is:",
+                options: ["at /æt/", "bat /bæt/", "spin /spɪn/", "cat /kæt/"],
+                answer: "A"
+            },
+            {
+                question: "In the word 'spring' /sprɪŋ/, the Coda is:",
+                options: ["/spr/", "/ɪ/", "/ŋ/", "/rɪŋ/"],
+                answer: "C"
+            },
+            {
+                question: "Using the formula (C₀-₃) V (C₀-₄), what is the syllabic structure of the word 'go' /gəʊ/?",
+                options: ["V", "CV", "CVC", "CCV"],
+                answer: "B"
+            },
+            {
+                question: "The structure of the word 'and' /ænd/ is:",
+                options: ["CV", "VC", "VCC", "CVC"],
+                answer: "C"
+            },
+            {
+                question: "Which word has the syllabic structure CCVCC?",
+                options: ["stop /stɒp/", "blast /blɑ:st/", "ask /ɑ:sk/", "tree /tri:/"],
+                answer: "B"
+            },
+            {
+                question: "The structure of the word 'splash' /splæʃ/ is:",
+                options: ["CCV", "CCCVC", "CCCVCC", "CCVC"],
+                answer: "B"
+            },
+            {
+                question: "Which of the following words has the structure V?",
+                options: ["eye /aɪ/", "see /si:/", "at /æt/", "ink /ɪŋk/"],
+                answer: "A"
+            },
+            {
+                question: "The structure for the word 'strike' /straɪk/ is:",
+                options: ["CCVC", "CCCVC", "CCCV", "CCVCC"],
+                answer: "B"
+            },
+            {
+                question: "A word with the structure VCC is:",
+                options: ["he /hi:/", "axe /æks/", "of /ɒv/", "an /æn/"],
+                answer: "B"
+            },
+            {
+                question: "What is the syllabic structure of the word 'texts' /tɛksts/?",
+                options: ["CVCC", "CVCCC", "CVCCCC", "CCCV"],
+                answer: "C"
+            }
+        ];
+
+        // Application state
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        let studentName = "";
+        let timerInterval;
+        let timeLeft = 30 * 60; // 30 minutes in seconds
+        let questions = [];
+
+        // Background images for rotation
+        const backgroundImages = [
+            'https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80',
+            'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
+        ];
+
+        // DOM elements
+        const sections = {
+            welcome: document.getElementById('welcome-section'),
+            studentInfo: document.getElementById('student-info-section'),
+            instructions: document.getElementById('instructions-section'),
+            exam: document.getElementById('exam-section'),
+            results: document.getElementById('results-section')
+        };
+
+        // Initialize background rotation
+        let currentBgIndex = 0;
+        function rotateBackground() {
+            currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
+            document.body.style.backgroundImage = `url('${backgroundImages[currentBgIndex]}')`;
+        }
+        setInterval(rotateBackground, 10000);
+
+        // Shuffle questions
+        function shuffleQuestions() {
+            questions = [...originalQuestions];
+            for (let i = questions.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [questions[i], questions[j]] = [questions[j], questions[i]];
+            }
+            userAnswers = Array(questions.length).fill(null);
+        }
+
+        // Timer function
+        function startTimer() {
+            clearInterval(timerInterval);
+            timeLeft = 30 * 60;
+            
+            document.getElementById('timer-container').style.display = 'block';
+            document.getElementById('submit-container').style.display = 'block';
+            
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                
+                document.getElementById('timer').textContent = 
+                    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Time's up! Your exam will be submitted automatically.");
+                    calculateScore();
+                }
+                
+                if (timeLeft <= 300) { // 5 minutes left
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
+                } else if (timeLeft <= 600) { // 10 minutes left
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
+                }
+            }, 1000);
+        }
+
+        // Navigation functions
+        function showSection(sectionName) {
+            Object.values(sections).forEach(section => {
+                section.classList.remove('active');
+            });
+            sections[sectionName].classList.add('active');
+            
+            if (sectionName !== 'exam') {
+                document.getElementById('timer-container').style.display = 'none';
+                document.getElementById('submit-container').style.display = 'none';
+            }
+            window.scrollTo(0, 0);
+        }
+
+        // Event listeners
+        document.getElementById('start-exam-btn').addEventListener('click', () => {
+            showSection('studentInfo');
+        });
+
+        document.getElementById('back-to-welcome').addEventListener('click', () => {
+            showSection('welcome');
+        });
+
+        document.getElementById('continue-to-instructions').addEventListener('click', () => {
+            const firstName = document.getElementById('first-name').value.trim();
+            const middleName = document.getElementById('middle-name').value.trim();
+            const lastName = document.getElementById('last-name').value.trim();
+            
+            let isValid = true;
+            
+            if (!firstName) {
+                document.getElementById('first-name-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('first-name-error').style.display = 'none';
+            }
+            
+            if (!middleName) {
+                document.getElementById('middle-name-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('middle-name-error').style.display = 'none';
+            }
+            
+            if (!lastName) {
+                document.getElementById('last-name-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('last-name-error').style.display = 'none';
+            }
+            
+            if (isValid) {
+                studentName = `${firstName} ${middleName} ${lastName}`;
+                showSection('instructions');
+            }
+        });
+
+        document.getElementById('back-to-student-info').addEventListener('click', () => {
+            showSection('studentInfo');
+        });
+
+        document.getElementById('begin-test').addEventListener('click', () => {
+            shuffleQuestions();
+            currentQuestionIndex = 0;
+            
+            document.getElementById('display-student-name').textContent = studentName;
+            document.getElementById('results-student-name').textContent = studentName;
+            
+            createQuestionGrid();
+            loadQuestion(currentQuestionIndex);
+            startTimer();
+            showSection('exam');
+        });
+
+        document.getElementById('prev-question').addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion(currentQuestionIndex);
+            }
+        });
+
+        document.getElementById('next-question').addEventListener('click', () => {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            }
+        });
+
+        document.getElementById('submit-exam').addEventListener('click', () => {
+            const confirmed = confirm("Are you sure you want to submit? You will not be able to change your answers after this.");
+            
+            if (confirmed) {
+                clearInterval(timerInterval);
+                document.getElementById('loading').style.display = 'block';
+                setTimeout(() => {
+                    calculateScore();
+                }, 1500);
+            }
+        });
+
+        document.getElementById('restart-exam').addEventListener('click', () => {
+            clearInterval(timerInterval);
+            document.getElementById('first-name').value = '';
+            document.getElementById('middle-name').value = '';
+            document.getElementById('last-name').value = '';
+            showSection('welcome');
+        });
+
+        function createQuestionGrid() {
+            const questionGrid = document.getElementById('question-grid');
+            questionGrid.innerHTML = '';
+            
+            for (let i = 0; i < questions.length; i++) {
+                const questionNumber = document.createElement('div');
+                questionNumber.className = 'question-number';
+                questionNumber.textContent = i + 1;
+                questionNumber.dataset.index = i;
+                
+                if (userAnswers[i] !== null) {
+                    questionNumber.classList.add('answered');
+                }
+                
+                if (i === currentQuestionIndex) {
+                    questionNumber.classList.add('current');
+                }
+                
+                questionNumber.addEventListener('click', () => {
+                    currentQuestionIndex = parseInt(questionNumber.dataset.index);
+                    loadQuestion(currentQuestionIndex);
+                });
+                
+                questionGrid.appendChild(questionNumber);
+            }
+        }
+
+        function updateQuestionGrid() {
+            const questionNumbers = document.querySelectorAll('.question-number');
+            
+            questionNumbers.forEach((number, index) => {
+                number.classList.remove('current');
+                number.classList.remove('answered');
+                
+                if (index === currentQuestionIndex) {
+                    number.classList.add('current');
+                }
+                
+                if (userAnswers[index] !== null) {
+                    number.classList.add('answered');
+                }
+            });
+        }
+
+        function loadQuestion(index) {
+            const question = questions[index];
+            
+            document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
+            document.getElementById('question-text').textContent = question.question;
+            
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            
+            question.options.forEach((option, optionIndex) => {
+                const optionDiv = document.createElement('div');
+                optionDiv.className = 'option';
+                
+                const optionId = `option-${index}-${optionIndex}`;
+                
+                const radio = document.createElement('input');
+                radio.type = 'radio';
+                radio.name = `question-${index}`;
+                radio.id = optionId;
+                radio.value = String.fromCharCode(65 + optionIndex);
+                
+                if (userAnswers[index] === radio.value) {
+                    radio.checked = true;
+                }
+                
+                radio.addEventListener('change', () => {
+                    userAnswers[index] = radio.value;
+                    updateQuestionGrid();
+                });
+                
+                const label = document.createElement('label');
+                label.htmlFor = optionId;
+                label.textContent = `${String.fromCharCode(65 + optionIndex)}. ${option}`;
+                
+                optionDiv.appendChild(radio);
+                optionDiv.appendChild(label);
+                optionsContainer.appendChild(optionDiv);
+            });
+            
+            document.getElementById('prev-question').disabled = index === 0;
+            document.getElementById('next-question').disabled = index === questions.length - 1;
+            
+            updateQuestionGrid();
+        }
+
+        function calculateScore() {
+            document.getElementById('loading').style.display = 'none';
+            let score = 0;
+            
+            for (let i = 0; i < questions.length; i++) {
+                if (userAnswers[i] === questions[i].answer) {
+                    score++;
+                }
+            }
+            
+            submitToGoogleForm(studentName, "SSS1 Phonetics - Second Term 2025/2026", `${score}/${questions.length}`);
+            document.getElementById('submission-status').style.display = 'block';
+            showSection('results');
+        }
+
+        function submitToGoogleForm(fullName, subject, score) {
+            const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
+            const formData = new FormData();
+            formData.append("entry.862885683", fullName);
+            formData.append("entry.1545021484", "SSS1");
+            formData.append("entry.1558221900", subject);
+            formData.append("entry.2022160530", score);
+
+            fetch(formURL, {
+                method: "POST",
+                mode: "no-cors",
+                body: formData
+            }).catch(err => console.warn("Form submission:", err));
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('first-name').focus();
+        });
+    </script>
+</body>
+</html>
