@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Economics CBT Exam</title>
+    <title>The Trustworthy College - Economics SS1 Examination</title>
     <style>
         /* Reset and base styles */
         * {
@@ -29,7 +29,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -116,6 +116,17 @@
             margin-top: 5px;
         }
         
+        .term-info {
+            background: linear-gradient(135deg, #d4af3720, #ffd70040);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #ffd700;
+            border: 1px solid #d4af3760;
+        }
+        
         /* Sections */
         .section {
             display: none;
@@ -199,15 +210,6 @@
             color: #1a0f0a;
         }
         
-        .btn:hover::after {
-            left: 100%;
-        }
-        
-        .btn:focus {
-            outline: 2px solid #ffd700;
-            outline-offset: 3px;
-        }
-        
         .btn-secondary {
             background: linear-gradient(135deg, #8b7355 0%, #6b5b4b 100%);
             color: #f5e9dd;
@@ -222,20 +224,6 @@
             background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
             color: white;
             border-color: #229954;
-        }
-        
-        .btn-success:hover {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
-        }
-        
-        .btn-danger {
-            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
-            color: white;
-            border-color: #922b21;
-        }
-        
-        .btn-danger:hover {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
         }
         
         .btn-container {
@@ -561,7 +549,7 @@
             margin-top: 25px;
         }
         
-        /* Results section - NO SCORE DISPLAY */
+        /* Results section */
         .results-container {
             text-align: center;
             padding: 40px;
@@ -682,13 +670,11 @@
             }
         }
         
-        /* Back to Home button */
         .back-home {
             margin-top: 20px;
             text-align: center;
         }
         
-        /* Loading animation */
         .loading {
             display: none;
             text-align: center;
@@ -713,18 +699,19 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header with logo -->
+        <!-- Header -->
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
             <h1 class="subject-title">SS1 ECONOMICS EXAMINATION</h1>
-            <div class="exam-info">Second Term Mid Term Test | 40 Questions | 40 Minutes</div>
+            <div class="exam-info">Second Term | 2025/2026 Session</div>
+            <div class="term-info">60 Questions | 30 Minutes</div>
         </div>
         
         <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Economics Examination. Demonstrate your understanding of economic principles, markets, and financial systems. Success comes from knowledge and diligence. Best of luck."
+                "Welcome to The Trustworthy College Economics Examination. This test covers the Nigerian Economy, Agriculture, Mining, Financial Institutions, Money, Distribution, Business Finance, and Industrial Classification. Demonstrate your understanding of economic principles. Best of luck."
             </div>
             <div class="btn-container">
                 <button id="start-exam-btn" class="btn">Start Examination</button>
@@ -769,16 +756,16 @@
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This examination consists of 40 multiple-choice questions.</li>
-                    <li>You have 40 minutes to complete this examination (1 minute per question).</li>
+                    <li>This examination consists of 60 multiple-choice questions covering Economics topics.</li>
+                    <li>You have 30 minutes to complete this examination.</li>
                     <li>Answer all questions to the best of your ability.</li>
                     <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
                     <li>Answered questions will be marked with green in the question grid.</li>
                     <li>Once you submit your answers, you cannot change them.</li>
                     <li>Ensure you have a stable internet connection throughout the examination.</li>
-                    <li>Any form of malpractice will lead to disqualification.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
+                    <li>This is the Second Term Examination for the 2025/2026 Academic Session.</li>
                 </ul>
             </div>
             
@@ -793,9 +780,9 @@
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
                 <div class="exam-controls">
-                    <div class="question-counter" id="question-counter">Question 1 of 40</div>
+                    <div class="question-counter" id="question-counter">Question 1 of 60</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">40:00</span>
+                        Time Left: <span id="timer">30:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
                         <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
@@ -811,7 +798,6 @@
                 </div>
             </div>
             
-            <!-- Question navigation grid after question content -->
             <div class="question-navigation">
                 <h3>Question Navigation</h3>
                 <div class="question-grid" id="question-grid">
@@ -830,15 +816,15 @@
             </div>
         </section>
         
-        <!-- Results Section - NO SCORE DISPLAY -->
+        <!-- Results Section -->
         <section id="results-section" class="section">
             <div class="results-container">
                 <h2>Examination Completed</h2>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SS1 Economics - Second Term</div>
+                <div class="subject" id="results-subject">SS1 Economics - Second Term 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the examination. Your results have been submitted successfully to the examination board.
+                    Thank you for completing the Economics examination. Your results have been submitted successfully to the examination board.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
@@ -856,207 +842,307 @@
     </div>
 
     <script>
-        // SUBJECT: SS1 ECONOMICS - Second Term Mid Term Test
+        // SS1 ECONOMICS - SECOND TERM 2025/2026
         const originalQuestions = [
             {
-                question: "The Nigerian economy is best described as",
-                options: ["capitalist", "socialist", "mixed economy", "traditional economy"],
+                question: "The Nigerian economy is best described as a",
+                options: ["Socialist economy", "Traditional economy", "Mixed economy", "Capitalist economy"],
                 answer: "C"
             },
             {
-                question: "A mixed economy is one in which",
-                options: ["government owns everything", "private individuals own everything", "government and private individuals participate", "only farmers produce goods"],
-                answer: "C"
-            },
-            {
-                question: "One major feature of the Nigerian economy is",
-                options: ["absence of government", "dominance of agriculture and oil", "total industrialization", "lack of labour"],
+                question: "A mixed economy combines",
+                options: ["Religion and politics", "Private and government ownership", "Farming and mining", "Trade and transport"],
                 answer: "B"
             },
             {
-                question: "Which sector contributes most to Nigeria's foreign exchange?",
-                options: ["Agriculture", "Manufacturing", "Mining (oil and gas)", "Trade"],
-                answer: "C"
-            },
-            {
-                question: "The primary sector of the Nigerian economy includes",
-                options: ["banking and insurance", "trading and transport", "agriculture and mining", "manufacturing"],
-                answer: "C"
-            },
-            {
-                question: "Agriculture is concerned with",
-                options: ["buying and selling goods", "extraction of minerals", "cultivation of crops and rearing of animals", "provision of services"],
-                answer: "C"
-            },
-            {
-                question: "One importance of agriculture to Nigeria is that it",
-                options: ["increases inflation", "provides food for the population", "discourages export", "reduces employment"],
+                question: "One major sector of the Nigerian economy is",
+                options: ["Education", "Agriculture", "Tourism", "Communication"],
                 answer: "B"
             },
             {
-                question: "Which of the following is a cash crop?",
-                options: ["Yam", "Rice", "Cocoa", "Maize"],
+                question: "Agriculture involves the",
+                options: ["Production of cars", "Cultivation of crops and rearing of animals", "Mining of minerals", "Building of houses"],
+                answer: "B"
+            },
+            {
+                question: "One importance of agriculture in Nigeria is",
+                options: ["It increases crime", "Provides food for the population", "Causes inflation", "Reduces employment"],
+                answer: "B"
+            },
+            {
+                question: "An example of a cash crop in Nigeria is",
+                options: ["Rice", "Yam", "Cocoa", "Beans"],
                 answer: "C"
             },
             {
-                question: "Subsistence farming is characterized by",
-                options: ["large-scale production", "use of machines", "production mainly for family consumption", "export of produce"],
-                answer: "C"
-            },
-            {
-                question: "Commercial agriculture is practiced mainly to",
-                options: ["feed the farmer's family", "supply raw materials only", "produce for sale and profit", "reduce soil fertility"],
-                answer: "C"
-            },
-            {
-                question: "One problem facing agriculture in Nigeria is",
-                options: ["adequate capital", "mechanization", "poor storage facilities", "improved seedlings"],
-                answer: "C"
-            },
-            {
-                question: "Livestock farming involves rearing of",
-                options: ["crops", "fish only", "animals", "trees"],
-                answer: "C"
+                question: "An example of food crop is",
+                options: ["Cassava", "Cocoa", "Rubber", "Cotton"],
+                answer: "A"
             },
             {
                 question: "Mining refers to the",
-                options: ["processing of raw materials", "extraction of minerals from the earth", "selling of mineral products", "refining of crude oil"],
-                answer: "B"
-            },
-            {
-                question: "Which of the following is a mineral resource in Nigeria?",
-                options: ["Cocoa", "Timber", "Crude oil", "Rubber"],
+                options: ["Growing of crops", "Fishing activities", "Extraction of minerals from the earth", "Trading of goods"],
                 answer: "C"
             },
             {
-                question: "Solid minerals found in Nigeria include",
-                options: ["petroleum and gas", "coal and tin", "cocoa and palm oil", "rubber and cotton"],
+                question: "One mineral resource in Nigeria is",
+                options: ["Rice", "Crude oil", "Maize", "Rubber"],
                 answer: "B"
             },
             {
-                question: "Crude oil in Nigeria is mainly found in the",
-                options: ["North-East", "South-West", "Niger Delta", "North-Central"],
-                answer: "C"
-            },
-            {
-                question: "One contribution of mining to the Nigerian economy is",
-                options: ["unemployment", "foreign exchange earnings", "food shortage", "soil erosion"],
-                answer: "B"
-            },
-            {
-                question: "Artisanal mining is usually",
-                options: ["capital intensive", "government owned", "small scale and manual", "highly mechanized"],
+                question: "Coal is mined in",
+                options: ["Lagos", "Kano", "Enugu", "Ibadan"],
                 answer: "C"
             },
             {
                 question: "Financial institutions are organizations that",
-                options: ["produce goods", "provide entertainment", "deal with money and credit", "transport goods"],
+                options: ["Sell goods", "Produce crops", "Deal with money and financial services", "Build houses"],
                 answer: "C"
             },
             {
-                question: "An example of a financial institution is",
-                options: ["supermarket", "bank", "factory", "farm"],
+                question: "The apex bank in Nigeria is the",
+                options: ["Union Bank", "First Bank", "Central Bank of Nigeria", "UBA"],
+                answer: "C"
+            },
+            {
+                question: "Commercial banks mainly",
+                options: ["Grow crops", "Accept deposits and grant loans", "Produce goods", "Build roads"],
                 answer: "B"
             },
             {
-                question: "Which of the following is a commercial bank?",
-                options: ["Central Bank of Nigeria", "First Bank of Nigeria", "Nigerian Stock Exchange", "Insurance company"],
+                question: "One example of a commercial bank in Nigeria is",
+                options: ["First Bank", "CBN", "IMF", "World Bank"],
+                answer: "A"
+            },
+            {
+                question: "The Central Bank controls",
+                options: ["Trade", "Money supply", "Agriculture", "Transport"],
                 answer: "B"
             },
             {
-                question: "The Central Bank of Nigeria is responsible for",
-                options: ["granting loans to farmers only", "controlling money supply", "buying and selling goods", "collecting taxes"],
+                question: "Money is anything generally accepted as",
+                options: ["Gift", "Payment", "Medium of exchange", "Reward"],
+                answer: "C"
+            },
+            {
+                question: "One function of money is",
+                options: ["Medium of exchange", "Storage of crops", "Production of goods", "Transport"],
+                answer: "A"
+            },
+            {
+                question: "Money also serves as a",
+                options: ["Tool of farming", "Store of value", "Machine", "Transport system"],
                 answer: "B"
             },
             {
-                question: "One function of commercial banks is to",
-                options: ["print currency", "accept deposits", "control inflation directly", "make laws"],
+                question: "The durability of money means it",
+                options: ["Is cheap", "Lasts long without damage", "Is heavy", "Is colourful"],
                 answer: "B"
             },
             {
-                question: "Insurance companies mainly help to",
-                options: ["create money", "reduce business risks", "produce goods", "fix prices"],
+                question: "Channels of distribution refer to",
+                options: ["Production process", "Movement of goods from producer to consumer", "Mining process", "Financial system"],
                 answer: "B"
             },
             {
-                question: "Microfinance banks mainly provide",
-                options: ["large loans to industries", "small loans to small businesses", "foreign exchange", "oil revenue"],
+                question: "The shortest channel of distribution is",
+                options: ["Producer → wholesaler → retailer → consumer", "Producer → consumer", "Producer → retailer → consumer", "Producer → agent → consumer"],
                 answer: "B"
             },
             {
-                question: "Money can best be defined as",
-                options: ["anything people admire", "anything generally accepted as a medium of exchange", "goods exchanged for goods", "only paper notes"],
+                question: "A wholesaler buys goods from",
+                options: ["Consumers", "Producers", "Farmers", "Government"],
                 answer: "B"
             },
             {
-                question: "One function of money is to",
-                options: ["increase production", "serve as a medium of exchange", "create goods", "provide services"],
+                question: "Retailers sell goods to",
+                options: ["Producers", "Final consumers", "Wholesalers", "Government"],
                 answer: "B"
             },
             {
-                question: "Which of the following is NOT a function of money?",
-                options: ["Medium of exchange", "Unit of account", "Store of value", "Means of production"],
-                answer: "D"
+                question: "One function of wholesalers is",
+                options: ["Bulk breaking", "Mining", "Farming", "Manufacturing"],
+                answer: "A"
             },
             {
-                question: "Legal tender in Nigeria is issued by",
-                options: ["Ministry of Finance", "Commercial banks", "Central Bank of Nigeria", "Federal Government only"],
-                answer: "C"
-            },
-            {
-                question: "Which of these is a form of money?",
-                options: ["Cheque", "Promissory note", "Currency notes and coins", "Share certificate"],
-                answer: "C"
-            },
-            {
-                question: "Commodity money is money that",
-                options: ["has no value", "is made of paper", "has intrinsic value", "is only electronic"],
-                answer: "C"
-            },
-            {
-                question: "One advantage of money over barter is that it",
-                options: ["causes inflation", "lacks standard value", "removes double coincidence of wants", "reduces trade"],
-                answer: "C"
-            },
-            {
-                question: "Money as a store of value means it",
-                options: ["spoils easily", "can be kept for future use", "must be spent immediately", "loses value always"],
+                question: "Retailers provide",
+                options: ["Transport", "Goods in small quantities", "Farming services", "Insurance"],
                 answer: "B"
             },
             {
-                question: "The sector that provides services is the",
-                options: ["primary sector", "secondary sector", "tertiary sector", "extractive sector"],
+                question: "Instruments of business finance include",
+                options: ["Cars", "Houses", "Shares", "Clothes"],
                 answer: "C"
             },
             {
-                question: "Banks create credit mainly by",
-                options: ["printing money", "accepting deposits", "granting loans", "issuing cheques"],
-                answer: "C"
-            },
-            {
-                question: "Which of the following promotes economic development?",
-                options: ["Unemployment", "Corruption", "Investment", "Inflation"],
-                answer: "C"
-            },
-            {
-                question: "Agriculture supplies raw materials to the",
-                options: ["primary sector", "tertiary sector", "secondary sector", "financial sector"],
-                answer: "C"
-            },
-            {
-                question: "Mining belongs to which sector of the economy?",
-                options: ["Tertiary", "Secondary", "Primary", "Commercial"],
-                answer: "C"
-            },
-            {
-                question: "An increase in money supply without increase in goods leads to",
-                options: ["deflation", "inflation", "depression", "recession"],
+                question: "Shares represent",
+                options: ["Loans", "Ownership in a company", "Taxes", "Profits"],
                 answer: "B"
             },
             {
-                question: "The Nigerian economy depends largely on",
-                options: ["tourism", "manufacturing", "oil and agriculture", "fishing only"],
+                question: "A debenture is",
+                options: ["A long-term loan to a company", "Government tax", "Gift", "Salary"],
+                answer: "A"
+            },
+            {
+                question: "A bond is",
+                options: ["Certificate issued for borrowing money", "Insurance policy", "Trade licence", "Tax receipt"],
+                answer: "A"
+            },
+            {
+                question: "Loans are",
+                options: ["Donations", "Borrowed funds to be repaid with interest", "Taxes", "Profits"],
+                answer: "B"
+            },
+            {
+                question: "A firm is",
+                options: ["A business organization producing goods or services", "A school", "A farm", "A government office"],
+                answer: "A"
+            },
+            {
+                question: "An industry refers to",
+                options: ["One worker", "A group of firms producing similar products", "One shop", "One farm"],
+                answer: "B"
+            },
+            {
+                question: "Firms combine factors of production to",
+                options: ["Produce goods and services", "Sleep", "Relax", "Play"],
+                answer: "A"
+            },
+            {
+                question: "Examples of manufacturing industries include",
+                options: ["Textile industry", "Farming", "Mining", "Fishing"],
+                answer: "A"
+            },
+            {
+                question: "Agriculture belongs to the",
+                options: ["Primary sector", "Secondary sector", "Tertiary sector", "Commercial sector"],
+                answer: "A"
+            },
+            {
+                question: "Mining also belongs to the",
+                options: ["Primary sector", "Secondary sector", "Tertiary sector", "Service sector"],
+                answer: "A"
+            },
+            {
+                question: "Manufacturing belongs to the",
+                options: ["Primary sector", "Secondary sector", "Tertiary sector", "Agricultural sector"],
+                answer: "B"
+            },
+            {
+                question: "Services like banking belong to the",
+                options: ["Primary sector", "Secondary sector", "Tertiary sector", "Industrial sector"],
                 answer: "C"
+            },
+            {
+                question: "One problem of Nigerian agriculture is",
+                options: ["Good soil", "Lack of modern equipment", "Adequate rainfall", "Good transport"],
+                answer: "B"
+            },
+            {
+                question: "Mining contributes to the economy by",
+                options: ["Generating revenue", "Causing unemployment", "Reducing income", "Destroying trade"],
+                answer: "A"
+            },
+            {
+                question: "Financial institutions help to",
+                options: ["Mobilize savings", "Destroy money", "Reduce trade", "Produce crops"],
+                answer: "A"
+            },
+            {
+                question: "Money helps trade through",
+                options: ["Barter system", "Exchange of goods and services", "Farming", "Mining"],
+                answer: "B"
+            },
+            {
+                question: "Barter system means",
+                options: ["Exchange of goods for goods", "Money exchange", "Bank payment", "Credit sale"],
+                answer: "A"
+            },
+            {
+                question: "One disadvantage of barter system is",
+                options: ["Easy trade", "Double coincidence of wants", "Quick payment", "Large trade"],
+                answer: "B"
+            },
+            {
+                question: "Wholesalers help stabilize prices by",
+                options: ["Storing goods", "Selling cheaply", "Buying little", "Transporting goods"],
+                answer: "A"
+            },
+            {
+                question: "One function of retailers is",
+                options: ["Manufacturing", "Providing market information", "Mining", "Farming"],
+                answer: "B"
+            },
+            {
+                question: "Shares may be bought by",
+                options: ["Investors", "Farmers only", "Teachers only", "Government only"],
+                answer: "A"
+            },
+            {
+                question: "Debenture holders receive",
+                options: ["Dividend", "Interest", "Salary", "Profit"],
+                answer: "B"
+            },
+            {
+                question: "Firms may be classified according to",
+                options: ["Size and ownership", "Height", "Colour", "Age"],
+                answer: "A"
+            },
+            {
+                question: "Small scale firms usually have",
+                options: ["Small capital", "Large capital", "Government ownership", "Many branches"],
+                answer: "A"
+            },
+            {
+                question: "Large scale firms usually have",
+                options: ["Small capital", "Large capital", "No workers", "No production"],
+                answer: "B"
+            },
+            {
+                question: "One role of financial institutions is",
+                options: ["Granting loans", "Farming", "Mining", "Manufacturing"],
+                answer: "A"
+            },
+            {
+                question: "Money makes it easier to",
+                options: ["Fight", "Buy and sell goods", "Sleep", "Walk"],
+                answer: "B"
+            },
+            {
+                question: "Distribution helps",
+                options: ["Goods reach consumers", "Stop production", "Stop trade", "End markets"],
+                answer: "A"
+            },
+            {
+                question: "One advantage of direct distribution is",
+                options: ["Lower cost", "Higher cost", "More middlemen", "Slow movement"],
+                answer: "A"
+            },
+            {
+                question: "Nigeria earns foreign exchange mainly from",
+                options: ["Crude oil exports", "Rice production", "Textile production", "Fishing"],
+                answer: "A"
+            },
+            {
+                question: "A firm aims mainly to",
+                options: ["Make profit", "Lose money", "Pay taxes", "Help government"],
+                answer: "A"
+            },
+            {
+                question: "Industries help economic development by",
+                options: ["Creating employment", "Reducing jobs", "Causing poverty", "Stopping trade"],
+                answer: "A"
+            },
+            {
+                question: "Agricultural products used as raw materials include",
+                options: ["Cotton", "Iron", "Gold", "Coal"],
+                answer: "A"
+            },
+            {
+                question: "Financial institutions encourage",
+                options: ["Savings and investment", "Waste", "Laziness", "Crime"],
+                answer: "A"
             }
         ];
 
@@ -1065,14 +1151,14 @@
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 40 * 60; // 40 minutes in seconds
+        let timeLeft = 30 * 60; // 30 minutes in seconds
         let questions = [];
 
-        // Background images for rotation (economic theme)
+        // Background images for rotation
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80',
-            'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+            'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80',
+            'https://images.unsplash.com/photo-1535320903710-d993d3d77b29?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
         ];
 
         // DOM elements
@@ -1090,31 +1176,23 @@
             currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
             document.body.style.backgroundImage = `url('${backgroundImages[currentBgIndex]}')`;
         }
-        
-        // Rotate background every 10 seconds
         setInterval(rotateBackground, 10000);
 
-        // Shuffle questions array
+        // Shuffle questions
         function shuffleQuestions() {
-            // Create a copy of the original questions
             questions = [...originalQuestions];
-            
-            // Shuffle the questions using Fisher-Yates algorithm
             for (let i = questions.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [questions[i], questions[j]] = [questions[j], questions[i]];
             }
-            
-            // Initialize userAnswers array with null values
             userAnswers = Array(questions.length).fill(null);
         }
 
         // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 40 * 60; // Reset to 40 minutes
+            timeLeft = 30 * 60;
             
-            // Show timer container and submit button
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
             
@@ -1133,10 +1211,9 @@
                     calculateScore();
                 }
                 
-                // Warning colors
-                if (timeLeft <= 600) { // 10 minutes left
+                if (timeLeft <= 300) { // 5 minutes left
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
-                } else if (timeLeft <= 1200) { // 20 minutes left
+                } else if (timeLeft <= 600) { // 10 minutes left
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
                 }
             }, 1000);
@@ -1144,25 +1221,19 @@
 
         // Navigation functions
         function showSection(sectionName) {
-            // Hide all sections
             Object.values(sections).forEach(section => {
                 section.classList.remove('active');
             });
-            
-            // Show the requested section
             sections[sectionName].classList.add('active');
             
-            // Hide timer and submit button if not in exam section
             if (sectionName !== 'exam') {
                 document.getElementById('timer-container').style.display = 'none';
                 document.getElementById('submit-container').style.display = 'none';
             }
-            
-            // Scroll to top
             window.scrollTo(0, 0);
         }
 
-        // Initialize event listeners
+        // Event listeners
         document.getElementById('start-exam-btn').addEventListener('click', () => {
             showSection('studentInfo');
         });
@@ -1172,7 +1243,6 @@
         });
 
         document.getElementById('continue-to-instructions').addEventListener('click', () => {
-            // Validate form
             const firstName = document.getElementById('first-name').value.trim();
             const middleName = document.getElementById('middle-name').value.trim();
             const lastName = document.getElementById('last-name').value.trim();
@@ -1211,23 +1281,15 @@
         });
 
         document.getElementById('begin-test').addEventListener('click', () => {
-            // Initialize exam with shuffled questions
             shuffleQuestions();
             currentQuestionIndex = 0;
             
-            // Display student name
             document.getElementById('display-student-name').textContent = studentName;
             document.getElementById('results-student-name').textContent = studentName;
             
-            // Create question navigation grid
             createQuestionGrid();
-            
-            // Load first question
             loadQuestion(currentQuestionIndex);
-            
-            // Start timer
             startTimer();
-            
             showSection('exam');
         });
 
@@ -1250,7 +1312,7 @@
             
             if (confirmed) {
                 clearInterval(timerInterval);
-                showLoading();
+                document.getElementById('loading').style.display = 'block';
                 setTimeout(() => {
                     calculateScore();
                 }, 1500);
@@ -1259,22 +1321,12 @@
 
         document.getElementById('restart-exam').addEventListener('click', () => {
             clearInterval(timerInterval);
-            // Reset form
             document.getElementById('first-name').value = '';
             document.getElementById('middle-name').value = '';
             document.getElementById('last-name').value = '';
             showSection('welcome');
         });
 
-        function showLoading() {
-            document.getElementById('loading').style.display = 'block';
-        }
-
-        function hideLoading() {
-            document.getElementById('loading').style.display = 'none';
-        }
-
-        // Create question navigation grid
         function createQuestionGrid() {
             const questionGrid = document.getElementById('question-grid');
             questionGrid.innerHTML = '';
@@ -1285,12 +1337,10 @@
                 questionNumber.textContent = i + 1;
                 questionNumber.dataset.index = i;
                 
-                // Mark if answered
                 if (userAnswers[i] !== null) {
                     questionNumber.classList.add('answered');
                 }
                 
-                // Mark current question
                 if (i === currentQuestionIndex) {
                     questionNumber.classList.add('current');
                 }
@@ -1304,7 +1354,6 @@
             }
         }
 
-        // Update question navigation grid
         function updateQuestionGrid() {
             const questionNumbers = document.querySelectorAll('.question-number');
             
@@ -1322,21 +1371,15 @@
             });
         }
 
-        // Exam functionality
         function loadQuestion(index) {
             const question = questions[index];
             
-            // Update question counter
             document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
-            
-            // Set question text
             document.getElementById('question-text').textContent = question.question;
             
-            // Clear options container
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
             
-            // Create option elements
             question.options.forEach((option, optionIndex) => {
                 const optionDiv = document.createElement('div');
                 optionDiv.className = 'option';
@@ -1347,9 +1390,8 @@
                 radio.type = 'radio';
                 radio.name = `question-${index}`;
                 radio.id = optionId;
-                radio.value = String.fromCharCode(65 + optionIndex); // A, B, C, D
+                radio.value = String.fromCharCode(65 + optionIndex);
                 
-                // Check if this option was previously selected
                 if (userAnswers[index] === radio.value) {
                     radio.checked = true;
                 }
@@ -1365,20 +1407,17 @@
                 
                 optionDiv.appendChild(radio);
                 optionDiv.appendChild(label);
-                
                 optionsContainer.appendChild(optionDiv);
             });
             
-            // Update navigation buttons
             document.getElementById('prev-question').disabled = index === 0;
             document.getElementById('next-question').disabled = index === questions.length - 1;
             
-            // Update question grid
             updateQuestionGrid();
         }
 
         function calculateScore() {
-            hideLoading();
+            document.getElementById('loading').style.display = 'none';
             let score = 0;
             
             for (let i = 0; i < questions.length; i++) {
@@ -1387,16 +1426,11 @@
                 }
             }
             
-            // Submit to Google Form WITHOUT showing score to student
-            submitToGoogleForm(studentName, "SS1 Economics - Second Term", `${score}/${questions.length}`);
-            
-            // Show submission status
+            submitToGoogleForm(studentName, "SS1 Economics - Second Term 2025/2026", `${score}/${questions.length}`);
             document.getElementById('submission-status').style.display = 'block';
-            
             showSection('results');
         }
 
-        // Google Form submission function
         function submitToGoogleForm(fullName, subject, score) {
             const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
             const formData = new FormData();
@@ -1405,21 +1439,14 @@
             formData.append("entry.1558221900", subject);
             formData.append("entry.2022160530", score);
 
-            // Use no-cors so browser will not block cross-origin form POST
             fetch(formURL, {
                 method: "POST",
                 mode: "no-cors",
                 body: formData
-            }).then(() => {
-                console.log("Results submitted successfully");
-            }).catch(err => {
-                console.warn("Form submission (no-cors) likely blocked for debug; data still sent.");
-            });
+            }).catch(err => console.warn("Form submission:", err));
         }
 
-        // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
-            // Focus on first input
             document.getElementById('first-name').focus();
         });
     </script>
