@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Physics CBT Exam</title>
+    <title>The Trustworthy College - Physics SSS1 Examination</title>
     <style>
         /* Reset and base styles */
         * {
@@ -14,8 +14,8 @@
         }
         
         body {
-            background-color: #1a0f0f;
-            color: #f5e9dd;
+            background-color: #0a1a2a;
+            color: #e0f0f0;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
@@ -29,7 +29,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -38,23 +38,23 @@
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container with physics color theme (red/energy) */
+        /* Container with physics theme (blue/cyan - scientific) */
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #2a0f0f 0%, #3a1a1a 100%);
-            box-shadow: 0 15px 40px rgba(180, 60, 60, 0.25);
+            background: linear-gradient(135deg, #0a2a3a 0%, #1a3a4a 100%);
+            box-shadow: 0 15px 40px rgba(52, 152, 219, 0.25);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #e74c3c;
+            border: 3px solid #3498db;
             backdrop-filter: blur(5px);
         }
         
-        /* Red decorative border effect */
+        /* Blue decorative border */
         .container::before {
             content: '';
             position: absolute;
@@ -62,17 +62,17 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #e74c3c, #c0392b, #e74c3c);
+            background: linear-gradient(90deg, #3498db, #1abc9c, #3498db);
             z-index: 2;
         }
         
-        /* Header with physics theme */
+        /* Header */
         .header {
             text-align: center;
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #e74c3c;
+            border-bottom: 2px solid #3498db;
         }
         
         .header::after {
@@ -83,7 +83,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #e74c3c, transparent);
+            background: linear-gradient(to right, transparent, #3498db, transparent);
         }
         
         .logo {
@@ -92,7 +92,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #e74c3c;
+            border: 3px solid #3498db;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -103,7 +103,7 @@
         }
         
         .subject-title {
-            color: #e74c3c;
+            color: #5dade2;
             font-size: 2.4rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
@@ -111,9 +111,20 @@
         }
         
         .exam-info {
-            color: #f1948a;
+            color: #a3e4d7;
             font-size: 1.1rem;
             margin-top: 5px;
+        }
+        
+        .term-info {
+            background: linear-gradient(135deg, #3498db20, #1abc9c40);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #5dade2;
+            border: 1px solid #3498db60;
         }
         
         /* Sections */
@@ -132,20 +143,20 @@
             display: block;
         }
         
-        /* Welcome message with physics theme */
+        /* Welcome message */
         .welcome-message {
-            background: linear-gradient(135deg, rgba(231, 76, 60, 0.1) 0%, rgba(58, 26, 26, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(26, 58, 74, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #f5e9dd;
-            border-left: 5px solid #e74c3c;
-            border-right: 1px solid rgba(231, 76, 60, 0.3);
-            border-top: 1px solid rgba(231, 76, 60, 0.2);
-            border-bottom: 1px solid rgba(231, 76, 60, 0.3);
+            color: #e0f0f0;
+            border-left: 5px solid #3498db;
+            border-right: 1px solid rgba(52, 152, 219, 0.3);
+            border-top: 1px solid rgba(52, 152, 219, 0.2);
+            border-bottom: 1px solid rgba(52, 152, 219, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
@@ -160,10 +171,10 @@
             opacity: 0.1;
         }
         
-        /* Buttons with red physics theme */
+        /* Buttons */
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             color: #ffffff;
             border: none;
             padding: 15px 32px;
@@ -174,8 +185,8 @@
             margin: 12px 8px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(231, 76, 60, 0.5);
-            box-shadow: 0 6px 15px rgba(231, 76, 60, 0.3);
+            border: 2px solid rgba(52, 152, 219, 0.5);
+            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -193,49 +204,24 @@
         }
         
         .btn:hover {
-            background: linear-gradient(135deg, #ff6b6b 0%, #e74c3c 100%);
+            background: linear-gradient(135deg, #5dade2 0%, #3498db 100%);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(231, 76, 60, 0.5);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.5);
             color: #ffffff;
         }
         
-        .btn:hover::after {
-            left: 100%;
-        }
-        
-        .btn:focus {
-            outline: 2px solid #ff6b6b;
-            outline-offset: 3px;
-        }
-        
         .btn-secondary {
-            background: linear-gradient(135deg, #7e5d5d 0%, #6e4a4a 100%);
-            color: #f5e9dd;
-            border-color: #8c7f7f;
+            background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+            border-color: #1abc9c;
         }
         
         .btn-secondary:hover {
-            background: linear-gradient(135deg, #8c7f7f 0%, #7e5d5d 100%);
+            background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%);
         }
         
         .btn-success {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            color: white;
-            border-color: #229954;
-        }
-        
-        .btn-success:hover {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
-        }
-        
-        .btn-danger {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            color: white;
-            border-color: #922b21;
-        }
-        
-        .btn-danger:hover {
-            background: linear-gradient(135deg, #ff6b6b 0%, #e74c3c 100%);
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            border-color: #e67e22;
         }
         
         .btn-container {
@@ -252,7 +238,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #e74c3c;
+            color: #5dade2;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -260,20 +246,20 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(42, 15, 15, 0.7);
-            border: 2px solid #7e5d5d;
+            background: rgba(10, 42, 58, 0.7);
+            border: 2px solid #1abc9c;
             border-radius: 10px;
             font-size: 1.1rem;
-            color: #f5e9dd;
+            color: #e0f0f0;
             transition: all 0.3s;
             font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #e74c3c;
+            border-color: #3498db;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.3);
-            background: rgba(42, 15, 15, 0.9);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+            background: rgba(10, 42, 58, 0.9);
         }
         
         .error-message {
@@ -284,20 +270,20 @@
             font-weight: 500;
         }
         
-        /* Instructions with physics theme */
+        /* Instructions */
         .instructions {
-            background: linear-gradient(135deg, rgba(126, 93, 93, 0.1) 0%, rgba(58, 26, 26, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(26, 188, 156, 0.1) 0%, rgba(26, 58, 74, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid #e74c3c;
-            border: 1px solid rgba(231, 76, 60, 0.2);
+            border-left: 5px solid #1abc9c;
+            border: 1px solid rgba(26, 188, 156, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
         
         .instructions::before {
-            content: '🔬';
+            content: '🔋';
             position: absolute;
             top: 20px;
             right: 20px;
@@ -307,7 +293,7 @@
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #e74c3c;
+            color: #1abc9c;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -320,7 +306,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #e74c3c;
+            background: #1abc9c;
             border-radius: 2px;
         }
         
@@ -337,7 +323,7 @@
         
         .instructions li::before {
             content: '•';
-            color: #e74c3c;
+            color: #1abc9c;
             font-size: 1.5rem;
             position: absolute;
             left: -20px;
@@ -348,19 +334,19 @@
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(231, 76, 60, 0.3);
+            border-bottom: 2px solid rgba(52, 152, 219, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #e74c3c;
+            color: #5dade2;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(231, 76, 60, 0.1) 0%, rgba(126, 93, 93, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(26, 188, 156, 0.2) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(231, 76, 60, 0.3);
+            border: 1px solid rgba(52, 152, 219, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -371,31 +357,31 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(42, 15, 15, 0.5);
+            background: rgba(10, 42, 58, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(231, 76, 60, 0.2);
+            border: 1px solid rgba(52, 152, 219, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #e74c3c;
+            color: #5dade2;
             font-weight: 600;
             padding: 10px 20px;
-            background: rgba(231, 76, 60, 0.1);
+            background: rgba(52, 152, 219, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(231, 76, 60, 0.3);
+            border: 1px solid rgba(52, 152, 219, 0.3);
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
             display: none;
-            border: 2px solid rgba(231, 76, 60, 0.5);
+            border: 2px solid rgba(52, 152, 219, 0.5);
             font-family: 'Courier New', monospace;
         }
         
@@ -405,10 +391,10 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(42, 15, 15, 0.4);
+            background: rgba(10, 42, 58, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(231, 76, 60, 0.2);
+            border: 1px solid rgba(52, 152, 219, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -416,12 +402,12 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #e74c3c;
+            color: #5dade2;
             line-height: 1.6;
             padding: 20px;
-            background: rgba(126, 93, 93, 0.1);
+            background: rgba(26, 188, 156, 0.1);
             border-radius: 10px;
-            border-left: 4px solid #e74c3c;
+            border-left: 4px solid #1abc9c;
         }
         
         .options-container {
@@ -435,8 +421,8 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(58, 26, 26, 0.5);
-            border: 1px solid rgba(126, 93, 93, 0.3);
+            background: rgba(26, 58, 74, 0.5);
+            border: 1px solid rgba(26, 188, 156, 0.3);
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -449,14 +435,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(231, 76, 60, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(231, 76, 60, 0.1);
-            border-color: #e74c3c;
+            background: rgba(52, 152, 219, 0.1);
+            border-color: #3498db;
             transform: translateX(5px);
         }
         
@@ -469,7 +455,7 @@
             width: 22px;
             height: 22px;
             cursor: pointer;
-            accent-color: #e74c3c;
+            accent-color: #3498db;
         }
         
         .option label {
@@ -477,7 +463,7 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
-            color: #f5e9dd;
+            color: #e0f0f0;
             font-size: 1.1rem;
             line-height: 1.5;
         }
@@ -486,12 +472,12 @@
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(231, 76, 60, 0.3);
+            border-top: 2px solid rgba(52, 152, 219, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #e74c3c;
+            color: #5dade2;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -508,7 +494,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: #e74c3c;
+            background: #1abc9c;
             border-radius: 2px;
         }
         
@@ -525,34 +511,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(126, 93, 93, 0.3) 0%, rgba(103, 70, 70, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(26, 188, 156, 0.3) 0%, rgba(10, 42, 58, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(231, 76, 60, 0.3);
-            color: #f5e9dd;
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            color: #e0f0f0;
             font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background: linear-gradient(135deg, rgba(231, 76, 60, 0.3) 0%, rgba(192, 57, 43, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.3) 0%, rgba(41, 128, 185, 0.5) 100%);
             transform: scale(1.1);
-            border-color: #e74c3c;
+            border-color: #3498db;
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             color: #ffffff;
-            border-color: #ff6b6b;
-            box-shadow: 0 4px 10px rgba(231, 76, 60, 0.4);
+            border-color: #5dade2;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
             transform: scale(1.1);
         }
         
         .question-number.answered {
-            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
             color: white;
-            border-color: #2ecc71;
+            border-color: #f1c40f;
         }
         
         .navigation-buttons {
@@ -561,13 +547,13 @@
             margin-top: 25px;
         }
         
-        /* Results section - NO SCORE DISPLAY */
+        /* Results section */
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(42, 15, 15, 0.8) 0%, rgba(58, 26, 26, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(10, 42, 58, 0.8) 0%, rgba(26, 58, 74, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #e74c3c;
+            border: 2px solid #3498db;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
@@ -583,7 +569,7 @@
         }
         
         .results-container h2 {
-            color: #e74c3c;
+            color: #5dade2;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -596,7 +582,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #f1948a;
+            color: #a3e4d7;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -604,22 +590,22 @@
         .feedback {
             font-size: 1.3rem;
             margin: 25px 0;
-            color: #f5e9dd;
+            color: #e0f0f0;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(231, 76, 60, 0.1);
+            background: rgba(52, 152, 219, 0.1);
             border-radius: 12px;
-            border: 1px solid rgba(231, 76, 60, 0.3);
+            border: 1px solid rgba(52, 152, 219, 0.3);
         }
         
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(39, 174, 96, 0.2) 0%, rgba(46, 204, 113, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(241, 196, 15, 0.2) 0%, rgba(243, 156, 18, 0.3) 100%);
             border-radius: 12px;
-            color: #2ecc71;
+            color: #f1c40f;
             font-size: 1.2rem;
-            border: 1px solid rgba(46, 204, 113, 0.5);
+            border: 1px solid rgba(241, 196, 15, 0.5);
         }
         
         /* Responsive */
@@ -682,13 +668,11 @@
             }
         }
         
-        /* Back to Home button */
         .back-home {
             margin-top: 20px;
             text-align: center;
         }
         
-        /* Loading animation */
         .loading {
             display: none;
             text-align: center;
@@ -696,8 +680,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(231, 76, 60, 0.3);
-            border-top: 4px solid #e74c3c;
+            border: 4px solid rgba(52, 152, 219, 0.3);
+            border-top: 4px solid #3498db;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -713,18 +697,19 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header with logo -->
+        <!-- Header -->
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title">SS1 PHYSICS EXAMINATION</h1>
-            <div class="exam-info">Heat, Temperature & Electricity | 40 Questions | 45 Minutes</div>
+            <h1 class="subject-title">SSS1 PHYSICS EXAMINATION</h1>
+            <div class="exam-info">Second Term | 2025/2026 Session</div>
+            <div class="term-info">40 Questions | 30 Minutes</div>
         </div>
         
         <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Physics Examination. Demonstrate your understanding of heat, temperature, and electrical principles. Success comes from analytical thinking and scientific reasoning. Best of luck."
+                "Welcome to The Trustworthy College Physics Examination. This test covers Heat & Temperature, Heat Transfer, Temperature Scales, Current, Voltage, and Ohm's Law. Demonstrate your understanding of physical principles and their applications. Best of luck."
             </div>
             <div class="btn-container">
                 <button id="start-exam-btn" class="btn">Start Examination</button>
@@ -769,16 +754,17 @@
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This examination consists of 40 multiple-choice questions on Physics topics.</li>
-                    <li>You have 45 minutes to complete this examination.</li>
+                    <li>This examination consists of 40 multiple-choice questions covering Physics topics.</li>
+                    <li>Topics include: Heat & Temperature, Heat Transfer, Temperature Scales, Current, Voltage, and Ohm's Law.</li>
+                    <li>You have 30 minutes to complete this examination.</li>
                     <li>Answer all questions to the best of your ability.</li>
                     <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
-                    <li>Answered questions will be marked with green in the question grid.</li>
+                    <li>Answered questions will be marked with orange in the question grid.</li>
                     <li>Once you submit your answers, you cannot change them.</li>
                     <li>Ensure you have a stable internet connection throughout the examination.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li>Demonstrate your understanding of heat, temperature, and electrical concepts.</li>
+                    <li>This is the Second Term Examination for the 2025/2026 Academic Session.</li>
                 </ul>
             </div>
             
@@ -795,7 +781,7 @@
                 <div class="exam-controls">
                     <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">45:00</span>
+                        Time Left: <span id="timer">30:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
                         <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
@@ -811,7 +797,6 @@
                 </div>
             </div>
             
-            <!-- Question navigation grid after question content -->
             <div class="question-navigation">
                 <h3>Question Navigation</h3>
                 <div class="question-grid" id="question-grid">
@@ -830,12 +815,12 @@
             </div>
         </section>
         
-        <!-- Results Section - NO SCORE DISPLAY -->
+        <!-- Results Section -->
         <section id="results-section" class="section">
             <div class="results-container">
                 <h2>Examination Completed</h2>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SS1 Physics - Heat, Temperature & Electricity</div>
+                <div class="subject" id="results-subject">SSS1 Physics - Second Term 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
                     Thank you for completing the Physics examination. Your results have been submitted successfully to the examination board.
@@ -856,211 +841,216 @@
     </div>
 
     <script>
-        // SUBJECT: SS1 PHYSICS - Heat, Temperature & Electricity
+        // SSS1 PHYSICS - SECOND TERM 2025/2026
         const originalQuestions = [
-            // Heat and Temperature (Q1-10)
+            // Heat and Temperature (Questions 1-8)
             {
-                question: "Heat is a form of",
-                options: ["Matter", "Energy", "Force", "Light"],
+                question: "Heat is defined as",
+                options: ["energy stored in a body", "energy transferred due to temperature difference", "temperature of a body", "motion of molecules"],
                 answer: "B"
             },
             {
-                question: "The SI unit of temperature is",
-                options: ["Celsius", "Fahrenheit", "Kelvin", "Joule"],
+                question: "The SI unit of heat energy is",
+                options: ["Joule", "Watt", "Kelvin", "Newton"],
+                answer: "A"
+            },
+            {
+                question: "Temperature is a measure of",
+                options: ["heat in a body", "mass of molecules", "average kinetic energy of molecules", "density of molecules"],
                 answer: "C"
             },
             {
                 question: "Which instrument is used to measure temperature?",
-                options: ["Barometer", "Thermometer", "Ammeter", "Voltmeter"],
+                options: ["Hygrometer", "Thermometer", "Ammeter", "Voltmeter"],
                 answer: "B"
             },
             {
-                question: "Heat always flows from",
-                options: ["Cold to hot", "Hot to cold", "High pressure to low pressure", "Solid to liquid"],
+                question: "The SI unit of temperature is",
+                options: ["Celsius", "Kelvin", "Fahrenheit", "Joule"],
                 answer: "B"
             },
             {
-                question: "Which of the following has the highest temperature?",
-                options: ["Ice at 0°C", "Boiling water at 100°C", "Room air", "Refrigerator air"],
+                question: "Absolute zero temperature is",
+                options: ["0°C", "−273°C", "−100°C", "273°C"],
                 answer: "B"
             },
             {
-                question: "Temperature tells us how",
-                options: ["Heavy an object is", "Hot or cold an object is", "Fast heat moves", "Big an object is"],
+                question: "Which of the following expands most when heated?",
+                options: ["Solid", "Liquid", "Gas", "All expand equally"],
+                answer: "C"
+            },
+            {
+                question: "The process by which a solid changes directly into gas is called",
+                options: ["evaporation", "sublimation", "condensation", "melting"],
+                answer: "B"
+            },
+            
+            // Heat Transfer (Questions 9-16)
+            {
+                question: "Heat transfer through solids mainly occurs by",
+                options: ["conduction", "convection", "radiation", "evaporation"],
+                answer: "A"
+            },
+            {
+                question: "Heat transfer in liquids and gases is mainly by",
+                options: ["conduction", "convection", "radiation", "insulation"],
                 answer: "B"
             },
             {
-                question: "Which unit is NOT used for temperature?",
-                options: ["°C", "K", "°F", "J"],
+                question: "Heat transfer through electromagnetic waves is called",
+                options: ["conduction", "convection", "radiation", "diffusion"],
+                answer: "C"
+            },
+            {
+                question: "Which material is the best conductor of heat?",
+                options: ["Wood", "Plastic", "Copper", "Rubber"],
+                answer: "C"
+            },
+            {
+                question: "The movement of warm fluid upward and cold fluid downward is called",
+                options: ["conduction current", "convection current", "radiation current", "heat flow"],
+                answer: "B"
+            },
+            {
+                question: "Which of the following is a poor conductor of heat?",
+                options: ["Aluminium", "Iron", "Glass", "Copper"],
+                answer: "C"
+            },
+            {
+                question: "Land breeze occurs during",
+                options: ["daytime", "nighttime", "afternoon", "morning"],
+                answer: "B"
+            },
+            {
+                question: "The Sun's heat reaches Earth mainly by",
+                options: ["conduction", "convection", "radiation", "diffusion"],
+                answer: "C"
+            },
+            
+            // Temperature Scales (Questions 17-24)
+            {
+                question: "The freezing point of water on the Celsius scale is",
+                options: ["0°C", "32°C", "100°C", "273°C"],
+                answer: "A"
+            },
+            {
+                question: "The boiling point of water on the Celsius scale is",
+                options: ["50°C", "100°C", "212°C", "373°C"],
+                answer: "B"
+            },
+            {
+                question: "The freezing point of water on the Fahrenheit scale is",
+                options: ["0°F", "32°F", "100°F", "212°F"],
+                answer: "B"
+            },
+            {
+                question: "The boiling point of water on the Fahrenheit scale is",
+                options: ["100°F", "180°F", "212°F", "373°F"],
+                answer: "C"
+            },
+            {
+                question: "Normal human body temperature is approximately",
+                options: ["35°C", "37°C", "40°C", "42°C"],
+                answer: "B"
+            },
+            {
+                question: "The relationship between Celsius and Kelvin scales is",
+                options: ["K = °C − 273", "K = °C + 273", "K = °C × 273", "K = °C ÷ 273"],
+                answer: "B"
+            },
+            {
+                question: "The lower fixed point of a thermometer is",
+                options: ["boiling point of water", "freezing point of water", "melting point of ice", "both B and C"],
                 answer: "D"
             },
             {
-                question: "When heat is added to most objects, they",
-                options: ["Shrink", "Freeze", "Expand", "Break"],
-                answer: "C"
-            },
-            {
-                question: "Two objects in thermal equilibrium have the same",
-                options: ["Mass", "Shape", "Temperature", "Volume"],
-                answer: "C"
-            },
-            {
-                question: "Heat can be measured in",
-                options: ["Kelvin", "Joules", "Amperes", "Volts"],
+                question: "The upper fixed point of a thermometer is",
+                options: ["freezing point of water", "boiling point of water", "melting point of ice", "room temperature"],
                 answer: "B"
             },
-            // Modes of Heat Transfer (Q11-20)
-            {
-                question: "Heat transfer through solids is mainly by",
-                options: ["Radiation", "Convection", "Conduction", "Reflection"],
-                answer: "C"
-            },
-            {
-                question: "Convection occurs mainly in",
-                options: ["Solids", "Liquids and gases", "Metals only", "Vacuum"],
-                answer: "B"
-            },
-            {
-                question: "Heat transfer that does not need a medium is",
-                options: ["Conduction", "Convection", "Radiation", "Evaporation"],
-                answer: "C"
-            },
-            {
-                question: "The Sun heats the Earth mainly by",
-                options: ["Conduction", "Convection", "Radiation", "Insulation"],
-                answer: "C"
-            },
-            {
-                question: "Which is a good conductor of heat?",
-                options: ["Wood", "Plastic", "Rubber", "Copper"],
-                answer: "D"
-            },
-            {
-                question: "Why are cooking pots made of metal?",
-                options: ["Metals are cheap", "Metals are light", "Metals conduct heat well", "Metals look shiny"],
-                answer: "C"
-            },
-            {
-                question: "Hot air rises because it is",
-                options: ["Heavier", "Colder", "Less dense", "More dense"],
-                answer: "C"
-            },
-            {
-                question: "Woolen clothes keep us warm because they",
-                options: ["Produce heat", "Trap air", "Reflect light", "Absorb water"],
-                answer: "B"
-            },
-            {
-                question: "Heat transfer in liquids happens by",
-                options: ["Radiation", "Conduction only", "Convection", "Reflection"],
-                answer: "C"
-            },
-            {
-                question: "A shiny surface reduces heat loss by",
-                options: ["Conduction", "Convection", "Radiation", "Expansion"],
-                answer: "C"
-            },
-            // Electricity: Current, Voltage, Ohm's Law (Q21-35)
+            
+            // Current and Voltage (Questions 25-32)
             {
                 question: "Electric current is the flow of",
-                options: ["Atoms", "Neutrons", "Charges", "Protons only"],
+                options: ["atoms", "protons", "electrons", "neutrons"],
                 answer: "C"
             },
             {
                 question: "The SI unit of electric current is",
-                options: ["Volt", "Ohm", "Ampere", "Watt"],
-                answer: "C"
-            },
-            {
-                question: "Which instrument measures electric current?",
-                options: ["Voltmeter", "Ammeter", "Thermometer", "Barometer"],
+                options: ["Volt", "Ampere", "Ohm", "Coulomb"],
                 answer: "B"
             },
             {
-                question: "Voltage is measured in",
-                options: ["Amperes", "Joules", "Ohms", "Volts"],
-                answer: "D"
-            },
-            {
-                question: "Voltage provides the",
-                options: ["Resistance", "Heat", "Push for current", "Wire"],
-                answer: "C"
-            },
-            {
-                question: "Resistance is measured in",
-                options: ["Volts", "Amperes", "Watts", "Ohms"],
-                answer: "D"
-            },
-            {
-                question: "Ohm's law states that",
-                options: ["V = I + R", "V = IR", "I = VR", "R = VI"],
+                question: "The instrument used to measure electric current is",
+                options: ["Voltmeter", "Ammeter", "Galvanometer", "Thermometer"],
                 answer: "B"
             },
             {
-                question: "If voltage increases and resistance stays the same, current",
-                options: ["Decreases", "Stops", "Increases", "Remains zero"],
-                answer: "C"
-            },
-            {
-                question: "A higher resistance means",
-                options: ["More current flows", "Less current flows", "Voltage disappears", "Energy is created"],
+                question: "The instrument used to measure potential difference is",
+                options: ["Ammeter", "Voltmeter", "Barometer", "Hydrometer"],
                 answer: "B"
             },
             {
-                question: "Which material is a good conductor of electricity?",
-                options: ["Plastic", "Glass", "Rubber", "Copper"],
-                answer: "D"
-            },
-            {
-                question: "A switch is used to",
-                options: ["Measure current", "Stop or allow current", "Increase voltage", "Reduce resistance"],
-                answer: "B"
-            },
-            {
-                question: "If current is zero, the circuit is",
-                options: ["Closed", "Short", "Open", "Complete"],
-                answer: "C"
-            },
-            {
-                question: "The flow of current needs",
-                options: ["Heat only", "Light", "A complete circuit", "Air"],
-                answer: "C"
-            },
-            {
-                question: "Increasing resistance will cause current to",
-                options: ["Increase", "Stay the same", "Decrease", "Disappear forever"],
-                answer: "C"
-            },
-            {
-                question: "Which of these is an insulator?",
-                options: ["Iron", "Copper", "Aluminium", "Plastic"],
-                answer: "D"
-            },
-            // Temperature Scales (Q36-40)
-            {
-                question: "Water freezes at",
-                options: ["0°C", "100°C", "273°C", "32°C"],
+                question: "The SI unit of potential difference is",
+                options: ["Volt", "Ampere", "Ohm", "Watt"],
                 answer: "A"
             },
             {
-                question: "Water boils at",
-                options: ["0°C", "50°C", "100°C", "273°C"],
-                answer: "C"
+                question: "Potential difference is also called",
+                options: ["electric pressure", "electric force", "electric density", "electric mass"],
+                answer: "A"
             },
             {
-                question: "The Kelvin scale starts at",
-                options: ["Freezing point", "Boiling point", "Absolute zero", "Room temperature"],
-                answer: "C"
+                question: "A device used to control current in a circuit is",
+                options: ["resistor", "capacitor", "diode", "transformer"],
+                answer: "A"
             },
             {
-                question: "0°C is equal to",
-                options: ["0 K", "100 K", "273 K", "373 K"],
-                answer: "C"
+                question: "The opposition to current flow in a conductor is called",
+                options: ["voltage", "resistance", "charge", "power"],
+                answer: "B"
+            },
+            
+            // Ohm's Law (Questions 33-40)
+            {
+                question: "Ohm's law states that",
+                options: ["V ∝ R", "V ∝ I (at constant temperature)", "I ∝ R", "V = I + R"],
+                answer: "B"
             },
             {
-                question: "Which scale is commonly used in science?",
-                options: ["Fahrenheit", "Celsius", "Kelvin", "Rankine"],
-                answer: "C"
+                question: "The formula for Ohm's law is",
+                options: ["V = IR", "I = VR", "R = VI", "V = I/R"],
+                answer: "A"
+            },
+            {
+                question: "The SI unit of resistance is",
+                options: ["Volt", "Ohm", "Ampere", "Joule"],
+                answer: "B"
+            },
+            {
+                question: "If voltage increases while resistance is constant, current will",
+                options: ["decrease", "increase", "remain constant", "become zero"],
+                answer: "B"
+            },
+            {
+                question: "Resistance of a conductor depends on",
+                options: ["length", "cross-sectional area", "material", "all of the above"],
+                answer: "D"
+            },
+            {
+                question: "When resistors are connected in series, total resistance",
+                options: ["decreases", "increases", "becomes zero", "remains unchanged"],
+                answer: "B"
+            },
+            {
+                question: "When resistors are connected in parallel, total resistance",
+                options: ["increases", "decreases", "becomes infinite", "remains constant"],
+                answer: "B"
+            },
+            {
+                question: "The device that provides electrical energy in a circuit is",
+                options: ["battery", "resistor", "switch", "fuse"],
+                answer: "A"
             }
         ];
 
@@ -1069,14 +1059,14 @@
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 45 * 60; // 45 minutes in seconds
+        let timeLeft = 30 * 60; // 30 minutes in seconds
         let questions = [];
 
-        // Background images for rotation (physics theme)
+        // Background images for rotation
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+            'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1581092335871-4c7b4c3d3f3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
         ];
 
         // DOM elements
@@ -1094,31 +1084,23 @@
             currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
             document.body.style.backgroundImage = `url('${backgroundImages[currentBgIndex]}')`;
         }
-        
-        // Rotate background every 10 seconds
         setInterval(rotateBackground, 10000);
 
-        // Shuffle questions array
+        // Shuffle questions
         function shuffleQuestions() {
-            // Create a copy of the original questions
             questions = [...originalQuestions];
-            
-            // Shuffle the questions using Fisher-Yates algorithm
             for (let i = questions.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [questions[i], questions[j]] = [questions[j], questions[i]];
             }
-            
-            // Initialize userAnswers array with null values
             userAnswers = Array(questions.length).fill(null);
         }
 
         // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 45 * 60; // Reset to 45 minutes
+            timeLeft = 30 * 60;
             
-            // Show timer container and submit button
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
             
@@ -1137,10 +1119,9 @@
                     calculateScore();
                 }
                 
-                // Warning colors
-                if (timeLeft <= 600) { // 10 minutes left
+                if (timeLeft <= 300) { // 5 minutes left
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
-                } else if (timeLeft <= 1350) { // 22.5 minutes left
+                } else if (timeLeft <= 600) { // 10 minutes left
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
                 }
             }, 1000);
@@ -1148,25 +1129,19 @@
 
         // Navigation functions
         function showSection(sectionName) {
-            // Hide all sections
             Object.values(sections).forEach(section => {
                 section.classList.remove('active');
             });
-            
-            // Show the requested section
             sections[sectionName].classList.add('active');
             
-            // Hide timer and submit button if not in exam section
             if (sectionName !== 'exam') {
                 document.getElementById('timer-container').style.display = 'none';
                 document.getElementById('submit-container').style.display = 'none';
             }
-            
-            // Scroll to top
             window.scrollTo(0, 0);
         }
 
-        // Initialize event listeners
+        // Event listeners
         document.getElementById('start-exam-btn').addEventListener('click', () => {
             showSection('studentInfo');
         });
@@ -1176,7 +1151,6 @@
         });
 
         document.getElementById('continue-to-instructions').addEventListener('click', () => {
-            // Validate form
             const firstName = document.getElementById('first-name').value.trim();
             const middleName = document.getElementById('middle-name').value.trim();
             const lastName = document.getElementById('last-name').value.trim();
@@ -1215,23 +1189,15 @@
         });
 
         document.getElementById('begin-test').addEventListener('click', () => {
-            // Initialize exam with shuffled questions
             shuffleQuestions();
             currentQuestionIndex = 0;
             
-            // Display student name
             document.getElementById('display-student-name').textContent = studentName;
             document.getElementById('results-student-name').textContent = studentName;
             
-            // Create question navigation grid
             createQuestionGrid();
-            
-            // Load first question
             loadQuestion(currentQuestionIndex);
-            
-            // Start timer
             startTimer();
-            
             showSection('exam');
         });
 
@@ -1254,7 +1220,7 @@
             
             if (confirmed) {
                 clearInterval(timerInterval);
-                showLoading();
+                document.getElementById('loading').style.display = 'block';
                 setTimeout(() => {
                     calculateScore();
                 }, 1500);
@@ -1263,22 +1229,12 @@
 
         document.getElementById('restart-exam').addEventListener('click', () => {
             clearInterval(timerInterval);
-            // Reset form
             document.getElementById('first-name').value = '';
             document.getElementById('middle-name').value = '';
             document.getElementById('last-name').value = '';
             showSection('welcome');
         });
 
-        function showLoading() {
-            document.getElementById('loading').style.display = 'block';
-        }
-
-        function hideLoading() {
-            document.getElementById('loading').style.display = 'none';
-        }
-
-        // Create question navigation grid
         function createQuestionGrid() {
             const questionGrid = document.getElementById('question-grid');
             questionGrid.innerHTML = '';
@@ -1289,12 +1245,10 @@
                 questionNumber.textContent = i + 1;
                 questionNumber.dataset.index = i;
                 
-                // Mark if answered
                 if (userAnswers[i] !== null) {
                     questionNumber.classList.add('answered');
                 }
                 
-                // Mark current question
                 if (i === currentQuestionIndex) {
                     questionNumber.classList.add('current');
                 }
@@ -1308,7 +1262,6 @@
             }
         }
 
-        // Update question navigation grid
         function updateQuestionGrid() {
             const questionNumbers = document.querySelectorAll('.question-number');
             
@@ -1326,21 +1279,15 @@
             });
         }
 
-        // Exam functionality
         function loadQuestion(index) {
             const question = questions[index];
             
-            // Update question counter
             document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
-            
-            // Set question text
             document.getElementById('question-text').textContent = question.question;
             
-            // Clear options container
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
             
-            // Create option elements
             question.options.forEach((option, optionIndex) => {
                 const optionDiv = document.createElement('div');
                 optionDiv.className = 'option';
@@ -1351,9 +1298,8 @@
                 radio.type = 'radio';
                 radio.name = `question-${index}`;
                 radio.id = optionId;
-                radio.value = String.fromCharCode(65 + optionIndex); // A, B, C, D
+                radio.value = String.fromCharCode(65 + optionIndex);
                 
-                // Check if this option was previously selected
                 if (userAnswers[index] === radio.value) {
                     radio.checked = true;
                 }
@@ -1369,20 +1315,17 @@
                 
                 optionDiv.appendChild(radio);
                 optionDiv.appendChild(label);
-                
                 optionsContainer.appendChild(optionDiv);
             });
             
-            // Update navigation buttons
             document.getElementById('prev-question').disabled = index === 0;
             document.getElementById('next-question').disabled = index === questions.length - 1;
             
-            // Update question grid
             updateQuestionGrid();
         }
 
         function calculateScore() {
-            hideLoading();
+            document.getElementById('loading').style.display = 'none';
             let score = 0;
             
             for (let i = 0; i < questions.length; i++) {
@@ -1391,39 +1334,27 @@
                 }
             }
             
-            // Submit to Google Form WITHOUT showing score to student
-            submitToGoogleForm(studentName, "SS1 Physics - Heat, Temperature & Electricity", `${score}/${questions.length}`);
-            
-            // Show submission status
+            submitToGoogleForm(studentName, "SSS1 Physics - Second Term 2025/2026", `${score}/${questions.length}`);
             document.getElementById('submission-status').style.display = 'block';
-            
             showSection('results');
         }
 
-        // Google Form submission function
         function submitToGoogleForm(fullName, subject, score) {
             const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
             const formData = new FormData();
             formData.append("entry.862885683", fullName);
-            formData.append("entry.1545021484", "SS1");
+            formData.append("entry.1545021484", "SSS1");
             formData.append("entry.1558221900", subject);
             formData.append("entry.2022160530", score);
 
-            // Use no-cors so browser will not block cross-origin form POST
             fetch(formURL, {
                 method: "POST",
                 mode: "no-cors",
                 body: formData
-            }).then(() => {
-                console.log("Results submitted successfully");
-            }).catch(err => {
-                console.warn("Form submission (no-cors) likely blocked for debug; data still sent.");
-            });
+            }).catch(err => console.warn("Form submission:", err));
         }
 
-        // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
-            // Focus on first input
             document.getElementById('first-name').focus();
         });
     </script>
