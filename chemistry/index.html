@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Chemistry CBT Exam</title>
+    <title>The Trustworthy College - Chemistry SSS1 Examination</title>
     <style>
         /* Reset and base styles */
         * {
@@ -14,8 +14,8 @@
         }
         
         body {
-            background-color: #0a1a2a;
-            color: #e8f4f8;
+            background-color: #0a1a1a;
+            color: #e0f0e0;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
@@ -29,7 +29,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -38,23 +38,23 @@
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container with chemistry color theme (blue/purple) */
+        /* Container with chemistry theme (green/blue - scientific) */
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #1a1f3a 0%, #0a1a2a 100%);
-            box-shadow: 0 15px 40px rgba(33, 150, 243, 0.25);
+            background: linear-gradient(135deg, #0a2a2a 0%, #1a3a3a 100%);
+            box-shadow: 0 15px 40px rgba(46, 204, 113, 0.25);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #2196f3;
+            border: 3px solid #2ecc71;
             backdrop-filter: blur(5px);
         }
         
-        /* Chemistry-themed decorative border effect */
+        /* Green decorative border */
         .container::before {
             content: '';
             position: absolute;
@@ -62,31 +62,17 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #9c27b0, #2196f3, #9c27b0);
+            background: linear-gradient(90deg, #2ecc71, #3498db, #2ecc71);
             z-index: 2;
         }
         
-        /* Molecular structure background pattern */
-        .container::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(156, 39, 176, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 90% 80%, rgba(33, 150, 243, 0.05) 0%, transparent 50%);
-            z-index: -1;
-        }
-        
-        /* Header with chemistry theme */
+        /* Header */
         .header {
             text-align: center;
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #2196f3;
+            border-bottom: 2px solid #2ecc71;
         }
         
         .header::after {
@@ -97,7 +83,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #2196f3, transparent);
+            background: linear-gradient(to right, transparent, #2ecc71, transparent);
         }
         
         .logo {
@@ -106,7 +92,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #9c27b0;
+            border: 3px solid #2ecc71;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -117,7 +103,7 @@
         }
         
         .subject-title {
-            color: #4fc3f7;
+            color: #2ecc71;
             font-size: 2.4rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
@@ -125,9 +111,20 @@
         }
         
         .exam-info {
-            color: #81d4fa;
+            color: #a3e4d7;
             font-size: 1.1rem;
             margin-top: 5px;
+        }
+        
+        .term-info {
+            background: linear-gradient(135deg, #2ecc7120, #3498db40);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #2ecc71;
+            border: 1px solid #2ecc7160;
         }
         
         /* Sections */
@@ -146,27 +143,27 @@
             display: block;
         }
         
-        /* Welcome message with chemistry theme */
+        /* Welcome message */
         .welcome-message {
-            background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(156, 39, 176, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.1) 0%, rgba(26, 58, 58, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #e8f4f8;
-            border-left: 5px solid #2196f3;
-            border-right: 1px solid rgba(33, 150, 243, 0.3);
-            border-top: 1px solid rgba(33, 150, 243, 0.2);
-            border-bottom: 1px solid rgba(33, 150, 243, 0.3);
+            color: #e0f0e0;
+            border-left: 5px solid #2ecc71;
+            border-right: 1px solid rgba(46, 204, 113, 0.3);
+            border-top: 1px solid rgba(46, 204, 113, 0.2);
+            border-bottom: 1px solid rgba(46, 204, 113, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
         }
         
         .welcome-message::before {
-            content: '⚗️';
+            content: '🧪';
             position: absolute;
             top: 20px;
             right: 20px;
@@ -174,24 +171,11 @@
             opacity: 0.1;
         }
         
-        /* Chemical equation animation */
-        .welcome-message::after {
-            content: 'H₂ + O₂ → H₂O';
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-family: 'Courier New', monospace;
-            color: rgba(79, 195, 247, 0.2);
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-        
-        /* Buttons with chemistry theme */
+        /* Buttons */
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
-            color: white;
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: #ffffff;
             border: none;
             padding: 15px 32px;
             font-size: 1.1rem;
@@ -201,8 +185,8 @@
             margin: 12px 8px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(79, 195, 247, 0.5);
-            box-shadow: 0 6px 15px rgba(33, 150, 243, 0.3);
+            border: 2px solid rgba(46, 204, 113, 0.5);
+            box-shadow: 0 6px 15px rgba(46, 204, 113, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -220,49 +204,24 @@
         }
         
         .btn:hover {
-            background: linear-gradient(135deg, #4fc3f7 0%, #2196f3 100%);
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(33, 150, 243, 0.5);
-            color: white;
-        }
-        
-        .btn:hover::after {
-            left: 100%;
-        }
-        
-        .btn:focus {
-            outline: 2px solid #4fc3f7;
-            outline-offset: 3px;
+            box-shadow: 0 10px 25px rgba(46, 204, 113, 0.5);
+            color: #ffffff;
         }
         
         .btn-secondary {
-            background: linear-gradient(135deg, #546e7a 0%, #37474f 100%);
-            color: #e8f4f8;
-            border-color: #78909c;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            border-color: #3498db;
         }
         
         .btn-secondary:hover {
-            background: linear-gradient(135deg, #78909c 0%, #546e7a 100%);
+            background: linear-gradient(135deg, #5dade2 0%, #3498db 100%);
         }
         
         .btn-success {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            color: white;
-            border-color: #229954;
-        }
-        
-        .btn-success:hover {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
-        }
-        
-        .btn-danger {
-            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
-            color: white;
-            border-color: #922b21;
-        }
-        
-        .btn-danger:hover {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            border-color: #e67e22;
         }
         
         .btn-container {
@@ -279,7 +238,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #4fc3f7;
+            color: #2ecc71;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -287,20 +246,20 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(10, 26, 42, 0.7);
-            border: 2px solid #546e7a;
+            background: rgba(10, 42, 42, 0.7);
+            border: 2px solid #16a085;
             border-radius: 10px;
             font-size: 1.1rem;
-            color: #e8f4f8;
+            color: #e0f0e0;
             transition: all 0.3s;
             font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #2196f3;
+            border-color: #2ecc71;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.3);
-            background: rgba(10, 26, 42, 0.9);
+            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.3);
+            background: rgba(10, 42, 42, 0.9);
         }
         
         .error-message {
@@ -311,20 +270,20 @@
             font-weight: 500;
         }
         
-        /* Instructions with chemistry theme */
+        /* Instructions */
         .instructions {
-            background: linear-gradient(135deg, rgba(84, 110, 122, 0.1) 0%, rgba(26, 31, 58, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(26, 58, 58, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid #2196f3;
-            border: 1px solid rgba(33, 150, 243, 0.2);
+            border-left: 5px solid #3498db;
+            border: 1px solid rgba(52, 152, 219, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
         
         .instructions::before {
-            content: '🧪';
+            content: '⚗️';
             position: absolute;
             top: 20px;
             right: 20px;
@@ -334,7 +293,7 @@
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #4fc3f7;
+            color: #3498db;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -347,7 +306,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #2196f3;
+            background: #3498db;
             border-radius: 2px;
         }
         
@@ -364,7 +323,7 @@
         
         .instructions li::before {
             content: '•';
-            color: #2196f3;
+            color: #3498db;
             font-size: 1.5rem;
             position: absolute;
             left: -20px;
@@ -375,19 +334,19 @@
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(33, 150, 243, 0.3);
+            border-bottom: 2px solid rgba(46, 204, 113, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #4fc3f7;
+            color: #2ecc71;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(84, 110, 122, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.1) 0%, rgba(52, 152, 219, 0.2) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(33, 150, 243, 0.3);
+            border: 1px solid rgba(46, 204, 113, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -398,31 +357,31 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(10, 26, 42, 0.5);
+            background: rgba(10, 42, 42, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(33, 150, 243, 0.2);
+            border: 1px solid rgba(46, 204, 113, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #4fc3f7;
+            color: #2ecc71;
             font-weight: 600;
             padding: 10px 20px;
-            background: rgba(33, 150, 243, 0.1);
+            background: rgba(46, 204, 113, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(33, 150, 243, 0.3);
+            border: 1px solid rgba(46, 204, 113, 0.3);
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
-            color: white;
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+            box-shadow: 0 4px 12px rgba(46, 204, 113, 0.4);
             display: none;
-            border: 2px solid rgba(79, 195, 247, 0.5);
+            border: 2px solid rgba(46, 204, 113, 0.5);
             font-family: 'Courier New', monospace;
         }
         
@@ -432,10 +391,10 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(10, 26, 42, 0.4);
+            background: rgba(10, 42, 42, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(33, 150, 243, 0.2);
+            border: 1px solid rgba(46, 204, 113, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -443,12 +402,12 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #4fc3f7;
+            color: #2ecc71;
             line-height: 1.6;
             padding: 20px;
-            background: rgba(84, 110, 122, 0.1);
+            background: rgba(52, 152, 219, 0.1);
             border-radius: 10px;
-            border-left: 4px solid #2196f3;
+            border-left: 4px solid #3498db;
         }
         
         .options-container {
@@ -462,8 +421,8 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(26, 31, 58, 0.5);
-            border: 1px solid rgba(84, 110, 122, 0.3);
+            background: rgba(26, 58, 58, 0.5);
+            border: 1px solid rgba(22, 160, 133, 0.3);
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -476,14 +435,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(33, 150, 243, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(46, 204, 113, 0.1), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(33, 150, 243, 0.1);
-            border-color: #2196f3;
+            background: rgba(46, 204, 113, 0.1);
+            border-color: #2ecc71;
             transform: translateX(5px);
         }
         
@@ -496,7 +455,7 @@
             width: 22px;
             height: 22px;
             cursor: pointer;
-            accent-color: #2196f3;
+            accent-color: #2ecc71;
         }
         
         .option label {
@@ -504,29 +463,21 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
-            color: #e8f4f8;
+            color: #e0f0e0;
             font-size: 1.1rem;
             line-height: 1.5;
-        }
-        
-        /* Chemistry-specific styling for chemical formulas */
-        .chem-formula {
-            font-family: 'Cambria', 'Times New Roman', serif;
-            font-style: italic;
-            font-weight: bold;
-            color: #ffeb3b;
         }
         
         /* Question navigation */
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(33, 150, 243, 0.3);
+            border-top: 2px solid rgba(46, 204, 113, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #4fc3f7;
+            color: #2ecc71;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -543,7 +494,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: #2196f3;
+            background: #3498db;
             border-radius: 2px;
         }
         
@@ -560,34 +511,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(84, 110, 122, 0.3) 0%, rgba(55, 71, 79, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(22, 160, 133, 0.3) 0%, rgba(26, 58, 58, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(33, 150, 243, 0.3);
-            color: #e8f4f8;
+            border: 1px solid rgba(46, 204, 113, 0.3);
+            color: #e0f0e0;
             font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background: linear-gradient(135deg, rgba(33, 150, 243, 0.3) 0%, rgba(25, 118, 210, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.3) 0%, rgba(39, 174, 96, 0.5) 100%);
             transform: scale(1.1);
-            border-color: #2196f3;
+            border-color: #2ecc71;
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
-            color: white;
-            border-color: #4fc3f7;
-            box-shadow: 0 4px 10px rgba(33, 150, 243, 0.4);
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: #ffffff;
+            border-color: #3498db;
+            box-shadow: 0 4px 10px rgba(46, 204, 113, 0.4);
             transform: scale(1.1);
         }
         
         .question-number.answered {
-            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
             color: white;
-            border-color: #2ecc71;
+            border-color: #f1c40f;
         }
         
         .navigation-buttons {
@@ -596,20 +547,20 @@
             margin-top: 25px;
         }
         
-        /* Results section - NO SCORE DISPLAY */
+        /* Results section */
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(10, 26, 42, 0.8) 0%, rgba(26, 31, 58, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(10, 42, 42, 0.8) 0%, rgba(26, 58, 58, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #2196f3;
+            border: 2px solid #2ecc71;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
         }
         
         .results-container::before {
-            content: '🧪';
+            content: '✅';
             position: absolute;
             top: 20px;
             right: 20px;
@@ -618,7 +569,7 @@
         }
         
         .results-container h2 {
-            color: #4fc3f7;
+            color: #2ecc71;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -631,7 +582,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #81d4fa;
+            color: #a3e4d7;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -639,22 +590,22 @@
         .feedback {
             font-size: 1.3rem;
             margin: 25px 0;
-            color: #e8f4f8;
+            color: #e0f0e0;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(33, 150, 243, 0.1);
+            background: rgba(46, 204, 113, 0.1);
             border-radius: 12px;
-            border: 1px solid rgba(33, 150, 243, 0.3);
+            border: 1px solid rgba(46, 204, 113, 0.3);
         }
         
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(39, 174, 96, 0.2) 0%, rgba(46, 204, 113, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(241, 196, 15, 0.2) 0%, rgba(243, 156, 18, 0.3) 100%);
             border-radius: 12px;
-            color: #2ecc71;
+            color: #f1c40f;
             font-size: 1.2rem;
-            border: 1px solid rgba(46, 204, 113, 0.5);
+            border: 1px solid rgba(241, 196, 15, 0.5);
         }
         
         /* Responsive */
@@ -717,13 +668,11 @@
             }
         }
         
-        /* Back to Home button */
         .back-home {
             margin-top: 20px;
             text-align: center;
         }
         
-        /* Loading animation */
         .loading {
             display: none;
             text-align: center;
@@ -731,8 +680,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(33, 150, 243, 0.3);
-            border-top: 4px solid #2196f3;
+            border: 4px solid rgba(46, 204, 113, 0.3);
+            border-top: 4px solid #2ecc71;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -748,18 +697,19 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header with logo -->
+        <!-- Header -->
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
             <h1 class="subject-title">SSS1 CHEMISTRY EXAMINATION</h1>
-            <div class="exam-info">Second Term Mid-Term Test | 40 Questions | 40 Minutes</div>
+            <div class="exam-info">Second Term | 2025/2026 Session</div>
+            <div class="term-info">40 Questions | 30 Minutes</div>
         </div>
         
         <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Chemistry Examination. Apply your knowledge of chemical principles, reactions, and calculations. Remember that in chemistry, precision and understanding are key to success. Best of luck."
+                "Welcome to The Trustworthy College Chemistry Examination. This test covers Qualitative and Quantitative Analysis, Mole Concept, Empirical and Molecular Formulas, Gas Laws, and Stoichiometry. Demonstrate your understanding of chemical principles. Best of luck."
             </div>
             <div class="btn-container">
                 <button id="start-exam-btn" class="btn">Start Examination</button>
@@ -804,16 +754,17 @@
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This examination consists of 40 multiple-choice questions.</li>
-                    <li>You have 40 minutes to complete this examination (1 minute per question).</li>
+                    <li>This examination consists of 40 multiple-choice questions covering Chemistry topics.</li>
+                    <li>Each question carries ½ mark (Total = 20 marks).</li>
+                    <li>You have 30 minutes to complete this examination.</li>
                     <li>Answer all questions to the best of your ability.</li>
                     <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
-                    <li>Answered questions will be marked with green in the question grid.</li>
+                    <li>Answered questions will be marked with orange in the question grid.</li>
                     <li>Once you submit your answers, you cannot change them.</li>
                     <li>Ensure you have a stable internet connection throughout the examination.</li>
-                    <li>Any form of malpractice will lead to disqualification.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
+                    <li>This is the Second Term Examination for the 2025/2026 Academic Session.</li>
                 </ul>
             </div>
             
@@ -830,7 +781,7 @@
                 <div class="exam-controls">
                     <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">40:00</span>
+                        Time Left: <span id="timer">30:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
                         <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
@@ -846,7 +797,6 @@
                 </div>
             </div>
             
-            <!-- Question navigation grid after question content -->
             <div class="question-navigation">
                 <h3>Question Navigation</h3>
                 <div class="question-grid" id="question-grid">
@@ -865,12 +815,12 @@
             </div>
         </section>
         
-        <!-- Results Section - NO SCORE DISPLAY -->
+        <!-- Results Section -->
         <section id="results-section" class="section">
             <div class="results-container">
                 <h2>Examination Completed</h2>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SSS1 Chemistry - Second Term Mid-Term</div>
+                <div class="subject" id="results-subject">SSS1 Chemistry - Second Term 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
                     Thank you for completing the Chemistry examination. Your results have been submitted successfully to the examination board.
@@ -891,207 +841,207 @@
     </div>
 
     <script>
-        // SUBJECT: SSS1 CHEMISTRY - Second Term Mid-Term Examination
+        // SSS1 CHEMISTRY - SECOND TERM 2025/2026
         const originalQuestions = [
             {
-                question: "What is qualitative analysis primarily concerned with?",
-                options: ["Measuring the quantity of substances", "Identifying the composition of substances", "Calculating molecular mass", "Balancing chemical equations"],
+                question: "Which of the following refers to the identification of substances present in a sample? (½ mark)",
+                options: ["Quantitative analysis", "Qualitative analysis", "Volumetric analysis", "Gravimetric analysis"],
                 answer: "B"
             },
             {
-                question: "Quantitative analysis involves determining the ______ of a substance.",
-                options: ["Colour", "Amount", "Smell", "Reactivity"],
+                question: "The determination of the amount of substance present in a sample is known as (½ mark)",
+                options: ["Quantitative analysis", "Qualitative analysis", "Fractional analysis", "Spectral analysis"],
+                answer: "A"
+            },
+            {
+                question: "Which of the following is an example of qualitative analysis? (½ mark)",
+                options: ["Determining the mass of salt in solution", "Identifying copper ions in a solution", "Measuring the concentration of acid", "Calculating percentage yield"],
                 answer: "B"
             },
             {
-                question: "Which of the following is NOT a method of qualitative analysis?",
-                options: ["Flame test", "Precipitation reaction", "Titration", "Litmus test"],
+                question: "Which of the following is commonly used in quantitative chemical analysis? (½ mark)",
+                options: ["Burette", "Thermometer", "Barometer", "Hygrometer"],
+                answer: "A"
+            },
+            {
+                question: "A mole of a substance contains how many particles? (½ mark)",
+                options: ["6.02 × 10²³", "3.02 × 10²³", "6.02 × 10²²", "3.02 × 10²²"],
+                answer: "A"
+            },
+            {
+                question: "The numerical value 6.02 × 10²³ is known as (½ mark)",
+                options: ["Faraday's constant", "Avogadro's number", "Planck's constant", "Gas constant"],
+                answer: "B"
+            },
+            {
+                question: "The mass of one mole of a substance is called its (½ mark)",
+                options: ["Atomic number", "Molar mass", "Relative density", "Molecular size"],
+                answer: "B"
+            },
+            {
+                question: "The molar mass of oxygen gas (O₂) is (½ mark)",
+                options: ["16 g/mol", "18 g/mol", "32 g/mol", "48 g/mol"],
                 answer: "C"
             },
             {
-                question: "In a flame test, a brick-red flame indicates the presence of ______.",
-                options: ["Sodium", "Potassium", "Calcium", "Copper"],
+                question: "How many moles are present in 44 g of carbon dioxide (CO₂)? (½ mark)",
+                options: ["0.5 mol", "1 mol", "2 mol", "4 mol"],
+                answer: "B"
+            },
+            {
+                question: "Which of the following quantities represents one mole of sodium atoms? (½ mark)",
+                options: ["23 atoms", "6.02 × 10²³ atoms", "23 molecules", "6.02 × 10²³ molecules"],
+                answer: "B"
+            },
+            {
+                question: "The molar mass of NaCl is (Na = 23, Cl = 35.5) (½ mark)",
+                options: ["48.5 g/mol", "58.5 g/mol", "68.5 g/mol", "78.5 g/mol"],
+                answer: "B"
+            },
+            {
+                question: "The number of moles in 18 g of water (H₂O) is (½ mark)",
+                options: ["0.5 mol", "1 mol", "2 mol", "3 mol"],
+                answer: "B"
+            },
+            {
+                question: "The empirical formula of a compound represents the (½ mark)",
+                options: ["Actual number of atoms present", "Simplest whole number ratio of atoms", "Molecular mass of compound", "Percentage mass of atoms"],
+                answer: "B"
+            },
+            {
+                question: "Percentage composition of an element in a compound is calculated based on its (½ mark)",
+                options: ["Atomic number", "Relative atomic mass", "Mass contribution", "Number of electrons"],
                 answer: "C"
             },
             {
-                question: "The mole is a unit of ______.",
-                options: ["Mass", "Volume", "Amount of substance", "Density"],
+                question: "Which of the following compounds has empirical formula CH₂O? (½ mark)",
+                options: ["Glucose", "Methane", "Ethanol", "Carbon dioxide"],
+                answer: "A"
+            },
+            {
+                question: "The molecular formula of benzene is C₆H₆. Its empirical formula is (½ mark)",
+                options: ["CH", "CH₂", "C₂H₂", "C₃H₃"],
+                answer: "A"
+            },
+            {
+                question: "The percentage of oxygen in water (H₂O) is approximately (½ mark)",
+                options: ["11%", "22%", "89%", "78%"],
                 answer: "C"
             },
             {
-                question: "What is the molar mass of water (H₂O)?",
-                options: ["18 g/mol", "16 g/mol", "20 g/mol", "22 g/mol"],
-                answer: "A"
-            },
-            {
-                question: "Avogadro's number is approximately ______.",
-                options: ["6.02 × 10²³", "6.02 × 10²²", "3.0 × 10⁸", "1.66 × 10⁻²⁴"],
-                answer: "A"
-            },
-            {
-                question: "How many moles are in 80g of NaOH?",
-                options: ["1 mole", "2 moles", "3 moles", "4 moles"],
-                answer: "B"
-            },
-            {
-                question: "The formula that shows the simplest whole number ratio of atoms in a compound is called ______.",
-                options: ["Molecular formula", "Empirical formula", "Structural formula", "Displayed formula"],
-                answer: "B"
-            },
-            {
-                question: "In stoichiometry, the coefficients in a balanced equation represent ______.",
-                options: ["Masses of reactants", "Volumes of gases", "Number of moles", "Densities"],
+                question: "If the empirical formula of a compound is CH₂ and its molar mass is 42 g/mol, the molecular formula is (½ mark)",
+                options: ["CH₂", "C₂H₄", "C₃H₆", "C₄H₈"],
                 answer: "C"
             },
             {
-                question: "What is the percentage composition of oxygen in CO₂?",
-                options: ["27.3%", "72.7%", "50%", "36.4%"],
+                question: "Boyle's law states that the pressure of a fixed mass of gas is inversely proportional to its (½ mark)",
+                options: ["Temperature", "Volume", "Density", "Mass"],
                 answer: "B"
             },
             {
-                question: "A gas that turns limewater milky is ______.",
-                options: ["Oxygen", "Hydrogen", "Carbon dioxide", "Nitrogen"],
+                question: "Boyle's law is valid at constant (½ mark)",
+                options: ["Temperature", "Pressure", "Volume", "Density"],
+                answer: "A"
+            },
+            {
+                question: "Charles' law relates the volume of a gas to its (½ mark)",
+                options: ["Pressure", "Temperature", "Density", "Mass"],
+                answer: "B"
+            },
+            {
+                question: "Charles' law is valid at constant (½ mark)",
+                options: ["Pressure", "Temperature", "Volume", "Density"],
+                answer: "A"
+            },
+            {
+                question: "The SI unit of pressure is (½ mark)",
+                options: ["Atmosphere", "Pascal", "mmHg", "Bar"],
+                answer: "B"
+            },
+            {
+                question: "The instrument used to measure atmospheric pressure is (½ mark)",
+                options: ["Thermometer", "Barometer", "Hydrometer", "Calorimeter"],
+                answer: "B"
+            },
+            {
+                question: "The relationship between pressure and volume according to Boyle's law is (½ mark)",
+                options: ["PV = constant", "P/V = constant", "P + V = constant", "P – V = constant"],
+                answer: "A"
+            },
+            {
+                question: "According to Charles' law, temperature must be measured in (½ mark)",
+                options: ["Celsius", "Fahrenheit", "Kelvin", "Centigrade"],
                 answer: "C"
             },
             {
-                question: "The method used to determine the concentration of a solution by reacting it with a standard solution is ______.",
-                options: ["Distillation", "Filtration", "Titration", "Sublimation"],
+                question: "Standard temperature is (½ mark)",
+                options: ["273K", "25°C", "100°C", "273°C"],
+                answer: "A"
+            },
+            {
+                question: "Standard pressure is (½ mark)",
+                options: ["760 mmHg", "100 mmHg", "500 mmHg", "200 mmHg"],
+                answer: "A"
+            },
+            {
+                question: "At standard temperature and pressure, one mole of gas occupies (½ mark)",
+                options: ["11.2 dm³", "22.4 dm³", "24 dm³", "44.8 dm³"],
+                answer: "B"
+            },
+            {
+                question: "Which gas law is represented by V ∝ T? (½ mark)",
+                options: ["Boyle's law", "Charles' law", "Dalton's law", "Graham's law"],
+                answer: "B"
+            },
+            {
+                question: "If the pressure of a gas doubles, its volume will (temperature constant) (½ mark)",
+                options: ["Double", "Remain constant", "Halve", "Triple"],
                 answer: "C"
             },
             {
-                question: "What mass of carbon is present in 44g of CO₂?",
-                options: ["12g", "16g", "32g", "44g"],
-                answer: "A"
-            },
-            {
-                question: "The number of atoms in 0.5 moles of nitrogen gas (N₂) is ______.",
-                options: ["6.02 × 10²³", "3.01 × 10²³", "1.204 × 10²⁴", "12.04 × 10²³"],
-                answer: "A"
-            },
-            {
-                question: "Which of the following gases is used in the test for a glowing splint?",
-                options: ["Hydrogen", "Oxygen", "Carbon dioxide", "Chlorine"],
+                question: "The ideal gas equation is (½ mark)",
+                options: ["PV = RT", "PV = nRT", "PT = nVR", "PVT = nR"],
                 answer: "B"
             },
             {
-                question: "If the empirical formula of a compound is CH₂O and its molar mass is 180 g/mol, what is its molecular formula?",
-                options: ["C₆H₁₂O₆", "C₃H₆O₃", "C₂H₄O₂", "C₅H₁₀O₅"],
-                answer: "A"
-            },
-            {
-                question: "In a precipitation reaction, an insoluble solid formed is called ______.",
-                options: ["Filtrate", "Residue", "Precipitate", "Solute"],
-                answer: "C"
-            },
-            {
-                question: "Which of these is a qualitative test for chloride ions?",
-                options: ["Adding dilute HCl", "Adding silver nitrate solution", "Adding sodium hydroxide", "Adding litmus paper"],
+                question: "In the equation PV = nRT, R represents (½ mark)",
+                options: ["Rate constant", "Gas constant", "Reaction constant", "Pressure constant"],
                 answer: "B"
             },
             {
-                question: "The molar volume of a gas at s.t.p. is ______.",
-                options: ["22.4 dm³", "24 dm³", "11.2 dm³", "44.8 dm³"],
+                question: "The number of moles in 2.24 dm³ of a gas at STP is (½ mark)",
+                options: ["0.1", "0.2", "0.5", "1"],
                 answer: "A"
             },
             {
-                question: "What is the mass of 0.25 moles of calcium carbonate (CaCO₃)?",
-                options: ["25g", "50g", "75g", "100g"],
+                question: "Which of the following laws explains the relationship between temperature and volume of gases? (½ mark)",
+                options: ["Boyle's law", "Charles' law", "Graham's law", "Dalton's law"],
+                answer: "B"
+            },
+            {
+                question: "Quantitative analysis deals mainly with (½ mark)",
+                options: ["Identification", "Measurement", "Colour change", "Odour detection"],
+                answer: "B"
+            },
+            {
+                question: "The relative atomic mass of carbon is (½ mark)",
+                options: ["10", "12", "14", "16"],
+                answer: "B"
+            },
+            {
+                question: "Which of the following gases obeys the gas laws most closely? (½ mark)",
+                options: ["Real gas", "Ideal gas", "Heavy gas", "Noble gas"],
+                answer: "B"
+            },
+            {
+                question: "A substance that occupies space and has mass is known as (½ mark)",
+                options: ["Energy", "Matter", "Force", "Heat"],
+                answer: "B"
+            },
+            {
+                question: "The study of the amount of substances that take part in chemical reactions is called (½ mark)",
+                options: ["Stoichiometry", "Spectroscopy", "Chromatography", "Electrolysis"],
                 answer: "A"
-            },
-            {
-                question: "A compound contains 40% carbon, 6.67% hydrogen, and 53.33% oxygen. What is its empirical formula?",
-                options: ["CH₂O", "C₂H₄O₂", "C₃H₆O₃", "CHO"],
-                answer: "A"
-            },
-            {
-                question: "In a chemical reaction, the reactant that is completely used up is called the ______.",
-                options: ["Excess reactant", "Limiting reactant", "Catalyst", "Product"],
-                answer: "B"
-            },
-            {
-                question: "How many molecules are there in 18g of water?",
-                options: ["6.02 × 10²³", "3.01 × 10²³", "1.204 × 10²⁴", "12.04 × 10²³"],
-                answer: "A"
-            },
-            {
-                question: "Which test is used to identify the presence of sulfate ions?",
-                options: ["Add BaCl₂ solution", "Add AgNO₃ solution", "Add NaOH solution", "Add NH₃ solution"],
-                answer: "A"
-            },
-            {
-                question: "The number of moles of oxygen atoms in 3 moles of Al₂(SO₄)₃ is ______.",
-                options: ["3", "12", "24", "36"],
-                answer: "D"
-            },
-            {
-                question: "What is the volume of 2 moles of oxygen gas at s.t.p.?",
-                options: ["11.2 dm³", "22.4 dm³", "44.8 dm³", "67.2 dm³"],
-                answer: "C"
-            },
-            {
-                question: "A white precipitate soluble in excess NaOH indicates the presence of ______.",
-                options: ["Ca²⁺", "Zn²⁺", "Pb²⁺", "Cu²⁺"],
-                answer: "B"
-            },
-            {
-                question: "The mass of one molecule of oxygen (O₂) is approximately ______.",
-                options: ["16 g", "32 g", "5.32 × 10⁻²³ g", "1.66 × 10⁻²⁴ g"],
-                answer: "C"
-            },
-            {
-                question: "Which of these is NOT a quantitative analysis technique?",
-                options: ["Gravimetric analysis", "Volumetric analysis", "Flame test", "Titration"],
-                answer: "C"
-            },
-            {
-                question: "The formula mass of Ca(NO₃)₂ is ______.",
-                options: ["164 g/mol", "102 g/mol", "136 g/mol", "150 g/mol"],
-                answer: "A"
-            },
-            {
-                question: "How many atoms are in 1 mole of helium gas?",
-                options: ["6.02 × 10²³ atoms", "1.204 × 10²⁴ atoms", "3.01 × 10²³ atoms", "12.04 × 10²³ atoms"],
-                answer: "A"
-            },
-            {
-                question: "A blue precipitate insoluble in excess ammonia indicates the presence of ______.",
-                options: ["Fe²⁺", "Cu²⁺", "Al³⁺", "Zn²⁺"],
-                answer: "B"
-            },
-            {
-                question: "What is the concentration in mol/dm³ of a solution containing 4g of NaOH in 250 cm³ of solution?",
-                options: ["0.4 M", "0.5 M", "0.6 M", "0.8 M"],
-                answer: "A"
-            },
-            {
-                question: "The oxidation number of sulfur in H₂SO₄ is ______.",
-                options: ["+2", "+4", "+6", "-2"],
-                answer: "C"
-            },
-            {
-                question: "In stoichiometry, the law of conservation of ______ must be obeyed.",
-                options: ["Volume", "Mass", "Energy", "Density"],
-                answer: "B"
-            },
-            {
-                question: "If 2 moles of hydrogen react with 1 mole of oxygen to form water, how many moles of water are produced?",
-                options: ["1 mole", "2 moles", "3 moles", "4 moles"],
-                answer: "B"
-            },
-            {
-                question: "The gas that gives a 'pop' sound with a lighted splint is ______.",
-                options: ["Oxygen", "Hydrogen", "Nitrogen", "Carbon dioxide"],
-                answer: "B"
-            },
-            {
-                question: "What mass of oxygen is required to burn 12g of carbon completely?",
-                options: ["16g", "32g", "64g", "8g"],
-                answer: "B"
-            },
-            {
-                question: "The branch of chemistry that deals with the calculation of reactants and products in chemical reactions is called ______.",
-                options: ["Qualitative analysis", "Stoichiometry", "Organic chemistry", "Physical chemistry"],
-                answer: "B"
             }
         ];
 
@@ -1100,14 +1050,14 @@
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 40 * 60; // 40 minutes in seconds
+        let timeLeft = 30 * 60; // 30 minutes in seconds
         let questions = [];
 
-        // Background images for rotation (chemistry theme)
+        // Background images for rotation
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+            'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
         ];
 
         // DOM elements
@@ -1125,82 +1075,23 @@
             currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
             document.body.style.backgroundImage = `url('${backgroundImages[currentBgIndex]}')`;
         }
-        
-        // Rotate background every 10 seconds
         setInterval(rotateBackground, 10000);
 
-        // Function to format chemical formulas in questions
-        function formatChemicalFormulas(text) {
-            // Format subscripts for chemical formulas
-            return text
-                .replace(/(\d+)/g, '<sub>$1</sub>')
-                .replace(/([A-Z][a-z]?)(\d+)/g, '$1<sub>$2</sub>')
-                .replace(/H₂O/g, 'H<sub>2</sub>O')
-                .replace(/CO₂/g, 'CO<sub>2</sub>')
-                .replace(/NaOH/g, 'NaOH')
-                .replace(/CaCO₃/g, 'CaCO<sub>3</sub>')
-                .replace(/Al₂\(SO₄\)₃/g, 'Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>')
-                .replace(/H₂SO₄/g, 'H<sub>2</sub>SO<sub>4</sub>')
-                .replace(/Ca\(NO₃\)₂/g, 'Ca(NO<sub>3</sub>)<sub>2</sub>')
-                .replace(/C₆H₁₂O₆/g, 'C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>')
-                .replace(/C₃H₆O₃/g, 'C<sub>3</sub>H<sub>6</sub>O<sub>3</sub>')
-                .replace(/C₂H₄O₂/g, 'C<sub>2</sub>H<sub>4</sub>O<sub>2</sub>')
-                .replace(/C₅H₁₀O₅/g, 'C<sub>5</sub>H<sub>10</sub>O<sub>5</sub>')
-                .replace(/CH₂O/g, 'CH<sub>2</sub>O')
-                .replace(/CHO/g, 'CHO')
-                .replace(/(\d+)×\s*10<sup>([^<]+)<\/sup>/g, '$1×10<sup>$2</sup>');
-        }
-
-        // Function to format options with chemical formulas
-        function formatOptions(options) {
-            return options.map(option => {
-                let formattedOption = option;
-                
-                // Format chemical formulas in options
-                formattedOption = formattedOption
-                    .replace(/H₂O/g, 'H<sub>2</sub>O')
-                    .replace(/CO₂/g, 'CO<sub>2</sub>')
-                    .replace(/NaOH/g, 'NaOH')
-                    .replace(/CaCO₃/g, 'CaCO<sub>3</sub>')
-                    .replace(/Al₂\(SO₄\)₃/g, 'Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>')
-                    .replace(/H₂SO₄/g, 'H<sub>2</sub>SO<sub>4</sub>')
-                    .replace(/Ca\(NO₃\)₂/g, 'Ca(NO<sub>3</sub>)<sub>2</sub>')
-                    .replace(/C₆H₁₂O₆/g, 'C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>')
-                    .replace(/C₃H₆O₃/g, 'C<sub>3</sub>H<sub>6</sub>O<sub>3</sub>')
-                    .replace(/C₂H₄O₂/g, 'C<sub>2</sub>H<sub>4</sub>O<sub>2</sub>')
-                    .replace(/C₅H₁₀O₅/g, 'C<sub>5</sub>H<sub>10</sub>O<sub>5</sub>')
-                    .replace(/CH₂O/g, 'CH<sub>2</sub>O')
-                    .replace(/CHO/g, 'CHO')
-                    .replace(/(\d+)×\s*10<sup>([^<]+)<\/sup>/g, '$1×10<sup>$2</sup>')
-                    .replace(/(\d+)\s*g\/mol/g, '$1 g/mol')
-                    .replace(/(\d+)\s*dm³/g, '$1 dm³')
-                    .replace(/(\d+)\s*M/g, '$1 M');
-                
-                return formattedOption;
-            });
-        }
-
-        // Shuffle questions array
+        // Shuffle questions
         function shuffleQuestions() {
-            // Create a copy of the original questions
             questions = [...originalQuestions];
-            
-            // Shuffle the questions using Fisher-Yates algorithm
             for (let i = questions.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [questions[i], questions[j]] = [questions[j], questions[i]];
             }
-            
-            // Initialize userAnswers array with null values
             userAnswers = Array(questions.length).fill(null);
         }
 
         // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 40 * 60; // Reset to 40 minutes
+            timeLeft = 30 * 60;
             
-            // Show timer container and submit button
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
             
@@ -1219,10 +1110,9 @@
                     calculateScore();
                 }
                 
-                // Warning colors
-                if (timeLeft <= 600) { // 10 minutes left
+                if (timeLeft <= 300) { // 5 minutes left
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
-                } else if (timeLeft <= 1200) { // 20 minutes left
+                } else if (timeLeft <= 600) { // 10 minutes left
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
                 }
             }, 1000);
@@ -1230,25 +1120,19 @@
 
         // Navigation functions
         function showSection(sectionName) {
-            // Hide all sections
             Object.values(sections).forEach(section => {
                 section.classList.remove('active');
             });
-            
-            // Show the requested section
             sections[sectionName].classList.add('active');
             
-            // Hide timer and submit button if not in exam section
             if (sectionName !== 'exam') {
                 document.getElementById('timer-container').style.display = 'none';
                 document.getElementById('submit-container').style.display = 'none';
             }
-            
-            // Scroll to top
             window.scrollTo(0, 0);
         }
 
-        // Initialize event listeners
+        // Event listeners
         document.getElementById('start-exam-btn').addEventListener('click', () => {
             showSection('studentInfo');
         });
@@ -1258,7 +1142,6 @@
         });
 
         document.getElementById('continue-to-instructions').addEventListener('click', () => {
-            // Validate form
             const firstName = document.getElementById('first-name').value.trim();
             const middleName = document.getElementById('middle-name').value.trim();
             const lastName = document.getElementById('last-name').value.trim();
@@ -1297,23 +1180,15 @@
         });
 
         document.getElementById('begin-test').addEventListener('click', () => {
-            // Initialize exam with shuffled questions
             shuffleQuestions();
             currentQuestionIndex = 0;
             
-            // Display student name
             document.getElementById('display-student-name').textContent = studentName;
             document.getElementById('results-student-name').textContent = studentName;
             
-            // Create question navigation grid
             createQuestionGrid();
-            
-            // Load first question
             loadQuestion(currentQuestionIndex);
-            
-            // Start timer
             startTimer();
-            
             showSection('exam');
         });
 
@@ -1336,7 +1211,7 @@
             
             if (confirmed) {
                 clearInterval(timerInterval);
-                showLoading();
+                document.getElementById('loading').style.display = 'block';
                 setTimeout(() => {
                     calculateScore();
                 }, 1500);
@@ -1345,22 +1220,12 @@
 
         document.getElementById('restart-exam').addEventListener('click', () => {
             clearInterval(timerInterval);
-            // Reset form
             document.getElementById('first-name').value = '';
             document.getElementById('middle-name').value = '';
             document.getElementById('last-name').value = '';
             showSection('welcome');
         });
 
-        function showLoading() {
-            document.getElementById('loading').style.display = 'block';
-        }
-
-        function hideLoading() {
-            document.getElementById('loading').style.display = 'none';
-        }
-
-        // Create question navigation grid
         function createQuestionGrid() {
             const questionGrid = document.getElementById('question-grid');
             questionGrid.innerHTML = '';
@@ -1371,12 +1236,10 @@
                 questionNumber.textContent = i + 1;
                 questionNumber.dataset.index = i;
                 
-                // Mark if answered
                 if (userAnswers[i] !== null) {
                     questionNumber.classList.add('answered');
                 }
                 
-                // Mark current question
                 if (i === currentQuestionIndex) {
                     questionNumber.classList.add('current');
                 }
@@ -1390,7 +1253,6 @@
             }
         }
 
-        // Update question navigation grid
         function updateQuestionGrid() {
             const questionNumbers = document.querySelectorAll('.question-number');
             
@@ -1408,26 +1270,16 @@
             });
         }
 
-        // Exam functionality
         function loadQuestion(index) {
             const question = questions[index];
             
-            // Update question counter
             document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
+            document.getElementById('question-text').textContent = question.question;
             
-            // Set question text with formatted chemical formulas
-            const formattedQuestion = formatChemicalFormulas(question.question);
-            document.getElementById('question-text').innerHTML = formattedQuestion;
-            
-            // Clear options container
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
             
-            // Format options with chemical formulas
-            const formattedOptions = formatOptions(question.options);
-            
-            // Create option elements
-            formattedOptions.forEach((option, optionIndex) => {
+            question.options.forEach((option, optionIndex) => {
                 const optionDiv = document.createElement('div');
                 optionDiv.className = 'option';
                 
@@ -1437,9 +1289,8 @@
                 radio.type = 'radio';
                 radio.name = `question-${index}`;
                 radio.id = optionId;
-                radio.value = String.fromCharCode(65 + optionIndex); // A, B, C, D
+                radio.value = String.fromCharCode(65 + optionIndex);
                 
-                // Check if this option was previously selected
                 if (userAnswers[index] === radio.value) {
                     radio.checked = true;
                 }
@@ -1451,24 +1302,21 @@
                 
                 const label = document.createElement('label');
                 label.htmlFor = optionId;
-                label.innerHTML = `${String.fromCharCode(65 + optionIndex)}. ${option}`;
+                label.textContent = `${String.fromCharCode(65 + optionIndex)}. ${option}`;
                 
                 optionDiv.appendChild(radio);
                 optionDiv.appendChild(label);
-                
                 optionsContainer.appendChild(optionDiv);
             });
             
-            // Update navigation buttons
             document.getElementById('prev-question').disabled = index === 0;
             document.getElementById('next-question').disabled = index === questions.length - 1;
             
-            // Update question grid
             updateQuestionGrid();
         }
 
         function calculateScore() {
-            hideLoading();
+            document.getElementById('loading').style.display = 'none';
             let score = 0;
             
             for (let i = 0; i < questions.length; i++) {
@@ -1477,16 +1325,11 @@
                 }
             }
             
-            // Submit to Google Form WITHOUT showing score to student
-            submitToGoogleForm(studentName, "SSS1 Chemistry - Second Term Mid-Term", `${score}/${questions.length}`);
-            
-            // Show submission status
+            submitToGoogleForm(studentName, "SSS1 Chemistry - Second Term 2025/2026", `${score}/${questions.length}`);
             document.getElementById('submission-status').style.display = 'block';
-            
             showSection('results');
         }
 
-        // Google Form submission function
         function submitToGoogleForm(fullName, subject, score) {
             const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
             const formData = new FormData();
@@ -1495,30 +1338,15 @@
             formData.append("entry.1558221900", subject);
             formData.append("entry.2022160530", score);
 
-            // Use no-cors so browser will not block cross-origin form POST
             fetch(formURL, {
                 method: "POST",
                 mode: "no-cors",
                 body: formData
-            }).then(() => {
-                console.log("Chemistry results submitted successfully");
-            }).catch(err => {
-                console.warn("Form submission (no-cors) likely blocked for debug; data still sent.");
-            });
+            }).catch(err => console.warn("Form submission:", err));
         }
 
-        // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
-            // Focus on first input
             document.getElementById('first-name').focus();
-            
-            // Format chemical formulas in instructions if needed
-            const instructions = document.querySelector('.instructions');
-            if (instructions) {
-                instructions.innerHTML = instructions.innerHTML
-                    .replace(/H₂O/g, 'H<sub>2</sub>O')
-                    .replace(/CO₂/g, 'CO<sub>2</sub>');
-            }
         });
     </script>
 </body>
