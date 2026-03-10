@@ -14,7 +14,7 @@
         }
         
         body {
-            background-color: #0f1a0a;
+            background-color: #1a0f0a;
             color: #f5e9dd;
             line-height: 1.6;
             position: relative;
@@ -29,7 +29,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+            background-image: url('https://images.unsplash.com/photo-1564769625905-50e93615e769?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -43,18 +43,18 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #0f2a1a 0%, #1a3a24 100%);
+            background: linear-gradient(135deg, #0a2a1a 0%, #1a3a2a 100%);
             box-shadow: 0 15px 40px rgba(30, 114, 60, 0.25);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #27ae60;
+            border: 3px solid #d4af37;
             backdrop-filter: blur(5px);
         }
         
-        /* Green decorative border effect */
+        /* Green and gold decorative border effect */
         .container::before {
             content: '';
             position: absolute;
@@ -62,7 +62,7 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #27ae60, #2ecc71, #27ae60);
+            background: linear-gradient(90deg, #d4af37, #27ae60, #d4af37);
             z-index: 2;
         }
         
@@ -72,7 +72,7 @@
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #27ae60;
+            border-bottom: 2px solid #d4af37;
         }
         
         .header::after {
@@ -83,7 +83,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #27ae60, transparent);
+            background: linear-gradient(to right, transparent, #d4af37, transparent);
         }
         
         .logo {
@@ -92,7 +92,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #27ae60;
+            border: 3px solid #d4af37;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -103,17 +103,38 @@
         }
         
         .subject-title {
-            color: #2ecc71;
+            color: #d4af37;
             font-size: 2.4rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
             letter-spacing: 1px;
+            font-family: 'Traditional Arabic', 'Times New Roman', serif;
+        }
+        
+        .arabic-title {
+            color: #27ae60;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            font-family: 'Traditional Arabic', 'Times New Roman', serif;
         }
         
         .exam-info {
             color: #90d6a3;
             font-size: 1.1rem;
             margin-top: 5px;
+        }
+        
+        /* Bismillah styling */
+        .bismillah {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-family: 'Traditional Arabic', 'Times New Roman', serif;
+            padding: 10px;
+            background: rgba(39, 174, 96, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
         
         /* Sections */
@@ -142,29 +163,30 @@
             font-size: 1.2rem;
             line-height: 1.8;
             color: #f5e9dd;
-            border-left: 5px solid #27ae60;
-            border-right: 1px solid rgba(39, 174, 96, 0.3);
-            border-top: 1px solid rgba(39, 174, 96, 0.2);
-            border-bottom: 1px solid rgba(39, 174, 96, 0.3);
+            border-left: 5px solid #d4af37;
+            border-right: 1px solid rgba(212, 175, 55, 0.3);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
         }
         
         .welcome-message::before {
-            content: '🕌';
+            content: 'ﷲ';
             position: absolute;
             top: 20px;
             right: 20px;
             font-size: 3rem;
             opacity: 0.1;
+            font-family: 'Traditional Arabic', serif;
         }
         
-        /* Buttons with green theme */
+        /* Buttons with Islamic gold/green theme */
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
-            color: #ffffff;
+            background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+            color: #0a2a1a;
             border: none;
             padding: 15px 32px;
             font-size: 1.1rem;
@@ -174,8 +196,8 @@
             margin: 12px 8px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(46, 204, 113, 0.5);
-            box-shadow: 0 6px 15px rgba(39, 174, 96, 0.3);
+            border: 2px solid rgba(212, 175, 55, 0.5);
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -193,7 +215,7 @@
         }
         
         .btn:hover {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 10px 25px rgba(39, 174, 96, 0.5);
             color: #ffffff;
@@ -204,7 +226,7 @@
         }
         
         .btn:focus {
-            outline: 2px solid #2ecc71;
+            outline: 2px solid #d4af37;
             outline-offset: 3px;
         }
         
@@ -252,7 +274,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #2ecc71;
+            color: #d4af37;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -260,7 +282,7 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(15, 42, 26, 0.7);
+            background: rgba(10, 42, 26, 0.7);
             border: 2px solid #5d7e6a;
             border-radius: 10px;
             font-size: 1.1rem;
@@ -270,10 +292,10 @@
         }
         
         input[type="text"]:focus {
-            border-color: #27ae60;
+            border-color: #d4af37;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.3);
-            background: rgba(15, 42, 26, 0.9);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+            background: rgba(10, 42, 26, 0.9);
         }
         
         .error-message {
@@ -290,14 +312,14 @@
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid #27ae60;
-            border: 1px solid rgba(39, 174, 96, 0.2);
+            border-left: 5px solid #d4af37;
+            border: 1px solid rgba(212, 175, 55, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
         
         .instructions::before {
-            content: '📿';
+            content: '📖';
             position: absolute;
             top: 20px;
             right: 20px;
@@ -307,7 +329,7 @@
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #2ecc71;
+            color: #d4af37;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -320,7 +342,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #27ae60;
+            background: #d4af37;
             border-radius: 2px;
         }
         
@@ -337,7 +359,7 @@
         
         .instructions li::before {
             content: '•';
-            color: #27ae60;
+            color: #d4af37;
             font-size: 1.5rem;
             position: absolute;
             left: -20px;
@@ -348,19 +370,19 @@
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(39, 174, 96, 0.3);
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #2ecc71;
+            color: #d4af37;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
             background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(93, 126, 106, 0.2) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(39, 174, 96, 0.3);
+            border: 1px solid rgba(212, 175, 55, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -371,19 +393,19 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(15, 42, 26, 0.5);
+            background: rgba(10, 42, 26, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(39, 174, 96, 0.2);
+            border: 1px solid rgba(212, 175, 55, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #2ecc71;
+            color: #d4af37;
             font-weight: 600;
             padding: 10px 20px;
             background: rgba(39, 174, 96, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(39, 174, 96, 0.3);
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
         
         .timer-container {
@@ -395,7 +417,7 @@
             font-size: 1.3rem;
             box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
             display: none;
-            border: 2px solid rgba(46, 204, 113, 0.5);
+            border: 2px solid rgba(212, 175, 55, 0.5);
             font-family: 'Courier New', monospace;
         }
         
@@ -405,10 +427,10 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(15, 42, 26, 0.4);
+            background: rgba(10, 42, 26, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(39, 174, 96, 0.2);
+            border: 1px solid rgba(212, 175, 55, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -416,7 +438,7 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #2ecc71;
+            color: #d4af37;
             line-height: 1.6;
             padding: 20px;
             background: rgba(93, 126, 106, 0.1);
@@ -449,14 +471,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(39, 174, 96, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(39, 174, 96, 0.1);
-            border-color: #27ae60;
+            background: rgba(212, 175, 55, 0.1);
+            border-color: #d4af37;
             transform: translateX(5px);
         }
         
@@ -486,12 +508,12 @@
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(39, 174, 96, 0.3);
+            border-top: 2px solid rgba(212, 175, 55, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #2ecc71;
+            color: #d4af37;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -530,7 +552,7 @@
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(39, 174, 96, 0.3);
+            border: 1px solid rgba(212, 175, 55, 0.3);
             color: #f5e9dd;
             font-size: 1.1rem;
         }
@@ -544,15 +566,15 @@
         .question-number.current {
             background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
             color: #ffffff;
-            border-color: #2ecc71;
+            border-color: #d4af37;
             box-shadow: 0 4px 10px rgba(39, 174, 96, 0.4);
             transform: scale(1.1);
         }
         
         .question-number.answered {
-            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
-            color: white;
-            border-color: #2ecc71;
+            background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+            color: #0a2a1a;
+            border-color: #27ae60;
         }
         
         .navigation-buttons {
@@ -565,9 +587,9 @@
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(15, 42, 26, 0.8) 0%, rgba(26, 58, 36, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(10, 42, 26, 0.8) 0%, rgba(26, 58, 36, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #27ae60;
+            border: 2px solid #d4af37;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
@@ -583,7 +605,7 @@
         }
         
         .results-container h2 {
-            color: #2ecc71;
+            color: #d4af37;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -607,9 +629,9 @@
             color: #f5e9dd;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(39, 174, 96, 0.1);
+            background: rgba(212, 175, 55, 0.1);
             border-radius: 12px;
-            border: 1px solid rgba(39, 174, 96, 0.3);
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
         
         .submission-status {
@@ -696,8 +718,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(39, 174, 96, 0.3);
-            border-top: 4px solid #27ae60;
+            border: 4px solid rgba(212, 175, 55, 0.3);
+            border-top: 4px solid #d4af37;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -717,14 +739,15 @@
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
+            <div class="arabic-title">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
             <h1 class="subject-title">SS1 ISLAMIC STUDIES EXAMINATION</h1>
-            <div class="exam-info">2nd Term Mid-Term Test | 40 Questions | 45 Minutes</div>
+            <div class="exam-info"> Second Term Exam | 50 Questions | 50 Minutes</div>
         </div>
         
         <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Islamic Studies Examination. Demonstrate your understanding of Islamic principles, Hadith, Hajj, and purification. Success comes from knowledge and sincere application of Islamic teachings. Best of luck."
+                "Welcome to The Trustworthy College Islamic Studies Examination. Demonstrate your understanding of the Qur'an, Hadith, and the rich history of Islam. Success comes from knowledge and reflection. Best of luck."
             </div>
             <div class="btn-container">
                 <button id="start-exam-btn" class="btn">Start Examination</button>
@@ -769,16 +792,16 @@
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This examination consists of 40 multiple-choice questions covering Islamic Studies.</li>
-                    <li>You have 45 minutes to complete this examination.</li>
+                    <li>This examination consists of 50 multiple-choice questions covering Islamic Studies topics.</li>
+                    <li>You have 50 minutes to complete this examination.</li>
                     <li>Answer all questions to the best of your ability.</li>
                     <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
-                    <li>Answered questions will be marked with green in the question grid.</li>
+                    <li>Answered questions will be marked with gold in the question grid.</li>
                     <li>Once you submit your answers, you cannot change them.</li>
                     <li>Ensure you have a stable internet connection throughout the examination.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li>Demonstrate your understanding of Islamic jurisprudence, Hadith classification, Hajj rites, and purification methods.</li>
+                    <li>Demonstrate your understanding of the Qur'an, Hadith, and Islamic history.</li>
                 </ul>
             </div>
             
@@ -793,9 +816,9 @@
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
                 <div class="exam-controls">
-                    <div class="question-counter" id="question-counter">Question 1 of 40</div>
+                    <div class="question-counter" id="question-counter">Question 1 of 50</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">45:00</span>
+                        Time Left: <span id="timer">50:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
                         <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
@@ -835,7 +858,7 @@
             <div class="results-container">
                 <h2>Examination Completed</h2>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SS1 Islamic Studies - 2nd Term Mid-Term Test</div>
+                <div class="subject" id="results-subject">SS1 Islamic Studies - Mid-Term Test</div>
                 
                 <div class="feedback" id="feedback-message">
                     Thank you for completing the Islamic Studies examination. Your results have been submitted successfully to the examination board.
@@ -856,206 +879,256 @@
     </div>
 
     <script>
-        // SUBJECT: SS1 ISLAMIC STUDIES - 2nd Term Mid-Term Test
+        // SUBJECT: SS1 ISLAMIC STUDIES - Mid-Term Test
         const originalQuestions = [
             {
-                question: "In an Islamic state, all disputes must be settled through the use of the injunctions from:",
-                options: ["The court", "Qur'an and Hadith", "The Fiqh"],
-                answer: "B"
-            },
-            {
-                question: "The greatest form of insurance which Islam has legislated is:",
-                options: ["Charity", "Prayer", "Fasting"],
-                answer: "A"
-            },
-            {
-                question: "Hajj is not obligatory for:",
-                options: ["Sanity", "Muslim", "Slave"],
+                question: "The standardization of Qur'an was done during the reign of ____.",
+                options: ["Abubakar", "Umar", "Uthman", "An-Nuhawiya"],
                 answer: "C"
             },
             {
-                question: "Aql means:",
-                options: ["Sanity", "Health", "Moral"],
-                answer: "A"
+                question: "____ is a revelation from Allah (S.W.T) to Prophet Muhammad containing universal message to the humanity.",
+                options: ["Qiyas", "Qur'an", "Hadith", "None"],
+                answer: "B"
             },
             {
-                question: "Istijmar means:",
-                options: ["Purification with clothes", "Purification with water", "Purification with stone"],
+                question: "____ is the total submission to the will and commandment of Allah.",
+                options: ["Hadith", "Islam", "Qur'an", "Iman"],
+                answer: "B"
+            },
+            {
+                question: "The references of monotheism were found in Qur'an ____.",
+                options: ["114", "113", "112", "111"],
                 answer: "C"
             },
             {
-                question: "Bulugh refers to:",
-                options: ["Islam", "Maturity", "Ability"],
-                answer: "B"
-            },
-            {
-                question: "Pilgrimage is a duty that mankind owes to Allah, found in the Qur'an:",
-                options: ["3:97", "4:97", "5:97"],
-                answer: "A"
-            },
-            {
-                question: "All these are the moral objectives of Hajj except:",
-                options: ["Tolerance", "Humility", "Arrogance"],
+                question: "The meaning of \"Kalimatul Shahadah\" means ____.",
+                options: ["Word of encouragement", "Bully word", "Word of testimony", "Word of command"],
                 answer: "C"
             },
             {
-                question: "The following are the classifications of Hadith except:",
-                options: ["Mawdu'", "Sahih", "Da'if"],
+                question: "The Qur'an was revealed to Prophet Muhammad for ____ years.",
+                options: ["33", "23", "43", "13"],
+                answer: "B"
+            },
+            {
+                question: "The Qur'an's preservation was carried out by the following except ____.",
+                options: ["Standardization", "Memorization", "Recording", "Recitation"],
                 answer: "A"
             },
             {
-                question: "Tayammum is performed by a Muslim when:",
-                options: ["Time of prayer has elapsed", "Access to water is very difficult", "He is in a hurry"],
-                answer: "B"
-            },
-            {
-                question: "Any Hadith whose message is directly from Allah is:",
-                options: ["Sahih", "Qudsi", "Gharib"],
-                answer: "B"
-            },
-            {
-                question: "A Hadith is referred to as Da'if because:",
-                options: ["It is a fabricated tradition", "It is supported with evidence", "It has defects in its Isnad and Matn"],
+                question: "The revelations were written on the following except ____.",
+                options: ["Stones", "Leather", "Paper", "Leaves"],
                 answer: "C"
             },
             {
-                question: "The 8th of Dhul-Hijjah is known as Tarwiyyah because it is:",
-                options: ["The beginning of Hajj", "Sacrifice day", "The first day of Tarwiyyah"],
+                question: "____ is the actual words of the Prophet as recorded in the report of Hadith.",
+                options: ["Isnad", "Rawi", "Sirah", "Matn"],
+                answer: "D"
+            },
+            {
+                question: "One of the traditions that cannot be used for legal matters is ____.",
+                options: ["Daif", "Isnad", "Hassan", "Sahih"],
                 answer: "A"
             },
             {
-                question: "The following are authors of Sihah Sitta except:",
-                options: ["Ibn Majah", "Ibn Malik", "Tirmidhi"],
+                question: "____ was the second source of Shari'ah.",
+                options: ["Muathib", "Hadith", "Sirah", "Qur'an"],
                 answer: "B"
             },
             {
-                question: "Excellent or sound Hadith are grouped under:",
-                options: ["Sahih", "Da'if", "Musnad"],
-                answer: "A"
-            },
-            {
-                question: "Who among the following is not a narrator of Hadith?",
-                options: ["Abu Sa'ad Malik", "Khadijah", "Abu Hurayrah"],
+                question: "____ is the sayings, deeds and silent approval of Prophet Muhammad (S.A.W).",
+                options: ["Sirah", "Hadith", "Fiqh", "Tafsir"],
                 answer: "B"
             },
             {
-                question: "Apart from cleanliness of the body and clothes, the devotee who intends to pray must also ensure the cleanliness of:",
-                options: ["Place", "Soul", "Qiblah"],
+                question: "The most popular idol worship by Quraysh during the Jahiliyyah period is ____.",
+                options: ["Hubbai", "Al-Manat", "Al-Lat", "Al-Uzza"],
                 answer: "A"
             },
             {
-                question: "Hajj combined with 'Umrah is known as:",
-                options: ["Ifrad", "Tamattu'", "Qiran"],
+                question: "Which among the following idols is called a chief deity of Ka'abah?",
+                options: ["Hubbai", "Al-Uzza", "Al-Lat", "Manat"],
+                answer: "A"
+            },
+            {
+                question: "The chapters of the Qur'an revealed to Prophet Muhammad in Makkah were ____ in number.",
+                options: ["93", "83", "73", "63"],
+                answer: "A"
+            },
+            {
+                question: "____ means a successor or representative that performs duties that ought to be done by his master.",
+                options: ["Imam", "Muadhin", "Khalifah", "Dalili"],
                 answer: "C"
             },
             {
-                question: "Pilgrims combine Salatul ______ and ______ in Muzdalifah:",
-                options: ["Asr and Maghrib", "Isha and Subh", "Maghrib and Isha"],
-                answer: "A"
+                question: "A person who worships other beings is called ____.",
+                options: ["Observer", "Idolater", "Giver", "Believer"],
+                answer: "B"
             },
             {
-                question: "Taharah simply means:",
-                options: ["Intention", "Prayer", "Purification"],
+                question: "Al-Qur'an is a divine book from ____.",
+                options: ["Angel", "Jinn", "Allah", "Messenger"],
                 answer: "C"
             },
             {
-                question: "Matn is the ___ of the Hadith",
-                options: ["Compiler", "Reporter", "Teaching"],
-                answer: "B"
-            },
-            {
-                question: "Khulafa'u Rashidun are ___ in number",
-                options: ["Four", "Three", "Five"],
+                question: "Which of these Hadith narrated the dialogue between the Prophet and Angel?",
+                options: ["Two", "One", "Five", "Four"],
                 answer: "A"
             },
             {
-                question: "Jinn were created out of ___",
-                options: ["Clay", "Dust", "Fire"],
+                question: "Into how many groups is Hadith classified?",
+                options: ["Two", "Three", "Four", "Five"],
+                answer: "A"
+            },
+            {
+                question: "The chain of narrators of Hadith is called:",
+                options: ["Hassan", "Isnad", "Daif", "Mursal"],
+                answer: "B"
+            },
+            {
+                question: "Al-Qur'an was compiled on the advice of:",
+                options: ["Khalid bn Walid", "Uthman bn Affan", "Bilal bn Rabah", "Umar bn Khattab"],
+                answer: "B"
+            },
+            {
+                question: "The preservation of al-Qur'an includes the following except:",
+                options: ["Recording", "Arrangement", "Italicization", "Memorization"],
                 answer: "C"
             },
             {
-                question: "The following vitiates ablution except ___",
-                options: ["Eating", "Deep sleep", "Passing wind"],
-                answer: "A"
-            },
-            {
-                question: "Angels were created from ___",
-                options: ["Dust", "Light", "Water"],
+                question: "\"Sahih\" means — Hadith:",
+                options: ["Weak", "Sound", "Fabricated", "Genuine"],
                 answer: "B"
             },
             {
-                question: "The following are obligatory acts of Hajj except ___",
-                options: ["Tawaf", "Arafah", "Talbiyyah"],
+                question: "Who among these Sahabah presided over compilation of Al-Qur'an?",
+                options: ["Abdullah bn Mas'ud", "Abdullah bn Abbas", "Zayd bn Thabit", "Abdullah bn Umar"],
                 answer: "C"
             },
             {
-                question: "The following are the sources of pure water except ___",
-                options: ["Sewage", "Stream", "River"],
-                answer: "A"
-            },
-            {
-                question: "The pilgrims go to Arafah on the ___ day of Dhul-Hijjah",
-                options: ["Ninth", "Eighth", "Tenth"],
-                answer: "A"
-            },
-            {
-                question: "Salatul-Tarawih is observed in the month of ___",
-                options: ["Rajab", "Ramadan", "Shawwal"],
+                question: "There are — types of revelations:",
+                options: ["Six", "Three", "Five", "Four"],
                 answer: "B"
             },
             {
-                question: "Sand ablution is known as ___",
-                options: ["Taharah", "Tashahud", "Wudu"],
+                question: "The following are collections of Hadith except:",
+                options: ["Tirmidhi", "Ibn Sina", "Bukhari", "Ibn Majah"],
+                answer: "B"
+            },
+            {
+                question: "The first revelation of Qur'an was found in Suratul:",
+                options: ["Alaq", "Falaq", "Naas", "Ikhlas"],
+                answer: "A"
+            },
+            {
+                question: "Which of the following is not a form of shirk according to the Qur'an?",
+                options: ["Heroism", "Monotheism", "Polytheism", "Atheism"],
+                answer: "B"
+            },
+            {
+                question: "The goddesses of the Jahiliyyah Arabs include all except:",
+                options: ["Al-Lata", "Al-Uzzah", "Al-Manat", "As-Samad"],
+                answer: "A"
+            },
+            {
+                question: "The reign of Caliph Uthman bn Affan is known for:",
+                options: ["Tax collection", "Hardship", "Standardization of the Qur'an", "Administration failure"],
                 answer: "C"
             },
             {
-                question: "The following are acts of Umrah except ___",
-                options: ["Talbiyyah", "Ziyarah", "Wuquful Arafah"],
-                answer: "B"
-            },
-            {
-                question: "Which of the following prayers has silent recitation?",
-                options: ["Subh", "Zuhr", "Jumu'ah"],
-                answer: "B"
-            },
-            {
-                question: "___ is the total submission to the will and commandment of Allah",
-                options: ["Islam", "Qiyas", "Mandub"],
-                answer: "A"
-            },
-            {
-                question: "Which of these Hadith narrates the dialogue with Prophet and Angel?",
-                options: ["Hadith 1", "Hadith 2", "Hadith 3"],
-                answer: "B"
-            },
-            {
-                question: "Tawhid refers to ___",
-                options: ["Attribute of Allah", "Oneness of Allah", "The principle of Allah"],
-                answer: "B"
-            },
-            {
-                question: "___ and ___ are the two principal sources of the religion of Islam",
-                options: ["Qiyas and Matn", "Qur'an and Sunnah", "Hadith and Ijtihad"],
-                answer: "B"
-            },
-            {
-                question: "Ulul-Azim are ___ in number",
-                options: ["Six", "Four", "Five"],
+                question: "The Prophet Muhammad became a prophet at — years:",
+                options: ["60 CE", "510 CE", "610 CE", "810 CE"],
                 answer: "C"
             },
             {
-                question: "Al-Qur'an contains ___ chapters",
-                options: ["119", "114", "121"],
+                question: "The first muezzin in Islam is:",
+                options: ["Amar", "Bilal", "Hamza", "Zayd"],
                 answer: "B"
             },
             {
-                question: "The first revelation of Qur'an talks about ___",
-                options: ["Education", "Knowledge", "Divorce"],
+                question: "The unity of Allah is expressed in Suratul:",
+                options: ["Kafirun", "Qadr", "Ikhlas", "Falaq"],
+                answer: "C"
+            },
+            {
+                question: "Khadijah married Muhammad (S.A.W) at the age of:",
+                options: ["20", "30", "40", "50"],
+                answer: "C"
+            },
+            {
+                question: "Al-Qur'an contains — chapters:",
+                options: ["113", "111", "114", "110"],
+                answer: "C"
+            },
+            {
+                question: "The first headquarter in the history of Islam is:",
+                options: ["Al-Arqaw", "Al-Akraam", "Baytul Maal", "Tawaf"],
                 answer: "A"
             },
             {
-                question: "The first convert to Islam after the first revelation is ___",
-                options: ["Khadijah", "Ali", "Umar"],
+                question: "The first convert to Islam after the first revelation is:",
+                options: ["Abu Bakr", "Khadijah", "Ali", "Umar"],
+                answer: "B"
+            },
+            {
+                question: "The main means of transport used by the Arabs in the desert was:",
+                options: ["Cattle", "Horse", "Camel", "Donkey"],
+                answer: "C"
+            },
+            {
+                question: "Muhammad's (S.A.W) marriage with Khadijah was blessed with:",
+                options: ["Two children", "Four children", "Six children", "Seven children"],
+                answer: "C"
+            },
+            {
+                question: "Hajjatul Wada'a means —",
+                options: ["Pilgrimage", "Departure", "Arrival", "Farewell"],
+                answer: "B"
+            },
+            {
+                question: "Umar b. Khattab was — Khalifah",
+                options: ["The first", "The third", "The fourth", "The second"],
+                answer: "D"
+            },
+            {
+                question: "Who advised the Prophet to dig a trench around the city of Madinah before the battle of Khandaq?",
+                options: ["Salman Rushd", "Salman al-Farisi", "Salman b. Zayd", "Zayd b. Thabit"],
+                answer: "B"
+            },
+            {
+                question: "The Islamic political system is on the basis of —",
+                options: ["Threat / force", "Fraud / deceit", "Justice / fair play", "Smartness"],
+                answer: "C"
+            },
+            {
+                question: "A non-Muslim living in an Islamic state is called —",
+                options: ["Ahl-Dhimmī", "Kafir", "Christian", "Ahl"],
+                answer: "B"
+            },
+            {
+                question: "The rightly guided Caliphs were known as —",
+                options: ["Al-Khulafā' al-Rāshidūn", "Al-Amin", "Al-Mu'minun", "Al-Siddiqun"],
+                answer: "A"
+            },
+            {
+                question: "Who first violated the treaty of Hudaybiyyah?",
+                options: ["Prophet Muhammad", "Prophet's followers", "The Makkans", "The Madinans"],
+                answer: "C"
+            },
+            {
+                question: "— is done in the mosque during the last ten days of Ramadan",
+                options: ["Fasting", "I'tikaf", "Tahajjud", "Quresh"],
+                answer: "B"
+            },
+            {
+                question: "Dhikr means —",
+                options: ["Remembrance of Allah", "Seclusion", "Praying", "Zakat"],
+                answer: "A"
+            },
+            {
+                question: "The position of leadership was named by the Prophet and the companions as —",
+                options: ["A trust", "Their right", "To share the national cake", "Prestigious position"],
                 answer: "A"
             }
         ];
@@ -1065,14 +1138,14 @@
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 45 * 60; // 45 minutes in seconds
+        let timeLeft = 50 * 60; // 50 minutes in seconds
         let questions = [];
 
         // Background images for rotation (Islamic theme)
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1512389142860-9c449e58a543?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
-            'https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80',
-            'https://images.unsplash.com/photo-1542884748-2b1c3b57d1a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+            'https://images.unsplash.com/photo-1564769625905-50e93615e769?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
         ];
 
         // DOM elements
@@ -1112,7 +1185,7 @@
         // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 45 * 60; // Reset to 45 minutes
+            timeLeft = 50 * 60; // Reset to 50 minutes
             
             // Show timer container and submit button
             document.getElementById('timer-container').style.display = 'block';
@@ -1136,7 +1209,7 @@
                 // Warning colors
                 if (timeLeft <= 600) { // 10 minutes left
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
-                } else if (timeLeft <= 1350) { // 22.5 minutes left
+                } else if (timeLeft <= 1500) { // 25 minutes left
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
                 }
             }, 1000);
@@ -1347,7 +1420,7 @@
                 radio.type = 'radio';
                 radio.name = `question-${index}`;
                 radio.id = optionId;
-                radio.value = String.fromCharCode(65 + optionIndex); // A, B, C
+                radio.value = String.fromCharCode(97 + optionIndex); // a, b, c, d (lowercase as in questions)
                 
                 // Check if this option was previously selected
                 if (userAnswers[index] === radio.value) {
@@ -1361,7 +1434,7 @@
                 
                 const label = document.createElement('label');
                 label.htmlFor = optionId;
-                label.textContent = `${String.fromCharCode(65 + optionIndex)}. ${option}`;
+                label.textContent = `${String.fromCharCode(97 + optionIndex)}) ${option}`;
                 
                 optionDiv.appendChild(radio);
                 optionDiv.appendChild(label);
@@ -1382,13 +1455,13 @@
             let score = 0;
             
             for (let i = 0; i < questions.length; i++) {
-                if (userAnswers[i] === questions[i].answer) {
+                if (userAnswers[i] === questions[i].answer.toLowerCase()) {
                     score++;
                 }
             }
             
             // Submit to Google Form WITHOUT showing score to student
-            submitToGoogleForm(studentName, "SS1 Islamic Studies - 2nd Term Mid-Term Test", `${score}/${questions.length}`);
+            submitToGoogleForm(studentName, "SS1 Islamic Studies - Mid-Term Test", `${score}/${questions.length}`);
             
             // Show submission status
             document.getElementById('submission-status').style.display = 'block';
