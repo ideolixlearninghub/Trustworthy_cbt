@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Mathematics SSS1 Examination</title>
+    <title>The Trustworthy College - Mathematics SSS1 C.A Test</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📐</text></svg>">
     <style>
-        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -21,7 +21,6 @@
             min-height: 100vh;
         }
         
-        /* Dimmed background overlay with mathematics theme */
         body::before {
             content: '';
             position: fixed;
@@ -33,12 +32,11 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.15;
+            opacity: 0.12;
             z-index: -1;
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container with mathematics theme (purple/blue) */
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -54,7 +52,6 @@
             backdrop-filter: blur(5px);
         }
         
-        /* Purple decorative border */
         .container::before {
             content: '';
             position: absolute;
@@ -66,7 +63,6 @@
             z-index: 2;
         }
         
-        /* Header */
         .header {
             text-align: center;
             padding-bottom: 25px;
@@ -127,7 +123,6 @@
             border: 1px solid #9b59b660;
         }
         
-        /* Sections */
         .section {
             display: none;
             padding: 25px;
@@ -143,7 +138,6 @@
             display: block;
         }
         
-        /* Welcome message */
         .welcome-message {
             background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(26, 42, 74, 0.7) 100%);
             padding: 35px;
@@ -171,7 +165,6 @@
             opacity: 0.1;
         }
         
-        /* Buttons */
         .btn {
             display: inline-block;
             background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
@@ -203,11 +196,17 @@
             transition: all 0.5s;
         }
         
-        .btn:hover {
+        .btn:hover:not(:disabled) {
             background: linear-gradient(135deg, #ae7ac9 0%, #9b59b6 100%);
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 10px 25px rgba(155, 89, 182, 0.5);
             color: #ffffff;
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
         }
         
         .btn-secondary {
@@ -215,7 +214,7 @@
             border-color: #3498db;
         }
         
-        .btn-secondary:hover {
+        .btn-secondary:hover:not(:disabled) {
             background: linear-gradient(135deg, #5dade2 0%, #3498db 100%);
         }
         
@@ -229,7 +228,6 @@
             margin-top: 35px;
         }
         
-        /* Form elements */
         .form-group {
             margin-bottom: 28px;
         }
@@ -270,7 +268,6 @@
             font-weight: 500;
         }
         
-        /* Instructions */
         .instructions {
             background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(26, 42, 74, 0.7) 100%);
             padding: 30px;
@@ -330,7 +327,6 @@
             top: -5px;
         }
         
-        /* Exam interface */
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
@@ -383,6 +379,7 @@
             display: none;
             border: 2px solid rgba(155, 89, 182, 0.5);
             font-family: 'Courier New', monospace;
+            transition: background 0.5s ease;
         }
         
         .submit-container {
@@ -450,12 +447,13 @@
             transform: translateX(100%);
         }
         
-        .option input {
+        .option input[type="radio"] {
             margin-right: 15px;
             width: 22px;
             height: 22px;
             cursor: pointer;
             accent-color: #9b59b6;
+            flex-shrink: 0;
         }
         
         .option label {
@@ -468,7 +466,6 @@
             line-height: 1.5;
         }
         
-        /* Question navigation */
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
@@ -547,7 +544,30 @@
             margin-top: 25px;
         }
         
-        /* Results section */
+        .progress-container {
+            margin: 20px 0;
+            background: rgba(26, 42, 74, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 10px;
+            border: 1px solid rgba(155, 89, 182, 0.3);
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #9b59b6, #3498db);
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        .progress-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #a3c6e4;
+            margin-top: 5px;
+        }
+        
         .results-container {
             text-align: center;
             padding: 40px;
@@ -573,6 +593,18 @@
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .completion-icon {
+            font-size: 5rem;
+            margin: 20px 0;
+            animation: bounceIn 0.6s ease;
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
         
         .student-info {
@@ -608,40 +640,32 @@
             border: 1px solid rgba(241, 196, 15, 0.5);
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .question-grid {
                 grid-template-columns: repeat(5, 1fr);
             }
-            
             .exam-controls {
                 flex-direction: column;
                 align-items: stretch;
             }
-            
             .navigation-buttons {
                 flex-direction: column;
                 gap: 15px;
             }
-            
             .btn {
                 width: 100%;
                 margin: 8px 0;
             }
-            
             .subject-title {
                 font-size: 1.8rem;
             }
-            
             .question-text {
                 font-size: 1.2rem;
             }
-            
             .container {
                 padding: 15px;
                 margin: 15px;
             }
-            
             .welcome-message, .instructions, .exam-content {
                 padding: 20px;
             }
@@ -652,17 +676,14 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 10px;
             }
-            
             .question-number {
                 width: 35px;
                 height: 35px;
                 font-size: 1rem;
             }
-            
             .subject-title {
                 font-size: 1.5rem;
             }
-            
             .results-container {
                 padding: 25px 15px;
             }
@@ -693,50 +714,68 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        
+        .keyboard-hint {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5d7e9e;
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(42, 26, 58, 0.3);
+            border-radius: 8px;
+            border: 1px dashed rgba(93, 126, 158, 0.3);
+        }
+        
+        .keyboard-hint kbd {
+            background: rgba(155, 89, 182, 0.2);
+            border: 1px solid rgba(155, 89, 182, 0.4);
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #c39bd3;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title">SSS1 MATHEMATICS EXAMINATION</h1>
-            <div class="exam-info">Second Term | 2025/2026 Session</div>
-            <div class="term-info">40 Questions | 30 Minutes</div>
+            <h1 class="subject-title">SSS1 MATHEMATICS C.A TEST</h1>
+            <div class="exam-info">Third Term | 2025/2026 Session</div>
+            <div class="term-info">40 Questions | ½ Mark Each | Total: 20 Marks | 40 Minutes</div>
         </div>
         
-        <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Mathematics Examination. This test covers Geometric Construction, Angles, Triangles, Quadrilaterals, Congruence, Locus, and Trigonometry. Demonstrate your understanding of mathematical principles and problem-solving. Best of luck."
+                "Welcome to The Trustworthy College Mathematics Continuous Assessment Test. This test covers Mensuration of Plane Shapes (Arc Length, Perimeter & Area of Sectors/Segments), Surface Areas and Volumes of Solids (Cube, Cuboid, Cylinder, Cone, Sphere, Hemisphere, Frustum), and Compound Solids. Demonstrate your understanding of mathematical principles and problem-solving. Best of luck."
             </div>
             <div class="btn-container">
-                <button id="start-exam-btn" class="btn">Start Examination</button>
+                <button id="start-exam-btn" class="btn">Start C.A Test</button>
             </div>
         </section>
         
-        <!-- Student Information Section -->
         <section id="student-info-section" class="section">
             <h2>Student Information</h2>
-            <p>Please provide your details to continue with the examination.</p>
+            <p>Please provide your details to continue with the test.</p>
             
-            <form id="student-info-form">
+            <form id="student-info-form" autocomplete="off">
                 <div class="form-group">
                     <label for="first-name">First Name *</label>
-                    <input type="text" id="first-name" required>
+                    <input type="text" id="first-name" required placeholder="Enter your first name">
                     <div class="error-message" id="first-name-error">First name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="middle-name">Middle Name *</label>
-                    <input type="text" id="middle-name" required>
+                    <input type="text" id="middle-name" required placeholder="Enter your middle name">
                     <div class="error-message" id="middle-name-error">Middle name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="last-name">Last Name *</label>
-                    <input type="text" id="last-name" required>
+                    <input type="text" id="last-name" required placeholder="Enter your last name">
                     <div class="error-message" id="last-name-error">Last name is required</div>
                 </div>
                 
@@ -747,23 +786,24 @@
             </form>
         </section>
         
-        <!-- Instructions Section -->
         <section id="instructions-section" class="section">
-            <h2>Examination Instructions</h2>
+            <h2>Test Instructions</h2>
             
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This examination consists of 40 multiple-choice questions covering Mathematics topics.</li>
-                    <li>You have 30 minutes to complete this examination.</li>
+                    <li>This C.A Test consists of <strong>40 multiple-choice questions</strong> covering Mensuration and Solid Geometry.</li>
+                    <li>Each question carries <strong>½ mark</strong>, giving a total of <strong>20 marks</strong>.</li>
+                    <li>You have <strong>40 minutes</strong> to complete this test.</li>
                     <li>Answer all questions to the best of your ability.</li>
-                    <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
-                    <li>Answered questions will be marked with orange in the question grid.</li>
-                    <li>Once you submit your answers, you cannot change them.</li>
-                    <li>Ensure you have a stable internet connection throughout the examination.</li>
+                    <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
+                    <li>You can also use <strong>keyboard shortcuts</strong>: Arrow keys to navigate, A/B/C/D keys to select answers.</li>
+                    <li>Answered questions will be marked with <strong>orange</strong> in the question grid.</li>
+                    <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
+                    <li>Ensure you have a stable internet connection throughout the test.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li>This is the Second Term Examination for the 2025/2026 Academic Session.</li>
+                    <li><strong>Do not refresh the page</strong> during the test, or you may lose your progress.</li>
                 </ul>
             </div>
             
@@ -773,38 +813,40 @@
             </div>
         </section>
         
-        <!-- Exam Interface Section -->
         <section id="exam-section" class="section">
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">Progress: 0/40 answered</div>
                 <div class="exam-controls">
                     <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">30:00</span>
+                        ⏱ Time Left: <span id="timer">40:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Test</button>
                     </div>
                 </div>
             </div>
             
             <div class="exam-content">
                 <div class="question-text" id="question-text"></div>
-                
-                <div class="options-container" id="options-container">
-                    <!-- Options will be populated by JavaScript -->
-                </div>
+                <div class="options-container" id="options-container"></div>
+            </div>
+            
+            <div class="keyboard-hint">
+                💡 Keyboard shortcuts: <kbd>←</kbd> <kbd>→</kbd> Navigate | <kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd> Select answer
             </div>
             
             <div class="question-navigation">
                 <h3>Question Navigation</h3>
-                <div class="question-grid" id="question-grid">
-                    <!-- Question numbers will be populated by JavaScript -->
-                </div>
+                <div class="question-grid" id="question-grid"></div>
                 
                 <div class="navigation-buttons">
-                    <button type="button" id="prev-question" class="btn btn-secondary">Previous</button>
-                    <button type="button" id="next-question" class="btn">Next</button>
+                    <button type="button" id="prev-question" class="btn btn-secondary">← Previous</button>
+                    <button type="button" id="next-question" class="btn">Next →</button>
                 </div>
             </div>
             
@@ -814,23 +856,23 @@
             </div>
         </section>
         
-        <!-- Results Section -->
         <section id="results-section" class="section">
             <div class="results-container">
-                <h2>Examination Completed</h2>
+                <h2>Test Completed</h2>
+                <div class="completion-icon">✅</div>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SSS1 Mathematics - Second Term 2025/2026</div>
+                <div class="subject" id="results-subject">SSS1 Mathematics - Third Term C.A Test 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the Mathematics examination. Your results have been submitted successfully to the examination board.
+                    Thank you for completing the Mathematics C.A Test. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    Your examination has been successfully submitted. Results will be communicated through appropriate channels.
+                    ✅ Your test has been successfully submitted.
                 </div>
                 
                 <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn">Take Another Exam</button>
+                    <button type="button" id="restart-exam" class="btn">Take Another Test</button>
                     <div class="back-home">
                         <a href="../index.html" class="btn btn-secondary">Back to Home</a>
                     </div>
@@ -840,243 +882,224 @@
     </div>
 
     <script>
-        // SSS1 MATHEMATICS - SECOND TERM 2025/2026
         const originalQuestions = [
-            // Geometric Construction and Instruments (Questions 1-4)
             {
-                question: "Which of the following instruments is mainly used for drawing circles and arcs?",
-                options: ["Protractor", "Compass", "Divider", "Set square"],
+                question: "The length of an arc subtending an angle of 60° in a circle of radius 21 cm is:",
+                options: ["11 cm", "22 cm", "33 cm", "44 cm"],
                 answer: "B"
             },
             {
-                question: "An angle of 60° can be constructed using",
-                options: ["Compass and ruler only", "Protractor only", "Divider only", "Set square only"],
+                question: "The perimeter of a semicircle of radius 14 cm is:",
+                options: ["44 cm", "72 cm", "88 cm", "132 cm"],
+                answer: "B"
+            },
+            {
+                question: "The area of a sector of angle 90° in a circle of radius 14 cm is:",
+                options: ["154 cm²", "308 cm²", "616 cm²", "77 cm²"],
                 answer: "A"
             },
             {
-                question: "The process of dividing an angle into two equal parts is called",
-                options: ["Trisection", "Bisection", "Division", "Measurement"],
-                answer: "B"
-            },
-            {
-                question: "Which instrument is used for measuring angles?",
-                options: ["Compass", "Protractor", "Divider", "Ruler"],
-                answer: "B"
-            },
-            
-            // Angles and Triangles (Questions 5-10)
-            {
-                question: "The sum of the angles in a triangle is",
-                options: ["90°", "180°", "270°", "360°"],
-                answer: "B"
-            },
-            {
-                question: "If two angles of a triangle are 40° and 60°, the third angle is",
-                options: ["70°", "80°", "90°", "100°"],
-                answer: "B"
-            },
-            {
-                question: "An exterior angle of a triangle is equal to",
-                options: ["Sum of interior angles", "Difference of interior angles", "Sum of two opposite interior angles", "Product of interior angles"],
-                answer: "C"
-            },
-            {
-                question: "Two parallel lines cut by a transversal produce equal",
-                options: ["Adjacent angles", "Corresponding angles", "Interior angles", "Exterior angles"],
-                answer: "B"
-            },
-            {
-                question: "Alternate interior angles between parallel lines are",
-                options: ["Equal", "Supplementary", "Complementary", "Different"],
+                question: "A sector is a region bounded by:",
+                options: ["Two radii and an arc", "Two chords and an arc", "A chord and a radius", "Two diameters"],
                 answer: "A"
             },
             {
-                question: "Angles on a straight line add up to",
-                options: ["90°", "180°", "270°", "360°"],
-                answer: "B"
-            },
-            
-            // Quadrilaterals (Questions 11-14)
-            {
-                question: "The sum of interior angles of a quadrilateral is",
-                options: ["180°", "270°", "360°", "540°"],
-                answer: "C"
-            },
-            {
-                question: "A quadrilateral with both pairs of opposite sides parallel is called",
-                options: ["Trapezium", "Kite", "Parallelogram", "Rhombus"],
-                answer: "C"
-            },
-            {
-                question: "Opposite angles of a parallelogram are",
-                options: ["Equal", "Supplementary", "Complementary", "Unequal"],
-                answer: "A"
-            },
-            {
-                question: "Diagonals of a parallelogram",
-                options: ["Are equal", "Bisect each other", "Are perpendicular", "Are unequal"],
-                answer: "B"
-            },
-            
-            // Congruence (Questions 15-17)
-            {
-                question: "Triangles that are identical in shape and size are",
-                options: ["Similar", "Congruent", "Equal", "Isosceles"],
+                question: "A segment of a circle is bounded by:",
+                options: ["Two radii", "A chord and an arc", "Two diameters", "A tangent and a radius"],
                 answer: "B"
             },
             {
-                question: "Congruent triangles have",
-                options: ["Equal angles only", "Equal sides only", "Equal corresponding sides and angles", "Equal area only"],
-                answer: "C"
-            },
-            {
-                question: "Which condition proves triangle congruency?",
-                options: ["AAA", "SAS", "SSA", "ASS"],
-                answer: "B"
-            },
-            
-            // Locus (Questions 18-20)
-            {
-                question: "A locus is defined as",
-                options: ["A fixed point", "Path of a moving point", "Straight line", "Angle measurement"],
-                answer: "B"
-            },
-            {
-                question: "The locus of points equidistant from two points is",
-                options: ["A circle", "A straight line", "Perpendicular bisector", "Angle bisector"],
-                answer: "C"
-            },
-            {
-                question: "The locus of points equidistant from two intersecting lines is",
-                options: ["Angle bisector", "Straight line", "Circle", "Triangle"],
-                answer: "A"
-            },
-            
-            // Trigonometry - Basic Ratios (Questions 21-25)
-            {
-                question: "The trigonometric ratio sin θ is defined as",
-                options: ["Opposite / Adjacent", "Adjacent / Hypotenuse", "Opposite / Hypotenuse", "Hypotenuse / Adjacent"],
-                answer: "C"
-            },
-            {
-                question: "The trigonometric ratio cos θ is",
-                options: ["Adjacent / Hypotenuse", "Opposite / Hypotenuse", "Opposite / Adjacent", "Hypotenuse / Opposite"],
-                answer: "A"
-            },
-            {
-                question: "The trigonometric ratio tan θ is",
-                options: ["Opposite / Hypotenuse", "Adjacent / Hypotenuse", "Opposite / Adjacent", "Hypotenuse / Adjacent"],
-                answer: "C"
-            },
-            {
-                question: "In a right-angled triangle, the longest side is the",
-                options: ["Adjacent", "Opposite", "Hypotenuse", "Base"],
-                answer: "C"
-            },
-            {
-                question: "If opposite side = 3 and hypotenuse = 5, then",
-                options: ["sinθ = 3/5", "sinθ = 5/3", "cosθ = 3/5", "tanθ = 5/3"],
-                answer: "A"
-            },
-            
-            // Trigonometry - Special Angles (Questions 26-35)
-            {
-                question: "sin 30° equals",
-                options: ["1", "1/2", "√3/2", "0"],
-                answer: "B"
-            },
-            {
-                question: "cos 60° equals",
-                options: ["1", "1/2", "√3/2", "0"],
-                answer: "B"
-            },
-            {
-                question: "sin 90° equals",
-                options: ["0", "1/2", "1", "√3/2"],
-                answer: "C"
-            },
-            {
-                question: "tan 45° equals",
-                options: ["0", "1", "√3", "1/2"],
-                answer: "B"
-            },
-            {
-                question: "cos 0° equals",
-                options: ["0", "1", "1/2", "√3"],
-                answer: "B"
-            },
-            {
-                question: "tan 60° equals",
-                options: ["1", "√3", "1/2", "0"],
-                answer: "B"
-            },
-            {
-                question: "sin 45° equals",
-                options: ["1/2", "√2/2", "√3/2", "1"],
-                answer: "B"
-            },
-            {
-                question: "cos 45° equals",
-                options: ["√2/2", "1/2", "√3/2", "1"],
-                answer: "A"
-            },
-            {
-                question: "tan 30° equals",
-                options: ["1/√3", "√3", "1", "1/2"],
-                answer: "A"
-            },
-            {
-                question: "Which of the following is a right angle?",
-                options: ["45°", "60°", "90°", "120°"],
-                answer: "C"
-            },
-            
-            // Angle Properties (Questions 36-38)
-            {
-                question: "The exterior angle of a triangle is always",
-                options: ["Greater than either interior opposite angle", "Equal to both interior angles", "Less than interior angles", "Equal to one interior angle"],
-                answer: "A"
-            },
-            {
-                question: "If two angles are complementary, their sum is",
-                options: ["90°", "180°", "270°", "360°"],
-                answer: "A"
-            },
-            {
-                question: "Angles around a point add up to",
-                options: ["90°", "180°", "270°", "360°"],
-                answer: "D"
-            },
-            
-            // Inverse Trigonometry and Theorems (Questions 39-40)
-            {
-                question: "If sinθ = 1/2, then θ equals",
+                question: "The angle subtended at the centre by an arc of length 11 cm in a circle of radius 21 cm is:",
                 options: ["30°", "45°", "60°", "90°"],
                 answer: "A"
             },
             {
-                question: "The intercept theorem is mainly related to",
-                options: ["Parallel lines", "Circles", "Angles", "Quadrilaterals"],
+                question: "The area of a semicircle of radius 14 cm is:",
+                options: ["154 cm²", "308 cm²", "616 cm²", "77 cm²"],
+                answer: "B"
+            },
+            {
+                question: "A cone can be formed by folding:",
+                options: ["A circle", "A rectangle", "A sector", "A triangle"],
+                answer: "C"
+            },
+            {
+                question: "In the sector-cone relationship, the radius of the sector becomes the:",
+                options: ["Base radius of cone", "Height of cone", "Slant height of cone", "Diameter of cone"],
+                answer: "C"
+            },
+            {
+                question: "The arc length of a sector used to form a cone becomes the:",
+                options: ["Height of cone", "Circumference of cone base", "Diameter of cone", "Volume of cone"],
+                answer: "B"
+            },
+            {
+                question: "The curved surface area of a cone is:",
+                options: ["πr²", "2πrh", "πrl", "πr²h"],
+                answer: "C"
+            },
+            {
+                question: "The total surface area of a cone is:",
+                options: ["πr² + πrl", "2πr²", "2πrh", "πrl"],
                 answer: "A"
+            },
+            {
+                question: "The total surface area of a cube of side 5 cm is:",
+                options: ["25 cm²", "100 cm²", "150 cm²", "125 cm²"],
+                answer: "C"
+            },
+            {
+                question: "The surface area of a cuboid measuring 4 cm × 3 cm × 2 cm is:",
+                options: ["52 cm²", "48 cm²", "24 cm²", "72 cm²"],
+                answer: "A"
+            },
+            {
+                question: "The curved surface area of a cylinder is:",
+                options: ["πr²", "2πrh", "πrl", "2πr²"],
+                answer: "B"
+            },
+            {
+                question: "The total surface area of a cylinder is:",
+                options: ["2πr(h+r)", "πr²h", "πrh", "πr²"],
+                answer: "A"
+            },
+            {
+                question: "The total surface area of a sphere of radius r is:",
+                options: ["2πr²", "3πr²", "4πr²", "6πr²"],
+                answer: "C"
+            },
+            {
+                question: "The total surface area of a hemisphere is:",
+                options: ["2πr²", "3πr²", "4πr²", "πr²"],
+                answer: "B"
+            },
+            {
+                question: "The volume of a cube of side 6 cm is:",
+                options: ["36 cm³", "72 cm³", "216 cm³", "144 cm³"],
+                answer: "C"
+            },
+            {
+                question: "The volume of a cuboid 8 cm × 4 cm × 3 cm is:",
+                options: ["96 cm³", "64 cm³", "84 cm³", "72 cm³"],
+                answer: "A"
+            },
+            {
+                question: "The volume of a cylinder of radius 7 cm and height 10 cm is:",
+                options: ["1540 cm³", "770 cm³", "490 cm³", "980 cm³"],
+                answer: "A"
+            },
+            {
+                question: "The volume of a cone is:",
+                options: ["πr²h", "½πr²h", "⅓πr²h", "¼πr²h"],
+                answer: "C"
+            },
+            {
+                question: "The volume of a sphere is:",
+                options: ["4πr³", "⅔πr³", "⁴⁄₃πr³", "πr³"],
+                answer: "C"
+            },
+            {
+                question: "The volume of a hemisphere is:",
+                options: ["⁴⁄₃πr³", "⅔πr³", "πr³", "⅓πr³"],
+                answer: "B"
+            },
+            {
+                question: "A cone and a cylinder having the same base radius and height are related by:",
+                options: ["Cone volume = Cylinder volume", "Cone volume = 2 × Cylinder volume", "Cone volume = ⅓ Cylinder volume", "Cone volume = ½ Cylinder volume"],
+                answer: "C"
+            },
+            {
+                question: "A frustum is obtained when:",
+                options: ["A cone is stretched", "The top of a cone is cut off parallel to the base", "Two cones are joined together", "A cylinder is divided"],
+                answer: "B"
+            },
+            {
+                question: "A frustum of a cone has:",
+                options: ["One circular face", "No circular face", "Two parallel circular faces", "Three circular faces"],
+                answer: "C"
+            },
+            {
+                question: "The volume of a frustum depends on:",
+                options: ["Only its height", "Only its radii", "Height and radii of both ends", "Diameter only"],
+                answer: "C"
+            },
+            {
+                question: "Which of the following is a compound solid?",
+                options: ["Cube", "Sphere", "Cylinder", "Cylinder joined to a hemisphere"],
+                answer: "D"
+            },
+            {
+                question: "The volume of a compound solid is obtained by:",
+                options: ["Multiplying all dimensions together", "Adding or subtracting volumes of simple solids", "Squaring dimensions", "Finding surface area only"],
+                answer: "B"
+            },
+            {
+                question: "The slant height of a cone of radius 5 cm and height 12 cm is:",
+                options: ["11 cm", "12 cm", "13 cm", "17 cm"],
+                answer: "C"
+            },
+            {
+                question: "The volume of a cone of radius 3 cm and height 7 cm is: (Take π = 22/7)",
+                options: ["66 cm³", "22 cm³", "44 cm³", "88 cm³"],
+                answer: "A"
+            },
+            {
+                question: "The volume of a sphere of radius 3 cm is approximately: (Take π = 3.14)",
+                options: ["113 cm³", "36 cm³", "226 cm³", "452 cm³"],
+                answer: "A"
+            },
+            {
+                question: "The curved surface area of a cylinder of radius 7 cm and height 10 cm is: (Take π = 22/7)",
+                options: ["440 cm²", "220 cm²", "154 cm²", "308 cm²"],
+                answer: "A"
+            },
+            {
+                question: "The total surface area of a cube with side 8 cm is:",
+                options: ["256 cm²", "384 cm²", "512 cm²", "768 cm²"],
+                answer: "B"
+            },
+            {
+                question: "A major sector is one whose central angle is:",
+                options: ["Less than 90°", "Less than 180°", "Greater than 180°", "Equal to 180°"],
+                answer: "C"
+            },
+            {
+                question: "A minor segment is smaller than:",
+                options: ["A sector of the same circle", "A major segment of the same circle", "A radius", "A diameter"],
+                answer: "B"
+            },
+            {
+                question: "The ratio of the volume of a sphere to that of a hemisphere of the same radius is:",
+                options: ["1 : 2", "2 : 1", "3 : 1", "4 : 1"],
+                answer: "B"
+            },
+            {
+                question: "The formula for the volume of a cylinder is:",
+                options: ["πr²h", "⅓πr²h", "2πrh", "πrl"],
+                answer: "A"
+            },
+            {
+                question: "The formula for the volume of a sphere is:",
+                options: ["πr²", "2πr²", "⁴⁄₃πr³", "πr³"],
+                answer: "C"
             }
         ];
 
-        // Application state
         let currentQuestionIndex = 0;
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 30 * 60; // 30 minutes in seconds
+        let timeLeft = 40 * 60;
         let questions = [];
+        let examStarted = false;
 
-        // Background images for rotation
         const backgroundImages = [
             'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
             'https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80'
+            'https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80',
+            'https://images.unsplash.com/photo-1558021212-51b6ecfa0db1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2083&q=80'
         ];
 
-        // DOM elements
         const sections = {
             welcome: document.getElementById('welcome-section'),
             studentInfo: document.getElementById('student-info-section'),
@@ -1085,7 +1108,6 @@
             results: document.getElementById('results-section')
         };
 
-        // Initialize background rotation
         let currentBgIndex = 0;
         function rotateBackground() {
             currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
@@ -1093,7 +1115,6 @@
         }
         setInterval(rotateBackground, 10000);
 
-        // Shuffle questions
         function shuffleQuestions() {
             questions = [...originalQuestions];
             for (let i = questions.length - 1; i > 0; i--) {
@@ -1103,13 +1124,13 @@
             userAnswers = Array(questions.length).fill(null);
         }
 
-        // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 30 * 60;
+            timeLeft = 40 * 60;
             
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
+            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%)';
             
             timerInterval = setInterval(() => {
                 timeLeft--;
@@ -1122,19 +1143,48 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    alert("Time's up! Your exam will be submitted automatically.");
-                    calculateScore();
-                }
-                
-                if (timeLeft <= 300) { // 5 minutes left
+                    alert("Time's up! Your test will be submitted automatically.");
+                    calculateScoreAndSubmit();
+                } else if (timeLeft <= 300) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
-                } else if (timeLeft <= 600) { // 10 minutes left
+                } else if (timeLeft <= 600) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
                 }
             }, 1000);
         }
 
-        // Navigation functions
+        document.addEventListener('visibilitychange', () => {
+            if (!examStarted) return;
+            
+            if (document.hidden) {
+                clearInterval(timerInterval);
+            } else {
+                if (document.getElementById('exam-section').classList.contains('active') && timeLeft > 0) {
+                    timerInterval = setInterval(() => {
+                        timeLeft--;
+                        const minutes = Math.floor(timeLeft / 60);
+                        const seconds = timeLeft % 60;
+                        document.getElementById('timer').textContent = 
+                            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                        
+                        if (timeLeft <= 0) {
+                            clearInterval(timerInterval);
+                            alert("Time's up! Your test will be submitted automatically.");
+                            calculateScoreAndSubmit();
+                        }
+                    }, 1000);
+                }
+            }
+        });
+
+        window.addEventListener('beforeunload', (e) => {
+            if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
+                e.preventDefault();
+                e.returnValue = 'You have an ongoing test. Are you sure you want to leave? Your progress may be lost.';
+                return e.returnValue;
+            }
+        });
+
         function showSection(sectionName) {
             Object.values(sections).forEach(section => {
                 section.classList.remove('active');
@@ -1145,10 +1195,18 @@
                 document.getElementById('timer-container').style.display = 'none';
                 document.getElementById('submit-container').style.display = 'none';
             }
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Event listeners
+        function updateProgress() {
+            const answeredCount = userAnswers.filter(answer => answer !== null).length;
+            const percentage = (answeredCount / questions.length) * 100;
+            
+            document.getElementById('progress-bar').style.width = percentage + '%';
+            document.getElementById('progress-text').textContent = 
+                `Progress: ${answeredCount}/${questions.length} answered`;
+        }
+
         document.getElementById('start-exam-btn').addEventListener('click', () => {
             showSection('studentInfo');
         });
@@ -1166,23 +1224,29 @@
             
             if (!firstName) {
                 document.getElementById('first-name-error').style.display = 'block';
+                document.getElementById('first-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('first-name-error').style.display = 'none';
+                document.getElementById('first-name').style.borderColor = '#5d7e9e';
             }
             
             if (!middleName) {
                 document.getElementById('middle-name-error').style.display = 'block';
+                document.getElementById('middle-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('middle-name-error').style.display = 'none';
+                document.getElementById('middle-name').style.borderColor = '#5d7e9e';
             }
             
             if (!lastName) {
                 document.getElementById('last-name-error').style.display = 'block';
+                document.getElementById('last-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('last-name-error').style.display = 'none';
+                document.getElementById('last-name').style.borderColor = '#5d7e9e';
             }
             
             if (isValid) {
@@ -1198,6 +1262,7 @@
         document.getElementById('begin-test').addEventListener('click', () => {
             shuffleQuestions();
             currentQuestionIndex = 0;
+            examStarted = true;
             
             document.getElementById('display-student-name').textContent = studentName;
             document.getElementById('results-student-name').textContent = studentName;
@@ -1205,6 +1270,7 @@
             createQuestionGrid();
             loadQuestion(currentQuestionIndex);
             startTimer();
+            updateProgress();
             showSection('exam');
         });
 
@@ -1222,20 +1288,66 @@
             }
         });
 
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('exam-section').classList.contains('active')) return;
+            if (e.target.tagName === 'INPUT' && e.target.type === 'text') return;
+            
+            if (e.key === 'ArrowLeft' && currentQuestionIndex > 0) {
+                e.preventDefault();
+                currentQuestionIndex--;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'ArrowRight' && currentQuestionIndex < questions.length - 1) {
+                e.preventDefault();
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'A' || e.key === 'a' || e.key === '1') {
+                e.preventDefault();
+                selectOptionByKey(0);
+            } else if (e.key === 'B' || e.key === 'b' || e.key === '2') {
+                e.preventDefault();
+                selectOptionByKey(1);
+            } else if (e.key === 'C' || e.key === 'c' || e.key === '3') {
+                e.preventDefault();
+                selectOptionByKey(2);
+            } else if (e.key === 'D' || e.key === 'd' || e.key === '4') {
+                e.preventDefault();
+                selectOptionByKey(3);
+            }
+        });
+
+        function selectOptionByKey(optionIndex) {
+            const radioButtons = document.querySelectorAll(`input[name="question-${currentQuestionIndex}"]`);
+            if (radioButtons[optionIndex]) {
+                radioButtons[optionIndex].checked = true;
+                userAnswers[currentQuestionIndex] = String.fromCharCode(65 + optionIndex);
+                updateQuestionGrid();
+                updateProgress();
+            }
+        }
+
         document.getElementById('submit-exam').addEventListener('click', () => {
-            const confirmed = confirm("Are you sure you want to submit? You will not be able to change your answers after this.");
+            const unanswered = userAnswers.filter(a => a === null).length;
+            let confirmMessage = "Are you sure you want to submit? You will not be able to change your answers after this.";
+            
+            if (unanswered > 0) {
+                confirmMessage += `\n\n⚠️ Warning: You have ${unanswered} unanswered question(s).`;
+            }
+            
+            const confirmed = confirm(confirmMessage);
             
             if (confirmed) {
                 clearInterval(timerInterval);
+                examStarted = false;
                 document.getElementById('loading').style.display = 'block';
                 setTimeout(() => {
-                    calculateScore();
+                    calculateScoreAndSubmit();
                 }, 1500);
             }
         });
 
         document.getElementById('restart-exam').addEventListener('click', () => {
             clearInterval(timerInterval);
+            examStarted = false;
             document.getElementById('first-name').value = '';
             document.getElementById('middle-name').value = '';
             document.getElementById('last-name').value = '';
@@ -1251,6 +1363,7 @@
                 questionNumber.className = 'question-number';
                 questionNumber.textContent = i + 1;
                 questionNumber.dataset.index = i;
+                questionNumber.title = `Question ${i + 1}`;
                 
                 if (userAnswers[i] !== null) {
                     questionNumber.classList.add('answered');
@@ -1295,6 +1408,8 @@
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
             
+            const labels = ['A', 'B', 'C', 'D'];
+            
             question.options.forEach((option, optionIndex) => {
                 const optionDiv = document.createElement('div');
                 optionDiv.className = 'option';
@@ -1305,7 +1420,7 @@
                 radio.type = 'radio';
                 radio.name = `question-${index}`;
                 radio.id = optionId;
-                radio.value = String.fromCharCode(65 + optionIndex);
+                radio.value = labels[optionIndex];
                 
                 if (userAnswers[index] === radio.value) {
                     radio.checked = true;
@@ -1314,11 +1429,21 @@
                 radio.addEventListener('change', () => {
                     userAnswers[index] = radio.value;
                     updateQuestionGrid();
+                    updateProgress();
                 });
                 
                 const label = document.createElement('label');
                 label.htmlFor = optionId;
-                label.textContent = `${String.fromCharCode(65 + optionIndex)}. ${option}`;
+                label.textContent = `${labels[optionIndex]}. ${option}`;
+                
+                optionDiv.addEventListener('click', (e) => {
+                    if (e.target !== radio) {
+                        radio.checked = true;
+                        userAnswers[index] = radio.value;
+                        updateQuestionGrid();
+                        updateProgress();
+                    }
+                });
                 
                 optionDiv.appendChild(radio);
                 optionDiv.appendChild(label);
@@ -1329,9 +1454,12 @@
             document.getElementById('next-question').disabled = index === questions.length - 1;
             
             updateQuestionGrid();
+            updateProgress();
+            
+            document.querySelector('.exam-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        function calculateScore() {
+        function calculateScoreAndSubmit() {
             document.getElementById('loading').style.display = 'none';
             let score = 0;
             
@@ -1341,7 +1469,12 @@
                 }
             }
             
-            submitToGoogleForm(studentName, "SSS1 Mathematics - Second Term 2025/2026", `${score}/${questions.length}`);
+            // Calculate half marks (each question is ½ mark)
+            const totalMarks = score * 0.5;
+            
+            // Submit score to Google Form ONLY - do NOT display to student
+            submitToGoogleForm(studentName, "SSS1 Mathematics - Third Term C.A Test 2025/2026", `${totalMarks}/20`);
+            
             document.getElementById('submission-status').style.display = 'block';
             showSection('results');
         }
