@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - English Language (Grammar) SSS1 Examination</title>
+    <title>The Trustworthy College - English Grammar SSS1 Midterm Test</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
     <style>
-        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -14,14 +14,13 @@
         }
         
         body {
-            background-color: #0a1a2a;
-            color: #f5e9dd;
+            background-color: #1a1a2e;
+            color: #e0e0f0;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
         }
         
-        /* Dimmed background overlay with literature theme */
         body::before {
             content: '';
             position: fixed;
@@ -33,17 +32,16 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.15;
+            opacity: 0.10;
             z-index: -1;
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container with English theme */
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #1a2a3a 0%, #2a3a4a 100%);
+            background: linear-gradient(135deg, #1a1a35 0%, #16213e 100%);
             box-shadow: 0 15px 40px rgba(52, 152, 219, 0.25);
             border-radius: 16px;
             margin-top: 25px;
@@ -54,7 +52,6 @@
             backdrop-filter: blur(5px);
         }
         
-        /* Blue decorative border */
         .container::before {
             content: '';
             position: absolute;
@@ -62,17 +59,33 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #3498db, #5dade2, #3498db);
+            background: linear-gradient(90deg, #2980b9, #3498db, #2980b9);
             z-index: 2;
         }
         
-        /* Header */
+        .container::after {
+            content: '📖';
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 2.5rem;
+            opacity: 0.06;
+            z-index: 0;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+        }
+        
         .header {
             text-align: center;
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
             border-bottom: 2px solid #3498db;
+            z-index: 1;
         }
         
         .header::after {
@@ -103,7 +116,7 @@
         }
         
         .subject-title {
-            color: #5dade2;
+            color: #85c1e9;
             font-size: 2.2rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
@@ -111,27 +124,28 @@
         }
         
         .exam-info {
-            color: #a0c8e6;
+            color: #a3c6e4;
             font-size: 1.1rem;
             margin-top: 5px;
         }
         
         .term-info {
-            background: linear-gradient(135deg, #3498db20, #5dade240);
+            background: linear-gradient(135deg, #3498db20, #2980b940);
             display: inline-block;
             padding: 8px 20px;
             border-radius: 30px;
             margin-top: 10px;
             font-weight: bold;
-            color: #5dade2;
+            color: #85c1e9;
             border: 1px solid #3498db60;
         }
         
-        /* Sections */
         .section {
             display: none;
             padding: 25px;
             animation: fadeIn 0.5s ease;
+            position: relative;
+            z-index: 1;
         }
         
         @keyframes fadeIn {
@@ -143,16 +157,15 @@
             display: block;
         }
         
-        /* Welcome message */
         .welcome-message {
-            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(42, 58, 74, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(22, 33, 62, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #f5e9dd;
+            color: #e0e0f0;
             border-left: 5px solid #3498db;
             border-right: 1px solid rgba(52, 152, 219, 0.3);
             border-top: 1px solid rgba(52, 152, 219, 0.2);
@@ -168,13 +181,12 @@
             top: 20px;
             right: 20px;
             font-size: 3rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
-        /* Buttons */
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            background: linear-gradient(135deg, #2980b9 0%, #2471a3 100%);
             color: #ffffff;
             border: none;
             padding: 15px 32px;
@@ -185,7 +197,7 @@
             margin: 12px 8px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(52, 152, 219, 0.5);
+            border: 2px solid rgba(41, 128, 185, 0.5);
             box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
             position: relative;
             overflow: hidden;
@@ -203,25 +215,35 @@
             transition: all 0.5s;
         }
         
-        .btn:hover {
-            background: linear-gradient(135deg, #5dade2 0%, #3498db 100%);
+        .btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 10px 25px rgba(52, 152, 219, 0.5);
             color: #ffffff;
         }
         
-        .btn-secondary {
-            background: linear-gradient(135deg, #5d6d7e 0%, #4a5f6e 100%);
-            border-color: #7f8c8d;
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
         }
         
-        .btn-secondary:hover {
-            background: linear-gradient(135deg, #7f8c8d 0%, #5d6d7e 100%);
+        .btn-secondary {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            border-color: #5d7e9e;
+        }
+        
+        .btn-secondary:hover:not(:disabled) {
+            background: linear-gradient(135deg, #3d566e 0%, #2c3e50 100%);
         }
         
         .btn-success {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            border-color: #229954;
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            border-color: #d35400;
+        }
+        
+        .btn-success:hover:not(:disabled) {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
         }
         
         .btn-container {
@@ -229,7 +251,6 @@
             margin-top: 35px;
         }
         
-        /* Form elements */
         .form-group {
             margin-bottom: 28px;
         }
@@ -238,7 +259,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #5dade2;
+            color: #85c1e9;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -246,11 +267,11 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(26, 42, 58, 0.7);
-            border: 2px solid #5d6d7e;
+            background: rgba(26, 26, 53, 0.7);
+            border: 2px solid #5d7e9e;
             border-radius: 10px;
             font-size: 1.1rem;
-            color: #f5e9dd;
+            color: #e0e0f0;
             transition: all 0.3s;
             font-family: inherit;
         }
@@ -259,7 +280,7 @@
             border-color: #3498db;
             outline: none;
             box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
-            background: rgba(26, 42, 58, 0.9);
+            background: rgba(26, 26, 53, 0.9);
         }
         
         .error-message {
@@ -270,9 +291,8 @@
             font-weight: 500;
         }
         
-        /* Instructions */
         .instructions {
-            background: linear-gradient(135deg, rgba(93, 109, 126, 0.1) 0%, rgba(42, 58, 74, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.08) 0%, rgba(22, 33, 62, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
@@ -288,12 +308,12 @@
             top: 20px;
             right: 20px;
             font-size: 2.5rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #5dade2;
+            color: #3498db;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -330,7 +350,6 @@
             top: -5px;
         }
         
-        /* Exam interface */
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
@@ -340,11 +359,11 @@
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #5dade2;
+            color: #85c1e9;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(93, 109, 126, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(41, 128, 185, 0.15) 100%);
             border-radius: 12px;
             border: 1px solid rgba(52, 152, 219, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -357,14 +376,14 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(26, 42, 58, 0.5);
+            background: rgba(26, 26, 53, 0.5);
             border-radius: 12px;
             border: 1px solid rgba(52, 152, 219, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #5dade2;
+            color: #85c1e9;
             font-weight: 600;
             padding: 10px 20px;
             background: rgba(52, 152, 219, 0.1);
@@ -373,7 +392,7 @@
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            background: linear-gradient(135deg, #2980b9 0%, #2471a3 100%);
             color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
@@ -381,8 +400,9 @@
             font-size: 1.3rem;
             box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
             display: none;
-            border: 2px solid rgba(52, 152, 219, 0.5);
+            border: 2px solid rgba(41, 128, 185, 0.5);
             font-family: 'Courier New', monospace;
+            transition: background 0.5s ease;
         }
         
         .submit-container {
@@ -391,7 +411,7 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(26, 42, 58, 0.4);
+            background: rgba(26, 26, 53, 0.4);
             padding: 30px;
             border-radius: 12px;
             border: 1px solid rgba(52, 152, 219, 0.2);
@@ -402,10 +422,10 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #5dade2;
+            color: #85c1e9;
             line-height: 1.6;
             padding: 20px;
-            background: rgba(93, 109, 126, 0.1);
+            background: rgba(52, 152, 219, 0.08);
             border-radius: 10px;
             border-left: 4px solid #3498db;
         }
@@ -421,8 +441,8 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(42, 58, 74, 0.5);
-            border: 1px solid rgba(93, 109, 126, 0.3);
+            background: rgba(22, 33, 62, 0.4);
+            border: 1px solid rgba(93, 126, 158, 0.3);
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -435,7 +455,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.08), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
@@ -450,12 +470,13 @@
             transform: translateX(100%);
         }
         
-        .option input {
+        .option input[type="radio"] {
             margin-right: 15px;
             width: 22px;
             height: 22px;
             cursor: pointer;
             accent-color: #3498db;
+            flex-shrink: 0;
         }
         
         .option label {
@@ -463,12 +484,11 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
-            color: #f5e9dd;
+            color: #e0e0f0;
             font-size: 1.1rem;
             line-height: 1.5;
         }
         
-        /* Question navigation */
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
@@ -477,7 +497,7 @@
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #5dade2;
+            color: #85c1e9;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -511,13 +531,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(93, 109, 126, 0.3) 0%, rgba(70, 86, 103, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(22, 33, 62, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
             border: 1px solid rgba(52, 152, 219, 0.3);
-            color: #f5e9dd;
+            color: #e0e0f0;
             font-size: 1.1rem;
         }
         
@@ -528,17 +548,17 @@
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            background: linear-gradient(135deg, #2980b9 0%, #2471a3 100%);
             color: #ffffff;
-            border-color: #5dade2;
+            border-color: #85c1e9;
             box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
             transform: scale(1.1);
         }
         
         .question-number.answered {
-            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: white;
-            border-color: #2ecc71;
+            border-color: #f39c12;
         }
         
         .navigation-buttons {
@@ -547,11 +567,46 @@
             margin-top: 25px;
         }
         
-        /* Results section */
+        .progress-container {
+            margin: 20px 0;
+            background: rgba(22, 33, 62, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 10px;
+            border: 1px solid rgba(52, 152, 219, 0.3);
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #2980b9, #3498db);
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        .progress-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #a3c6e4;
+            margin-top: 5px;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(52, 152, 219, 0.15);
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #85c1e9;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(26, 42, 58, 0.8) 0%, rgba(42, 58, 74, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(26, 26, 53, 0.8) 0%, rgba(22, 33, 62, 0.9) 100%);
             border-radius: 16px;
             border: 2px solid #3498db;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
@@ -565,14 +620,26 @@
             top: 20px;
             right: 20px;
             font-size: 4rem;
-            opacity: 0.1;
+            opacity: 0.06;
         }
         
         .results-container h2 {
-            color: #5dade2;
+            color: #85c1e9;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .completion-icon {
+            font-size: 5rem;
+            margin: 20px 0;
+            animation: bounceIn 0.6s ease;
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
         
         .student-info {
@@ -582,7 +649,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #a0c8e6;
+            color: #a3c6e4;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -590,10 +657,10 @@
         .feedback {
             font-size: 1.3rem;
             margin: 25px 0;
-            color: #f5e9dd;
+            color: #e0e0f0;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(52, 152, 219, 0.1);
+            background: rgba(52, 152, 219, 0.08);
             border-radius: 12px;
             border: 1px solid rgba(52, 152, 219, 0.3);
         }
@@ -601,47 +668,39 @@
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(39, 174, 96, 0.2) 0%, rgba(46, 204, 113, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(241, 196, 15, 0.15) 0%, rgba(243, 156, 18, 0.2) 100%);
             border-radius: 12px;
-            color: #2ecc71;
+            color: #f1c40f;
             font-size: 1.2rem;
-            border: 1px solid rgba(46, 204, 113, 0.5);
+            border: 1px solid rgba(241, 196, 15, 0.4);
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .question-grid {
                 grid-template-columns: repeat(5, 1fr);
             }
-            
             .exam-controls {
                 flex-direction: column;
                 align-items: stretch;
             }
-            
             .navigation-buttons {
                 flex-direction: column;
                 gap: 15px;
             }
-            
             .btn {
                 width: 100%;
                 margin: 8px 0;
             }
-            
             .subject-title {
                 font-size: 1.8rem;
             }
-            
             .question-text {
                 font-size: 1.2rem;
             }
-            
             .container {
                 padding: 15px;
                 margin: 15px;
             }
-            
             .welcome-message, .instructions, .exam-content {
                 padding: 20px;
             }
@@ -652,17 +711,14 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 10px;
             }
-            
             .question-number {
                 width: 35px;
                 height: 35px;
                 font-size: 1rem;
             }
-            
             .subject-title {
                 font-size: 1.5rem;
             }
-            
             .results-container {
                 padding: 25px 15px;
             }
@@ -693,50 +749,68 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        
+        .keyboard-hint {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5d7e9e;
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(26, 26, 53, 0.3);
+            border-radius: 8px;
+            border: 1px dashed rgba(93, 126, 158, 0.3);
+        }
+        
+        .keyboard-hint kbd {
+            background: rgba(52, 152, 219, 0.2);
+            border: 1px solid rgba(52, 152, 219, 0.4);
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #85c1e9;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title">SSS1 ENGLISH LANGUAGE (GRAMMAR)</h1>
-            <div class="exam-info">Second Term Examination | 2025/2026 Session</div>
-            <div class="term-info">41 Questions | 30 Minutes</div>
+            <h1 class="subject-title">SSS1 ENGLISH GRAMMAR MIDTERM TEST</h1>
+            <div class="exam-info">Third Term | 2025/2026 Session</div>
+            <div class="term-info">40 Objective Questions | 40 Minutes</div>
         </div>
         
-        <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College English Language (Grammar) Examination. This test covers Noun Phrase Structures, Tense Forms, Main and Subordinate Clauses, Adjective and Adverbial Clauses, and Verb Phrase Structures. Demonstrate your understanding of English grammar. Best of luck."
+                "Welcome to The Trustworthy College English Grammar Midterm Test. This test covers Noun Numbers (singular and plural forms), Noun Genders (masculine, feminine, common, neuter), Noun Cases (nominative, accusative, possessive, vocative), Nominalization (forming nouns from other word classes), Verb Phrases (auxiliary and main verbs), Noun Phrases (modifiers, headwords, qualifiers), and Tenses (present, past, future forms). Demonstrate your mastery of English grammar. Best of luck."
             </div>
             <div class="btn-container">
-                <button id="start-exam-btn" class="btn">Start Examination</button>
+                <button id="start-exam-btn" class="btn">Start Midterm Test</button>
             </div>
         </section>
         
-        <!-- Student Information Section -->
         <section id="student-info-section" class="section">
             <h2>Student Information</h2>
-            <p>Please provide your details to continue with the examination.</p>
+            <p>Please provide your details to continue with the test.</p>
             
-            <form id="student-info-form">
+            <form id="student-info-form" autocomplete="off">
                 <div class="form-group">
                     <label for="first-name">First Name *</label>
-                    <input type="text" id="first-name" required>
+                    <input type="text" id="first-name" required placeholder="Enter your first name">
                     <div class="error-message" id="first-name-error">First name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="middle-name">Middle Name *</label>
-                    <input type="text" id="middle-name" required>
+                    <input type="text" id="middle-name" required placeholder="Enter your middle name">
                     <div class="error-message" id="middle-name-error">Middle name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="last-name">Last Name *</label>
-                    <input type="text" id="last-name" required>
+                    <input type="text" id="last-name" required placeholder="Enter your last name">
                     <div class="error-message" id="last-name-error">Last name is required</div>
                 </div>
                 
@@ -747,23 +821,23 @@
             </form>
         </section>
         
-        <!-- Instructions Section -->
         <section id="instructions-section" class="section">
-            <h2>Examination Instructions</h2>
+            <h2>Test Instructions</h2>
             
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This examination consists of 41 multiple-choice questions covering English Grammar topics.</li>
-                    <li>You have 30 minutes to complete this examination.</li>
+                    <li>This Midterm Test consists of <strong>40 multiple-choice objective questions</strong> covering seven sections of English Grammar.</li>
+                    <li>You have <strong>40 minutes</strong> to complete this test.</li>
                     <li>Answer all questions to the best of your ability.</li>
-                    <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
-                    <li>Answered questions will be marked with green in the question grid.</li>
-                    <li>Once you submit your answers, you cannot change them.</li>
-                    <li>Ensure you have a stable internet connection throughout the examination.</li>
+                    <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
+                    <li>You can also use <strong>keyboard shortcuts</strong>: Arrow keys to navigate, A/B/C/D keys to select answers.</li>
+                    <li>Answered questions will be marked with <strong>orange</strong> in the question grid.</li>
+                    <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
+                    <li>Ensure you have a stable internet connection throughout the test.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li>This is the Second Term Examination for the 2025/2026 Academic Session.</li>
+                    <li><strong>Do not refresh the page</strong> during the test, or you may lose your progress.</li>
                 </ul>
             </div>
             
@@ -773,38 +847,41 @@
             </div>
         </section>
         
-        <!-- Exam Interface Section -->
         <section id="exam-section" class="section">
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
+                <div class="section-badge" id="section-badge">Section A: Noun Numbers</div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">Progress: 0/40 answered</div>
                 <div class="exam-controls">
-                    <div class="question-counter" id="question-counter">Question 1 of 41</div>
+                    <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">30:00</span>
+                        ⏱ Time Left: <span id="timer">40:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Test</button>
                     </div>
                 </div>
             </div>
             
             <div class="exam-content">
                 <div class="question-text" id="question-text"></div>
-                
-                <div class="options-container" id="options-container">
-                    <!-- Options will be populated by JavaScript -->
-                </div>
+                <div class="options-container" id="options-container"></div>
+            </div>
+            
+            <div class="keyboard-hint">
+                💡 Keyboard shortcuts: <kbd>←</kbd> <kbd>→</kbd> Navigate | <kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd> Select answer
             </div>
             
             <div class="question-navigation">
                 <h3>Question Navigation</h3>
-                <div class="question-grid" id="question-grid">
-                    <!-- Question numbers will be populated by JavaScript -->
-                </div>
+                <div class="question-grid" id="question-grid"></div>
                 
                 <div class="navigation-buttons">
-                    <button type="button" id="prev-question" class="btn btn-secondary">Previous</button>
-                    <button type="button" id="next-question" class="btn">Next</button>
+                    <button type="button" id="prev-question" class="btn btn-secondary">← Previous</button>
+                    <button type="button" id="next-question" class="btn">Next →</button>
                 </div>
             </div>
             
@@ -814,23 +891,23 @@
             </div>
         </section>
         
-        <!-- Results Section -->
         <section id="results-section" class="section">
             <div class="results-container">
-                <h2>Examination Completed</h2>
+                <h2>Test Completed</h2>
+                <div class="completion-icon">✅</div>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SSS1 English Language (Grammar) - Second Term 2025/2026</div>
+                <div class="subject" id="results-subject">SSS1 English Grammar - Third Term Midterm Test 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the English Language (Grammar) examination. Your results have been submitted successfully to the examination board.
+                    Thank you for completing the English Grammar Midterm Test. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    Your examination has been successfully submitted. Results will be communicated through appropriate channels.
+                    ✅ Your test has been successfully submitted.
                 </div>
                 
                 <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn">Take Another Exam</button>
+                    <button type="button" id="restart-exam" class="btn">Take Another Test</button>
                     <div class="back-home">
                         <a href="../index.html" class="btn btn-secondary">Back to Home</a>
                     </div>
@@ -840,240 +917,277 @@
     </div>
 
     <script>
-        // SSS1 ENGLISH LANGUAGE (GRAMMAR) - SECOND TERM 2025/2026
         const originalQuestions = [
-            // Section A: Noun Phrase Structures (Q1-8)
+            // SECTION A: NOUN NUMBERS (Q1-5)
             {
-                question: "The old man bought 'houses in Abuja.' (Identify the structure of the noun phrase in quotation marks.)",
-                options: ["M-H", "H-Q", "M-H-Q", "H-M"],
-                answer: "B"
+                question: "The plural form of <em>radius</em> is ______.",
+                options: ["radiuses", "radii", "radiuses", "radium"],
+                answer: "B",
+                section: "Section A: Noun Numbers"
             },
             {
-                question: "'Children' were playing in the field. (Identify the structure of the noun phrase in quotation marks.)",
-                options: ["H-Q", "H", "M-H", "Q-H"],
-                answer: "B"
+                question: "Which of the following is correctly matched?",
+                options: ["Child – childs", "Goose – gooses", "Tooth – teeth", "Sheep – sheeps"],
+                answer: "C",
+                section: "Section A: Noun Numbers"
             },
             {
-                question: "She adopted 'the boy with curly hair.' (Identify the structure of the noun phrase in quotation marks.)",
-                options: ["M-H", "H-Q", "M-H-Q", "H-M"],
-                answer: "C"
+                question: "The plural form of <em>analysis</em> is ______.",
+                options: ["analysises", "analyses", "analysis", "analyzies"],
+                answer: "B",
+                section: "Section A: Noun Numbers"
             },
             {
-                question: "I found 'the book you lost' under the table. (Identify the structure of the noun phrase in quotation marks.)",
-                options: ["M-H", "H-Q", "M-H-Q", "H"],
-                answer: "C"
+                question: "Which of the following nouns has the same form in singular and plural?",
+                options: ["Ox", "Deer", "Woman", "Foot"],
+                answer: "B",
+                section: "Section A: Noun Numbers"
             },
             {
-                question: "He is 'a doctor.' (Identify the structure of the noun phrase in quotation marks.)",
-                options: ["M-H", "H-Q", "M-H-Q", "Q-H"],
-                answer: "A"
-            },
-            {
-                question: "'The beautiful young lady in a red dress' is my aunt. (Identify the structure of the noun phrase in quotation marks.)",
-                options: ["M-H", "H-Q", "M-H-Q", "H"],
-                answer: "C"
-            },
-            {
-                question: "'Love' is a beautiful thing. (Identify the structure of the noun phrase in quotation marks.)",
-                options: ["H-Q", "M-H", "H", "Q-H"],
-                answer: "C"
-            },
-            {
-                question: "They bought 'some chairs.' (Identify the structure of the noun phrase in quotation marks.)",
-                options: ["M-H", "H-Q", "M-H-Q", "H"],
-                answer: "A"
+                question: "The correct plural form of <em>commander-in-chief</em> is ______.",
+                options: ["commanders-in-chief", "commander-in-chiefs", "commanderss-in-chief", "commander-in-chiefs"],
+                answer: "A",
+                section: "Section A: Noun Numbers"
             },
             
-            // Section B: Identification of Tense Forms (Q9-17)
+            // SECTION B: NOUN GENDERS (Q6-10)
             {
-                question: "Water boils at 100 degrees Celsius. (Identify the tense form of the underlined verb phrase.)",
-                options: ["Simple Present", "Present Continuous", "Simple Past", "Simple Future"],
-                answer: "A"
+                question: "The feminine gender of <em>wizard</em> is ______.",
+                options: ["witch", "widow", "mistress", "heroine"],
+                answer: "A",
+                section: "Section B: Noun Genders"
             },
             {
-                question: "The children were playing in the garden when it started to rain. (Identify the tense form of the underlined verb phrase.)",
-                options: ["Past Perfect", "Simple Past", "Past Continuous", "Present Continuous"],
-                answer: "C"
+                question: "Which of the following nouns is of common gender?",
+                options: ["Brother", "Hen", "Teacher", "Stallion"],
+                answer: "C",
+                section: "Section B: Noun Genders"
             },
             {
-                question: "By next month, I will have completed my project. (Identify the tense form of the underlined verb phrase.)",
-                options: ["Simple Future", "Future Continuous", "Future Perfect", "Future Perfect Continuous"],
-                answer: "C"
+                question: "The masculine form of <em>nun</em> is ______.",
+                options: ["monk", "lord", "priest", "wizard"],
+                answer: "A",
+                section: "Section B: Noun Genders"
             },
             {
-                question: "She has visited the museum three times this year. (Identify the tense form of the underlined verb phrase.)",
-                options: ["Simple Past", "Present Perfect", "Present Perfect Continuous", "Past Perfect"],
-                answer: "B"
+                question: "Which of the following is neuter gender?",
+                options: ["Lion", "Table", "Actress", "Uncle"],
+                answer: "B",
+                section: "Section B: Noun Genders"
             },
             {
-                question: "They are building a new house at the moment. (Identify the tense form of the underlined verb phrase.)",
-                options: ["Simple Present", "Present Continuous", "Present Perfect", "Present Perfect Continuous"],
-                answer: "B"
-            },
-            {
-                question: "The bus had left before we reached the station. (Identify the tense form of the underlined verb phrase.)",
-                options: ["Simple Past", "Past Continuous", "Past Perfect", "Present Perfect"],
-                answer: "C"
-            },
-            {
-                question: "We will be travelling to Abuja this time tomorrow. (Identify the tense form of the underlined verb phrase.)",
-                options: ["Simple Future", "Future Continuous", "Future Perfect", "Future Perfect Continuous"],
-                answer: "B"
-            },
-            {
-                question: "He has been waiting for the bus since morning. (Identify the tense form of the underlined verb phrase.)",
-                options: ["Present Perfect", "Present Perfect Continuous", "Past Perfect Continuous", "Present Continuous"],
-                answer: "B"
-            },
-            {
-                question: "The students wrote their examinations last week. (Identify the tense form of the underlined verb phrase.)",
-                options: ["Simple Present", "Simple Past", "Past Continuous", "Past Perfect"],
-                answer: "B"
+                question: "The feminine form of <em>landlord</em> is ______.",
+                options: ["landlady", "mistress", "madam", "duchess"],
+                answer: "A",
+                section: "Section B: Noun Genders"
             },
             
-            // Section C: Main and Subordinate Clauses (Q18-24)
+            // SECTION C: NOUN CASES (Q11-15)
             {
-                question: "The student WHO SAT AT THE BACK won the prize. (Identify the BOLD clause.)",
-                options: ["Main Clause", "Subordinate Clause (Noun)", "Subordinate Clause (Adjective)", "Subordinate Clause (Adverb)"],
-                answer: "C"
+                question: "In the sentence, <em>\"John kicked the ball,\"</em> the noun <em>John</em> is in the ______ case.",
+                options: ["possessive", "accusative", "nominative", "vocative"],
+                answer: "C",
+                section: "Section C: Noun Cases"
             },
             {
-                question: "WHEN THE RAIN STARTED, we were already indoors. (Identify the BOLD clause.)",
-                options: ["Main Clause", "Subordinate Clause (Noun)", "Subordinate Clause (Adjective)", "Subordinate Clause (Adverb)"],
-                answer: "D"
+                question: "In the sentence, <em>\"The girl's bag is missing,\"</em> the noun <em>girl's</em> is in the ______ case.",
+                options: ["vocative", "possessive", "nominative", "objective"],
+                answer: "B",
+                section: "Section C: Noun Cases"
             },
             {
-                question: "I KNOW that you are telling the truth. (Identify the BOLD clause.)",
-                options: ["Main Clause", "Subordinate Clause (Noun)", "Subordinate Clause (Adjective)", "Subordinate Clause (Adverb)"],
-                answer: "A"
+                question: "<em>\"Aisha, come here!\"</em> — The noun <em>Aisha</em> is in the ______ case.",
+                options: ["accusative", "possessive", "nominative", "vocative"],
+                answer: "D",
+                section: "Section C: Noun Cases"
             },
             {
-                question: "The children played in the park UNTIL IT GOT DARK. (Identify the BOLD clause.)",
-                options: ["Main Clause", "Subordinate Clause (Adjective)", "Subordinate Clause (Adverb)", "Subordinate Clause (Noun)"],
-                answer: "C"
+                question: "In the sentence, <em>\"The teacher punished the boy,\"</em> the noun <em>boy</em> is in the ______ case.",
+                options: ["nominative", "possessive", "objective", "vocative"],
+                answer: "C",
+                section: "Section C: Noun Cases"
             },
             {
-                question: "THE WOMAN CALLED THE POLICE as thieves were approaching her house. (Identify the BOLD clause.)",
-                options: ["Main Clause", "Subordinate Clause (Noun)", "Subordinate Clause (Adjective)", "Subordinate Clause (Adverb)"],
-                answer: "A"
-            },
-            {
-                question: "The reason WHY HE LEFT is still a mystery. (Identify the BOLD clause.)",
-                options: ["Main Clause", "Subordinate Clause (Noun)", "Subordinate Clause (Adjective)", "Subordinate Clause (Adverb)"],
-                answer: "C"
-            },
-            {
-                question: "ALTHOUGH HE WAS TIRED, he finished the race. (Identify the BOLD clause.)",
-                options: ["Main Clause", "Subordinate Clause (Adjective)", "Subordinate Clause (Adverb)", "Subordinate Clause (Noun)"],
-                answer: "C"
+                question: "Which sentence contains a noun in the possessive case?",
+                options: ["Musa is running fast.", "The dog barked loudly.", "Janet's phone is expensive.", "Come here, boys."],
+                answer: "C",
+                section: "Section C: Noun Cases"
             },
             
-            // Section D: Adjective and Adverbial Clauses (Q25-32)
+            // SECTION D: NOMINALIZATION (Q16-20)
             {
-                question: "The man WHO RESCUED THE CHILD is a hero. (Identify the clause.)",
-                options: ["Adverbial Clause of Reason", "Adjective Clause qualifying 'man'", "Noun Clause as object of 'is'", "Adverbial Clause of Time"],
-                answer: "B"
+                question: "The noun form of <em>decide</em> is ______.",
+                options: ["deciding", "decision", "decisive", "decider"],
+                answer: "B",
+                section: "Section D: Nominalization"
             },
             {
-                question: "She spoke AS IF SHE KNEW EVERYTHING. (Identify the clause and its function.)",
-                options: ["Adjective Clause modifying 'spoke'", "Noun Clause as object of 'spoke'", "Adverbial Clause of Manner modifying 'spoke'", "Adverbial Clause of Condition"],
-                answer: "C"
+                question: "Which of the following is a nominalized form?",
+                options: ["Beautiful", "Happiness", "Quickly", "Strong"],
+                answer: "B",
+                section: "Section D: Nominalization"
             },
             {
-                question: "This is the house THAT JACK BUILT. (Identify the clause.)",
-                options: ["Adverbial Clause of Place", "Adjective Clause qualifying 'house'", "Noun Clause in apposition to 'house'", "Main Clause"],
-                answer: "B"
+                question: "The noun form of <em>perform</em> is ______.",
+                options: ["performer", "performance", "performing", "performable"],
+                answer: "B",
+                section: "Section D: Nominalization"
             },
             {
-                question: "WHEREVER YOU GO, I will follow you. (Identify the clause and its function.)",
-                options: ["Adjective Clause modifying an understood 'place'", "Adverbial Clause of Place modifying 'will follow'", "Noun Clause as subject of the sentence", "Adverbial Clause of Concession"],
-                answer: "B"
+                question: "The word <em>movement</em> is formed from the verb ______.",
+                options: ["move", "moving", "mover", "movable"],
+                answer: "A",
+                section: "Section D: Nominalization"
             },
             {
-                question: "The student WHOSE PEN I BORROWED is not here. (Function of the clause.)",
-                options: ["To qualify the noun 'student'", "To act as the object of the verb 'borrowed'", "To modify the verb 'is'", "To function as an adverb of reason"],
-                answer: "A"
-            },
-            {
-                question: "He passed the exam BECAUSE HE STUDIED HARD. (Identify the clause and its function.)",
-                options: ["Adjective Clause qualifying 'exam'", "Noun Clause as object of 'passed'", "Adverbial Clause of Reason modifying 'passed'", "Adverbial Clause of Result"],
-                answer: "C"
-            },
-            {
-                question: "THE BOOK which you gave me IS INTERESTING. (Identify the clause.)",
-                options: ["Noun Clause", "Main Clause", "Adverbial Clause", "Adjective Clause"],
-                answer: "B"
-            },
-            {
-                question: "We left AFTER THE CEREMONY ENDED. (Function of the clause.)",
-                options: ["To act as an adjective modifying 'ceremony'", "To act as an adverb modifying the verb 'left'", "To act as a noun, the object of the preposition 'after'", "To act as the main verb of the sentence"],
-                answer: "B"
+                question: "Which of the following words is formed through nominalization?",
+                options: ["refusal", "refuse", "refusing", "refused"],
+                answer: "A",
+                section: "Section D: Nominalization"
             },
             
-            // Section E: Verb Phrase Structures (Q33-41)
+            // SECTION E: VERB PHRASES (Q21-28)
             {
-                question: "The prisoner must have been released by now. (Identify the structure of the verb phrase.)",
-                options: ["Aux + MV", "Aux + Aux + MV", "Aux + Aux + Aux + MV", "MV"],
-                answer: "C"
+                question: "Identify the verb phrase in the sentence: <em>\"The students have been studying seriously.\"</em>",
+                options: ["have been studying", "been studying", "studying seriously", "have studying"],
+                answer: "A",
+                section: "Section E: Verb Phrases"
             },
             {
-                question: "The children are playing in the garden. (Identify the structure of the verb phrase.)",
-                options: ["Aux + MV", "Aux + Aux + MV", "MV", "Aux + Aux + Aux + MV"],
-                answer: "A"
+                question: "How many auxiliary verbs are in the verb phrase <em>\"might have been working\"</em>?",
+                options: ["One", "Two", "Three", "Four"],
+                answer: "C",
+                section: "Section E: Verb Phrases"
             },
             {
-                question: "She has finished her assignment. (Identify the structure of the verb phrase.)",
-                options: ["MV", "Aux + MV", "Aux + Aux + MV", "Aux + Aux + Aux + MV"],
-                answer: "B"
+                question: "In the sentence, <em>\"She will have completed the work,\"</em> the verb phrase is ______.",
+                options: ["completed the work", "will have completed", "have completed", "will completed"],
+                answer: "B",
+                section: "Section E: Verb Phrases"
             },
             {
-                question: "By December, I will have been working here for ten years. (Identify the structure of the verb phrase.)",
-                options: ["Aux + MV", "Aux + Aux + MV", "Aux + Aux + Aux + MV", "MV"],
-                answer: "C"
+                question: "Which of the following contains only one auxiliary verb?",
+                options: ["has eaten", "may have gone", "will have been travelling", "should have been reading"],
+                answer: "A",
+                section: "Section E: Verb Phrases"
             },
             {
-                question: "The suspects might be hiding in the forest. (Identify the structure of the verb phrase.)",
-                options: ["Aux + MV", "Aux + Aux + MV", "Aux + Aux + Aux + MV", "MV"],
-                answer: "B"
+                question: "In the sentence, <em>\"They had been waiting for hours,\"</em> the main verb is ______.",
+                options: ["had", "been", "waiting", "for"],
+                answer: "C",
+                section: "Section E: Verb Phrases"
             },
             {
-                question: "He writes very well. (Identify the structure of the verb phrase.)",
-                options: ["Aux + MV", "MV", "Aux + Aux + MV", "Aux + Aux + Aux + MV"],
-                answer: "B"
+                question: "Which sentence contains three auxiliary verbs?",
+                options: ["She is singing.", "They have gone home.", "He will have been sleeping.", "We were dancing."],
+                answer: "C",
+                section: "Section E: Verb Phrases"
             },
             {
-                question: "The man could have been killed in the accident. (Identify the structure of the verb phrase.)",
-                options: ["Aux + MV", "Aux + Aux + MV", "Aux + Aux + Aux + MV", "MV"],
-                answer: "C"
+                question: "In the sentence, <em>\"The baby is crying loudly,\"</em> the auxiliary verb is ______.",
+                options: ["baby", "crying", "loudly", "is"],
+                answer: "D",
+                section: "Section E: Verb Phrases"
             },
             {
-                question: "We should go now. (Identify the structure of the verb phrase.)",
-                options: ["Aux + MV", "Aux + Aux + MV", "MV", "Aux + Aux + Aux + MV"],
-                answer: "A"
+                question: "Identify the verb phrase in the sentence below: <em>\"Our principal may soon announce the result.\"</em>",
+                options: ["may soon announce", "soon announce", "announce the result", "may result"],
+                answer: "A",
+                section: "Section E: Verb Phrases"
+            },
+            
+            // SECTION F: NOUN PHRASES (Q29-34)
+            {
+                question: "In the noun phrase <em>\"the tall boy,\"</em> the word <em>boy</em> is the ______.",
+                options: ["modifier", "qualifier", "headword", "auxiliary"],
+                answer: "C",
+                section: "Section F: Noun Phrases"
             },
             {
-                question: "The movie had started before we arrived. (Identify the structure of the verb phrase.)",
-                options: ["MV", "Aux + MV", "Aux + Aux + MV", "Aux + Aux + Aux + MV"],
-                answer: "B"
+                question: "Which of the following noun phrases has the pattern mh?",
+                options: ["students in the class", "beautiful flower", "the very tall man", "books on the table"],
+                answer: "C",
+                section: "Section F: Noun Phrases"
+            },
+            {
+                question: "In the noun phrase <em>\"the man in the office,\"</em> the expression <em>in the office</em> functions as the ______.",
+                options: ["modifier", "headword", "qualifier", "auxiliary"],
+                answer: "C",
+                section: "Section F: Noun Phrases"
+            },
+            {
+                question: "Which of the following noun phrases has the pattern mhq?",
+                options: ["old car", "the woman beside the gate", "students", "three books"],
+                answer: "B",
+                section: "Section F: Noun Phrases"
+            },
+            {
+                question: "In the noun phrase <em>\"those brilliant students in the hall,\"</em> the headword is ______.",
+                options: ["those", "brilliant", "students", "hall"],
+                answer: "C",
+                section: "Section F: Noun Phrases"
+            },
+            {
+                question: "Which part of a noun phrase gives additional information after the headword?",
+                options: ["Modifier", "Qualifier", "Determiner", "Auxiliary"],
+                answer: "B",
+                section: "Section F: Noun Phrases"
+            },
+            
+            // SECTION G: TENSES (Q35-40)
+            {
+                question: "<em>\"She writes beautifully.\"</em> — This sentence is in the ______ tense.",
+                options: ["present continuous", "simple present", "present perfect", "past continuous"],
+                answer: "B",
+                section: "Section G: Tenses"
+            },
+            {
+                question: "<em>\"They were playing football when I arrived.\"</em> — The tense used is ______.",
+                options: ["simple past", "past perfect", "past continuous", "present continuous"],
+                answer: "C",
+                section: "Section G: Tenses"
+            },
+            {
+                question: "<em>\"By next week, we shall have finished the project.\"</em> — This sentence is in the ______ tense.",
+                options: ["future continuous", "future perfect", "present perfect", "simple future"],
+                answer: "B",
+                section: "Section G: Tenses"
+            },
+            {
+                question: "Which sentence is in the present perfect tense?",
+                options: ["I ate rice yesterday.", "I am eating rice.", "I have eaten rice.", "I will eat rice."],
+                answer: "C",
+                section: "Section G: Tenses"
+            },
+            {
+                question: "<em>\"The children have been dancing for two hours.\"</em> — The tense used is ______.",
+                options: ["present perfect continuous", "past perfect continuous", "simple present", "future continuous"],
+                answer: "A",
+                section: "Section G: Tenses"
+            },
+            {
+                question: "Which sentence is in the simple future tense?",
+                options: ["She is singing.", "She sang yesterday.", "She has sung already.", "She will sing tomorrow."],
+                answer: "D",
+                section: "Section G: Tenses"
             }
         ];
 
-        // Application state
         let currentQuestionIndex = 0;
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 30 * 60; // 30 minutes in seconds
+        let timeLeft = 40 * 60;
         let questions = [];
+        let examStarted = false;
 
-        // Background images for rotation
         const backgroundImages = [
             'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80',
+            'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
             'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2022&q=80',
-            'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
+            'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=2028&q=80'
         ];
 
-        // DOM elements
         const sections = {
             welcome: document.getElementById('welcome-section'),
             studentInfo: document.getElementById('student-info-section'),
@@ -1082,7 +1196,6 @@
             results: document.getElementById('results-section')
         };
 
-        // Initialize background rotation
         let currentBgIndex = 0;
         function rotateBackground() {
             currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
@@ -1090,7 +1203,6 @@
         }
         setInterval(rotateBackground, 10000);
 
-        // Shuffle questions
         function shuffleQuestions() {
             questions = [...originalQuestions];
             for (let i = questions.length - 1; i > 0; i--) {
@@ -1100,13 +1212,13 @@
             userAnswers = Array(questions.length).fill(null);
         }
 
-        // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 30 * 60;
+            timeLeft = 40 * 60;
             
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
+            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #2980b9 0%, #2471a3 100%)';
             
             timerInterval = setInterval(() => {
                 timeLeft--;
@@ -1119,19 +1231,48 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    alert("Time's up! Your exam will be submitted automatically.");
-                    calculateScore();
-                }
-                
-                if (timeLeft <= 300) { // 5 minutes left
+                    alert("Time's up! Your test will be submitted automatically.");
+                    calculateScoreAndSubmit();
+                } else if (timeLeft <= 300) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
-                } else if (timeLeft <= 600) { // 10 minutes left
-                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
+                } else if (timeLeft <= 600) {
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e67e22 0%, #d35400 100%)';
                 }
             }, 1000);
         }
 
-        // Navigation functions
+        document.addEventListener('visibilitychange', () => {
+            if (!examStarted) return;
+            
+            if (document.hidden) {
+                clearInterval(timerInterval);
+            } else {
+                if (document.getElementById('exam-section').classList.contains('active') && timeLeft > 0) {
+                    timerInterval = setInterval(() => {
+                        timeLeft--;
+                        const minutes = Math.floor(timeLeft / 60);
+                        const seconds = timeLeft % 60;
+                        document.getElementById('timer').textContent = 
+                            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                        
+                        if (timeLeft <= 0) {
+                            clearInterval(timerInterval);
+                            alert("Time's up! Your test will be submitted automatically.");
+                            calculateScoreAndSubmit();
+                        }
+                    }, 1000);
+                }
+            }
+        });
+
+        window.addEventListener('beforeunload', (e) => {
+            if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
+                e.preventDefault();
+                e.returnValue = 'You have an ongoing test. Are you sure you want to leave? Your progress may be lost.';
+                return e.returnValue;
+            }
+        });
+
         function showSection(sectionName) {
             Object.values(sections).forEach(section => {
                 section.classList.remove('active');
@@ -1142,10 +1283,23 @@
                 document.getElementById('timer-container').style.display = 'none';
                 document.getElementById('submit-container').style.display = 'none';
             }
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Event listeners
+        function updateProgress() {
+            const answeredCount = userAnswers.filter(answer => answer !== null).length;
+            const percentage = (answeredCount / questions.length) * 100;
+            
+            document.getElementById('progress-bar').style.width = percentage + '%';
+            document.getElementById('progress-text').textContent = 
+                `Progress: ${answeredCount}/${questions.length} answered`;
+        }
+
+        function updateSectionBadge(index) {
+            const section = questions[index].section;
+            document.getElementById('section-badge').textContent = section;
+        }
+
         document.getElementById('start-exam-btn').addEventListener('click', () => {
             showSection('studentInfo');
         });
@@ -1163,23 +1317,29 @@
             
             if (!firstName) {
                 document.getElementById('first-name-error').style.display = 'block';
+                document.getElementById('first-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('first-name-error').style.display = 'none';
+                document.getElementById('first-name').style.borderColor = '#5d7e9e';
             }
             
             if (!middleName) {
                 document.getElementById('middle-name-error').style.display = 'block';
+                document.getElementById('middle-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('middle-name-error').style.display = 'none';
+                document.getElementById('middle-name').style.borderColor = '#5d7e9e';
             }
             
             if (!lastName) {
                 document.getElementById('last-name-error').style.display = 'block';
+                document.getElementById('last-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('last-name-error').style.display = 'none';
+                document.getElementById('last-name').style.borderColor = '#5d7e9e';
             }
             
             if (isValid) {
@@ -1195,6 +1355,7 @@
         document.getElementById('begin-test').addEventListener('click', () => {
             shuffleQuestions();
             currentQuestionIndex = 0;
+            examStarted = true;
             
             document.getElementById('display-student-name').textContent = studentName;
             document.getElementById('results-student-name').textContent = studentName;
@@ -1202,6 +1363,8 @@
             createQuestionGrid();
             loadQuestion(currentQuestionIndex);
             startTimer();
+            updateProgress();
+            updateSectionBadge(currentQuestionIndex);
             showSection('exam');
         });
 
@@ -1219,20 +1382,66 @@
             }
         });
 
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('exam-section').classList.contains('active')) return;
+            if (e.target.tagName === 'INPUT' && e.target.type === 'text') return;
+            
+            if (e.key === 'ArrowLeft' && currentQuestionIndex > 0) {
+                e.preventDefault();
+                currentQuestionIndex--;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'ArrowRight' && currentQuestionIndex < questions.length - 1) {
+                e.preventDefault();
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'A' || e.key === 'a' || e.key === '1') {
+                e.preventDefault();
+                selectOptionByKey(0);
+            } else if (e.key === 'B' || e.key === 'b' || e.key === '2') {
+                e.preventDefault();
+                selectOptionByKey(1);
+            } else if (e.key === 'C' || e.key === 'c' || e.key === '3') {
+                e.preventDefault();
+                selectOptionByKey(2);
+            } else if (e.key === 'D' || e.key === 'd' || e.key === '4') {
+                e.preventDefault();
+                selectOptionByKey(3);
+            }
+        });
+
+        function selectOptionByKey(optionIndex) {
+            const radioButtons = document.querySelectorAll(`input[name="question-${currentQuestionIndex}"]`);
+            if (radioButtons[optionIndex]) {
+                radioButtons[optionIndex].checked = true;
+                userAnswers[currentQuestionIndex] = String.fromCharCode(65 + optionIndex);
+                updateQuestionGrid();
+                updateProgress();
+            }
+        }
+
         document.getElementById('submit-exam').addEventListener('click', () => {
-            const confirmed = confirm("Are you sure you want to submit? You will not be able to change your answers after this.");
+            const unanswered = userAnswers.filter(a => a === null).length;
+            let confirmMessage = "Are you sure you want to submit? You will not be able to change your answers after this.";
+            
+            if (unanswered > 0) {
+                confirmMessage += `\n\n⚠️ Warning: You have ${unanswered} unanswered question(s).`;
+            }
+            
+            const confirmed = confirm(confirmMessage);
             
             if (confirmed) {
                 clearInterval(timerInterval);
+                examStarted = false;
                 document.getElementById('loading').style.display = 'block';
                 setTimeout(() => {
-                    calculateScore();
+                    calculateScoreAndSubmit();
                 }, 1500);
             }
         });
 
         document.getElementById('restart-exam').addEventListener('click', () => {
             clearInterval(timerInterval);
+            examStarted = false;
             document.getElementById('first-name').value = '';
             document.getElementById('middle-name').value = '';
             document.getElementById('last-name').value = '';
@@ -1248,6 +1457,7 @@
                 questionNumber.className = 'question-number';
                 questionNumber.textContent = i + 1;
                 questionNumber.dataset.index = i;
+                questionNumber.title = `Question ${i + 1} - ${questions[i].section}`;
                 
                 if (userAnswers[i] !== null) {
                     questionNumber.classList.add('answered');
@@ -1287,10 +1497,14 @@
             const question = questions[index];
             
             document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
-            document.getElementById('question-text').textContent = question.question;
+            document.getElementById('question-text').innerHTML = question.question;
+            
+            updateSectionBadge(index);
             
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
+            
+            const labels = ['A', 'B', 'C', 'D'];
             
             question.options.forEach((option, optionIndex) => {
                 const optionDiv = document.createElement('div');
@@ -1302,7 +1516,7 @@
                 radio.type = 'radio';
                 radio.name = `question-${index}`;
                 radio.id = optionId;
-                radio.value = String.fromCharCode(65 + optionIndex);
+                radio.value = labels[optionIndex];
                 
                 if (userAnswers[index] === radio.value) {
                     radio.checked = true;
@@ -1311,11 +1525,21 @@
                 radio.addEventListener('change', () => {
                     userAnswers[index] = radio.value;
                     updateQuestionGrid();
+                    updateProgress();
                 });
                 
                 const label = document.createElement('label');
                 label.htmlFor = optionId;
-                label.textContent = `${String.fromCharCode(65 + optionIndex)}. ${option}`;
+                label.textContent = `${labels[optionIndex]}. ${option}`;
+                
+                optionDiv.addEventListener('click', (e) => {
+                    if (e.target !== radio) {
+                        radio.checked = true;
+                        userAnswers[index] = radio.value;
+                        updateQuestionGrid();
+                        updateProgress();
+                    }
+                });
                 
                 optionDiv.appendChild(radio);
                 optionDiv.appendChild(label);
@@ -1326,9 +1550,12 @@
             document.getElementById('next-question').disabled = index === questions.length - 1;
             
             updateQuestionGrid();
+            updateProgress();
+            
+            document.querySelector('.exam-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        function calculateScore() {
+        function calculateScoreAndSubmit() {
             document.getElementById('loading').style.display = 'none';
             let score = 0;
             
@@ -1338,7 +1565,9 @@
                 }
             }
             
-            submitToGoogleForm(studentName, "SSS1 English Language (Grammar) - Second Term 2025/2026", `${score}/${questions.length}`);
+            // Submit score to Google Form ONLY - do NOT display to student
+            submitToGoogleForm(studentName, "SSS1 English Grammar - Third Term Midterm Test 2025/2026", `${score}/40`);
+            
             document.getElementById('submission-status').style.display = 'block';
             showSection('results');
         }
