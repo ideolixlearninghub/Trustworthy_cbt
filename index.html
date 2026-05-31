@@ -3,1308 +3,1568 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trustworthy College CBT Examination Portal</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>The Trustworthy College - Mathematics SSS1 C.A Test</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📐</text></svg>">
     <style>
-        /* Modern CSS Reset */
+        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
         }
-
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #2c1810 0%, #3a2418 100%);
-            color: #e0d6d0;
+            background-color: #1a1a2a;
+            color: #e0e0f0;
             line-height: 1.6;
+            position: relative;
             min-height: 100vh;
-            overflow-x: hidden;
         }
-
-        /* Header with gradient */
-        .header {
-            background: linear-gradient(135deg, #4a2c1a 0%, #3a2418 30%, #2c1810 100%);
-            padding: 1.5rem 0;
-            box-shadow: 0 4px 25px rgba(44, 24, 16, 0.5);
-            position: relative;
-            overflow: hidden;
-            border-bottom: 3px solid #8b4513;
-        }
-
-        .header::before {
+        
+        /* Dimmed background overlay with mathematics theme */
+        body::before {
             content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(139, 69, 19, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(139, 69, 19, 0.1) 0%, transparent 50%);
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            padding: 0 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .logo-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .logo {
-            width: 150px;
-            height: 150px;
-            border-radius: 10px;
-            background: white;
-            padding: 10px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-            border: 4px solid #d2691e;
-            transition: all 0.4s ease;
-            margin-bottom: 10px;
-        }
-
-        .logo:hover {
-            transform: scale(1.05) rotate(2deg);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
-        }
-
-        .logo-text {
-            color: #ffcc99;
-            font-size: 0.9rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            text-align: center;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .school-info {
-            text-align: center;
-            padding: 10px 0;
-        }
-
-        .school-name {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 5px;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-            letter-spacing: 2px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .school-name::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 3px;
-            background: linear-gradient(to right, #8b4513, #d2691e, #8b4513);
-            border-radius: 2px;
-        }
-
-        .school-tagline {
-            font-size: 1.4rem;
-            color: #d2b48c;
-            font-weight: 400;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-top: 15px;
-        }
-
-        /* Password Overlay */
-        .password-overlay {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(28, 15, 8, 0.98);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
+            background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.12;
+            z-index: -1;
+            transition: background-image 1.5s ease-in-out;
         }
-
-        .password-container {
-            background: linear-gradient(135deg, #3a2418 0%, #4a2c1a 100%);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-            border: 3px solid #8b4513;
-            text-align: center;
-            max-width: 500px;
-            width: 90%;
-            animation: fadeIn 0.6s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .password-icon {
-            font-size: 4rem;
-            color: #d2691e;
+        
+        /* Container with mathematics theme (purple/blue) */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 25px;
+            background: linear-gradient(135deg, #2a1a3a 0%, #1a2a4a 100%);
+            box-shadow: 0 15px 40px rgba(142, 68, 173, 0.25);
+            border-radius: 16px;
+            margin-top: 25px;
             margin-bottom: 25px;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-        }
-
-        .password-title {
-            color: #ffcc99;
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-        }
-
-        .password-subtitle {
-            color: #d2b48c;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
-
-        .password-input-container {
             position: relative;
-            margin: 30px 0;
+            overflow: hidden;
+            border: 3px solid #9b59b6;
+            backdrop-filter: blur(5px);
         }
-
-        .password-input {
-            width: 100%;
-            padding: 18px 20px;
-            background: rgba(28, 15, 8, 0.9);
-            border: 2px solid #5a3825;
-            border-radius: 12px;
-            color: #fff;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
-
-        .password-input:focus {
-            outline: none;
-            border-color: #d2691e;
-            box-shadow: 0 0 0 3px rgba(210, 105, 30, 0.3);
-        }
-
-        .password-input::placeholder {
-            color: #a1887f;
-        }
-
-        .toggle-password {
+        
+        /* Purple decorative border */
+        .container::before {
+            content: '';
             position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            color: #d2b48c;
-            cursor: pointer;
-            font-size: 1.2rem;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #9b59b6, #3498db, #9b59b6);
+            z-index: 2;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+            position: relative;
+            border-bottom: 2px solid #9b59b6;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #9b59b6, transparent);
+        }
+        
+        .logo {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            border-radius: 10px;
+            border: 3px solid #9b59b6;
             padding: 5px;
-            transition: color 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
         }
-
-        .toggle-password:hover {
-            color: #ffcc99;
+        
+        .logo:hover {
+            transform: scale(1.05);
         }
-
-        .password-btn {
-            background: linear-gradient(135deg, #8b4513 0%, #d2691e 100%);
-            color: white;
-            border: none;
-            padding: 16px 40px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
+        
+        .subject-title {
+            color: #c39bd3;
+            font-size: 2.4rem;
+            margin: 10px 0 5px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
             letter-spacing: 1px;
-            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.4);
+        }
+        
+        .exam-info {
+            color: #a3c6e4;
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+        
+        .term-info {
+            background: linear-gradient(135deg, #9b59b620, #3498db40);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
             margin-top: 10px;
+            font-weight: bold;
+            color: #c39bd3;
+            border: 1px solid #9b59b660;
         }
-
-        .password-btn:hover {
-            background: linear-gradient(135deg, #d2691e 0%, #8b4513 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.6);
+        
+        /* Sections */
+        .section {
+            display: none;
+            padding: 25px;
+            animation: fadeIn 0.5s ease;
         }
-
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .active {
+            display: block;
+        }
+        
+        /* Welcome message */
+        .welcome-message {
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(26, 42, 74, 0.7) 100%);
+            padding: 35px;
+            border-radius: 12px;
+            margin: 25px 0;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #e0e0f0;
+            border-left: 5px solid #9b59b6;
+            border-right: 1px solid rgba(155, 89, 182, 0.3);
+            border-top: 1px solid rgba(155, 89, 182, 0.2);
+            border-bottom: 1px solid rgba(155, 89, 182, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .welcome-message::before {
+            content: '📐';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.1;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: #ffffff;
+            border: none;
+            padding: 15px 32px;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 12px 8px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border: 2px solid rgba(155, 89, 182, 0.5);
+            box-shadow: 0 6px 15px rgba(155, 89, 182, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: rotate(30deg);
+            transition: all 0.5s;
+        }
+        
+        .btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #ae7ac9 0%, #9b59b6 100%);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(155, 89, 182, 0.5);
+            color: #ffffff;
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            border-color: #3498db;
+        }
+        
+        .btn-secondary:hover:not(:disabled) {
+            background: linear-gradient(135deg, #5dade2 0%, #3498db 100%);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            border-color: #e67e22;
+        }
+        
+        .btn-container {
+            text-align: center;
+            margin-top: 35px;
+        }
+        
+        /* Form elements */
+        .form-group {
+            margin-bottom: 28px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: #c39bd3;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 16px;
+            background: rgba(42, 26, 58, 0.7);
+            border: 2px solid #5d7e9e;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            color: #e0e0f0;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+        
+        input[type="text"]:focus {
+            border-color: #9b59b6;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.3);
+            background: rgba(42, 26, 58, 0.9);
+        }
+        
         .error-message {
             color: #ff6b6b;
-            margin-top: 15px;
-            font-size: 1rem;
-            min-height: 24px;
+            font-size: 0.95rem;
+            margin-top: 8px;
             display: none;
+            font-weight: 500;
         }
-
-        .access-granted {
-            color: #6bff8d;
-            margin-top: 15px;
-            font-size: 1rem;
-            min-height: 24px;
-            display: none;
-        }
-
-        .password-hint {
-            color: #a1887f;
-            font-size: 0.9rem;
-            margin-top: 25px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(139, 69, 19, 0.3);
-        }
-
-        .contact-admin {
-            background: rgba(28, 15, 8, 0.5);
-            padding: 12px;
-            border-radius: 8px;
-            margin-top: 10px;
-            color: #d2b48c;
-        }
-
-        /* Main Container */
-        .main-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-            display: none; /* Hidden until password is entered */
-        }
-
-        /* Welcome Section */
-        .welcome-section {
-            background: linear-gradient(135deg, #3a2418 0%, #4a2c1a 100%);
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 40px;
-            box-shadow: 0 15px 35px rgba(44, 24, 16, 0.4);
-            border: 2px solid #5a3825;
+        
+        /* Instructions */
+        .instructions {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(26, 42, 74, 0.7) 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-left: 5px solid #3498db;
+            border: 1px solid rgba(52, 152, 219, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
-            overflow: hidden;
         }
-
-        .welcome-section::before {
-            content: '';
+        
+        .instructions::before {
+            content: '📏';
             position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(210, 105, 30, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .welcome-section::after {
-            content: '';
-            position: absolute;
-            bottom: -50%;
-            left: -50%;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(139, 69, 19, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .welcome-title {
-            color: #ffcc99;
+            top: 20px;
+            right: 20px;
             font-size: 2.5rem;
-            margin-bottom: 25px;
-            text-align: center;
-            position: relative;
-            padding-bottom: 20px;
-            z-index: 1;
+            opacity: 0.1;
         }
-
-        .welcome-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
-            height: 4px;
-            background: linear-gradient(to right, #8b4513, #d2691e, #8b4513);
-            border-radius: 2px;
-        }
-
-        .welcome-message {
-            font-size: 1.2rem;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto 30px;
-            color: #e0d6d0;
-            line-height: 1.8;
-            z-index: 1;
-            position: relative;
-        }
-
-        .exam-info {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-            z-index: 1;
-            position: relative;
-        }
-
-        .info-card {
-            background: linear-gradient(135deg, #4a2c1a 0%, #3a2418 100%);
-            padding: 25px 20px;
-            border-radius: 15px;
-            text-align: center;
-            min-width: 200px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            border: 1px solid #5a3825;
-            transition: all 0.3s ease;
-        }
-
-        .info-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-            border-color: #d2691e;
-        }
-
-        .info-icon {
-            font-size: 3rem;
-            color: #d2691e;
-            margin-bottom: 15px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .info-text {
-            font-weight: 700;
-            color: #ffcc99;
-            font-size: 1.1rem;
-        }
-
-        /* Subjects Grid */
-        .subjects-section {
-            margin-bottom: 50px;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            color: #ffcc99;
-            margin-bottom: 40px;
-            text-align: center;
-            position: relative;
-            padding-bottom: 20px;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 4px;
-            background: linear-gradient(to right, #8b4513, #d2691e);
-            border-radius: 2px;
-        }
-
-        .subjects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .subject-card {
-            background: linear-gradient(135deg, #3a2418 0%, #4a2c1a 100%);
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(44, 24, 16, 0.5);
-            transition: all 0.4s ease;
-            position: relative;
-            cursor: pointer;
-            border: 2px solid #5a3825;
-        }
-
-        .subject-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(44, 24, 16, 0.7);
-            border-color: #d2691e;
-        }
-
-        .subject-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: linear-gradient(to right, #8b4513, #d2691e, #8b4513);
-        }
-
-        .subject-header {
-            background: linear-gradient(135deg, #5a3825 0%, #4a2c1a 100%);
-            color: white;
-            padding: 25px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .subject-header::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 150px;
-            height: 150px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-        }
-
-        .subject-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-            position: relative;
-            z-index: 1;
-        }
-
-        .subject-name {
-            font-size: 1.7rem;
-            font-weight: 800;
-            margin-bottom: 5px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .subject-details {
-            padding: 30px 25px;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .subject-stats {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
+        
+        .instructions h3 {
             margin-bottom: 20px;
-            font-size: 1.1rem;
-            color: #d2b48c;
-            font-weight: 600;
-        }
-
-        .subject-stats span {
-            padding: 8px 15px;
-            background: rgba(90, 56, 37, 0.5);
-            border-radius: 10px;
-            border: 1px solid #6b4a35;
-        }
-
-        .subject-desc {
-            color: #e0d6d0;
-            margin-bottom: 25px;
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-
-        .subject-btn {
+            color: #3498db;
+            font-size: 1.5rem;
+            position: relative;
             display: inline-block;
-            background: linear-gradient(135deg, #8b4513 0%, #d2691e 100%);
-            color: white;
-            padding: 14px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            border: 2px solid #a0522d;
-            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.4);
-            letter-spacing: 1px;
         }
-
-        .subject-btn:hover {
-            background: linear-gradient(135deg, #d2691e 0%, #8b4513 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.6);
+        
+        .instructions h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #3498db;
+            border-radius: 2px;
         }
-
-        /* Footer */
-        .footer {
-            background: linear-gradient(135deg, #2c1810 0%, #3a2418 100%);
-            color: #d2b48c;
-            padding: 50px 20px 30px;
+        
+        .instructions ul {
+            padding-left: 25px;
+        }
+        
+        .instructions li {
+            margin-bottom: 14px;
+            line-height: 1.7;
+            padding-left: 8px;
+            position: relative;
+        }
+        
+        .instructions li::before {
+            content: '•';
+            color: #3498db;
+            font-size: 1.5rem;
+            position: absolute;
+            left: -20px;
+            top: -5px;
+        }
+        
+        /* Exam interface */
+        .exam-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(155, 89, 182, 0.3);
+        }
+        
+        .student-info {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #c39bd3;
+            margin-bottom: 25px;
             text-align: center;
-            margin-top: 80px;
-            border-top: 3px solid #8b4513;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(52, 152, 219, 0.2) 100%);
+            border-radius: 12px;
+            border: 1px solid rgba(155, 89, 182, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .exam-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(42, 26, 58, 0.5);
+            border-radius: 12px;
+            border: 1px solid rgba(155, 89, 182, 0.2);
+        }
+        
+        .question-counter {
+            font-size: 1.2rem;
+            color: #c39bd3;
+            font-weight: 600;
+            padding: 10px 20px;
+            background: rgba(155, 89, 182, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(155, 89, 182, 0.3);
+        }
+        
+        .timer-container {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 12px rgba(155, 89, 182, 0.4);
+            display: none;
+            border: 2px solid rgba(155, 89, 182, 0.5);
+            font-family: 'Courier New', monospace;
+            transition: background 0.5s ease;
+        }
+        
+        .submit-container {
+            display: none;
+        }
+        
+        .exam-content {
+            margin-bottom: 35px;
+            background: rgba(42, 26, 58, 0.4);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(155, 89, 182, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .question-text {
+            font-size: 1.35rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+            color: #c39bd3;
+            line-height: 1.6;
+            padding: 20px;
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .options-container {
+            margin-left: 15px;
+        }
+        
+        .option {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            padding: 18px 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            background: rgba(26, 42, 74, 0.5);
+            border: 1px solid rgba(93, 126, 158, 0.3);
+            cursor: pointer;
             position: relative;
             overflow: hidden;
-            display: none; /* Hidden until password is entered */
         }
-
-        .footer::before {
+        
+        .option::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #8b4513, transparent);
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .footer-logo {
-            width: 120px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            border: 3px solid #8b4513;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .footer-text {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.8;
-            color: #e0d6d0;
-        }
-
-        .copyright {
-            border-top: 1px solid rgba(139, 69, 19, 0.3);
-            padding-top: 25px;
-            font-size: 1rem;
-            color: #d2b48c;
-        }
-
-        .copyright a {
-            color: #ffcc99;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .copyright a:hover {
-            color: #fff;
-            text-decoration: underline;
-        }
-
-        /* Lock Icon for Password Protection */
-        .subject-card.locked .subject-header {
-            background: linear-gradient(135deg, #5a3825 0%, #4a2c1a 100%);
-            opacity: 0.7;
-        }
-
-        .subject-card.locked .subject-icon::after {
-            content: '🔒';
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            font-size: 1.5rem;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 50%;
-            padding: 5px;
-        }
-
-        /* Lock overlay */
-        .lock-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
             bottom: 0;
-            background: rgba(44, 24, 16, 0.9);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 10;
-            border-radius: 18px;
-            padding: 20px;
-            text-align: center;
+            background: linear-gradient(90deg, transparent, rgba(155, 89, 182, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s;
         }
-
-        .lock-icon {
+        
+        .option:hover {
+            background: rgba(155, 89, 182, 0.1);
+            border-color: #9b59b6;
+            transform: translateX(5px);
+        }
+        
+        .option:hover::before {
+            transform: translateX(100%);
+        }
+        
+        .option input[type="radio"] {
+            margin-right: 15px;
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            accent-color: #9b59b6;
+            flex-shrink: 0;
+        }
+        
+        .option label {
+            font-weight: normal;
+            margin-bottom: 0;
+            cursor: pointer;
+            flex: 1;
+            color: #e0e0f0;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+        
+        /* Question navigation */
+        .question-navigation {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 2px solid rgba(155, 89, 182, 0.3);
+        }
+        
+        .question-navigation h3 {
+            margin-bottom: 20px;
+            color: #c39bd3;
+            text-align: center;
+            font-size: 1.5rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .question-navigation h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #3498db;
+            border-radius: 2px;
+        }
+        
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        
+        .question-number {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(26, 42, 74, 0.5) 100%);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 1px solid rgba(155, 89, 182, 0.3);
+            color: #e0e0f0;
+            font-size: 1.1rem;
+        }
+        
+        .question-number:hover {
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.3) 0%, rgba(142, 68, 173, 0.5) 100%);
+            transform: scale(1.1);
+            border-color: #9b59b6;
+        }
+        
+        .question-number.current {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: #ffffff;
+            border-color: #c39bd3;
+            box-shadow: 0 4px 10px rgba(155, 89, 182, 0.4);
+            transform: scale(1.1);
+        }
+        
+        .question-number.answered {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: white;
+            border-color: #f1c40f;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+        }
+        
+        /* Progress bar */
+        .progress-container {
+            margin: 20px 0;
+            background: rgba(26, 42, 74, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 10px;
+            border: 1px solid rgba(155, 89, 182, 0.3);
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #9b59b6, #3498db);
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        .progress-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #a3c6e4;
+            margin-top: 5px;
+        }
+        
+        /* Results section */
+        .results-container {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(42, 26, 58, 0.8) 0%, rgba(26, 42, 74, 0.9) 100%);
+            border-radius: 16px;
+            border: 2px solid #9b59b6;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .results-container::before {
+            content: '✅';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 4rem;
+            opacity: 0.1;
+        }
+        
+        .results-container h2 {
+            color: #c39bd3;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .results-score {
             font-size: 3rem;
-            color: #d2691e;
+            font-weight: bold;
+            color: #f1c40f;
+            margin: 20px 0;
+            text-shadow: 0 0 20px rgba(241, 196, 15, 0.5);
+        }
+        
+        .results-percentage {
+            font-size: 1.5rem;
+            color: #c39bd3;
+            margin-bottom: 20px;
+        }
+        
+        .student-info {
+            font-size: 1.5rem;
             margin-bottom: 15px;
         }
-
-        .lock-text {
-            color: #ffcc99;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+        
+        .subject {
+            font-size: 1.3rem;
+            color: #a3c6e4;
+            margin-bottom: 30px;
             font-weight: 600;
         }
-
-        .lock-subtext {
-            color: #d2b48c;
-            font-size: 0.9rem;
+        
+        .feedback {
+            font-size: 1.3rem;
+            margin: 25px 0;
+            color: #e0e0f0;
+            line-height: 1.7;
+            padding: 25px;
+            background: rgba(155, 89, 182, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(155, 89, 182, 0.3);
         }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-            
-            .school-name {
-                font-size: 2.5rem;
-            }
-            
-            .school-tagline {
-                font-size: 1.2rem;
-            }
-            
-            .welcome-section {
-                padding: 30px;
-            }
-            
-            .welcome-title {
-                font-size: 2.2rem;
-            }
-            
-            .subjects-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-            
-            .password-container {
-                padding: 40px 30px;
-            }
+        
+        .submission-status {
+            margin-top: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(241, 196, 15, 0.2) 0%, rgba(243, 156, 18, 0.3) 100%);
+            border-radius: 12px;
+            color: #f1c40f;
+            font-size: 1.2rem;
+            border: 1px solid rgba(241, 196, 15, 0.5);
         }
-
+        
+        /* Responsive */
         @media (max-width: 768px) {
-            .exam-info {
-                gap: 20px;
+            .question-grid {
+                grid-template-columns: repeat(5, 1fr);
             }
             
-            .info-card {
-                min-width: 160px;
-                padding: 20px 15px;
+            .exam-controls {
+                flex-direction: column;
+                align-items: stretch;
             }
             
-            .subject-card {
-                max-width: 350px;
-                margin: 0 auto;
-            }
-            
-            .logo {
-                width: 130px;
-                height: 130px;
-            }
-            
-            .password-title {
-                font-size: 1.8rem;
-            }
-            
-            .password-container {
-                padding: 30px 25px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .subjects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .school-name {
-                font-size: 2rem;
-            }
-            
-            .welcome-title {
-                font-size: 1.8rem;
-            }
-            
-            .subject-stats {
+            .navigation-buttons {
                 flex-direction: column;
                 gap: 15px;
             }
             
-            .logo {
-                width: 110px;
-                height: 110px;
+            .btn {
+                width: 100%;
+                margin: 8px 0;
             }
             
-            .password-container {
-                padding: 25px 20px;
+            .subject-title {
+                font-size: 1.8rem;
             }
             
-            .password-title {
-                font-size: 1.6rem;
+            .question-text {
+                font-size: 1.2rem;
             }
+            
+            .container {
+                padding: 15px;
+                margin: 15px;
+            }
+            
+            .welcome-message, .instructions, .exam-content {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .question-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+            
+            .question-number {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            
+            .subject-title {
+                font-size: 1.5rem;
+            }
+            
+            .results-container {
+                padding: 25px 15px;
+            }
+        }
+        
+        .back-home {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(155, 89, 182, 0.3);
+            border-top: 4px solid #9b59b6;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
-    <!-- Password Overlay (Shown first) -->
-    <div class="password-overlay" id="passwordOverlay">
-        <div class="password-container">
-            <div class="password-icon">🔒</div>
-            <h2 class="password-title">Restricted Access</h2>
-            <p class="password-subtitle">Authorized personnel only. Enter password to continue.</p>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
+                 alt="The Trustworthy College logo" class="logo">
+            <h1 class="subject-title">SSS1 MATHEMATICS C.A TEST</h1>
+            <div class="exam-info">Third Term | 2025/2026 Session</div>
+            <div class="term-info">40 Questions | ½ Mark Each | Total: 20 Marks</div>
+        </div>
+        
+        <!-- Welcome Section -->
+        <section id="welcome-section" class="section active">
+            <div class="welcome-message">
+                "Welcome to The Trustworthy College Mathematics Continuous Assessment Test. This test covers Mensuration of Plane Shapes (Arc Length, Perimeter & Area of Sectors/Segments), Surface Areas and Volumes of Solids (Cube, Cuboid, Cylinder, Cone, Sphere, Hemisphere, Frustum), and Compound Solids. Demonstrate your understanding of mathematical principles and problem-solving. Best of luck."
+            </div>
+            <div class="btn-container">
+                <button id="start-exam-btn" class="btn">Start C.A Test</button>
+            </div>
+        </section>
+        
+        <!-- Student Information Section -->
+        <section id="student-info-section" class="section">
+            <h2>Student Information</h2>
+            <p>Please provide your details to continue with the test.</p>
             
-            <div class="password-input-container">
-                <input type="password" 
-                       id="passwordInput" 
-                       class="password-input" 
-                       placeholder="Enter security password"
-                       autocomplete="off"
-                       autofocus>
-                <button type="button" class="toggle-password" id="togglePassword">
-                    <i class="fas fa-eye"></i>
-                </button>
+            <form id="student-info-form" autocomplete="off">
+                <div class="form-group">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" required placeholder="Enter your first name">
+                    <div class="error-message" id="first-name-error">First name is required</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="middle-name">Middle Name *</label>
+                    <input type="text" id="middle-name" required placeholder="Enter your middle name">
+                    <div class="error-message" id="middle-name-error">Middle name is required</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" required placeholder="Enter your last name">
+                    <div class="error-message" id="last-name-error">Last name is required</div>
+                </div>
+                
+                <div class="btn-container">
+                    <button type="button" id="back-to-welcome" class="btn btn-secondary">Back</button>
+                    <button type="button" id="continue-to-instructions" class="btn">Continue</button>
+                </div>
+            </form>
+        </section>
+        
+        <!-- Instructions Section -->
+        <section id="instructions-section" class="section">
+            <h2>Test Instructions</h2>
+            
+            <div class="instructions">
+                <h3>Important Notes:</h3>
+                <ul>
+                    <li>This C.A Test consists of <strong>40 multiple-choice questions</strong> covering Mensuration and Solid Geometry.</li>
+                    <li>Each question carries <strong>½ mark</strong>, giving a total of <strong>20 marks</strong>.</li>
+                    <li>You have <strong>40 minutes</strong> to complete this test.</li>
+                    <li>Answer all questions to the best of your ability.</li>
+                    <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
+                    <li>Answered questions will be marked with <strong>orange</strong> in the question grid.</li>
+                    <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
+                    <li>Ensure you have a stable internet connection throughout the test.</li>
+                    <li>Read each question carefully before selecting your answer.</li>
+                    <li>Your results will be submitted automatically upon completion.</li>
+                    <li><strong>Do not refresh the page</strong> during the test, or you may lose your progress.</li>
+                </ul>
             </div>
             
-            <button class="password-btn" id="submitPassword">
-                <i class="fas fa-unlock-alt"></i> Verify & Enter
-            </button>
-            
-            <div class="error-message" id="errorMessage">
-                Incorrect password. Please try again.
+            <div class="btn-container">
+                <button type="button" id="back-to-student-info" class="btn btn-secondary">Back</button>
+                <button type="button" id="begin-test" class="btn">Begin Test</button>
             </div>
-            
-            <div class="access-granted" id="accessGranted">
-                ✓ Authentication successful. Redirecting...
-            </div>
-            
-            <div class="password-hint">
-                <p>For authorized students only</p>
-                <div class="contact-admin">
-                    <i class="fas fa-info-circle"></i> Contact your teacher or administrator for access credentials
+        </section>
+        
+        <!-- Exam Interface Section -->
+        <section id="exam-section" class="section">
+            <div class="exam-header">
+                <div class="student-info" id="display-student-name"></div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">Progress: 0/40 answered</div>
+                <div class="exam-controls">
+                    <div class="question-counter" id="question-counter">Question 1 of 40</div>
+                    <div class="timer-container" id="timer-container">
+                        Time Left: <span id="timer">40:00</span>
+                    </div>
+                    <div class="submit-container" id="submit-container">
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Test</button>
+                    </div>
                 </div>
             </div>
-        </div>
+            
+            <div class="exam-content">
+                <div class="question-text" id="question-text"></div>
+                
+                <div class="options-container" id="options-container">
+                    <!-- Options will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="question-navigation">
+                <h3>Question Navigation</h3>
+                <div class="question-grid" id="question-grid">
+                    <!-- Question numbers will be populated by JavaScript -->
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button type="button" id="prev-question" class="btn btn-secondary">← Previous</button>
+                    <button type="button" id="next-question" class="btn">Next →</button>
+                </div>
+            </div>
+            
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Submitting your results...</p>
+            </div>
+        </section>
+        
+        <!-- Results Section -->
+        <section id="results-section" class="section">
+            <div class="results-container">
+                <h2>Test Completed</h2>
+                <div class="student-info" id="results-student-name"></div>
+                <div class="subject" id="results-subject">SSS1 Mathematics - Third Term C.A Test 2025/2026</div>
+                
+                <div class="results-score" id="results-score"></div>
+                <div class="results-percentage" id="results-percentage"></div>
+                
+                <div class="feedback" id="feedback-message">
+                    Thank you for completing the Mathematics C.A Test. Your results have been submitted successfully.
+                </div>
+                
+                <div class="submission-status" id="submission-status">
+                    Your test has been successfully submitted. Results will be communicated through appropriate channels.
+                </div>
+                
+                <div class="btn-container">
+                    <button type="button" id="restart-exam" class="btn">Take Another Test</button>
+                    <div class="back-home">
+                        <a href="../index.html" class="btn btn-secondary">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <!-- Header with Logo and School Name -->
-    <header class="header">
-        <div class="header-content">
-            <div class="logo-container">
-                <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
-                     alt="The Trustworthy College Logo" class="logo">
-                <div class="logo-text">Secure Examination Portal</div>
-            </div>
-            <div class="school-info">
-                <h1 class="school-name">THE TRUSTWORTHY COLLEGE</h1>
-                <p class="school-tagline">Computer-Based Test Portal</p>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content (Hidden until password is entered) -->
-    <main class="main-container" id="mainContent">
-        <!-- Welcome Section -->
-        <section class="welcome-section animate">
-            <h2 class="welcome-title">Welcome to Our Examination Portal</h2>
-            <p class="welcome-message">
-                This platform is designed to help you practice and prepare for your school examinations. 
-                Select your subject below to begin your computer-based test. Each exam contains 40 questions 
-                with a 40-minute time limit. Read each question carefully and submit when you are done.
-            </p>
-            
-            <div class="exam-info">
-                <div class="info-card">
-                    <div class="info-icon">⏱️</div>
-                    <div class="info-text">40 Minutes Each</div>
-                </div>
-                <div class="info-card">
-                    <div class="info-icon">❓</div>
-                    <div class="info-text">40 Questions</div>
-                </div>
-                <div class="info-card">
-                    <div class="info-icon">📊</div>
-                    <div class="info-text">Instant Results</div>
-                </div>
-                <div class="info-card">
-                    <div class="info-icon">🔒</div>
-                    <div class="info-text">Secure Access</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Subjects Grid -->
-        <section class="subjects-section">
-            <h2 class="section-title">Select Your Subject</h2>
-            
-            <div class="subjects-grid">
-                <!-- Subject 1: Yoruba -->
-                <div class="subject-card animate">
-                    <div class="subject-header">
-                        <div class="subject-icon">🇳🇬</div>
-                        <div class="subject-name">Yoruba Language</div>
-                    </div>
-                    <div class="subject-details">
-                        <div class="subject-stats">
-                            <span>40 Questions</span>
-                            <span>40 Minutes</span>
-                        </div>
-                        <p class="subject-desc">Test your knowledge of Yoruba language, culture, grammar and literature.</p>
-                        <a href="Yoruba/index.html" class="subject-btn">Start Exam</a>
-                    </div>
-                </div>
-
-                <!-- Subject 2: Biology -->
-                <div class="subject-card animate">
-                    <div class="subject-header">
-                        <div class="subject-icon">🧬</div>
-                        <div class="subject-name">Biology</div>
-                    </div>
-                    <div class="subject-details">
-                        <div class="subject-stats">
-                            <span>40 Questions</span>
-                            <span>40 Minutes</span>
-                        </div>
-                        <p class="subject-desc">Life sciences, human anatomy, botany, zoology and genetics.</p>
-                        <a href="biology/index.html" class="subject-btn">Start Exam</a>
-                    </div>
-                </div>
-
-                <!-- Subject 3: Chemistry -->
-                <div class="subject-card animate">
-                    <div class="subject-header">
-                        <div class="subject-icon">🧪</div>
-                        <div class="subject-name">Chemistry</div>
-                    </div>
-                    <div class="subject-details">
-                        <div class="subject-stats">
-                            <span>40 Questions</span>
-                            <span>40 Minutes</span>
-                        </div>
-                        <p class="subject-desc">Chemical reactions, periodic table, organic and inorganic chemistry.</p>
-                        <a href="chemistry/index.html" class="subject-btn">Start Exam</a>
-                    </div>
-                </div>
-
-                <!-- Subject 4: Physics -->
-                <div class="subject-card animate">
-                    <div class="subject-header">
-                        <div class="subject-icon">⚛️</div>
-                        <div class="subject-name">Physics</div>
-                    </div>
-                    <div class="subject-details">
-                        <div class="subject-stats">
-                            <span>40 Questions</span>
-                            <span>40 Minutes</span>
-                        </div>
-                        <p class="subject-desc">Mechanics, thermodynamics, electricity, optics and modern physics.</p>
-                        <a href="physics/index.html" class="subject-btn">Start Exam</a>
-                    </div>
-                </div>
-
-                <!-- Subject 5: Mathematics -->
-                <div class="subject-card animate">
-                    <div class="subject-header">
-                        <div class="subject-icon">📐</div>
-                        <div class="subject-name">Mathematics</div>
-                    </div>
-                    <div class="subject-details">
-                        <div class="subject-stats">
-                            <span>40 Questions</span>
-                            <span>40 Minutes</span>
-                        </div>
-                        <p class="subject-desc">Algebra, geometry, calculus, trigonometry and statistics.</p>
-                        <a href="mathematics/index.html" class="subject-btn">Start Exam</a>
-                    </div>
-                </div>
-
-                <!-- Subject 6: English Language -->
-                <div class="subject-card animate">
-                    <div class="subject-header">
-                        <div class="subject-icon">📚</div>
-                        <div class="subject-name">English Language</div>
-                    </div>
-                    <div class="subject-details">
-                        <div class="subject-stats">
-                            <span>40 Questions</span>
-                            <span>40 Minutes</span>
-                        </div>
-                        <p class="subject-desc">Grammar, comprehension, vocabulary, composition and literature.</p>
-                        <a href="english_language/index.html" class="subject-btn">Start Exam</a>
-                    </div>
-                </div>
-
-                <!-- Subject 7: Literature in English -->
-                <div class="subject-card animate">
-                    <div class="subject-header">
-                        <div class="subject-icon">🎭</div>
-                        <div class="subject-name">Literature in English</div>
-                    </div>
-                    <div class="subject-details">
-                        <div class="subject-stats">
-                            <span>40 Questions</span>
-                            <span>40 Minutes</span>
-                        </div>
-                        <p class="subject-desc">Prose, poetry, drama, literary devices and critical analysis.</p>
-                        <a href="lit_in_english/index.html" class="subject-btn">Start Exam</a>
-                    </div>
-                </div>
-
-                <!-- Subject 8: Economics -->
-                <div class="subject-card animate">
-                    <div class="subject-header">
-                        <div class="subject-icon">📈</div>
-                        <div class="subject-name">Economics</div>
-                    </div>
-                    <div class="subject-details">
-                        <div class="subject-stats">
-                            <span>40 Questions</span>
-                            <span>40 Minutes</span>
-                        </div>
-                        <p class="subject-desc">Microeconomics, macroeconomics, economic theories and policies.</p>
-                        <a href="economics/index.html" class="subject-btn">Start Exam</a>
-                    </div>
-                </div>
-
-                <!-- Subject 9: Government -->
-                <div class="subject-card animate">
-                    <div class="subject-header">
-                        <div class="subject-icon">🏛️</div>
-                        <div class="subject-name">Government</div>
-                    </div>
-                    <div class="subject-details">
-                        <div class="subject-stats">
-                            <span>40 Questions</span>
-                            <span>40 Minutes</span>
-                        </div>
-                        <p class="subject-desc">Political systems, governance, constitutions and civic administration.</p>
-                        <a href="government/index.html" class="subject-btn">Start Exam</a>
-                    </div>
-                </div>
-
-                <!-- Subject 10: Civic Education -->
-                <div class="subject-card animate">
-                    <div class="subject-header">
-                        <div class="subject-icon">👥</div>
-                        <div class="subject-name">Civic Education</div>
-                    </div>
-                    <div class="subject-details">
-                        <div class="subject-stats">
-                            <span>40 Questions</span>
-                            <span>40 Minutes</span>
-                        </div>
-                        <p class="subject-desc">Citizenship, rights, responsibilities, ethics and national values.</p>
-                        <a href="civic_education/index.html" class="subject-btn">Start Exam</a>
-                    </div>
-                </div>
-
-                <!-- Subject 11: Islamic Studies -->
-                <div class="subject-card animate">
-                    <div class="subject-header">
-                        <div class="subject-icon">☪️</div>
-                        <div class="subject-name">Islamic Studies</div>
-                    </div>
-                    <div class="subject-details">
-                        <div class="subject-stats">
-                            <span>40 Questions</span>
-                            <span>40 Minutes</span>
-                        </div>
-                        <p class="subject-desc">Quranic studies, Hadith, Islamic history, ethics and jurisprudence.</p>
-                        <a href="islamic_studies/index.html" class="subject-btn">Start Exam</a>
-                    </div>
-                </div>
-
-                <!-- Subject 12: Digital Technology -->
-                <div class="subject-card animate">
-                    <div class="subject-header">
-                        <div class="subject-icon">🌐</div>
-                        <div class="subject-name">Digital Technology</div>
-                    </div>
-                    <div class="subject-details">
-                        <div class="subject-stats">
-                            <span>40 Questions</span>
-                            <span>40 Minutes</span>
-                        </div>
-                        <p class="subject-desc">Digital systems, cybersecurity, emerging technologies, and IT infrastructure.</p>
-                        <a href="digital_technology/index.html" class="subject-btn">Start Exam</a>
-                    </div>
-                </div>
-
-                <!-- Subject 13: Phone Installment -->
-                <div class="subject-card animate">
-                    <div class="subject-header">
-                        <div class="subject-icon">📱</div>
-                        <div class="subject-name">Phone Installment</div>
-                    </div>
-                    <div class="subject-details">
-                        <div class="subject-stats">
-                            <span>40 Questions</span>
-                            <span>40 Minutes</span>
-                        </div>
-                        <p class="subject-desc">Mobile device financing, payment plans, consumer credit, and financial management.</p>
-                        <a href="phone_installment/index.html" class="subject-btn">Start Exam</a>
-                    </div>
-                </div>
-
-                <!-- Subject 14: Phonetics -->
-                <div class="subject-card animate">
-                    <div class="subject-header">
-                        <div class="subject-icon">🔊</div>
-                        <div class="subject-name">Phonetics</div>
-                    </div>
-                    <div class="subject-details">
-                        <div class="subject-stats">
-                            <span>40 Questions</span>
-                            <span>30 Minutes</span>
-                        </div>
-                        <p class="subject-desc">Speech sounds, consonant clusters, transcription, syllables, and phonetic symbols.</p>
-                        <a href="phonetics/index.html" class="subject-btn">Start Exam</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer (Hidden until password is entered) -->
-    <footer class="footer" id="pageFooter">
-        <div class="footer-content">
-            <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
-                 alt="The Trustworthy College Logo" class="footer-logo">
-            <p class="footer-text">
-                The Trustworthy College is dedicated to academic excellence through innovative teaching methods 
-                and modern educational technology. Our CBT portal ensures students are thoroughly prepared 
-                for both internal assessments and external examinations.
-            </p>
-            <div class="copyright">
-                © 2025 The Trustworthy College • Powered by 
-                <a href="https://www.ideolixlearninghub.com" target="_blank">Ideolix Learning Hub</a>
-            </div>
-        </div>
-    </footer>
-
     <script>
-        // Password Configuration
-        const CORRECT_PASSWORD = "f09b302c@2TS2026";
-        const MAX_ATTEMPTS = 5;
-        let attempts = 0;
-        let lockoutTime = null;
-        const LOCKOUT_DURATION = 300000; // 5 minutes in milliseconds
-
-        // DOM Elements
-        const passwordOverlay = document.getElementById('passwordOverlay');
-        const passwordInput = document.getElementById('passwordInput');
-        const togglePassword = document.getElementById('togglePassword');
-        const submitPassword = document.getElementById('submitPassword');
-        const errorMessage = document.getElementById('errorMessage');
-        const accessGranted = document.getElementById('accessGranted');
-        const mainContent = document.getElementById('mainContent');
-        const pageFooter = document.getElementById('pageFooter');
-
-        // Check if user is locked out
-        function checkLockout() {
-            const lockoutData = localStorage.getItem('trustworthyCollegeLockout');
-            if (lockoutData) {
-                const { timestamp } = JSON.parse(lockoutData);
-                const timeElapsed = Date.now() - timestamp;
-                
-                if (timeElapsed < LOCKOUT_DURATION) {
-                    const remainingMinutes = Math.ceil((LOCKOUT_DURATION - timeElapsed) / 60000);
-                    showError(`Too many failed attempts. Please try again in ${remainingMinutes} minute${remainingMinutes !== 1 ? 's' : ''}.`);
-                    submitPassword.disabled = true;
-                    passwordInput.disabled = true;
-                    return true;
-                } else {
-                    // Lockout expired
-                    localStorage.removeItem('trustworthyCollegeLockout');
-                    localStorage.removeItem('trustworthyCollegeAttempts');
-                }
+        // SSS1 MATHEMATICS - THIRD TERM C.A TEST 2025/2026
+        const originalQuestions = [
+            // Arc Length and Perimeter (Questions 1-2)
+            {
+                question: "The length of an arc subtending an angle of 60° in a circle of radius 21 cm is:",
+                options: ["11 cm", "22 cm", "33 cm", "44 cm"],
+                answer: "B"
+            },
+            {
+                question: "The perimeter of a semicircle of radius 14 cm is:",
+                options: ["44 cm", "72 cm", "88 cm", "132 cm"],
+                answer: "B"
+            },
+            
+            // Area of Sector and Segment (Questions 3-7)
+            {
+                question: "The area of a sector of angle 90° in a circle of radius 14 cm is:",
+                options: ["154 cm²", "308 cm²", "616 cm²", "77 cm²"],
+                answer: "A"
+            },
+            {
+                question: "A sector is a region bounded by:",
+                options: ["Two radii and an arc", "Two chords and an arc", "A chord and a radius", "Two diameters"],
+                answer: "A"
+            },
+            {
+                question: "A segment of a circle is bounded by:",
+                options: ["Two radii", "A chord and an arc", "Two diameters", "A tangent and a radius"],
+                answer: "B"
+            },
+            {
+                question: "The angle subtended at the centre by an arc of length 11 cm in a circle of radius 21 cm is:",
+                options: ["30°", "45°", "60°", "90°"],
+                answer: "A"
+            },
+            {
+                question: "The area of a semicircle of radius 14 cm is:",
+                options: ["154 cm²", "308 cm²", "616 cm²", "77 cm²"],
+                answer: "B"
+            },
+            
+            // Sector-Cone Relationship (Questions 8-10)
+            {
+                question: "A cone can be formed by folding:",
+                options: ["A circle", "A rectangle", "A sector", "A triangle"],
+                answer: "C"
+            },
+            {
+                question: "In the sector-cone relationship, the radius of the sector becomes the:",
+                options: ["Base radius of cone", "Height of cone", "Slant height of cone", "Diameter of cone"],
+                answer: "C"
+            },
+            {
+                question: "The arc length of a sector used to form a cone becomes the:",
+                options: ["Height of cone", "Circumference of cone base", "Diameter of cone", "Volume of cone"],
+                answer: "B"
+            },
+            
+            // Surface Area of Cone (Questions 11-12)
+            {
+                question: "The curved surface area of a cone is:",
+                options: ["πr²", "2πrh", "πrl", "πr²h"],
+                answer: "C"
+            },
+            {
+                question: "The total surface area of a cone is:",
+                options: ["πr² + πrl", "2πr²", "2πrh", "πrl"],
+                answer: "A"
+            },
+            
+            // Surface Area of Cube, Cuboid, Cylinder, Sphere, Hemisphere (Questions 13-18)
+            {
+                question: "The total surface area of a cube of side 5 cm is:",
+                options: ["25 cm²", "100 cm²", "150 cm²", "125 cm²"],
+                answer: "C"
+            },
+            {
+                question: "The surface area of a cuboid measuring 4 cm × 3 cm × 2 cm is:",
+                options: ["52 cm²", "48 cm²", "24 cm²", "72 cm²"],
+                answer: "A"
+            },
+            {
+                question: "The curved surface area of a cylinder is:",
+                options: ["πr²", "2πrh", "πrl", "2πr²"],
+                answer: "B"
+            },
+            {
+                question: "The total surface area of a cylinder is:",
+                options: ["2πr(h+r)", "πr²h", "πrh", "πr²"],
+                answer: "A"
+            },
+            {
+                question: "The total surface area of a sphere of radius r is:",
+                options: ["2πr²", "3πr²", "4πr²", "6πr²"],
+                answer: "C"
+            },
+            {
+                question: "The total surface area of a hemisphere is:",
+                options: ["2πr²", "3πr²", "4πr²", "πr²"],
+                answer: "B"
+            },
+            
+            // Volume of Cube, Cuboid, Cylinder (Questions 19-21)
+            {
+                question: "The volume of a cube of side 6 cm is:",
+                options: ["36 cm³", "72 cm³", "216 cm³", "144 cm³"],
+                answer: "C"
+            },
+            {
+                question: "The volume of a cuboid 8 cm × 4 cm × 3 cm is:",
+                options: ["96 cm³", "64 cm³", "84 cm³", "72 cm³"],
+                answer: "A"
+            },
+            {
+                question: "The volume of a cylinder of radius 7 cm and height 10 cm is:",
+                options: ["1540 cm³", "770 cm³", "490 cm³", "980 cm³"],
+                answer: "A"
+            },
+            
+            // Volume of Cone, Sphere, Hemisphere (Questions 22-25)
+            {
+                question: "The volume of a cone is:",
+                options: ["πr²h", "½πr²h", "⅓πr²h", "¼πr²h"],
+                answer: "C"
+            },
+            {
+                question: "The volume of a sphere is:",
+                options: ["4πr³", "⅔πr³", "⁴⁄₃πr³", "πr³"],
+                answer: "C"
+            },
+            {
+                question: "The volume of a hemisphere is:",
+                options: ["⁴⁄₃πr³", "⅔πr³", "πr³", "⅓πr³"],
+                answer: "B"
+            },
+            {
+                question: "A cone and a cylinder having the same base radius and height are related by:",
+                options: ["Cone volume = Cylinder volume", "Cone volume = 2 × Cylinder volume", "Cone volume = ⅓ Cylinder volume", "Cone volume = ½ Cylinder volume"],
+                answer: "C"
+            },
+            
+            // Frustum (Questions 26-28)
+            {
+                question: "A frustum is obtained when:",
+                options: ["A cone is stretched", "The top of a cone is cut off parallel to the base", "Two cones are joined together", "A cylinder is divided"],
+                answer: "B"
+            },
+            {
+                question: "A frustum of a cone has:",
+                options: ["One circular face", "No circular face", "Two parallel circular faces", "Three circular faces"],
+                answer: "C"
+            },
+            {
+                question: "The volume of a frustum depends on:",
+                options: ["Only its height", "Only its radii", "Height and radii of both ends", "Diameter only"],
+                answer: "C"
+            },
+            
+            // Compound Solids (Questions 29-30)
+            {
+                question: "Which of the following is a compound solid?",
+                options: ["Cube", "Sphere", "Cylinder", "Cylinder joined to a hemisphere"],
+                answer: "D"
+            },
+            {
+                question: "The volume of a compound solid is obtained by:",
+                options: ["Multiplying all dimensions together", "Adding or subtracting volumes of simple solids", "Squaring dimensions", "Finding surface area only"],
+                answer: "B"
+            },
+            
+            // Calculation Problems (Questions 31-35)
+            {
+                question: "The slant height of a cone of radius 5 cm and height 12 cm is:",
+                options: ["11 cm", "12 cm", "13 cm", "17 cm"],
+                answer: "C"
+            },
+            {
+                question: "The volume of a cone of radius 3 cm and height 7 cm is: (Take π = 22/7)",
+                options: ["66 cm³", "22 cm³", "44 cm³", "88 cm³"],
+                answer: "A"
+            },
+            {
+                question: "The volume of a sphere of radius 3 cm is approximately: (Take π = 3.14)",
+                options: ["113 cm³", "36 cm³", "226 cm³", "452 cm³"],
+                answer: "A"
+            },
+            {
+                question: "The curved surface area of a cylinder of radius 7 cm and height 10 cm is: (Take π = 22/7)",
+                options: ["440 cm²", "220 cm²", "154 cm²", "308 cm²"],
+                answer: "A"
+            },
+            {
+                question: "The total surface area of a cube with side 8 cm is:",
+                options: ["256 cm²", "384 cm²", "512 cm²", "768 cm²"],
+                answer: "B"
+            },
+            
+            // Circle Properties (Questions 36-37)
+            {
+                question: "A major sector is one whose central angle is:",
+                options: ["Less than 90°", "Less than 180°", "Greater than 180°", "Equal to 180°"],
+                answer: "C"
+            },
+            {
+                question: "A minor segment is smaller than:",
+                options: ["A sector of the same circle", "A major segment of the same circle", "A radius", "A diameter"],
+                answer: "B"
+            },
+            
+            // Ratios and Formulas (Questions 38-40)
+            {
+                question: "The ratio of the volume of a sphere to that of a hemisphere of the same radius is:",
+                options: ["1 : 2", "2 : 1", "3 : 1", "4 : 1"],
+                answer: "B"
+            },
+            {
+                question: "The formula for the volume of a cylinder is:",
+                options: ["πr²h", "⅓πr²h", "2πrh", "πrl"],
+                answer: "A"
+            },
+            {
+                question: "The formula for the volume of a sphere is:",
+                options: ["πr²", "2πr²", "⁴⁄₃πr³", "πr³"],
+                answer: "C"
             }
-            return false;
+        ];
+
+        // Application state
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        let studentName = "";
+        let timerInterval;
+        let timeLeft = 40 * 60; // 40 minutes in seconds
+        let questions = [];
+        let examStarted = false;
+
+        // Background images for rotation
+        const backgroundImages = [
+            'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80',
+            'https://images.unsplash.com/photo-1558021212-51b6ecfa0db1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2083&q=80'
+        ];
+
+        // DOM elements
+        const sections = {
+            welcome: document.getElementById('welcome-section'),
+            studentInfo: document.getElementById('student-info-section'),
+            instructions: document.getElementById('instructions-section'),
+            exam: document.getElementById('exam-section'),
+            results: document.getElementById('results-section')
+        };
+
+        // Initialize background rotation
+        let currentBgIndex = 0;
+        function rotateBackground() {
+            currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
+            document.body.style.backgroundImage = `url('${backgroundImages[currentBgIndex]}')`;
+        }
+        setInterval(rotateBackground, 10000);
+
+        // Shuffle questions
+        function shuffleQuestions() {
+            questions = [...originalQuestions];
+            for (let i = questions.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [questions[i], questions[j]] = [questions[j], questions[i]];
+            }
+            userAnswers = Array(questions.length).fill(null);
         }
 
-        // Toggle password visibility
-        togglePassword.addEventListener('click', function() {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
-        });
-
-        // Submit password
-        submitPassword.addEventListener('click', checkPassword);
-        passwordInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                checkPassword();
-            }
-        });
-
-        function checkPassword() {
-            // Check lockout first
-            if (checkLockout()) {
-                return;
-            }
-
-            const enteredPassword = passwordInput.value.trim();
+        // Timer function
+        function startTimer() {
+            clearInterval(timerInterval);
+            timeLeft = 40 * 60;
             
-            if (enteredPassword === '') {
-                showError('Please enter the access password');
-                return;
-            }
-
-            // Get current attempt count from localStorage
-            let currentAttempts = parseInt(localStorage.getItem('trustworthyCollegeAttempts') || '0');
+            document.getElementById('timer-container').style.display = 'block';
+            document.getElementById('submit-container').style.display = 'block';
+            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%)';
             
-            if (enteredPassword === CORRECT_PASSWORD) {
-                // Password correct
-                accessGranted.style.display = 'block';
-                errorMessage.style.display = 'none';
-                submitPassword.innerHTML = '<i class="fas fa-check"></i> Access Granted';
-                submitPassword.style.background = 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)';
-                submitPassword.disabled = true;
-                passwordInput.disabled = true;
+            timerInterval = setInterval(() => {
+                timeLeft--;
                 
-                // Reset attempts on successful login
-                localStorage.removeItem('trustworthyCollegeAttempts');
-                localStorage.removeItem('trustworthyCollegeLockout');
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
                 
-                // Hide password overlay with delay
-                setTimeout(() => {
-                    passwordOverlay.style.opacity = '0';
-                    setTimeout(() => {
-                        passwordOverlay.style.display = 'none';
-                        // Show main content
-                        mainContent.style.display = 'block';
-                        pageFooter.style.display = 'block';
-                        
-                        // Add animation to cards
-                        const cards = document.querySelectorAll('.subject-card');
-                        cards.forEach((card, index) => {
-                            setTimeout(() => {
-                                card.classList.add('animate');
-                            }, index * 100);
-                        });
-                    }, 500);
-                }, 1500);
+                document.getElementById('timer').textContent = 
+                    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
                 
-                // Store session in localStorage (expires in 24 hours)
-                const sessionData = {
-                    authenticated: true,
-                    timestamp: Date.now()
-                };
-                localStorage.setItem('trustworthyCollegeAccess', JSON.stringify(sessionData));
-                
+                // Visual warnings for time
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Time's up! Your test will be submitted automatically.");
+                    calculateScore();
+                } else if (timeLeft <= 300) { // 5 minutes left
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
+                } else if (timeLeft <= 600) { // 10 minutes left
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
+                }
+            }, 1000);
+        }
+
+        // Pause timer when tab is hidden
+        document.addEventListener('visibilitychange', () => {
+            if (!examStarted) return;
+            
+            if (document.hidden) {
+                clearInterval(timerInterval);
             } else {
-                // Password incorrect
-                currentAttempts++;
-                attempts = currentAttempts;
-                localStorage.setItem('trustworthyCollegeAttempts', currentAttempts.toString());
-                
-                const remaining = MAX_ATTEMPTS - currentAttempts;
-                
-                if (currentAttempts >= MAX_ATTEMPTS) {
-                    // Lock the user out
-                    const lockoutData = {
-                        timestamp: Date.now()
-                    };
-                    localStorage.setItem('trustworthyCollegeLockout', JSON.stringify(lockoutData));
-                    showError('Maximum attempts exceeded. Please try again in 5 minutes.');
-                    submitPassword.disabled = true;
-                    passwordInput.disabled = true;
-                } else {
-                    showError(`Incorrect password. ${remaining} attempt${remaining !== 1 ? 's' : ''} remaining.`);
-                }
-                
-                // Shake animation for wrong password
-                passwordInput.style.animation = 'none';
-                setTimeout(() => {
-                    passwordInput.style.animation = 'shake 0.5s';
-                }, 10);
-                
-                // Clear input
-                passwordInput.value = '';
-                passwordInput.focus();
-            }
-        }
-
-        function showError(message) {
-            errorMessage.textContent = message;
-            errorMessage.style.display = 'block';
-            accessGranted.style.display = 'none';
-            
-            // Shake animation for error
-            errorMessage.style.animation = 'none';
-            setTimeout(() => {
-                errorMessage.style.animation = 'shake 0.5s';
-            }, 10);
-        }
-
-        // Check for existing valid session
-        document.addEventListener('DOMContentLoaded', function() {
-            // First check lockout
-            if (checkLockout()) {
-                return;
-            }
-
-            try {
-                const sessionData = JSON.parse(localStorage.getItem('trustworthyCollegeAccess'));
-                if (sessionData && sessionData.authenticated) {
-                    const sessionAge = Date.now() - sessionData.timestamp;
-                    const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000;
-                    
-                    if (sessionAge < TWENTY_FOUR_HOURS) {
-                        // Valid session exists, bypass password
-                        passwordOverlay.style.display = 'none';
-                        mainContent.style.display = 'block';
-                        pageFooter.style.display = 'block';
+                // Resume timer only if exam is still active
+                if (document.getElementById('exam-section').classList.contains('active') && timeLeft > 0) {
+                    timerInterval = setInterval(() => {
+                        timeLeft--;
+                        const minutes = Math.floor(timeLeft / 60);
+                        const seconds = timeLeft % 60;
+                        document.getElementById('timer').textContent = 
+                            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
                         
-                        // Animate cards
-                        const cards = document.querySelectorAll('.subject-card');
-                        cards.forEach((card, index) => {
-                            setTimeout(() => {
-                                card.classList.add('animate');
-                            }, index * 100);
-                        });
-                    } else {
-                        // Session expired
-                        localStorage.removeItem('trustworthyCollegeAccess');
-                    }
+                        if (timeLeft <= 0) {
+                            clearInterval(timerInterval);
+                            alert("Time's up! Your test will be submitted automatically.");
+                            calculateScore();
+                        }
+                    }, 1000);
                 }
-            } catch (e) {
-                // Invalid session data, proceed with password
-                console.log('No valid session found');
             }
-
-            // Update copyright year
-            const yearElement = document.querySelector('.copyright');
-            if (yearElement) {
-                const currentYear = new Date().getFullYear();
-                yearElement.innerHTML = yearElement.innerHTML.replace('2025', currentYear);
-            }
-
-            // Focus on password input
-            passwordInput.focus();
         });
 
-        // Add shake animation for errors
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes shake {
-                0%, 100% { transform: translateX(0); }
-                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-                20%, 40%, 60%, 80% { transform: translateX(5px); }
+        // Warn before leaving
+        window.addEventListener('beforeunload', (e) => {
+            if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
+                e.preventDefault();
+                e.returnValue = 'You have an ongoing test. Are you sure you want to leave? Your progress may be lost.';
+                return e.returnValue;
             }
-        `;
-        document.head.appendChild(style);
+        });
+
+        // Navigation functions
+        function showSection(sectionName) {
+            Object.values(sections).forEach(section => {
+                section.classList.remove('active');
+            });
+            sections[sectionName].classList.add('active');
+            
+            if (sectionName !== 'exam') {
+                document.getElementById('timer-container').style.display = 'none';
+                document.getElementById('submit-container').style.display = 'none';
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Update progress
+        function updateProgress() {
+            const answeredCount = userAnswers.filter(answer => answer !== null).length;
+            const percentage = (answeredCount / questions.length) * 100;
+            
+            document.getElementById('progress-bar').style.width = percentage + '%';
+            document.getElementById('progress-text').textContent = 
+                `Progress: ${answeredCount}/${questions.length} answered`;
+        }
+
+        // Event listeners
+        document.getElementById('start-exam-btn').addEventListener('click', () => {
+            showSection('studentInfo');
+        });
+
+        document.getElementById('back-to-welcome').addEventListener('click', () => {
+            showSection('welcome');
+        });
+
+        document.getElementById('continue-to-instructions').addEventListener('click', () => {
+            const firstName = document.getElementById('first-name').value.trim();
+            const middleName = document.getElementById('middle-name').value.trim();
+            const lastName = document.getElementById('last-name').value.trim();
+            
+            let isValid = true;
+            
+            if (!firstName) {
+                document.getElementById('first-name-error').style.display = 'block';
+                document.getElementById('first-name').style.borderColor = '#ff6b6b';
+                isValid = false;
+            } else {
+                document.getElementById('first-name-error').style.display = 'none';
+                document.getElementById('first-name').style.borderColor = '#5d7e9e';
+            }
+            
+            if (!middleName) {
+                document.getElementById('middle-name-error').style.display = 'block';
+                document.getElementById('middle-name').style.borderColor = '#ff6b6b';
+                isValid = false;
+            } else {
+                document.getElementById('middle-name-error').style.display = 'none';
+                document.getElementById('middle-name').style.borderColor = '#5d7e9e';
+            }
+            
+            if (!lastName) {
+                document.getElementById('last-name-error').style.display = 'block';
+                document.getElementById('last-name').style.borderColor = '#ff6b6b';
+                isValid = false;
+            } else {
+                document.getElementById('last-name-error').style.display = 'none';
+                document.getElementById('last-name').style.borderColor = '#5d7e9e';
+            }
+            
+            if (isValid) {
+                studentName = `${firstName} ${middleName} ${lastName}`;
+                showSection('instructions');
+            }
+        });
+
+        document.getElementById('back-to-student-info').addEventListener('click', () => {
+            showSection('studentInfo');
+        });
+
+        document.getElementById('begin-test').addEventListener('click', () => {
+            shuffleQuestions();
+            currentQuestionIndex = 0;
+            examStarted = true;
+            
+            document.getElementById('display-student-name').textContent = studentName;
+            document.getElementById('results-student-name').textContent = studentName;
+            
+            createQuestionGrid();
+            loadQuestion(currentQuestionIndex);
+            startTimer();
+            updateProgress();
+            showSection('exam');
+        });
+
+        document.getElementById('prev-question').addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion(currentQuestionIndex);
+            }
+        });
+
+        document.getElementById('next-question').addEventListener('click', () => {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('exam-section').classList.contains('active')) return;
+            
+            if (e.key === 'ArrowLeft' && currentQuestionIndex > 0) {
+                e.preventDefault();
+                currentQuestionIndex--;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'ArrowRight' && currentQuestionIndex < questions.length - 1) {
+                e.preventDefault();
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'A' || e.key === 'a' || e.key === '1') {
+                selectOptionByKey(0);
+            } else if (e.key === 'B' || e.key === 'b' || e.key === '2') {
+                selectOptionByKey(1);
+            } else if (e.key === 'C' || e.key === 'c' || e.key === '3') {
+                selectOptionByKey(2);
+            } else if (e.key === 'D' || e.key === 'd' || e.key === '4') {
+                selectOptionByKey(3);
+            }
+        });
+
+        function selectOptionByKey(optionIndex) {
+            const radioButtons = document.querySelectorAll(`input[name="question-${currentQuestionIndex}"]`);
+            if (radioButtons[optionIndex]) {
+                radioButtons[optionIndex].checked = true;
+                userAnswers[currentQuestionIndex] = String.fromCharCode(65 + optionIndex);
+                updateQuestionGrid();
+                updateProgress();
+            }
+        }
+
+        document.getElementById('submit-exam').addEventListener('click', () => {
+            const unanswered = userAnswers.filter(a => a === null).length;
+            let confirmMessage = "Are you sure you want to submit? You will not be able to change your answers after this.";
+            
+            if (unanswered > 0) {
+                confirmMessage += `\n\nWarning: You have ${unanswered} unanswered question(s).`;
+            }
+            
+            const confirmed = confirm(confirmMessage);
+            
+            if (confirmed) {
+                clearInterval(timerInterval);
+                examStarted = false;
+                document.getElementById('loading').style.display = 'block';
+                setTimeout(() => {
+                    calculateScore();
+                }, 1500);
+            }
+        });
+
+        document.getElementById('restart-exam').addEventListener('click', () => {
+            clearInterval(timerInterval);
+            examStarted = false;
+            document.getElementById('first-name').value = '';
+            document.getElementById('middle-name').value = '';
+            document.getElementById('last-name').value = '';
+            showSection('welcome');
+        });
+
+        function createQuestionGrid() {
+            const questionGrid = document.getElementById('question-grid');
+            questionGrid.innerHTML = '';
+            
+            for (let i = 0; i < questions.length; i++) {
+                const questionNumber = document.createElement('div');
+                questionNumber.className = 'question-number';
+                questionNumber.textContent = i + 1;
+                questionNumber.dataset.index = i;
+                questionNumber.title = `Question ${i + 1}`;
+                
+                if (userAnswers[i] !== null) {
+                    questionNumber.classList.add('answered');
+                }
+                
+                if (i === currentQuestionIndex) {
+                    questionNumber.classList.add('current');
+                }
+                
+                questionNumber.addEventListener('click', () => {
+                    currentQuestionIndex = parseInt(questionNumber.dataset.index);
+                    loadQuestion(currentQuestionIndex);
+                });
+                
+                questionGrid.appendChild(questionNumber);
+            }
+        }
+
+        function updateQuestionGrid() {
+            const questionNumbers = document.querySelectorAll('.question-number');
+            
+            questionNumbers.forEach((number, index) => {
+                number.classList.remove('current');
+                number.classList.remove('answered');
+                
+                if (index === currentQuestionIndex) {
+                    number.classList.add('current');
+                }
+                
+                if (userAnswers[index] !== null) {
+                    number.classList.add('answered');
+                }
+            });
+        }
+
+        function loadQuestion(index) {
+            const question = questions[index];
+            
+            document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
+            document.getElementById('question-text').textContent = question.question;
+            
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            
+            const labels = ['A', 'B', 'C', 'D'];
+            
+            question.options.forEach((option, optionIndex) => {
+                const optionDiv = document.createElement('div');
+                optionDiv.className = 'option';
+                
+                const optionId = `option-${index}-${optionIndex}`;
+                
+                const radio = document.createElement('input');
+                radio.type = 'radio';
+                radio.name = `question-${index}`;
+                radio.id = optionId;
+                radio.value = labels[optionIndex];
+                
+                if (userAnswers[index] === radio.value) {
+                    radio.checked = true;
+                }
+                
+                radio.addEventListener('change', () => {
+                    userAnswers[index] = radio.value;
+                    updateQuestionGrid();
+                    updateProgress();
+                });
+                
+                const label = document.createElement('label');
+                label.htmlFor = optionId;
+                label.textContent = `${labels[optionIndex]}. ${option}`;
+                
+                // Make entire option div clickable
+                optionDiv.addEventListener('click', (e) => {
+                    if (e.target !== radio) {
+                        radio.checked = true;
+                        userAnswers[index] = radio.value;
+                        updateQuestionGrid();
+                        updateProgress();
+                    }
+                });
+                
+                optionDiv.appendChild(radio);
+                optionDiv.appendChild(label);
+                optionsContainer.appendChild(optionDiv);
+            });
+            
+            document.getElementById('prev-question').disabled = index === 0;
+            document.getElementById('next-question').disabled = index === questions.length - 1;
+            
+            updateQuestionGrid();
+            updateProgress();
+            
+            // Scroll to top of question
+            document.querySelector('.exam-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function calculateScore() {
+            document.getElementById('loading').style.display = 'none';
+            let score = 0;
+            
+            for (let i = 0; i < questions.length; i++) {
+                if (userAnswers[i] === questions[i].answer) {
+                    score++;
+                }
+            }
+            
+            // Calculate half marks (each question is ½ mark)
+            const totalMarks = score * 0.5;
+            const percentage = (score / questions.length) * 100;
+            
+            document.getElementById('results-score').textContent = `Score: ${totalMarks} / 20`;
+            document.getElementById('results-percentage').textContent = `(${score}/40 correct answers - ${percentage.toFixed(1)}%)`;
+            
+            // Add performance-based feedback
+            let feedbackExtra = '';
+            if (percentage >= 90) {
+                feedbackExtra = 'Excellent performance! Keep up the outstanding work! 🌟';
+            } else if (percentage >= 75) {
+                feedbackExtra = 'Very good performance! You have a solid understanding of the topics. 👏';
+            } else if (percentage >= 60) {
+                feedbackExtra = 'Good effort! Review the topics you found challenging. 📚';
+            } else if (percentage >= 45) {
+                feedbackExtra = 'Fair attempt. More practice is needed on mensuration and solid geometry. 💪';
+            } else {
+                feedbackExtra = 'You need to revisit these topics thoroughly. Don\'t give up! 📖';
+            }
+            
+            document.getElementById('feedback-message').textContent = 
+                `Thank you for completing the Mathematics C.A Test. ${feedbackExtra}`;
+            
+            submitToGoogleForm(studentName, "SSS1 Mathematics - Third Term C.A Test 2025/2026", `${totalMarks}/20`);
+            document.getElementById('submission-status').style.display = 'block';
+            showSection('results');
+        }
+
+        function submitToGoogleForm(fullName, subject, score) {
+            const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
+            const formData = new FormData();
+            formData.append("entry.862885683", fullName);
+            formData.append("entry.1545021484", "SSS1");
+            formData.append("entry.1558221900", subject);
+            formData.append("entry.2022160530", score);
+
+            fetch(formURL, {
+                method: "POST",
+                mode: "no-cors",
+                body: formData
+            }).catch(err => console.warn("Form submission:", err));
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('first-name').focus();
+        });
     </script>
 </body>
 </html>
