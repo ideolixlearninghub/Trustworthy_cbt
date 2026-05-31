@@ -22,7 +22,6 @@
             min-height: 100vh;
         }
         
-        /* Dimmed background overlay with chemistry theme */
         body::before {
             content: '';
             position: fixed;
@@ -39,7 +38,6 @@
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container with chemistry theme (teal/green) */
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -55,7 +53,6 @@
             backdrop-filter: blur(5px);
         }
         
-        /* Green decorative border */
         .container::before {
             content: '';
             position: absolute;
@@ -67,7 +64,6 @@
             z-index: 2;
         }
         
-        /* Animated molecules decoration */
         .container::after {
             content: '⚛️';
             position: absolute;
@@ -84,7 +80,6 @@
             50% { transform: translateY(-15px) rotate(10deg); }
         }
         
-        /* Header */
         .header {
             text-align: center;
             padding-bottom: 25px;
@@ -146,7 +141,6 @@
             border: 1px solid #27ae6060;
         }
         
-        /* Sections */
         .section {
             display: none;
             padding: 25px;
@@ -164,7 +158,6 @@
             display: block;
         }
         
-        /* Welcome message */
         .welcome-message {
             background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(13, 42, 30, 0.7) 100%);
             padding: 35px;
@@ -192,7 +185,6 @@
             opacity: 0.08;
         }
         
-        /* Buttons */
         .btn {
             display: inline-block;
             background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
@@ -260,7 +252,6 @@
             margin-top: 35px;
         }
         
-        /* Form elements */
         .form-group {
             margin-bottom: 28px;
         }
@@ -301,7 +292,6 @@
             font-weight: 500;
         }
         
-        /* Instructions */
         .instructions {
             background: linear-gradient(135deg, rgba(46, 204, 113, 0.08) 0%, rgba(13, 42, 30, 0.7) 100%);
             padding: 30px;
@@ -361,7 +351,6 @@
             top: -5px;
         }
         
-        /* Exam interface */
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
@@ -501,7 +490,6 @@
             line-height: 1.5;
         }
         
-        /* Question navigation */
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
@@ -580,7 +568,6 @@
             margin-top: 25px;
         }
         
-        /* Progress bar */
         .progress-container {
             margin: 20px 0;
             background: rgba(13, 42, 30, 0.5);
@@ -605,7 +592,6 @@
             margin-top: 5px;
         }
         
-        /* Topic badges */
         .topic-badge {
             display: inline-block;
             padding: 4px 12px;
@@ -618,7 +604,7 @@
             font-weight: 500;
         }
         
-        /* Results section */
+        /* Results section - no score displayed */
         .results-container {
             text-align: center;
             padding: 40px;
@@ -646,18 +632,16 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         
-        .results-score {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #f1c40f;
+        .completion-icon {
+            font-size: 5rem;
             margin: 20px 0;
-            text-shadow: 0 0 20px rgba(241, 196, 15, 0.5);
+            animation: bounceIn 0.6s ease;
         }
         
-        .results-percentage {
-            font-size: 1.5rem;
-            color: #6ddb9e;
-            margin-bottom: 20px;
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
         
         .student-info {
@@ -693,40 +677,32 @@
             border: 1px solid rgba(241, 196, 15, 0.4);
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .question-grid {
                 grid-template-columns: repeat(5, 1fr);
             }
-            
             .exam-controls {
                 flex-direction: column;
                 align-items: stretch;
             }
-            
             .navigation-buttons {
                 flex-direction: column;
                 gap: 15px;
             }
-            
             .btn {
                 width: 100%;
                 margin: 8px 0;
             }
-            
             .subject-title {
                 font-size: 1.8rem;
             }
-            
             .question-text {
                 font-size: 1.2rem;
             }
-            
             .container {
                 padding: 15px;
                 margin: 15px;
             }
-            
             .welcome-message, .instructions, .exam-content {
                 padding: 20px;
             }
@@ -737,17 +713,14 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 10px;
             }
-            
             .question-number {
                 width: 35px;
                 height: 35px;
                 font-size: 1rem;
             }
-            
             .subject-title {
                 font-size: 1.5rem;
             }
-            
             .results-container {
                 padding: 25px 15px;
             }
@@ -779,7 +752,6 @@
             100% { transform: rotate(360deg); }
         }
         
-        /* Keyboard shortcut hint */
         .keyboard-hint {
             text-align: center;
             font-size: 0.85rem;
@@ -931,22 +903,20 @@
             </div>
         </section>
         
-        <!-- Results Section -->
+        <!-- Results Section (Score HIDDEN from student) -->
         <section id="results-section" class="section">
             <div class="results-container">
                 <h2>Test Completed</h2>
+                <div class="completion-icon">✅</div>
                 <div class="student-info" id="results-student-name"></div>
                 <div class="subject" id="results-subject">SSS1 Chemistry - Third Term Mid-Term Test 2025/2026</div>
                 
-                <div class="results-score" id="results-score"></div>
-                <div class="results-percentage" id="results-percentage"></div>
-                
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the Chemistry Mid-Term Test. Your results have been submitted successfully.
+                    Thank you for completing the Chemistry Mid-Term Test. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    Your test has been successfully submitted. Results will be communicated through appropriate channels.
+                    ✅ Your test has been successfully submitted.
                 </div>
                 
                 <div class="btn-container">
@@ -1216,11 +1186,10 @@
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 40 * 60; // 40 minutes in seconds
+        let timeLeft = 40 * 60;
         let questions = [];
         let examStarted = false;
 
-        // Background images for rotation (chemistry/lab themed)
         const backgroundImages = [
             'https://images.unsplash.com/photo-1532187863486-af6c4c3e38a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
             'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
@@ -1228,7 +1197,6 @@
             'https://images.unsplash.com/photo-1564325724739-bf45f3f36514?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
         ];
 
-        // DOM elements
         const sections = {
             welcome: document.getElementById('welcome-section'),
             studentInfo: document.getElementById('student-info-section'),
@@ -1237,7 +1205,6 @@
             results: document.getElementById('results-section')
         };
 
-        // Initialize background rotation
         let currentBgIndex = 0;
         function rotateBackground() {
             currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
@@ -1245,10 +1212,8 @@
         }
         setInterval(rotateBackground, 10000);
 
-        // Shuffle questions (grouped by topic to maintain some structure)
         function shuffleQuestions() {
             questions = [...originalQuestions];
-            // Light shuffle - maintain rough topic order but randomize within groups
             for (let i = questions.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [questions[i], questions[j]] = [questions[j], questions[i]];
@@ -1256,7 +1221,6 @@
             userAnswers = Array(questions.length).fill(null);
         }
 
-        // Timer function
         function startTimer() {
             clearInterval(timerInterval);
             timeLeft = 40 * 60;
@@ -1274,20 +1238,18 @@
                 document.getElementById('timer').textContent = 
                     `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
                 
-                // Visual warnings for time
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
                     alert("Time's up! Your test will be submitted automatically.");
-                    calculateScore();
-                } else if (timeLeft <= 300) { // 5 minutes left
+                    calculateScoreAndSubmit();
+                } else if (timeLeft <= 300) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
-                } else if (timeLeft <= 600) { // 10 minutes left
+                } else if (timeLeft <= 600) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e67e22 0%, #d35400 100%)';
                 }
             }, 1000);
         }
 
-        // Pause timer when tab is hidden
         document.addEventListener('visibilitychange', () => {
             if (!examStarted) return;
             
@@ -1305,14 +1267,13 @@
                         if (timeLeft <= 0) {
                             clearInterval(timerInterval);
                             alert("Time's up! Your test will be submitted automatically.");
-                            calculateScore();
+                            calculateScoreAndSubmit();
                         }
                     }, 1000);
                 }
             }
         });
 
-        // Warn before leaving
         window.addEventListener('beforeunload', (e) => {
             if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
                 e.preventDefault();
@@ -1321,7 +1282,6 @@
             }
         });
 
-        // Navigation functions
         function showSection(sectionName) {
             Object.values(sections).forEach(section => {
                 section.classList.remove('active');
@@ -1335,7 +1295,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Update progress
         function updateProgress() {
             const answeredCount = userAnswers.filter(answer => answer !== null).length;
             const percentage = (answeredCount / questions.length) * 100;
@@ -1345,14 +1304,12 @@
                 `Progress: ${answeredCount}/${questions.length} answered`;
         }
 
-        // Update topic badge
         function updateTopicBadge(index) {
             const topic = questions[index].topic;
             const badge = document.getElementById('topic-badge');
             badge.textContent = `Topic: ${topic}`;
         }
 
-        // Event listeners
         document.getElementById('start-exam-btn').addEventListener('click', () => {
             showSection('studentInfo');
         });
@@ -1435,11 +1392,8 @@
             }
         });
 
-        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (!document.getElementById('exam-section').classList.contains('active')) return;
-            
-            // Don't intercept if user is typing in an input
             if (e.target.tagName === 'INPUT' && e.target.type === 'text') return;
             
             if (e.key === 'ArrowLeft' && currentQuestionIndex > 0) {
@@ -1490,7 +1444,7 @@
                 examStarted = false;
                 document.getElementById('loading').style.display = 'block';
                 setTimeout(() => {
-                    calculateScore();
+                    calculateScoreAndSubmit();
                 }, 1500);
             }
         });
@@ -1555,7 +1509,6 @@
             document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
             document.getElementById('question-text').textContent = question.question;
             
-            // Update topic badge
             updateTopicBadge(index);
             
             const optionsContainer = document.getElementById('options-container');
@@ -1589,7 +1542,6 @@
                 label.htmlFor = optionId;
                 label.textContent = `${labels[optionIndex]}. ${option}`;
                 
-                // Make entire option div clickable
                 optionDiv.addEventListener('click', (e) => {
                     if (e.target !== radio) {
                         radio.checked = true;
@@ -1610,11 +1562,10 @@
             updateQuestionGrid();
             updateProgress();
             
-            // Scroll to top of question
             document.querySelector('.exam-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        function calculateScore() {
+        function calculateScoreAndSubmit() {
             document.getElementById('loading').style.display = 'none';
             let score = 0;
             
@@ -1624,29 +1575,9 @@
                 }
             }
             
-            const percentage = (score / questions.length) * 100;
-            
-            document.getElementById('results-score').textContent = `Score: ${score} / 40`;
-            document.getElementById('results-percentage').textContent = `${percentage.toFixed(1)}%`;
-            
-            // Performance-based feedback
-            let feedbackExtra = '';
-            if (percentage >= 90) {
-                feedbackExtra = '🌟 Excellent performance! You have an outstanding grasp of Chemistry concepts. Keep up the brilliant work!';
-            } else if (percentage >= 75) {
-                feedbackExtra = '👏 Very good! You demonstrate strong understanding of atomic structure and redox reactions.';
-            } else if (percentage >= 60) {
-                feedbackExtra = '📚 Good effort! Review electronic configuration and oxidation numbers for improvement.';
-            } else if (percentage >= 45) {
-                feedbackExtra = '💪 Fair attempt. More practice needed on atomic structure, electronic configuration, and redox concepts.';
-            } else {
-                feedbackExtra = '📖 You need to revisit these topics thoroughly. Focus on understanding atomic structure and redox reactions. Don\'t give up!';
-            }
-            
-            document.getElementById('feedback-message').textContent = 
-                `Thank you for completing the Chemistry Mid-Term Test. ${feedbackExtra}`;
-            
+            // Submit score to Google Form ONLY - do NOT display to student
             submitToGoogleForm(studentName, "SSS1 Chemistry - Third Term Mid-Term Test 2025/2026", `${score}/40`);
+            
             document.getElementById('submission-status').style.display = 'block';
             showSection('results');
         }
