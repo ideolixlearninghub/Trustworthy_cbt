@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Chemistry SSS1 Examination</title>
+    <title>The Trustworthy College - Chemistry SSS1 Mid-Term Test</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚗️</text></svg>">
     <style>
         /* Reset and base styles */
         * {
@@ -14,8 +15,8 @@
         }
         
         body {
-            background-color: #0a1a1a;
-            color: #e0f0e0;
+            background-color: #0d1b2a;
+            color: #e0e8f0;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
@@ -29,28 +30,28 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1532187863486-af6c4c3e38a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.15;
+            opacity: 0.10;
             z-index: -1;
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container with chemistry theme (green/blue - scientific) */
+        /* Container with chemistry theme (teal/green) */
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #0a2a2a 0%, #1a3a3a 100%);
-            box-shadow: 0 15px 40px rgba(46, 204, 113, 0.25);
+            background: linear-gradient(135deg, #0a1628 0%, #0d2a1e 100%);
+            box-shadow: 0 15px 40px rgba(39, 174, 96, 0.25);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #2ecc71;
+            border: 3px solid #27ae60;
             backdrop-filter: blur(5px);
         }
         
@@ -62,8 +63,25 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #2ecc71, #3498db, #2ecc71);
+            background: linear-gradient(90deg, #27ae60, #2ecc71, #27ae60);
             z-index: 2;
+        }
+        
+        /* Animated molecules decoration */
+        .container::after {
+            content: '⚛️';
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 2.5rem;
+            opacity: 0.06;
+            z-index: 0;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
         }
         
         /* Header */
@@ -72,7 +90,8 @@
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #2ecc71;
+            border-bottom: 2px solid #27ae60;
+            z-index: 1;
         }
         
         .header::after {
@@ -83,7 +102,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #2ecc71, transparent);
+            background: linear-gradient(to right, transparent, #27ae60, transparent);
         }
         
         .logo {
@@ -92,7 +111,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #2ecc71;
+            border: 3px solid #27ae60;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -103,7 +122,7 @@
         }
         
         .subject-title {
-            color: #2ecc71;
+            color: #6ddb9e;
             font-size: 2.4rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
@@ -111,20 +130,20 @@
         }
         
         .exam-info {
-            color: #a3e4d7;
+            color: #a3d4b8;
             font-size: 1.1rem;
             margin-top: 5px;
         }
         
         .term-info {
-            background: linear-gradient(135deg, #2ecc7120, #3498db40);
+            background: linear-gradient(135deg, #27ae6020, #2ecc7140);
             display: inline-block;
             padding: 8px 20px;
             border-radius: 30px;
             margin-top: 10px;
             font-weight: bold;
-            color: #2ecc71;
-            border: 1px solid #2ecc7160;
+            color: #6ddb9e;
+            border: 1px solid #27ae6060;
         }
         
         /* Sections */
@@ -132,6 +151,8 @@
             display: none;
             padding: 25px;
             animation: fadeIn 0.5s ease;
+            position: relative;
+            z-index: 1;
         }
         
         @keyframes fadeIn {
@@ -145,36 +166,36 @@
         
         /* Welcome message */
         .welcome-message {
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.1) 0%, rgba(26, 58, 58, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(13, 42, 30, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #e0f0e0;
-            border-left: 5px solid #2ecc71;
-            border-right: 1px solid rgba(46, 204, 113, 0.3);
-            border-top: 1px solid rgba(46, 204, 113, 0.2);
-            border-bottom: 1px solid rgba(46, 204, 113, 0.3);
+            color: #e0e8f0;
+            border-left: 5px solid #27ae60;
+            border-right: 1px solid rgba(39, 174, 96, 0.3);
+            border-top: 1px solid rgba(39, 174, 96, 0.2);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
         }
         
         .welcome-message::before {
-            content: '🧪';
+            content: '⚗️';
             position: absolute;
             top: 20px;
             right: 20px;
             font-size: 3rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
         /* Buttons */
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
             color: #ffffff;
             border: none;
             padding: 15px 32px;
@@ -185,8 +206,8 @@
             margin: 12px 8px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(46, 204, 113, 0.5);
-            box-shadow: 0 6px 15px rgba(46, 204, 113, 0.3);
+            border: 2px solid rgba(39, 174, 96, 0.5);
+            box-shadow: 0 6px 15px rgba(39, 174, 96, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -203,25 +224,35 @@
             transition: all 0.5s;
         }
         
-        .btn:hover {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+        .btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(46, 204, 113, 0.5);
+            box-shadow: 0 10px 25px rgba(39, 174, 96, 0.5);
             color: #ffffff;
         }
         
-        .btn-secondary {
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-            border-color: #3498db;
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
         }
         
-        .btn-secondary:hover {
-            background: linear-gradient(135deg, #5dade2 0%, #3498db 100%);
+        .btn-secondary {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            border-color: #5d7e9e;
+        }
+        
+        .btn-secondary:hover:not(:disabled) {
+            background: linear-gradient(135deg, #3d566e 0%, #2c3e50 100%);
         }
         
         .btn-success {
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            border-color: #d35400;
+        }
+        
+        .btn-success:hover:not(:disabled) {
             background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
-            border-color: #e67e22;
         }
         
         .btn-container {
@@ -238,7 +269,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #2ecc71;
+            color: #6ddb9e;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -246,20 +277,20 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(10, 42, 42, 0.7);
-            border: 2px solid #16a085;
+            background: rgba(10, 22, 40, 0.7);
+            border: 2px solid #5d7e9e;
             border-radius: 10px;
             font-size: 1.1rem;
-            color: #e0f0e0;
+            color: #e0e8f0;
             transition: all 0.3s;
             font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #2ecc71;
+            border-color: #27ae60;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.3);
-            background: rgba(10, 42, 42, 0.9);
+            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.3);
+            background: rgba(10, 22, 40, 0.9);
         }
         
         .error-message {
@@ -272,28 +303,28 @@
         
         /* Instructions */
         .instructions {
-            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(26, 58, 58, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.08) 0%, rgba(13, 42, 30, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid #3498db;
-            border: 1px solid rgba(52, 152, 219, 0.2);
+            border-left: 5px solid #2ecc71;
+            border: 1px solid rgba(46, 204, 113, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
         
         .instructions::before {
-            content: '⚗️';
+            content: '🧪';
             position: absolute;
             top: 20px;
             right: 20px;
             font-size: 2.5rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #3498db;
+            color: #2ecc71;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -306,7 +337,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #3498db;
+            background: #2ecc71;
             border-radius: 2px;
         }
         
@@ -323,7 +354,7 @@
         
         .instructions li::before {
             content: '•';
-            color: #3498db;
+            color: #2ecc71;
             font-size: 1.5rem;
             position: absolute;
             left: -20px;
@@ -334,19 +365,19 @@
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(46, 204, 113, 0.3);
+            border-bottom: 2px solid rgba(39, 174, 96, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #2ecc71;
+            color: #6ddb9e;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.1) 0%, rgba(52, 152, 219, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(46, 204, 113, 0.15) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(46, 204, 113, 0.3);
+            border: 1px solid rgba(39, 174, 96, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -357,32 +388,33 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(10, 42, 42, 0.5);
+            background: rgba(10, 22, 40, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(46, 204, 113, 0.2);
+            border: 1px solid rgba(39, 174, 96, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #2ecc71;
+            color: #6ddb9e;
             font-weight: 600;
             padding: 10px 20px;
-            background: rgba(46, 204, 113, 0.1);
+            background: rgba(39, 174, 96, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(46, 204, 113, 0.3);
+            border: 1px solid rgba(39, 174, 96, 0.3);
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
             color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(46, 204, 113, 0.4);
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
             display: none;
-            border: 2px solid rgba(46, 204, 113, 0.5);
+            border: 2px solid rgba(39, 174, 96, 0.5);
             font-family: 'Courier New', monospace;
+            transition: background 0.5s ease;
         }
         
         .submit-container {
@@ -391,10 +423,10 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(10, 42, 42, 0.4);
+            background: rgba(10, 22, 40, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(46, 204, 113, 0.2);
+            border: 1px solid rgba(39, 174, 96, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -402,12 +434,12 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #2ecc71;
+            color: #6ddb9e;
             line-height: 1.6;
             padding: 20px;
-            background: rgba(52, 152, 219, 0.1);
+            background: rgba(46, 204, 113, 0.08);
             border-radius: 10px;
-            border-left: 4px solid #3498db;
+            border-left: 4px solid #2ecc71;
         }
         
         .options-container {
@@ -421,8 +453,8 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(26, 58, 58, 0.5);
-            border: 1px solid rgba(22, 160, 133, 0.3);
+            background: rgba(13, 42, 30, 0.4);
+            border: 1px solid rgba(93, 126, 158, 0.3);
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -435,14 +467,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(46, 204, 113, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(39, 174, 96, 0.08), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(46, 204, 113, 0.1);
-            border-color: #2ecc71;
+            background: rgba(39, 174, 96, 0.1);
+            border-color: #27ae60;
             transform: translateX(5px);
         }
         
@@ -450,12 +482,13 @@
             transform: translateX(100%);
         }
         
-        .option input {
+        .option input[type="radio"] {
             margin-right: 15px;
             width: 22px;
             height: 22px;
             cursor: pointer;
-            accent-color: #2ecc71;
+            accent-color: #27ae60;
+            flex-shrink: 0;
         }
         
         .option label {
@@ -463,7 +496,7 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
-            color: #e0f0e0;
+            color: #e0e8f0;
             font-size: 1.1rem;
             line-height: 1.5;
         }
@@ -472,12 +505,12 @@
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(46, 204, 113, 0.3);
+            border-top: 2px solid rgba(39, 174, 96, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #2ecc71;
+            color: #6ddb9e;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -494,7 +527,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: #3498db;
+            background: #2ecc71;
             border-radius: 2px;
         }
         
@@ -511,34 +544,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(22, 160, 133, 0.3) 0%, rgba(26, 58, 58, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(13, 42, 30, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(46, 204, 113, 0.3);
-            color: #e0f0e0;
+            border: 1px solid rgba(39, 174, 96, 0.3);
+            color: #e0e8f0;
             font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.3) 0%, rgba(39, 174, 96, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.3) 0%, rgba(30, 132, 73, 0.5) 100%);
             transform: scale(1.1);
-            border-color: #2ecc71;
+            border-color: #27ae60;
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
             color: #ffffff;
-            border-color: #3498db;
-            box-shadow: 0 4px 10px rgba(46, 204, 113, 0.4);
+            border-color: #6ddb9e;
+            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.4);
             transform: scale(1.1);
         }
         
         .question-number.answered {
-            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: white;
-            border-color: #f1c40f;
+            border-color: #f39c12;
         }
         
         .navigation-buttons {
@@ -547,13 +580,51 @@
             margin-top: 25px;
         }
         
+        /* Progress bar */
+        .progress-container {
+            margin: 20px 0;
+            background: rgba(13, 42, 30, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 10px;
+            border: 1px solid rgba(39, 174, 96, 0.3);
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #27ae60, #2ecc71);
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        .progress-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #a3d4b8;
+            margin-top: 5px;
+        }
+        
+        /* Topic badges */
+        .topic-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(39, 174, 96, 0.15);
+            border: 1px solid rgba(39, 174, 96, 0.3);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #6ddb9e;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
         /* Results section */
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(10, 42, 42, 0.8) 0%, rgba(26, 58, 58, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(10, 22, 40, 0.8) 0%, rgba(13, 42, 30, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #2ecc71;
+            border: 2px solid #27ae60;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
@@ -565,14 +636,28 @@
             top: 20px;
             right: 20px;
             font-size: 4rem;
-            opacity: 0.1;
+            opacity: 0.06;
         }
         
         .results-container h2 {
-            color: #2ecc71;
+            color: #6ddb9e;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .results-score {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #f1c40f;
+            margin: 20px 0;
+            text-shadow: 0 0 20px rgba(241, 196, 15, 0.5);
+        }
+        
+        .results-percentage {
+            font-size: 1.5rem;
+            color: #6ddb9e;
+            margin-bottom: 20px;
         }
         
         .student-info {
@@ -582,7 +667,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #a3e4d7;
+            color: #a3d4b8;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -590,22 +675,22 @@
         .feedback {
             font-size: 1.3rem;
             margin: 25px 0;
-            color: #e0f0e0;
+            color: #e0e8f0;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(46, 204, 113, 0.1);
+            background: rgba(39, 174, 96, 0.08);
             border-radius: 12px;
-            border: 1px solid rgba(46, 204, 113, 0.3);
+            border: 1px solid rgba(39, 174, 96, 0.3);
         }
         
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(241, 196, 15, 0.2) 0%, rgba(243, 156, 18, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(241, 196, 15, 0.15) 0%, rgba(243, 156, 18, 0.2) 100%);
             border-radius: 12px;
             color: #f1c40f;
             font-size: 1.2rem;
-            border: 1px solid rgba(241, 196, 15, 0.5);
+            border: 1px solid rgba(241, 196, 15, 0.4);
         }
         
         /* Responsive */
@@ -680,8 +765,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(46, 204, 113, 0.3);
-            border-top: 4px solid #2ecc71;
+            border: 4px solid rgba(39, 174, 96, 0.3);
+            border-top: 4px solid #27ae60;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -693,6 +778,28 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        
+        /* Keyboard shortcut hint */
+        .keyboard-hint {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5d7e9e;
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(10, 22, 40, 0.3);
+            border-radius: 8px;
+            border: 1px dashed rgba(93, 126, 158, 0.3);
+        }
+        
+        .keyboard-hint kbd {
+            background: rgba(39, 174, 96, 0.2);
+            border: 1px solid rgba(39, 174, 96, 0.4);
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #6ddb9e;
+        }
     </style>
 </head>
 <body>
@@ -701,42 +808,42 @@
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title">SSS1 CHEMISTRY EXAMINATION</h1>
-            <div class="exam-info">Second Term | 2025/2026 Session</div>
-            <div class="term-info">40 Questions | 30 Minutes</div>
+            <h1 class="subject-title">SSS1 CHEMISTRY MID-TERM TEST</h1>
+            <div class="exam-info">Third Term | 2025/2026 Session</div>
+            <div class="term-info">40 Objective Questions | 40 Minutes</div>
         </div>
         
         <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Chemistry Examination. This test covers Qualitative and Quantitative Analysis, Mole Concept, Empirical and Molecular Formulas, Gas Laws, and Stoichiometry. Demonstrate your understanding of chemical principles. Best of luck."
+                "Welcome to The Trustworthy College Chemistry Mid-Term Objective Test. This test covers Atomic Structure (sub-atomic particles, atomic number, mass number), Electronic Configuration (Bohr's model, shells, valence electrons), Oxidation and Reduction (redox reactions, oxidizing/reducing agents), and Oxidation Numbers. Demonstrate your understanding of fundamental chemical principles. Best of luck."
             </div>
             <div class="btn-container">
-                <button id="start-exam-btn" class="btn">Start Examination</button>
+                <button id="start-exam-btn" class="btn">Start Mid-Term Test</button>
             </div>
         </section>
         
         <!-- Student Information Section -->
         <section id="student-info-section" class="section">
             <h2>Student Information</h2>
-            <p>Please provide your details to continue with the examination.</p>
+            <p>Please provide your details to continue with the test.</p>
             
-            <form id="student-info-form">
+            <form id="student-info-form" autocomplete="off">
                 <div class="form-group">
                     <label for="first-name">First Name *</label>
-                    <input type="text" id="first-name" required>
+                    <input type="text" id="first-name" required placeholder="Enter your first name">
                     <div class="error-message" id="first-name-error">First name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="middle-name">Middle Name *</label>
-                    <input type="text" id="middle-name" required>
+                    <input type="text" id="middle-name" required placeholder="Enter your middle name">
                     <div class="error-message" id="middle-name-error">Middle name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="last-name">Last Name *</label>
-                    <input type="text" id="last-name" required>
+                    <input type="text" id="last-name" required placeholder="Enter your last name">
                     <div class="error-message" id="last-name-error">Last name is required</div>
                 </div>
                 
@@ -749,22 +856,22 @@
         
         <!-- Instructions Section -->
         <section id="instructions-section" class="section">
-            <h2>Examination Instructions</h2>
+            <h2>Test Instructions</h2>
             
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This examination consists of 40 multiple-choice questions covering Chemistry topics.</li>
-                    <li>Each question carries ½ mark (Total = 20 marks).</li>
-                    <li>You have 30 minutes to complete this examination.</li>
+                    <li>This Mid-Term Test consists of <strong>40 multiple-choice objective questions</strong> covering Atomic Structure, Electronic Configuration, and Redox Reactions.</li>
+                    <li>You have <strong>40 minutes</strong> to complete this test.</li>
                     <li>Answer all questions to the best of your ability.</li>
-                    <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
-                    <li>Answered questions will be marked with orange in the question grid.</li>
-                    <li>Once you submit your answers, you cannot change them.</li>
-                    <li>Ensure you have a stable internet connection throughout the examination.</li>
+                    <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
+                    <li>You can also use <strong>keyboard shortcuts</strong>: Arrow keys to navigate, A/B/C/D keys to select answers.</li>
+                    <li>Answered questions will be marked with <strong>orange</strong> in the question grid.</li>
+                    <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
+                    <li>Ensure you have a stable internet connection throughout the test.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li>This is the Second Term Examination for the 2025/2026 Academic Session.</li>
+                    <li><strong>Do not refresh the page</strong> during the test, or you may lose your progress.</li>
                 </ul>
             </div>
             
@@ -778,13 +885,18 @@
         <section id="exam-section" class="section">
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
+                <div class="topic-badge" id="topic-badge">Topic: Atomic Structure</div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">Progress: 0/40 answered</div>
                 <div class="exam-controls">
                     <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">30:00</span>
+                        ⏱ Time Left: <span id="timer">40:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Test</button>
                     </div>
                 </div>
             </div>
@@ -797,6 +909,10 @@
                 </div>
             </div>
             
+            <div class="keyboard-hint">
+                💡 Keyboard shortcuts: <kbd>←</kbd> <kbd>→</kbd> Navigate | <kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd> Select answer
+            </div>
+            
             <div class="question-navigation">
                 <h3>Question Navigation</h3>
                 <div class="question-grid" id="question-grid">
@@ -804,8 +920,8 @@
                 </div>
                 
                 <div class="navigation-buttons">
-                    <button type="button" id="prev-question" class="btn btn-secondary">Previous</button>
-                    <button type="button" id="next-question" class="btn">Next</button>
+                    <button type="button" id="prev-question" class="btn btn-secondary">← Previous</button>
+                    <button type="button" id="next-question" class="btn">Next →</button>
                 </div>
             </div>
             
@@ -818,20 +934,23 @@
         <!-- Results Section -->
         <section id="results-section" class="section">
             <div class="results-container">
-                <h2>Examination Completed</h2>
+                <h2>Test Completed</h2>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SSS1 Chemistry - Second Term 2025/2026</div>
+                <div class="subject" id="results-subject">SSS1 Chemistry - Third Term Mid-Term Test 2025/2026</div>
+                
+                <div class="results-score" id="results-score"></div>
+                <div class="results-percentage" id="results-percentage"></div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the Chemistry examination. Your results have been submitted successfully to the examination board.
+                    Thank you for completing the Chemistry Mid-Term Test. Your results have been submitted successfully.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    Your examination has been successfully submitted. Results will be communicated through appropriate channels.
+                    Your test has been successfully submitted. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn">Take Another Exam</button>
+                    <button type="button" id="restart-exam" class="btn">Take Another Test</button>
                     <div class="back-home">
                         <a href="../index.html" class="btn btn-secondary">Back to Home</a>
                     </div>
@@ -841,207 +960,254 @@
     </div>
 
     <script>
-        // SSS1 CHEMISTRY - SECOND TERM 2025/2026
+        // SSS1 CHEMISTRY - THIRD TERM MID-TERM OBJECTIVE TEST 2025/2026
         const originalQuestions = [
+            // SECTION A: Atomic Structure (Questions 1-9)
             {
-                question: "Which of the following refers to the identification of substances present in a sample? (½ mark)",
-                options: ["Quantitative analysis", "Qualitative analysis", "Volumetric analysis", "Gravimetric analysis"],
-                answer: "B"
+                question: "The smallest particle of an element that can take part in a chemical reaction is the:",
+                options: ["Molecule", "Atom", "Electron", "Ion"],
+                answer: "B",
+                topic: "Atomic Structure"
             },
             {
-                question: "The determination of the amount of substance present in a sample is known as (½ mark)",
-                options: ["Quantitative analysis", "Qualitative analysis", "Fractional analysis", "Spectral analysis"],
-                answer: "A"
+                question: "The centre of an atom is called the:",
+                options: ["Shell", "Orbit", "Nucleus", "Valence"],
+                answer: "C",
+                topic: "Atomic Structure"
             },
             {
-                question: "Which of the following is an example of qualitative analysis? (½ mark)",
-                options: ["Determining the mass of salt in solution", "Identifying copper ions in a solution", "Measuring the concentration of acid", "Calculating percentage yield"],
-                answer: "B"
+                question: "Which of the following particles has a positive charge?",
+                options: ["Electron", "Neutron", "Proton", "Photon"],
+                answer: "C",
+                topic: "Atomic Structure"
             },
             {
-                question: "Which of the following is commonly used in quantitative chemical analysis? (½ mark)",
-                options: ["Burette", "Thermometer", "Barometer", "Hygrometer"],
-                answer: "A"
+                question: "The particle with no electrical charge is the:",
+                options: ["Proton", "Electron", "Positron", "Neutron"],
+                answer: "D",
+                topic: "Atomic Structure"
             },
             {
-                question: "A mole of a substance contains how many particles? (½ mark)",
-                options: ["6.02 × 10²³", "3.02 × 10²³", "6.02 × 10²²", "3.02 × 10²²"],
-                answer: "A"
+                question: "Electrons are found in the:",
+                options: ["Nucleus", "Shells around the nucleus", "Proton", "Neutron"],
+                answer: "B",
+                topic: "Atomic Structure"
             },
             {
-                question: "The numerical value 6.02 × 10²³ is known as (½ mark)",
-                options: ["Faraday's constant", "Avogadro's number", "Planck's constant", "Gas constant"],
-                answer: "B"
+                question: "The atomic number of an element is equal to the number of:",
+                options: ["Neutrons only", "Protons only", "Nucleons", "Shells"],
+                answer: "B",
+                topic: "Atomic Structure"
             },
             {
-                question: "The mass of one mole of a substance is called its (½ mark)",
-                options: ["Atomic number", "Molar mass", "Relative density", "Molecular size"],
-                answer: "B"
+                question: "The mass number of an atom is the sum of:",
+                options: ["Protons and electrons", "Electrons and neutrons", "Protons and neutrons", "Protons and shells"],
+                answer: "C",
+                topic: "Atomic Structure"
             },
             {
-                question: "The molar mass of oxygen gas (O₂) is (½ mark)",
-                options: ["16 g/mol", "18 g/mol", "32 g/mol", "48 g/mol"],
-                answer: "C"
+                question: "An atom contains 11 protons and 12 neutrons. Its mass number is:",
+                options: ["11", "12", "23", "24"],
+                answer: "C",
+                topic: "Atomic Structure"
             },
             {
-                question: "How many moles are present in 44 g of carbon dioxide (CO₂)? (½ mark)",
-                options: ["0.5 mol", "1 mol", "2 mol", "4 mol"],
-                answer: "B"
+                question: "An atom with atomic number 8 has:",
+                options: ["8 neutrons", "8 protons", "16 electrons", "16 protons"],
+                answer: "B",
+                topic: "Atomic Structure"
+            },
+            
+            // SECTION B: Electronic Configuration (Questions 10-20)
+            {
+                question: "According to Bohr's model, electrons move around the nucleus in:",
+                options: ["Clouds", "Fixed energy levels", "Random paths", "Waves only"],
+                answer: "B",
+                topic: "Electronic Configuration"
             },
             {
-                question: "Which of the following quantities represents one mole of sodium atoms? (½ mark)",
-                options: ["23 atoms", "6.02 × 10²³ atoms", "23 molecules", "6.02 × 10²³ molecules"],
-                answer: "B"
+                question: "The maximum number of electrons that can occupy the first shell (K-shell) is:",
+                options: ["2", "8", "18", "32"],
+                answer: "A",
+                topic: "Electronic Configuration"
             },
             {
-                question: "The molar mass of NaCl is (Na = 23, Cl = 35.5) (½ mark)",
-                options: ["48.5 g/mol", "58.5 g/mol", "68.5 g/mol", "78.5 g/mol"],
-                answer: "B"
+                question: "The maximum number of electrons in the second shell (L-shell) is:",
+                options: ["2", "4", "8", "18"],
+                answer: "C",
+                topic: "Electronic Configuration"
             },
             {
-                question: "The number of moles in 18 g of water (H₂O) is (½ mark)",
-                options: ["0.5 mol", "1 mol", "2 mol", "3 mol"],
-                answer: "B"
+                question: "The shell nearest to the nucleus is the:",
+                options: ["M-shell", "N-shell", "L-shell", "K-shell"],
+                answer: "D",
+                topic: "Electronic Configuration"
             },
             {
-                question: "The empirical formula of a compound represents the (½ mark)",
-                options: ["Actual number of atoms present", "Simplest whole number ratio of atoms", "Molecular mass of compound", "Percentage mass of atoms"],
-                answer: "B"
+                question: "The electronic configuration of sodium (Atomic Number 11) is:",
+                options: ["2,8,1", "2,8,2", "2,6,3", "2,7,2"],
+                answer: "A",
+                topic: "Electronic Configuration"
             },
             {
-                question: "Percentage composition of an element in a compound is calculated based on its (½ mark)",
-                options: ["Atomic number", "Relative atomic mass", "Mass contribution", "Number of electrons"],
-                answer: "C"
+                question: "The electronic configuration of magnesium (Atomic Number 12) is:",
+                options: ["2,8,1", "2,8,2", "2,7,3", "2,6,4"],
+                answer: "B",
+                topic: "Electronic Configuration"
             },
             {
-                question: "Which of the following compounds has empirical formula CH₂O? (½ mark)",
-                options: ["Glucose", "Methane", "Ethanol", "Carbon dioxide"],
-                answer: "A"
+                question: "The electronic configuration of oxygen (Atomic Number 8) is:",
+                options: ["2,8", "2,6", "2,5", "2,7"],
+                answer: "B",
+                topic: "Electronic Configuration"
             },
             {
-                question: "The molecular formula of benzene is C₆H₆. Its empirical formula is (½ mark)",
-                options: ["CH", "CH₂", "C₂H₂", "C₃H₃"],
-                answer: "A"
+                question: "The valence electrons of an atom are found in the:",
+                options: ["First shell", "Second shell", "Outermost shell", "Nucleus"],
+                answer: "C",
+                topic: "Electronic Configuration"
             },
             {
-                question: "The percentage of oxygen in water (H₂O) is approximately (½ mark)",
-                options: ["11%", "22%", "89%", "78%"],
-                answer: "C"
+                question: "An element with electronic configuration 2,8,7 belongs to Group:",
+                options: ["1", "2", "7", "8"],
+                answer: "C",
+                topic: "Electronic Configuration"
             },
             {
-                question: "If the empirical formula of a compound is CH₂ and its molar mass is 42 g/mol, the molecular formula is (½ mark)",
-                options: ["CH₂", "C₂H₄", "C₃H₆", "C₄H₈"],
-                answer: "C"
+                question: "Which of the following has one valence electron?",
+                options: ["2,8,1", "2,8,2", "2,8,7", "2,6"],
+                answer: "A",
+                topic: "Electronic Configuration"
             },
             {
-                question: "Boyle's law states that the pressure of a fixed mass of gas is inversely proportional to its (½ mark)",
-                options: ["Temperature", "Volume", "Density", "Mass"],
-                answer: "B"
+                question: "The electronic configuration 2,8,8 represents a:",
+                options: ["Reactive metal", "Halogen", "Noble gas", "Transition metal"],
+                answer: "C",
+                topic: "Electronic Configuration"
+            },
+            
+            // SECTION C: Oxidation and Reduction (Questions 21-29)
+            {
+                question: "Oxidation is the:",
+                options: ["Gain of electrons", "Sharing of electrons", "Loss of electrons", "Transfer of neutrons"],
+                answer: "C",
+                topic: "Oxidation & Reduction"
             },
             {
-                question: "Boyle's law is valid at constant (½ mark)",
-                options: ["Temperature", "Pressure", "Volume", "Density"],
-                answer: "A"
+                question: "Reduction is the:",
+                options: ["Loss of electrons", "Gain of electrons", "Loss of protons", "Gain of neutrons"],
+                answer: "B",
+                topic: "Oxidation & Reduction"
             },
             {
-                question: "Charles' law relates the volume of a gas to its (½ mark)",
-                options: ["Pressure", "Temperature", "Density", "Mass"],
-                answer: "B"
+                question: "The process in which oxidation and reduction occur simultaneously is called:",
+                options: ["Neutralization", "Hydrolysis", "Redox reaction", "Polymerization"],
+                answer: "C",
+                topic: "Oxidation & Reduction"
             },
             {
-                question: "Charles' law is valid at constant (½ mark)",
-                options: ["Pressure", "Temperature", "Volume", "Density"],
-                answer: "A"
+                question: "In terms of oxygen, oxidation involves:",
+                options: ["Removal of oxygen", "Addition of oxygen", "Loss of hydrogen only", "Gain of nitrogen"],
+                answer: "B",
+                topic: "Oxidation & Reduction"
             },
             {
-                question: "The SI unit of pressure is (½ mark)",
-                options: ["Atmosphere", "Pascal", "mmHg", "Bar"],
-                answer: "B"
+                question: "Reduction in terms of oxygen is:",
+                options: ["Addition of oxygen", "Addition of electrons only", "Removal of oxygen", "Addition of chlorine"],
+                answer: "C",
+                topic: "Oxidation & Reduction"
             },
             {
-                question: "The instrument used to measure atmospheric pressure is (½ mark)",
-                options: ["Thermometer", "Barometer", "Hydrometer", "Calorimeter"],
-                answer: "B"
+                question: "A substance that causes oxidation is known as a:",
+                options: ["Catalyst", "Reducing agent", "Oxidizing agent", "Solvent"],
+                answer: "C",
+                topic: "Oxidation & Reduction"
             },
             {
-                question: "The relationship between pressure and volume according to Boyle's law is (½ mark)",
-                options: ["PV = constant", "P/V = constant", "P + V = constant", "P – V = constant"],
-                answer: "A"
+                question: "A reducing agent works by:",
+                options: ["Accepting electrons", "Donating electrons", "Absorbing neutrons", "Increasing atomic number"],
+                answer: "B",
+                topic: "Oxidation & Reduction"
             },
             {
-                question: "According to Charles' law, temperature must be measured in (½ mark)",
-                options: ["Celsius", "Fahrenheit", "Kelvin", "Centigrade"],
-                answer: "C"
+                question: "Which of the following is an example of oxidation?",
+                options: ["CuO → Cu", "Fe²⁺ → Fe³⁺", "Cl₂ → 2Cl⁻", "Ag⁺ → Ag"],
+                answer: "B",
+                topic: "Oxidation & Reduction"
             },
             {
-                question: "Standard temperature is (½ mark)",
-                options: ["273K", "25°C", "100°C", "273°C"],
-                answer: "A"
+                question: "Which of the following is an example of reduction?",
+                options: ["Zn → Zn²⁺", "Fe²⁺ → Fe³⁺", "Cu²⁺ → Cu", "Mg → Mg²⁺"],
+                answer: "C",
+                topic: "Oxidation & Reduction"
+            },
+            
+            // SECTION D: Oxidation Numbers & Redox Applications (Questions 30-40)
+            {
+                question: "The oxidation number of an element in its free state is:",
+                options: ["+1", "–1", "0", "+2"],
+                answer: "C",
+                topic: "Oxidation Numbers"
             },
             {
-                question: "Standard pressure is (½ mark)",
-                options: ["760 mmHg", "100 mmHg", "500 mmHg", "200 mmHg"],
-                answer: "A"
+                question: "The oxidation number of oxygen in most compounds is:",
+                options: ["+2", "–2", "+1", "–1"],
+                answer: "B",
+                topic: "Oxidation Numbers"
             },
             {
-                question: "At standard temperature and pressure, one mole of gas occupies (½ mark)",
-                options: ["11.2 dm³", "22.4 dm³", "24 dm³", "44.8 dm³"],
-                answer: "B"
+                question: "The oxidation number of hydrogen in most compounds is:",
+                options: ["+1", "–1", "+2", "0"],
+                answer: "A",
+                topic: "Oxidation Numbers"
             },
             {
-                question: "Which gas law is represented by V ∝ T? (½ mark)",
-                options: ["Boyle's law", "Charles' law", "Dalton's law", "Graham's law"],
-                answer: "B"
+                question: "In the reaction Zn + CuSO₄ → ZnSO₄ + Cu, zinc is:",
+                options: ["Reduced", "Oxidized", "Neutralized", "Hydrolysed"],
+                answer: "B",
+                topic: "Oxidation Numbers"
             },
             {
-                question: "If the pressure of a gas doubles, its volume will (temperature constant) (½ mark)",
-                options: ["Double", "Remain constant", "Halve", "Triple"],
-                answer: "C"
+                question: "In the reaction Zn + CuSO₄ → ZnSO₄ + Cu, copper ion is:",
+                options: ["Oxidized", "Reduced", "Unchanged", "Neutralized"],
+                answer: "B",
+                topic: "Oxidation Numbers"
             },
             {
-                question: "The ideal gas equation is (½ mark)",
-                options: ["PV = RT", "PV = nRT", "PT = nVR", "PVT = nR"],
-                answer: "B"
+                question: "The oxidation number of chlorine in HCl is:",
+                options: ["+1", "–1", "+2", "–2"],
+                answer: "B",
+                topic: "Oxidation Numbers"
             },
             {
-                question: "In the equation PV = nRT, R represents (½ mark)",
-                options: ["Rate constant", "Gas constant", "Reaction constant", "Pressure constant"],
-                answer: "B"
+                question: "Which of the following acts as an oxidizing agent?",
+                options: ["H₂", "CO", "O₂", "Zn"],
+                answer: "C",
+                topic: "Oxidation Numbers"
             },
             {
-                question: "The number of moles in 2.24 dm³ of a gas at STP is (½ mark)",
-                options: ["0.1", "0.2", "0.5", "1"],
-                answer: "A"
+                question: "The rusting of iron is an example of:",
+                options: ["Reduction", "Oxidation", "Neutralization", "Crystallization"],
+                answer: "B",
+                topic: "Redox Applications"
             },
             {
-                question: "Which of the following laws explains the relationship between temperature and volume of gases? (½ mark)",
-                options: ["Boyle's law", "Charles' law", "Graham's law", "Dalton's law"],
-                answer: "B"
+                question: "Burning of magnesium ribbon in air is a process of:",
+                options: ["Reduction", "Oxidation", "Condensation", "Electrolysis"],
+                answer: "B",
+                topic: "Redox Applications"
             },
             {
-                question: "Quantitative analysis deals mainly with (½ mark)",
-                options: ["Identification", "Measurement", "Colour change", "Odour detection"],
-                answer: "B"
+                question: "Which of the following statements is correct?",
+                options: ["Oxidation always involves gain of electrons.", "Reduction always involves loss of electrons.", "Oxidation is loss of electrons while reduction is gain of electrons.", "Oxidation and reduction cannot occur together."],
+                answer: "C",
+                topic: "Redox Applications"
             },
             {
-                question: "The relative atomic mass of carbon is (½ mark)",
-                options: ["10", "12", "14", "16"],
-                answer: "B"
-            },
-            {
-                question: "Which of the following gases obeys the gas laws most closely? (½ mark)",
-                options: ["Real gas", "Ideal gas", "Heavy gas", "Noble gas"],
-                answer: "B"
-            },
-            {
-                question: "A substance that occupies space and has mass is known as (½ mark)",
-                options: ["Energy", "Matter", "Force", "Heat"],
-                answer: "B"
-            },
-            {
-                question: "The study of the amount of substances that take part in chemical reactions is called (½ mark)",
-                options: ["Stoichiometry", "Spectroscopy", "Chromatography", "Electrolysis"],
-                answer: "A"
+                question: "In a redox reaction, the total number of electrons:",
+                options: ["Increases", "Decreases", "Remains conserved", "Becomes zero"],
+                answer: "C",
+                topic: "Redox Applications"
             }
         ];
 
@@ -1050,14 +1216,16 @@
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 30 * 60; // 30 minutes in seconds
+        let timeLeft = 40 * 60; // 40 minutes in seconds
         let questions = [];
+        let examStarted = false;
 
-        // Background images for rotation
+        // Background images for rotation (chemistry/lab themed)
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
+            'https://images.unsplash.com/photo-1532187863486-af6c4c3e38a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1564325724739-bf45f3f36514?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
         ];
 
         // DOM elements
@@ -1077,9 +1245,10 @@
         }
         setInterval(rotateBackground, 10000);
 
-        // Shuffle questions
+        // Shuffle questions (grouped by topic to maintain some structure)
         function shuffleQuestions() {
             questions = [...originalQuestions];
+            // Light shuffle - maintain rough topic order but randomize within groups
             for (let i = questions.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [questions[i], questions[j]] = [questions[j], questions[i]];
@@ -1090,10 +1259,11 @@
         // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 30 * 60;
+            timeLeft = 40 * 60;
             
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
+            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #27ae60 0%, #1e8449 100%)';
             
             timerInterval = setInterval(() => {
                 timeLeft--;
@@ -1104,19 +1274,52 @@
                 document.getElementById('timer').textContent = 
                     `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
                 
+                // Visual warnings for time
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    alert("Time's up! Your exam will be submitted automatically.");
+                    alert("Time's up! Your test will be submitted automatically.");
                     calculateScore();
-                }
-                
-                if (timeLeft <= 300) { // 5 minutes left
+                } else if (timeLeft <= 300) { // 5 minutes left
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
                 } else if (timeLeft <= 600) { // 10 minutes left
-                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e67e22 0%, #d35400 100%)';
                 }
             }, 1000);
         }
+
+        // Pause timer when tab is hidden
+        document.addEventListener('visibilitychange', () => {
+            if (!examStarted) return;
+            
+            if (document.hidden) {
+                clearInterval(timerInterval);
+            } else {
+                if (document.getElementById('exam-section').classList.contains('active') && timeLeft > 0) {
+                    timerInterval = setInterval(() => {
+                        timeLeft--;
+                        const minutes = Math.floor(timeLeft / 60);
+                        const seconds = timeLeft % 60;
+                        document.getElementById('timer').textContent = 
+                            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                        
+                        if (timeLeft <= 0) {
+                            clearInterval(timerInterval);
+                            alert("Time's up! Your test will be submitted automatically.");
+                            calculateScore();
+                        }
+                    }, 1000);
+                }
+            }
+        });
+
+        // Warn before leaving
+        window.addEventListener('beforeunload', (e) => {
+            if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
+                e.preventDefault();
+                e.returnValue = 'You have an ongoing test. Are you sure you want to leave? Your progress may be lost.';
+                return e.returnValue;
+            }
+        });
 
         // Navigation functions
         function showSection(sectionName) {
@@ -1129,7 +1332,24 @@
                 document.getElementById('timer-container').style.display = 'none';
                 document.getElementById('submit-container').style.display = 'none';
             }
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Update progress
+        function updateProgress() {
+            const answeredCount = userAnswers.filter(answer => answer !== null).length;
+            const percentage = (answeredCount / questions.length) * 100;
+            
+            document.getElementById('progress-bar').style.width = percentage + '%';
+            document.getElementById('progress-text').textContent = 
+                `Progress: ${answeredCount}/${questions.length} answered`;
+        }
+
+        // Update topic badge
+        function updateTopicBadge(index) {
+            const topic = questions[index].topic;
+            const badge = document.getElementById('topic-badge');
+            badge.textContent = `Topic: ${topic}`;
         }
 
         // Event listeners
@@ -1150,23 +1370,29 @@
             
             if (!firstName) {
                 document.getElementById('first-name-error').style.display = 'block';
+                document.getElementById('first-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('first-name-error').style.display = 'none';
+                document.getElementById('first-name').style.borderColor = '#5d7e9e';
             }
             
             if (!middleName) {
                 document.getElementById('middle-name-error').style.display = 'block';
+                document.getElementById('middle-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('middle-name-error').style.display = 'none';
+                document.getElementById('middle-name').style.borderColor = '#5d7e9e';
             }
             
             if (!lastName) {
                 document.getElementById('last-name-error').style.display = 'block';
+                document.getElementById('last-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('last-name-error').style.display = 'none';
+                document.getElementById('last-name').style.borderColor = '#5d7e9e';
             }
             
             if (isValid) {
@@ -1182,6 +1408,7 @@
         document.getElementById('begin-test').addEventListener('click', () => {
             shuffleQuestions();
             currentQuestionIndex = 0;
+            examStarted = true;
             
             document.getElementById('display-student-name').textContent = studentName;
             document.getElementById('results-student-name').textContent = studentName;
@@ -1189,6 +1416,8 @@
             createQuestionGrid();
             loadQuestion(currentQuestionIndex);
             startTimer();
+            updateProgress();
+            updateTopicBadge(currentQuestionIndex);
             showSection('exam');
         });
 
@@ -1206,11 +1435,59 @@
             }
         });
 
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('exam-section').classList.contains('active')) return;
+            
+            // Don't intercept if user is typing in an input
+            if (e.target.tagName === 'INPUT' && e.target.type === 'text') return;
+            
+            if (e.key === 'ArrowLeft' && currentQuestionIndex > 0) {
+                e.preventDefault();
+                currentQuestionIndex--;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'ArrowRight' && currentQuestionIndex < questions.length - 1) {
+                e.preventDefault();
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'A' || e.key === 'a' || e.key === '1') {
+                e.preventDefault();
+                selectOptionByKey(0);
+            } else if (e.key === 'B' || e.key === 'b' || e.key === '2') {
+                e.preventDefault();
+                selectOptionByKey(1);
+            } else if (e.key === 'C' || e.key === 'c' || e.key === '3') {
+                e.preventDefault();
+                selectOptionByKey(2);
+            } else if (e.key === 'D' || e.key === 'd' || e.key === '4') {
+                e.preventDefault();
+                selectOptionByKey(3);
+            }
+        });
+
+        function selectOptionByKey(optionIndex) {
+            const radioButtons = document.querySelectorAll(`input[name="question-${currentQuestionIndex}"]`);
+            if (radioButtons[optionIndex]) {
+                radioButtons[optionIndex].checked = true;
+                userAnswers[currentQuestionIndex] = String.fromCharCode(65 + optionIndex);
+                updateQuestionGrid();
+                updateProgress();
+            }
+        }
+
         document.getElementById('submit-exam').addEventListener('click', () => {
-            const confirmed = confirm("Are you sure you want to submit? You will not be able to change your answers after this.");
+            const unanswered = userAnswers.filter(a => a === null).length;
+            let confirmMessage = "Are you sure you want to submit? You will not be able to change your answers after this.";
+            
+            if (unanswered > 0) {
+                confirmMessage += `\n\n⚠️ Warning: You have ${unanswered} unanswered question(s).`;
+            }
+            
+            const confirmed = confirm(confirmMessage);
             
             if (confirmed) {
                 clearInterval(timerInterval);
+                examStarted = false;
                 document.getElementById('loading').style.display = 'block';
                 setTimeout(() => {
                     calculateScore();
@@ -1220,6 +1497,7 @@
 
         document.getElementById('restart-exam').addEventListener('click', () => {
             clearInterval(timerInterval);
+            examStarted = false;
             document.getElementById('first-name').value = '';
             document.getElementById('middle-name').value = '';
             document.getElementById('last-name').value = '';
@@ -1235,6 +1513,7 @@
                 questionNumber.className = 'question-number';
                 questionNumber.textContent = i + 1;
                 questionNumber.dataset.index = i;
+                questionNumber.title = `Question ${i + 1} - ${questions[i].topic}`;
                 
                 if (userAnswers[i] !== null) {
                     questionNumber.classList.add('answered');
@@ -1276,8 +1555,13 @@
             document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
             document.getElementById('question-text').textContent = question.question;
             
+            // Update topic badge
+            updateTopicBadge(index);
+            
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
+            
+            const labels = ['A', 'B', 'C', 'D'];
             
             question.options.forEach((option, optionIndex) => {
                 const optionDiv = document.createElement('div');
@@ -1289,7 +1573,7 @@
                 radio.type = 'radio';
                 radio.name = `question-${index}`;
                 radio.id = optionId;
-                radio.value = String.fromCharCode(65 + optionIndex);
+                radio.value = labels[optionIndex];
                 
                 if (userAnswers[index] === radio.value) {
                     radio.checked = true;
@@ -1298,11 +1582,22 @@
                 radio.addEventListener('change', () => {
                     userAnswers[index] = radio.value;
                     updateQuestionGrid();
+                    updateProgress();
                 });
                 
                 const label = document.createElement('label');
                 label.htmlFor = optionId;
-                label.textContent = `${String.fromCharCode(65 + optionIndex)}. ${option}`;
+                label.textContent = `${labels[optionIndex]}. ${option}`;
+                
+                // Make entire option div clickable
+                optionDiv.addEventListener('click', (e) => {
+                    if (e.target !== radio) {
+                        radio.checked = true;
+                        userAnswers[index] = radio.value;
+                        updateQuestionGrid();
+                        updateProgress();
+                    }
+                });
                 
                 optionDiv.appendChild(radio);
                 optionDiv.appendChild(label);
@@ -1313,6 +1608,10 @@
             document.getElementById('next-question').disabled = index === questions.length - 1;
             
             updateQuestionGrid();
+            updateProgress();
+            
+            // Scroll to top of question
+            document.querySelector('.exam-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         function calculateScore() {
@@ -1325,7 +1624,29 @@
                 }
             }
             
-            submitToGoogleForm(studentName, "SSS1 Chemistry - Second Term 2025/2026", `${score}/${questions.length}`);
+            const percentage = (score / questions.length) * 100;
+            
+            document.getElementById('results-score').textContent = `Score: ${score} / 40`;
+            document.getElementById('results-percentage').textContent = `${percentage.toFixed(1)}%`;
+            
+            // Performance-based feedback
+            let feedbackExtra = '';
+            if (percentage >= 90) {
+                feedbackExtra = '🌟 Excellent performance! You have an outstanding grasp of Chemistry concepts. Keep up the brilliant work!';
+            } else if (percentage >= 75) {
+                feedbackExtra = '👏 Very good! You demonstrate strong understanding of atomic structure and redox reactions.';
+            } else if (percentage >= 60) {
+                feedbackExtra = '📚 Good effort! Review electronic configuration and oxidation numbers for improvement.';
+            } else if (percentage >= 45) {
+                feedbackExtra = '💪 Fair attempt. More practice needed on atomic structure, electronic configuration, and redox concepts.';
+            } else {
+                feedbackExtra = '📖 You need to revisit these topics thoroughly. Focus on understanding atomic structure and redox reactions. Don\'t give up!';
+            }
+            
+            document.getElementById('feedback-message').textContent = 
+                `Thank you for completing the Chemistry Mid-Term Test. ${feedbackExtra}`;
+            
+            submitToGoogleForm(studentName, "SSS1 Chemistry - Third Term Mid-Term Test 2025/2026", `${score}/40`);
             document.getElementById('submission-status').style.display = 'block';
             showSection('results');
         }
