@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Government SS1 Examination</title>
+    <title>The Trustworthy College - Government SSS1 Midterm Test</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
     <style>
-        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -14,14 +14,13 @@
         }
         
         body {
-            background-color: #1a0f0a;
-            color: #f5e9dd;
+            background-color: #1a0a0a;
+            color: #f0e0e0;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
         }
         
-        /* Dimmed background overlay with government theme */
         body::before {
             content: '';
             position: fixed;
@@ -29,32 +28,30 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1541872703-74c5e44368f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80');
+            background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.15;
+            opacity: 0.10;
             z-index: -1;
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container with government color theme (green/white - Nigerian colors) */
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #0a3a2a 0%, #1a4a3a 100%);
-            box-shadow: 0 15px 40px rgba(0, 100, 0, 0.25);
+            background: linear-gradient(135deg, #1a0a0a 0%, #2a1a1a 100%);
+            box-shadow: 0 15px 40px rgba(192, 57, 43, 0.25);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #008753;
+            border: 3px solid #c0392b;
             backdrop-filter: blur(5px);
         }
         
-        /* Green decorative border */
         .container::before {
             content: '';
             position: absolute;
@@ -62,17 +59,33 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #008753, #00a86b, #008753);
+            background: linear-gradient(90deg, #c0392b, #e74c3c, #c0392b);
             z-index: 2;
         }
         
-        /* Header */
+        .container::after {
+            content: '⚖️';
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 2.5rem;
+            opacity: 0.06;
+            z-index: 0;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+        }
+        
         .header {
             text-align: center;
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #008753;
+            border-bottom: 2px solid #c0392b;
+            z-index: 1;
         }
         
         .header::after {
@@ -83,7 +96,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #008753, transparent);
+            background: linear-gradient(to right, transparent, #c0392b, transparent);
         }
         
         .logo {
@@ -92,7 +105,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #008753;
+            border: 3px solid #c0392b;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -103,35 +116,36 @@
         }
         
         .subject-title {
-            color: #00a86b;
-            font-size: 2.4rem;
+            color: #f0b0a0;
+            font-size: 2.2rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
             letter-spacing: 1px;
         }
         
         .exam-info {
-            color: #a0d8b0;
+            color: #e0b0a0;
             font-size: 1.1rem;
             margin-top: 5px;
         }
         
         .term-info {
-            background: linear-gradient(135deg, #00875320, #00a86b40);
+            background: linear-gradient(135deg, #c0392b20, #e74c3c40);
             display: inline-block;
             padding: 8px 20px;
             border-radius: 30px;
             margin-top: 10px;
             font-weight: bold;
-            color: #00d084;
-            border: 1px solid #00875360;
+            color: #f0b0a0;
+            border: 1px solid #c0392b60;
         }
         
-        /* Sections */
         .section {
             display: none;
             padding: 25px;
             animation: fadeIn 0.5s ease;
+            position: relative;
+            z-index: 1;
         }
         
         @keyframes fadeIn {
@@ -143,38 +157,36 @@
             display: block;
         }
         
-        /* Welcome message */
         .welcome-message {
-            background: linear-gradient(135deg, rgba(0, 135, 83, 0.1) 0%, rgba(26, 74, 58, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(192, 57, 43, 0.1) 0%, rgba(42, 26, 26, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #f5e9dd;
-            border-left: 5px solid #008753;
-            border-right: 1px solid rgba(0, 135, 83, 0.3);
-            border-top: 1px solid rgba(0, 135, 83, 0.2);
-            border-bottom: 1px solid rgba(0, 135, 83, 0.3);
+            color: #f0e0e0;
+            border-left: 5px solid #c0392b;
+            border-right: 1px solid rgba(192, 57, 43, 0.3);
+            border-top: 1px solid rgba(192, 57, 43, 0.2);
+            border-bottom: 1px solid rgba(192, 57, 43, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
         }
         
         .welcome-message::before {
-            content: '⚖️';
+            content: '🏛️';
             position: absolute;
             top: 20px;
             right: 20px;
             font-size: 3rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
-        /* Buttons */
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #008753 0%, #006b40 100%);
+            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
             color: #ffffff;
             border: none;
             padding: 15px 32px;
@@ -185,8 +197,8 @@
             margin: 12px 8px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(0, 168, 107, 0.5);
-            box-shadow: 0 6px 15px rgba(0, 135, 83, 0.3);
+            border: 2px solid rgba(192, 57, 43, 0.5);
+            box-shadow: 0 6px 15px rgba(192, 57, 43, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -203,25 +215,31 @@
             transition: all 0.5s;
         }
         
-        .btn:hover {
-            background: linear-gradient(135deg, #00a86b 0%, #008753 100%);
+        .btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(0, 135, 83, 0.5);
+            box-shadow: 0 10px 25px rgba(192, 57, 43, 0.5);
             color: #ffffff;
         }
         
-        .btn-secondary {
-            background: linear-gradient(135deg, #5d7e6a 0%, #4a6e5a 100%);
-            border-color: #7f8c8d;
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
         }
         
-        .btn-secondary:hover {
-            background: linear-gradient(135deg, #7f8c8d 0%, #5d7e6a 100%);
+        .btn-secondary {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            border-color: #5d7e9e;
+        }
+        
+        .btn-secondary:hover:not(:disabled) {
+            background: linear-gradient(135deg, #3d566e 0%, #2c3e50 100%);
         }
         
         .btn-success {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            border-color: #229954;
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            border-color: #d35400;
         }
         
         .btn-container {
@@ -229,7 +247,6 @@
             margin-top: 35px;
         }
         
-        /* Form elements */
         .form-group {
             margin-bottom: 28px;
         }
@@ -238,7 +255,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #00a86b;
+            color: #f0b0a0;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -246,20 +263,20 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(10, 58, 42, 0.7);
-            border: 2px solid #5d7e6a;
+            background: rgba(26, 10, 10, 0.7);
+            border: 2px solid #5d7e9e;
             border-radius: 10px;
             font-size: 1.1rem;
-            color: #f5e9dd;
+            color: #f0e0e0;
             transition: all 0.3s;
             font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #008753;
+            border-color: #c0392b;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(0, 135, 83, 0.3);
-            background: rgba(10, 58, 42, 0.9);
+            box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.3);
+            background: rgba(26, 10, 10, 0.9);
         }
         
         .error-message {
@@ -270,14 +287,13 @@
             font-weight: 500;
         }
         
-        /* Instructions */
         .instructions {
-            background: linear-gradient(135deg, rgba(93, 126, 106, 0.1) 0%, rgba(26, 74, 58, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(231, 76, 60, 0.08) 0%, rgba(42, 26, 26, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid #008753;
-            border: 1px solid rgba(0, 135, 83, 0.2);
+            border-left: 5px solid #e74c3c;
+            border: 1px solid rgba(231, 76, 60, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
@@ -288,12 +304,12 @@
             top: 20px;
             right: 20px;
             font-size: 2.5rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #00a86b;
+            color: #e74c3c;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -306,7 +322,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #008753;
+            background: #e74c3c;
             border-radius: 2px;
         }
         
@@ -323,30 +339,29 @@
         
         .instructions li::before {
             content: '•';
-            color: #008753;
+            color: #e74c3c;
             font-size: 1.5rem;
             position: absolute;
             left: -20px;
             top: -5px;
         }
         
-        /* Exam interface */
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(0, 135, 83, 0.3);
+            border-bottom: 2px solid rgba(192, 57, 43, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #00a86b;
+            color: #f0b0a0;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(0, 135, 83, 0.1) 0%, rgba(93, 126, 106, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(192, 57, 43, 0.1) 0%, rgba(231, 76, 60, 0.15) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(0, 135, 83, 0.3);
+            border: 1px solid rgba(192, 57, 43, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -357,32 +372,33 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(10, 58, 42, 0.5);
+            background: rgba(26, 10, 10, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(0, 135, 83, 0.2);
+            border: 1px solid rgba(192, 57, 43, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #00a86b;
+            color: #f0b0a0;
             font-weight: 600;
             padding: 10px 20px;
-            background: rgba(0, 135, 83, 0.1);
+            background: rgba(192, 57, 43, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(0, 135, 83, 0.3);
+            border: 1px solid rgba(192, 57, 43, 0.3);
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #008753 0%, #006b40 100%);
+            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
             color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(0, 135, 83, 0.4);
+            box-shadow: 0 4px 12px rgba(192, 57, 43, 0.4);
             display: none;
-            border: 2px solid rgba(0, 168, 107, 0.5);
+            border: 2px solid rgba(192, 57, 43, 0.5);
             font-family: 'Courier New', monospace;
+            transition: background 0.5s ease;
         }
         
         .submit-container {
@@ -391,10 +407,10 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(10, 58, 42, 0.4);
+            background: rgba(26, 10, 10, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(0, 135, 83, 0.2);
+            border: 1px solid rgba(192, 57, 43, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -402,12 +418,12 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #00a86b;
+            color: #f0b0a0;
             line-height: 1.6;
             padding: 20px;
-            background: rgba(93, 126, 106, 0.1);
+            background: rgba(231, 76, 60, 0.08);
             border-radius: 10px;
-            border-left: 4px solid #008753;
+            border-left: 4px solid #e74c3c;
         }
         
         .options-container {
@@ -421,8 +437,8 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(26, 74, 58, 0.5);
-            border: 1px solid rgba(93, 126, 106, 0.3);
+            background: rgba(42, 26, 26, 0.4);
+            border: 1px solid rgba(93, 126, 158, 0.3);
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -435,14 +451,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(0, 135, 83, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(192, 57, 43, 0.08), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(0, 135, 83, 0.1);
-            border-color: #008753;
+            background: rgba(192, 57, 43, 0.1);
+            border-color: #c0392b;
             transform: translateX(5px);
         }
         
@@ -450,12 +466,13 @@
             transform: translateX(100%);
         }
         
-        .option input {
+        .option input[type="radio"] {
             margin-right: 15px;
             width: 22px;
             height: 22px;
             cursor: pointer;
-            accent-color: #008753;
+            accent-color: #c0392b;
+            flex-shrink: 0;
         }
         
         .option label {
@@ -463,21 +480,20 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
-            color: #f5e9dd;
+            color: #f0e0e0;
             font-size: 1.1rem;
             line-height: 1.5;
         }
         
-        /* Question navigation */
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(0, 135, 83, 0.3);
+            border-top: 2px solid rgba(192, 57, 43, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #00a86b;
+            color: #f0b0a0;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -494,7 +510,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: #008753;
+            background: #e74c3c;
             border-radius: 2px;
         }
         
@@ -511,34 +527,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(93, 126, 106, 0.3) 0%, rgba(70, 103, 86, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(42, 26, 26, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(0, 135, 83, 0.3);
-            color: #f5e9dd;
+            border: 1px solid rgba(192, 57, 43, 0.3);
+            color: #f0e0e0;
             font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background: linear-gradient(135deg, rgba(0, 135, 83, 0.3) 0%, rgba(0, 107, 64, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(192, 57, 43, 0.3) 0%, rgba(169, 50, 38, 0.5) 100%);
             transform: scale(1.1);
-            border-color: #008753;
+            border-color: #c0392b;
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #008753 0%, #006b40 100%);
+            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
             color: #ffffff;
-            border-color: #00a86b;
-            box-shadow: 0 4px 10px rgba(0, 135, 83, 0.4);
+            border-color: #f0b0a0;
+            box-shadow: 0 4px 10px rgba(192, 57, 43, 0.4);
             transform: scale(1.1);
         }
         
         .question-number.answered {
-            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: white;
-            border-color: #2ecc71;
+            border-color: #f39c12;
         }
         
         .navigation-buttons {
@@ -547,13 +563,48 @@
             margin-top: 25px;
         }
         
-        /* Results section */
+        .progress-container {
+            margin: 20px 0;
+            background: rgba(42, 26, 26, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 10px;
+            border: 1px solid rgba(192, 57, 43, 0.3);
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #c0392b, #e74c3c);
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        .progress-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #e0b0a0;
+            margin-top: 5px;
+        }
+        
+        .topic-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(192, 57, 43, 0.15);
+            border: 1px solid rgba(192, 57, 43, 0.3);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #f0b0a0;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(10, 58, 42, 0.8) 0%, rgba(26, 74, 58, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(26, 10, 10, 0.8) 0%, rgba(42, 26, 26, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #008753;
+            border: 2px solid #c0392b;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
@@ -565,14 +616,26 @@
             top: 20px;
             right: 20px;
             font-size: 4rem;
-            opacity: 0.1;
+            opacity: 0.06;
         }
         
         .results-container h2 {
-            color: #00a86b;
+            color: #f0b0a0;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .completion-icon {
+            font-size: 5rem;
+            margin: 20px 0;
+            animation: bounceIn 0.6s ease;
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
         
         .student-info {
@@ -582,7 +645,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #a0d8b0;
+            color: #e0b0a0;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -590,58 +653,50 @@
         .feedback {
             font-size: 1.3rem;
             margin: 25px 0;
-            color: #f5e9dd;
+            color: #f0e0e0;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(0, 135, 83, 0.1);
+            background: rgba(192, 57, 43, 0.08);
             border-radius: 12px;
-            border: 1px solid rgba(0, 135, 83, 0.3);
+            border: 1px solid rgba(192, 57, 43, 0.3);
         }
         
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(39, 174, 96, 0.2) 0%, rgba(46, 204, 113, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.15) 0%, rgba(39, 174, 96, 0.2) 100%);
             border-radius: 12px;
             color: #2ecc71;
             font-size: 1.2rem;
-            border: 1px solid rgba(46, 204, 113, 0.5);
+            border: 1px solid rgba(46, 204, 113, 0.4);
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .question-grid {
                 grid-template-columns: repeat(5, 1fr);
             }
-            
             .exam-controls {
                 flex-direction: column;
                 align-items: stretch;
             }
-            
             .navigation-buttons {
                 flex-direction: column;
                 gap: 15px;
             }
-            
             .btn {
                 width: 100%;
                 margin: 8px 0;
             }
-            
             .subject-title {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
-            
             .question-text {
                 font-size: 1.2rem;
             }
-            
             .container {
                 padding: 15px;
                 margin: 15px;
             }
-            
             .welcome-message, .instructions, .exam-content {
                 padding: 20px;
             }
@@ -652,17 +707,14 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 10px;
             }
-            
             .question-number {
                 width: 35px;
                 height: 35px;
                 font-size: 1rem;
             }
-            
             .subject-title {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
-            
             .results-container {
                 padding: 25px 15px;
             }
@@ -680,8 +732,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(0, 135, 83, 0.3);
-            border-top: 4px solid #008753;
+            border: 4px solid rgba(192, 57, 43, 0.3);
+            border-top: 4px solid #c0392b;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -693,50 +745,68 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        
+        .keyboard-hint {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5d7e9e;
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(26, 10, 10, 0.3);
+            border-radius: 8px;
+            border: 1px dashed rgba(93, 126, 158, 0.3);
+        }
+        
+        .keyboard-hint kbd {
+            background: rgba(192, 57, 43, 0.2);
+            border: 1px solid rgba(192, 57, 43, 0.4);
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #f0b0a0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title">SS1 GOVERNMENT EXAMINATION</h1>
-            <div class="exam-info">Second Term | 2025/2026 Session</div>
-            <div class="term-info">60 Questions | 30 Minutes</div>
+            <h1 class="subject-title">SSS1 GOVERNMENT MIDTERM TEST</h1>
+            <div class="exam-info">Third Term | 2025/2026 Session</div>
+            <div class="term-info">40 Objective Questions | WAEC/NECO Standard | 40 Minutes</div>
         </div>
         
-        <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Government Examination. This test covers Separation of Powers, Constitution, Citizenship, Political Parties, and the Organs of Government. Demonstrate your understanding of civic principles and governance. Best of luck."
+                "Welcome to The Trustworthy College Government Midterm Test. This test covers Pressure Groups (types, methods, importance, limitations, relationship with democracy), Public Administration (civil service, bureaucracy, policy implementation, accountability), and Principles of Governance. This test is designed to WAEC/NECO standard. Best of luck."
             </div>
             <div class="btn-container">
-                <button id="start-exam-btn" class="btn">Start Examination</button>
+                <button id="start-exam-btn" class="btn">Start Midterm Test</button>
             </div>
         </section>
         
-        <!-- Student Information Section -->
         <section id="student-info-section" class="section">
             <h2>Student Information</h2>
-            <p>Please provide your details to continue with the examination.</p>
+            <p>Please provide your details to continue with the test.</p>
             
-            <form id="student-info-form">
+            <form id="student-info-form" autocomplete="off">
                 <div class="form-group">
                     <label for="first-name">First Name *</label>
-                    <input type="text" id="first-name" required>
+                    <input type="text" id="first-name" required placeholder="Enter your first name">
                     <div class="error-message" id="first-name-error">First name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="middle-name">Middle Name *</label>
-                    <input type="text" id="middle-name" required>
+                    <input type="text" id="middle-name" required placeholder="Enter your middle name">
                     <div class="error-message" id="middle-name-error">Middle name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="last-name">Last Name *</label>
-                    <input type="text" id="last-name" required>
+                    <input type="text" id="last-name" required placeholder="Enter your last name">
                     <div class="error-message" id="last-name-error">Last name is required</div>
                 </div>
                 
@@ -747,23 +817,24 @@
             </form>
         </section>
         
-        <!-- Instructions Section -->
         <section id="instructions-section" class="section">
-            <h2>Examination Instructions</h2>
+            <h2>Test Instructions</h2>
             
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This examination consists of 60 multiple-choice questions covering Government topics.</li>
-                    <li>You have 30 minutes to complete this examination.</li>
+                    <li>This Midterm Test consists of <strong>40 multiple-choice objective questions</strong> covering Pressure Groups and Public Administration.</li>
+                    <li>Questions are designed to <strong>WAEC/NECO standard</strong>.</li>
+                    <li>You have <strong>40 minutes</strong> to complete this test.</li>
                     <li>Answer all questions to the best of your ability.</li>
-                    <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
-                    <li>Answered questions will be marked with green in the question grid.</li>
-                    <li>Once you submit your answers, you cannot change them.</li>
-                    <li>Ensure you have a stable internet connection throughout the examination.</li>
+                    <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
+                    <li>You can also use <strong>keyboard shortcuts</strong>: Arrow keys to navigate, A/B/C/D keys to select answers.</li>
+                    <li>Answered questions will be marked with <strong>orange</strong> in the question grid.</li>
+                    <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
+                    <li>Ensure you have a stable internet connection throughout the test.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li>This is the Second Term Examination for the 2025/2026 Academic Session.</li>
+                    <li><strong>Do not refresh the page</strong> during the test, or you may lose your progress.</li>
                 </ul>
             </div>
             
@@ -773,38 +844,41 @@
             </div>
         </section>
         
-        <!-- Exam Interface Section -->
         <section id="exam-section" class="section">
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
+                <div class="topic-badge" id="topic-badge">Topic: Pressure Groups</div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">Progress: 0/40 answered</div>
                 <div class="exam-controls">
-                    <div class="question-counter" id="question-counter">Question 1 of 60</div>
+                    <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">30:00</span>
+                        ⏱ Time Left: <span id="timer">40:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Test</button>
                     </div>
                 </div>
             </div>
             
             <div class="exam-content">
                 <div class="question-text" id="question-text"></div>
-                
-                <div class="options-container" id="options-container">
-                    <!-- Options will be populated by JavaScript -->
-                </div>
+                <div class="options-container" id="options-container"></div>
+            </div>
+            
+            <div class="keyboard-hint">
+                💡 Keyboard shortcuts: <kbd>←</kbd> <kbd>→</kbd> Navigate | <kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd> Select answer
             </div>
             
             <div class="question-navigation">
                 <h3>Question Navigation</h3>
-                <div class="question-grid" id="question-grid">
-                    <!-- Question numbers will be populated by JavaScript -->
-                </div>
+                <div class="question-grid" id="question-grid"></div>
                 
                 <div class="navigation-buttons">
-                    <button type="button" id="prev-question" class="btn btn-secondary">Previous</button>
-                    <button type="button" id="next-question" class="btn">Next</button>
+                    <button type="button" id="prev-question" class="btn btn-secondary">← Previous</button>
+                    <button type="button" id="next-question" class="btn">Next →</button>
                 </div>
             </div>
             
@@ -814,23 +888,23 @@
             </div>
         </section>
         
-        <!-- Results Section -->
         <section id="results-section" class="section">
             <div class="results-container">
-                <h2>Examination Completed</h2>
+                <h2>Test Completed</h2>
+                <div class="completion-icon">✅</div>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SS1 Government - Second Term 2025/2026</div>
+                <div class="subject" id="results-subject">SSS1 Government - Third Term Midterm Test 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the Government examination. Your results have been submitted successfully to the examination board.
+                    Thank you for completing the Government Midterm Test. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    Your examination has been successfully submitted. Results will be communicated through appropriate channels.
+                    ✅ Your test has been successfully submitted.
                 </div>
                 
                 <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn">Take Another Exam</button>
+                    <button type="button" id="restart-exam" class="btn">Take Another Test</button>
                     <div class="back-home">
                         <a href="../index.html" class="btn btn-secondary">Back to Home</a>
                     </div>
@@ -840,326 +914,266 @@
     </div>
 
     <script>
-        // SS1 GOVERNMENT - SECOND TERM 2025/2026
         const originalQuestions = [
+            // SECTION A: PRESSURE GROUPS (Q1-20)
             {
-                question: "The principle of separation of powers was popularized by",
-                options: ["Thomas Hobbes", "Montesquieu", "Karl Marx", "Aristotle"],
-                answer: "B"
+                question: "A pressure group is primarily formed to",
+                options: ["contest elections", "influence government policies", "form a government", "overthrow the government"],
+                answer: "B",
+                section: "Pressure Groups"
             },
             {
-                question: "Separation of powers exists mainly to",
-                options: ["increase taxation", "prevent abuse of power", "increase population", "control trade"],
-                answer: "B"
+                question: "Which of the following is an example of a pressure group?",
+                options: ["Electoral Commission", "Trade Union Congress", "Supreme Court", "Cabinet"],
+                answer: "B",
+                section: "Pressure Groups"
             },
             {
-                question: "In Nigeria, the executive power is vested in the",
-                options: ["Legislature", "President", "Judiciary", "Senate President"],
-                answer: "B"
+                question: "Pressure groups differ from political parties because they",
+                options: ["seek to influence government policies only", "contest elections regularly", "form governments directly", "nominate judges"],
+                answer: "A",
+                section: "Pressure Groups"
             },
             {
-                question: "The law-making body in Nigeria is the",
-                options: ["Executive", "Legislature", "Judiciary", "Civil service"],
-                answer: "B"
+                question: "One major method used by pressure groups to achieve their objectives is",
+                options: ["military intervention", "lobbying", "judicial review", "impeachment"],
+                answer: "B",
+                section: "Pressure Groups"
             },
             {
-                question: "The interpretation of law is the duty of the",
-                options: ["Executive", "Legislature", "Judiciary", "Police"],
-                answer: "C"
+                question: "Pressure groups are important because they",
+                options: ["promote citizens' interests", "abolish elections", "appoint ministers", "suspend constitutions"],
+                answer: "A",
+                section: "Pressure Groups"
             },
             {
-                question: "One advantage of separation of powers is",
-                options: ["dictatorship", "checks and balances", "confusion in government", "military rule"],
-                answer: "B"
+                question: "A trade union is a pressure group that represents",
+                options: ["traditional rulers", "workers", "judges", "military officers"],
+                answer: "B",
+                section: "Pressure Groups"
             },
             {
-                question: "Delegated legislation refers to laws made by",
-                options: ["Parliament only", "authorities other than the legislature", "the judiciary", "the electorate"],
-                answer: "B"
+                question: "Which of the following is NOT a pressure group?",
+                options: ["Nigerian Medical Association", "Academic Staff Union of Universities", "National Assembly", "Nigerian Bar Association"],
+                answer: "C",
+                section: "Pressure Groups"
             },
             {
-                question: "Delegated legislation is necessary because",
-                options: ["legislators are lazy", "the legislature cannot handle all details of lawmaking", "courts make laws", "military demands it"],
-                answer: "B"
+                question: "The activities of pressure groups help to",
+                options: ["strengthen democracy", "abolish political parties", "weaken public opinion", "eliminate elections"],
+                answer: "A",
+                section: "Pressure Groups"
             },
             {
-                question: "An example of delegated legislation is",
-                options: ["Act of Parliament", "Bye-law", "Constitution", "Decree"],
-                answer: "B"
+                question: "Professional associations function as pressure groups by",
+                options: ["defending members' interests", "conducting censuses", "issuing currencies", "appointing governors"],
+                answer: "A",
+                section: "Pressure Groups"
             },
             {
-                question: "Citizenship means",
-                options: ["living in a country", "legal membership of a state", "working in government", "paying tax"],
-                answer: "B"
+                question: "The process of influencing lawmakers to support a policy is known as",
+                options: ["lobbying", "filibustering", "voting", "adjudication"],
+                answer: "A",
+                section: "Pressure Groups"
             },
             {
-                question: "A citizen by birth is one who",
-                options: ["is born in the country", "votes in elections", "works abroad", "travels often"],
-                answer: "A"
+                question: "Which of the following is a characteristic of pressure groups?",
+                options: ["They seek political power.", "They represent specific interests.", "They conduct elections.", "They formulate constitutions."],
+                answer: "B",
+                section: "Pressure Groups"
             },
             {
-                question: "Naturalization means",
-                options: ["citizenship by birth", "citizenship granted after fulfilling legal conditions", "citizenship by marriage", "citizenship by adoption"],
-                answer: "B"
+                question: "Pressure groups may influence government through",
+                options: ["strikes and demonstrations", "military coups", "judicial appointments", "constitutional amendments only"],
+                answer: "A",
+                section: "Pressure Groups"
             },
             {
-                question: "Rights enjoyed by citizens include",
-                options: ["right to crime", "right to vote", "right to corruption", "right to rebellion"],
-                answer: "B"
+                question: "A consumer protection association is an example of a",
+                options: ["economic pressure group", "religious group", "political party", "judiciary"],
+                answer: "A",
+                section: "Pressure Groups"
             },
             {
-                question: "A constitution is defined as",
-                options: ["the fundamental law of a state", "the law of courts", "military rules", "police orders"],
-                answer: "A"
+                question: "Which of the following is a limitation of pressure groups?",
+                options: ["Inadequate funds", "Strong membership", "Public support", "Effective leadership"],
+                answer: "A",
+                section: "Pressure Groups"
             },
             {
-                question: "A constitution may be classified into",
-                options: ["written and criminal", "written and unwritten", "rigid and flexible only", "presidential and parliamentary"],
-                answer: "B"
+                question: "Pressure groups contribute to democracy by",
+                options: ["educating the public on issues", "banning opposition parties", "dissolving legislatures", "suspending elections"],
+                answer: "A",
+                section: "Pressure Groups"
             },
             {
-                question: "Nigeria operates a",
-                options: ["written constitution", "unwritten constitution", "monarchical constitution", "military constitution"],
-                answer: "A"
+                question: "Pressure groups usually derive their strength from",
+                options: ["membership support", "military power", "constitutional supremacy", "executive authority"],
+                answer: "A",
+                section: "Pressure Groups"
             },
             {
-                question: "Political participation means",
-                options: ["military involvement in politics", "citizens taking part in political activities", "judges making laws", "kings ruling"],
-                answer: "B"
+                question: "Religious organizations can act as pressure groups when they",
+                options: ["advocate public policies", "conduct elections", "appoint ministers", "enact laws"],
+                answer: "A",
+                section: "Pressure Groups"
             },
             {
-                question: "Voting in an election is a form of",
-                options: ["political participation", "dictatorship", "monarchy", "oppression"],
-                answer: "A"
+                question: "The main aim of a pressure group is to",
+                options: ["influence decision-makers", "control the judiciary", "form the executive arm", "conduct national censuses"],
+                answer: "A",
+                section: "Pressure Groups"
             },
             {
-                question: "Campaigning during elections is done mainly by",
-                options: ["judges", "political parties", "soldiers", "civil servants"],
-                answer: "B"
+                question: "Which of the following methods is most peaceful?",
+                options: ["Riot", "Coup d'état", "Lobbying", "Sabotage"],
+                answer: "C",
+                section: "Pressure Groups"
             },
             {
-                question: "Public opinion refers to",
-                options: ["the views of the majority of people", "the opinion of the president", "the opinion of soldiers", "the opinion of judges"],
-                answer: "A"
+                question: "Pressure groups are also known as",
+                options: ["interest groups", "electoral colleges", "political executives", "constitutional bodies"],
+                answer: "A",
+                section: "Pressure Groups"
+            },
+            
+            // SECTION B: PUBLIC ADMINISTRATION (Q21-40)
+            {
+                question: "Public administration refers to",
+                options: ["management of public affairs and policies", "military governance", "private business management", "electoral campaigns"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "One agent of public opinion formation is",
-                options: ["mass media", "army", "police", "judiciary"],
-                answer: "A"
+                question: "Public administration is mainly concerned with",
+                options: ["implementing government policies", "conducting elections", "making constitutions", "forming pressure groups"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "Political parties are formed mainly to",
-                options: ["entertain citizens", "win political power", "control religion", "control courts"],
-                answer: "B"
+                question: "The permanent officials who assist in public administration are called",
+                options: ["civil servants", "legislators", "politicians", "judges"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "The two major political parties in Nigeria today include",
-                options: ["NPN and UPN", "APC and PDP", "NCNC and AG", "NPC and SDP"],
-                answer: "B"
+                question: "One major feature of public administration is",
+                options: ["continuity", "partisanship", "dictatorship", "instability"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "A party system where only one political party exists is called",
-                options: ["one-party system", "two-party system", "multi-party system", "military system"],
-                answer: "A"
+                question: "The civil service is an important organ of",
+                options: ["public administration", "pressure groups", "political parties", "the judiciary only"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "The United States practices a",
-                options: ["one-party system", "two-party system", "military system", "monarchy"],
-                answer: "B"
+                question: "Public administration promotes",
+                options: ["efficient service delivery", "military rule", "electoral malpractice", "dictatorship"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "A country with many political parties practices",
-                options: ["dictatorship", "monarchy", "multi-party system", "oligarchy"],
-                answer: "C"
+                question: "Which of the following is a function of public administration?",
+                options: ["Policy implementation", "Conducting party primaries", "Contesting elections", "Creating political parties"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "One function of political parties is to",
-                options: ["conduct court cases", "present candidates for election", "judge criminals", "collect taxes"],
-                answer: "B"
+                question: "Public administration is often described as the machinery for",
+                options: ["carrying out government decisions", "electing presidents", "making constitutions", "forming governments"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "The arm of government responsible for executing laws is",
-                options: ["Executive", "Judiciary", "Legislature", "Police"],
-                answer: "A"
+                question: "The principle that appointments should be based on competence is known as",
+                options: ["merit system", "federalism", "lobbying", "impeachment"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "Checks and balances ensure that",
-                options: ["one arm controls everything", "each arm limits the powers of others", "the president rules alone", "the judiciary makes laws"],
-                answer: "B"
+                question: "Which of the following is a challenge facing public administration?",
+                options: ["Corruption", "Accountability", "Efficiency", "Neutrality"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "The power to declare a law unconstitutional belongs to the",
-                options: ["executive", "legislature", "judiciary", "police"],
-                answer: "C"
+                question: "A civil servant is expected to be",
+                options: ["politically neutral", "politically partisan", "militarily active", "electorally biased"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "A rigid constitution is one that",
-                options: ["can be easily changed", "is difficult to amend", "cannot be written", "cannot be obeyed"],
-                answer: "B"
+                question: "Public administration helps government to",
+                options: ["achieve policy objectives", "organize coups", "suspend constitutions", "dissolve courts"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "A flexible constitution is",
-                options: ["easy to amend", "difficult to amend", "impossible to amend", "military law"],
-                answer: "A"
+                question: "The head of a ministry in Nigeria is usually the",
+                options: ["Permanent Secretary", "Speaker", "Chief Justice", "Senate President"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "A citizen owes the state the duty of",
-                options: ["disobedience", "paying taxes", "corruption", "rebellion"],
-                answer: "B"
+                question: "Bureaucracy refers to",
+                options: ["administration through government departments and officials", "military governance", "traditional administration only", "party administration"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "Political participation includes",
-                options: ["overthrowing government", "voting in elections", "bribing officials", "military coup"],
-                answer: "B"
+                question: "One advantage of bureaucracy is",
+                options: ["specialization of duties", "political instability", "favoritism", "corruption"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "An example of a civil right is",
-                options: ["freedom of speech", "right to coup", "right to crime", "right to strike soldiers"],
-                answer: "A"
+                question: "Public corporations are established mainly to",
+                options: ["provide essential services", "conduct elections", "make constitutions", "appoint judges"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "The body that conducts elections in Nigeria is",
-                options: ["EFCC", "ICPC", "INEC", "NNPC"],
-                answer: "C"
+                question: "Accountability in public administration means",
+                options: ["being answerable for actions and decisions", "avoiding responsibilities", "influencing elections", "supporting pressure groups"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "The constitution protects the",
-                options: ["rights of citizens", "powers of soldiers", "interests of foreigners", "authority of kings"],
-                answer: "A"
+                question: "Which of the following is a principle of public administration?",
+                options: ["Hierarchy", "Anarchy", "Militarism", "Dictatorship"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "Delegated legislation saves",
-                options: ["money only", "time of the legislature", "elections", "citizens"],
-                answer: "B"
+                question: "The relationship between ministers and civil servants is that ministers",
+                options: ["formulate policies while civil servants implement them", "implement policies while civil servants formulate them", "conduct elections while civil servants judge cases", "appoint judges while civil servants legislate"],
+                answer: "A",
+                section: "Public Administration"
             },
             {
-                question: "A disadvantage of delegated legislation is",
-                options: ["flexibility", "possible abuse of power", "quick decision making", "specialization"],
-                answer: "B"
-            },
-            {
-                question: "Citizenship by registration usually applies to",
-                options: ["married foreigners", "tourists", "illegal migrants", "students"],
-                answer: "A"
-            },
-            {
-                question: "A referendum is",
-                options: ["a direct vote by citizens on an issue", "military rule", "party meeting", "court judgement"],
-                answer: "A"
-            },
-            {
-                question: "Public opinion can influence",
-                options: ["government policies", "rainfall", "climate", "geography"],
-                answer: "A"
-            },
-            {
-                question: "A political party manifesto is",
-                options: ["a statement of party policies", "party constitution", "court judgement", "party symbol"],
-                answer: "A"
-            },
-            {
-                question: "The Nigerian legislature is called the",
-                options: ["Parliament", "National Assembly", "Congress", "Assembly of chiefs"],
-                answer: "B"
-            },
-            {
-                question: "The National Assembly consists of",
-                options: ["Senate and House of Representatives", "Senate and courts", "judges and ministers", "army and police"],
-                answer: "A"
-            },
-            {
-                question: "A country with only one political party may result in",
-                options: ["dictatorship", "democracy", "freedom", "neutrality"],
-                answer: "A"
-            },
-            {
-                question: "Political parties help to",
-                options: ["punish criminals", "educate voters", "interpret laws", "control courts"],
-                answer: "B"
-            },
-            {
-                question: "An example of political participation is",
-                options: ["contesting an election", "committing crime", "bribing voters", "tax evasion"],
-                answer: "A"
-            },
-            {
-                question: "One disadvantage of multi-party system is",
-                options: ["dictatorship", "political instability", "lack of choice", "absence of elections"],
-                answer: "B"
-            },
-            {
-                question: "The head of the executive in Nigeria is the",
-                options: ["President", "Chief Justice", "Senate President", "Speaker"],
-                answer: "A"
-            },
-            {
-                question: "The judiciary is headed by the",
-                options: ["President", "Chief Justice", "Governor", "Speaker"],
-                answer: "B"
-            },
-            {
-                question: "Public opinion can be expressed through",
-                options: ["court judgement", "opinion polls", "military decree", "royal orders"],
-                answer: "B"
-            },
-            {
-                question: "Political apathy means",
-                options: ["lack of interest in politics", "too much voting", "dictatorship", "military rule"],
-                answer: "A"
-            },
-            {
-                question: "The constitution defines the",
-                options: ["powers of government", "wealth of citizens", "religions of the state", "military authority"],
-                answer: "A"
-            },
-            {
-                question: "Citizenship can be lost through",
-                options: ["birth", "registration", "renunciation", "voting"],
-                answer: "C"
-            },
-            {
-                question: "A political party symbol helps voters to",
-                options: ["identify the party easily", "avoid voting", "change constitution", "join the army"],
-                answer: "A"
-            },
-            {
-                question: "Delegated legislation is also known as",
-                options: ["supreme law", "subordinate legislation", "constitutional law", "judicial law"],
-                answer: "B"
-            },
-            {
-                question: "The legislature checks the executive through",
-                options: ["approval of appointments", "arresting criminals", "conducting elections", "interpreting laws"],
-                answer: "A"
-            },
-            {
-                question: "The judiciary checks the legislature by",
-                options: ["declaring laws invalid", "making laws", "conducting elections", "campaigning"],
-                answer: "A"
-            },
-            {
-                question: "A political party system with more than two parties is",
-                options: ["two-party system", "one-party system", "multi-party system", "military system"],
-                answer: "C"
+                question: "The ultimate goal of public administration is",
+                options: ["effective governance and public welfare", "political domination", "military supremacy", "electoral victory"],
+                answer: "A",
+                section: "Public Administration"
             }
         ];
 
-        // Application state
         let currentQuestionIndex = 0;
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 30 * 60; // 30 minutes in seconds
+        let timeLeft = 40 * 60;
         let questions = [];
+        let examStarted = false;
 
-        // Background images for rotation
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1541872703-74c5e44368f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80',
-            'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1589262804704-c5aa9e6def89?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80'
+            'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
         ];
 
-        // DOM elements
         const sections = {
             welcome: document.getElementById('welcome-section'),
             studentInfo: document.getElementById('student-info-section'),
@@ -1168,7 +1182,6 @@
             results: document.getElementById('results-section')
         };
 
-        // Initialize background rotation
         let currentBgIndex = 0;
         function rotateBackground() {
             currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
@@ -1176,7 +1189,6 @@
         }
         setInterval(rotateBackground, 10000);
 
-        // Shuffle questions
         function shuffleQuestions() {
             questions = [...originalQuestions];
             for (let i = questions.length - 1; i > 0; i--) {
@@ -1186,13 +1198,13 @@
             userAnswers = Array(questions.length).fill(null);
         }
 
-        // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 30 * 60;
+            timeLeft = 40 * 60;
             
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
+            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #c0392b 0%, #a93226 100%)';
             
             timerInterval = setInterval(() => {
                 timeLeft--;
@@ -1205,19 +1217,48 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    alert("Time's up! Your exam will be submitted automatically.");
-                    calculateScore();
-                }
-                
-                if (timeLeft <= 300) { // 5 minutes left
+                    alert("Time's up! Your test will be submitted automatically.");
+                    calculateScoreAndSubmit();
+                } else if (timeLeft <= 300) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
-                } else if (timeLeft <= 600) { // 10 minutes left
-                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
+                } else if (timeLeft <= 600) {
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e67e22 0%, #d35400 100%)';
                 }
             }, 1000);
         }
 
-        // Navigation functions
+        document.addEventListener('visibilitychange', () => {
+            if (!examStarted) return;
+            
+            if (document.hidden) {
+                clearInterval(timerInterval);
+            } else {
+                if (document.getElementById('exam-section').classList.contains('active') && timeLeft > 0) {
+                    timerInterval = setInterval(() => {
+                        timeLeft--;
+                        const minutes = Math.floor(timeLeft / 60);
+                        const seconds = timeLeft % 60;
+                        document.getElementById('timer').textContent = 
+                            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                        
+                        if (timeLeft <= 0) {
+                            clearInterval(timerInterval);
+                            alert("Time's up! Your test will be submitted automatically.");
+                            calculateScoreAndSubmit();
+                        }
+                    }, 1000);
+                }
+            }
+        });
+
+        window.addEventListener('beforeunload', (e) => {
+            if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
+                e.preventDefault();
+                e.returnValue = 'You have an ongoing test. Are you sure you want to leave? Your progress may be lost.';
+                return e.returnValue;
+            }
+        });
+
         function showSection(sectionName) {
             Object.values(sections).forEach(section => {
                 section.classList.remove('active');
@@ -1228,10 +1269,23 @@
                 document.getElementById('timer-container').style.display = 'none';
                 document.getElementById('submit-container').style.display = 'none';
             }
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Event listeners
+        function updateProgress() {
+            const answeredCount = userAnswers.filter(answer => answer !== null).length;
+            const percentage = (answeredCount / questions.length) * 100;
+            
+            document.getElementById('progress-bar').style.width = percentage + '%';
+            document.getElementById('progress-text').textContent = 
+                `Progress: ${answeredCount}/${questions.length} answered`;
+        }
+
+        function updateTopicBadge(index) {
+            const section = questions[index].section;
+            document.getElementById('topic-badge').textContent = `Topic: ${section}`;
+        }
+
         document.getElementById('start-exam-btn').addEventListener('click', () => {
             showSection('studentInfo');
         });
@@ -1249,23 +1303,29 @@
             
             if (!firstName) {
                 document.getElementById('first-name-error').style.display = 'block';
+                document.getElementById('first-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('first-name-error').style.display = 'none';
+                document.getElementById('first-name').style.borderColor = '#5d7e9e';
             }
             
             if (!middleName) {
                 document.getElementById('middle-name-error').style.display = 'block';
+                document.getElementById('middle-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('middle-name-error').style.display = 'none';
+                document.getElementById('middle-name').style.borderColor = '#5d7e9e';
             }
             
             if (!lastName) {
                 document.getElementById('last-name-error').style.display = 'block';
+                document.getElementById('last-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('last-name-error').style.display = 'none';
+                document.getElementById('last-name').style.borderColor = '#5d7e9e';
             }
             
             if (isValid) {
@@ -1281,6 +1341,7 @@
         document.getElementById('begin-test').addEventListener('click', () => {
             shuffleQuestions();
             currentQuestionIndex = 0;
+            examStarted = true;
             
             document.getElementById('display-student-name').textContent = studentName;
             document.getElementById('results-student-name').textContent = studentName;
@@ -1288,6 +1349,8 @@
             createQuestionGrid();
             loadQuestion(currentQuestionIndex);
             startTimer();
+            updateProgress();
+            updateTopicBadge(currentQuestionIndex);
             showSection('exam');
         });
 
@@ -1305,20 +1368,66 @@
             }
         });
 
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('exam-section').classList.contains('active')) return;
+            if (e.target.tagName === 'INPUT' && e.target.type === 'text') return;
+            
+            if (e.key === 'ArrowLeft' && currentQuestionIndex > 0) {
+                e.preventDefault();
+                currentQuestionIndex--;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'ArrowRight' && currentQuestionIndex < questions.length - 1) {
+                e.preventDefault();
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'A' || e.key === 'a' || e.key === '1') {
+                e.preventDefault();
+                selectOptionByKey(0);
+            } else if (e.key === 'B' || e.key === 'b' || e.key === '2') {
+                e.preventDefault();
+                selectOptionByKey(1);
+            } else if (e.key === 'C' || e.key === 'c' || e.key === '3') {
+                e.preventDefault();
+                selectOptionByKey(2);
+            } else if (e.key === 'D' || e.key === 'd' || e.key === '4') {
+                e.preventDefault();
+                selectOptionByKey(3);
+            }
+        });
+
+        function selectOptionByKey(optionIndex) {
+            const radioButtons = document.querySelectorAll(`input[name="question-${currentQuestionIndex}"]`);
+            if (radioButtons[optionIndex]) {
+                radioButtons[optionIndex].checked = true;
+                userAnswers[currentQuestionIndex] = String.fromCharCode(65 + optionIndex);
+                updateQuestionGrid();
+                updateProgress();
+            }
+        }
+
         document.getElementById('submit-exam').addEventListener('click', () => {
-            const confirmed = confirm("Are you sure you want to submit? You will not be able to change your answers after this.");
+            const unanswered = userAnswers.filter(a => a === null).length;
+            let confirmMessage = "Are you sure you want to submit? You will not be able to change your answers after this.";
+            
+            if (unanswered > 0) {
+                confirmMessage += `\n\n⚠️ Warning: You have ${unanswered} unanswered question(s).`;
+            }
+            
+            const confirmed = confirm(confirmMessage);
             
             if (confirmed) {
                 clearInterval(timerInterval);
+                examStarted = false;
                 document.getElementById('loading').style.display = 'block';
                 setTimeout(() => {
-                    calculateScore();
+                    calculateScoreAndSubmit();
                 }, 1500);
             }
         });
 
         document.getElementById('restart-exam').addEventListener('click', () => {
             clearInterval(timerInterval);
+            examStarted = false;
             document.getElementById('first-name').value = '';
             document.getElementById('middle-name').value = '';
             document.getElementById('last-name').value = '';
@@ -1334,6 +1443,7 @@
                 questionNumber.className = 'question-number';
                 questionNumber.textContent = i + 1;
                 questionNumber.dataset.index = i;
+                questionNumber.title = `Question ${i + 1} - ${questions[i].section}`;
                 
                 if (userAnswers[i] !== null) {
                     questionNumber.classList.add('answered');
@@ -1375,8 +1485,12 @@
             document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
             document.getElementById('question-text').textContent = question.question;
             
+            updateTopicBadge(index);
+            
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
+            
+            const labels = ['A', 'B', 'C', 'D'];
             
             question.options.forEach((option, optionIndex) => {
                 const optionDiv = document.createElement('div');
@@ -1388,7 +1502,7 @@
                 radio.type = 'radio';
                 radio.name = `question-${index}`;
                 radio.id = optionId;
-                radio.value = String.fromCharCode(65 + optionIndex);
+                radio.value = labels[optionIndex];
                 
                 if (userAnswers[index] === radio.value) {
                     radio.checked = true;
@@ -1397,11 +1511,21 @@
                 radio.addEventListener('change', () => {
                     userAnswers[index] = radio.value;
                     updateQuestionGrid();
+                    updateProgress();
                 });
                 
                 const label = document.createElement('label');
                 label.htmlFor = optionId;
-                label.textContent = `${String.fromCharCode(65 + optionIndex)}. ${option}`;
+                label.textContent = `${labels[optionIndex]}. ${option}`;
+                
+                optionDiv.addEventListener('click', (e) => {
+                    if (e.target !== radio) {
+                        radio.checked = true;
+                        userAnswers[index] = radio.value;
+                        updateQuestionGrid();
+                        updateProgress();
+                    }
+                });
                 
                 optionDiv.appendChild(radio);
                 optionDiv.appendChild(label);
@@ -1412,9 +1536,12 @@
             document.getElementById('next-question').disabled = index === questions.length - 1;
             
             updateQuestionGrid();
+            updateProgress();
+            
+            document.querySelector('.exam-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        function calculateScore() {
+        function calculateScoreAndSubmit() {
             document.getElementById('loading').style.display = 'none';
             let score = 0;
             
@@ -1424,7 +1551,9 @@
                 }
             }
             
-            submitToGoogleForm(studentName, "SS1 Government - Second Term 2025/2026", `${score}/${questions.length}`);
+            // Submit score to Google Form ONLY - do NOT display to student
+            submitToGoogleForm(studentName, "SSS1 Government - Third Term Midterm Test 2025/2026", `${score}/40`);
+            
             document.getElementById('submission-status').style.display = 'block';
             showSection('results');
         }
@@ -1433,7 +1562,7 @@
             const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
             const formData = new FormData();
             formData.append("entry.862885683", fullName);
-            formData.append("entry.1545021484", "SS1");
+            formData.append("entry.1545021484", "SSS1");
             formData.append("entry.1558221900", subject);
             formData.append("entry.2022160530", score);
 
