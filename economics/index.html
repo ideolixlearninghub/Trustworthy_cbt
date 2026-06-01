@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Economics SS1 Examination</title>
+    <title>The Trustworthy College - Economics SSS1 Objective Test</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💰</text></svg>">
     <style>
-        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -14,14 +14,13 @@
         }
         
         body {
-            background-color: #1a0f0a;
-            color: #f5e9dd;
+            background-color: #0a1a0a;
+            color: #e0f0e0;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
         }
         
-        /* Dimmed background overlay with economic theme */
         body::before {
             content: '';
             position: fixed;
@@ -33,28 +32,26 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.15;
+            opacity: 0.10;
             z-index: -1;
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container with economic color theme (gold/brown) */
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #2c1810 0%, #3a2418 100%);
-            box-shadow: 0 15px 40px rgba(140, 94, 60, 0.25);
+            background: linear-gradient(135deg, #0a1a0a 0%, #1a2a1a 100%);
+            box-shadow: 0 15px 40px rgba(39, 174, 96, 0.2);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #d4af37;
+            border: 3px solid #27ae60;
             backdrop-filter: blur(5px);
         }
         
-        /* Gold decorative border effect */
         .container::before {
             content: '';
             position: absolute;
@@ -62,17 +59,33 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #d4af37, #ffd700, #d4af37);
+            background: linear-gradient(90deg, #1e8449, #27ae60, #1e8449);
             z-index: 2;
         }
         
-        /* Header with economic theme */
+        .container::after {
+            content: '📊';
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 2.5rem;
+            opacity: 0.06;
+            z-index: 0;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+        }
+        
         .header {
             text-align: center;
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #d4af37;
+            border-bottom: 2px solid #27ae60;
+            z-index: 1;
         }
         
         .header::after {
@@ -83,7 +96,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #d4af37, transparent);
+            background: linear-gradient(to right, transparent, #27ae60, transparent);
         }
         
         .logo {
@@ -92,7 +105,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #d4af37;
+            border: 3px solid #27ae60;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -103,35 +116,36 @@
         }
         
         .subject-title {
-            color: #ffd700;
-            font-size: 2.4rem;
+            color: #6ddb9e;
+            font-size: 2.2rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
             letter-spacing: 1px;
         }
         
         .exam-info {
-            color: #d4b483;
+            color: #a3d4b8;
             font-size: 1.1rem;
             margin-top: 5px;
         }
         
         .term-info {
-            background: linear-gradient(135deg, #d4af3720, #ffd70040);
+            background: linear-gradient(135deg, #27ae6020, #2ecc7140);
             display: inline-block;
             padding: 8px 20px;
             border-radius: 30px;
             margin-top: 10px;
             font-weight: bold;
-            color: #ffd700;
-            border: 1px solid #d4af3760;
+            color: #6ddb9e;
+            border: 1px solid #27ae6060;
         }
         
-        /* Sections */
         .section {
             display: none;
             padding: 25px;
             animation: fadeIn 0.5s ease;
+            position: relative;
+            z-index: 1;
         }
         
         @keyframes fadeIn {
@@ -143,20 +157,19 @@
             display: block;
         }
         
-        /* Welcome message with economic theme */
         .welcome-message {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(58, 36, 24, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(26, 42, 26, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #f5e9dd;
-            border-left: 5px solid #d4af37;
-            border-right: 1px solid rgba(212, 175, 55, 0.3);
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            color: #e0f0e0;
+            border-left: 5px solid #27ae60;
+            border-right: 1px solid rgba(39, 174, 96, 0.3);
+            border-top: 1px solid rgba(39, 174, 96, 0.2);
+            border-bottom: 1px solid rgba(39, 174, 96, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
@@ -168,14 +181,13 @@
             top: 20px;
             right: 20px;
             font-size: 3rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
-        /* Buttons with economic gold theme */
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
-            color: #2c1810;
+            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+            color: #ffffff;
             border: none;
             padding: 15px 32px;
             font-size: 1.1rem;
@@ -185,8 +197,8 @@
             margin: 12px 8px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(255, 215, 0, 0.5);
-            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.3);
+            border: 2px solid rgba(39, 174, 96, 0.5);
+            box-shadow: 0 6px 15px rgba(39, 174, 96, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -203,27 +215,31 @@
             transition: all 0.5s;
         }
         
-        .btn:hover {
-            background: linear-gradient(135deg, #ffd700 0%, #d4af37 100%);
+        .btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
-            color: #1a0f0a;
+            box-shadow: 0 10px 25px rgba(39, 174, 96, 0.5);
+            color: #ffffff;
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
         }
         
         .btn-secondary {
-            background: linear-gradient(135deg, #8b7355 0%, #6b5b4b 100%);
-            color: #f5e9dd;
-            border-color: #a8926e;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            border-color: #5d7e9e;
         }
         
-        .btn-secondary:hover {
-            background: linear-gradient(135deg, #a8926e 0%, #8b7355 100%);
+        .btn-secondary:hover:not(:disabled) {
+            background: linear-gradient(135deg, #3d566e 0%, #2c3e50 100%);
         }
         
         .btn-success {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            color: white;
-            border-color: #229954;
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            border-color: #d35400;
         }
         
         .btn-container {
@@ -231,7 +247,6 @@
             margin-top: 35px;
         }
         
-        /* Form elements */
         .form-group {
             margin-bottom: 28px;
         }
@@ -240,7 +255,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #ffd700;
+            color: #6ddb9e;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -248,20 +263,20 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(26, 15, 10, 0.7);
-            border: 2px solid #8b7355;
+            background: rgba(10, 26, 10, 0.7);
+            border: 2px solid #5d7e9e;
             border-radius: 10px;
             font-size: 1.1rem;
-            color: #f5e9dd;
+            color: #e0f0e0;
             transition: all 0.3s;
             font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #d4af37;
+            border-color: #27ae60;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
-            background: rgba(26, 15, 10, 0.9);
+            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.3);
+            background: rgba(10, 26, 10, 0.9);
         }
         
         .error-message {
@@ -272,30 +287,29 @@
             font-weight: 500;
         }
         
-        /* Instructions with economic theme */
         .instructions {
-            background: linear-gradient(135deg, rgba(139, 115, 85, 0.1) 0%, rgba(58, 36, 24, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.08) 0%, rgba(26, 42, 26, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid #d4af37;
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-left: 5px solid #2ecc71;
+            border: 1px solid rgba(46, 204, 113, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
         
         .instructions::before {
-            content: '📊';
+            content: '📈';
             position: absolute;
             top: 20px;
             right: 20px;
             font-size: 2.5rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #ffd700;
+            color: #2ecc71;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -308,7 +322,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #d4af37;
+            background: #2ecc71;
             border-radius: 2px;
         }
         
@@ -325,30 +339,29 @@
         
         .instructions li::before {
             content: '•';
-            color: #d4af37;
+            color: #2ecc71;
             font-size: 1.5rem;
             position: absolute;
             left: -20px;
             top: -5px;
         }
         
-        /* Exam interface */
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+            border-bottom: 2px solid rgba(39, 174, 96, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #ffd700;
+            color: #6ddb9e;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(139, 115, 85, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(46, 204, 113, 0.15) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border: 1px solid rgba(39, 174, 96, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -359,32 +372,33 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(26, 15, 10, 0.5);
+            background: rgba(10, 26, 10, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            border: 1px solid rgba(39, 174, 96, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #ffd700;
+            color: #6ddb9e;
             font-weight: 600;
             padding: 10px 20px;
-            background: rgba(212, 175, 55, 0.1);
+            background: rgba(39, 174, 96, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border: 1px solid rgba(39, 174, 96, 0.3);
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
-            color: #2c1810;
+            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+            color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
             display: none;
-            border: 2px solid rgba(255, 215, 0, 0.5);
+            border: 2px solid rgba(39, 174, 96, 0.5);
             font-family: 'Courier New', monospace;
+            transition: background 0.5s ease;
         }
         
         .submit-container {
@@ -393,10 +407,10 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(26, 15, 10, 0.4);
+            background: rgba(10, 26, 10, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            border: 1px solid rgba(39, 174, 96, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -404,12 +418,12 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #ffd700;
+            color: #6ddb9e;
             line-height: 1.6;
             padding: 20px;
-            background: rgba(139, 115, 85, 0.1);
+            background: rgba(46, 204, 113, 0.08);
             border-radius: 10px;
-            border-left: 4px solid #d4af37;
+            border-left: 4px solid #2ecc71;
         }
         
         .options-container {
@@ -423,8 +437,8 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(58, 36, 24, 0.5);
-            border: 1px solid rgba(139, 115, 85, 0.3);
+            background: rgba(26, 42, 26, 0.4);
+            border: 1px solid rgba(93, 126, 158, 0.3);
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -437,14 +451,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(39, 174, 96, 0.08), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(212, 175, 55, 0.1);
-            border-color: #d4af37;
+            background: rgba(39, 174, 96, 0.1);
+            border-color: #27ae60;
             transform: translateX(5px);
         }
         
@@ -452,12 +466,13 @@
             transform: translateX(100%);
         }
         
-        .option input {
+        .option input[type="radio"] {
             margin-right: 15px;
             width: 22px;
             height: 22px;
             cursor: pointer;
-            accent-color: #d4af37;
+            accent-color: #27ae60;
+            flex-shrink: 0;
         }
         
         .option label {
@@ -465,21 +480,20 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
-            color: #f5e9dd;
+            color: #e0f0e0;
             font-size: 1.1rem;
             line-height: 1.5;
         }
         
-        /* Question navigation */
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(212, 175, 55, 0.3);
+            border-top: 2px solid rgba(39, 174, 96, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #ffd700;
+            color: #6ddb9e;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -496,7 +510,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: #d4af37;
+            background: #2ecc71;
             border-radius: 2px;
         }
         
@@ -513,34 +527,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(139, 115, 85, 0.3) 0%, rgba(90, 70, 50, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(26, 42, 26, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            color: #f5e9dd;
+            border: 1px solid rgba(39, 174, 96, 0.3);
+            color: #e0f0e0;
             font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.3) 0%, rgba(180, 150, 50, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.3) 0%, rgba(30, 132, 73, 0.5) 100%);
             transform: scale(1.1);
-            border-color: #d4af37;
+            border-color: #27ae60;
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
-            color: #2c1810;
-            border-color: #ffd700;
-            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+            color: #ffffff;
+            border-color: #6ddb9e;
+            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.4);
             transform: scale(1.1);
         }
         
         .question-number.answered {
-            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: white;
-            border-color: #2ecc71;
+            border-color: #f39c12;
         }
         
         .navigation-buttons {
@@ -549,13 +563,48 @@
             margin-top: 25px;
         }
         
-        /* Results section */
+        .progress-container {
+            margin: 20px 0;
+            background: rgba(26, 42, 26, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 10px;
+            border: 1px solid rgba(39, 174, 96, 0.3);
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #1e8449, #27ae60);
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        .progress-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #a3d4b8;
+            margin-top: 5px;
+        }
+        
+        .topic-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(39, 174, 96, 0.15);
+            border: 1px solid rgba(39, 174, 96, 0.3);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #6ddb9e;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(26, 15, 10, 0.8) 0%, rgba(58, 36, 24, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(10, 26, 10, 0.8) 0%, rgba(26, 42, 26, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #d4af37;
+            border: 2px solid #27ae60;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
@@ -567,14 +616,26 @@
             top: 20px;
             right: 20px;
             font-size: 4rem;
-            opacity: 0.1;
+            opacity: 0.06;
         }
         
         .results-container h2 {
-            color: #ffd700;
+            color: #6ddb9e;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .completion-icon {
+            font-size: 5rem;
+            margin: 20px 0;
+            animation: bounceIn 0.6s ease;
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
         
         .student-info {
@@ -584,7 +645,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #d4b483;
+            color: #a3d4b8;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -592,58 +653,50 @@
         .feedback {
             font-size: 1.3rem;
             margin: 25px 0;
-            color: #f5e9dd;
+            color: #e0f0e0;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(212, 175, 55, 0.1);
+            background: rgba(39, 174, 96, 0.08);
             border-radius: 12px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border: 1px solid rgba(39, 174, 96, 0.3);
         }
         
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(39, 174, 96, 0.2) 0%, rgba(46, 204, 113, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.15) 0%, rgba(39, 174, 96, 0.2) 100%);
             border-radius: 12px;
             color: #2ecc71;
             font-size: 1.2rem;
-            border: 1px solid rgba(46, 204, 113, 0.5);
+            border: 1px solid rgba(46, 204, 113, 0.4);
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .question-grid {
                 grid-template-columns: repeat(5, 1fr);
             }
-            
             .exam-controls {
                 flex-direction: column;
                 align-items: stretch;
             }
-            
             .navigation-buttons {
                 flex-direction: column;
                 gap: 15px;
             }
-            
             .btn {
                 width: 100%;
                 margin: 8px 0;
             }
-            
             .subject-title {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
-            
             .question-text {
                 font-size: 1.2rem;
             }
-            
             .container {
                 padding: 15px;
                 margin: 15px;
             }
-            
             .welcome-message, .instructions, .exam-content {
                 padding: 20px;
             }
@@ -654,17 +707,14 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 10px;
             }
-            
             .question-number {
                 width: 35px;
                 height: 35px;
                 font-size: 1rem;
             }
-            
             .subject-title {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
-            
             .results-container {
                 padding: 25px 15px;
             }
@@ -682,8 +732,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(212, 175, 55, 0.3);
-            border-top: 4px solid #d4af37;
+            border: 4px solid rgba(39, 174, 96, 0.3);
+            border-top: 4px solid #27ae60;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -695,50 +745,68 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        
+        .keyboard-hint {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5d7e9e;
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(10, 26, 10, 0.3);
+            border-radius: 8px;
+            border: 1px dashed rgba(93, 126, 158, 0.3);
+        }
+        
+        .keyboard-hint kbd {
+            background: rgba(39, 174, 96, 0.2);
+            border: 1px solid rgba(39, 174, 96, 0.4);
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #6ddb9e;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title">SS1 ECONOMICS EXAMINATION</h1>
-            <div class="exam-info">Second Term | 2025/2026 Session</div>
-            <div class="term-info">60 Questions | 30 Minutes</div>
+            <h1 class="subject-title">SSS1 ECONOMICS OBJECTIVE TEST</h1>
+            <div class="exam-info">Third Term | 2025/2026 Session</div>
+            <div class="term-info">40 Objective Questions | 45 Minutes</div>
         </div>
         
-        <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Economics Examination. This test covers the Nigerian Economy, Agriculture, Mining, Financial Institutions, Money, Distribution, Business Finance, and Industrial Classification. Demonstrate your understanding of economic principles. Best of luck."
+                "Welcome to The Trustworthy College Economics Objective Test. This test covers Cost Concepts (fixed cost, variable cost, total cost, average cost, marginal cost, opportunity cost), Revenue and Profit (total revenue, average revenue, marginal revenue, profit/loss calculation, break-even point), and Economic Systems (traditional, capitalist, socialist, mixed economies, features, advantages and disadvantages). Demonstrate your understanding of fundamental economic principles. Best of luck."
             </div>
             <div class="btn-container">
-                <button id="start-exam-btn" class="btn">Start Examination</button>
+                <button id="start-exam-btn" class="btn">Start Objective Test</button>
             </div>
         </section>
         
-        <!-- Student Information Section -->
         <section id="student-info-section" class="section">
             <h2>Student Information</h2>
-            <p>Please provide your details to continue with the examination.</p>
+            <p>Please provide your details to continue with the test.</p>
             
-            <form id="student-info-form">
+            <form id="student-info-form" autocomplete="off">
                 <div class="form-group">
                     <label for="first-name">First Name *</label>
-                    <input type="text" id="first-name" required>
+                    <input type="text" id="first-name" required placeholder="Enter your first name">
                     <div class="error-message" id="first-name-error">First name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="middle-name">Middle Name *</label>
-                    <input type="text" id="middle-name" required>
+                    <input type="text" id="middle-name" required placeholder="Enter your middle name">
                     <div class="error-message" id="middle-name-error">Middle name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="last-name">Last Name *</label>
-                    <input type="text" id="last-name" required>
+                    <input type="text" id="last-name" required placeholder="Enter your last name">
                     <div class="error-message" id="last-name-error">Last name is required</div>
                 </div>
                 
@@ -749,23 +817,24 @@
             </form>
         </section>
         
-        <!-- Instructions Section -->
         <section id="instructions-section" class="section">
-            <h2>Examination Instructions</h2>
+            <h2>Test Instructions</h2>
             
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This examination consists of 60 multiple-choice questions covering Economics topics.</li>
-                    <li>You have 30 minutes to complete this examination.</li>
+                    <li>This Objective Test consists of <strong>40 multiple-choice questions</strong> covering Cost Concepts, Revenue & Profit, and Economic Systems.</li>
+                    <li>Some questions involve <strong>calculations</strong> — read carefully before answering.</li>
+                    <li>You have <strong>45 minutes</strong> to complete this test.</li>
                     <li>Answer all questions to the best of your ability.</li>
-                    <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
-                    <li>Answered questions will be marked with green in the question grid.</li>
-                    <li>Once you submit your answers, you cannot change them.</li>
-                    <li>Ensure you have a stable internet connection throughout the examination.</li>
+                    <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
+                    <li>You can also use <strong>keyboard shortcuts</strong>: Arrow keys to navigate, A/B/C/D keys to select answers.</li>
+                    <li>Answered questions will be marked with <strong>orange</strong> in the question grid.</li>
+                    <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
+                    <li>Ensure you have a stable internet connection throughout the test.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li>This is the Second Term Examination for the 2025/2026 Academic Session.</li>
+                    <li><strong>Do not refresh the page</strong> during the test, or you may lose your progress.</li>
                 </ul>
             </div>
             
@@ -775,38 +844,41 @@
             </div>
         </section>
         
-        <!-- Exam Interface Section -->
         <section id="exam-section" class="section">
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
+                <div class="topic-badge" id="topic-badge">Topic: Cost Concepts</div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">Progress: 0/40 answered</div>
                 <div class="exam-controls">
-                    <div class="question-counter" id="question-counter">Question 1 of 60</div>
+                    <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">30:00</span>
+                        ⏱ Time Left: <span id="timer">45:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Test</button>
                     </div>
                 </div>
             </div>
             
             <div class="exam-content">
                 <div class="question-text" id="question-text"></div>
-                
-                <div class="options-container" id="options-container">
-                    <!-- Options will be populated by JavaScript -->
-                </div>
+                <div class="options-container" id="options-container"></div>
+            </div>
+            
+            <div class="keyboard-hint">
+                💡 Keyboard shortcuts: <kbd>←</kbd> <kbd>→</kbd> Navigate | <kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd> Select answer
             </div>
             
             <div class="question-navigation">
                 <h3>Question Navigation</h3>
-                <div class="question-grid" id="question-grid">
-                    <!-- Question numbers will be populated by JavaScript -->
-                </div>
+                <div class="question-grid" id="question-grid"></div>
                 
                 <div class="navigation-buttons">
-                    <button type="button" id="prev-question" class="btn btn-secondary">Previous</button>
-                    <button type="button" id="next-question" class="btn">Next</button>
+                    <button type="button" id="prev-question" class="btn btn-secondary">← Previous</button>
+                    <button type="button" id="next-question" class="btn">Next →</button>
                 </div>
             </div>
             
@@ -816,23 +888,23 @@
             </div>
         </section>
         
-        <!-- Results Section -->
         <section id="results-section" class="section">
             <div class="results-container">
-                <h2>Examination Completed</h2>
+                <h2>Test Completed</h2>
+                <div class="completion-icon">✅</div>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SS1 Economics - Second Term 2025/2026</div>
+                <div class="subject" id="results-subject">SSS1 Economics - Third Term Objective Test 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the Economics examination. Your results have been submitted successfully to the examination board.
+                    Thank you for completing the Economics Objective Test. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    Your examination has been successfully submitted. Results will be communicated through appropriate channels.
+                    ✅ Your test has been successfully submitted.
                 </div>
                 
                 <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn">Take Another Exam</button>
+                    <button type="button" id="restart-exam" class="btn">Take Another Test</button>
                     <div class="back-home">
                         <a href="../index.html" class="btn btn-secondary">Back to Home</a>
                     </div>
@@ -842,326 +914,268 @@
     </div>
 
     <script>
-        // SS1 ECONOMICS - SECOND TERM 2025/2026
         const originalQuestions = [
+            // SECTION A: COST CONCEPTS (Q1-12)
             {
-                question: "The Nigerian economy is best described as a",
-                options: ["Socialist economy", "Traditional economy", "Mixed economy", "Capitalist economy"],
-                answer: "C"
+                question: "The total expenditure incurred in producing a given quantity of goods is known as",
+                options: ["Revenue", "Cost", "Profit", "Income"],
+                answer: "B",
+                section: "Cost Concepts"
             },
             {
-                question: "A mixed economy combines",
-                options: ["Religion and politics", "Private and government ownership", "Farming and mining", "Trade and transport"],
-                answer: "B"
+                question: "Which of the following is a fixed cost?",
+                options: ["Cost of raw materials", "Wages of casual workers", "Factory rent", "Cost of fuel"],
+                answer: "C",
+                section: "Cost Concepts"
             },
             {
-                question: "One major sector of the Nigerian economy is",
-                options: ["Education", "Agriculture", "Tourism", "Communication"],
-                answer: "B"
+                question: "A cost that changes directly with the level of output is called",
+                options: ["Fixed cost", "Variable cost", "Average cost", "Opportunity cost"],
+                answer: "B",
+                section: "Cost Concepts"
             },
             {
-                question: "Agriculture involves the",
-                options: ["Production of cars", "Cultivation of crops and rearing of animals", "Mining of minerals", "Building of houses"],
-                answer: "B"
+                question: "If fixed cost is ₦20,000 and variable cost is ₦30,000, the total cost is",
+                options: ["₦10,000", "₦30,000", "₦50,000", "₦60,000"],
+                answer: "C",
+                section: "Cost Concepts"
             },
             {
-                question: "One importance of agriculture in Nigeria is",
-                options: ["It increases crime", "Provides food for the population", "Causes inflation", "Reduces employment"],
-                answer: "B"
+                question: "Which of the following is NOT a variable cost?",
+                options: ["Electricity used in production", "Raw materials", "Casual labour wages", "Building rent"],
+                answer: "D",
+                section: "Cost Concepts"
             },
             {
-                question: "An example of a cash crop in Nigeria is",
-                options: ["Rice", "Yam", "Cocoa", "Beans"],
-                answer: "C"
+                question: "Average cost is obtained by dividing",
+                options: ["Total revenue by output", "Total cost by output", "Profit by output", "Fixed cost by output"],
+                answer: "B",
+                section: "Cost Concepts"
             },
             {
-                question: "An example of food crop is",
-                options: ["Cassava", "Cocoa", "Rubber", "Cotton"],
-                answer: "A"
+                question: "A firm incurs a total cost of ₦60,000 to produce 2,000 units. The average cost is",
+                options: ["₦20", "₦25", "₦30", "₦35"],
+                answer: "C",
+                section: "Cost Concepts"
             },
             {
-                question: "Mining refers to the",
-                options: ["Growing of crops", "Fishing activities", "Extraction of minerals from the earth", "Trading of goods"],
-                answer: "C"
+                question: "The extra cost incurred in producing one additional unit of output is called",
+                options: ["Fixed cost", "Marginal cost", "Average cost", "Opportunity cost"],
+                answer: "B",
+                section: "Cost Concepts"
             },
             {
-                question: "One mineral resource in Nigeria is",
-                options: ["Rice", "Crude oil", "Maize", "Rubber"],
-                answer: "B"
+                question: "Opportunity cost refers to",
+                options: ["Money spent on production", "Cost of labour", "Best alternative forgone", "Cost of transportation"],
+                answer: "C",
+                section: "Cost Concepts"
             },
             {
-                question: "Coal is mined in",
-                options: ["Lagos", "Kano", "Enugu", "Ibadan"],
-                answer: "C"
+                question: "Which of the following is an example of explicit cost?",
+                options: ["Entrepreneur's effort", "Family labour", "Interest paid on loan", "Forgone salary"],
+                answer: "C",
+                section: "Cost Concepts"
             },
             {
-                question: "Financial institutions are organizations that",
-                options: ["Sell goods", "Produce crops", "Deal with money and financial services", "Build houses"],
-                answer: "C"
+                question: "The cost that remains constant irrespective of output level is",
+                options: ["Variable cost", "Fixed cost", "Marginal cost", "Total cost"],
+                answer: "B",
+                section: "Cost Concepts"
             },
             {
-                question: "The apex bank in Nigeria is the",
-                options: ["Union Bank", "First Bank", "Central Bank of Nigeria", "UBA"],
-                answer: "C"
+                question: "If total cost is ₦80,000 and fixed cost is ₦25,000, variable cost will be",
+                options: ["₦45,000", "₦50,000", "₦55,000", "₦60,000"],
+                answer: "C",
+                section: "Cost Concepts"
+            },
+            
+            // SECTION B: REVENUE AND PROFIT (Q13-24)
+            {
+                question: "Revenue is defined as",
+                options: ["Total expenditure incurred", "Money earned from sales", "Amount borrowed", "Cost of production"],
+                answer: "B",
+                section: "Revenue & Profit"
             },
             {
-                question: "Commercial banks mainly",
-                options: ["Grow crops", "Accept deposits and grant loans", "Produce goods", "Build roads"],
-                answer: "B"
+                question: "Total revenue is calculated as",
+                options: ["Price × Quantity sold", "Cost × Output", "Profit × Output", "Fixed cost + Variable cost"],
+                answer: "A",
+                section: "Revenue & Profit"
             },
             {
-                question: "One example of a commercial bank in Nigeria is",
-                options: ["First Bank", "CBN", "IMF", "World Bank"],
-                answer: "A"
+                question: "A firm sells 500 units at ₦400 each. Total revenue is",
+                options: ["₦20,000", "₦100,000", "₦200,000", "₦250,000"],
+                answer: "C",
+                section: "Revenue & Profit"
             },
             {
-                question: "The Central Bank controls",
-                options: ["Trade", "Money supply", "Agriculture", "Transport"],
-                answer: "B"
+                question: "Average revenue is obtained by dividing",
+                options: ["Total cost by output", "Total revenue by quantity sold", "Profit by output", "Fixed cost by output"],
+                answer: "B",
+                section: "Revenue & Profit"
             },
             {
-                question: "Money is anything generally accepted as",
-                options: ["Gift", "Payment", "Medium of exchange", "Reward"],
-                answer: "C"
+                question: "If total revenue is ₦120,000 and output sold is 600 units, average revenue is",
+                options: ["₦100", "₦150", "₦200", "₦250"],
+                answer: "C",
+                section: "Revenue & Profit"
             },
             {
-                question: "One function of money is",
-                options: ["Medium of exchange", "Storage of crops", "Production of goods", "Transport"],
-                answer: "A"
+                question: "The additional revenue earned from selling one more unit of output is",
+                options: ["Average revenue", "Marginal revenue", "Total revenue", "Profit"],
+                answer: "B",
+                section: "Revenue & Profit"
             },
             {
-                question: "Money also serves as a",
-                options: ["Tool of farming", "Store of value", "Machine", "Transport system"],
-                answer: "B"
+                question: "Profit is obtained when",
+                options: ["Revenue exceeds cost", "Cost exceeds revenue", "Revenue equals cost", "Fixed cost exceeds variable cost"],
+                answer: "A",
+                section: "Revenue & Profit"
             },
             {
-                question: "The durability of money means it",
-                options: ["Is cheap", "Lasts long without damage", "Is heavy", "Is colourful"],
-                answer: "B"
+                question: "If total revenue is ₦150,000 and total cost is ₦120,000, profit is",
+                options: ["₦20,000", "₦25,000", "₦30,000", "₦35,000"],
+                answer: "C",
+                section: "Revenue & Profit"
             },
             {
-                question: "Channels of distribution refer to",
-                options: ["Production process", "Movement of goods from producer to consumer", "Mining process", "Financial system"],
-                answer: "B"
+                question: "A firm makes a loss when",
+                options: ["Revenue equals cost", "Revenue exceeds cost", "Cost exceeds revenue", "Revenue increases"],
+                answer: "C",
+                section: "Revenue & Profit"
             },
             {
-                question: "The shortest channel of distribution is",
-                options: ["Producer → wholesaler → retailer → consumer", "Producer → consumer", "Producer → retailer → consumer", "Producer → agent → consumer"],
-                answer: "B"
+                question: "If total revenue is ₦90,000 and total cost is ₦110,000, the firm records",
+                options: ["Profit of ₦20,000", "Profit of ₦10,000", "Loss of ₦10,000", "Loss of ₦20,000"],
+                answer: "D",
+                section: "Revenue & Profit"
             },
             {
-                question: "A wholesaler buys goods from",
-                options: ["Consumers", "Producers", "Farmers", "Government"],
-                answer: "B"
+                question: "Revenue increases when",
+                options: ["Sales decrease", "Price or quantity sold increases", "Cost rises", "Production falls"],
+                answer: "B",
+                section: "Revenue & Profit"
             },
             {
-                question: "Retailers sell goods to",
-                options: ["Producers", "Final consumers", "Wholesalers", "Government"],
-                answer: "B"
+                question: "The point at which total revenue equals total cost is known as",
+                options: ["Equilibrium point", "Break-even point", "Profit point", "Production point"],
+                answer: "B",
+                section: "Revenue & Profit"
+            },
+            
+            // SECTION C: ECONOMIC SYSTEMS (Q25-40)
+            {
+                question: "In a market economy, resources are allocated mainly through",
+                options: ["Government decree", "Traditional customs", "Price mechanism", "Religious beliefs"],
+                answer: "C",
+                section: "Economic Systems"
             },
             {
-                question: "One function of wholesalers is",
-                options: ["Bulk breaking", "Mining", "Farming", "Manufacturing"],
-                answer: "A"
+                question: "An economic system is",
+                options: ["A political institution", "A method of distributing resources", "A tax collection agency", "A banking arrangement"],
+                answer: "B",
+                section: "Economic Systems"
             },
             {
-                question: "Retailers provide",
-                options: ["Transport", "Goods in small quantities", "Farming services", "Insurance"],
-                answer: "B"
+                question: "The economic system in which customs and traditions determine production is",
+                options: ["Mixed economy", "Capitalist economy", "Traditional economy", "Socialist economy"],
+                answer: "C",
+                section: "Economic Systems"
             },
             {
-                question: "Instruments of business finance include",
-                options: ["Cars", "Houses", "Shares", "Clothes"],
-                answer: "C"
+                question: "One major feature of a traditional economy is",
+                options: ["Advanced technology", "Government ownership", "Customs and beliefs guide decisions", "Profit maximization"],
+                answer: "C",
+                section: "Economic Systems"
             },
             {
-                question: "Shares represent",
-                options: ["Loans", "Ownership in a company", "Taxes", "Profits"],
-                answer: "B"
+                question: "The economic system characterized by private ownership of resources is",
+                options: ["Socialist economy", "Capitalist economy", "Communal economy", "Traditional economy"],
+                answer: "B",
+                section: "Economic Systems"
             },
             {
-                question: "A debenture is",
-                options: ["A long-term loan to a company", "Government tax", "Gift", "Salary"],
-                answer: "A"
+                question: "Another name for a capitalist economy is",
+                options: ["Free-market economy", "Controlled economy", "Command economy", "Socialist economy"],
+                answer: "A",
+                section: "Economic Systems"
             },
             {
-                question: "A bond is",
-                options: ["Certificate issued for borrowing money", "Insurance policy", "Trade licence", "Tax receipt"],
-                answer: "A"
+                question: "In a socialist economy, the means of production are mainly owned by",
+                options: ["Individuals", "Cooperatives", "Government", "Foreign investors"],
+                answer: "C",
+                section: "Economic Systems"
             },
             {
-                question: "Loans are",
-                options: ["Donations", "Borrowed funds to be repaid with interest", "Taxes", "Profits"],
-                answer: "B"
+                question: "A socialist economy is also known as",
+                options: ["Market economy", "Command economy", "Mixed economy", "Traditional economy"],
+                answer: "B",
+                section: "Economic Systems"
             },
             {
-                question: "A firm is",
-                options: ["A business organization producing goods or services", "A school", "A farm", "A government office"],
-                answer: "A"
+                question: "Which of the following is a feature of capitalism?",
+                options: ["State ownership of resources", "Central planning", "Private enterprise", "Absence of competition"],
+                answer: "C",
+                section: "Economic Systems"
             },
             {
-                question: "An industry refers to",
-                options: ["One worker", "A group of firms producing similar products", "One shop", "One farm"],
-                answer: "B"
+                question: "The economic system combining features of capitalism and socialism is",
+                options: ["Traditional economy", "Mixed economy", "Command economy", "Free economy"],
+                answer: "B",
+                section: "Economic Systems"
             },
             {
-                question: "Firms combine factors of production to",
-                options: ["Produce goods and services", "Sleep", "Relax", "Play"],
-                answer: "A"
+                question: "Nigeria operates mainly a",
+                options: ["Traditional economy", "Socialist economy", "Mixed economy", "Command economy"],
+                answer: "C",
+                section: "Economic Systems"
             },
             {
-                question: "Examples of manufacturing industries include",
-                options: ["Textile industry", "Farming", "Mining", "Fishing"],
-                answer: "A"
+                question: "In a mixed economy,",
+                options: ["Only government owns resources", "Only private individuals own resources", "Both government and private individuals own resources", "Customs determine production"],
+                answer: "C",
+                section: "Economic Systems"
             },
             {
-                question: "Agriculture belongs to the",
-                options: ["Primary sector", "Secondary sector", "Tertiary sector", "Commercial sector"],
-                answer: "A"
+                question: "Which economic system encourages competition among producers?",
+                options: ["Socialist economy", "Capitalist economy", "Traditional economy", "Communal economy"],
+                answer: "B",
+                section: "Economic Systems"
             },
             {
-                question: "Mining also belongs to the",
-                options: ["Primary sector", "Secondary sector", "Tertiary sector", "Service sector"],
-                answer: "A"
+                question: "One disadvantage of a capitalist economy is",
+                options: ["Lack of consumer choice", "Excessive government control", "Income inequality", "Absence of private ownership"],
+                answer: "C",
+                section: "Economic Systems"
             },
             {
-                question: "Manufacturing belongs to the",
-                options: ["Primary sector", "Secondary sector", "Tertiary sector", "Agricultural sector"],
-                answer: "B"
+                question: "One advantage of a socialist economy is",
+                options: ["Wide income inequality", "Greater social welfare", "Complete consumer freedom", "Private ownership of all resources"],
+                answer: "B",
+                section: "Economic Systems"
             },
             {
-                question: "Services like banking belong to the",
-                options: ["Primary sector", "Secondary sector", "Tertiary sector", "Industrial sector"],
-                answer: "C"
-            },
-            {
-                question: "One problem of Nigerian agriculture is",
-                options: ["Good soil", "Lack of modern equipment", "Adequate rainfall", "Good transport"],
-                answer: "B"
-            },
-            {
-                question: "Mining contributes to the economy by",
-                options: ["Generating revenue", "Causing unemployment", "Reducing income", "Destroying trade"],
-                answer: "A"
-            },
-            {
-                question: "Financial institutions help to",
-                options: ["Mobilize savings", "Destroy money", "Reduce trade", "Produce crops"],
-                answer: "A"
-            },
-            {
-                question: "Money helps trade through",
-                options: ["Barter system", "Exchange of goods and services", "Farming", "Mining"],
-                answer: "B"
-            },
-            {
-                question: "Barter system means",
-                options: ["Exchange of goods for goods", "Money exchange", "Bank payment", "Credit sale"],
-                answer: "A"
-            },
-            {
-                question: "One disadvantage of barter system is",
-                options: ["Easy trade", "Double coincidence of wants", "Quick payment", "Large trade"],
-                answer: "B"
-            },
-            {
-                question: "Wholesalers help stabilize prices by",
-                options: ["Storing goods", "Selling cheaply", "Buying little", "Transporting goods"],
-                answer: "A"
-            },
-            {
-                question: "One function of retailers is",
-                options: ["Manufacturing", "Providing market information", "Mining", "Farming"],
-                answer: "B"
-            },
-            {
-                question: "Shares may be bought by",
-                options: ["Investors", "Farmers only", "Teachers only", "Government only"],
-                answer: "A"
-            },
-            {
-                question: "Debenture holders receive",
-                options: ["Dividend", "Interest", "Salary", "Profit"],
-                answer: "B"
-            },
-            {
-                question: "Firms may be classified according to",
-                options: ["Size and ownership", "Height", "Colour", "Age"],
-                answer: "A"
-            },
-            {
-                question: "Small scale firms usually have",
-                options: ["Small capital", "Large capital", "Government ownership", "Many branches"],
-                answer: "A"
-            },
-            {
-                question: "Large scale firms usually have",
-                options: ["Small capital", "Large capital", "No workers", "No production"],
-                answer: "B"
-            },
-            {
-                question: "One role of financial institutions is",
-                options: ["Granting loans", "Farming", "Mining", "Manufacturing"],
-                answer: "A"
-            },
-            {
-                question: "Money makes it easier to",
-                options: ["Fight", "Buy and sell goods", "Sleep", "Walk"],
-                answer: "B"
-            },
-            {
-                question: "Distribution helps",
-                options: ["Goods reach consumers", "Stop production", "Stop trade", "End markets"],
-                answer: "A"
-            },
-            {
-                question: "One advantage of direct distribution is",
-                options: ["Lower cost", "Higher cost", "More middlemen", "Slow movement"],
-                answer: "A"
-            },
-            {
-                question: "Nigeria earns foreign exchange mainly from",
-                options: ["Crude oil exports", "Rice production", "Textile production", "Fishing"],
-                answer: "A"
-            },
-            {
-                question: "A firm aims mainly to",
-                options: ["Make profit", "Lose money", "Pay taxes", "Help government"],
-                answer: "A"
-            },
-            {
-                question: "Industries help economic development by",
-                options: ["Creating employment", "Reducing jobs", "Causing poverty", "Stopping trade"],
-                answer: "A"
-            },
-            {
-                question: "Agricultural products used as raw materials include",
-                options: ["Cotton", "Iron", "Gold", "Coal"],
-                answer: "A"
-            },
-            {
-                question: "Financial institutions encourage",
-                options: ["Savings and investment", "Waste", "Laziness", "Crime"],
-                answer: "A"
+                question: "The central economic problem that every economic system seeks to solve is",
+                options: ["Scarcity of resources", "Abundance of resources", "Population growth", "Inflation only"],
+                answer: "A",
+                section: "Economic Systems"
             }
         ];
 
-        // Application state
         let currentQuestionIndex = 0;
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 30 * 60; // 30 minutes in seconds
+        let timeLeft = 45 * 60;
         let questions = [];
+        let examStarted = false;
 
-        // Background images for rotation
         const backgroundImages = [
             'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80',
-            'https://images.unsplash.com/photo-1535320903710-d993d3d77b29?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
+            'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
         ];
 
-        // DOM elements
         const sections = {
             welcome: document.getElementById('welcome-section'),
             studentInfo: document.getElementById('student-info-section'),
@@ -1170,7 +1184,6 @@
             results: document.getElementById('results-section')
         };
 
-        // Initialize background rotation
         let currentBgIndex = 0;
         function rotateBackground() {
             currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
@@ -1178,7 +1191,6 @@
         }
         setInterval(rotateBackground, 10000);
 
-        // Shuffle questions
         function shuffleQuestions() {
             questions = [...originalQuestions];
             for (let i = questions.length - 1; i > 0; i--) {
@@ -1188,13 +1200,13 @@
             userAnswers = Array(questions.length).fill(null);
         }
 
-        // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 30 * 60;
+            timeLeft = 45 * 60;
             
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
+            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #27ae60 0%, #1e8449 100%)';
             
             timerInterval = setInterval(() => {
                 timeLeft--;
@@ -1207,19 +1219,48 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    alert("Time's up! Your exam will be submitted automatically.");
-                    calculateScore();
-                }
-                
-                if (timeLeft <= 300) { // 5 minutes left
+                    alert("Time's up! Your test will be submitted automatically.");
+                    calculateScoreAndSubmit();
+                } else if (timeLeft <= 300) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
-                } else if (timeLeft <= 600) { // 10 minutes left
-                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
+                } else if (timeLeft <= 600) {
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e67e22 0%, #d35400 100%)';
                 }
             }, 1000);
         }
 
-        // Navigation functions
+        document.addEventListener('visibilitychange', () => {
+            if (!examStarted) return;
+            
+            if (document.hidden) {
+                clearInterval(timerInterval);
+            } else {
+                if (document.getElementById('exam-section').classList.contains('active') && timeLeft > 0) {
+                    timerInterval = setInterval(() => {
+                        timeLeft--;
+                        const minutes = Math.floor(timeLeft / 60);
+                        const seconds = timeLeft % 60;
+                        document.getElementById('timer').textContent = 
+                            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                        
+                        if (timeLeft <= 0) {
+                            clearInterval(timerInterval);
+                            alert("Time's up! Your test will be submitted automatically.");
+                            calculateScoreAndSubmit();
+                        }
+                    }, 1000);
+                }
+            }
+        });
+
+        window.addEventListener('beforeunload', (e) => {
+            if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
+                e.preventDefault();
+                e.returnValue = 'You have an ongoing test. Are you sure you want to leave? Your progress may be lost.';
+                return e.returnValue;
+            }
+        });
+
         function showSection(sectionName) {
             Object.values(sections).forEach(section => {
                 section.classList.remove('active');
@@ -1230,10 +1271,23 @@
                 document.getElementById('timer-container').style.display = 'none';
                 document.getElementById('submit-container').style.display = 'none';
             }
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Event listeners
+        function updateProgress() {
+            const answeredCount = userAnswers.filter(answer => answer !== null).length;
+            const percentage = (answeredCount / questions.length) * 100;
+            
+            document.getElementById('progress-bar').style.width = percentage + '%';
+            document.getElementById('progress-text').textContent = 
+                `Progress: ${answeredCount}/${questions.length} answered`;
+        }
+
+        function updateTopicBadge(index) {
+            const section = questions[index].section;
+            document.getElementById('topic-badge').textContent = `Topic: ${section}`;
+        }
+
         document.getElementById('start-exam-btn').addEventListener('click', () => {
             showSection('studentInfo');
         });
@@ -1251,23 +1305,29 @@
             
             if (!firstName) {
                 document.getElementById('first-name-error').style.display = 'block';
+                document.getElementById('first-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('first-name-error').style.display = 'none';
+                document.getElementById('first-name').style.borderColor = '#5d7e9e';
             }
             
             if (!middleName) {
                 document.getElementById('middle-name-error').style.display = 'block';
+                document.getElementById('middle-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('middle-name-error').style.display = 'none';
+                document.getElementById('middle-name').style.borderColor = '#5d7e9e';
             }
             
             if (!lastName) {
                 document.getElementById('last-name-error').style.display = 'block';
+                document.getElementById('last-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('last-name-error').style.display = 'none';
+                document.getElementById('last-name').style.borderColor = '#5d7e9e';
             }
             
             if (isValid) {
@@ -1283,6 +1343,7 @@
         document.getElementById('begin-test').addEventListener('click', () => {
             shuffleQuestions();
             currentQuestionIndex = 0;
+            examStarted = true;
             
             document.getElementById('display-student-name').textContent = studentName;
             document.getElementById('results-student-name').textContent = studentName;
@@ -1290,6 +1351,8 @@
             createQuestionGrid();
             loadQuestion(currentQuestionIndex);
             startTimer();
+            updateProgress();
+            updateTopicBadge(currentQuestionIndex);
             showSection('exam');
         });
 
@@ -1307,20 +1370,66 @@
             }
         });
 
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('exam-section').classList.contains('active')) return;
+            if (e.target.tagName === 'INPUT' && e.target.type === 'text') return;
+            
+            if (e.key === 'ArrowLeft' && currentQuestionIndex > 0) {
+                e.preventDefault();
+                currentQuestionIndex--;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'ArrowRight' && currentQuestionIndex < questions.length - 1) {
+                e.preventDefault();
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'A' || e.key === 'a' || e.key === '1') {
+                e.preventDefault();
+                selectOptionByKey(0);
+            } else if (e.key === 'B' || e.key === 'b' || e.key === '2') {
+                e.preventDefault();
+                selectOptionByKey(1);
+            } else if (e.key === 'C' || e.key === 'c' || e.key === '3') {
+                e.preventDefault();
+                selectOptionByKey(2);
+            } else if (e.key === 'D' || e.key === 'd' || e.key === '4') {
+                e.preventDefault();
+                selectOptionByKey(3);
+            }
+        });
+
+        function selectOptionByKey(optionIndex) {
+            const radioButtons = document.querySelectorAll(`input[name="question-${currentQuestionIndex}"]`);
+            if (radioButtons[optionIndex]) {
+                radioButtons[optionIndex].checked = true;
+                userAnswers[currentQuestionIndex] = String.fromCharCode(65 + optionIndex);
+                updateQuestionGrid();
+                updateProgress();
+            }
+        }
+
         document.getElementById('submit-exam').addEventListener('click', () => {
-            const confirmed = confirm("Are you sure you want to submit? You will not be able to change your answers after this.");
+            const unanswered = userAnswers.filter(a => a === null).length;
+            let confirmMessage = "Are you sure you want to submit? You will not be able to change your answers after this.";
+            
+            if (unanswered > 0) {
+                confirmMessage += `\n\n⚠️ Warning: You have ${unanswered} unanswered question(s).`;
+            }
+            
+            const confirmed = confirm(confirmMessage);
             
             if (confirmed) {
                 clearInterval(timerInterval);
+                examStarted = false;
                 document.getElementById('loading').style.display = 'block';
                 setTimeout(() => {
-                    calculateScore();
+                    calculateScoreAndSubmit();
                 }, 1500);
             }
         });
 
         document.getElementById('restart-exam').addEventListener('click', () => {
             clearInterval(timerInterval);
+            examStarted = false;
             document.getElementById('first-name').value = '';
             document.getElementById('middle-name').value = '';
             document.getElementById('last-name').value = '';
@@ -1336,6 +1445,7 @@
                 questionNumber.className = 'question-number';
                 questionNumber.textContent = i + 1;
                 questionNumber.dataset.index = i;
+                questionNumber.title = `Question ${i + 1} - ${questions[i].section}`;
                 
                 if (userAnswers[i] !== null) {
                     questionNumber.classList.add('answered');
@@ -1377,8 +1487,12 @@
             document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
             document.getElementById('question-text').textContent = question.question;
             
+            updateTopicBadge(index);
+            
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
+            
+            const labels = ['A', 'B', 'C', 'D'];
             
             question.options.forEach((option, optionIndex) => {
                 const optionDiv = document.createElement('div');
@@ -1390,7 +1504,7 @@
                 radio.type = 'radio';
                 radio.name = `question-${index}`;
                 radio.id = optionId;
-                radio.value = String.fromCharCode(65 + optionIndex);
+                radio.value = labels[optionIndex];
                 
                 if (userAnswers[index] === radio.value) {
                     radio.checked = true;
@@ -1399,11 +1513,21 @@
                 radio.addEventListener('change', () => {
                     userAnswers[index] = radio.value;
                     updateQuestionGrid();
+                    updateProgress();
                 });
                 
                 const label = document.createElement('label');
                 label.htmlFor = optionId;
-                label.textContent = `${String.fromCharCode(65 + optionIndex)}. ${option}`;
+                label.textContent = `${labels[optionIndex]}. ${option}`;
+                
+                optionDiv.addEventListener('click', (e) => {
+                    if (e.target !== radio) {
+                        radio.checked = true;
+                        userAnswers[index] = radio.value;
+                        updateQuestionGrid();
+                        updateProgress();
+                    }
+                });
                 
                 optionDiv.appendChild(radio);
                 optionDiv.appendChild(label);
@@ -1414,9 +1538,12 @@
             document.getElementById('next-question').disabled = index === questions.length - 1;
             
             updateQuestionGrid();
+            updateProgress();
+            
+            document.querySelector('.exam-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        function calculateScore() {
+        function calculateScoreAndSubmit() {
             document.getElementById('loading').style.display = 'none';
             let score = 0;
             
@@ -1426,7 +1553,9 @@
                 }
             }
             
-            submitToGoogleForm(studentName, "SS1 Economics - Second Term 2025/2026", `${score}/${questions.length}`);
+            // Submit score to Google Form ONLY - do NOT display to student
+            submitToGoogleForm(studentName, "SSS1 Economics - Third Term Objective Test 2025/2026", `${score}/40`);
+            
             document.getElementById('submission-status').style.display = 'block';
             showSection('results');
         }
@@ -1435,7 +1564,7 @@
             const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
             const formData = new FormData();
             formData.append("entry.862885683", fullName);
-            formData.append("entry.1545021484", "SS1");
+            formData.append("entry.1545021484", "SSS1");
             formData.append("entry.1558221900", subject);
             formData.append("entry.2022160530", score);
 
