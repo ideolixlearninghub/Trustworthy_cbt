@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Digital Technology CBT Exam</title>
+    <title>The Trustworthy College - Digital Technology SS1 Mid Term Test</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
     <style>
-        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -14,14 +14,13 @@
         }
         
         body {
-            background-color: #0a0f1a;
-            color: #f5e9dd;
+            background-color: #0a1628;
+            color: #e0e8f0;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
         }
         
-        /* Dimmed background overlay with digital/tech theme */
         body::before {
             content: '';
             position: fixed;
@@ -29,32 +28,30 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.15;
+            opacity: 0.10;
             z-index: -1;
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container with digital/tech color theme (blue/cyan) */
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #0a1a2a 0%, #1a2f3a 100%);
-            box-shadow: 0 15px 40px rgba(0, 150, 255, 0.25);
+            background: linear-gradient(135deg, #0a1628 0%, #1a2a4a 100%);
+            box-shadow: 0 15px 40px rgba(52, 152, 219, 0.25);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #00a8ff;
+            border: 3px solid #3498db;
             backdrop-filter: blur(5px);
         }
         
-        /* Digital blue decorative border effect */
         .container::before {
             content: '';
             position: absolute;
@@ -62,17 +59,33 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #00a8ff, #0097e6, #00a8ff);
+            background: linear-gradient(90deg, #2980b9, #3498db, #2980b9);
             z-index: 2;
         }
         
-        /* Header with digital theme */
+        .container::after {
+            content: '🖥️';
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 2.5rem;
+            opacity: 0.06;
+            z-index: 0;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+        }
+        
         .header {
             text-align: center;
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #00a8ff;
+            border-bottom: 2px solid #3498db;
+            z-index: 1;
         }
         
         .header::after {
@@ -83,7 +96,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #00a8ff, transparent);
+            background: linear-gradient(to right, transparent, #3498db, transparent);
         }
         
         .logo {
@@ -92,7 +105,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #00a8ff;
+            border: 3px solid #3498db;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -103,24 +116,36 @@
         }
         
         .subject-title {
-            color: #00a8ff;
-            font-size: 2.4rem;
+            color: #85c1e9;
+            font-size: 2.2rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
             letter-spacing: 1px;
         }
         
         .exam-info {
-            color: #a0d0ff;
+            color: #a3c6e4;
             font-size: 1.1rem;
             margin-top: 5px;
         }
         
-        /* Sections */
+        .term-info {
+            background: linear-gradient(135deg, #3498db20, #2980b940);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #85c1e9;
+            border: 1px solid #3498db60;
+        }
+        
         .section {
             display: none;
             padding: 25px;
             animation: fadeIn 0.5s ease;
+            position: relative;
+            z-index: 1;
         }
         
         @keyframes fadeIn {
@@ -132,20 +157,19 @@
             display: block;
         }
         
-        /* Welcome message with digital theme */
         .welcome-message {
-            background: linear-gradient(135deg, rgba(0, 168, 255, 0.1) 0%, rgba(26, 47, 58, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(26, 42, 74, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #f5e9dd;
-            border-left: 5px solid #00a8ff;
-            border-right: 1px solid rgba(0, 168, 255, 0.3);
-            border-top: 1px solid rgba(0, 168, 255, 0.2);
-            border-bottom: 1px solid rgba(0, 168, 255, 0.3);
+            color: #e0e8f0;
+            border-left: 5px solid #3498db;
+            border-right: 1px solid rgba(52, 152, 219, 0.3);
+            border-top: 1px solid rgba(52, 152, 219, 0.2);
+            border-bottom: 1px solid rgba(52, 152, 219, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
@@ -157,13 +181,12 @@
             top: 20px;
             right: 20px;
             font-size: 3rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
-        /* Buttons with digital blue theme */
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #00a8ff 0%, #0097e6 100%);
+            background: linear-gradient(135deg, #2980b9 0%, #2471a3 100%);
             color: #ffffff;
             border: none;
             padding: 15px 32px;
@@ -174,8 +197,8 @@
             margin: 12px 8px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(0, 168, 255, 0.5);
-            box-shadow: 0 6px 15px rgba(0, 168, 255, 0.3);
+            border: 2px solid rgba(41, 128, 185, 0.5);
+            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -192,50 +215,31 @@
             transition: all 0.5s;
         }
         
-        .btn:hover {
-            background: linear-gradient(135deg, #5dade2 0%, #00a8ff 100%);
+        .btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(0, 168, 255, 0.5);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.5);
             color: #ffffff;
         }
         
-        .btn:hover::after {
-            left: 100%;
-        }
-        
-        .btn:focus {
-            outline: 2px solid #5dade2;
-            outline-offset: 3px;
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
         }
         
         .btn-secondary {
-            background: linear-gradient(135deg, #5d6d7e 0%, #4a5f6e 100%);
-            color: #f5e9dd;
-            border-color: #7f8c8d;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            border-color: #5d7e9e;
         }
         
-        .btn-secondary:hover {
-            background: linear-gradient(135deg, #7f8c8d 0%, #5d6d7e 100%);
+        .btn-secondary:hover:not(:disabled) {
+            background: linear-gradient(135deg, #3d566e 0%, #2c3e50 100%);
         }
         
         .btn-success {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            color: white;
-            border-color: #229954;
-        }
-        
-        .btn-success:hover {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
-        }
-        
-        .btn-danger {
-            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
-            color: white;
-            border-color: #922b21;
-        }
-        
-        .btn-danger:hover {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            border-color: #d35400;
         }
         
         .btn-container {
@@ -243,7 +247,6 @@
             margin-top: 35px;
         }
         
-        /* Form elements */
         .form-group {
             margin-bottom: 28px;
         }
@@ -252,7 +255,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #00a8ff;
+            color: #85c1e9;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -260,20 +263,20 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(10, 26, 42, 0.7);
-            border: 2px solid #5d6d7e;
+            background: rgba(10, 22, 40, 0.7);
+            border: 2px solid #5d7e9e;
             border-radius: 10px;
             font-size: 1.1rem;
-            color: #f5e9dd;
+            color: #e0e8f0;
             transition: all 0.3s;
             font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #00a8ff;
+            border-color: #3498db;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.3);
-            background: rgba(10, 26, 42, 0.9);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+            background: rgba(10, 22, 40, 0.9);
         }
         
         .error-message {
@@ -284,30 +287,29 @@
             font-weight: 500;
         }
         
-        /* Instructions with digital theme */
         .instructions {
-            background: linear-gradient(135deg, rgba(93, 109, 126, 0.1) 0%, rgba(26, 47, 58, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.08) 0%, rgba(26, 42, 74, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid #00a8ff;
-            border: 1px solid rgba(0, 168, 255, 0.2);
+            border-left: 5px solid #3498db;
+            border: 1px solid rgba(52, 152, 219, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
         
         .instructions::before {
-            content: '🔢';
+            content: '⌨️';
             position: absolute;
             top: 20px;
             right: 20px;
             font-size: 2.5rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #00a8ff;
+            color: #3498db;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -320,7 +322,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #00a8ff;
+            background: #3498db;
             border-radius: 2px;
         }
         
@@ -337,30 +339,29 @@
         
         .instructions li::before {
             content: '•';
-            color: #00a8ff;
+            color: #3498db;
             font-size: 1.5rem;
             position: absolute;
             left: -20px;
             top: -5px;
         }
         
-        /* Exam interface */
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(0, 168, 255, 0.3);
+            border-bottom: 2px solid rgba(52, 152, 219, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #00a8ff;
+            color: #85c1e9;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(0, 168, 255, 0.1) 0%, rgba(93, 109, 126, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(41, 128, 185, 0.15) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(0, 168, 255, 0.3);
+            border: 1px solid rgba(52, 152, 219, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -371,32 +372,33 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(10, 26, 42, 0.5);
+            background: rgba(10, 22, 40, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(0, 168, 255, 0.2);
+            border: 1px solid rgba(52, 152, 219, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #00a8ff;
+            color: #85c1e9;
             font-weight: 600;
             padding: 10px 20px;
-            background: rgba(0, 168, 255, 0.1);
+            background: rgba(52, 152, 219, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(0, 168, 255, 0.3);
+            border: 1px solid rgba(52, 152, 219, 0.3);
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #00a8ff 0%, #0097e6 100%);
+            background: linear-gradient(135deg, #2980b9 0%, #2471a3 100%);
             color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(0, 168, 255, 0.4);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
             display: none;
-            border: 2px solid rgba(0, 168, 255, 0.5);
+            border: 2px solid rgba(41, 128, 185, 0.5);
             font-family: 'Courier New', monospace;
+            transition: background 0.5s ease;
         }
         
         .submit-container {
@@ -405,10 +407,10 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(10, 26, 42, 0.4);
+            background: rgba(10, 22, 40, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(0, 168, 255, 0.2);
+            border: 1px solid rgba(52, 152, 219, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -416,12 +418,12 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #00a8ff;
+            color: #85c1e9;
             line-height: 1.6;
             padding: 20px;
-            background: rgba(93, 109, 126, 0.1);
+            background: rgba(52, 152, 219, 0.08);
             border-radius: 10px;
-            border-left: 4px solid #00a8ff;
+            border-left: 4px solid #3498db;
         }
         
         .options-container {
@@ -435,8 +437,8 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(26, 47, 58, 0.5);
-            border: 1px solid rgba(93, 109, 126, 0.3);
+            background: rgba(26, 42, 74, 0.4);
+            border: 1px solid rgba(93, 126, 158, 0.3);
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -449,14 +451,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(0, 168, 255, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.08), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(0, 168, 255, 0.1);
-            border-color: #00a8ff;
+            background: rgba(52, 152, 219, 0.1);
+            border-color: #3498db;
             transform: translateX(5px);
         }
         
@@ -464,12 +466,13 @@
             transform: translateX(100%);
         }
         
-        .option input {
+        .option input[type="radio"] {
             margin-right: 15px;
             width: 22px;
             height: 22px;
             cursor: pointer;
-            accent-color: #00a8ff;
+            accent-color: #3498db;
+            flex-shrink: 0;
         }
         
         .option label {
@@ -477,21 +480,20 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
-            color: #f5e9dd;
+            color: #e0e8f0;
             font-size: 1.1rem;
             line-height: 1.5;
         }
         
-        /* Question navigation */
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(0, 168, 255, 0.3);
+            border-top: 2px solid rgba(52, 152, 219, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #00a8ff;
+            color: #85c1e9;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -508,7 +510,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: #00a8ff;
+            background: #3498db;
             border-radius: 2px;
         }
         
@@ -525,34 +527,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(93, 109, 126, 0.3) 0%, rgba(70, 86, 103, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(26, 42, 74, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(0, 168, 255, 0.3);
-            color: #f5e9dd;
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            color: #e0e8f0;
             font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background: linear-gradient(135deg, rgba(0, 168, 255, 0.3) 0%, rgba(0, 151, 230, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.3) 0%, rgba(41, 128, 185, 0.5) 100%);
             transform: scale(1.1);
-            border-color: #00a8ff;
+            border-color: #3498db;
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #00a8ff 0%, #0097e6 100%);
+            background: linear-gradient(135deg, #2980b9 0%, #2471a3 100%);
             color: #ffffff;
-            border-color: #5dade2;
-            box-shadow: 0 4px 10px rgba(0, 168, 255, 0.4);
+            border-color: #85c1e9;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
             transform: scale(1.1);
         }
         
         .question-number.answered {
-            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: white;
-            border-color: #2ecc71;
+            border-color: #f39c12;
         }
         
         .navigation-buttons {
@@ -561,13 +563,48 @@
             margin-top: 25px;
         }
         
-        /* Results section - NO SCORE DISPLAY */
+        .progress-container {
+            margin: 20px 0;
+            background: rgba(26, 42, 74, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 10px;
+            border: 1px solid rgba(52, 152, 219, 0.3);
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #2980b9, #3498db);
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        .progress-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #a3c6e4;
+            margin-top: 5px;
+        }
+        
+        .topic-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(52, 152, 219, 0.15);
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #85c1e9;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(10, 26, 42, 0.8) 0%, rgba(26, 47, 58, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(10, 22, 40, 0.8) 0%, rgba(26, 42, 74, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #00a8ff;
+            border: 2px solid #3498db;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
@@ -579,14 +616,26 @@
             top: 20px;
             right: 20px;
             font-size: 4rem;
-            opacity: 0.1;
+            opacity: 0.06;
         }
         
         .results-container h2 {
-            color: #00a8ff;
+            color: #85c1e9;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .completion-icon {
+            font-size: 5rem;
+            margin: 20px 0;
+            animation: bounceIn 0.6s ease;
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
         
         .student-info {
@@ -596,7 +645,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #a0d0ff;
+            color: #a3c6e4;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -604,58 +653,50 @@
         .feedback {
             font-size: 1.3rem;
             margin: 25px 0;
-            color: #f5e9dd;
+            color: #e0e8f0;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(0, 168, 255, 0.1);
+            background: rgba(52, 152, 219, 0.08);
             border-radius: 12px;
-            border: 1px solid rgba(0, 168, 255, 0.3);
+            border: 1px solid rgba(52, 152, 219, 0.3);
         }
         
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(39, 174, 96, 0.2) 0%, rgba(46, 204, 113, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.15) 0%, rgba(39, 174, 96, 0.2) 100%);
             border-radius: 12px;
             color: #2ecc71;
             font-size: 1.2rem;
-            border: 1px solid rgba(46, 204, 113, 0.5);
+            border: 1px solid rgba(46, 204, 113, 0.4);
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .question-grid {
                 grid-template-columns: repeat(5, 1fr);
             }
-            
             .exam-controls {
                 flex-direction: column;
                 align-items: stretch;
             }
-            
             .navigation-buttons {
                 flex-direction: column;
                 gap: 15px;
             }
-            
             .btn {
                 width: 100%;
                 margin: 8px 0;
             }
-            
             .subject-title {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
-            
             .question-text {
                 font-size: 1.2rem;
             }
-            
             .container {
                 padding: 15px;
                 margin: 15px;
             }
-            
             .welcome-message, .instructions, .exam-content {
                 padding: 20px;
             }
@@ -666,29 +707,24 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 10px;
             }
-            
             .question-number {
                 width: 35px;
                 height: 35px;
                 font-size: 1rem;
             }
-            
             .subject-title {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
-            
             .results-container {
                 padding: 25px 15px;
             }
         }
         
-        /* Back to Home button */
         .back-home {
             margin-top: 20px;
             text-align: center;
         }
         
-        /* Loading animation */
         .loading {
             display: none;
             text-align: center;
@@ -696,8 +732,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(0, 168, 255, 0.3);
-            border-top: 4px solid #00a8ff;
+            border: 4px solid rgba(52, 152, 219, 0.3);
+            border-top: 4px solid #3498db;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -710,64 +746,77 @@
             100% { transform: rotate(360deg); }
         }
         
-        /* Binary code background effect for digital theme */
-        .binary-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            pointer-events: none;
-            z-index: -1;
-            opacity: 0.05;
-            font-family: monospace;
-            font-size: 20px;
-            color: #00a8ff;
-            overflow: hidden;
+        .keyboard-hint {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5d7e9e;
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(10, 22, 40, 0.3);
+            border-radius: 8px;
+            border: 1px dashed rgba(93, 126, 158, 0.3);
+        }
+        
+        .keyboard-hint kbd {
+            background: rgba(52, 152, 219, 0.2);
+            border: 1px solid rgba(52, 152, 219, 0.4);
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #85c1e9;
+        }
+        
+        .key-combo {
+            font-family: 'Courier New', monospace;
+            background: rgba(52, 152, 219, 0.15);
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 0.9em;
+            white-space: nowrap;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header with logo -->
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title">SS1 DIGITAL TECHNOLOGY EXAMINATION</h1>
-            <div class="exam-info">Digital Technology Fundamentals | 40 Questions | 40 Minutes</div>
+            <h1 class="subject-title">SS1 DIGITAL TECHNOLOGY TEST</h1>
+            <div class="exam-info">Third Term | 2025/2026 Session</div>
+            <div class="term-info">40 Objective Questions | 40 Minutes</div>
         </div>
         
-        <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Digital Technology Examination. Demonstrate your understanding of digital signals, number systems, computer hardware, software, and data representation. Success comes from technical knowledge and logical thinking. Best of luck."
+                "Welcome to The Trustworthy College Digital Technology Mid Term Test. This test covers Word Processing (creating, editing, formatting, and printing documents), Spreadsheet Applications (cell addressing, workbooks, worksheets, formulas), and essential Computer Shortcut Keys. Demonstrate your understanding of digital productivity tools. Best of luck."
             </div>
             <div class="btn-container">
-                <button id="start-exam-btn" class="btn">Start Examination</button>
+                <button id="start-exam-btn" class="btn">Start Mid Term Test</button>
             </div>
         </section>
         
-        <!-- Student Information Section -->
         <section id="student-info-section" class="section">
             <h2>Student Information</h2>
-            <p>Please provide your details to continue with the examination.</p>
+            <p>Please provide your details to continue with the test.</p>
             
-            <form id="student-info-form">
+            <form id="student-info-form" autocomplete="off">
                 <div class="form-group">
                     <label for="first-name">First Name *</label>
-                    <input type="text" id="first-name" required>
+                    <input type="text" id="first-name" required placeholder="Enter your first name">
                     <div class="error-message" id="first-name-error">First name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="middle-name">Middle Name *</label>
-                    <input type="text" id="middle-name" required>
+                    <input type="text" id="middle-name" required placeholder="Enter your middle name">
                     <div class="error-message" id="middle-name-error">Middle name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="last-name">Last Name *</label>
-                    <input type="text" id="last-name" required>
+                    <input type="text" id="last-name" required placeholder="Enter your last name">
                     <div class="error-message" id="last-name-error">Last name is required</div>
                 </div>
                 
@@ -778,23 +827,23 @@
             </form>
         </section>
         
-        <!-- Instructions Section -->
         <section id="instructions-section" class="section">
-            <h2>Examination Instructions</h2>
+            <h2>Test Instructions</h2>
             
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This examination consists of 40 multiple-choice questions covering Digital Technology topics.</li>
-                    <li>You have 40 minutes to complete this examination.</li>
+                    <li>This Mid Term Test consists of <strong>40 multiple-choice objective questions</strong> covering Word Processing, Spreadsheets, and Shortcut Keys.</li>
+                    <li>You have <strong>40 minutes</strong> to complete this test.</li>
                     <li>Answer all questions to the best of your ability.</li>
-                    <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
-                    <li>Answered questions will be marked with green in the question grid.</li>
-                    <li>Once you submit your answers, you cannot change them.</li>
-                    <li>Ensure you have a stable internet connection throughout the examination.</li>
+                    <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
+                    <li>You can also use <strong>keyboard shortcuts</strong>: Arrow keys to navigate, A/B/C/D keys to select answers.</li>
+                    <li>Answered questions will be marked with <strong>orange</strong> in the question grid.</li>
+                    <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
+                    <li>Ensure you have a stable internet connection throughout the test.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li>Demonstrate your understanding of digital concepts, number systems, hardware, and software.</li>
+                    <li><strong>Do not refresh the page</strong> during the test, or you may lose your progress.</li>
                 </ul>
             </div>
             
@@ -804,39 +853,41 @@
             </div>
         </section>
         
-        <!-- Exam Interface Section -->
         <section id="exam-section" class="section">
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
+                <div class="topic-badge" id="topic-badge">Topic: Spreadsheet Basics</div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">Progress: 0/40 answered</div>
                 <div class="exam-controls">
                     <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">40:00</span>
+                        ⏱ Time Left: <span id="timer">40:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Test</button>
                     </div>
                 </div>
             </div>
             
             <div class="exam-content">
                 <div class="question-text" id="question-text"></div>
-                
-                <div class="options-container" id="options-container">
-                    <!-- Options will be populated by JavaScript -->
-                </div>
+                <div class="options-container" id="options-container"></div>
             </div>
             
-            <!-- Question navigation grid after question content -->
+            <div class="keyboard-hint">
+                💡 Keyboard shortcuts: <kbd>←</kbd> <kbd>→</kbd> Navigate | <kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd> Select answer
+            </div>
+            
             <div class="question-navigation">
                 <h3>Question Navigation</h3>
-                <div class="question-grid" id="question-grid">
-                    <!-- Question numbers will be populated by JavaScript -->
-                </div>
+                <div class="question-grid" id="question-grid"></div>
                 
                 <div class="navigation-buttons">
-                    <button type="button" id="prev-question" class="btn btn-secondary">Previous</button>
-                    <button type="button" id="next-question" class="btn">Next</button>
+                    <button type="button" id="prev-question" class="btn btn-secondary">← Previous</button>
+                    <button type="button" id="next-question" class="btn">Next →</button>
                 </div>
             </div>
             
@@ -846,23 +897,23 @@
             </div>
         </section>
         
-        <!-- Results Section - NO SCORE DISPLAY -->
         <section id="results-section" class="section">
             <div class="results-container">
-                <h2>Examination Completed</h2>
+                <h2>Test Completed</h2>
+                <div class="completion-icon">✅</div>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SS1 Digital Technology - Fundamentals</div>
+                <div class="subject" id="results-subject">SS1 Digital Technology - Third Term Mid Term Test 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the Digital Technology examination. Your results have been submitted successfully to the examination board.
+                    Thank you for completing the Digital Technology Mid Term Test. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    Your examination has been successfully submitted. Results will be communicated through appropriate channels.
+                    ✅ Your test has been successfully submitted.
                 </div>
                 
                 <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn">Take Another Exam</button>
+                    <button type="button" id="restart-exam" class="btn">Take Another Test</button>
                     <div class="back-home">
                         <a href="../index.html" class="btn btn-secondary">Back to Home</a>
                     </div>
@@ -872,226 +923,268 @@
     </div>
 
     <script>
-        // SUBJECT: SS1 DIGITAL TECHNOLOGY - Fundamentals
         const originalQuestions = [
+            // SECTION A: SPREADSHEET BASICS (Q1, 3, 5, 9, 10, 13, 15, 17, 21, 23, 27)
             {
-                question: "Digital technology refers to the use of ______ signals.",
-                options: ["Analog", "Electrical", "Digital", "Mechanical"],
-                answer: "C"
+                question: "Which of the following is a valid cell address?",
+                options: ["B4", "4B", "BB", "44"],
+                answer: "A",
+                section: "Spreadsheet Basics"
             },
             {
-                question: "The earliest calculating device is the ______",
-                options: ["Computer", "Abacus", "Calculator", "Typewriter"],
-                answer: "B"
+                question: "The entire spreadsheet file is called a ________.",
+                options: ["Worksheet", "Workbook", "Cell", "Column"],
+                answer: "B",
+                section: "Spreadsheet Basics"
             },
             {
-                question: "The first generation of computers used ______",
-                options: ["Transistors", "Vacuum tubes", "IC", "AI"],
-                answer: "B"
+                question: "Rows in a spreadsheet are identified by ________.",
+                options: ["Letters", "Numbers", "Colours", "Symbols"],
+                answer: "B",
+                section: "Spreadsheet Basics"
             },
             {
-                question: "Binary number system uses base ______",
-                options: ["2", "8", "10", "16"],
-                answer: "A"
+                question: "Which of the following is NOT a word processor?",
+                options: ["Microsoft Word", "Google Docs", "Paint", "LibreOffice Writer"],
+                answer: "C",
+                section: "Word Processing"
             },
             {
-                question: "Decimal number system uses base ______",
-                options: ["2", "10", "8", "16"],
-                answer: "B"
+                question: "The Formula Bar is used to ________.",
+                options: ["Delete rows", "Save files", "View and edit cell contents", "Print worksheets"],
+                answer: "C",
+                section: "Spreadsheet Basics"
             },
             {
-                question: "Octal number system uses base ______",
-                options: ["2", "8", "10", "16"],
-                answer: "B"
+                question: "The currently selected cell is known as the ________.",
+                options: ["Active Cell", "Formula Cell", "Current Sheet", "Reference Cell"],
+                answer: "A",
+                section: "Spreadsheet Basics"
             },
             {
-                question: "Hexadecimal uses base ______",
-                options: ["2", "8", "16", "10"],
-                answer: "C"
+                question: "Columns in a spreadsheet are identified by ________.",
+                options: ["Numbers", "Codes", "Symbols", "Letters"],
+                answer: "D",
+                section: "Spreadsheet Basics"
             },
             {
-                question: "Keyboard is an ______ device",
-                options: ["Input", "Output", "Storage", "Processing"],
-                answer: "A"
+                question: "The intersection of a row and a column is called a ________.",
+                options: ["Workbook", "Sheet", "Formula", "Cell"],
+                answer: "D",
+                section: "Spreadsheet Basics"
             },
             {
-                question: "Monitor is an ______ device",
-                options: ["Input", "Output", "Storage", "System"],
-                answer: "B"
+                question: "Which type of cell reference changes automatically when copied?",
+                options: ["Absolute Reference", "Relative Reference", "Locked Reference", "Fixed Reference"],
+                answer: "B",
+                section: "Spreadsheet Basics"
             },
             {
-                question: "CPU means ______",
-                options: ["Central Processing Unit", "Computer Personal Unit", "Control Program Unit", "Central Power Unit"],
-                answer: "A"
+                question: "A single page or tab within a workbook is known as a ________.",
+                options: ["Row", "Worksheet", "Formula Bar", "Cell Address"],
+                answer: "B",
+                section: "Spreadsheet Basics"
             },
             {
-                question: "Hardware refers to ______",
-                options: ["Physical parts of computer", "Programs", "Files", "Data"],
-                answer: "A"
+                question: "In a spreadsheet, all formulas must begin with ________.",
+                options: ["#", "+", "=", "@"],
+                answer: "C",
+                section: "Spreadsheet Basics"
+            },
+            
+            // SECTION B: WORD PROCESSING (Q2, 4, 7, 8, 12, 22, 24, 26, 28, 29, 31, 32, 33, 34, 37, 38, 40)
+            {
+                question: "Word processing is the use of a computer to ________ documents.",
+                options: ["Destroy", "Create and edit", "Scan", "Draw"],
+                answer: "B",
+                section: "Word Processing"
             },
             {
-                question: "Software refers to ______",
-                options: ["Programs", "Monitor", "Keyboard", "Mouse"],
-                answer: "A"
+                question: "The area where text is entered in a word processor is called the ________.",
+                options: ["Workspace", "Document Area", "Toolbar", "Status Bar"],
+                answer: "B",
+                section: "Word Processing"
             },
             {
-                question: "Example of system software is ______",
-                options: ["Windows", "Word", "Excel", "Paint"],
-                answer: "A"
+                question: "Which feature allows the same letter to be sent to many people with different names?",
+                options: ["Mail Merge", "Word Count", "Clipboard", "Find"],
+                answer: "A",
+                section: "Word Processing"
             },
             {
-                question: "Example of application software is ______",
-                options: ["MS Word", "Linux", "DOS", "BIOS"],
-                answer: "A"
+                question: "The blinking vertical line on the screen is known as the ________.",
+                options: ["Pointer", "Cursor", "Icon", "Arrow"],
+                answer: "B",
+                section: "Word Processing"
             },
             {
-                question: "Utility program is used for ______",
-                options: ["Maintenance", "Playing music", "Typing", "Drawing"],
-                answer: "A"
+                question: "Which menu is used to create a new document?",
+                options: ["File", "Insert", "Review", "View"],
+                answer: "A",
+                section: "Word Processing"
             },
             {
-                question: "Operating system controls ______",
-                options: ["Hardware and software", "Only keyboard", "Only monitor", "Only mouse"],
-                answer: "A"
+                question: "Which tab is used to insert tables into a document?",
+                options: ["Home", "Insert", "Review", "View"],
+                answer: "B",
+                section: "Word Processing"
             },
             {
-                question: "Example of operating system",
-                options: ["Windows", "Word", "Excel", "PowerPoint"],
-                answer: "A"
+                question: "A collection of related pages in a word processor is called a ________.",
+                options: ["Workbook", "Spreadsheet", "Document", "Database"],
+                answer: "C",
+                section: "Word Processing"
             },
             {
-                question: "Preventive maintenance means ______",
-                options: ["Taking care before damage", "Repair", "Breaking", "Throwing away"],
-                answer: "A"
+                question: "The command used to view a document before printing is ________.",
+                options: ["Print Preview", "Save As", "Open", "Replace"],
+                answer: "A",
+                section: "Word Processing"
             },
             {
-                question: "One byte equals ______ bits",
-                options: ["2", "4", "8", "16"],
-                answer: "C"
+                question: "Which of these is NOT part of a word processing window?",
+                options: ["Title Bar", "Status Bar", "Formula Bar", "Ribbon"],
+                answer: "C",
+                section: "Word Processing"
             },
             {
-                question: "Smallest unit of data is ______",
-                options: ["Bit", "Byte", "KB", "MB"],
-                answer: "A"
+                question: "Which feature allows users to correct typing mistakes automatically?",
+                options: ["Save", "Print", "Exit", "Spell Check"],
+                answer: "D",
+                section: "Word Processing"
             },
             {
-                question: "ASCII is used for ______",
-                options: ["Character coding", "Sound", "Video", "Hardware"],
-                answer: "A"
+                question: "Changing the appearance of text is known as ________.",
+                options: ["Formatting", "Saving", "Editing", "Printing"],
+                answer: "A",
+                section: "Word Processing"
             },
             {
-                question: "Unicode is used to represent ______",
-                options: ["Text", "Food", "Machine", "Printer"],
-                answer: "A"
+                question: "The feature used to find specific words in a document is ________.",
+                options: ["Replace", "Find", "Paste", "Cut"],
+                answer: "B",
+                section: "Word Processing"
             },
             {
-                question: "Mouse is a ______ device",
-                options: ["Input", "Output", "Storage", "Power"],
-                answer: "A"
+                question: "A document prepared with a word processor can be ________.",
+                options: ["Saved", "Edited", "Printed", "All of the above"],
+                answer: "D",
+                section: "Word Processing"
             },
             {
-                question: "Printer is an ______ device",
-                options: ["Output", "Input", "Storage", "Memory"],
-                answer: "A"
+                question: "Which command can be used to change one word to another throughout a document?",
+                options: ["Replace", "Save", "Copy", "Undo"],
+                answer: "A",
+                section: "Word Processing"
             },
             {
-                question: "RAM is a ______",
-                options: ["Memory", "Input", "Output", "Software"],
-                answer: "A"
+                question: "A word processor is mainly used for ________.",
+                options: ["Playing games", "Creating documents", "Watching movies", "Browsing only"],
+                answer: "B",
+                section: "Word Processing"
             },
             {
-                question: "ROM means ______",
-                options: ["Read Only Memory", "Run Only Memory", "Random Only Memory", "Read Open Memory"],
-                answer: "A"
+                question: "The Ribbon in Microsoft Word contains ________.",
+                options: ["Commands and tools", "Documents", "Folders", "Drives"],
+                answer: "A",
+                section: "Word Processing"
             },
             {
-                question: "Hard disk is a ______ device",
-                options: ["Storage", "Input", "Output", "Control"],
-                answer: "A"
+                question: "The default alignment of text in a new Microsoft Word document is ________.",
+                options: ["Center", "Right", "Justify", "Left"],
+                answer: "D",
+                section: "Word Processing"
+            },
+            
+            // SECTION C: SHORTCUT KEYS & COMMANDS (Q6, 11, 14, 16, 18, 19, 20, 25, 30, 35, 36, 39)
+            {
+                question: "Which key is used to move the cursor to a new line?",
+                options: ["Shift", "Enter", "Tab", "Alt"],
+                answer: "B",
+                section: "Shortcut Keys & Commands"
             },
             {
-                question: "AI means ______",
-                options: ["Artificial Intelligence", "Automatic Input", "Active Internet", "Artificial Input"],
-                answer: "A"
+                question: "The keyboard shortcut for copying selected text is ________.",
+                options: ["Ctrl + X", "Ctrl + V", "Ctrl + C", "Ctrl + P"],
+                answer: "C",
+                section: "Shortcut Keys & Commands"
             },
             {
-                question: "Computer maintenance helps to ______",
-                options: ["Increase life span", "Destroy system", "Slow computer", "Stop work"],
-                answer: "A"
+                question: "The shortcut key for selecting all text in a document is ________.",
+                options: ["Ctrl + S", "Ctrl + A", "Ctrl + P", "Ctrl + N"],
+                answer: "B",
+                section: "Shortcut Keys & Commands"
             },
             {
-                question: "System unit is part of ______",
-                options: ["Hardware", "Software", "Data", "Program"],
-                answer: "A"
+                question: "Which of the following is used to underline text?",
+                options: ["Ctrl + B", "Ctrl + U", "Ctrl + I", "Ctrl + P"],
+                answer: "B",
+                section: "Shortcut Keys & Commands"
             },
             {
-                question: "Windows, Linux, Android are ______",
-                options: ["Operating systems", "Games", "Devices", "Hardware"],
-                answer: "A"
+                question: "The shortcut key for making text bold is ________.",
+                options: ["Ctrl + B", "Ctrl + U", "Ctrl + I", "Ctrl + N"],
+                answer: "A",
+                section: "Shortcut Keys & Commands"
             },
             {
-                question: "Input devices send data to ______",
-                options: ["Computer", "Printer", "Speaker", "Paper"],
-                answer: "A"
+                question: "Which command is used to send a document to a printer?",
+                options: ["Save", "Open", "Print", "Copy"],
+                answer: "C",
+                section: "Shortcut Keys & Commands"
             },
             {
-                question: "Output devices show ______",
-                options: ["Result", "Input", "Program", "Virus"],
-                answer: "A"
+                question: "The shortcut key for italicizing text is ________.",
+                options: ["Ctrl + P", "Ctrl + A", "Ctrl + I", "Ctrl + S"],
+                answer: "C",
+                section: "Shortcut Keys & Commands"
             },
             {
-                question: "Conversion from decimal to binary is called ______",
-                options: ["Number conversion", "Coding", "Typing", "Printing"],
-                answer: "A"
+                question: "The shortcut for printing a document is ________.",
+                options: ["Ctrl + P", "Ctrl + C", "Ctrl + N", "Ctrl + V"],
+                answer: "A",
+                section: "Shortcut Keys & Commands"
             },
             {
-                question: "UPS protects computer from ______",
-                options: ["Power failure", "Dust", "Water", "Virus"],
-                answer: "A"
+                question: "The 'Save As' command is used to ________.",
+                options: ["Print a document", "Open a document", "Save a document with a new name", "Delete a document"],
+                answer: "C",
+                section: "Shortcut Keys & Commands"
             },
             {
-                question: "Antivirus is a ______",
-                options: ["Utility software", "Hardware", "Input", "Output"],
-                answer: "A"
+                question: "Which toolbar contains font size and font style commands?",
+                options: ["Review", "View", "Home", "Help"],
+                answer: "C",
+                section: "Shortcut Keys & Commands"
             },
             {
-                question: "Scanner is ______ device",
-                options: ["Input", "Output", "Storage", "Memory"],
-                answer: "A"
+                question: "Which of the following is an output device commonly used with word processing?",
+                options: ["Scanner", "Keyboard", "Printer", "Mouse"],
+                answer: "C",
+                section: "Shortcut Keys & Commands"
             },
             {
-                question: "Speaker is ______ device",
-                options: ["Output", "Input", "Storage", "Memory"],
-                answer: "A"
-            },
-            {
-                question: "Digital technology is important in ______ society",
-                options: ["Modern", "Old", "Local", "Ancient"],
-                answer: "A"
-            },
-            {
-                question: "Data representation includes ______",
-                options: ["Bits and bytes", "Keyboard", "Monitor", "Mouse"],
-                answer: "A"
+                question: "The shortcut for saving a document is ________.",
+                options: ["Ctrl + A", "Ctrl + O", "Ctrl + P", "Ctrl + S"],
+                answer: "D",
+                section: "Shortcut Keys & Commands"
             }
         ];
 
-        // Application state
         let currentQuestionIndex = 0;
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 40 * 60; // 40 minutes in seconds
+        let timeLeft = 40 * 60;
         let questions = [];
+        let examStarted = false;
 
-        // Background images for rotation (digital/tech theme)
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2068&q=80'
+            'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1537498425277-c283d32ef9db?ixlib=rb-4.0.3&auto=format&fit=crop&w=2078&q=80',
+            'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
         ];
 
-        // DOM elements
         const sections = {
             welcome: document.getElementById('welcome-section'),
             studentInfo: document.getElementById('student-info-section'),
@@ -1100,39 +1193,29 @@
             results: document.getElementById('results-section')
         };
 
-        // Initialize background rotation
         let currentBgIndex = 0;
         function rotateBackground() {
             currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
             document.body.style.backgroundImage = `url('${backgroundImages[currentBgIndex]}')`;
         }
-        
-        // Rotate background every 10 seconds
         setInterval(rotateBackground, 10000);
 
-        // Shuffle questions array
         function shuffleQuestions() {
-            // Create a copy of the original questions
             questions = [...originalQuestions];
-            
-            // Shuffle the questions using Fisher-Yates algorithm
             for (let i = questions.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [questions[i], questions[j]] = [questions[j], questions[i]];
             }
-            
-            // Initialize userAnswers array with null values
             userAnswers = Array(questions.length).fill(null);
         }
 
-        // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 40 * 60; // Reset to 40 minutes
+            timeLeft = 40 * 60;
             
-            // Show timer container and submit button
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
+            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #2980b9 0%, #2471a3 100%)';
             
             timerInterval = setInterval(() => {
                 timeLeft--;
@@ -1145,40 +1228,75 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    alert("Time's up! Your exam will be submitted automatically.");
-                    calculateScore();
-                }
-                
-                // Warning colors
-                if (timeLeft <= 600) { // 10 minutes left
+                    alert("Time's up! Your test will be submitted automatically.");
+                    calculateScoreAndSubmit();
+                } else if (timeLeft <= 300) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
-                } else if (timeLeft <= 1200) { // 20 minutes left
-                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
+                } else if (timeLeft <= 600) {
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e67e22 0%, #d35400 100%)';
                 }
             }, 1000);
         }
 
-        // Navigation functions
+        document.addEventListener('visibilitychange', () => {
+            if (!examStarted) return;
+            
+            if (document.hidden) {
+                clearInterval(timerInterval);
+            } else {
+                if (document.getElementById('exam-section').classList.contains('active') && timeLeft > 0) {
+                    timerInterval = setInterval(() => {
+                        timeLeft--;
+                        const minutes = Math.floor(timeLeft / 60);
+                        const seconds = timeLeft % 60;
+                        document.getElementById('timer').textContent = 
+                            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                        
+                        if (timeLeft <= 0) {
+                            clearInterval(timerInterval);
+                            alert("Time's up! Your test will be submitted automatically.");
+                            calculateScoreAndSubmit();
+                        }
+                    }, 1000);
+                }
+            }
+        });
+
+        window.addEventListener('beforeunload', (e) => {
+            if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
+                e.preventDefault();
+                e.returnValue = 'You have an ongoing test. Are you sure you want to leave? Your progress may be lost.';
+                return e.returnValue;
+            }
+        });
+
         function showSection(sectionName) {
-            // Hide all sections
             Object.values(sections).forEach(section => {
                 section.classList.remove('active');
             });
-            
-            // Show the requested section
             sections[sectionName].classList.add('active');
             
-            // Hide timer and submit button if not in exam section
             if (sectionName !== 'exam') {
                 document.getElementById('timer-container').style.display = 'none';
                 document.getElementById('submit-container').style.display = 'none';
             }
-            
-            // Scroll to top
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Initialize event listeners
+        function updateProgress() {
+            const answeredCount = userAnswers.filter(answer => answer !== null).length;
+            const percentage = (answeredCount / questions.length) * 100;
+            
+            document.getElementById('progress-bar').style.width = percentage + '%';
+            document.getElementById('progress-text').textContent = 
+                `Progress: ${answeredCount}/${questions.length} answered`;
+        }
+
+        function updateTopicBadge(index) {
+            const section = questions[index].section;
+            document.getElementById('topic-badge').textContent = `Topic: ${section}`;
+        }
+
         document.getElementById('start-exam-btn').addEventListener('click', () => {
             showSection('studentInfo');
         });
@@ -1188,7 +1306,6 @@
         });
 
         document.getElementById('continue-to-instructions').addEventListener('click', () => {
-            // Validate form
             const firstName = document.getElementById('first-name').value.trim();
             const middleName = document.getElementById('middle-name').value.trim();
             const lastName = document.getElementById('last-name').value.trim();
@@ -1197,23 +1314,29 @@
             
             if (!firstName) {
                 document.getElementById('first-name-error').style.display = 'block';
+                document.getElementById('first-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('first-name-error').style.display = 'none';
+                document.getElementById('first-name').style.borderColor = '#5d7e9e';
             }
             
             if (!middleName) {
                 document.getElementById('middle-name-error').style.display = 'block';
+                document.getElementById('middle-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('middle-name-error').style.display = 'none';
+                document.getElementById('middle-name').style.borderColor = '#5d7e9e';
             }
             
             if (!lastName) {
                 document.getElementById('last-name-error').style.display = 'block';
+                document.getElementById('last-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('last-name-error').style.display = 'none';
+                document.getElementById('last-name').style.borderColor = '#5d7e9e';
             }
             
             if (isValid) {
@@ -1227,23 +1350,18 @@
         });
 
         document.getElementById('begin-test').addEventListener('click', () => {
-            // Initialize exam with shuffled questions
             shuffleQuestions();
             currentQuestionIndex = 0;
+            examStarted = true;
             
-            // Display student name
             document.getElementById('display-student-name').textContent = studentName;
             document.getElementById('results-student-name').textContent = studentName;
             
-            // Create question navigation grid
             createQuestionGrid();
-            
-            // Load first question
             loadQuestion(currentQuestionIndex);
-            
-            // Start timer
             startTimer();
-            
+            updateProgress();
+            updateTopicBadge(currentQuestionIndex);
             showSection('exam');
         });
 
@@ -1261,36 +1379,72 @@
             }
         });
 
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('exam-section').classList.contains('active')) return;
+            if (e.target.tagName === 'INPUT' && e.target.type === 'text') return;
+            
+            if (e.key === 'ArrowLeft' && currentQuestionIndex > 0) {
+                e.preventDefault();
+                currentQuestionIndex--;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'ArrowRight' && currentQuestionIndex < questions.length - 1) {
+                e.preventDefault();
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'A' || e.key === 'a' || e.key === '1') {
+                e.preventDefault();
+                selectOptionByKey(0);
+            } else if (e.key === 'B' || e.key === 'b' || e.key === '2') {
+                e.preventDefault();
+                selectOptionByKey(1);
+            } else if (e.key === 'C' || e.key === 'c' || e.key === '3') {
+                e.preventDefault();
+                selectOptionByKey(2);
+            } else if (e.key === 'D' || e.key === 'd' || e.key === '4') {
+                e.preventDefault();
+                selectOptionByKey(3);
+            }
+        });
+
+        function selectOptionByKey(optionIndex) {
+            const radioButtons = document.querySelectorAll(`input[name="question-${currentQuestionIndex}"]`);
+            if (radioButtons[optionIndex]) {
+                radioButtons[optionIndex].checked = true;
+                userAnswers[currentQuestionIndex] = String.fromCharCode(65 + optionIndex);
+                updateQuestionGrid();
+                updateProgress();
+            }
+        }
+
         document.getElementById('submit-exam').addEventListener('click', () => {
-            const confirmed = confirm("Are you sure you want to submit? You will not be able to change your answers after this.");
+            const unanswered = userAnswers.filter(a => a === null).length;
+            let confirmMessage = "Are you sure you want to submit? You will not be able to change your answers after this.";
+            
+            if (unanswered > 0) {
+                confirmMessage += `\n\n⚠️ Warning: You have ${unanswered} unanswered question(s).`;
+            }
+            
+            const confirmed = confirm(confirmMessage);
             
             if (confirmed) {
                 clearInterval(timerInterval);
-                showLoading();
+                examStarted = false;
+                document.getElementById('loading').style.display = 'block';
                 setTimeout(() => {
-                    calculateScore();
+                    calculateScoreAndSubmit();
                 }, 1500);
             }
         });
 
         document.getElementById('restart-exam').addEventListener('click', () => {
             clearInterval(timerInterval);
-            // Reset form
+            examStarted = false;
             document.getElementById('first-name').value = '';
             document.getElementById('middle-name').value = '';
             document.getElementById('last-name').value = '';
             showSection('welcome');
         });
 
-        function showLoading() {
-            document.getElementById('loading').style.display = 'block';
-        }
-
-        function hideLoading() {
-            document.getElementById('loading').style.display = 'none';
-        }
-
-        // Create question navigation grid
         function createQuestionGrid() {
             const questionGrid = document.getElementById('question-grid');
             questionGrid.innerHTML = '';
@@ -1300,13 +1454,12 @@
                 questionNumber.className = 'question-number';
                 questionNumber.textContent = i + 1;
                 questionNumber.dataset.index = i;
+                questionNumber.title = `Question ${i + 1} - ${questions[i].section}`;
                 
-                // Mark if answered
                 if (userAnswers[i] !== null) {
                     questionNumber.classList.add('answered');
                 }
                 
-                // Mark current question
                 if (i === currentQuestionIndex) {
                     questionNumber.classList.add('current');
                 }
@@ -1320,7 +1473,6 @@
             }
         }
 
-        // Update question navigation grid
         function updateQuestionGrid() {
             const questionNumbers = document.querySelectorAll('.question-number');
             
@@ -1338,21 +1490,19 @@
             });
         }
 
-        // Exam functionality
         function loadQuestion(index) {
             const question = questions[index];
             
-            // Update question counter
             document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
-            
-            // Set question text
             document.getElementById('question-text').textContent = question.question;
             
-            // Clear options container
+            updateTopicBadge(index);
+            
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
             
-            // Create option elements
+            const labels = ['A', 'B', 'C', 'D'];
+            
             question.options.forEach((option, optionIndex) => {
                 const optionDiv = document.createElement('div');
                 optionDiv.className = 'option';
@@ -1363,9 +1513,8 @@
                 radio.type = 'radio';
                 radio.name = `question-${index}`;
                 radio.id = optionId;
-                radio.value = String.fromCharCode(65 + optionIndex); // A, B, C, D
+                radio.value = labels[optionIndex];
                 
-                // Check if this option was previously selected
                 if (userAnswers[index] === radio.value) {
                     radio.checked = true;
                 }
@@ -1373,28 +1522,43 @@
                 radio.addEventListener('change', () => {
                     userAnswers[index] = radio.value;
                     updateQuestionGrid();
+                    updateProgress();
                 });
                 
                 const label = document.createElement('label');
                 label.htmlFor = optionId;
-                label.textContent = `${String.fromCharCode(65 + optionIndex)}. ${option}`;
+                // Display shortcut key combos in monospace
+                let displayOption = option;
+                if (option.includes('Ctrl')) {
+                    displayOption = `<span class="key-combo">${option}</span>`;
+                }
+                label.innerHTML = `${labels[optionIndex]}. ${displayOption}`;
+                
+                optionDiv.addEventListener('click', (e) => {
+                    if (e.target !== radio) {
+                        radio.checked = true;
+                        userAnswers[index] = radio.value;
+                        updateQuestionGrid();
+                        updateProgress();
+                    }
+                });
                 
                 optionDiv.appendChild(radio);
                 optionDiv.appendChild(label);
-                
                 optionsContainer.appendChild(optionDiv);
             });
             
-            // Update navigation buttons
             document.getElementById('prev-question').disabled = index === 0;
             document.getElementById('next-question').disabled = index === questions.length - 1;
             
-            // Update question grid
             updateQuestionGrid();
+            updateProgress();
+            
+            document.querySelector('.exam-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        function calculateScore() {
-            hideLoading();
+        function calculateScoreAndSubmit() {
+            document.getElementById('loading').style.display = 'none';
             let score = 0;
             
             for (let i = 0; i < questions.length; i++) {
@@ -1403,39 +1567,29 @@
                 }
             }
             
-            // Submit to Google Form WITHOUT showing score to student
-            submitToGoogleForm(studentName, "SS1 Digital Technology - Fundamentals", `${score}/${questions.length}`);
+            // Submit score to Google Form ONLY - do NOT display to student
+            submitToGoogleForm(studentName, "SS1 Digital Technology - Third Term Mid Term Test 2025/2026", `${score}/40`);
             
-            // Show submission status
             document.getElementById('submission-status').style.display = 'block';
-            
             showSection('results');
         }
 
-        // Google Form submission function
         function submitToGoogleForm(fullName, subject, score) {
             const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
             const formData = new FormData();
             formData.append("entry.862885683", fullName);
-            formData.append("entry.1545021484", "SS1");
+            formData.append("entry.1545021484", "SSS1");
             formData.append("entry.1558221900", subject);
             formData.append("entry.2022160530", score);
 
-            // Use no-cors so browser will not block cross-origin form POST
             fetch(formURL, {
                 method: "POST",
                 mode: "no-cors",
                 body: formData
-            }).then(() => {
-                console.log("Results submitted successfully");
-            }).catch(err => {
-                console.warn("Form submission (no-cors) likely blocked for debug; data still sent.");
-            });
+            }).catch(err => console.warn("Form submission:", err));
         }
 
-        // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
-            // Focus on first input
             document.getElementById('first-name').focus();
         });
     </script>
