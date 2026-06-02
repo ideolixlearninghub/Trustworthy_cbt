@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Citizenship & Heritage Studies CBT Exam</title>
+    <title>The Trustworthy College - Citizenship Education SSS1 Test</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
     <style>
-        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -14,14 +14,13 @@
         }
         
         body {
-            background-color: #0a1a0f;
-            color: #f5e9dd;
+            background-color: #0a1a2a;
+            color: #e0eaf0;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
         }
         
-        /* Dimmed background overlay with national/heritage theme */
         body::before {
             content: '';
             position: fixed;
@@ -29,50 +28,64 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1590161161460-ab0e8f4fbaa1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1529101091764-c3526daf38fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.15;
+            opacity: 0.10;
             z-index: -1;
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container with national colors theme (green/white/green) */
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #0a3a0a 0%, #1a4a1a 100%);
-            box-shadow: 0 15px 40px rgba(0, 100, 0, 0.25);
+            background: linear-gradient(135deg, #0a1a2a 0%, #1a2a4a 100%);
+            box-shadow: 0 15px 40px rgba(46, 134, 193, 0.25);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #ffffff;
+            border: 3px solid #2e86c1;
             backdrop-filter: blur(5px);
         }
         
-        /* Nigerian flag colors decorative border */
         .container::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 8px;
-            background: linear-gradient(90deg, #008753 0%, #008753 33%, #ffffff 33%, #ffffff 66%, #008753 66%, #008753 100%);
+            height: 5px;
+            background: linear-gradient(90deg, #1b6ca8, #2e86c1, #1b6ca8);
             z-index: 2;
         }
         
-        /* Header with national theme */
+        .container::after {
+            content: '🌐';
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 2.5rem;
+            opacity: 0.06;
+            z-index: 0;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+        }
+        
         .header {
             text-align: center;
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #ffffff;
+            border-bottom: 2px solid #2e86c1;
+            z-index: 1;
         }
         
         .header::after {
@@ -83,7 +96,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #ffffff, transparent);
+            background: linear-gradient(to right, transparent, #2e86c1, transparent);
         }
         
         .logo {
@@ -92,7 +105,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #ffffff;
+            border: 3px solid #2e86c1;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -103,35 +116,36 @@
         }
         
         .subject-title {
-            color: #ffffff;
-            font-size: 2.4rem;
+            color: #85c1e9;
+            font-size: 2.2rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
             letter-spacing: 1px;
         }
         
-        .nigerian-flag-text {
-            display: inline-block;
-            padding: 5px 15px;
-            background: linear-gradient(90deg, #008753 0%, #008753 33%, #ffffff 33%, #ffffff 66%, #008753 66%, #008753 100%);
-            color: #000;
-            font-weight: bold;
-            border-radius: 30px;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-        }
-        
         .exam-info {
-            color: #e0e0e0;
+            color: #a3c6e4;
             font-size: 1.1rem;
             margin-top: 5px;
         }
         
-        /* Sections */
+        .term-info {
+            background: linear-gradient(135deg, #2e86c120, #1b6ca840);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #85c1e9;
+            border: 1px solid #2e86c160;
+        }
+        
         .section {
             display: none;
             padding: 25px;
             animation: fadeIn 0.5s ease;
+            position: relative;
+            z-index: 1;
         }
         
         @keyframes fadeIn {
@@ -143,38 +157,36 @@
             display: block;
         }
         
-        /* Welcome message with national theme */
         .welcome-message {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 135, 83, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(46, 134, 193, 0.1) 0%, rgba(26, 42, 74, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #f5e9dd;
-            border-left: 5px solid #ffffff;
-            border-right: 1px solid rgba(255, 255, 255, 0.3);
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            color: #e0eaf0;
+            border-left: 5px solid #2e86c1;
+            border-right: 1px solid rgba(46, 134, 193, 0.3);
+            border-top: 1px solid rgba(46, 134, 193, 0.2);
+            border-bottom: 1px solid rgba(46, 134, 193, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
         }
         
         .welcome-message::before {
-            content: '🇳🇬';
+            content: '🕊️';
             position: absolute;
             top: 20px;
             right: 20px;
             font-size: 3rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
-        /* Buttons with national colors */
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #008753 0%, #006b3c 100%);
+            background: linear-gradient(135deg, #1b6ca8 0%, #154e7a 100%);
             color: #ffffff;
             border: none;
             padding: 15px 32px;
@@ -185,8 +197,8 @@
             margin: 12px 8px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 6px 15px rgba(0, 135, 83, 0.3);
+            border: 2px solid rgba(27, 108, 168, 0.5);
+            box-shadow: 0 6px 15px rgba(46, 134, 193, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -203,50 +215,31 @@
             transition: all 0.5s;
         }
         
-        .btn:hover {
-            background: linear-gradient(135deg, #00a86b 0%, #008753 100%);
+        .btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #2e86c1 0%, #1b6ca8 100%);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(0, 135, 83, 0.5);
+            box-shadow: 0 10px 25px rgba(46, 134, 193, 0.5);
             color: #ffffff;
         }
         
-        .btn:hover::after {
-            left: 100%;
-        }
-        
-        .btn:focus {
-            outline: 2px solid #ffffff;
-            outline-offset: 3px;
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
         }
         
         .btn-secondary {
-            background: linear-gradient(135deg, #5d6d7e 0%, #4a5f6e 100%);
-            color: #f5e9dd;
-            border-color: #7f8c8d;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            border-color: #5d7e9e;
         }
         
-        .btn-secondary:hover {
-            background: linear-gradient(135deg, #7f8c8d 0%, #5d6d7e 100%);
+        .btn-secondary:hover:not(:disabled) {
+            background: linear-gradient(135deg, #3d566e 0%, #2c3e50 100%);
         }
         
         .btn-success {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            color: white;
-            border-color: #229954;
-        }
-        
-        .btn-success:hover {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
-        }
-        
-        .btn-danger {
-            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
-            color: white;
-            border-color: #922b21;
-        }
-        
-        .btn-danger:hover {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            border-color: #d35400;
         }
         
         .btn-container {
@@ -254,7 +247,6 @@
             margin-top: 35px;
         }
         
-        /* Form elements */
         .form-group {
             margin-bottom: 28px;
         }
@@ -263,7 +255,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #ffffff;
+            color: #85c1e9;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -271,20 +263,20 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(10, 58, 10, 0.7);
-            border: 2px solid #5d7e5d;
+            background: rgba(10, 26, 42, 0.7);
+            border: 2px solid #5d7e9e;
             border-radius: 10px;
             font-size: 1.1rem;
-            color: #f5e9dd;
+            color: #e0eaf0;
             transition: all 0.3s;
             font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #ffffff;
+            border-color: #2e86c1;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
-            background: rgba(10, 58, 10, 0.9);
+            box-shadow: 0 0 0 3px rgba(46, 134, 193, 0.3);
+            background: rgba(10, 26, 42, 0.9);
         }
         
         .error-message {
@@ -295,30 +287,29 @@
             font-weight: 500;
         }
         
-        /* Instructions with national theme */
         .instructions {
-            background: linear-gradient(135deg, rgba(93, 126, 93, 0.1) 0%, rgba(26, 74, 26, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(46, 134, 193, 0.08) 0%, rgba(26, 42, 74, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 5px solid #2e86c1;
+            border: 1px solid rgba(46, 134, 193, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
         
         .instructions::before {
-            content: '🏛️';
+            content: '📋';
             position: absolute;
             top: 20px;
             right: 20px;
             font-size: 2.5rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #ffffff;
+            color: #2e86c1;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -331,7 +322,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #ffffff;
+            background: #2e86c1;
             border-radius: 2px;
         }
         
@@ -348,30 +339,29 @@
         
         .instructions li::before {
             content: '•';
-            color: #ffffff;
+            color: #2e86c1;
             font-size: 1.5rem;
             position: absolute;
             left: -20px;
             top: -5px;
         }
         
-        /* Exam interface */
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 2px solid rgba(46, 134, 193, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #ffffff;
+            color: #85c1e9;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(0, 135, 83, 0.2) 0%, rgba(93, 126, 93, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(46, 134, 193, 0.1) 0%, rgba(27, 108, 168, 0.15) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(46, 134, 193, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -382,32 +372,33 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(10, 58, 10, 0.5);
+            background: rgba(10, 26, 42, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(46, 134, 193, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #ffffff;
+            color: #85c1e9;
             font-weight: 600;
             padding: 10px 20px;
-            background: rgba(0, 135, 83, 0.3);
+            background: rgba(46, 134, 193, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(46, 134, 193, 0.3);
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #008753 0%, #006b3c 100%);
+            background: linear-gradient(135deg, #1b6ca8 0%, #154e7a 100%);
             color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(0, 135, 83, 0.4);
+            box-shadow: 0 4px 12px rgba(46, 134, 193, 0.4);
             display: none;
-            border: 2px solid rgba(255, 255, 255, 0.5);
+            border: 2px solid rgba(27, 108, 168, 0.5);
             font-family: 'Courier New', monospace;
+            transition: background 0.5s ease;
         }
         
         .submit-container {
@@ -416,10 +407,10 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(10, 58, 10, 0.4);
+            background: rgba(10, 26, 42, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(46, 134, 193, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -427,12 +418,12 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #ffffff;
+            color: #85c1e9;
             line-height: 1.6;
             padding: 20px;
-            background: rgba(0, 135, 83, 0.2);
+            background: rgba(46, 134, 193, 0.08);
             border-radius: 10px;
-            border-left: 4px solid #ffffff;
+            border-left: 4px solid #2e86c1;
         }
         
         .options-container {
@@ -446,8 +437,8 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(26, 74, 26, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(26, 42, 74, 0.4);
+            border: 1px solid rgba(93, 126, 158, 0.3);
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -460,14 +451,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(46, 134, 193, 0.08), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(0, 135, 83, 0.3);
-            border-color: #ffffff;
+            background: rgba(46, 134, 193, 0.1);
+            border-color: #2e86c1;
             transform: translateX(5px);
         }
         
@@ -475,12 +466,13 @@
             transform: translateX(100%);
         }
         
-        .option input {
+        .option input[type="radio"] {
             margin-right: 15px;
             width: 22px;
             height: 22px;
             cursor: pointer;
-            accent-color: #008753;
+            accent-color: #2e86c1;
+            flex-shrink: 0;
         }
         
         .option label {
@@ -488,21 +480,20 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
-            color: #f5e9dd;
+            color: #e0eaf0;
             font-size: 1.1rem;
             line-height: 1.5;
         }
         
-        /* Question navigation */
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            border-top: 2px solid rgba(46, 134, 193, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #ffffff;
+            color: #85c1e9;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -519,7 +510,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: #ffffff;
+            background: #2e86c1;
             border-radius: 2px;
         }
         
@@ -536,34 +527,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(93, 126, 93, 0.3) 0%, rgba(70, 103, 70, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(26, 42, 74, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: #f5e9dd;
+            border: 1px solid rgba(46, 134, 193, 0.3);
+            color: #e0eaf0;
             font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background: linear-gradient(135deg, rgba(0, 135, 83, 0.3) 0%, rgba(0, 107, 60, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(46, 134, 193, 0.3) 0%, rgba(27, 108, 168, 0.5) 100%);
             transform: scale(1.1);
-            border-color: #ffffff;
+            border-color: #2e86c1;
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #008753 0%, #006b3c 100%);
+            background: linear-gradient(135deg, #1b6ca8 0%, #154e7a 100%);
             color: #ffffff;
-            border-color: #ffffff;
-            box-shadow: 0 4px 10px rgba(0, 135, 83, 0.4);
+            border-color: #85c1e9;
+            box-shadow: 0 4px 10px rgba(46, 134, 193, 0.4);
             transform: scale(1.1);
         }
         
         .question-number.answered {
-            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: white;
-            border-color: #2ecc71;
+            border-color: #f39c12;
         }
         
         .navigation-buttons {
@@ -572,13 +563,48 @@
             margin-top: 25px;
         }
         
-        /* Results section - NO SCORE DISPLAY */
+        .progress-container {
+            margin: 20px 0;
+            background: rgba(26, 42, 74, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 10px;
+            border: 1px solid rgba(46, 134, 193, 0.3);
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #1b6ca8, #2e86c1);
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        .progress-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #a3c6e4;
+            margin-top: 5px;
+        }
+        
+        .topic-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(46, 134, 193, 0.15);
+            border: 1px solid rgba(46, 134, 193, 0.3);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #85c1e9;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(10, 58, 10, 0.8) 0%, rgba(26, 74, 26, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(10, 26, 42, 0.8) 0%, rgba(26, 42, 74, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #ffffff;
+            border: 2px solid #2e86c1;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
@@ -590,14 +616,26 @@
             top: 20px;
             right: 20px;
             font-size: 4rem;
-            opacity: 0.1;
+            opacity: 0.06;
         }
         
         .results-container h2 {
-            color: #ffffff;
+            color: #85c1e9;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .completion-icon {
+            font-size: 5rem;
+            margin: 20px 0;
+            animation: bounceIn 0.6s ease;
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
         
         .student-info {
@@ -607,7 +645,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #e0e0e0;
+            color: #a3c6e4;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -615,58 +653,50 @@
         .feedback {
             font-size: 1.3rem;
             margin: 25px 0;
-            color: #f5e9dd;
+            color: #e0eaf0;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(46, 134, 193, 0.08);
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(46, 134, 193, 0.3);
         }
         
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(39, 174, 96, 0.2) 0%, rgba(46, 204, 113, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.15) 0%, rgba(39, 174, 96, 0.2) 100%);
             border-radius: 12px;
             color: #2ecc71;
             font-size: 1.2rem;
-            border: 1px solid rgba(46, 204, 113, 0.5);
+            border: 1px solid rgba(46, 204, 113, 0.4);
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .question-grid {
                 grid-template-columns: repeat(5, 1fr);
             }
-            
             .exam-controls {
                 flex-direction: column;
                 align-items: stretch;
             }
-            
             .navigation-buttons {
                 flex-direction: column;
                 gap: 15px;
             }
-            
             .btn {
                 width: 100%;
                 margin: 8px 0;
             }
-            
             .subject-title {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
-            
             .question-text {
                 font-size: 1.2rem;
             }
-            
             .container {
                 padding: 15px;
                 margin: 15px;
             }
-            
             .welcome-message, .instructions, .exam-content {
                 padding: 20px;
             }
@@ -677,29 +707,24 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 10px;
             }
-            
             .question-number {
                 width: 35px;
                 height: 35px;
                 font-size: 1rem;
             }
-            
             .subject-title {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
-            
             .results-container {
                 padding: 25px 15px;
             }
         }
         
-        /* Back to Home button */
         .back-home {
             margin-top: 20px;
             text-align: center;
         }
         
-        /* Loading animation */
         .loading {
             display: none;
             text-align: center;
@@ -707,8 +732,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-top: 4px solid #ffffff;
+            border: 4px solid rgba(46, 134, 193, 0.3);
+            border-top: 4px solid #2e86c1;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -721,60 +746,73 @@
             100% { transform: rotate(360deg); }
         }
         
-        /* Nigerian flag stripe accent */
-        .flag-stripe {
-            height: 5px;
-            background: linear-gradient(90deg, #008753 0%, #008753 33%, #ffffff 33%, #ffffff 66%, #008753 66%, #008753 100%);
-            margin: 15px 0;
-            border-radius: 3px;
+        .keyboard-hint {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5d7e9e;
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(10, 26, 42, 0.3);
+            border-radius: 8px;
+            border: 1px dashed rgba(93, 126, 158, 0.3);
+        }
+        
+        .keyboard-hint kbd {
+            background: rgba(46, 134, 193, 0.2);
+            border: 1px solid rgba(46, 134, 193, 0.4);
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #85c1e9;
+        }
+        
+        .acronym {
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header with logo -->
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <div class="nigerian-flag-text">Unity and Faith, Peace and Progress</div>
-            <h1 class="subject-title">SS1 CITIZENSHIP & HERITAGE STUDIES</h1>
-            <div class="exam-info">Mid-Term Test | 60 Questions | 50 Minutes</div>
+            <h1 class="subject-title">CITIZENSHIP EDUCATION TEST</h1>
+            <div class="exam-info">Third Term | 2025/2026 Session</div>
+            <div class="term-info">40 Objective Questions | 40 Minutes</div>
         </div>
         
-        <!-- Nigerian flag decorative stripe -->
-        <div class="flag-stripe"></div>
-        
-        <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Citizenship & Heritage Studies Examination. Demonstrate your understanding of citizenship, rights, duties, national symbols, and cultural heritage. Success comes from knowledge and responsibility. Best of luck."
+                "Welcome to The Trustworthy College Citizenship Education Objective Test. This test covers Global Citizenship and Globalization, Citizenship Education in Different Countries (USA, UK, Ghana, South Africa), International Organizations (UN, AU, ECOWAS, Commonwealth), Human Rights Protection (Judiciary, NHRC, NGOs, ICC, ICJ), and Contemporary Issues (cultural exchange, tourism, brain drain/Japa, digital citizenship, climate change). Demonstrate your understanding of global citizenship. Best of luck."
             </div>
             <div class="btn-container">
-                <button id="start-exam-btn" class="btn">Start Examination</button>
+                <button id="start-exam-btn" class="btn">Start Objective Test</button>
             </div>
         </section>
         
-        <!-- Student Information Section -->
         <section id="student-info-section" class="section">
             <h2>Student Information</h2>
-            <p>Please provide your details to continue with the examination.</p>
+            <p>Please provide your details to continue with the test.</p>
             
-            <form id="student-info-form">
+            <form id="student-info-form" autocomplete="off">
                 <div class="form-group">
                     <label for="first-name">First Name *</label>
-                    <input type="text" id="first-name" required>
+                    <input type="text" id="first-name" required placeholder="Enter your first name">
                     <div class="error-message" id="first-name-error">First name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="middle-name">Middle Name *</label>
-                    <input type="text" id="middle-name" required>
+                    <input type="text" id="middle-name" required placeholder="Enter your middle name">
                     <div class="error-message" id="middle-name-error">Middle name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="last-name">Last Name *</label>
-                    <input type="text" id="last-name" required>
+                    <input type="text" id="last-name" required placeholder="Enter your last name">
                     <div class="error-message" id="last-name-error">Last name is required</div>
                 </div>
                 
@@ -785,23 +823,23 @@
             </form>
         </section>
         
-        <!-- Instructions Section -->
         <section id="instructions-section" class="section">
-            <h2>Examination Instructions</h2>
+            <h2>Test Instructions</h2>
             
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This examination consists of 60 multiple-choice questions covering Citizenship and Heritage Studies.</li>
-                    <li>You have 50 minutes to complete this examination.</li>
+                    <li>This Objective Test consists of <strong>40 multiple-choice questions</strong> covering Global Citizenship, International Organizations, Human Rights, and Contemporary Issues.</li>
+                    <li>You have <strong>40 minutes</strong> to complete this test.</li>
                     <li>Answer all questions to the best of your ability.</li>
-                    <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
-                    <li>Answered questions will be marked with green in the question grid.</li>
-                    <li>Once you submit your answers, you cannot change them.</li>
-                    <li>Ensure you have a stable internet connection throughout the examination.</li>
+                    <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
+                    <li>You can also use <strong>keyboard shortcuts</strong>: Arrow keys to navigate, A/B/C/D keys to select answers.</li>
+                    <li>Answered questions will be marked with <strong>orange</strong> in the question grid.</li>
+                    <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
+                    <li>Ensure you have a stable internet connection throughout the test.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li>Demonstrate your understanding of citizenship, rights, duties, national symbols, and cultural heritage.</li>
+                    <li><strong>Do not refresh the page</strong> during the test, or you may lose your progress.</li>
                 </ul>
             </div>
             
@@ -811,39 +849,41 @@
             </div>
         </section>
         
-        <!-- Exam Interface Section -->
         <section id="exam-section" class="section">
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
+                <div class="topic-badge" id="topic-badge">Topic: Global Citizenship</div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">Progress: 0/40 answered</div>
                 <div class="exam-controls">
-                    <div class="question-counter" id="question-counter">Question 1 of 60</div>
+                    <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">50:00</span>
+                        ⏱ Time Left: <span id="timer">40:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Test</button>
                     </div>
                 </div>
             </div>
             
             <div class="exam-content">
                 <div class="question-text" id="question-text"></div>
-                
-                <div class="options-container" id="options-container">
-                    <!-- Options will be populated by JavaScript -->
-                </div>
+                <div class="options-container" id="options-container"></div>
             </div>
             
-            <!-- Question navigation grid after question content -->
+            <div class="keyboard-hint">
+                💡 Keyboard shortcuts: <kbd>←</kbd> <kbd>→</kbd> Navigate | <kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd> Select answer
+            </div>
+            
             <div class="question-navigation">
                 <h3>Question Navigation</h3>
-                <div class="question-grid" id="question-grid">
-                    <!-- Question numbers will be populated by JavaScript -->
-                </div>
+                <div class="question-grid" id="question-grid"></div>
                 
                 <div class="navigation-buttons">
-                    <button type="button" id="prev-question" class="btn btn-secondary">Previous</button>
-                    <button type="button" id="next-question" class="btn">Next</button>
+                    <button type="button" id="prev-question" class="btn btn-secondary">← Previous</button>
+                    <button type="button" id="next-question" class="btn">Next →</button>
                 </div>
             </div>
             
@@ -853,23 +893,23 @@
             </div>
         </section>
         
-        <!-- Results Section - NO SCORE DISPLAY -->
         <section id="results-section" class="section">
             <div class="results-container">
-                <h2>Examination Completed</h2>
+                <h2>Test Completed</h2>
+                <div class="completion-icon">✅</div>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SS1 Citizenship & Heritage Studies - Mid-Term Test</div>
+                <div class="subject" id="results-subject">Citizenship Education - Third Term Objective Test 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the Citizenship & Heritage Studies examination. Your results have been submitted successfully to the examination board.
+                    Thank you for completing the Citizenship Education Objective Test. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    Your examination has been successfully submitted. Results will be communicated through appropriate channels.
+                    ✅ Your test has been successfully submitted.
                 </div>
                 
                 <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn">Take Another Exam</button>
+                    <button type="button" id="restart-exam" class="btn">Take Another Test</button>
                     <div class="back-home">
                         <a href="../index.html" class="btn btn-secondary">Back to Home</a>
                     </div>
@@ -879,326 +919,272 @@
     </div>
 
     <script>
-        // SUBJECT: SS1 CITIZENSHIP & HERITAGE STUDIES - Mid-Term Test
         const originalQuestions = [
+            // SECTION A: GLOBAL CITIZENSHIP & GLOBALIZATION (Q1-5)
             {
-                question: "Citizenship by birth means",
-                options: ["Born in a country", "Marriage", "Election", "Travel"],
-                answer: "A"
+                question: "Global citizenship refers to:",
+                options: ["Legal citizenship of a country", "Membership of a political party", "A sense of belonging to the global community", "Tribal identity only"],
+                answer: "C",
+                section: "Global Citizenship"
             },
             {
-                question: "The law guiding citizenship in Nigeria is",
-                options: ["1999 Constitution", "1983 Law", "Civil rule", "Custom"],
-                answer: "A"
+                question: "Global citizenship is closely linked to:",
+                options: ["Isolation", "Globalization", "Colonialism", "Militarization"],
+                answer: "B",
+                section: "Global Citizenship"
             },
             {
-                question: "Citizenship by registration is given through",
-                options: ["Application", "War", "School", "Trade"],
-                answer: "A"
+                question: "Which of the following is a feature of globalization?",
+                options: ["Internet connectivity", "Cultural isolation", "Trade restriction", "Closed borders"],
+                answer: "A",
+                section: "Global Citizenship"
             },
             {
-                question: "Naturalization means",
-                options: ["Becoming citizen legally", "Leaving country", "Voting", "Learning"],
-                answer: "A"
+                question: "<span class=\"acronym\">UDHR</span> stands for:",
+                options: ["Universal Declaration of Human Rights", "United Democratic Human Rights", "Universal Development and Human Rights", "United Declaration of Human Rights"],
+                answer: "A",
+                section: "Global Citizenship"
             },
             {
-                question: "Honorary citizenship is given to",
-                options: ["Special persons", "Children", "Farmers", "Traders"],
-                answer: "A"
+                question: "A global citizen has responsibilities toward:",
+                options: ["The environment", "Justice", "Human welfare", "All of the above"],
+                answer: "D",
+                section: "Global Citizenship"
+            },
+            
+            // SECTION B: CITIZENSHIP EDUCATION IN DIFFERENT COUNTRIES (Q6-13)
+            {
+                question: "Citizenship education in the USA places strong emphasis on:",
+                options: ["Tribal customs", "Constitution", "Monarchy", "Military rule"],
+                answer: "B",
+                section: "Citizenship Education"
             },
             {
-                question: "Rule of law means",
-                options: ["Law is supreme", "King rules", "Soldiers rule", "Rich rule"],
-                answer: "A"
+                question: "The principle of citizenship by birth in the USA is called:",
+                options: ["Jus Sanguinis", "Jus Soli", "Naturalization", "Federalism"],
+                answer: "B",
+                section: "Citizenship Education"
             },
             {
-                question: "Equality before the law means",
-                options: ["Everyone treated same", "Rich first", "Poor first", "Leaders only"],
-                answer: "A"
+                question: "The UK mainly follows the principle of:",
+                options: ["Jus Soli", "Jus Sanguinis", "Apartheid", "Federalism"],
+                answer: "B",
+                section: "Citizenship Education"
             },
             {
-                question: "One importance of rule of law is",
-                options: ["Justice", "Fight", "Fear", "War"],
-                answer: "A"
+                question: "The \"Life in the UK\" test is associated with:",
+                options: ["Ghana", "Nigeria", "United Kingdom", "South Africa"],
+                answer: "C",
+                section: "Citizenship Education"
             },
             {
-                question: "Rule of law prevents",
-                options: ["Abuse of power", "Education", "Farming", "Trade"],
-                answer: "A"
+                question: "Citizenship education in Ghana promotes:",
+                options: ["Apartheid", "Pan-Africanism", "Monarchy", "Militarism"],
+                answer: "B",
+                section: "Citizenship Education"
             },
             {
-                question: "Law protects",
-                options: ["Citizens", "Animals", "Only leaders", "Only rich"],
-                answer: "A"
+                question: "One major goal of Ghana's citizenship education is:",
+                options: ["Discrimination", "Anti-discrimination", "Isolation", "Colonialism"],
+                answer: "B",
+                section: "Citizenship Education"
             },
             {
-                question: "Democracy means",
-                options: ["Rule by people", "Rule by king", "Rule by army", "Rule by elders"],
-                answer: "A"
+                question: "South Africa's citizenship education emphasizes:",
+                options: ["Apartheid", "Transformative Constitutionalism", "Colonial rule", "Military governance"],
+                answer: "B",
+                section: "Citizenship Education"
             },
             {
-                question: "One democratic value is",
-                options: ["Freedom", "Fear", "Anger", "Pride"],
-                answer: "A"
+                question: "South Africa's constitutional reforms aimed at healing:",
+                options: ["Civil war", "Apartheid", "Globalization", "Migration"],
+                answer: "B",
+                section: "Citizenship Education"
+            },
+            
+            // SECTION C: INTERNATIONAL ORGANIZATIONS (Q14-20)
+            {
+                question: "The primary aim of the United Nations (UN) is:",
+                options: ["Global peace and cooperation", "Colonization", "Trade monopoly", "Military conquest"],
+                answer: "A",
+                section: "International Organizations"
             },
             {
-                question: "Participation means",
-                options: ["Taking part", "Sleeping", "Fighting", "Running"],
-                answer: "A"
+                question: "Which organization adopted the Universal Declaration of Human Rights?",
+                options: ["AU", "ECOWAS", "UN", "Commonwealth"],
+                answer: "C",
+                section: "International Organizations"
             },
             {
-                question: "Tolerance means",
-                options: ["Accept others", "Hate others", "Fight others", "Ignore others"],
-                answer: "A"
+                question: "<span class=\"acronym\">AU</span> stands for:",
+                options: ["African Union", "American Union", "Asian Union", "Atlantic Union"],
+                answer: "A",
+                section: "International Organizations"
             },
             {
-                question: "Accountability means",
-                options: ["Responsibility", "Freedom", "Anger", "Pride"],
-                answer: "A"
+                question: "The main objective of the African Union is:",
+                options: ["African unity", "Colonial expansion", "Religious control", "Global taxation"],
+                answer: "A",
+                section: "International Organizations"
             },
             {
-                question: "National unity means",
-                options: ["Togetherness", "Separation", "War", "Fight"],
-                answer: "A"
+                question: "<span class=\"acronym\">ECOWAS</span> means:",
+                options: ["Economic Community of West African States", "Eastern Community of West African States", "Economic Council of African States", "European Community of West African States"],
+                answer: "A",
+                section: "International Organizations"
             },
             {
-                question: "One benefit of unity",
-                options: ["Peace", "War", "Hunger", "Fear"],
-                answer: "A"
+                question: "ECOWAS promotes:",
+                options: ["Free movement within West Africa", "Apartheid", "Military dictatorship", "Colonialism"],
+                answer: "A",
+                section: "International Organizations"
             },
             {
-                question: "National flag is a",
-                options: ["Symbol", "Book", "Food", "Tool"],
-                answer: "A"
+                question: "The Commonwealth consists mainly of countries with:",
+                options: ["Shared British colonial history", "Shared religion", "Shared language only", "Shared military alliance"],
+                answer: "A",
+                section: "International Organizations"
+            },
+            
+            // SECTION D: HUMAN RIGHTS PROTECTION (Q21-31)
+            {
+                question: "Which arm of government is the primary protector of human rights?",
+                options: ["Legislature", "Executive", "Judiciary", "Traditional Council"],
+                answer: "C",
+                section: "Human Rights Protection"
             },
             {
-                question: "Integration means",
-                options: ["Bringing together", "Dividing", "Fighting", "Leaving"],
-                answer: "A"
+                question: "The Judiciary can protect human rights by:",
+                options: ["Awarding damages", "Making laws only", "Conducting elections", "Collecting taxes"],
+                answer: "A",
+                section: "Human Rights Protection"
             },
             {
-                question: "Unity promotes",
-                options: ["Development", "War", "Poverty", "Conflict"],
-                answer: "A"
+                question: "<span class=\"acronym\">NHRC</span> stands for:",
+                options: ["National Human Rights Commission", "National Health Rights Council", "New Human Rights Commission", "National Human Resource Committee"],
+                answer: "A",
+                section: "Human Rights Protection"
             },
             {
-                question: "Ethnic group means",
-                options: ["People with same culture", "Animals", "Cars", "Books"],
-                answer: "A"
+                question: "One function of the NHRC is:",
+                options: ["Investigating human rights violations", "Conducting military operations", "Printing money", "Running political parties"],
+                answer: "A",
+                section: "Human Rights Protection"
             },
             {
-                question: "Nigeria has",
-                options: ["Many ethnic groups", "One tribe", "Two tribes", "No tribe"],
-                answer: "A"
+                question: "Amnesty International is an example of:",
+                options: ["NGO", "Court", "Parliament", "Political Party"],
+                answer: "A",
+                section: "Human Rights Protection"
             },
             {
-                question: "Religion teaches",
-                options: ["Morals", "Fighting", "Crime", "Stealing"],
-                answer: "A"
+                question: "<span class=\"acronym\">CLO</span> means:",
+                options: ["Civil Liberties Organisation", "Community Law Office", "Civil Law Organisation", "Community Liberties Office"],
+                answer: "A",
+                section: "Human Rights Protection"
             },
             {
-                question: "Respect for others is",
-                options: ["Tolerance", "Anger", "Fear", "Pride"],
-                answer: "A"
+                question: "NGOs often protect rights through:",
+                options: ["Advocacy and legal aid", "Tax collection", "Military actions", "Electoral campaigns"],
+                answer: "A",
+                section: "Human Rights Protection"
             },
             {
-                question: "Diversity means",
-                options: ["Differences", "Same", "Alone", "None"],
-                answer: "A"
+                question: "<span class=\"acronym\">ICC</span> stands for:",
+                options: ["International Criminal Court", "International Civil Court", "Internal Criminal Court", "International Citizens Court"],
+                answer: "A",
+                section: "Human Rights Protection"
             },
             {
-                question: "Interpersonal relation means",
-                options: ["Relationship with others", "Farming", "Driving", "Cooking"],
-                answer: "A"
+                question: "The ICC mainly tries:",
+                options: ["Countries", "Individuals accused of serious crimes", "Political parties", "Corporations only"],
+                answer: "B",
+                section: "Human Rights Protection"
             },
             {
-                question: "Social harmony means",
-                options: ["Peaceful living", "War", "Fight", "Trouble"],
-                answer: "A"
+                question: "<span class=\"acronym\">ICJ</span> stands for:",
+                options: ["International Court of Justice", "International Criminal Justice", "Internal Court of Justice", "International Citizens Jury"],
+                answer: "A",
+                section: "Human Rights Protection"
             },
             {
-                question: "Conflict means",
-                options: ["Disagreement", "Peace", "Love", "Unity"],
-                answer: "A"
+                question: "The ICJ settles disputes between:",
+                options: ["Individuals", "Companies", "Countries", "Communities only"],
+                answer: "C",
+                section: "Human Rights Protection"
+            },
+            
+            // SECTION E: CONTEMPORARY ISSUES (Q32-40)
+            {
+                question: "Cultural exchange helps to:",
+                options: ["Increase understanding among people", "Promote hatred", "Encourage isolation", "Stop tourism"],
+                answer: "A",
+                section: "Contemporary Issues"
             },
             {
-                question: "Conflict resolution means",
-                options: ["Solving problems", "Fighting", "Running", "Shouting"],
-                answer: "A"
+                question: "Tourism contributes to the economy through:",
+                options: ["Jobs and revenue", "Conflict", "Inflation only", "Population decline"],
+                answer: "A",
+                section: "Contemporary Issues"
             },
             {
-                question: "Tolerance helps",
-                options: ["Peace", "War", "Fight", "Anger"],
-                answer: "A"
+                question: "Nigeria's \"soft power\" is enhanced by:",
+                options: ["Nollywood and Afrobeats", "Military rule", "Colonialism", "Mining only"],
+                answer: "A",
+                section: "Contemporary Issues"
             },
             {
-                question: "Rights are",
-                options: ["Entitlements", "Punishment", "Work", "Food"],
-                answer: "A"
+                question: "The migration of skilled professionals from a country is called:",
+                options: ["Urbanization", "Brain Drain", "Globalization", "Tourism"],
+                answer: "B",
+                section: "Contemporary Issues"
             },
             {
-                question: "One right is",
-                options: ["Freedom of speech", "Stealing", "Fighting", "Cheating"],
-                answer: "A"
+                question: "\"Japa\" is commonly used in Nigeria to describe:",
+                options: ["Farming", "Migration abroad", "Tourism", "Elections"],
+                answer: "B",
+                section: "Contemporary Issues"
             },
             {
-                question: "Constitution protects",
-                options: ["Rights", "Crime", "War", "Fear"],
-                answer: "A"
+                question: "Digital citizenship involves:",
+                options: ["Responsible use of technology", "Ignoring online ethics", "Hacking websites", "Spreading fake news"],
+                answer: "A",
+                section: "Contemporary Issues"
             },
             {
-                question: "Privilege means",
-                options: ["Special benefit", "Punishment", "Law", "Fight"],
-                answer: "A"
+                question: "Which of the following is a digital right?",
+                options: ["Privacy online", "Cyberbullying", "Identity theft", "Online fraud"],
+                answer: "A",
+                section: "Contemporary Issues"
             },
             {
-                question: "Human rights are",
-                options: ["For all people", "For rich", "For leaders", "For men only"],
-                answer: "A"
+                question: "A responsible digital citizen should:",
+                options: ["Spread fake news", "Respect online rules and verify information", "Hack accounts", "Bully others online"],
+                answer: "B",
+                section: "Contemporary Issues"
             },
             {
-                question: "Duty means",
-                options: ["Responsibility", "Freedom", "Fear", "Pride"],
-                answer: "A"
-            },
-            {
-                question: "Paying tax is a",
-                options: ["Duty", "Crime", "Game", "Gift"],
-                answer: "A"
-            },
-            {
-                question: "Obeying law is",
-                options: ["Duty", "Joke", "Game", "Fight"],
-                answer: "A"
-            },
-            {
-                question: "Loyalty means",
-                options: ["Faithfulness", "Hate", "Fear", "Fight"],
-                answer: "A"
-            },
-            {
-                question: "Citizens must protect",
-                options: ["Nation", "Crime", "War", "Fight"],
-                answer: "A"
-            },
-            {
-                question: "Nigerian flag color is",
-                options: ["Green & White", "Red", "Blue", "Black"],
-                answer: "A"
-            },
-            {
-                question: "Coat of arms is a",
-                options: ["Symbol", "Food", "Tool", "Book"],
-                answer: "A"
-            },
-            {
-                question: "National anthem is",
-                options: ["Song", "Food", "Book", "Tool"],
-                answer: "A"
-            },
-            {
-                question: "Currency of Nigeria",
-                options: ["Naira", "Dollar", "Euro", "Yen"],
-                answer: "A"
-            },
-            {
-                question: "Constitution is",
-                options: ["Law book", "Song", "Flag", "Food"],
-                answer: "A"
-            },
-            {
-                question: "Heritage means",
-                options: ["What we inherit", "Food", "Game", "Tool"],
-                answer: "A"
-            },
-            {
-                question: "Cultural heritage includes",
-                options: ["Dress", "Car", "Phone", "TV"],
-                answer: "A"
-            },
-            {
-                question: "Historical heritage includes",
-                options: ["Monuments", "Shoes", "Food", "Books"],
-                answer: "A"
-            },
-            {
-                question: "Festival is part of",
-                options: ["Culture", "War", "Fight", "Crime"],
-                answer: "A"
-            },
-            {
-                question: "Language is",
-                options: ["Heritage", "Tool", "Food", "Game"],
-                answer: "A"
-            },
-            {
-                question: "Preservation means",
-                options: ["Protection", "Destruction", "Fight", "Loss"],
-                answer: "A"
-            },
-            {
-                question: "Government helps by",
-                options: ["Protection", "Fighting", "Burning", "Stealing"],
-                answer: "A"
-            },
-            {
-                question: "Urbanization may cause",
-                options: ["Loss of culture", "Peace", "Growth only", "None"],
-                answer: "A"
-            },
-            {
-                question: "Conflict destroys",
-                options: ["Heritage", "Food", "Book", "Game"],
-                answer: "A"
-            },
-            {
-                question: "Neglect means",
-                options: ["Not caring", "Loving", "Helping", "Teaching"],
-                answer: "A"
-            },
-            {
-                question: "Globalization means",
-                options: ["World connection", "Village only", "School", "Farm"],
-                answer: "A"
-            },
-            {
-                question: "Families help heritage by",
-                options: ["Teaching culture", "Fighting", "Forgetting", "Ignoring"],
-                answer: "A"
-            },
-            {
-                question: "Community protects",
-                options: ["Tradition", "Crime", "War", "Fight"],
-                answer: "A"
-            },
-            {
-                question: "Development needs",
-                options: ["Unity", "Fight", "Hate", "Fear"],
-                answer: "A"
-            },
-            {
-                question: "Peaceful coexistence means",
-                options: ["Living together in peace", "Fighting", "Running", "Hating"],
-                answer: "A"
+                question: "Which of the following is an effect of climate change?",
+                options: ["Desertification and flooding", "Reduced internet use", "Elimination of tourism", "End of globalization"],
+                answer: "A",
+                section: "Contemporary Issues"
             }
         ];
 
-        // Application state
         let currentQuestionIndex = 0;
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 50 * 60; // 50 minutes in seconds
+        let timeLeft = 40 * 60;
         let questions = [];
+        let examStarted = false;
 
-        // Background images for rotation (national/heritage theme)
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1590161161460-ab0e8f4fbaa1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80',
-            'https://images.unsplash.com/photo-1544090806-5b6e0b7e7c1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+            'https://images.unsplash.com/photo-1529101091764-c3526daf38fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80'
         ];
 
-        // DOM elements
         const sections = {
             welcome: document.getElementById('welcome-section'),
             studentInfo: document.getElementById('student-info-section'),
@@ -1207,39 +1193,29 @@
             results: document.getElementById('results-section')
         };
 
-        // Initialize background rotation
         let currentBgIndex = 0;
         function rotateBackground() {
             currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
             document.body.style.backgroundImage = `url('${backgroundImages[currentBgIndex]}')`;
         }
-        
-        // Rotate background every 10 seconds
         setInterval(rotateBackground, 10000);
 
-        // Shuffle questions array
         function shuffleQuestions() {
-            // Create a copy of the original questions
             questions = [...originalQuestions];
-            
-            // Shuffle the questions using Fisher-Yates algorithm
             for (let i = questions.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [questions[i], questions[j]] = [questions[j], questions[i]];
             }
-            
-            // Initialize userAnswers array with null values
             userAnswers = Array(questions.length).fill(null);
         }
 
-        // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 50 * 60; // Reset to 50 minutes
+            timeLeft = 40 * 60;
             
-            // Show timer container and submit button
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
+            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #1b6ca8 0%, #154e7a 100%)';
             
             timerInterval = setInterval(() => {
                 timeLeft--;
@@ -1252,40 +1228,75 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    alert("Time's up! Your exam will be submitted automatically.");
-                    calculateScore();
-                }
-                
-                // Warning colors
-                if (timeLeft <= 600) { // 10 minutes left
+                    alert("Time's up! Your test will be submitted automatically.");
+                    calculateScoreAndSubmit();
+                } else if (timeLeft <= 300) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
-                } else if (timeLeft <= 1500) { // 25 minutes left
-                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
+                } else if (timeLeft <= 600) {
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e67e22 0%, #d35400 100%)';
                 }
             }, 1000);
         }
 
-        // Navigation functions
+        document.addEventListener('visibilitychange', () => {
+            if (!examStarted) return;
+            
+            if (document.hidden) {
+                clearInterval(timerInterval);
+            } else {
+                if (document.getElementById('exam-section').classList.contains('active') && timeLeft > 0) {
+                    timerInterval = setInterval(() => {
+                        timeLeft--;
+                        const minutes = Math.floor(timeLeft / 60);
+                        const seconds = timeLeft % 60;
+                        document.getElementById('timer').textContent = 
+                            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                        
+                        if (timeLeft <= 0) {
+                            clearInterval(timerInterval);
+                            alert("Time's up! Your test will be submitted automatically.");
+                            calculateScoreAndSubmit();
+                        }
+                    }, 1000);
+                }
+            }
+        });
+
+        window.addEventListener('beforeunload', (e) => {
+            if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
+                e.preventDefault();
+                e.returnValue = 'You have an ongoing test. Are you sure you want to leave? Your progress may be lost.';
+                return e.returnValue;
+            }
+        });
+
         function showSection(sectionName) {
-            // Hide all sections
             Object.values(sections).forEach(section => {
                 section.classList.remove('active');
             });
-            
-            // Show the requested section
             sections[sectionName].classList.add('active');
             
-            // Hide timer and submit button if not in exam section
             if (sectionName !== 'exam') {
                 document.getElementById('timer-container').style.display = 'none';
                 document.getElementById('submit-container').style.display = 'none';
             }
-            
-            // Scroll to top
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Initialize event listeners
+        function updateProgress() {
+            const answeredCount = userAnswers.filter(answer => answer !== null).length;
+            const percentage = (answeredCount / questions.length) * 100;
+            
+            document.getElementById('progress-bar').style.width = percentage + '%';
+            document.getElementById('progress-text').textContent = 
+                `Progress: ${answeredCount}/${questions.length} answered`;
+        }
+
+        function updateTopicBadge(index) {
+            const section = questions[index].section;
+            document.getElementById('topic-badge').textContent = `Topic: ${section}`;
+        }
+
         document.getElementById('start-exam-btn').addEventListener('click', () => {
             showSection('studentInfo');
         });
@@ -1295,7 +1306,6 @@
         });
 
         document.getElementById('continue-to-instructions').addEventListener('click', () => {
-            // Validate form
             const firstName = document.getElementById('first-name').value.trim();
             const middleName = document.getElementById('middle-name').value.trim();
             const lastName = document.getElementById('last-name').value.trim();
@@ -1304,23 +1314,29 @@
             
             if (!firstName) {
                 document.getElementById('first-name-error').style.display = 'block';
+                document.getElementById('first-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('first-name-error').style.display = 'none';
+                document.getElementById('first-name').style.borderColor = '#5d7e9e';
             }
             
             if (!middleName) {
                 document.getElementById('middle-name-error').style.display = 'block';
+                document.getElementById('middle-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('middle-name-error').style.display = 'none';
+                document.getElementById('middle-name').style.borderColor = '#5d7e9e';
             }
             
             if (!lastName) {
                 document.getElementById('last-name-error').style.display = 'block';
+                document.getElementById('last-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('last-name-error').style.display = 'none';
+                document.getElementById('last-name').style.borderColor = '#5d7e9e';
             }
             
             if (isValid) {
@@ -1334,23 +1350,18 @@
         });
 
         document.getElementById('begin-test').addEventListener('click', () => {
-            // Initialize exam with shuffled questions
             shuffleQuestions();
             currentQuestionIndex = 0;
+            examStarted = true;
             
-            // Display student name
             document.getElementById('display-student-name').textContent = studentName;
             document.getElementById('results-student-name').textContent = studentName;
             
-            // Create question navigation grid
             createQuestionGrid();
-            
-            // Load first question
             loadQuestion(currentQuestionIndex);
-            
-            // Start timer
             startTimer();
-            
+            updateProgress();
+            updateTopicBadge(currentQuestionIndex);
             showSection('exam');
         });
 
@@ -1368,36 +1379,72 @@
             }
         });
 
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('exam-section').classList.contains('active')) return;
+            if (e.target.tagName === 'INPUT' && e.target.type === 'text') return;
+            
+            if (e.key === 'ArrowLeft' && currentQuestionIndex > 0) {
+                e.preventDefault();
+                currentQuestionIndex--;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'ArrowRight' && currentQuestionIndex < questions.length - 1) {
+                e.preventDefault();
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'A' || e.key === 'a' || e.key === '1') {
+                e.preventDefault();
+                selectOptionByKey(0);
+            } else if (e.key === 'B' || e.key === 'b' || e.key === '2') {
+                e.preventDefault();
+                selectOptionByKey(1);
+            } else if (e.key === 'C' || e.key === 'c' || e.key === '3') {
+                e.preventDefault();
+                selectOptionByKey(2);
+            } else if (e.key === 'D' || e.key === 'd' || e.key === '4') {
+                e.preventDefault();
+                selectOptionByKey(3);
+            }
+        });
+
+        function selectOptionByKey(optionIndex) {
+            const radioButtons = document.querySelectorAll(`input[name="question-${currentQuestionIndex}"]`);
+            if (radioButtons[optionIndex]) {
+                radioButtons[optionIndex].checked = true;
+                userAnswers[currentQuestionIndex] = String.fromCharCode(65 + optionIndex);
+                updateQuestionGrid();
+                updateProgress();
+            }
+        }
+
         document.getElementById('submit-exam').addEventListener('click', () => {
-            const confirmed = confirm("Are you sure you want to submit? You will not be able to change your answers after this.");
+            const unanswered = userAnswers.filter(a => a === null).length;
+            let confirmMessage = "Are you sure you want to submit? You will not be able to change your answers after this.";
+            
+            if (unanswered > 0) {
+                confirmMessage += `\n\n⚠️ Warning: You have ${unanswered} unanswered question(s).`;
+            }
+            
+            const confirmed = confirm(confirmMessage);
             
             if (confirmed) {
                 clearInterval(timerInterval);
-                showLoading();
+                examStarted = false;
+                document.getElementById('loading').style.display = 'block';
                 setTimeout(() => {
-                    calculateScore();
+                    calculateScoreAndSubmit();
                 }, 1500);
             }
         });
 
         document.getElementById('restart-exam').addEventListener('click', () => {
             clearInterval(timerInterval);
-            // Reset form
+            examStarted = false;
             document.getElementById('first-name').value = '';
             document.getElementById('middle-name').value = '';
             document.getElementById('last-name').value = '';
             showSection('welcome');
         });
 
-        function showLoading() {
-            document.getElementById('loading').style.display = 'block';
-        }
-
-        function hideLoading() {
-            document.getElementById('loading').style.display = 'none';
-        }
-
-        // Create question navigation grid
         function createQuestionGrid() {
             const questionGrid = document.getElementById('question-grid');
             questionGrid.innerHTML = '';
@@ -1407,13 +1454,12 @@
                 questionNumber.className = 'question-number';
                 questionNumber.textContent = i + 1;
                 questionNumber.dataset.index = i;
+                questionNumber.title = `Question ${i + 1} - ${questions[i].section}`;
                 
-                // Mark if answered
                 if (userAnswers[i] !== null) {
                     questionNumber.classList.add('answered');
                 }
                 
-                // Mark current question
                 if (i === currentQuestionIndex) {
                     questionNumber.classList.add('current');
                 }
@@ -1427,7 +1473,6 @@
             }
         }
 
-        // Update question navigation grid
         function updateQuestionGrid() {
             const questionNumbers = document.querySelectorAll('.question-number');
             
@@ -1445,21 +1490,19 @@
             });
         }
 
-        // Exam functionality
         function loadQuestion(index) {
             const question = questions[index];
             
-            // Update question counter
             document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
+            document.getElementById('question-text').innerHTML = question.question;
             
-            // Set question text
-            document.getElementById('question-text').textContent = question.question;
+            updateTopicBadge(index);
             
-            // Clear options container
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
             
-            // Create option elements
+            const labels = ['A', 'B', 'C', 'D'];
+            
             question.options.forEach((option, optionIndex) => {
                 const optionDiv = document.createElement('div');
                 optionDiv.className = 'option';
@@ -1470,9 +1513,8 @@
                 radio.type = 'radio';
                 radio.name = `question-${index}`;
                 radio.id = optionId;
-                radio.value = String.fromCharCode(65 + optionIndex); // A, B, C, D
+                radio.value = labels[optionIndex];
                 
-                // Check if this option was previously selected
                 if (userAnswers[index] === radio.value) {
                     radio.checked = true;
                 }
@@ -1480,28 +1522,38 @@
                 radio.addEventListener('change', () => {
                     userAnswers[index] = radio.value;
                     updateQuestionGrid();
+                    updateProgress();
                 });
                 
                 const label = document.createElement('label');
                 label.htmlFor = optionId;
-                label.textContent = `${String.fromCharCode(65 + optionIndex)}. ${option}`;
+                label.innerHTML = `${labels[optionIndex]}. ${option}`;
+                
+                optionDiv.addEventListener('click', (e) => {
+                    if (e.target !== radio) {
+                        radio.checked = true;
+                        userAnswers[index] = radio.value;
+                        updateQuestionGrid();
+                        updateProgress();
+                    }
+                });
                 
                 optionDiv.appendChild(radio);
                 optionDiv.appendChild(label);
-                
                 optionsContainer.appendChild(optionDiv);
             });
             
-            // Update navigation buttons
             document.getElementById('prev-question').disabled = index === 0;
             document.getElementById('next-question').disabled = index === questions.length - 1;
             
-            // Update question grid
             updateQuestionGrid();
+            updateProgress();
+            
+            document.querySelector('.exam-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        function calculateScore() {
-            hideLoading();
+        function calculateScoreAndSubmit() {
+            document.getElementById('loading').style.display = 'none';
             let score = 0;
             
             for (let i = 0; i < questions.length; i++) {
@@ -1510,39 +1562,29 @@
                 }
             }
             
-            // Submit to Google Form WITHOUT showing score to student
-            submitToGoogleForm(studentName, "SS1 Citizenship & Heritage Studies", `${score}/${questions.length}`);
+            // Submit score to Google Form ONLY - do NOT display to student
+            submitToGoogleForm(studentName, "Citizenship Education - Third Term Objective Test 2025/2026", `${score}/40`);
             
-            // Show submission status
             document.getElementById('submission-status').style.display = 'block';
-            
             showSection('results');
         }
 
-        // Google Form submission function
         function submitToGoogleForm(fullName, subject, score) {
             const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
             const formData = new FormData();
             formData.append("entry.862885683", fullName);
-            formData.append("entry.1545021484", "SS1");
+            formData.append("entry.1545021484", "SSS1");
             formData.append("entry.1558221900", subject);
             formData.append("entry.2022160530", score);
 
-            // Use no-cors so browser will not block cross-origin form POST
             fetch(formURL, {
                 method: "POST",
                 mode: "no-cors",
                 body: formData
-            }).then(() => {
-                console.log("Results submitted successfully");
-            }).catch(err => {
-                console.warn("Form submission (no-cors) likely blocked for debug; data still sent.");
-            });
+            }).catch(err => console.warn("Form submission:", err));
         }
 
-        // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
-            // Focus on first input
             document.getElementById('first-name').focus();
         });
     </script>
