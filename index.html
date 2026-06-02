@@ -15,11 +15,9 @@
             font-family: 'Poppins', 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
             background: #0f0c0e;
             min-height: 100vh;
-            position: relative;
             overflow-x: hidden;
         }
 
-        /* Animated gradient background */
         body::before {
             content: '';
             position: fixed;
@@ -43,7 +41,6 @@
             z-index: -1;
         }
 
-        /* Floating particles animation */
         .particles {
             position: fixed;
             top: 0;
@@ -86,7 +83,7 @@
             z-index: 2;
         }
 
-        /* ========== SCHOOL HEADER ========== */
+        /* School Header */
         .school-header {
             background: linear-gradient(135deg, rgba(40, 20, 20, 0.95) 0%, rgba(25, 12, 12, 0.95) 100%);
             backdrop-filter: blur(20px);
@@ -95,7 +92,7 @@
             margin-bottom: 35px;
             text-align: center;
             border: 1px solid rgba(200, 130, 130, 0.3);
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
             position: relative;
             overflow: hidden;
         }
@@ -116,11 +113,6 @@
             to { transform: rotate(360deg); }
         }
 
-        .logo-wrapper {
-            position: relative;
-            display: inline-block;
-        }
-
         .school-logo {
             width: 100px;
             height: 100px;
@@ -130,12 +122,10 @@
             background: #1a0e0e;
             object-fit: cover;
             transition: transform 0.3s ease;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
         .school-logo:hover {
             transform: scale(1.05);
-            border-color: #E8C0C0;
         }
 
         .school-name {
@@ -145,24 +135,18 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            letter-spacing: 2px;
             margin-top: 20px;
             margin-bottom: 8px;
         }
 
         .school-name span {
             font-weight: 300;
-            background: linear-gradient(135deg, #D4A5A5 0%, #C28686 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
         }
 
         .motto {
             font-size: 1rem;
             color: #C9A9A9;
             font-style: italic;
-            letter-spacing: 3px;
             margin-bottom: 20px;
             border-top: 1px dashed rgba(200, 130, 130, 0.4);
             border-bottom: 1px dashed rgba(200, 130, 130, 0.4);
@@ -187,14 +171,12 @@
             background: rgba(200, 130, 130, 0.08);
             padding: 6px 16px;
             border-radius: 40px;
-            backdrop-filter: blur(5px);
         }
 
         .address {
             color: #9E8080;
             font-size: 0.8rem;
             margin-top: 10px;
-            letter-spacing: 0.5px;
         }
 
         .session-badge {
@@ -217,7 +199,7 @@
             font-size: 0.75rem;
         }
 
-        /* ========== TEACHER SECTION ========== */
+        /* Teacher Card */
         .teacher-card {
             background: rgba(30, 18, 18, 0.9);
             backdrop-filter: blur(20px);
@@ -226,12 +208,6 @@
             margin-bottom: 35px;
             border: 1px solid rgba(200, 130, 130, 0.25);
             box-shadow: 0 20px 40px -15px rgba(0,0,0,0.4);
-            transition: all 0.3s ease;
-        }
-
-        .teacher-card:hover {
-            border-color: rgba(200, 130, 130, 0.5);
-            box-shadow: 0 25px 50px -15px rgba(0,0,0,0.5);
         }
 
         .teacher-header {
@@ -249,13 +225,6 @@
             color: #D4A5A5;
             font-size: 1.3rem;
             font-weight: 500;
-            letter-spacing: 1px;
-        }
-
-        .teacher-header p {
-            color: #8B6B6B;
-            font-size: 0.75rem;
-            margin-left: auto;
         }
 
         .unlock-panel {
@@ -276,7 +245,6 @@
             color: #BFA0A0;
             font-size: 0.8rem;
             font-weight: 500;
-            letter-spacing: 0.5px;
         }
 
         .input-group select, .input-group input {
@@ -288,19 +256,12 @@
             font-size: 0.9rem;
             color: #E8D0D0;
             transition: all 0.3s;
-            cursor: pointer;
-            font-family: inherit;
         }
 
         .input-group select:focus, .input-group input:focus {
             border-color: #D4A5A5;
             outline: none;
             box-shadow: 0 0 0 3px rgba(212, 165, 165, 0.15);
-        }
-
-        .input-group input {
-            font-family: 'Courier New', monospace;
-            letter-spacing: 2px;
         }
 
         .unlock-action {
@@ -321,7 +282,6 @@
         .unlock-action:hover {
             background: linear-gradient(135deg, #8a5a5a 0%, #6a4545 100%);
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
 
         .toast-message {
@@ -356,7 +316,7 @@
             border-left: 3px solid #E57373;
         }
 
-        /* ========== SUBJECTS SECTION ========== */
+        /* Subjects Container */
         .subjects-container {
             background: rgba(30, 18, 18, 0.9);
             backdrop-filter: blur(20px);
@@ -426,26 +386,9 @@
             overflow: hidden;
         }
 
-        .subject-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 30% 20%, rgba(212, 165, 165, 0.05), transparent);
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-
-        .subject-card:hover::before {
-            opacity: 1;
-        }
-
         .subject-card:hover {
             transform: translateY(-6px);
             border-color: rgba(212, 165, 165, 0.5);
-            box-shadow: 0 20px 35px -15px rgba(0,0,0,0.5);
         }
 
         .subject-card.locked {
@@ -455,7 +398,6 @@
         .subject-card.unlocked {
             border-color: #D4A5A5;
             background: linear-gradient(145deg, #2a1818 0%, #201212 100%);
-            box-shadow: 0 8px 25px rgba(212, 165, 165, 0.1);
         }
 
         .subject-icon {
@@ -472,7 +414,7 @@
 
         .timer-badge {
             font-size: 0.7rem;
-            color: #C28686;
+            color: #81C784;
             margin-bottom: 12px;
             font-family: monospace;
         }
@@ -532,13 +474,16 @@
             padding: 20px;
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.6; }
-        }
-
-        .countdown {
-            animation: pulse 1s infinite;
+        /* Debug panel */
+        .debug-info {
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(0,0,0,0.5);
+            border-radius: 12px;
+            font-size: 0.7rem;
+            color: #8a6a6a;
+            text-align: center;
+            display: none;
         }
 
         @media (max-width: 768px) {
@@ -559,14 +504,6 @@
             .unlock-action {
                 justify-content: center;
             }
-            .subjects-container, .teacher-card {
-                padding: 20px;
-            }
-            .subjects-header {
-                flex-direction: column;
-                gap: 15px;
-                align-items: flex-start;
-            }
         }
     </style>
 </head>
@@ -574,13 +511,10 @@
     <div class="particles" id="particles"></div>
 
     <div class="container">
-        <!-- School Header -->
         <div class="school-header">
-            <div class="logo-wrapper">
-                <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
-                     alt="The Trustworthy College Logo" class="school-logo"
-                     onerror="this.src='https://via.placeholder.com/100x100?text=TTC'">
-            </div>
+            <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
+                 alt="The Trustworthy College Logo" class="school-logo"
+                 onerror="this.src='https://via.placeholder.com/100x100?text=TTC'">
             <h1 class="school-name">THE TRUSTWORTHY <span>COLLEGE</span></h1>
             <div class="motto">"NURTURE FOR PIETY"</div>
             <div class="contact-bar">
@@ -595,12 +529,10 @@
             </div>
         </div>
 
-        <!-- Teacher Panel -->
         <div class="teacher-card">
             <div class="teacher-header">
                 <span class="icon">🔐</span>
                 <h2>Teacher Access</h2>
-                <p>Authorized personnel only</p>
             </div>
             <div class="unlock-panel">
                 <div class="input-group">
@@ -633,7 +565,6 @@
             <div id="toastMessage" class="toast-message"></div>
         </div>
 
-        <!-- Subjects Grid -->
         <div class="subjects-container">
             <div class="subjects-header">
                 <h2><span>📖</span> Available Subjects</h2>
@@ -642,9 +573,7 @@
                     <span><i class="unlocked-dot"></i> Unlocked</span>
                 </div>
             </div>
-            <div class="subjects-grid" id="subjectsGrid">
-                <!-- Loaded dynamically -->
-            </div>
+            <div class="subjects-grid" id="subjectsGrid"></div>
         </div>
 
         <div class="footer">
@@ -653,11 +582,13 @@
     </div>
 
     <script>
-        // ==================== CONFIGURATION ====================
         const MASTER_PASSWORD = "2TS@2026";
-        const LOCK_DURATION_MINUTES = 45; // Auto-lock after 45 minutes
+        const LOCK_DURATION_MINUTES = 45;
 
-        // Subjects data
+        // Get the base URL for GitHub Pages
+        const baseUrl = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+        
+        // Subject paths - using the correct folder structure
         const subjectDetails = {
             mathematics: { name: "Mathematics", icon: "📐", path: "mathematics/index.html" },
             english_language: { name: "English Language", icon: "📖", path: "english_language/index.html" },
@@ -675,11 +606,8 @@
             phone_installment: { name: "Phone Installment", icon: "📱", path: "phone_installment/index.html" }
         };
 
-        // Structure for unlocked subjects with timestamp
-        // { subjectKey: { unlocked: true, expiresAt: timestamp } }
         let unlockedSubjects = JSON.parse(localStorage.getItem('trustworthy_unlocked_data')) || {};
 
-        // Clean up expired unlocks on load
         function cleanExpiredLocks() {
             const now = Date.now();
             let changed = false;
@@ -694,7 +622,6 @@
             }
         }
 
-        // Unlock a subject (sets 45 minute timer)
         function unlockSubject() {
             const subject = document.getElementById('subjectSelect').value;
             const password = document.getElementById('subjectPassword').value;
@@ -710,6 +637,7 @@
                 
                 toast.className = 'toast-message success';
                 toast.innerHTML = `✅ ${subjectDetails[subject].name} unlocked! Available for ${LOCK_DURATION_MINUTES} minutes.`;
+                toast.style.display = 'block';
                 
                 document.getElementById('subjectPassword').value = '';
                 renderSubjects();
@@ -717,20 +645,18 @@
                 
                 setTimeout(() => {
                     toast.style.display = 'none';
-                    setTimeout(() => toast.className = 'toast-message', 200);
                 }, 3500);
             } else {
                 toast.className = 'toast-message error';
                 toast.innerHTML = '❌ Incorrect password. Access denied.';
+                toast.style.display = 'block';
                 
                 setTimeout(() => {
                     toast.style.display = 'none';
-                    setTimeout(() => toast.className = 'toast-message', 200);
                 }, 3000);
             }
         }
 
-        // Get remaining time for a subject
         function getRemainingTime(subjectKey) {
             const data = unlockedSubjects[subjectKey];
             if (!data || !data.expiresAt) return null;
@@ -741,7 +667,29 @@
             return { minutes, seconds, remaining };
         }
 
-        // Render all subjects with timers
+        function takeTest(subjectKey) {
+            const unlockData = unlockedSubjects[subjectKey];
+            const isValid = unlockData && unlockData.expiresAt && unlockData.expiresAt > Date.now();
+            
+            if (isValid) {
+                const testPath = subjectDetails[subjectKey].path;
+                const fullUrl = testPath;
+                
+                console.log(`🔗 Navigating to: ${fullUrl}`);
+                console.log(`📍 Current location: ${window.location.href}`);
+                
+                // Try to navigate to the test
+                window.location.href = fullUrl;
+            } else {
+                if (unlockData && unlockData.expiresAt && unlockData.expiresAt <= Date.now()) {
+                    delete unlockedSubjects[subjectKey];
+                    localStorage.setItem('trustworthy_unlocked_data', JSON.stringify(unlockedSubjects));
+                    renderSubjects();
+                }
+                alert(`❌ ${subjectDetails[subjectKey].name} is locked. Please ask your teacher to unlock it.`);
+            }
+        }
+
         function renderSubjects() {
             const grid = document.getElementById('subjectsGrid');
             grid.innerHTML = '';
@@ -760,10 +708,6 @@
                 let timerHtml = '';
                 if (isUnlocked && remaining) {
                     timerHtml = `<div class="timer-badge">⏱️ Expires in: ${remaining.minutes}m ${remaining.seconds}s</div>`;
-                } else if (unlockData && unlockData.expiresAt && unlockData.expiresAt <= Date.now()) {
-                    // Auto-cleanup expired
-                    delete unlockedSubjects[subjectKey];
-                    localStorage.setItem('trustworthy_unlocked_data', JSON.stringify(unlockedSubjects));
                 }
                 
                 const statusText = isUnlocked ? '✓ Unlocked' : '🔒 Locked';
@@ -783,24 +727,6 @@
             });
         }
 
-        // Take test
-        function takeTest(subjectKey) {
-            const unlockData = unlockedSubjects[subjectKey];
-            const isValid = unlockData && unlockData.expiresAt && unlockData.expiresAt > Date.now();
-            
-            if (isValid) {
-                window.location.href = subjectDetails[subjectKey].path;
-            } else {
-                if (unlockData && unlockData.expiresAt && unlockData.expiresAt <= Date.now()) {
-                    delete unlockedSubjects[subjectKey];
-                    localStorage.setItem('trustworthy_unlocked_data', JSON.stringify(unlockedSubjects));
-                    renderSubjects();
-                }
-                alert(`❌ ${subjectDetails[subjectKey].name} is locked. Please ask your teacher to unlock it.`);
-            }
-        }
-
-        // Start countdown timers (updates every second)
         let timerInterval = null;
         function startCountdownTimers() {
             if (timerInterval) clearInterval(timerInterval);
@@ -816,7 +742,6 @@
                     localStorage.setItem('trustworthy_unlocked_data', JSON.stringify(unlockedSubjects));
                     renderSubjects();
                 } else {
-                    // Just update timers without full re-render
                     updateTimersOnly();
                 }
             }, 1000);
@@ -837,10 +762,6 @@
                 if (isUnlocked && remaining) {
                     if (timerBadge) {
                         timerBadge.textContent = `⏱️ Expires in: ${remaining.minutes}m ${remaining.seconds}s`;
-                    } else {
-                        // Need full re-render
-                        renderSubjects();
-                        return;
                     }
                 } else if (timerBadge && !isUnlocked) {
                     timerBadge.remove();
@@ -848,7 +769,7 @@
             });
         }
 
-        // Hidden reset: Press RRR to reset all locks
+        // Hidden reset: Press R three times
         let resetCounter = 0;
         document.addEventListener('keydown', function(e) {
             if (e.key === 'r' || e.key === 'R') {
@@ -866,7 +787,7 @@
             }
         });
 
-        // Create floating particles
+        // Create particles
         function createParticles() {
             const container = document.getElementById('particles');
             for (let i = 0; i < 50; i++) {
@@ -883,14 +804,38 @@
             }
         }
 
+        // Test if files exist (optional - for debugging)
+        async function testPath(path) {
+            try {
+                const response = await fetch(path, { method: 'HEAD' });
+                console.log(`📁 ${path}: ${response.ok ? '✅ EXISTS' : '❌ NOT FOUND'}`);
+                return response.ok;
+            } catch (e) {
+                console.log(`📁 ${path}: ❌ ERROR`);
+                return false;
+            }
+        }
+
+        // Debug all paths on load
+        async function debugPaths() {
+            console.log('=== CHECKING ALL SUBJECT PATHS ===');
+            for (const [key, details] of Object.entries(subjectDetails)) {
+                await testPath(details.path);
+            }
+            console.log('==================================');
+        }
+
         // Initialize
         cleanExpiredLocks();
         renderSubjects();
         startCountdownTimers();
         createParticles();
+        debugPaths();
         
         console.log('=== Trustworthy College CBT Portal ===');
-        console.log(`🔐 Auto-lock after ${LOCK_DURATION_MINUTES} minutes`);
+        console.log(`🔐 Password: ${MASTER_PASSWORD}`);
+        console.log(`⏱️ Auto-lock after ${LOCK_DURATION_MINUTES} minutes`);
+        console.log('📍 Click "Take Test" and check console for navigation');
         console.log('======================================');
     </script>
 </body>
