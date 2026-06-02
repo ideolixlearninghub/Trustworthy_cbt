@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Mathematics SSS1 C.A Test</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📐</text></svg>">
+    <title>The Trustworthy College - Mid-Term Test Portal | 2025/2026</title>
     <style>
-        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
         }
-        
+
         body {
-            background-color: #1a1a2a;
-            color: #e0e0f0;
-            line-height: 1.6;
-            position: relative;
+            font-family: 'Georgia', 'Times New Roman', 'Segoe UI', serif;
+            background: linear-gradient(135deg, #3E2723 0%, #4A2C2A 50%, #6D4C41 100%);
             min-height: 100vh;
+            padding: 30px 20px;
+            position: relative;
         }
-        
-        /* Dimmed background overlay with mathematics theme */
+
         body::before {
             content: '';
             position: fixed;
@@ -30,1541 +26,578 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            opacity: 0.12;
-            z-index: -1;
-            transition: background-image 1.5s ease-in-out;
+            background: radial-gradient(circle at 20% 30%, rgba(198, 108, 108, 0.08) 0%, rgba(62, 39, 35, 0.2) 100%);
+            pointer-events: none;
         }
-        
-        /* Container with mathematics theme (purple/blue) */
+
         .container {
-            max-width: 1000px;
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 25px;
-            background: linear-gradient(135deg, #2a1a3a 0%, #1a2a4a 100%);
-            box-shadow: 0 15px 40px rgba(142, 68, 173, 0.25);
-            border-radius: 16px;
-            margin-top: 25px;
-            margin-bottom: 25px;
-            position: relative;
-            overflow: hidden;
-            border: 3px solid #9b59b6;
-            backdrop-filter: blur(5px);
         }
-        
-        /* Purple decorative border */
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, #9b59b6, #3498db, #9b59b6);
-            z-index: 2;
-        }
-        
-        /* Header */
-        .header {
-            text-align: center;
-            padding-bottom: 25px;
-            margin-bottom: 30px;
-            position: relative;
-            border-bottom: 2px solid #9b59b6;
-        }
-        
-        .header::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
-            height: 3px;
-            background: linear-gradient(to right, transparent, #9b59b6, transparent);
-        }
-        
-        .logo {
-            max-width: 140px;
-            height: auto;
-            margin-bottom: 15px;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-            border-radius: 10px;
-            border: 3px solid #9b59b6;
-            padding: 5px;
-            background: rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .logo:hover {
-            transform: scale(1.05);
-        }
-        
-        .subject-title {
-            color: #c39bd3;
-            font-size: 2.4rem;
-            margin: 10px 0 5px;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-            letter-spacing: 1px;
-        }
-        
-        .exam-info {
-            color: #a3c6e4;
-            font-size: 1.1rem;
-            margin-top: 5px;
-        }
-        
-        .term-info {
-            background: linear-gradient(135deg, #9b59b620, #3498db40);
-            display: inline-block;
-            padding: 8px 20px;
-            border-radius: 30px;
-            margin-top: 10px;
-            font-weight: bold;
-            color: #c39bd3;
-            border: 1px solid #9b59b660;
-        }
-        
-        /* Sections */
-        .section {
-            display: none;
-            padding: 25px;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .active {
-            display: block;
-        }
-        
-        /* Welcome message */
-        .welcome-message {
-            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(26, 42, 74, 0.7) 100%);
-            padding: 35px;
-            border-radius: 12px;
-            margin: 25px 0;
-            text-align: center;
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #e0e0f0;
-            border-left: 5px solid #9b59b6;
-            border-right: 1px solid rgba(155, 89, 182, 0.3);
-            border-top: 1px solid rgba(155, 89, 182, 0.2);
-            border-bottom: 1px solid rgba(155, 89, 182, 0.3);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .welcome-message::before {
-            content: '📐';
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 3rem;
-            opacity: 0.1;
-        }
-        
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
-            color: #ffffff;
-            border: none;
-            padding: 15px 32px;
-            font-size: 1.1rem;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin: 12px 8px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            border: 2px solid rgba(155, 89, 182, 0.5);
-            box-shadow: 0 6px 15px rgba(155, 89, 182, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transform: rotate(30deg);
-            transition: all 0.5s;
-        }
-        
-        .btn:hover:not(:disabled) {
-            background: linear-gradient(135deg, #ae7ac9 0%, #9b59b6 100%);
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(155, 89, 182, 0.5);
-            color: #ffffff;
-        }
-        
-        .btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none;
-        }
-        
-        .btn-secondary {
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-            border-color: #3498db;
-        }
-        
-        .btn-secondary:hover:not(:disabled) {
-            background: linear-gradient(135deg, #5dade2 0%, #3498db 100%);
-        }
-        
-        .btn-success {
-            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
-            border-color: #e67e22;
-        }
-        
-        .btn-container {
-            text-align: center;
-            margin-top: 35px;
-        }
-        
-        /* Form elements */
-        .form-group {
-            margin-bottom: 28px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 12px;
-            font-weight: 600;
-            color: #c39bd3;
-            font-size: 1.15rem;
-            letter-spacing: 0.5px;
-        }
-        
-        input[type="text"] {
-            width: 100%;
-            padding: 16px;
-            background: rgba(42, 26, 58, 0.7);
-            border: 2px solid #5d7e9e;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            color: #e0e0f0;
-            transition: all 0.3s;
-            font-family: inherit;
-        }
-        
-        input[type="text"]:focus {
-            border-color: #9b59b6;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.3);
-            background: rgba(42, 26, 58, 0.9);
-        }
-        
-        .error-message {
-            color: #ff6b6b;
-            font-size: 0.95rem;
-            margin-top: 8px;
-            display: none;
-            font-weight: 500;
-        }
-        
-        /* Instructions */
-        .instructions {
-            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(26, 42, 74, 0.7) 100%);
-            padding: 30px;
-            border-radius: 12px;
-            margin: 25px 0;
-            border-left: 5px solid #3498db;
-            border: 1px solid rgba(52, 152, 219, 0.2);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            position: relative;
-        }
-        
-        .instructions::before {
-            content: '📏';
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 2.5rem;
-            opacity: 0.1;
-        }
-        
-        .instructions h3 {
-            margin-bottom: 20px;
-            color: #3498db;
-            font-size: 1.5rem;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .instructions h3::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: #3498db;
-            border-radius: 2px;
-        }
-        
-        .instructions ul {
-            padding-left: 25px;
-        }
-        
-        .instructions li {
-            margin-bottom: 14px;
-            line-height: 1.7;
-            padding-left: 8px;
-            position: relative;
-        }
-        
-        .instructions li::before {
-            content: '•';
-            color: #3498db;
-            font-size: 1.5rem;
-            position: absolute;
-            left: -20px;
-            top: -5px;
-        }
-        
-        /* Exam interface */
-        .exam-header {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid rgba(155, 89, 182, 0.3);
-        }
-        
-        .student-info {
-            font-size: 1.6rem;
-            font-weight: bold;
-            color: #c39bd3;
-            margin-bottom: 25px;
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(52, 152, 219, 0.2) 100%);
-            border-radius: 12px;
-            border: 1px solid rgba(155, 89, 182, 0.3);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .exam-controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 20px;
-            background: rgba(42, 26, 58, 0.5);
-            border-radius: 12px;
-            border: 1px solid rgba(155, 89, 182, 0.2);
-        }
-        
-        .question-counter {
-            font-size: 1.2rem;
-            color: #c39bd3;
-            font-weight: 600;
-            padding: 10px 20px;
-            background: rgba(155, 89, 182, 0.1);
-            border-radius: 8px;
-            border: 1px solid rgba(155, 89, 182, 0.3);
-        }
-        
-        .timer-container {
-            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
-            color: #ffffff;
-            padding: 12px 20px;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(155, 89, 182, 0.4);
-            display: none;
-            border: 2px solid rgba(155, 89, 182, 0.5);
-            font-family: 'Courier New', monospace;
-            transition: background 0.5s ease;
-        }
-        
-        .submit-container {
-            display: none;
-        }
-        
-        .exam-content {
+
+        /* School Header - Premium Design */
+        .school-header {
+            background: linear-gradient(145deg, #5D2E2E 0%, #3E1A1A 100%);
+            border-radius: 40px;
+            padding: 30px 35px;
             margin-bottom: 35px;
-            background: rgba(42, 26, 58, 0.4);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid rgba(155, 89, 182, 0.2);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .question-text {
-            font-size: 1.35rem;
-            margin-bottom: 25px;
-            font-weight: 600;
-            color: #c39bd3;
-            line-height: 1.6;
-            padding: 20px;
-            background: rgba(52, 152, 219, 0.1);
-            border-radius: 10px;
-            border-left: 4px solid #3498db;
-        }
-        
-        .options-container {
-            margin-left: 15px;
-        }
-        
-        .option {
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            padding: 18px 20px;
-            border-radius: 10px;
-            transition: all 0.3s;
-            background: rgba(26, 42, 74, 0.5);
-            border: 1px solid rgba(93, 126, 158, 0.3);
-            cursor: pointer;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+            border: 1px solid rgba(218, 128, 128, 0.3);
             position: relative;
-            overflow: hidden;
         }
-        
-        .option::before {
+
+        .school-header::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(155, 89, 182, 0.1), transparent);
-            transform: translateX(-100%);
-            transition: transform 0.5s;
-        }
-        
-        .option:hover {
-            background: rgba(155, 89, 182, 0.1);
-            border-color: #9b59b6;
-            transform: translateX(5px);
-        }
-        
-        .option:hover::before {
-            transform: translateX(100%);
-        }
-        
-        .option input[type="radio"] {
-            margin-right: 15px;
-            width: 22px;
-            height: 22px;
-            cursor: pointer;
-            accent-color: #9b59b6;
-            flex-shrink: 0;
-        }
-        
-        .option label {
-            font-weight: normal;
-            margin-bottom: 0;
-            cursor: pointer;
-            flex: 1;
-            color: #e0e0f0;
-            font-size: 1.1rem;
-            line-height: 1.5;
-        }
-        
-        /* Question navigation */
-        .question-navigation {
-            margin-top: 35px;
-            padding-top: 25px;
-            border-top: 2px solid rgba(155, 89, 182, 0.3);
-        }
-        
-        .question-navigation h3 {
-            margin-bottom: 20px;
-            color: #c39bd3;
-            text-align: center;
-            font-size: 1.5rem;
-            position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .question-navigation h3::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
             height: 3px;
-            background: #3498db;
-            border-radius: 2px;
+            background: linear-gradient(90deg, #D4A5A5, #C28686, #A05C5C, #C28686, #D4A5A5);
+            border-radius: 40px 40px 0 0;
         }
-        
-        .question-grid {
-            display: grid;
-            grid-template-columns: repeat(10, 1fr);
-            gap: 12px;
-            margin-bottom: 25px;
-        }
-        
-        .question-number {
-            width: 40px;
-            height: 40px;
+
+        .logo-row {
             display: flex;
-            align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(26, 42, 74, 0.5) 100%);
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: 1px solid rgba(155, 89, 182, 0.3);
-            color: #e0e0f0;
-            font-size: 1.1rem;
-        }
-        
-        .question-number:hover {
-            background: linear-gradient(135deg, rgba(155, 89, 182, 0.3) 0%, rgba(142, 68, 173, 0.5) 100%);
-            transform: scale(1.1);
-            border-color: #9b59b6;
-        }
-        
-        .question-number.current {
-            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
-            color: #ffffff;
-            border-color: #c39bd3;
-            box-shadow: 0 4px 10px rgba(155, 89, 182, 0.4);
-            transform: scale(1.1);
-        }
-        
-        .question-number.answered {
-            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
-            color: white;
-            border-color: #f1c40f;
-        }
-        
-        .navigation-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 25px;
-        }
-        
-        /* Progress bar */
-        .progress-container {
-            margin: 20px 0;
-            background: rgba(26, 42, 74, 0.5);
-            border-radius: 10px;
-            overflow: hidden;
-            height: 10px;
-            border: 1px solid rgba(155, 89, 182, 0.3);
-        }
-        
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, #9b59b6, #3498db);
-            width: 0%;
-            transition: width 0.5s ease;
-            border-radius: 10px;
-        }
-        
-        .progress-text {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #a3c6e4;
-            margin-top: 5px;
-        }
-        
-        /* Results section */
-        .results-container {
-            text-align: center;
-            padding: 40px;
-            background: linear-gradient(135deg, rgba(42, 26, 58, 0.8) 0%, rgba(26, 42, 74, 0.9) 100%);
-            border-radius: 16px;
-            border: 2px solid #9b59b6;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .results-container::before {
-            content: '✅';
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 4rem;
-            opacity: 0.1;
-        }
-        
-        .results-container h2 {
-            color: #c39bd3;
-            font-size: 2.2rem;
-            margin-bottom: 25px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        .results-score {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #f1c40f;
-            margin: 20px 0;
-            text-shadow: 0 0 20px rgba(241, 196, 15, 0.5);
-        }
-        
-        .results-percentage {
-            font-size: 1.5rem;
-            color: #c39bd3;
-            margin-bottom: 20px;
-        }
-        
-        .student-info {
-            font-size: 1.5rem;
             margin-bottom: 15px;
         }
-        
-        .subject {
+
+        .school-logo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid #D4A5A5;
+            padding: 5px;
+            background: #2E1414;
+            object-fit: cover;
+        }
+
+        .school-name {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #F2E0E0;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .school-name span {
+            color: #D4A5A5;
+            font-weight: 300;
+        }
+
+        .school-motto {
+            font-size: 1.1rem;
+            color: #D4A5A5;
+            font-style: italic;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            border-top: 1px dashed rgba(212, 165, 165, 0.4);
+            border-bottom: 1px dashed rgba(212, 165, 165, 0.4);
+            display: inline-block;
+            padding: 8px 25px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            color: #C9A9A9;
+        }
+
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .address {
+            color: #BFA0A0;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        .test-badge {
+            background: rgba(62, 26, 26, 0.7);
+            border-radius: 30px;
+            padding: 10px 20px;
+            margin-top: 15px;
+            display: inline-block;
+            border: 1px solid #C28686;
+        }
+
+        .test-badge h3 {
+            color: #D4A5A5;
+            font-size: 1rem;
+        }
+
+        .test-badge p {
+            color: #C9A9A9;
+            font-size: 0.8rem;
+        }
+
+        /* Teacher Section - Elegant */
+        .teacher-section {
+            background: linear-gradient(145deg, #4A2828 0%, #361A1A 100%);
+            border-radius: 30px;
+            padding: 28px 32px;
+            margin-bottom: 35px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            border: 1px solid rgba(194, 134, 134, 0.4);
+        }
+
+        .teacher-section h2 {
+            color: #D4A5A5;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .teacher-section h2::before {
+            content: '🔐';
             font-size: 1.3rem;
-            color: #a3c6e4;
-            margin-bottom: 30px;
+        }
+
+        .teacher-controls {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            align-items: flex-end;
+        }
+
+        .subject-select {
+            flex: 2;
+            min-width: 220px;
+        }
+
+        .password-input {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .subject-select label, .password-input label {
+            display: block;
+            margin-bottom: 8px;
+            color: #C9A9A9;
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .subject-select select, .password-input input {
+            width: 100%;
+            padding: 14px 16px;
+            background: #2A1515;
+            border: 1.5px solid #8B5E5E;
+            border-radius: 16px;
+            font-size: 0.95rem;
+            color: #F2E0E0;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .subject-select select:focus, .password-input input:focus {
+            border-color: #D4A5A5;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(212, 165, 165, 0.2);
+        }
+
+        .password-input input {
+            font-family: monospace;
+            letter-spacing: 2px;
+        }
+
+        .unlock-btn {
+            background: linear-gradient(135deg, #8B5E5E 0%, #6B4040 100%);
+            color: #F2E0E0;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 40px;
+            font-size: 0.95rem;
             font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid rgba(212, 165, 165, 0.5);
         }
-        
-        .feedback {
+
+        .unlock-btn:hover {
+            background: linear-gradient(135deg, #9B6E6E 0%, #7B5050 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .message {
+            margin-top: 18px;
+            padding: 12px 18px;
+            border-radius: 20px;
+            display: none;
+            font-size: 0.9rem;
+        }
+
+        .message.success {
+            background: rgba(46, 125, 50, 0.15);
+            color: #A5D6A5;
+            border-left: 4px solid #81C784;
+            display: block;
+        }
+
+        .message.error {
+            background: rgba(198, 40, 40, 0.15);
+            color: #EF9A9A;
+            border-left: 4px solid #E57373;
+            display: block;
+        }
+
+        /* Subjects Grid */
+        .subjects-section {
+            background: linear-gradient(145deg, #4A2828 0%, #361A1A 100%);
+            border-radius: 30px;
+            padding: 28px 32px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            border: 1px solid rgba(194, 134, 134, 0.4);
+        }
+
+        .subjects-section h2 {
+            color: #D4A5A5;
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .subjects-section h2::before {
+            content: '📖';
             font-size: 1.3rem;
-            margin: 25px 0;
-            color: #e0e0f0;
-            line-height: 1.7;
-            padding: 25px;
-            background: rgba(155, 89, 182, 0.1);
-            border-radius: 12px;
-            border: 1px solid rgba(155, 89, 182, 0.3);
         }
-        
-        .submission-status {
-            margin-top: 25px;
-            padding: 20px;
-            background: linear-gradient(135deg, rgba(241, 196, 15, 0.2) 0%, rgba(243, 156, 18, 0.3) 100%);
-            border-radius: 12px;
-            color: #f1c40f;
+
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 22px;
+        }
+
+        .subject-card {
+            background: linear-gradient(145deg, #2E1818 0%, #241212 100%);
+            border-radius: 24px;
+            padding: 22px 18px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(139, 94, 94, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subject-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 165, 165, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .subject-card:hover::before {
+            left: 100%;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+            border-color: #C28686;
+        }
+
+        .subject-card.locked {
+            opacity: 0.7;
+        }
+
+        .subject-card.unlocked {
+            border-color: #D4A5A5;
+            background: linear-gradient(145deg, #3A2020 0%, #2E1616 100%);
+            box-shadow: 0 8px 20px rgba(212, 165, 165, 0.15);
+        }
+
+        .subject-icon {
+            font-size: 3.2rem;
+            margin-bottom: 12px;
+        }
+
+        .subject-name {
             font-size: 1.2rem;
-            border: 1px solid rgba(241, 196, 15, 0.5);
+            font-weight: 600;
+            color: #E8D0D0;
+            margin-bottom: 12px;
         }
-        
-        /* Responsive */
+
+        .lock-status {
+            font-size: 0.75rem;
+            margin: 10px 0;
+            padding: 5px 12px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        .lock-status.locked {
+            color: #EF9A9A;
+            background: rgba(229, 115, 115, 0.12);
+        }
+
+        .lock-status.unlocked {
+            color: #A5D6A5;
+            background: rgba(129, 199, 132, 0.12);
+        }
+
+        .take-test-btn {
+            background: linear-gradient(135deg, #8B5E5E 0%, #6B4040 100%);
+            color: #F2E0E0;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .take-test-btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #9B6E6E 0%, #7B5050 100%);
+            transform: translateY(-2px);
+        }
+
+        .take-test-btn:disabled {
+            background: #3A2828;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .footer {
+            margin-top: 35px;
+            text-align: center;
+            color: #9E8080;
+            font-size: 0.75rem;
+            padding: 20px;
+            border-top: 1px solid rgba(139, 94, 94, 0.3);
+        }
+
         @media (max-width: 768px) {
-            .question-grid {
-                grid-template-columns: repeat(5, 1fr);
-            }
-            
-            .exam-controls {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            
-            .navigation-buttons {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .btn {
-                width: 100%;
-                margin: 8px 0;
-            }
-            
-            .subject-title {
+            .school-name {
                 font-size: 1.8rem;
             }
-            
-            .question-text {
-                font-size: 1.2rem;
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+                align-items: center;
             }
-            
-            .container {
-                padding: 15px;
-                margin: 15px;
+            .teacher-controls {
+                flex-direction: column;
             }
-            
-            .welcome-message, .instructions, .exam-content {
+            .unlock-btn {
+                width: 100%;
+            }
+            .subjects-grid {
+                grid-template-columns: 1fr;
+            }
+            .teacher-section, .subjects-section {
                 padding: 20px;
             }
-        }
-        
-        @media (max-width: 480px) {
-            .question-grid {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 10px;
-            }
-            
-            .question-number {
-                width: 35px;
-                height: 35px;
-                font-size: 1rem;
-            }
-            
-            .subject-title {
-                font-size: 1.5rem;
-            }
-            
-            .results-container {
-                padding: 25px 15px;
-            }
-        }
-        
-        .back-home {
-            margin-top: 20px;
-            text-align: center;
-        }
-        
-        .loading {
-            display: none;
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .spinner {
-            border: 4px solid rgba(155, 89, 182, 0.3);
-            border-top: 4px solid #9b59b6;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
-                 alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title">SSS1 MATHEMATICS C.A TEST</h1>
-            <div class="exam-info">Third Term | 2025/2026 Session</div>
-            <div class="term-info">40 Questions | ½ Mark Each | Total: 20 Marks</div>
+        <!-- School Header - Complete information provided -->
+        <div class="school-header">
+            <div class="logo-row">
+                <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
+                     alt="The Trustworthy College Logo" class="school-logo" 
+                     onerror="this.src='https://via.placeholder.com/90x90?text=TTC'">
+            </div>
+            <h1 class="school-name">THE TRUSTWORTHY <span>COLLEGE</span></h1>
+            <div class="school-motto">"NURTURE FOR PIETY"</div>
+            <div class="contact-info">
+                <div>📞 08037376160</div>
+                <div>📞 08037173526</div>
+                <div>✉️ trustworthysch16@gmail.com</div>
+            </div>
+            <div class="address">
+                📍 No 1, CTCS Avenue, Coca-Cola Junction, Orimerunmu, Mowe, Ogun State
+            </div>
+            <div class="test-badge">
+                <h3>📚 THIRD TERM MID-TERM TEST | 2025/2026 ACADEMIC SESSION</h3>
+                <p>🔒 Teachers: Enter password to unlock subjects | Students: Click on unlocked subjects to begin</p>
+            </div>
         </div>
-        
-        <!-- Welcome Section -->
-        <section id="welcome-section" class="section active">
-            <div class="welcome-message">
-                "Welcome to The Trustworthy College Mathematics Continuous Assessment Test. This test covers Mensuration of Plane Shapes (Arc Length, Perimeter & Area of Sectors/Segments), Surface Areas and Volumes of Solids (Cube, Cuboid, Cylinder, Cone, Sphere, Hemisphere, Frustum), and Compound Solids. Demonstrate your understanding of mathematical principles and problem-solving. Best of luck."
+
+        <!-- Teacher Access Panel - Password field is hidden input type -->
+        <div class="teacher-section">
+            <h2>Teacher Access Panel</h2>
+            <div class="teacher-controls">
+                <div class="subject-select">
+                    <label>Select Subject</label>
+                    <select id="subjectSelect">
+                        <option value="mathematics">📐 Mathematics</option>
+                        <option value="english_language">📖 English Language</option>
+                        <option value="physics">⚡ Physics</option>
+                        <option value="chemistry">🧪 Chemistry</option>
+                        <option value="biology">🧬 Biology</option>
+                        <option value="economics">📊 Economics</option>
+                        <option value="government">🏛️ Government</option>
+                        <option value="civic_education">⚖️ Civic Education</option>
+                        <option value="lit_in_english">📚 Literature in English</option>
+                        <option value="yoruba">🗣️ Yoruba</option>
+                        <option value="islamic_studies">☪️ Islamic Studies</option>
+                        <option value="digital_technology">💻 Digital Technology</option>
+                        <option value="phonetics">🎤 Phonetics</option>
+                        <option value="phone_installment">📱 Phone Installment</option>
+                    </select>
+                </div>
+                <div class="password-input">
+                    <label>🔑 Master Password</label>
+                    <input type="password" id="subjectPassword" placeholder="Enter password">
+                </div>
+                <button class="unlock-btn" onclick="unlockSubject()">🔓 Unlock Subject</button>
             </div>
-            <div class="btn-container">
-                <button id="start-exam-btn" class="btn">Start C.A Test</button>
+            <div id="message" class="message"></div>
+        </div>
+
+        <!-- Available Subjects for Students -->
+        <div class="subjects-section">
+            <h2>Available Subjects</h2>
+            <div class="subjects-grid" id="subjectsGrid">
+                <!-- Subjects loaded dynamically -->
             </div>
-        </section>
-        
-        <!-- Student Information Section -->
-        <section id="student-info-section" class="section">
-            <h2>Student Information</h2>
-            <p>Please provide your details to continue with the test.</p>
-            
-            <form id="student-info-form" autocomplete="off">
-                <div class="form-group">
-                    <label for="first-name">First Name *</label>
-                    <input type="text" id="first-name" required placeholder="Enter your first name">
-                    <div class="error-message" id="first-name-error">First name is required</div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="middle-name">Middle Name *</label>
-                    <input type="text" id="middle-name" required placeholder="Enter your middle name">
-                    <div class="error-message" id="middle-name-error">Middle name is required</div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="last-name">Last Name *</label>
-                    <input type="text" id="last-name" required placeholder="Enter your last name">
-                    <div class="error-message" id="last-name-error">Last name is required</div>
-                </div>
-                
-                <div class="btn-container">
-                    <button type="button" id="back-to-welcome" class="btn btn-secondary">Back</button>
-                    <button type="button" id="continue-to-instructions" class="btn">Continue</button>
-                </div>
-            </form>
-        </section>
-        
-        <!-- Instructions Section -->
-        <section id="instructions-section" class="section">
-            <h2>Test Instructions</h2>
-            
-            <div class="instructions">
-                <h3>Important Notes:</h3>
-                <ul>
-                    <li>This C.A Test consists of <strong>40 multiple-choice questions</strong> covering Mensuration and Solid Geometry.</li>
-                    <li>Each question carries <strong>½ mark</strong>, giving a total of <strong>20 marks</strong>.</li>
-                    <li>You have <strong>40 minutes</strong> to complete this test.</li>
-                    <li>Answer all questions to the best of your ability.</li>
-                    <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
-                    <li>Answered questions will be marked with <strong>orange</strong> in the question grid.</li>
-                    <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
-                    <li>Ensure you have a stable internet connection throughout the test.</li>
-                    <li>Read each question carefully before selecting your answer.</li>
-                    <li>Your results will be submitted automatically upon completion.</li>
-                    <li><strong>Do not refresh the page</strong> during the test, or you may lose your progress.</li>
-                </ul>
-            </div>
-            
-            <div class="btn-container">
-                <button type="button" id="back-to-student-info" class="btn btn-secondary">Back</button>
-                <button type="button" id="begin-test" class="btn">Begin Test</button>
-            </div>
-        </section>
-        
-        <!-- Exam Interface Section -->
-        <section id="exam-section" class="section">
-            <div class="exam-header">
-                <div class="student-info" id="display-student-name"></div>
-                <div class="progress-container">
-                    <div class="progress-bar" id="progress-bar"></div>
-                </div>
-                <div class="progress-text" id="progress-text">Progress: 0/40 answered</div>
-                <div class="exam-controls">
-                    <div class="question-counter" id="question-counter">Question 1 of 40</div>
-                    <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">40:00</span>
-                    </div>
-                    <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success">Submit Test</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="exam-content">
-                <div class="question-text" id="question-text"></div>
-                
-                <div class="options-container" id="options-container">
-                    <!-- Options will be populated by JavaScript -->
-                </div>
-            </div>
-            
-            <div class="question-navigation">
-                <h3>Question Navigation</h3>
-                <div class="question-grid" id="question-grid">
-                    <!-- Question numbers will be populated by JavaScript -->
-                </div>
-                
-                <div class="navigation-buttons">
-                    <button type="button" id="prev-question" class="btn btn-secondary">← Previous</button>
-                    <button type="button" id="next-question" class="btn">Next →</button>
-                </div>
-            </div>
-            
-            <div class="loading" id="loading">
-                <div class="spinner"></div>
-                <p>Submitting your results...</p>
-            </div>
-        </section>
-        
-        <!-- Results Section -->
-        <section id="results-section" class="section">
-            <div class="results-container">
-                <h2>Test Completed</h2>
-                <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SSS1 Mathematics - Third Term C.A Test 2025/2026</div>
-                
-                <div class="results-score" id="results-score"></div>
-                <div class="results-percentage" id="results-percentage"></div>
-                
-                <div class="feedback" id="feedback-message">
-                    Thank you for completing the Mathematics C.A Test. Your results have been submitted successfully.
-                </div>
-                
-                <div class="submission-status" id="submission-status">
-                    Your test has been successfully submitted. Results will be communicated through appropriate channels.
-                </div>
-                
-                <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn">Take Another Test</button>
-                    <div class="back-home">
-                        <a href="../index.html" class="btn btn-secondary">Back to Home</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 The Trustworthy College | Excellence in Education, Integrity in Character</p>
+        </div>
     </div>
 
     <script>
-        // SSS1 MATHEMATICS - THIRD TERM C.A TEST 2025/2026
-        const originalQuestions = [
-            // Arc Length and Perimeter (Questions 1-2)
-            {
-                question: "The length of an arc subtending an angle of 60° in a circle of radius 21 cm is:",
-                options: ["11 cm", "22 cm", "33 cm", "44 cm"],
-                answer: "B"
-            },
-            {
-                question: "The perimeter of a semicircle of radius 14 cm is:",
-                options: ["44 cm", "72 cm", "88 cm", "132 cm"],
-                answer: "B"
-            },
-            
-            // Area of Sector and Segment (Questions 3-7)
-            {
-                question: "The area of a sector of angle 90° in a circle of radius 14 cm is:",
-                options: ["154 cm²", "308 cm²", "616 cm²", "77 cm²"],
-                answer: "A"
-            },
-            {
-                question: "A sector is a region bounded by:",
-                options: ["Two radii and an arc", "Two chords and an arc", "A chord and a radius", "Two diameters"],
-                answer: "A"
-            },
-            {
-                question: "A segment of a circle is bounded by:",
-                options: ["Two radii", "A chord and an arc", "Two diameters", "A tangent and a radius"],
-                answer: "B"
-            },
-            {
-                question: "The angle subtended at the centre by an arc of length 11 cm in a circle of radius 21 cm is:",
-                options: ["30°", "45°", "60°", "90°"],
-                answer: "A"
-            },
-            {
-                question: "The area of a semicircle of radius 14 cm is:",
-                options: ["154 cm²", "308 cm²", "616 cm²", "77 cm²"],
-                answer: "B"
-            },
-            
-            // Sector-Cone Relationship (Questions 8-10)
-            {
-                question: "A cone can be formed by folding:",
-                options: ["A circle", "A rectangle", "A sector", "A triangle"],
-                answer: "C"
-            },
-            {
-                question: "In the sector-cone relationship, the radius of the sector becomes the:",
-                options: ["Base radius of cone", "Height of cone", "Slant height of cone", "Diameter of cone"],
-                answer: "C"
-            },
-            {
-                question: "The arc length of a sector used to form a cone becomes the:",
-                options: ["Height of cone", "Circumference of cone base", "Diameter of cone", "Volume of cone"],
-                answer: "B"
-            },
-            
-            // Surface Area of Cone (Questions 11-12)
-            {
-                question: "The curved surface area of a cone is:",
-                options: ["πr²", "2πrh", "πrl", "πr²h"],
-                answer: "C"
-            },
-            {
-                question: "The total surface area of a cone is:",
-                options: ["πr² + πrl", "2πr²", "2πrh", "πrl"],
-                answer: "A"
-            },
-            
-            // Surface Area of Cube, Cuboid, Cylinder, Sphere, Hemisphere (Questions 13-18)
-            {
-                question: "The total surface area of a cube of side 5 cm is:",
-                options: ["25 cm²", "100 cm²", "150 cm²", "125 cm²"],
-                answer: "C"
-            },
-            {
-                question: "The surface area of a cuboid measuring 4 cm × 3 cm × 2 cm is:",
-                options: ["52 cm²", "48 cm²", "24 cm²", "72 cm²"],
-                answer: "A"
-            },
-            {
-                question: "The curved surface area of a cylinder is:",
-                options: ["πr²", "2πrh", "πrl", "2πr²"],
-                answer: "B"
-            },
-            {
-                question: "The total surface area of a cylinder is:",
-                options: ["2πr(h+r)", "πr²h", "πrh", "πr²"],
-                answer: "A"
-            },
-            {
-                question: "The total surface area of a sphere of radius r is:",
-                options: ["2πr²", "3πr²", "4πr²", "6πr²"],
-                answer: "C"
-            },
-            {
-                question: "The total surface area of a hemisphere is:",
-                options: ["2πr²", "3πr²", "4πr²", "πr²"],
-                answer: "B"
-            },
-            
-            // Volume of Cube, Cuboid, Cylinder (Questions 19-21)
-            {
-                question: "The volume of a cube of side 6 cm is:",
-                options: ["36 cm³", "72 cm³", "216 cm³", "144 cm³"],
-                answer: "C"
-            },
-            {
-                question: "The volume of a cuboid 8 cm × 4 cm × 3 cm is:",
-                options: ["96 cm³", "64 cm³", "84 cm³", "72 cm³"],
-                answer: "A"
-            },
-            {
-                question: "The volume of a cylinder of radius 7 cm and height 10 cm is:",
-                options: ["1540 cm³", "770 cm³", "490 cm³", "980 cm³"],
-                answer: "A"
-            },
-            
-            // Volume of Cone, Sphere, Hemisphere (Questions 22-25)
-            {
-                question: "The volume of a cone is:",
-                options: ["πr²h", "½πr²h", "⅓πr²h", "¼πr²h"],
-                answer: "C"
-            },
-            {
-                question: "The volume of a sphere is:",
-                options: ["4πr³", "⅔πr³", "⁴⁄₃πr³", "πr³"],
-                answer: "C"
-            },
-            {
-                question: "The volume of a hemisphere is:",
-                options: ["⁴⁄₃πr³", "⅔πr³", "πr³", "⅓πr³"],
-                answer: "B"
-            },
-            {
-                question: "A cone and a cylinder having the same base radius and height are related by:",
-                options: ["Cone volume = Cylinder volume", "Cone volume = 2 × Cylinder volume", "Cone volume = ⅓ Cylinder volume", "Cone volume = ½ Cylinder volume"],
-                answer: "C"
-            },
-            
-            // Frustum (Questions 26-28)
-            {
-                question: "A frustum is obtained when:",
-                options: ["A cone is stretched", "The top of a cone is cut off parallel to the base", "Two cones are joined together", "A cylinder is divided"],
-                answer: "B"
-            },
-            {
-                question: "A frustum of a cone has:",
-                options: ["One circular face", "No circular face", "Two parallel circular faces", "Three circular faces"],
-                answer: "C"
-            },
-            {
-                question: "The volume of a frustum depends on:",
-                options: ["Only its height", "Only its radii", "Height and radii of both ends", "Diameter only"],
-                answer: "C"
-            },
-            
-            // Compound Solids (Questions 29-30)
-            {
-                question: "Which of the following is a compound solid?",
-                options: ["Cube", "Sphere", "Cylinder", "Cylinder joined to a hemisphere"],
-                answer: "D"
-            },
-            {
-                question: "The volume of a compound solid is obtained by:",
-                options: ["Multiplying all dimensions together", "Adding or subtracting volumes of simple solids", "Squaring dimensions", "Finding surface area only"],
-                answer: "B"
-            },
-            
-            // Calculation Problems (Questions 31-35)
-            {
-                question: "The slant height of a cone of radius 5 cm and height 12 cm is:",
-                options: ["11 cm", "12 cm", "13 cm", "17 cm"],
-                answer: "C"
-            },
-            {
-                question: "The volume of a cone of radius 3 cm and height 7 cm is: (Take π = 22/7)",
-                options: ["66 cm³", "22 cm³", "44 cm³", "88 cm³"],
-                answer: "A"
-            },
-            {
-                question: "The volume of a sphere of radius 3 cm is approximately: (Take π = 3.14)",
-                options: ["113 cm³", "36 cm³", "226 cm³", "452 cm³"],
-                answer: "A"
-            },
-            {
-                question: "The curved surface area of a cylinder of radius 7 cm and height 10 cm is: (Take π = 22/7)",
-                options: ["440 cm²", "220 cm²", "154 cm²", "308 cm²"],
-                answer: "A"
-            },
-            {
-                question: "The total surface area of a cube with side 8 cm is:",
-                options: ["256 cm²", "384 cm²", "512 cm²", "768 cm²"],
-                answer: "B"
-            },
-            
-            // Circle Properties (Questions 36-37)
-            {
-                question: "A major sector is one whose central angle is:",
-                options: ["Less than 90°", "Less than 180°", "Greater than 180°", "Equal to 180°"],
-                answer: "C"
-            },
-            {
-                question: "A minor segment is smaller than:",
-                options: ["A sector of the same circle", "A major segment of the same circle", "A radius", "A diameter"],
-                answer: "B"
-            },
-            
-            // Ratios and Formulas (Questions 38-40)
-            {
-                question: "The ratio of the volume of a sphere to that of a hemisphere of the same radius is:",
-                options: ["1 : 2", "2 : 1", "3 : 1", "4 : 1"],
-                answer: "B"
-            },
-            {
-                question: "The formula for the volume of a cylinder is:",
-                options: ["πr²h", "⅓πr²h", "2πrh", "πrl"],
-                answer: "A"
-            },
-            {
-                question: "The formula for the volume of a sphere is:",
-                options: ["πr²", "2πr²", "⁴⁄₃πr³", "πr³"],
-                answer: "C"
-            }
-        ];
-
-        // Application state
-        let currentQuestionIndex = 0;
-        let userAnswers = [];
-        let studentName = "";
-        let timerInterval;
-        let timeLeft = 40 * 60; // 40 minutes in seconds
-        let questions = [];
-        let examStarted = false;
-
-        // Background images for rotation
-        const backgroundImages = [
-            'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80',
-            'https://images.unsplash.com/photo-1558021212-51b6ecfa0db1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2083&q=80'
-        ];
-
-        // DOM elements
-        const sections = {
-            welcome: document.getElementById('welcome-section'),
-            studentInfo: document.getElementById('student-info-section'),
-            instructions: document.getElementById('instructions-section'),
-            exam: document.getElementById('exam-section'),
-            results: document.getElementById('results-section')
+        // ==================== MASTER PASSWORD ====================
+        const MASTER_PASSWORD = "2TS@2026";
+        
+        // All subjects
+        const subjectDetails = {
+            mathematics: { name: "Mathematics", icon: "📐", path: "mathematics/index.html" },
+            english_language: { name: "English Language", icon: "📖", path: "english_language/index.html" },
+            physics: { name: "Physics", icon: "⚡", path: "physics/index.html" },
+            chemistry: { name: "Chemistry", icon: "🧪", path: "chemistry/index.html" },
+            biology: { name: "Biology", icon: "🧬", path: "biology/index.html" },
+            economics: { name: "Economics", icon: "📊", path: "economics/index.html" },
+            government: { name: "Government", icon: "🏛️", path: "government/index.html" },
+            civic_education: { name: "Civic Education", icon: "⚖️", path: "civic_education/index.html" },
+            lit_in_english: { name: "Literature in English", icon: "📚", path: "lit_in_english/index.html" },
+            yoruba: { name: "Yoruba", icon: "🗣️", path: "yoruba/index.html" },
+            islamic_studies: { name: "Islamic Studies", icon: "☪️", path: "islamic_studies/index.html" },
+            digital_technology: { name: "Digital Technology", icon: "💻", path: "digital_technology/index.html" },
+            phonetics: { name: "Phonetics", icon: "🎤", path: "phonetics/index.html" },
+            phone_installment: { name: "Phone Installment", icon: "📱", path: "phone_installment/index.html" }
         };
 
-        // Initialize background rotation
-        let currentBgIndex = 0;
-        function rotateBackground() {
-            currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
-            document.body.style.backgroundImage = `url('${backgroundImages[currentBgIndex]}')`;
-        }
-        setInterval(rotateBackground, 10000);
+        // Track unlocked subjects
+        let unlockedSubjects = JSON.parse(localStorage.getItem('trustworthy_unlocked')) || {};
 
-        // Shuffle questions
-        function shuffleQuestions() {
-            questions = [...originalQuestions];
-            for (let i = questions.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [questions[i], questions[j]] = [questions[j], questions[i]];
-            }
-            userAnswers = Array(questions.length).fill(null);
-        }
+        function unlockSubject() {
+            const subject = document.getElementById('subjectSelect').value;
+            const password = document.getElementById('subjectPassword').value;
+            const messageDiv = document.getElementById('message');
 
-        // Timer function
-        function startTimer() {
-            clearInterval(timerInterval);
-            timeLeft = 40 * 60;
-            
-            document.getElementById('timer-container').style.display = 'block';
-            document.getElementById('submit-container').style.display = 'block';
-            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%)';
-            
-            timerInterval = setInterval(() => {
-                timeLeft--;
+            if (password === MASTER_PASSWORD) {
+                unlockedSubjects[subject] = true;
+                localStorage.setItem('trustworthy_unlocked', JSON.stringify(unlockedSubjects));
                 
-                const minutes = Math.floor(timeLeft / 60);
-                const seconds = timeLeft % 60;
+                messageDiv.className = 'message success';
+                messageDiv.innerHTML = `✅ ${subjectDetails[subject].name} has been unlocked! Students can now take this test.`;
                 
-                document.getElementById('timer').textContent = 
-                    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                document.getElementById('subjectPassword').value = '';
+                renderSubjects();
                 
-                // Visual warnings for time
-                if (timeLeft <= 0) {
-                    clearInterval(timerInterval);
-                    alert("Time's up! Your test will be submitted automatically.");
-                    calculateScore();
-                } else if (timeLeft <= 300) { // 5 minutes left
-                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
-                } else if (timeLeft <= 600) { // 10 minutes left
-                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
-                }
-            }, 1000);
-        }
-
-        // Pause timer when tab is hidden
-        document.addEventListener('visibilitychange', () => {
-            if (!examStarted) return;
-            
-            if (document.hidden) {
-                clearInterval(timerInterval);
-            } else {
-                // Resume timer only if exam is still active
-                if (document.getElementById('exam-section').classList.contains('active') && timeLeft > 0) {
-                    timerInterval = setInterval(() => {
-                        timeLeft--;
-                        const minutes = Math.floor(timeLeft / 60);
-                        const seconds = timeLeft % 60;
-                        document.getElementById('timer').textContent = 
-                            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-                        
-                        if (timeLeft <= 0) {
-                            clearInterval(timerInterval);
-                            alert("Time's up! Your test will be submitted automatically.");
-                            calculateScore();
-                        }
-                    }, 1000);
-                }
-            }
-        });
-
-        // Warn before leaving
-        window.addEventListener('beforeunload', (e) => {
-            if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
-                e.preventDefault();
-                e.returnValue = 'You have an ongoing test. Are you sure you want to leave? Your progress may be lost.';
-                return e.returnValue;
-            }
-        });
-
-        // Navigation functions
-        function showSection(sectionName) {
-            Object.values(sections).forEach(section => {
-                section.classList.remove('active');
-            });
-            sections[sectionName].classList.add('active');
-            
-            if (sectionName !== 'exam') {
-                document.getElementById('timer-container').style.display = 'none';
-                document.getElementById('submit-container').style.display = 'none';
-            }
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Update progress
-        function updateProgress() {
-            const answeredCount = userAnswers.filter(answer => answer !== null).length;
-            const percentage = (answeredCount / questions.length) * 100;
-            
-            document.getElementById('progress-bar').style.width = percentage + '%';
-            document.getElementById('progress-text').textContent = 
-                `Progress: ${answeredCount}/${questions.length} answered`;
-        }
-
-        // Event listeners
-        document.getElementById('start-exam-btn').addEventListener('click', () => {
-            showSection('studentInfo');
-        });
-
-        document.getElementById('back-to-welcome').addEventListener('click', () => {
-            showSection('welcome');
-        });
-
-        document.getElementById('continue-to-instructions').addEventListener('click', () => {
-            const firstName = document.getElementById('first-name').value.trim();
-            const middleName = document.getElementById('middle-name').value.trim();
-            const lastName = document.getElementById('last-name').value.trim();
-            
-            let isValid = true;
-            
-            if (!firstName) {
-                document.getElementById('first-name-error').style.display = 'block';
-                document.getElementById('first-name').style.borderColor = '#ff6b6b';
-                isValid = false;
-            } else {
-                document.getElementById('first-name-error').style.display = 'none';
-                document.getElementById('first-name').style.borderColor = '#5d7e9e';
-            }
-            
-            if (!middleName) {
-                document.getElementById('middle-name-error').style.display = 'block';
-                document.getElementById('middle-name').style.borderColor = '#ff6b6b';
-                isValid = false;
-            } else {
-                document.getElementById('middle-name-error').style.display = 'none';
-                document.getElementById('middle-name').style.borderColor = '#5d7e9e';
-            }
-            
-            if (!lastName) {
-                document.getElementById('last-name-error').style.display = 'block';
-                document.getElementById('last-name').style.borderColor = '#ff6b6b';
-                isValid = false;
-            } else {
-                document.getElementById('last-name-error').style.display = 'none';
-                document.getElementById('last-name').style.borderColor = '#5d7e9e';
-            }
-            
-            if (isValid) {
-                studentName = `${firstName} ${middleName} ${lastName}`;
-                showSection('instructions');
-            }
-        });
-
-        document.getElementById('back-to-student-info').addEventListener('click', () => {
-            showSection('studentInfo');
-        });
-
-        document.getElementById('begin-test').addEventListener('click', () => {
-            shuffleQuestions();
-            currentQuestionIndex = 0;
-            examStarted = true;
-            
-            document.getElementById('display-student-name').textContent = studentName;
-            document.getElementById('results-student-name').textContent = studentName;
-            
-            createQuestionGrid();
-            loadQuestion(currentQuestionIndex);
-            startTimer();
-            updateProgress();
-            showSection('exam');
-        });
-
-        document.getElementById('prev-question').addEventListener('click', () => {
-            if (currentQuestionIndex > 0) {
-                currentQuestionIndex--;
-                loadQuestion(currentQuestionIndex);
-            }
-        });
-
-        document.getElementById('next-question').addEventListener('click', () => {
-            if (currentQuestionIndex < questions.length - 1) {
-                currentQuestionIndex++;
-                loadQuestion(currentQuestionIndex);
-            }
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (!document.getElementById('exam-section').classList.contains('active')) return;
-            
-            if (e.key === 'ArrowLeft' && currentQuestionIndex > 0) {
-                e.preventDefault();
-                currentQuestionIndex--;
-                loadQuestion(currentQuestionIndex);
-            } else if (e.key === 'ArrowRight' && currentQuestionIndex < questions.length - 1) {
-                e.preventDefault();
-                currentQuestionIndex++;
-                loadQuestion(currentQuestionIndex);
-            } else if (e.key === 'A' || e.key === 'a' || e.key === '1') {
-                selectOptionByKey(0);
-            } else if (e.key === 'B' || e.key === 'b' || e.key === '2') {
-                selectOptionByKey(1);
-            } else if (e.key === 'C' || e.key === 'c' || e.key === '3') {
-                selectOptionByKey(2);
-            } else if (e.key === 'D' || e.key === 'd' || e.key === '4') {
-                selectOptionByKey(3);
-            }
-        });
-
-        function selectOptionByKey(optionIndex) {
-            const radioButtons = document.querySelectorAll(`input[name="question-${currentQuestionIndex}"]`);
-            if (radioButtons[optionIndex]) {
-                radioButtons[optionIndex].checked = true;
-                userAnswers[currentQuestionIndex] = String.fromCharCode(65 + optionIndex);
-                updateQuestionGrid();
-                updateProgress();
-            }
-        }
-
-        document.getElementById('submit-exam').addEventListener('click', () => {
-            const unanswered = userAnswers.filter(a => a === null).length;
-            let confirmMessage = "Are you sure you want to submit? You will not be able to change your answers after this.";
-            
-            if (unanswered > 0) {
-                confirmMessage += `\n\nWarning: You have ${unanswered} unanswered question(s).`;
-            }
-            
-            const confirmed = confirm(confirmMessage);
-            
-            if (confirmed) {
-                clearInterval(timerInterval);
-                examStarted = false;
-                document.getElementById('loading').style.display = 'block';
                 setTimeout(() => {
-                    calculateScore();
-                }, 1500);
-            }
-        });
-
-        document.getElementById('restart-exam').addEventListener('click', () => {
-            clearInterval(timerInterval);
-            examStarted = false;
-            document.getElementById('first-name').value = '';
-            document.getElementById('middle-name').value = '';
-            document.getElementById('last-name').value = '';
-            showSection('welcome');
-        });
-
-        function createQuestionGrid() {
-            const questionGrid = document.getElementById('question-grid');
-            questionGrid.innerHTML = '';
-            
-            for (let i = 0; i < questions.length; i++) {
-                const questionNumber = document.createElement('div');
-                questionNumber.className = 'question-number';
-                questionNumber.textContent = i + 1;
-                questionNumber.dataset.index = i;
-                questionNumber.title = `Question ${i + 1}`;
-                
-                if (userAnswers[i] !== null) {
-                    questionNumber.classList.add('answered');
-                }
-                
-                if (i === currentQuestionIndex) {
-                    questionNumber.classList.add('current');
-                }
-                
-                questionNumber.addEventListener('click', () => {
-                    currentQuestionIndex = parseInt(questionNumber.dataset.index);
-                    loadQuestion(currentQuestionIndex);
-                });
-                
-                questionGrid.appendChild(questionNumber);
-            }
-        }
-
-        function updateQuestionGrid() {
-            const questionNumbers = document.querySelectorAll('.question-number');
-            
-            questionNumbers.forEach((number, index) => {
-                number.classList.remove('current');
-                number.classList.remove('answered');
-                
-                if (index === currentQuestionIndex) {
-                    number.classList.add('current');
-                }
-                
-                if (userAnswers[index] !== null) {
-                    number.classList.add('answered');
-                }
-            });
-        }
-
-        function loadQuestion(index) {
-            const question = questions[index];
-            
-            document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
-            document.getElementById('question-text').textContent = question.question;
-            
-            const optionsContainer = document.getElementById('options-container');
-            optionsContainer.innerHTML = '';
-            
-            const labels = ['A', 'B', 'C', 'D'];
-            
-            question.options.forEach((option, optionIndex) => {
-                const optionDiv = document.createElement('div');
-                optionDiv.className = 'option';
-                
-                const optionId = `option-${index}-${optionIndex}`;
-                
-                const radio = document.createElement('input');
-                radio.type = 'radio';
-                radio.name = `question-${index}`;
-                radio.id = optionId;
-                radio.value = labels[optionIndex];
-                
-                if (userAnswers[index] === radio.value) {
-                    radio.checked = true;
-                }
-                
-                radio.addEventListener('change', () => {
-                    userAnswers[index] = radio.value;
-                    updateQuestionGrid();
-                    updateProgress();
-                });
-                
-                const label = document.createElement('label');
-                label.htmlFor = optionId;
-                label.textContent = `${labels[optionIndex]}. ${option}`;
-                
-                // Make entire option div clickable
-                optionDiv.addEventListener('click', (e) => {
-                    if (e.target !== radio) {
-                        radio.checked = true;
-                        userAnswers[index] = radio.value;
-                        updateQuestionGrid();
-                        updateProgress();
-                    }
-                });
-                
-                optionDiv.appendChild(radio);
-                optionDiv.appendChild(label);
-                optionsContainer.appendChild(optionDiv);
-            });
-            
-            document.getElementById('prev-question').disabled = index === 0;
-            document.getElementById('next-question').disabled = index === questions.length - 1;
-            
-            updateQuestionGrid();
-            updateProgress();
-            
-            // Scroll to top of question
-            document.querySelector('.exam-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        function calculateScore() {
-            document.getElementById('loading').style.display = 'none';
-            let score = 0;
-            
-            for (let i = 0; i < questions.length; i++) {
-                if (userAnswers[i] === questions[i].answer) {
-                    score++;
-                }
-            }
-            
-            // Calculate half marks (each question is ½ mark)
-            const totalMarks = score * 0.5;
-            const percentage = (score / questions.length) * 100;
-            
-            document.getElementById('results-score').textContent = `Score: ${totalMarks} / 20`;
-            document.getElementById('results-percentage').textContent = `(${score}/40 correct answers - ${percentage.toFixed(1)}%)`;
-            
-            // Add performance-based feedback
-            let feedbackExtra = '';
-            if (percentage >= 90) {
-                feedbackExtra = 'Excellent performance! Keep up the outstanding work! 🌟';
-            } else if (percentage >= 75) {
-                feedbackExtra = 'Very good performance! You have a solid understanding of the topics. 👏';
-            } else if (percentage >= 60) {
-                feedbackExtra = 'Good effort! Review the topics you found challenging. 📚';
-            } else if (percentage >= 45) {
-                feedbackExtra = 'Fair attempt. More practice is needed on mensuration and solid geometry. 💪';
+                    messageDiv.style.display = 'none';
+                    setTimeout(() => messageDiv.className = 'message', 200);
+                }, 3000);
             } else {
-                feedbackExtra = 'You need to revisit these topics thoroughly. Don\'t give up! 📖';
+                messageDiv.className = 'message error';
+                messageDiv.innerHTML = '❌ Incorrect password. Access denied.';
+                
+                setTimeout(() => {
+                    messageDiv.style.display = 'none';
+                    setTimeout(() => messageDiv.className = 'message', 200);
+                }, 3000);
             }
-            
-            document.getElementById('feedback-message').textContent = 
-                `Thank you for completing the Mathematics C.A Test. ${feedbackExtra}`;
-            
-            submitToGoogleForm(studentName, "SSS1 Mathematics - Third Term C.A Test 2025/2026", `${totalMarks}/20`);
-            document.getElementById('submission-status').style.display = 'block';
-            showSection('results');
         }
 
-        function submitToGoogleForm(fullName, subject, score) {
-            const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
-            const formData = new FormData();
-            formData.append("entry.862885683", fullName);
-            formData.append("entry.1545021484", "SSS1");
-            formData.append("entry.1558221900", subject);
-            formData.append("entry.2022160530", score);
-
-            fetch(formURL, {
-                method: "POST",
-                mode: "no-cors",
-                body: formData
-            }).catch(err => console.warn("Form submission:", err));
+        function renderSubjects() {
+            const grid = document.getElementById('subjectsGrid');
+            grid.innerHTML = '';
+            
+            const subjects = Object.keys(subjectDetails);
+            
+            subjects.forEach(subjectKey => {
+                const details = subjectDetails[subjectKey];
+                const isUnlocked = unlockedSubjects[subjectKey] === true;
+                
+                const card = document.createElement('div');
+                card.className = `subject-card ${isUnlocked ? 'unlocked' : 'locked'}`;
+                const statusText = isUnlocked ? '✓ Unlocked' : '🔒 Locked';
+                const statusClass = isUnlocked ? 'unlocked' : 'locked';
+                
+                card.innerHTML = `
+                    <div class="subject-icon">${details.icon}</div>
+                    <div class="subject-name">${details.name}</div>
+                    <div class="lock-status ${statusClass}">${statusText}</div>
+                    <button class="take-test-btn" onclick="takeTest('${subjectKey}')" ${!isUnlocked ? 'disabled' : ''}>
+                        ${isUnlocked ? '📝 Take Test' : '🔒 Locked'}
+                    </button>
+                `;
+                
+                grid.appendChild(card);
+            });
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('first-name').focus();
+        function takeTest(subjectKey) {
+            if (unlockedSubjects[subjectKey] === true) {
+                window.location.href = subjectDetails[subjectKey].path;
+            } else {
+                alert(`❌ ${subjectDetails[subjectKey].name} is locked. Please ask your teacher to unlock it.`);
+            }
+        }
+
+        // Hidden reset: Press R three times
+        let resetCount = 0;
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'r' || e.key === 'R') {
+                resetCount++;
+                if (resetCount === 3) {
+                    if (confirm('⚠️ Reset all subject locks? Teachers will need to re-enter password.')) {
+                        unlockedSubjects = {};
+                        localStorage.setItem('trustworthy_unlocked', JSON.stringify(unlockedSubjects));
+                        renderSubjects();
+                        alert('✅ All subjects locked again.');
+                    }
+                    resetCount = 0;
+                }
+                setTimeout(() => { resetCount = 0; }, 2000);
+            }
         });
+
+        renderSubjects();
+        console.log('Portal Ready | Password: 2TS@2026');
     </script>
 </body>
 </html>
