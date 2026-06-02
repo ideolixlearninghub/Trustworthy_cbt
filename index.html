@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Mid-Term Test Portal | 2025/2026</title>
+    <title>The Trustworthy College | Mid-Term Test Portal 2025/2026</title>
     <style>
         * {
             margin: 0;
@@ -12,13 +12,14 @@
         }
 
         body {
-            font-family: 'Georgia', 'Times New Roman', 'Segoe UI', serif;
-            background: linear-gradient(135deg, #3E2723 0%, #4A2C2A 50%, #6D4C41 100%);
+            font-family: 'Poppins', 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+            background: #0f0c0e;
             min-height: 100vh;
-            padding: 30px 20px;
             position: relative;
+            overflow-x: hidden;
         }
 
+        /* Animated gradient background */
         body::before {
             content: '';
             position: fixed;
@@ -26,275 +27,401 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 20% 30%, rgba(198, 108, 108, 0.08) 0%, rgba(62, 39, 35, 0.2) 100%);
+            background: radial-gradient(ellipse at 20% 30%, #2a1a1a 0%, #0d0808 100%);
+            z-index: -2;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(45deg, rgba(180, 110, 110, 0.02) 0px, rgba(180, 110, 110, 0.02) 2px, transparent 2px, transparent 8px);
             pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Floating particles animation */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(212, 150, 150, 0.4);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.5;
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
         }
 
         .container {
-            max-width: 1300px;
+            max-width: 1400px;
             margin: 0 auto;
+            padding: 30px 25px;
+            position: relative;
+            z-index: 2;
         }
 
-        /* School Header - Premium Design */
+        /* ========== SCHOOL HEADER ========== */
         .school-header {
-            background: linear-gradient(145deg, #5D2E2E 0%, #3E1A1A 100%);
-            border-radius: 40px;
-            padding: 30px 35px;
+            background: linear-gradient(135deg, rgba(40, 20, 20, 0.95) 0%, rgba(25, 12, 12, 0.95) 100%);
+            backdrop-filter: blur(20px);
+            border-radius: 48px;
+            padding: 35px 40px;
             margin-bottom: 35px;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
-            border: 1px solid rgba(218, 128, 128, 0.3);
+            border: 1px solid rgba(200, 130, 130, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
             position: relative;
+            overflow: hidden;
         }
 
         .school-header::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #D4A5A5, #C28686, #A05C5C, #C28686, #D4A5A5);
-            border-radius: 40px 40px 0 0;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(200, 130, 130, 0.08) 0%, transparent 70%);
+            animation: slowRotate 20s linear infinite;
         }
 
-        .logo-row {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 15px;
+        @keyframes slowRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .logo-wrapper {
+            position: relative;
+            display: inline-block;
         }
 
         .school-logo {
-            width: 90px;
-            height: 90px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             border: 3px solid #D4A5A5;
-            padding: 5px;
-            background: #2E1414;
+            padding: 6px;
+            background: #1a0e0e;
             object-fit: cover;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .school-logo:hover {
+            transform: scale(1.05);
+            border-color: #E8C0C0;
         }
 
         .school-name {
-            font-size: 2.8rem;
+            font-size: 3rem;
             font-weight: 800;
-            color: #F2E0E0;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            background: linear-gradient(135deg, #F2E0E0 0%, #D4A5A5 50%, #B88686 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
             letter-spacing: 2px;
+            margin-top: 20px;
             margin-bottom: 8px;
         }
 
         .school-name span {
-            color: #D4A5A5;
             font-weight: 300;
+            background: linear-gradient(135deg, #D4A5A5 0%, #C28686 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
-        .school-motto {
-            font-size: 1.1rem;
-            color: #D4A5A5;
+        .motto {
+            font-size: 1rem;
+            color: #C9A9A9;
             font-style: italic;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            border-top: 1px dashed rgba(212, 165, 165, 0.4);
-            border-bottom: 1px dashed rgba(212, 165, 165, 0.4);
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            border-top: 1px dashed rgba(200, 130, 130, 0.4);
+            border-bottom: 1px dashed rgba(200, 130, 130, 0.4);
             display: inline-block;
             padding: 8px 25px;
         }
 
-        .contact-info {
+        .contact-bar {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 25px;
-            margin-bottom: 12px;
-            font-size: 0.9rem;
-            color: #C9A9A9;
+            gap: 30px;
+            margin: 15px 0 10px;
         }
 
-        .contact-info div {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .address {
-            color: #BFA0A0;
-            font-size: 0.85rem;
-            margin-top: 5px;
-        }
-
-        .test-badge {
-            background: rgba(62, 26, 26, 0.7);
-            border-radius: 30px;
-            padding: 10px 20px;
-            margin-top: 15px;
-            display: inline-block;
-            border: 1px solid #C28686;
-        }
-
-        .test-badge h3 {
-            color: #D4A5A5;
-            font-size: 1rem;
-        }
-
-        .test-badge p {
-            color: #C9A9A9;
-            font-size: 0.8rem;
-        }
-
-        /* Teacher Section - Elegant */
-        .teacher-section {
-            background: linear-gradient(145deg, #4A2828 0%, #361A1A 100%);
-            border-radius: 30px;
-            padding: 28px 32px;
-            margin-bottom: 35px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-            border: 1px solid rgba(194, 134, 134, 0.4);
-        }
-
-        .teacher-section h2 {
-            color: #D4A5A5;
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-            font-weight: 500;
-            letter-spacing: 1px;
+        .contact-item {
             display: flex;
             align-items: center;
             gap: 10px;
+            color: #BFA0A0;
+            font-size: 0.85rem;
+            background: rgba(200, 130, 130, 0.08);
+            padding: 6px 16px;
+            border-radius: 40px;
+            backdrop-filter: blur(5px);
         }
 
-        .teacher-section h2::before {
-            content: '🔐';
-            font-size: 1.3rem;
+        .address {
+            color: #9E8080;
+            font-size: 0.8rem;
+            margin-top: 10px;
+            letter-spacing: 0.5px;
         }
 
-        .teacher-controls {
+        .session-badge {
+            background: linear-gradient(135deg, rgba(200, 130, 130, 0.15) 0%, rgba(180, 100, 100, 0.1) 100%);
+            border-radius: 60px;
+            padding: 12px 25px;
+            margin-top: 20px;
+            display: inline-block;
+            border: 1px solid rgba(200, 130, 130, 0.3);
+        }
+
+        .session-badge h3 {
+            color: #D4A5A5;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .session-badge p {
+            color: #BFA0A0;
+            font-size: 0.75rem;
+        }
+
+        /* ========== TEACHER SECTION ========== */
+        .teacher-card {
+            background: rgba(30, 18, 18, 0.9);
+            backdrop-filter: blur(20px);
+            border-radius: 32px;
+            padding: 28px 32px;
+            margin-bottom: 35px;
+            border: 1px solid rgba(200, 130, 130, 0.25);
+            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.4);
+            transition: all 0.3s ease;
+        }
+
+        .teacher-card:hover {
+            border-color: rgba(200, 130, 130, 0.5);
+            box-shadow: 0 25px 50px -15px rgba(0,0,0,0.5);
+        }
+
+        .teacher-header {
             display: flex;
-            gap: 18px;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .teacher-header .icon {
+            font-size: 1.8rem;
+        }
+
+        .teacher-header h2 {
+            color: #D4A5A5;
+            font-size: 1.3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .teacher-header p {
+            color: #8B6B6B;
+            font-size: 0.75rem;
+            margin-left: auto;
+        }
+
+        .unlock-panel {
+            display: flex;
+            gap: 20px;
             flex-wrap: wrap;
             align-items: flex-end;
         }
 
-        .subject-select {
-            flex: 2;
+        .input-group {
+            flex: 1;
             min-width: 220px;
         }
 
-        .password-input {
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .subject-select label, .password-input label {
+        .input-group label {
             display: block;
             margin-bottom: 8px;
-            color: #C9A9A9;
+            color: #BFA0A0;
+            font-size: 0.8rem;
             font-weight: 500;
-            font-size: 0.85rem;
             letter-spacing: 0.5px;
         }
 
-        .subject-select select, .password-input input {
+        .input-group select, .input-group input {
             width: 100%;
-            padding: 14px 16px;
-            background: #2A1515;
-            border: 1.5px solid #8B5E5E;
-            border-radius: 16px;
-            font-size: 0.95rem;
-            color: #F2E0E0;
+            padding: 14px 18px;
+            background: #1a0f0f;
+            border: 1.5px solid #4a2a2a;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #E8D0D0;
             transition: all 0.3s;
             cursor: pointer;
+            font-family: inherit;
         }
 
-        .subject-select select:focus, .password-input input:focus {
+        .input-group select:focus, .input-group input:focus {
             border-color: #D4A5A5;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(212, 165, 165, 0.2);
+            box-shadow: 0 0 0 3px rgba(212, 165, 165, 0.15);
         }
 
-        .password-input input {
-            font-family: monospace;
+        .input-group input {
+            font-family: 'Courier New', monospace;
             letter-spacing: 2px;
         }
 
-        .unlock-btn {
-            background: linear-gradient(135deg, #8B5E5E 0%, #6B4040 100%);
-            color: #F2E0E0;
+        .unlock-action {
+            background: linear-gradient(135deg, #7a4a4a 0%, #5a3535 100%);
             border: none;
             padding: 14px 32px;
             border-radius: 40px;
-            font-size: 0.95rem;
+            color: #F2E0E0;
             font-weight: 600;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.3s;
-            border: 1px solid rgba(212, 165, 165, 0.5);
-        }
-
-        .unlock-btn:hover {
-            background: linear-gradient(135deg, #9B6E6E 0%, #7B5050 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-
-        .message {
-            margin-top: 18px;
-            padding: 12px 18px;
-            border-radius: 20px;
-            display: none;
-            font-size: 0.9rem;
-        }
-
-        .message.success {
-            background: rgba(46, 125, 50, 0.15);
-            color: #A5D6A5;
-            border-left: 4px solid #81C784;
-            display: block;
-        }
-
-        .message.error {
-            background: rgba(198, 40, 40, 0.15);
-            color: #EF9A9A;
-            border-left: 4px solid #E57373;
-            display: block;
-        }
-
-        /* Subjects Grid */
-        .subjects-section {
-            background: linear-gradient(145deg, #4A2828 0%, #361A1A 100%);
-            border-radius: 30px;
-            padding: 28px 32px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-            border: 1px solid rgba(194, 134, 134, 0.4);
-        }
-
-        .subjects-section h2 {
-            color: #D4A5A5;
-            font-size: 1.4rem;
-            margin-bottom: 25px;
-            font-weight: 500;
-            letter-spacing: 1px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .subjects-section h2::before {
-            content: '📖';
+        .unlock-action:hover {
+            background: linear-gradient(135deg, #8a5a5a 0%, #6a4545 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .toast-message {
+            margin-top: 20px;
+            padding: 12px 20px;
+            border-radius: 60px;
+            display: none;
+            font-size: 0.85rem;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .toast-message.success {
+            background: rgba(70, 110, 70, 0.2);
+            color: #A5D6A5;
+            border-left: 3px solid #81C784;
+        }
+
+        .toast-message.error {
+            background: rgba(180, 60, 60, 0.2);
+            color: #EF9A9A;
+            border-left: 3px solid #E57373;
+        }
+
+        /* ========== SUBJECTS SECTION ========== */
+        .subjects-container {
+            background: rgba(30, 18, 18, 0.9);
+            backdrop-filter: blur(20px);
+            border-radius: 32px;
+            padding: 28px 32px;
+            border: 1px solid rgba(200, 130, 130, 0.25);
+        }
+
+        .subjects-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
+
+        .subjects-header h2 {
+            color: #D4A5A5;
             font-size: 1.3rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legend {
+            display: flex;
+            gap: 20px;
+            font-size: 0.7rem;
+        }
+
+        .legend span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legend .locked-dot {
+            width: 10px;
+            height: 10px;
+            background: #6a3a3a;
+            border-radius: 50%;
+        }
+
+        .legend .unlocked-dot {
+            width: 10px;
+            height: 10px;
+            background: #81C784;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #81C784;
         }
 
         .subjects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-            gap: 22px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
         }
 
         .subject-card {
-            background: linear-gradient(145deg, #2E1818 0%, #241212 100%);
-            border-radius: 24px;
-            padding: 22px 18px;
+            background: linear-gradient(145deg, #1f1212 0%, #180d0d 100%);
+            border-radius: 28px;
+            padding: 24px 20px;
             text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(139, 94, 94, 0.5);
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            border: 1px solid rgba(139, 94, 94, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -303,34 +430,36 @@
             content: '';
             position: absolute;
             top: 0;
-            left: -100%;
+            left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(212, 165, 165, 0.1), transparent);
-            transition: left 0.5s;
+            background: radial-gradient(circle at 30% 20%, rgba(212, 165, 165, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
         }
 
         .subject-card:hover::before {
-            left: 100%;
+            opacity: 1;
         }
 
         .subject-card:hover {
-            transform: translateY(-5px);
-            border-color: #C28686;
+            transform: translateY(-6px);
+            border-color: rgba(212, 165, 165, 0.5);
+            box-shadow: 0 20px 35px -15px rgba(0,0,0,0.5);
         }
 
         .subject-card.locked {
-            opacity: 0.7;
+            opacity: 0.75;
         }
 
         .subject-card.unlocked {
             border-color: #D4A5A5;
-            background: linear-gradient(145deg, #3A2020 0%, #2E1616 100%);
-            box-shadow: 0 8px 20px rgba(212, 165, 165, 0.15);
+            background: linear-gradient(145deg, #2a1818 0%, #201212 100%);
+            box-shadow: 0 8px 25px rgba(212, 165, 165, 0.1);
         }
 
         .subject-icon {
-            font-size: 3.2rem;
+            font-size: 3.5rem;
             margin-bottom: 12px;
         }
 
@@ -338,48 +467,59 @@
             font-size: 1.2rem;
             font-weight: 600;
             color: #E8D0D0;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
-        .lock-status {
-            font-size: 0.75rem;
+        .timer-badge {
+            font-size: 0.7rem;
+            color: #C28686;
+            margin-bottom: 12px;
+            font-family: monospace;
+        }
+
+        .status-badge {
+            font-size: 0.7rem;
             margin: 10px 0;
-            padding: 5px 12px;
-            border-radius: 30px;
+            padding: 4px 12px;
+            border-radius: 40px;
             display: inline-block;
         }
 
-        .lock-status.locked {
+        .status-badge.locked {
             color: #EF9A9A;
-            background: rgba(229, 115, 115, 0.12);
+            background: rgba(229, 115, 115, 0.1);
         }
 
-        .lock-status.unlocked {
+        .status-badge.unlocked {
             color: #A5D6A5;
-            background: rgba(129, 199, 132, 0.12);
+            background: rgba(129, 199, 132, 0.1);
         }
 
-        .take-test-btn {
-            background: linear-gradient(135deg, #8B5E5E 0%, #6B4040 100%);
-            color: #F2E0E0;
+        .take-btn {
+            background: linear-gradient(135deg, #6a4040 0%, #4a2a2a 100%);
             border: none;
             padding: 12px 20px;
-            border-radius: 40px;
-            font-size: 0.85rem;
+            border-radius: 50px;
+            color: #F2E0E0;
             font-weight: 600;
+            font-size: 0.85rem;
             cursor: pointer;
             transition: all 0.3s;
             width: 100%;
-            margin-top: 8px;
+            margin-top: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
-        .take-test-btn:hover:not(:disabled) {
-            background: linear-gradient(135deg, #9B6E6E 0%, #7B5050 100%);
+        .take-btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #7a5050 0%, #5a3a3a 100%);
             transform: translateY(-2px);
         }
 
-        .take-test-btn:disabled {
-            background: #3A2828;
+        .take-btn:disabled {
+            background: #2a1a1a;
             cursor: not-allowed;
             opacity: 0.6;
         }
@@ -387,66 +527,83 @@
         .footer {
             margin-top: 35px;
             text-align: center;
-            color: #9E8080;
-            font-size: 0.75rem;
+            color: #6a5050;
+            font-size: 0.7rem;
             padding: 20px;
-            border-top: 1px solid rgba(139, 94, 94, 0.3);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .countdown {
+            animation: pulse 1s infinite;
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
             .school-name {
                 font-size: 1.8rem;
             }
-            .contact-info {
+            .contact-bar {
                 flex-direction: column;
-                gap: 8px;
                 align-items: center;
+                gap: 8px;
             }
-            .teacher-controls {
+            .unlock-panel {
                 flex-direction: column;
             }
-            .unlock-btn {
-                width: 100%;
+            .unlock-action {
+                justify-content: center;
             }
-            .subjects-grid {
-                grid-template-columns: 1fr;
-            }
-            .teacher-section, .subjects-section {
+            .subjects-container, .teacher-card {
                 padding: 20px;
+            }
+            .subjects-header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
             }
         }
     </style>
 </head>
 <body>
+    <div class="particles" id="particles"></div>
+
     <div class="container">
-        <!-- School Header - Complete information provided -->
+        <!-- School Header -->
         <div class="school-header">
-            <div class="logo-row">
+            <div class="logo-wrapper">
                 <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
-                     alt="The Trustworthy College Logo" class="school-logo" 
-                     onerror="this.src='https://via.placeholder.com/90x90?text=TTC'">
+                     alt="The Trustworthy College Logo" class="school-logo"
+                     onerror="this.src='https://via.placeholder.com/100x100?text=TTC'">
             </div>
             <h1 class="school-name">THE TRUSTWORTHY <span>COLLEGE</span></h1>
-            <div class="school-motto">"NURTURE FOR PIETY"</div>
-            <div class="contact-info">
-                <div>📞 08037376160</div>
-                <div>📞 08037173526</div>
-                <div>✉️ trustworthysch16@gmail.com</div>
+            <div class="motto">"NURTURE FOR PIETY"</div>
+            <div class="contact-bar">
+                <div class="contact-item">📞 08037376160</div>
+                <div class="contact-item">📞 08037173526</div>
+                <div class="contact-item">✉️ trustworthysch16@gmail.com</div>
             </div>
-            <div class="address">
-                📍 No 1, CTCS Avenue, Coca-Cola Junction, Orimerunmu, Mowe, Ogun State
-            </div>
-            <div class="test-badge">
+            <div class="address">📍 No 1, CTCS Avenue, Coca-Cola Junction, Orimerunmu, Mowe, Ogun State</div>
+            <div class="session-badge">
                 <h3>📚 THIRD TERM MID-TERM TEST | 2025/2026 ACADEMIC SESSION</h3>
-                <p>🔒 Teachers: Enter password to unlock subjects | Students: Click on unlocked subjects to begin</p>
+                <p>🔐 Teacher unlocks subject → Auto-locks after 45 minutes</p>
             </div>
         </div>
 
-        <!-- Teacher Access Panel - Password field is hidden input type -->
-        <div class="teacher-section">
-            <h2>Teacher Access Panel</h2>
-            <div class="teacher-controls">
-                <div class="subject-select">
+        <!-- Teacher Panel -->
+        <div class="teacher-card">
+            <div class="teacher-header">
+                <span class="icon">🔐</span>
+                <h2>Teacher Access</h2>
+                <p>Authorized personnel only</p>
+            </div>
+            <div class="unlock-panel">
+                <div class="input-group">
                     <label>Select Subject</label>
                     <select id="subjectSelect">
                         <option value="mathematics">📐 Mathematics</option>
@@ -465,20 +622,28 @@
                         <option value="phone_installment">📱 Phone Installment</option>
                     </select>
                 </div>
-                <div class="password-input">
-                    <label>🔑 Master Password</label>
-                    <input type="password" id="subjectPassword" placeholder="Enter password">
+                <div class="input-group">
+                    <label>Master Password</label>
+                    <input type="password" id="subjectPassword" placeholder="••••••••">
                 </div>
-                <button class="unlock-btn" onclick="unlockSubject()">🔓 Unlock Subject</button>
+                <button class="unlock-action" onclick="unlockSubject()">
+                    <span>🔓</span> Unlock Subject
+                </button>
             </div>
-            <div id="message" class="message"></div>
+            <div id="toastMessage" class="toast-message"></div>
         </div>
 
-        <!-- Available Subjects for Students -->
-        <div class="subjects-section">
-            <h2>Available Subjects</h2>
+        <!-- Subjects Grid -->
+        <div class="subjects-container">
+            <div class="subjects-header">
+                <h2><span>📖</span> Available Subjects</h2>
+                <div class="legend">
+                    <span><i class="locked-dot"></i> Locked</span>
+                    <span><i class="unlocked-dot"></i> Unlocked</span>
+                </div>
+            </div>
             <div class="subjects-grid" id="subjectsGrid">
-                <!-- Subjects loaded dynamically -->
+                <!-- Loaded dynamically -->
             </div>
         </div>
 
@@ -488,10 +653,11 @@
     </div>
 
     <script>
-        // ==================== MASTER PASSWORD ====================
+        // ==================== CONFIGURATION ====================
         const MASTER_PASSWORD = "2TS@2026";
-        
-        // All subjects
+        const LOCK_DURATION_MINUTES = 45; // Auto-lock after 45 minutes
+
+        // Subjects data
         const subjectDetails = {
             mathematics: { name: "Mathematics", icon: "📐", path: "mathematics/index.html" },
             english_language: { name: "English Language", icon: "📖", path: "english_language/index.html" },
@@ -509,39 +675,73 @@
             phone_installment: { name: "Phone Installment", icon: "📱", path: "phone_installment/index.html" }
         };
 
-        // Track unlocked subjects
-        let unlockedSubjects = JSON.parse(localStorage.getItem('trustworthy_unlocked')) || {};
+        // Structure for unlocked subjects with timestamp
+        // { subjectKey: { unlocked: true, expiresAt: timestamp } }
+        let unlockedSubjects = JSON.parse(localStorage.getItem('trustworthy_unlocked_data')) || {};
 
+        // Clean up expired unlocks on load
+        function cleanExpiredLocks() {
+            const now = Date.now();
+            let changed = false;
+            for (const [key, data] of Object.entries(unlockedSubjects)) {
+                if (data.expiresAt && data.expiresAt <= now) {
+                    delete unlockedSubjects[key];
+                    changed = true;
+                }
+            }
+            if (changed) {
+                localStorage.setItem('trustworthy_unlocked_data', JSON.stringify(unlockedSubjects));
+            }
+        }
+
+        // Unlock a subject (sets 45 minute timer)
         function unlockSubject() {
             const subject = document.getElementById('subjectSelect').value;
             const password = document.getElementById('subjectPassword').value;
-            const messageDiv = document.getElementById('message');
+            const toast = document.getElementById('toastMessage');
 
             if (password === MASTER_PASSWORD) {
-                unlockedSubjects[subject] = true;
-                localStorage.setItem('trustworthy_unlocked', JSON.stringify(unlockedSubjects));
+                const expiresAt = Date.now() + (LOCK_DURATION_MINUTES * 60 * 1000);
+                unlockedSubjects[subject] = {
+                    unlocked: true,
+                    expiresAt: expiresAt
+                };
+                localStorage.setItem('trustworthy_unlocked_data', JSON.stringify(unlockedSubjects));
                 
-                messageDiv.className = 'message success';
-                messageDiv.innerHTML = `✅ ${subjectDetails[subject].name} has been unlocked! Students can now take this test.`;
+                toast.className = 'toast-message success';
+                toast.innerHTML = `✅ ${subjectDetails[subject].name} unlocked! Available for ${LOCK_DURATION_MINUTES} minutes.`;
                 
                 document.getElementById('subjectPassword').value = '';
                 renderSubjects();
+                startCountdownTimers();
                 
                 setTimeout(() => {
-                    messageDiv.style.display = 'none';
-                    setTimeout(() => messageDiv.className = 'message', 200);
-                }, 3000);
+                    toast.style.display = 'none';
+                    setTimeout(() => toast.className = 'toast-message', 200);
+                }, 3500);
             } else {
-                messageDiv.className = 'message error';
-                messageDiv.innerHTML = '❌ Incorrect password. Access denied.';
+                toast.className = 'toast-message error';
+                toast.innerHTML = '❌ Incorrect password. Access denied.';
                 
                 setTimeout(() => {
-                    messageDiv.style.display = 'none';
-                    setTimeout(() => messageDiv.className = 'message', 200);
+                    toast.style.display = 'none';
+                    setTimeout(() => toast.className = 'toast-message', 200);
                 }, 3000);
             }
         }
 
+        // Get remaining time for a subject
+        function getRemainingTime(subjectKey) {
+            const data = unlockedSubjects[subjectKey];
+            if (!data || !data.expiresAt) return null;
+            const remaining = data.expiresAt - Date.now();
+            if (remaining <= 0) return null;
+            const minutes = Math.floor(remaining / 60000);
+            const seconds = Math.floor((remaining % 60000) / 1000);
+            return { minutes, seconds, remaining };
+        }
+
+        // Render all subjects with timers
         function renderSubjects() {
             const grid = document.getElementById('subjectsGrid');
             grid.innerHTML = '';
@@ -550,18 +750,31 @@
             
             subjects.forEach(subjectKey => {
                 const details = subjectDetails[subjectKey];
-                const isUnlocked = unlockedSubjects[subjectKey] === true;
+                const unlockData = unlockedSubjects[subjectKey];
+                const isUnlocked = unlockData && unlockData.expiresAt && unlockData.expiresAt > Date.now();
+                const remaining = isUnlocked ? getRemainingTime(subjectKey) : null;
                 
                 const card = document.createElement('div');
                 card.className = `subject-card ${isUnlocked ? 'unlocked' : 'locked'}`;
+                
+                let timerHtml = '';
+                if (isUnlocked && remaining) {
+                    timerHtml = `<div class="timer-badge">⏱️ Expires in: ${remaining.minutes}m ${remaining.seconds}s</div>`;
+                } else if (unlockData && unlockData.expiresAt && unlockData.expiresAt <= Date.now()) {
+                    // Auto-cleanup expired
+                    delete unlockedSubjects[subjectKey];
+                    localStorage.setItem('trustworthy_unlocked_data', JSON.stringify(unlockedSubjects));
+                }
+                
                 const statusText = isUnlocked ? '✓ Unlocked' : '🔒 Locked';
                 const statusClass = isUnlocked ? 'unlocked' : 'locked';
                 
                 card.innerHTML = `
                     <div class="subject-icon">${details.icon}</div>
                     <div class="subject-name">${details.name}</div>
-                    <div class="lock-status ${statusClass}">${statusText}</div>
-                    <button class="take-test-btn" onclick="takeTest('${subjectKey}')" ${!isUnlocked ? 'disabled' : ''}>
+                    ${timerHtml}
+                    <div class="status-badge ${statusClass}">${statusText}</div>
+                    <button class="take-btn" onclick="takeTest('${subjectKey}')" ${!isUnlocked ? 'disabled' : ''}>
                         ${isUnlocked ? '📝 Take Test' : '🔒 Locked'}
                     </button>
                 `;
@@ -570,34 +783,115 @@
             });
         }
 
+        // Take test
         function takeTest(subjectKey) {
-            if (unlockedSubjects[subjectKey] === true) {
+            const unlockData = unlockedSubjects[subjectKey];
+            const isValid = unlockData && unlockData.expiresAt && unlockData.expiresAt > Date.now();
+            
+            if (isValid) {
                 window.location.href = subjectDetails[subjectKey].path;
             } else {
+                if (unlockData && unlockData.expiresAt && unlockData.expiresAt <= Date.now()) {
+                    delete unlockedSubjects[subjectKey];
+                    localStorage.setItem('trustworthy_unlocked_data', JSON.stringify(unlockedSubjects));
+                    renderSubjects();
+                }
                 alert(`❌ ${subjectDetails[subjectKey].name} is locked. Please ask your teacher to unlock it.`);
             }
         }
 
-        // Hidden reset: Press R three times
-        let resetCount = 0;
+        // Start countdown timers (updates every second)
+        let timerInterval = null;
+        function startCountdownTimers() {
+            if (timerInterval) clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                let needsRender = false;
+                for (const [key, data] of Object.entries(unlockedSubjects)) {
+                    if (data.expiresAt && data.expiresAt <= Date.now()) {
+                        delete unlockedSubjects[key];
+                        needsRender = true;
+                    }
+                }
+                if (needsRender) {
+                    localStorage.setItem('trustworthy_unlocked_data', JSON.stringify(unlockedSubjects));
+                    renderSubjects();
+                } else {
+                    // Just update timers without full re-render
+                    updateTimersOnly();
+                }
+            }, 1000);
+        }
+
+        function updateTimersOnly() {
+            const cards = document.querySelectorAll('.subject-card');
+            const subjects = Object.keys(subjectDetails);
+            
+            subjects.forEach((subjectKey, index) => {
+                const card = cards[index];
+                if (!card) return;
+                const unlockData = unlockedSubjects[subjectKey];
+                const isUnlocked = unlockData && unlockData.expiresAt && unlockData.expiresAt > Date.now();
+                const remaining = isUnlocked ? getRemainingTime(subjectKey) : null;
+                
+                const timerBadge = card.querySelector('.timer-badge');
+                if (isUnlocked && remaining) {
+                    if (timerBadge) {
+                        timerBadge.textContent = `⏱️ Expires in: ${remaining.minutes}m ${remaining.seconds}s`;
+                    } else {
+                        // Need full re-render
+                        renderSubjects();
+                        return;
+                    }
+                } else if (timerBadge && !isUnlocked) {
+                    timerBadge.remove();
+                }
+            });
+        }
+
+        // Hidden reset: Press RRR to reset all locks
+        let resetCounter = 0;
         document.addEventListener('keydown', function(e) {
             if (e.key === 'r' || e.key === 'R') {
-                resetCount++;
-                if (resetCount === 3) {
-                    if (confirm('⚠️ Reset all subject locks? Teachers will need to re-enter password.')) {
+                resetCounter++;
+                if (resetCounter === 3) {
+                    if (confirm('⚠️ RESET ALL SUBJECT LOCKS?\nAll subjects will be locked. Teachers will need to re-enter password.')) {
                         unlockedSubjects = {};
-                        localStorage.setItem('trustworthy_unlocked', JSON.stringify(unlockedSubjects));
+                        localStorage.setItem('trustworthy_unlocked_data', JSON.stringify(unlockedSubjects));
                         renderSubjects();
-                        alert('✅ All subjects locked again.');
+                        alert('✅ All subjects have been locked.');
                     }
-                    resetCount = 0;
+                    resetCounter = 0;
                 }
-                setTimeout(() => { resetCount = 0; }, 2000);
+                setTimeout(() => { resetCounter = 0; }, 2000);
             }
         });
 
+        // Create floating particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                const size = Math.random() * 4 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = Math.random() * 20 + 10 + 's';
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                particle.style.opacity = Math.random() * 0.3 + 0.1;
+                container.appendChild(particle);
+            }
+        }
+
+        // Initialize
+        cleanExpiredLocks();
         renderSubjects();
-        console.log('Portal Ready | Password: 2TS@2026');
+        startCountdownTimers();
+        createParticles();
+        
+        console.log('=== Trustworthy College CBT Portal ===');
+        console.log(`🔐 Auto-lock after ${LOCK_DURATION_MINUTES} minutes`);
+        console.log('======================================');
     </script>
 </body>
 </html>
