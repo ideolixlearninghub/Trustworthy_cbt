@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Phone Installation & Computer Assembly</title>
+    <title>The Trustworthy College - Computer Hardware & GSM Repairs SSS1 Test</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
     <style>
-        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -14,14 +14,13 @@
         }
         
         body {
-            background-color: #0a0f1a;
-            color: #f5e9dd;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
         }
         
-        /* Dimmed background overlay with tech theme */
         body::before {
             content: '';
             position: fixed;
@@ -29,32 +28,30 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80');
+            background-image: url('https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.15;
+            opacity: 0.12;
             z-index: -1;
             transition: background-image 1.5s ease-in-out;
         }
         
-        /* Container with tech color theme */
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #0a1a2a 0%, #1a2a3a 100%);
-            box-shadow: 0 15px 40px rgba(0, 150, 255, 0.25);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            box-shadow: 0 15px 40px rgba(241, 196, 15, 0.2);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #00a8ff;
+            border: 3px solid #f39c12;
             backdrop-filter: blur(5px);
         }
         
-        /* Blue tech decorative border */
         .container::before {
             content: '';
             position: absolute;
@@ -62,17 +59,33 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #00a8ff, #0097e6, #00a8ff);
+            background: linear-gradient(90deg, #e67e22, #f39c12, #e67e22);
             z-index: 2;
         }
         
-        /* Header */
+        .container::after {
+            content: '🛠️';
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 2.5rem;
+            opacity: 0.06;
+            z-index: 0;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+        }
+        
         .header {
             text-align: center;
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #00a8ff;
+            border-bottom: 2px solid #f39c12;
+            z-index: 1;
         }
         
         .header::after {
@@ -83,7 +96,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #00a8ff, transparent);
+            background: linear-gradient(to right, transparent, #f39c12, transparent);
         }
         
         .logo {
@@ -92,7 +105,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #00a8ff;
+            border: 3px solid #f39c12;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -103,35 +116,36 @@
         }
         
         .subject-title {
-            color: #00a8ff;
-            font-size: 2.2rem;
+            color: #f9d56e;
+            font-size: 2.0rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
             letter-spacing: 1px;
         }
         
         .exam-info {
-            color: #b0e0ff;
+            color: #f5cba7;
             font-size: 1.1rem;
             margin-top: 5px;
         }
         
         .term-info {
-            background: linear-gradient(135deg, #00a8ff20, #0097e640);
+            background: linear-gradient(135deg, #e67e2220, #f39c1240);
             display: inline-block;
             padding: 8px 20px;
             border-radius: 30px;
             margin-top: 10px;
             font-weight: bold;
-            color: #00a8ff;
-            border: 1px solid #00a8ff60;
+            color: #f9d56e;
+            border: 1px solid #f39c1260;
         }
         
-        /* Sections */
         .section {
             display: none;
             padding: 25px;
             animation: fadeIn 0.5s ease;
+            position: relative;
+            z-index: 1;
         }
         
         @keyframes fadeIn {
@@ -143,38 +157,36 @@
             display: block;
         }
         
-        /* Welcome message */
         .welcome-message {
-            background: linear-gradient(135deg, rgba(0, 168, 255, 0.1) 0%, rgba(26, 42, 58, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.1) 0%, rgba(42, 42, 42, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #f5e9dd;
-            border-left: 5px solid #00a8ff;
-            border-right: 1px solid rgba(0, 168, 255, 0.3);
-            border-top: 1px solid rgba(0, 168, 255, 0.2);
-            border-bottom: 1px solid rgba(0, 168, 255, 0.3);
+            color: #e0e0e0;
+            border-left: 5px solid #f39c12;
+            border-right: 1px solid rgba(243, 156, 18, 0.3);
+            border-top: 1px solid rgba(243, 156, 18, 0.2);
+            border-bottom: 1px solid rgba(243, 156, 18, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
         }
         
         .welcome-message::before {
-            content: '📱💻';
+            content: '💻';
             position: absolute;
             top: 20px;
             right: 20px;
             font-size: 3rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
-        /* Buttons */
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #00a8ff 0%, #0097e6 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: #ffffff;
             border: none;
             padding: 15px 32px;
@@ -185,8 +197,8 @@
             margin: 12px 8px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(0, 168, 255, 0.5);
-            box-shadow: 0 6px 15px rgba(0, 168, 255, 0.3);
+            border: 2px solid rgba(230, 126, 34, 0.5);
+            box-shadow: 0 6px 15px rgba(243, 156, 18, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -203,25 +215,31 @@
             transition: all 0.5s;
         }
         
-        .btn:hover {
-            background: linear-gradient(135deg, #33bbff 0%, #00a8ff 100%);
+        .btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(0, 168, 255, 0.5);
+            box-shadow: 0 10px 25px rgba(243, 156, 18, 0.5);
             color: #ffffff;
         }
         
-        .btn-secondary {
-            background: linear-gradient(135deg, #5d6d7e 0%, #4a5f6e 100%);
-            border-color: #7f8c8d;
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
         }
         
-        .btn-secondary:hover {
-            background: linear-gradient(135deg, #7f8c8d 0%, #5d6d7e 100%);
+        .btn-secondary {
+            background: linear-gradient(135deg, #3d3d3d 0%, #4a4a4a 100%);
+            border-color: #6e6e6e;
+        }
+        
+        .btn-secondary:hover:not(:disabled) {
+            background: linear-gradient(135deg, #555 0%, #3d3d3d 100%);
         }
         
         .btn-success {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            border-color: #229954;
+            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+            border-color: #a93226;
         }
         
         .btn-container {
@@ -229,7 +247,6 @@
             margin-top: 35px;
         }
         
-        /* Form elements */
         .form-group {
             margin-bottom: 28px;
         }
@@ -238,7 +255,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #00a8ff;
+            color: #f9d56e;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -246,20 +263,20 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(10, 26, 42, 0.7);
-            border: 2px solid #5d6d7e;
+            background: rgba(26, 26, 26, 0.7);
+            border: 2px solid #5d7e9e;
             border-radius: 10px;
             font-size: 1.1rem;
-            color: #f5e9dd;
+            color: #e0e0e0;
             transition: all 0.3s;
             font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #00a8ff;
+            border-color: #f39c12;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.3);
-            background: rgba(10, 26, 42, 0.9);
+            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.3);
+            background: rgba(26, 26, 26, 0.9);
         }
         
         .error-message {
@@ -270,30 +287,29 @@
             font-weight: 500;
         }
         
-        /* Instructions */
         .instructions {
-            background: linear-gradient(135deg, rgba(93, 109, 126, 0.1) 0%, rgba(26, 42, 58, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.08) 0%, rgba(42, 42, 42, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid #00a8ff;
-            border: 1px solid rgba(0, 168, 255, 0.2);
+            border-left: 5px solid #f39c12;
+            border: 1px solid rgba(243, 156, 18, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
         
         .instructions::before {
-            content: '🔧';
+            content: '📋';
             position: absolute;
             top: 20px;
             right: 20px;
             font-size: 2.5rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #00a8ff;
+            color: #f39c12;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -306,7 +322,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #00a8ff;
+            background: #f39c12;
             border-radius: 2px;
         }
         
@@ -323,30 +339,29 @@
         
         .instructions li::before {
             content: '•';
-            color: #00a8ff;
+            color: #f39c12;
             font-size: 1.5rem;
             position: absolute;
             left: -20px;
             top: -5px;
         }
         
-        /* Exam interface */
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(0, 168, 255, 0.3);
+            border-bottom: 2px solid rgba(243, 156, 18, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #00a8ff;
+            color: #f9d56e;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(0, 168, 255, 0.1) 0%, rgba(93, 109, 126, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.1) 0%, rgba(230, 126, 34, 0.15) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(0, 168, 255, 0.3);
+            border: 1px solid rgba(243, 156, 18, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -357,32 +372,33 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(10, 26, 42, 0.5);
+            background: rgba(26, 26, 26, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(0, 168, 255, 0.2);
+            border: 1px solid rgba(243, 156, 18, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #00a8ff;
+            color: #f9d56e;
             font-weight: 600;
             padding: 10px 20px;
-            background: rgba(0, 168, 255, 0.1);
+            background: rgba(243, 156, 18, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(0, 168, 255, 0.3);
+            border: 1px solid rgba(243, 156, 18, 0.3);
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #00a8ff 0%, #0097e6 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(0, 168, 255, 0.4);
+            box-shadow: 0 4px 12px rgba(243, 156, 18, 0.4);
             display: none;
-            border: 2px solid rgba(0, 168, 255, 0.5);
+            border: 2px solid rgba(230, 126, 34, 0.5);
             font-family: 'Courier New', monospace;
+            transition: background 0.5s ease;
         }
         
         .submit-container {
@@ -391,10 +407,10 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(10, 26, 42, 0.4);
+            background: rgba(26, 26, 26, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(0, 168, 255, 0.2);
+            border: 1px solid rgba(243, 156, 18, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -402,12 +418,12 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #00a8ff;
+            color: #f9d56e;
             line-height: 1.6;
             padding: 20px;
-            background: rgba(93, 109, 126, 0.1);
+            background: rgba(243, 156, 18, 0.08);
             border-radius: 10px;
-            border-left: 4px solid #00a8ff;
+            border-left: 4px solid #f39c12;
         }
         
         .options-container {
@@ -421,8 +437,8 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(26, 42, 58, 0.5);
-            border: 1px solid rgba(93, 109, 126, 0.3);
+            background: rgba(42, 42, 42, 0.4);
+            border: 1px solid rgba(93, 126, 158, 0.3);
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -435,14 +451,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(0, 168, 255, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(243, 156, 18, 0.08), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(0, 168, 255, 0.1);
-            border-color: #00a8ff;
+            background: rgba(243, 156, 18, 0.1);
+            border-color: #f39c12;
             transform: translateX(5px);
         }
         
@@ -450,12 +466,13 @@
             transform: translateX(100%);
         }
         
-        .option input {
+        .option input[type="radio"] {
             margin-right: 15px;
             width: 22px;
             height: 22px;
             cursor: pointer;
-            accent-color: #00a8ff;
+            accent-color: #f39c12;
+            flex-shrink: 0;
         }
         
         .option label {
@@ -463,21 +480,20 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
-            color: #f5e9dd;
+            color: #e0e0e0;
             font-size: 1.1rem;
             line-height: 1.5;
         }
         
-        /* Question navigation */
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(0, 168, 255, 0.3);
+            border-top: 2px solid rgba(243, 156, 18, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #00a8ff;
+            color: #f9d56e;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -494,7 +510,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: #00a8ff;
+            background: #f39c12;
             border-radius: 2px;
         }
         
@@ -511,32 +527,32 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(93, 109, 126, 0.3) 0%, rgba(70, 86, 103, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(42, 42, 42, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(0, 168, 255, 0.3);
-            color: #f5e9dd;
+            border: 1px solid rgba(243, 156, 18, 0.3);
+            color: #e0e0e0;
             font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background: linear-gradient(135deg, rgba(0, 168, 255, 0.3) 0%, rgba(0, 151, 230, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.3) 0%, rgba(211, 84, 0, 0.5) 100%);
             transform: scale(1.1);
-            border-color: #00a8ff;
+            border-color: #f39c12;
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #00a8ff 0%, #0097e6 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: #ffffff;
-            border-color: #33bbff;
-            box-shadow: 0 4px 10px rgba(0, 168, 255, 0.4);
+            border-color: #f9d56e;
+            box-shadow: 0 4px 10px rgba(243, 156, 18, 0.4);
             transform: scale(1.1);
         }
         
         .question-number.answered {
-            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
             color: white;
             border-color: #2ecc71;
         }
@@ -547,13 +563,48 @@
             margin-top: 25px;
         }
         
-        /* Results section */
+        .progress-container {
+            margin: 20px 0;
+            background: rgba(42, 42, 42, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 10px;
+            border: 1px solid rgba(243, 156, 18, 0.3);
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #d35400, #e67e22);
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        .progress-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #f5cba7;
+            margin-top: 5px;
+        }
+        
+        .topic-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(243, 156, 18, 0.15);
+            border: 1px solid rgba(243, 156, 18, 0.3);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #f9d56e;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(10, 26, 42, 0.8) 0%, rgba(26, 42, 58, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(42, 42, 42, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #00a8ff;
+            border: 2px solid #f39c12;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
@@ -565,14 +616,26 @@
             top: 20px;
             right: 20px;
             font-size: 4rem;
-            opacity: 0.1;
+            opacity: 0.06;
         }
         
         .results-container h2 {
-            color: #00a8ff;
+            color: #f9d56e;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .completion-icon {
+            font-size: 5rem;
+            margin: 20px 0;
+            animation: bounceIn 0.6s ease;
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
         
         .student-info {
@@ -582,7 +645,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #b0e0ff;
+            color: #f5cba7;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -590,58 +653,50 @@
         .feedback {
             font-size: 1.3rem;
             margin: 25px 0;
-            color: #f5e9dd;
+            color: #e0e0e0;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(0, 168, 255, 0.1);
+            background: rgba(243, 156, 18, 0.08);
             border-radius: 12px;
-            border: 1px solid rgba(0, 168, 255, 0.3);
+            border: 1px solid rgba(243, 156, 18, 0.3);
         }
         
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(39, 174, 96, 0.2) 0%, rgba(46, 204, 113, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.15) 0%, rgba(39, 174, 96, 0.2) 100%);
             border-radius: 12px;
             color: #2ecc71;
             font-size: 1.2rem;
-            border: 1px solid rgba(46, 204, 113, 0.5);
+            border: 1px solid rgba(46, 204, 113, 0.4);
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .question-grid {
                 grid-template-columns: repeat(5, 1fr);
             }
-            
             .exam-controls {
                 flex-direction: column;
                 align-items: stretch;
             }
-            
             .navigation-buttons {
                 flex-direction: column;
                 gap: 15px;
             }
-            
             .btn {
                 width: 100%;
                 margin: 8px 0;
             }
-            
             .subject-title {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
-            
             .question-text {
                 font-size: 1.2rem;
             }
-            
             .container {
                 padding: 15px;
                 margin: 15px;
             }
-            
             .welcome-message, .instructions, .exam-content {
                 padding: 20px;
             }
@@ -652,17 +707,14 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 10px;
             }
-            
             .question-number {
                 width: 35px;
                 height: 35px;
                 font-size: 1rem;
             }
-            
             .subject-title {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
-            
             .results-container {
                 padding: 25px 15px;
             }
@@ -680,8 +732,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(0, 168, 255, 0.3);
-            border-top: 4px solid #00a8ff;
+            border: 4px solid rgba(243, 156, 18, 0.3);
+            border-top: 4px solid #f39c12;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -693,50 +745,68 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        
+        .keyboard-hint {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6e6e6e;
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(26, 26, 26, 0.3);
+            border-radius: 8px;
+            border: 1px dashed rgba(110, 110, 110, 0.3);
+        }
+        
+        .keyboard-hint kbd {
+            background: rgba(243, 156, 18, 0.2);
+            border: 1px solid rgba(243, 156, 18, 0.4);
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #f9d56e;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title">SS1 PHONE INSTALLATION & COMPUTER ASSEMBLY</h1>
-            <div class="exam-info">Second Term Examination | 2025/2026 Session</div>
-            <div class="term-info">60 Questions | 30 Minutes</div>
+            <h1 class="subject-title">COMPUTER HARDWARE & GSM REPAIRS</h1>
+            <div class="exam-info">Third Term | 2025/2026 Session</div>
+            <div class="term-info">40 Objective Questions | 40 Minutes</div>
         </div>
         
-        <!-- Welcome Section -->
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Second Term Examination for 2025/2026 Session. This exam covers Phone Installation, Computer Assembly, Fault Diagnosis, and Flashing. Demonstrate your technical knowledge and problem-solving skills. Best of luck."
+                "Welcome to The Trustworthy College Computer Hardware and GSM Repairs Objective Test. This test covers <strong>Computer System Assembly</strong> (step-by-step processes, components, tools, installation procedures) and <strong>Entrepreneurship in ICT</strong> (setting up a small repair business, capital, marketing, customer relations, record keeping). Demonstrate your understanding of hardware assembly and ICT business skills. Best of luck."
             </div>
             <div class="btn-container">
-                <button id="start-exam-btn" class="btn">Start Examination</button>
+                <button id="start-exam-btn" class="btn">Start Objective Test</button>
             </div>
         </section>
         
-        <!-- Student Information Section -->
         <section id="student-info-section" class="section">
             <h2>Student Information</h2>
-            <p>Please provide your details to continue with the examination.</p>
+            <p>Please provide your details to continue with the test.</p>
             
-            <form id="student-info-form">
+            <form id="student-info-form" autocomplete="off">
                 <div class="form-group">
                     <label for="first-name">First Name *</label>
-                    <input type="text" id="first-name" required>
+                    <input type="text" id="first-name" required placeholder="Enter your first name">
                     <div class="error-message" id="first-name-error">First name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="middle-name">Middle Name *</label>
-                    <input type="text" id="middle-name" required>
+                    <input type="text" id="middle-name" required placeholder="Enter your middle name">
                     <div class="error-message" id="middle-name-error">Middle name is required</div>
                 </div>
                 
                 <div class="form-group">
                     <label for="last-name">Last Name *</label>
-                    <input type="text" id="last-name" required>
+                    <input type="text" id="last-name" required placeholder="Enter your last name">
                     <div class="error-message" id="last-name-error">Last name is required</div>
                 </div>
                 
@@ -747,23 +817,23 @@
             </form>
         </section>
         
-        <!-- Instructions Section -->
         <section id="instructions-section" class="section">
-            <h2>Examination Instructions</h2>
+            <h2>Test Instructions</h2>
             
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This examination consists of 60 multiple-choice questions covering Phone Installation, Computer Assembly, Fault Diagnosis, and Flashing.</li>
-                    <li>You have 30 minutes to complete this examination.</li>
+                    <li>This Objective Test consists of <strong>40 multiple-choice questions</strong> covering Computer Assembly and ICT Entrepreneurship.</li>
+                    <li>You have <strong>40 minutes</strong> to complete this test.</li>
                     <li>Answer all questions to the best of your ability.</li>
-                    <li>Navigate between questions using the Previous and Next buttons or the question grid.</li>
-                    <li>Answered questions will be marked with green in the question grid.</li>
-                    <li>Once you submit your answers, you cannot change them.</li>
-                    <li>Ensure you have a stable internet connection throughout the examination.</li>
+                    <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
+                    <li>You can also use <strong>keyboard shortcuts</strong>: Arrow keys to navigate, A/B/C/D keys to select answers.</li>
+                    <li>Answered questions will be marked with <strong>green</strong> in the question grid.</li>
+                    <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
+                    <li>Ensure you have a stable internet connection throughout the test.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li>This is the Second Term Examination for the 2025/2026 Academic Session.</li>
+                    <li><strong>Do not refresh the page</strong> during the test, or you may lose your progress.</li>
                 </ul>
             </div>
             
@@ -773,38 +843,41 @@
             </div>
         </section>
         
-        <!-- Exam Interface Section -->
         <section id="exam-section" class="section">
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
+                <div class="topic-badge" id="topic-badge">Topic: Computer System Assembly</div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">Progress: 0/40 answered</div>
                 <div class="exam-controls">
-                    <div class="question-counter" id="question-counter">Question 1 of 60</div>
+                    <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        Time Left: <span id="timer">30:00</span>
+                        ⏱ Time Left: <span id="timer">40:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success">Submit Exam</button>
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Test</button>
                     </div>
                 </div>
             </div>
             
             <div class="exam-content">
                 <div class="question-text" id="question-text"></div>
-                
-                <div class="options-container" id="options-container">
-                    <!-- Options will be populated by JavaScript -->
-                </div>
+                <div class="options-container" id="options-container"></div>
+            </div>
+            
+            <div class="keyboard-hint">
+                💡 Keyboard shortcuts: <kbd>←</kbd> <kbd>→</kbd> Navigate | <kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd> Select answer
             </div>
             
             <div class="question-navigation">
                 <h3>Question Navigation</h3>
-                <div class="question-grid" id="question-grid">
-                    <!-- Question numbers will be populated by JavaScript -->
-                </div>
+                <div class="question-grid" id="question-grid"></div>
                 
                 <div class="navigation-buttons">
-                    <button type="button" id="prev-question" class="btn btn-secondary">Previous</button>
-                    <button type="button" id="next-question" class="btn">Next</button>
+                    <button type="button" id="prev-question" class="btn btn-secondary">← Previous</button>
+                    <button type="button" id="next-question" class="btn">Next →</button>
                 </div>
             </div>
             
@@ -814,23 +887,23 @@
             </div>
         </section>
         
-        <!-- Results Section -->
         <section id="results-section" class="section">
             <div class="results-container">
-                <h2>Examination Completed</h2>
+                <h2>Test Completed</h2>
+                <div class="completion-icon">✅</div>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SS1 Phone Installation & Computer Assembly - Second Term 2025/2026</div>
+                <div class="subject" id="results-subject">Computer Hardware & GSM Repairs - Third Term 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the Second Term Examination. Your results have been submitted successfully to the examination board.
+                    Thank you for completing the Computer Hardware and GSM Repairs Objective Test. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    Your examination has been successfully submitted. Results will be communicated through appropriate channels.
+                    ✅ Your test has been successfully submitted.
                 </div>
                 
                 <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn">Take Another Exam</button>
+                    <button type="button" id="restart-exam" class="btn">Take Another Test</button>
                     <div class="back-home">
                         <a href="../index.html" class="btn btn-secondary">Back to Home</a>
                     </div>
@@ -840,326 +913,266 @@
     </div>
 
     <script>
-        // SS1 PHONE INSTALLATION AND COMPUTER ASSEMBLY - SECOND TERM 2025/2026
         const originalQuestions = [
+            // SECTION A: COMPUTER SYSTEM ASSEMBLY (Q1-20)
             {
-                question: "Which of the following is a symptom of a faulty RAM?",
-                options: ["Slow booting", "Blue screen of death", "Frequent crashes", "All of the above"],
-                answer: "D"
+                question: "What is a computer?",
+                options: ["A toy", "An electronic device that processes data", "A television", "A radio"],
+                answer: "B",
+                section: "Computer System Assembly"
             },
             {
-                question: "A computer that does not power on at all may have a problem with:",
-                options: ["Monitor", "CPU", "Power supply unit", "Hard disk"],
-                answer: "C"
+                question: "Which component is known as the brain of the computer?",
+                options: ["Monitor", "Keyboard", "CPU", "Mouse"],
+                answer: "C",
+                section: "Computer System Assembly"
             },
             {
-                question: "Which of the following can cause a computer to overheat?",
-                options: ["Dust accumulation", "Broken fan", "Poor ventilation", "All of the above"],
-                answer: "D"
+                question: "The first step in assembling a computer is to:",
+                options: ["Install software", "Prepare the workspace and tools", "Connect the printer", "Turn on the computer"],
+                answer: "B",
+                section: "Computer System Assembly"
             },
             {
-                question: "A hard disk fault can be identified by:",
-                options: ["Clicking sounds", "Slow data access", "Boot failures", "All of the above"],
-                answer: "D"
+                question: "Which tool is commonly used for assembling a computer?",
+                options: ["Hammer", "Cutlass", "Screwdriver", "Spanner"],
+                answer: "C",
+                section: "Computer System Assembly"
             },
             {
-                question: "The motherboard is considered faulty if:",
-                options: ["The computer won't POST", "USB ports don't work", "RAM or CPU not detected", "All of the above"],
-                answer: "D"
+                question: "The motherboard is used to:",
+                options: ["Print documents", "Connect all computer components", "Play music", "Display images"],
+                answer: "B",
+                section: "Computer System Assembly"
             },
             {
-                question: "A computer keeps restarting automatically. Which hardware may be faulty?",
-                options: ["CPU", "RAM", "Power supply", "Any of the above"],
-                answer: "D"
+                question: "<span class=\"acronym\">RAM</span> stands for:",
+                options: ["Random Access Memory", "Read Access Machine", "Remote Access Memory", "Random Assembly Module"],
+                answer: "A",
+                section: "Computer System Assembly"
             },
             {
-                question: "Monitor flickering can be caused by:",
-                options: ["Loose cables", "Faulty monitor", "Incorrect refresh rate", "All of the above"],
-                answer: "D"
+                question: "Which component stores data permanently?",
+                options: ["RAM", "CPU", "Hard Disk Drive", "Fan"],
+                answer: "C",
+                section: "Computer System Assembly"
             },
             {
-                question: "A computer keyboard not responding can be due to:",
-                options: ["Loose connection", "Faulty keyboard", "Software driver issue", "All of the above"],
-                answer: "D"
+                question: "Before installing components, electricity should be:",
+                options: ["Increased", "Switched off", "Measured", "Ignored"],
+                answer: "B",
+                section: "Computer System Assembly"
             },
             {
-                question: "Overheating in laptops is mostly caused by:",
-                options: ["Poor ventilation", "Dust in fan", "Faulty thermal paste", "All of the above"],
-                answer: "D"
+                question: "The power supply unit (PSU) provides:",
+                options: ["Internet connection", "Electrical power", "Sound output", "Cooling"],
+                answer: "B",
+                section: "Computer System Assembly"
             },
             {
-                question: "Which of the following can lead to CPU damage?",
-                options: ["Power surge", "Overheating", "Static electricity", "All of the above"],
-                answer: "D"
+                question: "Which component is used for cooling the processor?",
+                options: ["Speaker", "Heat Sink and Fan", "Webcam", "Scanner"],
+                answer: "B",
+                section: "Computer System Assembly"
             },
             {
-                question: "The indicator of a faulty GPU includes:",
-                options: ["Screen artifacts", "Driver crashes", "Overheating", "All of the above"],
-                answer: "D"
+                question: "The monitor is an:",
+                options: ["Input device", "Output device", "Storage device", "Communication device"],
+                answer: "B",
+                section: "Computer System Assembly"
             },
             {
-                question: "Frequent system freeze may be caused by:",
-                options: ["Faulty RAM", "Corrupt OS", "Overheating CPU", "All of the above"],
-                answer: "D"
+                question: "What should be installed into the motherboard before the heat sink?",
+                options: ["CPU", "Mouse", "Printer", "Speaker"],
+                answer: "A",
+                section: "Computer System Assembly"
             },
             {
-                question: "A GSM phone that does not charge may have:",
-                options: ["Faulty charger", "Damaged battery", "Charging port problem", "All of the above"],
-                answer: "D"
+                question: "Which device is used to enter data into a computer?",
+                options: ["Monitor", "Keyboard", "Projector", "Speaker"],
+                answer: "B",
+                section: "Computer System Assembly"
             },
             {
-                question: "A phone screen that does not display anything is likely caused by:",
-                options: ["Dead battery", "Faulty display", "Loose connector", "All of the above"],
-                answer: "D"
+                question: "The operating system is installed after:",
+                options: ["Hardware assembly", "Computer packaging", "Marketing", "Cleaning"],
+                answer: "A",
+                section: "Computer System Assembly"
             },
             {
-                question: "SIM card not detected is mostly caused by:",
-                options: ["Faulty SIM card", "Dirty SIM slot", "Software issue", "All of the above"],
-                answer: "D"
+                question: "<span class=\"acronym\">BIOS</span> stands for:",
+                options: ["Basic Input Output System", "Binary Input Operating System", "Basic Internet Operating Service", "Binary Output System"],
+                answer: "A",
+                section: "Computer System Assembly"
             },
             {
-                question: "GSM phone microphone issues may be due to:",
-                options: ["Software settings", "Dust in microphone", "Faulty microphone", "All of the above"],
-                answer: "D"
+                question: "Which storage device is faster?",
+                options: ["Floppy Disk", "SSD", "CD-ROM", "DVD"],
+                answer: "B",
+                section: "Computer System Assembly"
             },
             {
-                question: "Speaker failure in a phone may result from:",
-                options: ["Water damage", "Faulty speaker", "Software glitch", "All of the above"],
-                answer: "D"
+                question: "The computer case is also called:",
+                options: ["Chassis", "Socket", "Drive", "Panel"],
+                answer: "A",
+                section: "Computer System Assembly"
             },
             {
-                question: "A phone that switches off randomly may have:",
-                options: ["Weak battery", "Software bug", "Overheating", "All of the above"],
-                answer: "D"
+                question: "What is tested after assembling a computer?",
+                options: ["Network speed", "System functionality", "Keyboard color", "Desk arrangement"],
+                answer: "B",
+                section: "Computer System Assembly"
             },
             {
-                question: "GSM phone camera not working can be due to:",
-                options: ["Damaged lens", "Loose connection", "Software glitch", "All of the above"],
-                answer: "D"
+                question: "Which cable connects the monitor to the system unit?",
+                options: ["SATA Cable", "VGA/HDMI Cable", "Power Cable", "USB Cable"],
+                answer: "B",
+                section: "Computer System Assembly"
             },
             {
-                question: "Overheating in phones is usually caused by:",
-                options: ["Excessive usage", "Faulty battery", "High ambient temperature", "All of the above"],
-                answer: "D"
+                question: "A SATA cable is used to connect:",
+                options: ["Monitor", "Keyboard", "Storage drives", "Speaker"],
+                answer: "C",
+                section: "Computer System Assembly"
+            },
+            
+            // SECTION B: ENTREPRENEURSHIP IN ICT (Q21-40)
+            {
+                question: "Entrepreneurship is the ability to:",
+                options: ["Waste resources", "Start and manage a business", "Play games", "Watch videos"],
+                answer: "B",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "Phone that fails to turn on may have:",
-                options: ["Dead battery", "Damaged motherboard", "Power button fault", "All of the above"],
-                answer: "D"
+                question: "An entrepreneur is a person who:",
+                options: ["Repairs roads", "Owns and manages a business", "Teaches only", "Sells books only"],
+                answer: "B",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "Touchscreen unresponsiveness is often caused by:",
-                options: ["Faulty digitizer", "Screen protector interference", "Software crash", "All of the above"],
-                answer: "D"
+                question: "The first step in starting a repair business is:",
+                options: ["Closing the shop", "Planning the business", "Buying a car", "Hiring workers"],
+                answer: "B",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "GSM signal issues may result from:",
-                options: ["Faulty antenna", "Poor network coverage", "SIM card issue", "All of the above"],
-                answer: "D"
+                question: "Capital refers to:",
+                options: ["Profit only", "Money used to start a business", "Business name", "Shop location"],
+                answer: "B",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "Phone vibration failure is due to:",
-                options: ["Software settings", "Loose vibration motor", "Dead battery", "All of the above"],
-                answer: "D"
+                question: "Which of the following is a source of capital?",
+                options: ["Savings", "Dustbin", "Chair", "Uniform"],
+                answer: "A",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "Flashing a GSM phone is done to:",
-                options: ["Upgrade OS", "Fix software issues", "Remove virus", "All of the above"],
-                answer: "D"
+                question: "A business plan helps to:",
+                options: ["Confuse customers", "Guide business operations", "Increase expenses", "Reduce sales"],
+                answer: "B",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "Flashing a phone may require:",
-                options: ["Firmware file", "USB cable", "Flash tool software", "All of the above"],
-                answer: "D"
+                question: "Which quality is important for an entrepreneur?",
+                options: ["Laziness", "Honesty", "Carelessness", "Fear"],
+                answer: "B",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "A phone that keeps restarting can often be fixed by:",
-                options: ["Flashing the firmware", "Changing battery", "Replacing screen", "All of the above"],
-                answer: "A"
+                question: "Customer satisfaction helps to:",
+                options: ["Reduce business growth", "Increase customers", "Close the business", "Waste time"],
+                answer: "B",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "Flashing can be dangerous because it may:",
-                options: ["Brick the phone", "Void warranty", "Cause data loss", "All of the above"],
-                answer: "D"
+                question: "Which of these is an ICT repair service?",
+                options: ["Farming", "GSM phone repair", "Fishing", "Carpentry"],
+                answer: "B",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "Boot loop on a phone is commonly fixed by:",
-                options: ["Flashing stock ROM", "Changing battery", "Installing new SIM", "All of the above"],
-                answer: "A"
+                question: "Keeping business records helps to:",
+                options: ["Know profits and losses", "Increase confusion", "Waste money", "Hide transactions"],
+                answer: "A",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "Custom ROM installation requires:",
-                options: ["Unlocked bootloader", "Rooted phone", "Firmware file", "All of the above"],
-                answer: "D"
+                question: "Profit is:",
+                options: ["Total expenses", "Income minus expenses", "Capital only", "Sales only"],
+                answer: "B",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "A phone that freezes after update may need:",
-                options: ["Flashing", "Hard reset", "Replacing battery", "None of the above"],
-                answer: "A"
+                question: "Marketing means:",
+                options: ["Selling and promoting products or services", "Sleeping in the shop", "Closing the business", "Borrowing money"],
+                answer: "A",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "Flashing can remove:",
-                options: ["Viruses", "Corrupt system files", "Custom apps", "All of the above"],
-                answer: "D"
+                question: "A good business location should be:",
+                options: ["Accessible to customers", "Hidden from customers", "Far from people", "Difficult to find"],
+                answer: "A",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "Necessary precaution before flashing includes:",
-                options: ["Backing up data", "Charging phone fully", "Using correct firmware", "All of the above"],
-                answer: "D"
+                question: "Which of these is a business asset?",
+                options: ["Debt", "Repair tools", "Loss", "Tax"],
+                answer: "B",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "Flashing is mostly done using:",
-                options: ["Computer", "USB cable", "Flash tool", "All of the above"],
-                answer: "D"
+                question: "Which skill is important for a GSM repair entrepreneur?",
+                options: ["Repair skills", "Fighting skills", "Dancing skills", "Driving skills"],
+                answer: "A",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "Phone stuck at logo screen is called:",
-                options: ["Boot loop", "Soft brick", "Hard brick", "Virus infection"],
-                answer: "B"
+                question: "One advantage of entrepreneurship is:",
+                options: ["Job creation", "Unemployment", "Poverty", "Business failure"],
+                answer: "A",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "Flashing is not a solution for:",
-                options: ["Broken screen", "Software crash", "OS upgrade", "Virus removal"],
-                answer: "A"
+                question: "What should an entrepreneur do before repairing a customer's device?",
+                options: ["Throw it away", "Diagnose the fault", "Sell it", "Replace it immediately"],
+                answer: "B",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "The first step in assembling a PC is:",
-                options: ["Installing RAM", "Installing motherboard", "Preparing workspace and checking components", "Connecting peripherals"],
-                answer: "C"
+                question: "Good communication with customers helps to:",
+                options: ["Build trust", "Create problems", "Reduce sales", "Cause confusion"],
+                answer: "A",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "The motherboard is installed:",
-                options: ["Before CPU and RAM", "After PSU", "Last", "Before casing"],
-                answer: "A"
+                question: "Which document records daily business transactions?",
+                options: ["Diary", "Cash Book", "Magazine", "Newspaper"],
+                answer: "B",
+                section: "Entrepreneurship in ICT"
             },
             {
-                question: "CPU is installed into:",
-                options: ["PCI slot", "CPU socket", "RAM slot", "USB port"],
-                answer: "B"
-            },
-            {
-                question: "Thermal paste is applied on:",
-                options: ["RAM", "CPU", "GPU", "Power supply"],
-                answer: "B"
-            },
-            {
-                question: "RAM is inserted into:",
-                options: ["DIMM slots", "PCI slots", "CPU socket", "SATA port"],
-                answer: "A"
-            },
-            {
-                question: "Storage devices are connected using:",
-                options: ["SATA cables", "HDMI", "USB", "VGA"],
-                answer: "A"
-            },
-            {
-                question: "PSU provides power to:",
-                options: ["CPU", "Motherboard", "GPU", "All of the above"],
-                answer: "D"
-            },
-            {
-                question: "After assembling a PC, you should:",
-                options: ["Connect monitor and peripherals", "Power on and check BIOS", "Install OS", "All of the above"],
-                answer: "D"
-            },
-            {
-                question: "PCIe slots are used for:",
-                options: ["RAM", "GPU or expansion cards", "CPU", "HDD"],
-                answer: "B"
-            },
-            {
-                question: "Case fans are installed to:",
-                options: ["Cool the PC", "Protect from dust", "Support motherboard", "None of the above"],
-                answer: "A"
-            },
-            {
-                question: "The back panel of a motherboard is connected to:",
-                options: ["Power supply", "Ports of monitor, keyboard, and network", "CPU socket", "RAM slot"],
-                answer: "B"
-            },
-            {
-                question: "The last step in system assembly is:",
-                options: ["Installing RAM", "Powering on and testing", "Installing CPU", "Mounting motherboard"],
-                answer: "B"
-            },
-            {
-                question: "First step in disassembling a PC is:",
-                options: ["Disconnecting power and peripherals", "Removing RAM", "Removing CPU", "Removing motherboard"],
-                answer: "A"
-            },
-            {
-                question: "Before removing components, you should:",
-                options: ["Ground yourself", "Disconnect peripherals", "Take note of cable positions", "All of the above"],
-                answer: "D"
-            },
-            {
-                question: "To remove RAM, you should:",
-                options: ["Pull directly", "Press release clips", "Use screwdriver", "None of the above"],
-                answer: "B"
-            },
-            {
-                question: "Hard drives are removed by:",
-                options: ["Pulling cables", "Unscrewing from drive bay", "Both A and B", "None of the above"],
-                answer: "C"
-            },
-            {
-                question: "Removing the CPU requires:",
-                options: ["Unlocking the socket", "Pulling RAM first", "Disconnecting fans", "Both A and C"],
-                answer: "D"
-            },
-            {
-                question: "Case panels are removed by:",
-                options: ["Pulling", "Unscrewing screws", "Sliding out", "All of the above"],
-                answer: "D"
-            },
-            {
-                question: "Reassembly order starts with:",
-                options: ["PSU", "Motherboard", "CPU and RAM", "GPU"],
-                answer: "B"
-            },
-            {
-                question: "During reassembly, cables should be:",
-                options: ["Tied and organized", "Randomly connected", "Left loose", "None of the above"],
-                answer: "A"
-            },
-            {
-                question: "CPU cooler should be reinstalled with:",
-                options: ["Thermal paste", "Screws properly tightened", "Both A and B", "None of the above"],
-                answer: "C"
-            },
-            {
-                question: "After reassembly, PC should be tested by:",
-                options: ["Powering on and checking BIOS", "Installing OS", "Running heavy games", "None of the above"],
-                answer: "A"
-            },
-            {
-                question: "Peripheral devices are reconnected:",
-                options: ["Before powering on", "After BIOS check", "During assembly", "Not required"],
-                answer: "B"
-            },
-            {
-                question: "Disassembly and reassembly helps to:",
-                options: ["Upgrade hardware", "Repair faulty components", "Learn PC maintenance", "All of the above"],
-                answer: "D"
+                question: "A successful ICT repair business requires:",
+                options: ["Skills and dedication", "Laziness", "Carelessness", "Dishonesty"],
+                answer: "A",
+                section: "Entrepreneurship in ICT"
             }
         ];
 
-        // Application state
         let currentQuestionIndex = 0;
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 30 * 60; // 30 minutes in seconds
+        let timeLeft = 40 * 60;
         let questions = [];
+        let examStarted = false;
 
-        // Background images for rotation
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80',
-            'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80'
+            'https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80',
+            'https://images.unsplash.com/photo-1531492746076-161ca9bcad58?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
         ];
 
-        // DOM elements
         const sections = {
             welcome: document.getElementById('welcome-section'),
             studentInfo: document.getElementById('student-info-section'),
@@ -1168,7 +1181,6 @@
             results: document.getElementById('results-section')
         };
 
-        // Initialize background rotation
         let currentBgIndex = 0;
         function rotateBackground() {
             currentBgIndex = (currentBgIndex + 1) % backgroundImages.length;
@@ -1176,7 +1188,6 @@
         }
         setInterval(rotateBackground, 10000);
 
-        // Shuffle questions
         function shuffleQuestions() {
             questions = [...originalQuestions];
             for (let i = questions.length - 1; i > 0; i--) {
@@ -1186,13 +1197,13 @@
             userAnswers = Array(questions.length).fill(null);
         }
 
-        // Timer function
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 30 * 60;
+            timeLeft = 40 * 60;
             
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
+            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e67e22 0%, #d35400 100%)';
             
             timerInterval = setInterval(() => {
                 timeLeft--;
@@ -1205,19 +1216,48 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    alert("Time's up! Your exam will be submitted automatically.");
-                    calculateScore();
-                }
-                
-                if (timeLeft <= 300) { // 5 minutes left
+                    alert("Time's up! Your test will be submitted automatically.");
+                    calculateScoreAndSubmit();
+                } else if (timeLeft <= 300) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
-                } else if (timeLeft <= 600) { // 10 minutes left
+                } else if (timeLeft <= 600) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
                 }
             }, 1000);
         }
 
-        // Navigation functions
+        document.addEventListener('visibilitychange', () => {
+            if (!examStarted) return;
+            
+            if (document.hidden) {
+                clearInterval(timerInterval);
+            } else {
+                if (document.getElementById('exam-section').classList.contains('active') && timeLeft > 0) {
+                    timerInterval = setInterval(() => {
+                        timeLeft--;
+                        const minutes = Math.floor(timeLeft / 60);
+                        const seconds = timeLeft % 60;
+                        document.getElementById('timer').textContent = 
+                            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                        
+                        if (timeLeft <= 0) {
+                            clearInterval(timerInterval);
+                            alert("Time's up! Your test will be submitted automatically.");
+                            calculateScoreAndSubmit();
+                        }
+                    }, 1000);
+                }
+            }
+        });
+
+        window.addEventListener('beforeunload', (e) => {
+            if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
+                e.preventDefault();
+                e.returnValue = 'You have an ongoing test. Are you sure you want to leave? Your progress may be lost.';
+                return e.returnValue;
+            }
+        });
+
         function showSection(sectionName) {
             Object.values(sections).forEach(section => {
                 section.classList.remove('active');
@@ -1228,10 +1268,23 @@
                 document.getElementById('timer-container').style.display = 'none';
                 document.getElementById('submit-container').style.display = 'none';
             }
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Event listeners
+        function updateProgress() {
+            const answeredCount = userAnswers.filter(answer => answer !== null).length;
+            const percentage = (answeredCount / questions.length) * 100;
+            
+            document.getElementById('progress-bar').style.width = percentage + '%';
+            document.getElementById('progress-text').textContent = 
+                `Progress: ${answeredCount}/${questions.length} answered`;
+        }
+
+        function updateTopicBadge(index) {
+            const section = questions[index].section;
+            document.getElementById('topic-badge').textContent = `Topic: ${section}`;
+        }
+
         document.getElementById('start-exam-btn').addEventListener('click', () => {
             showSection('studentInfo');
         });
@@ -1249,23 +1302,29 @@
             
             if (!firstName) {
                 document.getElementById('first-name-error').style.display = 'block';
+                document.getElementById('first-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('first-name-error').style.display = 'none';
+                document.getElementById('first-name').style.borderColor = '#5d7e9e';
             }
             
             if (!middleName) {
                 document.getElementById('middle-name-error').style.display = 'block';
+                document.getElementById('middle-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('middle-name-error').style.display = 'none';
+                document.getElementById('middle-name').style.borderColor = '#5d7e9e';
             }
             
             if (!lastName) {
                 document.getElementById('last-name-error').style.display = 'block';
+                document.getElementById('last-name').style.borderColor = '#ff6b6b';
                 isValid = false;
             } else {
                 document.getElementById('last-name-error').style.display = 'none';
+                document.getElementById('last-name').style.borderColor = '#5d7e9e';
             }
             
             if (isValid) {
@@ -1281,6 +1340,7 @@
         document.getElementById('begin-test').addEventListener('click', () => {
             shuffleQuestions();
             currentQuestionIndex = 0;
+            examStarted = true;
             
             document.getElementById('display-student-name').textContent = studentName;
             document.getElementById('results-student-name').textContent = studentName;
@@ -1288,6 +1348,8 @@
             createQuestionGrid();
             loadQuestion(currentQuestionIndex);
             startTimer();
+            updateProgress();
+            updateTopicBadge(currentQuestionIndex);
             showSection('exam');
         });
 
@@ -1305,20 +1367,66 @@
             }
         });
 
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('exam-section').classList.contains('active')) return;
+            if (e.target.tagName === 'INPUT' && e.target.type === 'text') return;
+            
+            if (e.key === 'ArrowLeft' && currentQuestionIndex > 0) {
+                e.preventDefault();
+                currentQuestionIndex--;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'ArrowRight' && currentQuestionIndex < questions.length - 1) {
+                e.preventDefault();
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            } else if (e.key === 'A' || e.key === 'a' || e.key === '1') {
+                e.preventDefault();
+                selectOptionByKey(0);
+            } else if (e.key === 'B' || e.key === 'b' || e.key === '2') {
+                e.preventDefault();
+                selectOptionByKey(1);
+            } else if (e.key === 'C' || e.key === 'c' || e.key === '3') {
+                e.preventDefault();
+                selectOptionByKey(2);
+            } else if (e.key === 'D' || e.key === 'd' || e.key === '4') {
+                e.preventDefault();
+                selectOptionByKey(3);
+            }
+        });
+
+        function selectOptionByKey(optionIndex) {
+            const radioButtons = document.querySelectorAll(`input[name="question-${currentQuestionIndex}"]`);
+            if (radioButtons[optionIndex]) {
+                radioButtons[optionIndex].checked = true;
+                userAnswers[currentQuestionIndex] = String.fromCharCode(65 + optionIndex);
+                updateQuestionGrid();
+                updateProgress();
+            }
+        }
+
         document.getElementById('submit-exam').addEventListener('click', () => {
-            const confirmed = confirm("Are you sure you want to submit? You will not be able to change your answers after this.");
+            const unanswered = userAnswers.filter(a => a === null).length;
+            let confirmMessage = "Are you sure you want to submit? You will not be able to change your answers after this.";
+            
+            if (unanswered > 0) {
+                confirmMessage += `\n\n⚠️ Warning: You have ${unanswered} unanswered question(s).`;
+            }
+            
+            const confirmed = confirm(confirmMessage);
             
             if (confirmed) {
                 clearInterval(timerInterval);
+                examStarted = false;
                 document.getElementById('loading').style.display = 'block';
                 setTimeout(() => {
-                    calculateScore();
+                    calculateScoreAndSubmit();
                 }, 1500);
             }
         });
 
         document.getElementById('restart-exam').addEventListener('click', () => {
             clearInterval(timerInterval);
+            examStarted = false;
             document.getElementById('first-name').value = '';
             document.getElementById('middle-name').value = '';
             document.getElementById('last-name').value = '';
@@ -1334,6 +1442,7 @@
                 questionNumber.className = 'question-number';
                 questionNumber.textContent = i + 1;
                 questionNumber.dataset.index = i;
+                questionNumber.title = `Question ${i + 1} - ${questions[i].section}`;
                 
                 if (userAnswers[i] !== null) {
                     questionNumber.classList.add('answered');
@@ -1373,10 +1482,14 @@
             const question = questions[index];
             
             document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
-            document.getElementById('question-text').textContent = question.question;
+            document.getElementById('question-text').innerHTML = question.question;
+            
+            updateTopicBadge(index);
             
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
+            
+            const labels = ['A', 'B', 'C', 'D'];
             
             question.options.forEach((option, optionIndex) => {
                 const optionDiv = document.createElement('div');
@@ -1388,7 +1501,7 @@
                 radio.type = 'radio';
                 radio.name = `question-${index}`;
                 radio.id = optionId;
-                radio.value = String.fromCharCode(65 + optionIndex);
+                radio.value = labels[optionIndex];
                 
                 if (userAnswers[index] === radio.value) {
                     radio.checked = true;
@@ -1397,11 +1510,21 @@
                 radio.addEventListener('change', () => {
                     userAnswers[index] = radio.value;
                     updateQuestionGrid();
+                    updateProgress();
                 });
                 
                 const label = document.createElement('label');
                 label.htmlFor = optionId;
-                label.textContent = `${String.fromCharCode(65 + optionIndex)}. ${option}`;
+                label.textContent = `${labels[optionIndex]}. ${option}`;
+                
+                optionDiv.addEventListener('click', (e) => {
+                    if (e.target !== radio) {
+                        radio.checked = true;
+                        userAnswers[index] = radio.value;
+                        updateQuestionGrid();
+                        updateProgress();
+                    }
+                });
                 
                 optionDiv.appendChild(radio);
                 optionDiv.appendChild(label);
@@ -1412,9 +1535,12 @@
             document.getElementById('next-question').disabled = index === questions.length - 1;
             
             updateQuestionGrid();
+            updateProgress();
+            
+            document.querySelector('.exam-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        function calculateScore() {
+        function calculateScoreAndSubmit() {
             document.getElementById('loading').style.display = 'none';
             let score = 0;
             
@@ -1424,7 +1550,9 @@
                 }
             }
             
-            submitToGoogleForm(studentName, "SS1 Phone Installation & Computer Assembly - Second Term 2025/2026", `${score}/${questions.length}`);
+            // Submit score to Google Form ONLY - do NOT display to student
+            submitToGoogleForm(studentName, "Computer Hardware & GSM Repairs - Third Term 2025/2026", `${score}/40`);
+            
             document.getElementById('submission-status').style.display = 'block';
             showSection('results');
         }
@@ -1433,7 +1561,7 @@
             const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
             const formData = new FormData();
             formData.append("entry.862885683", fullName);
-            formData.append("entry.1545021484", "SS1");
+            formData.append("entry.1545021484", "SSS1");
             formData.append("entry.1558221900", subject);
             formData.append("entry.2022160530", score);
 
