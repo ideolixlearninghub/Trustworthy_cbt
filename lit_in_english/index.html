@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Literature-in-English SSS1 Objective Test</title>
+    <title>The Trustworthy College - Literature in English SSS1 Third Term Examination</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', 'Roboto', 'Georgia', 'Arial', sans-serif;
+            font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
         }
         
         body {
-            background-color: #1a0d2a;
-            color: #f0e8f5;
+            background-color: #1a0d1a;
+            color: #f0e0f0;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
@@ -28,11 +28,11 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1519682337058-a94d519337bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.12;
+            opacity: 0.10;
             z-index: -1;
             transition: background-image 1.5s ease-in-out;
         }
@@ -41,7 +41,7 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #1a0d2a 0%, #2a1a3a 100%);
+            background: linear-gradient(135deg, #1a0d1a 0%, #2a1a2a 100%);
             box-shadow: 0 15px 40px rgba(142, 68, 173, 0.25);
             border-radius: 16px;
             margin-top: 25px;
@@ -59,12 +59,12 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #7d3c98, #8e44ad, #7d3c98);
+            background: linear-gradient(90deg, #8e44ad, #9b59b6, #8e44ad);
             z-index: 2;
         }
         
         .container::after {
-            content: '🖋️';
+            content: '📚';
             position: absolute;
             bottom: 15px;
             right: 20px;
@@ -158,14 +158,14 @@
         }
         
         .welcome-message {
-            background: linear-gradient(135deg, rgba(142, 68, 173, 0.1) 0%, rgba(42, 26, 58, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(142, 68, 173, 0.1) 0%, rgba(42, 26, 42, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #f0e8f5;
+            color: #f0e0f0;
             border-left: 5px solid #8e44ad;
             border-right: 1px solid rgba(142, 68, 173, 0.3);
             border-top: 1px solid rgba(142, 68, 173, 0.2);
@@ -176,7 +176,7 @@
         }
         
         .welcome-message::before {
-            content: '📖';
+            content: '📚';
             position: absolute;
             top: 20px;
             right: 20px;
@@ -242,6 +242,10 @@
             border-color: #d35400;
         }
         
+        .btn-success:hover:not(:disabled) {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+        }
+        
         .btn-container {
             text-align: center;
             margin-top: 35px;
@@ -263,11 +267,11 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(26, 13, 42, 0.7);
+            background: rgba(26, 13, 26, 0.7);
             border: 2px solid #5d7e9e;
             border-radius: 10px;
             font-size: 1.1rem;
-            color: #f0e8f5;
+            color: #f0e0f0;
             transition: all 0.3s;
             font-family: inherit;
         }
@@ -276,7 +280,7 @@
             border-color: #8e44ad;
             outline: none;
             box-shadow: 0 0 0 3px rgba(142, 68, 173, 0.3);
-            background: rgba(26, 13, 42, 0.9);
+            background: rgba(26, 13, 26, 0.9);
         }
         
         .error-message {
@@ -288,7 +292,7 @@
         }
         
         .instructions {
-            background: linear-gradient(135deg, rgba(155, 89, 182, 0.08) 0%, rgba(42, 26, 58, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.08) 0%, rgba(42, 26, 42, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
@@ -299,7 +303,7 @@
         }
         
         .instructions::before {
-            content: '✍️';
+            content: '📢';
             position: absolute;
             top: 20px;
             right: 20px;
@@ -372,7 +376,7 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(26, 13, 42, 0.5);
+            background: rgba(26, 13, 26, 0.5);
             border-radius: 12px;
             border: 1px solid rgba(142, 68, 173, 0.2);
         }
@@ -407,7 +411,7 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(26, 13, 42, 0.4);
+            background: rgba(26, 13, 26, 0.4);
             padding: 30px;
             border-radius: 12px;
             border: 1px solid rgba(142, 68, 173, 0.2);
@@ -437,7 +441,7 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(42, 26, 58, 0.4);
+            background: rgba(42, 26, 42, 0.4);
             border: 1px solid rgba(93, 126, 158, 0.3);
             cursor: pointer;
             position: relative;
@@ -480,10 +484,9 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
-            color: #f0e8f5;
+            color: #f0e0f0;
             font-size: 1.1rem;
             line-height: 1.5;
-            font-family: 'Georgia', 'Segoe UI', serif;
         }
         
         .question-navigation {
@@ -528,13 +531,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(42, 26, 58, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(42, 26, 42, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
             border: 1px solid rgba(142, 68, 173, 0.3);
-            color: #f0e8f5;
+            color: #f0e0f0;
             font-size: 1.1rem;
         }
         
@@ -566,7 +569,7 @@
         
         .progress-container {
             margin: 20px 0;
-            background: rgba(42, 26, 58, 0.5);
+            background: rgba(42, 26, 42, 0.5);
             border-radius: 10px;
             overflow: hidden;
             height: 10px;
@@ -575,7 +578,7 @@
         
         .progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, #7d3c98, #8e44ad);
+            background: linear-gradient(90deg, #8e44ad, #9b59b6);
             width: 0%;
             transition: width 0.5s ease;
             border-radius: 10px;
@@ -603,7 +606,7 @@
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(26, 13, 42, 0.8) 0%, rgba(42, 26, 58, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(26, 13, 26, 0.8) 0%, rgba(42, 26, 42, 0.9) 100%);
             border-radius: 16px;
             border: 2px solid #8e44ad;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
@@ -654,7 +657,7 @@
         .feedback {
             font-size: 1.3rem;
             margin: 25px 0;
-            color: #f0e8f5;
+            color: #f0e0f0;
             line-height: 1.7;
             padding: 25px;
             background: rgba(142, 68, 173, 0.08);
@@ -665,11 +668,11 @@
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.15) 0%, rgba(39, 174, 96, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(241, 196, 15, 0.15) 0%, rgba(243, 156, 18, 0.2) 100%);
             border-radius: 12px;
-            color: #2ecc71;
+            color: #f1c40f;
             font-size: 1.2rem;
-            border: 1px solid rgba(46, 204, 113, 0.4);
+            border: 1px solid rgba(241, 196, 15, 0.4);
         }
         
         @media (max-width: 768px) {
@@ -753,7 +756,7 @@
             color: #5d7e9e;
             margin-top: 15px;
             padding: 10px;
-            background: rgba(26, 13, 42, 0.3);
+            background: rgba(26, 13, 26, 0.3);
             border-radius: 8px;
             border: 1px dashed rgba(93, 126, 158, 0.3);
         }
@@ -774,23 +777,23 @@
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title">SSS1 LITERATURE-IN-ENGLISH TEST</h1>
+            <h1 class="subject-title">SSS1 LITERATURE IN ENGLISH THIRD TERM EXAMINATION</h1>
             <div class="exam-info">Third Term | 2025/2026 Session</div>
-            <div class="term-info">40 Objective Questions | 40 Minutes</div>
+            <div class="term-info">60 Objective Questions | 60 Minutes</div>
         </div>
         
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Literature-in-English Objective Test. This test covers the poems <em>Still I Rise</em> by Maya Angelou and <em>She Walks in Beauty</em> by Lord Byron, as well as the structure and types of Sonnets (Petrarchan, Shakespearean, Spenserian). Demonstrate your understanding of poetic devices, themes, rhyme schemes, and literary appreciation. Best of luck."
+                "Welcome to The Trustworthy College Literature in English Third Term Examination. This examination covers Figures of Speech, Poetry Analysis (The Night, Still I Rise, Not My Business), Literary Devices, and General Literature Concepts. Demonstrate your understanding of literary techniques and poetic interpretation. Best of luck."
             </div>
             <div class="btn-container">
-                <button id="start-exam-btn" class="btn">Start Objective Test</button>
+                <button id="start-exam-btn" class="btn">Start Examination</button>
             </div>
         </section>
         
         <section id="student-info-section" class="section">
             <h2>Student Information</h2>
-            <p>Please provide your details to continue with the test.</p>
+            <p>Please provide your details to continue with the examination.</p>
             
             <form id="student-info-form" autocomplete="off">
                 <div class="form-group">
@@ -819,46 +822,47 @@
         </section>
         
         <section id="instructions-section" class="section">
-            <h2>Test Instructions</h2>
+            <h2>Examination Instructions</h2>
             
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This Objective Test consists of <strong>40 multiple-choice questions</strong> covering <em>Still I Rise</em>, <em>She Walks in Beauty</em>, and Sonnet types.</li>
-                    <li>You have <strong>40 minutes</strong> to complete this test.</li>
+                    <li>This Third Term Examination consists of <strong>60 multiple-choice objective questions</strong> covering Figures of Speech, Poetry Analysis, Literary Devices, and General Literature Concepts.</li>
+                    <li>You have <strong>60 minutes</strong> to complete this examination.</li>
+                    <li>Each question carries <strong>½ mark</strong>.</li>
                     <li>Answer all questions to the best of your ability.</li>
                     <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
                     <li>You can also use <strong>keyboard shortcuts</strong>: Arrow keys to navigate, A/B/C/D keys to select answers.</li>
                     <li>Answered questions will be marked with <strong>orange</strong> in the question grid.</li>
                     <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
-                    <li>Ensure you have a stable internet connection throughout the test.</li>
+                    <li>Ensure you have a stable internet connection throughout the examination.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li><strong>Do not refresh the page</strong> during the test, or you may lose your progress.</li>
+                    <li><strong>Do not refresh the page</strong> during the examination, or you may lose your progress.</li>
                 </ul>
             </div>
             
             <div class="btn-container">
                 <button type="button" id="back-to-student-info" class="btn btn-secondary">Back</button>
-                <button type="button" id="begin-test" class="btn">Begin Test</button>
+                <button type="button" id="begin-test" class="btn">Begin Examination</button>
             </div>
         </section>
         
         <section id="exam-section" class="section">
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
-                <div class="topic-badge" id="topic-badge">Topic: Still I Rise</div>
+                <div class="topic-badge" id="topic-badge">Topic: Literature</div>
                 <div class="progress-container">
                     <div class="progress-bar" id="progress-bar"></div>
                 </div>
-                <div class="progress-text" id="progress-text">Progress: 0/40 answered</div>
+                <div class="progress-text" id="progress-text">Progress: 0/60 answered</div>
                 <div class="exam-controls">
-                    <div class="question-counter" id="question-counter">Question 1 of 40</div>
+                    <div class="question-counter" id="question-counter">Question 1 of 60</div>
                     <div class="timer-container" id="timer-container">
-                        ⏱ Time Left: <span id="timer">40:00</span>
+                        ⏱ Time Left: <span id="timer">60:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success">Submit Test</button>
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Examination</button>
                     </div>
                 </div>
             </div>
@@ -890,21 +894,21 @@
         
         <section id="results-section" class="section">
             <div class="results-container">
-                <h2>Test Completed</h2>
+                <h2>Examination Completed</h2>
                 <div class="completion-icon">✅</div>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SSS1 Literature-in-English - Third Term Objective Test 2025/2026</div>
+                <div class="subject" id="results-subject">SSS1 Literature in English - Third Term Examination 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the Literature-in-English Objective Test. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
+                    Thank you for completing the Literature in English Third Term Examination. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    ✅ Your test has been successfully submitted.
+                    ✅ Your examination has been successfully submitted.
                 </div>
                 
                 <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn">Take Another Test</button>
+                    <button type="button" id="restart-exam" class="btn">Take Another Examination</button>
                     <div class="back-home">
                         <a href="../index.html" class="btn btn-secondary">Back to Home</a>
                     </div>
@@ -915,250 +919,366 @@
 
     <script>
         const originalQuestions = [
-            // SECTION A: STILL I RISE by Maya Angelou (Q1, 4, 7, 11, 16, 19, 23, 26, 29, 30, 33, 37, 40)
+            // Questions 1-60 as provided
             {
-                question: "Who is the author of <em>Still I Rise</em>?",
-                options: ["William Shakespeare", "Maya Angelou", "Lord Byron", "John Milton"],
-                answer: "B",
-                section: "Still I Rise - Maya Angelou"
+                question: "Which of the following best describes the mood of <em>The Night</em>?",
+                options: ["Joyful", "Humorous", "Fearful", "Romantic"],
+                answer: "C",
+                section: "Poetry Analysis"
             },
             {
-                question: "The repeated use of 'I rise' in <em>Still I Rise</em> is an example of",
-                options: ["Irony", "Repetition", "Euphemism", "Litotes"],
-                answer: "B",
-                section: "Still I Rise - Maya Angelou"
+                question: "In <em>Still I Rise</em>, the speaker encourages people to",
+                options: ["Give up easily", "Accept oppression", "Remain confident despite challenges", "Avoid society"],
+                answer: "C",
+                section: "Poetry Analysis"
             },
             {
-                question: "In <em>Still I Rise</em>, the speaker shows",
-                options: ["Fear", "Determination", "Confusion", "Jealousy"],
+                question: "A figure of speech in which non-human things are given human qualities is called",
+                options: ["Irony", "Personification", "Hyperbole", "Oxymoron"],
                 answer: "B",
-                section: "Still I Rise - Maya Angelou"
+                section: "Figures of Speech"
             },
             {
-                question: "The title <em>Still I Rise</em> suggests",
-                options: ["Continuous defeat", "Persistent success despite difficulties", "Fear of failure", "Loneliness"],
+                question: "In <em>Not My Business</em>, the poet mainly condemns",
+                options: ["Poverty", "Silence in the face of injustice", "Love", "Nature"],
                 answer: "B",
-                section: "Still I Rise - Maya Angelou"
+                section: "Poetry Analysis"
+            },
+            {
+                question: "Which figure of speech compares two unlike things using 'like' or 'as'?",
+                options: ["Metaphor", "Simile", "Euphemism", "Apostrophe"],
+                answer: "B",
+                section: "Figures of Speech"
+            },
+            {
+                question: "The expression 'Time is a thief' is an example of",
+                options: ["Metaphor", "Hyperbole", "Simile", "Irony"],
+                answer: "A",
+                section: "Figures of Speech"
+            },
+            {
+                question: "The central message of <em>Still I Rise</em> is",
+                options: ["Revenge", "Fear", "Hope and resilience", "Loneliness"],
+                answer: "C",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "The repeated phrase 'What business of mine is it?' suggests",
+                options: ["Curiosity", "Patriotism", "Indifference", "Happiness"],
+                answer: "C",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "Which figure of speech involves deliberate exaggeration?",
+                options: ["Hyperbole", "Metaphor", "Pun", "Euphemism"],
+                answer: "A",
+                section: "Figures of Speech"
+            },
+            {
+                question: "The speaker in <em>The Night</em> feels",
+                options: ["Safe", "Confident", "Uneasy", "Excited"],
+                answer: "C",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "'The wind whispered through the trees' is an example of",
+                options: ["Irony", "Personification", "Metaphor", "Litotes"],
+                answer: "B",
+                section: "Figures of Speech"
+            },
+            {
+                question: "Maya Angelou uses repetition mainly to",
+                options: ["Bore readers", "Emphasize confidence", "Introduce new characters", "Describe nature"],
+                answer: "B",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "Which figure of speech is found in the statement 'The classroom was a zoo'?",
+                options: ["Simile", "Metaphor", "Alliteration", "Euphemism"],
+                answer: "B",
+                section: "Figures of Speech"
+            },
+            {
+                question: "The speaker in <em>Not My Business</em> eventually becomes",
+                options: ["A government official", "A victim of oppression", "A soldier", "A businessman"],
+                answer: "B",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "Which of the following is not a figure of speech?",
+                options: ["Simile", "Metaphor", "Paragraph", "Irony"],
+                answer: "C",
+                section: "Figures of Speech"
+            },
+            {
+                question: "'She sells seashells by the seashore' illustrates",
+                options: ["Alliteration", "Euphemism", "Irony", "Synecdoche"],
+                answer: "A",
+                section: "Figures of Speech"
+            },
+            {
+                question: "In <em>The Night</em>, darkness symbolizes",
+                options: ["Wealth", "Fear and uncertainty", "Success", "Wisdom"],
+                answer: "B",
+                section: "Poetry Analysis"
             },
             {
                 question: "The tone of <em>Still I Rise</em> is",
-                options: ["Defeated", "Regretful", "Triumphant", "Mocking"],
+                options: ["Hopeless", "Confident", "Regretful", "Humorous"],
+                answer: "B",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "'The crown' used to represent a king is an example of",
+                options: ["Metonymy", "Simile", "Hyperbole", "Onomatopoeia"],
+                answer: "A",
+                section: "Figures of Speech"
+            },
+            {
+                question: "The poet of <em>Not My Business</em> is",
+                options: ["Wole Soyinka", "Maya Angelou", "Niyi Osundare", "John Donne"],
                 answer: "C",
-                section: "Still I Rise - Maya Angelou"
+                section: "Poetry Analysis"
+            },
+            {
+                question: "Which literary device involves the repetition of the same consonant sound at the beginning of words?",
+                options: ["Assonance", "Alliteration", "Irony", "Metaphor"],
+                answer: "B",
+                section: "Figures of Speech"
+            },
+            {
+                question: "The expression 'I've told you a million times' is",
+                options: ["Hyperbole", "Simile", "Personification", "Oxymoron"],
+                answer: "A",
+                section: "Figures of Speech"
+            },
+            {
+                question: "The message of <em>Not My Business</em> teaches that",
+                options: ["Injustice should be ignored", "Everyone should mind only personal affairs", "Silence can make one a victim", "Government is always right"],
+                answer: "C",
+                section: "Poetry Analysis"
             },
             {
                 question: "In <em>Still I Rise</em>, the speaker refuses to be",
-                options: ["Praised", "Controlled by oppression", "Educated", "Rewarded"],
+                options: ["Educated", "Defeated by oppression", "Wealthy", "Famous"],
                 answer: "B",
-                section: "Still I Rise - Maya Angelou"
+                section: "Poetry Analysis"
             },
             {
-                question: "The major theme of <em>Still I Rise</em> is",
-                options: ["Resilience and Self-confidence", "Hatred and Revenge", "Poverty and Suffering", "War and Peace"],
+                question: "Which figure of speech produces words that imitate natural sounds?",
+                options: ["Oxymoron", "Onomatopoeia", "Metaphor", "Euphemism"],
+                answer: "B",
+                section: "Figures of Speech"
+            },
+            {
+                question: "The major emotion expressed in <em>The Night</em> is",
+                options: ["Excitement", "Fear", "Anger", "Joy"],
+                answer: "B",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "'Deafening silence' is an example of",
+                options: ["Oxymoron", "Simile", "Metaphor", "Hyperbole"],
                 answer: "A",
-                section: "Still I Rise - Maya Angelou"
+                section: "Figures of Speech"
             },
             {
-                question: "In <em>Still I Rise</em>, the speaker compares herself to",
-                options: ["Oil wells and moons", "Mountains and valleys only", "Rivers and oceans only", "Trees and flowers only"],
+                question: "The repeated line 'I rise' in Maya Angelou's poem emphasizes",
+                options: ["Weakness", "Determination", "Hatred", "Confusion"],
+                answer: "B",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "Which of these is not a poem studied in this scheme?",
+                options: ["<em>The Night</em>", "<em>Not My Business</em>", "<em>Still I Rise</em>", "<em>The Road Not Taken</em>"],
+                answer: "D",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "Literature primarily helps readers to",
+                options: ["Memorize formulas", "Understand human life and experiences", "Build machines", "Solve mathematical equations"],
+                answer: "B",
+                section: "General Literature"
+            },
+            {
+                question: "Which figure of speech addresses an absent person or an abstract idea as if it were present?",
+                options: ["Apostrophe", "Irony", "Simile", "Synecdoche"],
                 answer: "A",
-                section: "Still I Rise - Maya Angelou"
-            },
-            {
-                question: "Which poem was written by Maya Angelou?",
-                options: ["She Walks in Beauty", "Paradise Lost", "Still I Rise", "Sonnet 18"],
-                answer: "C",
-                section: "Still I Rise - Maya Angelou"
-            },
-            {
-                question: "<em>Still I Rise</em> encourages readers to",
-                options: ["Depend on luck", "Give up easily", "Remain confident despite challenges", "Avoid criticism"],
-                answer: "C",
-                section: "Still I Rise - Maya Angelou"
-            },
-            {
-                question: "The speaker in <em>Still I Rise</em> celebrates",
-                options: ["Self-worth and freedom", "Wealth and fame", "Anger and hatred", "Power and authority"],
-                answer: "A",
-                section: "Still I Rise - Maya Angelou"
+                section: "Figures of Speech"
             },
             {
                 question: "The speaker in <em>Still I Rise</em> demonstrates",
-                options: ["Submission", "Courage", "Weakness", "Indifference"],
+                options: ["Self-pity", "Self-confidence", "Hatred", "Fear"],
                 answer: "B",
-                section: "Still I Rise - Maya Angelou"
+                section: "Poetry Analysis"
             },
             {
-                question: "The main message of <em>Still I Rise</em> is that one should",
-                options: ["Accept defeat quietly", "Seek revenge always", "Rise above challenges and oppression", "Avoid difficult situations"],
-                answer: "C",
-                section: "Still I Rise - Maya Angelou"
-            },
-            
-            // SECTION B: SHE WALKS IN BEAUTY by Lord Byron (Q3, 5, 8, 10, 13, 21, 24, 27, 35, 39)
-            {
-                question: "<em>She Walks in Beauty</em> was written by",
-                options: ["John Keats", "William Wordsworth", "Lord Byron", "Maya Angelou"],
-                answer: "C",
-                section: "She Walks in Beauty - Lord Byron"
-            },
-            {
-                question: "The dominant theme of <em>She Walks in Beauty</em> is",
-                options: ["War and Conflict", "Beauty and Harmony", "Revenge and Hatred", "Poverty and Wealth"],
+                question: "The title <em>Not My Business</em> is ironic because the speaker eventually",
+                options: ["Travels abroad", "Becomes involved in the injustice", "Becomes a judge", "Wins an election"],
                 answer: "B",
-                section: "She Walks in Beauty - Lord Byron"
+                section: "Poetry Analysis"
             },
             {
-                question: "Which literary device is used in the line 'She walks in beauty, <em>like the night</em>'?",
-                options: ["Metaphor", "Simile", "Irony", "Hyperbole"],
+                question: "In literature, the atmosphere created in a work is known as",
+                options: ["Theme", "Mood", "Plot", "Conflict"],
                 answer: "B",
-                section: "She Walks in Beauty - Lord Byron"
+                section: "General Literature"
             },
             {
-                question: "The mood of <em>She Walks in Beauty</em> is",
-                options: ["Angry", "Fearful", "Admiring", "Suspenseful"],
-                answer: "C",
-                section: "She Walks in Beauty - Lord Byron"
-            },
-            {
-                question: "The woman in <em>She Walks in Beauty</em> is compared to",
-                options: ["The sun", "The moon", "The night with stars", "The sea"],
-                answer: "C",
-                section: "She Walks in Beauty - Lord Byron"
-            },
-            {
-                question: "The beauty described in <em>She Walks in Beauty</em> is",
-                options: ["Artificial", "Violent", "Balanced and natural", "Temporary"],
-                answer: "C",
-                section: "She Walks in Beauty - Lord Byron"
-            },
-            {
-                question: "Lord Byron was a poet of the",
-                options: ["Romantic Age", "Victorian Age", "Modern Age", "Classical Age"],
+                question: "'The stars danced in the sky' is an example of",
+                options: ["Personification", "Simile", "Hyperbole", "Euphemism"],
                 answer: "A",
-                section: "She Walks in Beauty - Lord Byron"
+                section: "Figures of Speech"
             },
             {
-                question: "The beauty of the woman reflects her",
-                options: ["Wealth", "Social status", "Inner goodness", "Political power"],
+                question: "The poet of <em>Still I Rise</em> is",
+                options: ["Niyi Osundare", "Wole Soyinka", "Maya Angelou", "William Shakespeare"],
                 answer: "C",
-                section: "She Walks in Beauty - Lord Byron"
+                section: "Poetry Analysis"
             },
             {
-                question: "The tone of <em>She Walks in Beauty</em> can best be described as",
-                options: ["Bitter", "Admiring", "Sarcastic", "Humorous"],
-                answer: "B",
-                section: "She Walks in Beauty - Lord Byron"
-            },
-            {
-                question: "<em>She Walks in Beauty</em> celebrates both physical beauty and",
-                options: ["Political influence", "Wealth", "Inner purity", "Intelligence"],
-                answer: "C",
-                section: "She Walks in Beauty - Lord Byron"
-            },
-            
-            // SECTION C: THE SONNET (Q2, 6, 9, 12, 14, 15, 17, 18, 20, 22, 25, 28, 31, 32, 34, 36, 38)
-            {
-                question: "A sonnet is a poem consisting of",
-                options: ["12 lines", "10 lines", "14 lines", "16 lines"],
-                answer: "C",
-                section: "The Sonnet"
-            },
-            {
-                question: "The Italian sonnet is also known as the",
-                options: ["Shakespearean Sonnet", "Miltonic Sonnet", "Petrarchan Sonnet", "Spenserian Sonnet"],
-                answer: "C",
-                section: "The Sonnet"
-            },
-            {
-                question: "The rhyme scheme of a Shakespearean sonnet is",
-                options: ["ABAB BCBC CDCD EE", "ABBA ABBA CDE CDE", "ABAB CDCD EFEF GG", "AABB CCDD EEFF GG"],
-                answer: "C",
-                section: "The Sonnet"
-            },
-            {
-                question: "The first eight lines of a Petrarchan sonnet are called the",
-                options: ["Couplet", "Sestet", "Octave", "Quatrain"],
-                answer: "C",
-                section: "The Sonnet"
-            },
-            {
-                question: "The last six lines of a Petrarchan sonnet are known as the",
-                options: ["Sestet", "Octave", "Couplet", "Tercet"],
+                question: "Which figure of speech uses contradictory words together?",
+                options: ["Oxymoron", "Simile", "Metaphor", "Pun"],
                 answer: "A",
-                section: "The Sonnet"
+                section: "Figures of Speech"
             },
             {
-                question: "Which of the following is a type of sonnet?",
-                options: ["Elegiac Sonnet", "Petrarchan Sonnet", "Ballad Sonnet", "Ode Sonnet"],
+                question: "The message of <em>The Night</em> mainly reflects",
+                options: ["Courage in daylight", "The mystery and fear associated with darkness", "Political freedom", "Celebration"],
                 answer: "B",
-                section: "The Sonnet"
+                section: "Poetry Analysis"
             },
             {
-                question: "The rhyme scheme of a Petrarchan sonnet is commonly",
-                options: ["ABAB CDCD EFEF GG", "ABBA ABBA CDE CDE", "AABB CCDD EEFF GG", "ABCD ABCD ABCD AB"],
-                answer: "B",
-                section: "The Sonnet"
-            },
-            {
-                question: "A sonnet belongs to the genre of",
-                options: ["Drama", "Prose", "Poetry", "Folktale"],
-                answer: "C",
-                section: "The Sonnet"
-            },
-            {
-                question: "Which sonnet has the rhyme scheme ABAB BCBC CDCD EE?",
-                options: ["Shakespearean", "Petrarchan", "Spenserian", "Miltonic"],
-                answer: "C",
-                section: "The Sonnet"
-            },
-            {
-                question: "The final two lines of a Shakespearean sonnet form a",
-                options: ["Quatrain", "Octave", "Sestet", "Couplet"],
-                answer: "D",
-                section: "The Sonnet"
-            },
-            {
-                question: "The word <em>sonnet</em> originated from the",
-                options: ["French", "Italian", "Greek", "German"],
-                answer: "B",
-                section: "The Sonnet"
-            },
-            {
-                question: "A Shakespearean sonnet consists of",
-                options: ["One octave and one sestet", "Three quatrains and a couplet", "Two quatrains and a sestet", "Seven couplets"],
-                answer: "B",
-                section: "The Sonnet"
-            },
-            {
-                question: "Which is NOT a type of sonnet studied here?",
-                options: ["Shakespearean", "Petrarchan", "Spenserian", "Miltonic"],
-                answer: "D",
-                section: "The Sonnet"
-            },
-            {
-                question: "The phrase 'like the night' introduces a",
-                options: ["Simile", "Metonymy", "Paradox", "Euphemism"],
+                question: "Which figure of speech is illustrated by 'The kettle is boiling'?",
+                options: ["Metonymy", "Personification", "Hyperbole", "Irony"],
                 answer: "A",
-                section: "The Sonnet"
+                section: "Figures of Speech"
             },
             {
-                question: "A group of four lines in a sonnet is called a",
-                options: ["Couplet", "Tercet", "Quatrain", "Octave"],
-                answer: "C",
-                section: "The Sonnet"
+                question: "In <em>Not My Business</em>, the speaker regrets",
+                options: ["Going to school", "Remaining silent while others suffered", "Reading books", "Leaving home"],
+                answer: "B",
+                section: "Poetry Analysis"
             },
             {
-                question: "Which sonnet type is associated with Petrarch?",
-                options: ["Shakespearean", "Spenserian", "Petrarchan", "Heroic"],
-                answer: "C",
-                section: "The Sonnet"
+                question: "Which literary device involves repeating vowel sounds?",
+                options: ["Assonance", "Alliteration", "Irony", "Metaphor"],
+                answer: "A",
+                section: "Figures of Speech"
             },
             {
-                question: "The rhyme scheme ABAB CDCD EFEF GG belongs to the",
-                options: ["Petrarchan", "Spenserian", "Shakespearean", "Miltonic"],
+                question: "The tone of <em>Not My Business</em> is best described as",
+                options: ["Comic", "Reflective and critical", "Romantic", "Cheerful"],
+                answer: "B",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "'The pen is mightier than the sword' means",
+                options: ["Pens are stronger than swords", "Writing has greater influence than violence", "Pens should replace swords", "Writers should fight soldiers"],
+                answer: "B",
+                section: "General Literature"
+            },
+            {
+                question: "Which figure of speech gives emphasis through understatement?",
+                options: ["Litotes", "Hyperbole", "Irony", "Pun"],
+                answer: "A",
+                section: "Figures of Speech"
+            },
+            {
+                question: "The repeated use of 'I rise' helps to reinforce the poem's",
+                options: ["Plot", "Theme", "Setting", "Characters"],
+                answer: "B",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "Which of these is not a figure of speech?",
+                options: ["Personification", "Metaphor", "Stanza", "Simile"],
                 answer: "C",
-                section: "The Sonnet"
+                section: "Figures of Speech"
+            },
+            {
+                question: "'Buzz,' 'bang,' and 'hiss' are examples of",
+                options: ["Onomatopoeia", "Oxymoron", "Synecdoche", "Apostrophe"],
+                answer: "A",
+                section: "Figures of Speech"
+            },
+            {
+                question: "The conflict in <em>Not My Business</em> is mainly between",
+                options: ["Nature and man", "Citizens and oppression", "Parents and children", "Friends"],
+                answer: "B",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "The dominant feeling expressed in <em>Still I Rise</em> is",
+                options: ["Despair", "Pride", "Shame", "Confusion"],
+                answer: "B",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "The poet uses imagery in <em>The Night</em> mainly to",
+                options: ["Create vivid mental pictures", "Make readers laugh", "Introduce new characters", "Explain history"],
+                answer: "A",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "Which figure of speech substitutes a part for the whole?",
+                options: ["Synecdoche", "Hyperbole", "Simile", "Pun"],
+                answer: "A",
+                section: "Figures of Speech"
+            },
+            {
+                question: "The expression 'He has a heart of stone' is an example of",
+                options: ["Metaphor", "Simile", "Irony", "Litotes"],
+                answer: "A",
+                section: "Figures of Speech"
+            },
+            {
+                question: "The theme of <em>Still I Rise</em> encourages readers to",
+                options: ["Hate others", "Persevere despite oppression", "Avoid challenges", "Remain silent"],
+                answer: "B",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "In <em>The Night</em>, darkness is associated with",
+                options: ["Celebration", "Anxiety", "Success", "Wealth"],
+                answer: "B",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "The line 'Justice is blind' contains",
+                options: ["Personification", "Irony", "Hyperbole", "Euphemism"],
+                answer: "A",
+                section: "Figures of Speech"
+            },
+            {
+                question: "Which figure of speech is found in 'as brave as a lion'?",
+                options: ["Simile", "Metaphor", "Oxymoron", "Synecdoche"],
+                answer: "A",
+                section: "Figures of Speech"
+            },
+            {
+                question: "One important lesson from <em>Not My Business</em> is that",
+                options: ["Silence in the face of injustice is dangerous", "Everyone should avoid helping others", "Politics is unimportant", "Only leaders can fight injustice"],
+                answer: "A",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "The expression 'The White House announced...' is an example of",
+                options: ["Metonymy", "Simile", "Hyperbole", "Apostrophe"],
+                answer: "A",
+                section: "Figures of Speech"
+            },
+            {
+                question: "Which poem emphasizes dignity, courage, and hope?",
+                options: ["<em>The Night</em>", "<em>Still I Rise</em>", "<em>Not My Business</em>", "<em>The Pulley</em>"],
+                answer: "B",
+                section: "Poetry Analysis"
+            },
+            {
+                question: "Literature is best defined as",
+                options: ["The scientific study of plants", "Creative works that express human experiences through language", "The study of numbers", "The study of maps"],
+                answer: "B",
+                section: "General Literature"
             }
         ];
 
@@ -1166,14 +1286,14 @@
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 40 * 60;
+        let timeLeft = 60 * 60;
         let questions = [];
         let examStarted = false;
 
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1519682337058-a94d519337bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1457369804613-3c61b2b55e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80'
+            'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
         ];
 
         const sections = {
@@ -1202,7 +1322,7 @@
 
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 40 * 60;
+            timeLeft = 60 * 60;
             
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
@@ -1219,7 +1339,7 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    alert("Time's up! Your test will be submitted automatically.");
+                    alert("Time's up! Your examination will be submitted automatically.");
                     calculateScoreAndSubmit();
                 } else if (timeLeft <= 300) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
@@ -1245,7 +1365,7 @@
                         
                         if (timeLeft <= 0) {
                             clearInterval(timerInterval);
-                            alert("Time's up! Your test will be submitted automatically.");
+                            alert("Time's up! Your examination will be submitted automatically.");
                             calculateScoreAndSubmit();
                         }
                     }, 1000);
@@ -1256,7 +1376,7 @@
         window.addEventListener('beforeunload', (e) => {
             if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
                 e.preventDefault();
-                e.returnValue = 'You have an ongoing test. Are you sure you want to leave? Your progress may be lost.';
+                e.returnValue = 'You have an ongoing examination. Are you sure you want to leave? Your progress may be lost.';
                 return e.returnValue;
             }
         });
@@ -1553,8 +1673,7 @@
                 }
             }
             
-            // Submit score to Google Form ONLY - do NOT display to student
-            submitToGoogleForm(studentName, "SSS1 Literature-in-English - Third Term Objective Test 2025/2026", `${score}/40`);
+            submitToGoogleForm(studentName, "SSS1 Literature in English - Third Term Examination 2025/2026", `${score}/60`);
             
             document.getElementById('submission-status').style.display = 'block';
             showSection('results');
