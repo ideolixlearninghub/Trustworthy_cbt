@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Islamic Studies SSS1 Test</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☪️</text></svg>">
+    <title>The Trustworthy College - SS1 Islamic Studies Examination</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕌</text></svg>">
     <style>
         * {
             margin: 0;
@@ -32,7 +32,7 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.08;
+            opacity: 0.10;
             z-index: -1;
             transition: background-image 1.5s ease-in-out;
         }
@@ -42,13 +42,13 @@
             margin: 0 auto;
             padding: 25px;
             background: linear-gradient(135deg, #0a1a0a 0%, #1a2a1a 100%);
-            box-shadow: 0 15px 40px rgba(39, 174, 96, 0.2);
+            box-shadow: 0 15px 40px rgba(46, 125, 50, 0.25);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #27ae60;
+            border: 3px solid #2e7d32;
             backdrop-filter: blur(5px);
         }
         
@@ -59,7 +59,7 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #1e8449, #27ae60, #1e8449);
+            background: linear-gradient(90deg, #2e7d32, #43a047, #2e7d32);
             z-index: 2;
         }
         
@@ -76,7 +76,7 @@
         
         @keyframes float {
             0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-15px) rotate(5deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
         }
         
         .header {
@@ -84,7 +84,7 @@
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #27ae60;
+            border-bottom: 2px solid #2e7d32;
             z-index: 1;
         }
         
@@ -96,7 +96,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #27ae60, transparent);
+            background: linear-gradient(to right, transparent, #2e7d32, transparent);
         }
         
         .logo {
@@ -105,7 +105,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #27ae60;
+            border: 3px solid #2e7d32;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -116,7 +116,7 @@
         }
         
         .subject-title {
-            color: #6ddb9e;
+            color: #bde2bd;
             font-size: 2.2rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
@@ -124,20 +124,20 @@
         }
         
         .exam-info {
-            color: #a3d4b8;
+            color: #93c793;
             font-size: 1.1rem;
             margin-top: 5px;
         }
         
         .term-info {
-            background: linear-gradient(135deg, #27ae6020, #2ecc7140);
+            background: linear-gradient(135deg, #2e7d3220, #43a04740);
             display: inline-block;
             padding: 8px 20px;
             border-radius: 30px;
             margin-top: 10px;
             font-weight: bold;
-            color: #6ddb9e;
-            border: 1px solid #27ae6060;
+            color: #bde2bd;
+            border: 1px solid #2e7d3260;
         }
         
         .section {
@@ -158,7 +158,7 @@
         }
         
         .welcome-message {
-            background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(26, 42, 26, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.1) 0%, rgba(26, 42, 26, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
@@ -166,17 +166,17 @@
             font-size: 1.2rem;
             line-height: 1.8;
             color: #e0f0e0;
-            border-left: 5px solid #27ae60;
-            border-right: 1px solid rgba(39, 174, 96, 0.3);
-            border-top: 1px solid rgba(39, 174, 96, 0.2);
-            border-bottom: 1px solid rgba(39, 174, 96, 0.3);
+            border-left: 5px solid #2e7d32;
+            border-right: 1px solid rgba(46, 125, 50, 0.3);
+            border-top: 1px solid rgba(46, 125, 50, 0.2);
+            border-bottom: 1px solid rgba(46, 125, 50, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
         }
         
         .welcome-message::before {
-            content: '☪️';
+            content: '📖';
             position: absolute;
             top: 20px;
             right: 20px;
@@ -184,45 +184,9 @@
             opacity: 0.08;
         }
         
-        .passage-box {
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.08) 0%, rgba(26, 42, 26, 0.7) 100%);
-            padding: 25px 30px;
-            border-radius: 12px;
-            margin: 20px 0 25px;
-            border-left: 5px solid #2ecc71;
-            border: 1px solid rgba(46, 204, 113, 0.2);
-            font-style: italic;
-            line-height: 1.8;
-            color: #c8e6c9;
-            position: relative;
-            font-size: 1.1rem;
-        }
-        
-        .passage-box::before {
-            content: '📖';
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 2rem;
-            opacity: 0.1;
-        }
-        
-        .passage-label {
-            display: inline-block;
-            background: rgba(46, 204, 113, 0.15);
-            border: 1px solid rgba(46, 204, 113, 0.3);
-            border-radius: 20px;
-            padding: 4px 15px;
-            font-size: 0.85rem;
-            color: #2ecc71;
-            margin-bottom: 10px;
-            font-weight: 600;
-            font-style: normal;
-        }
-        
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
             color: #ffffff;
             border: none;
             padding: 15px 32px;
@@ -233,8 +197,8 @@
             margin: 12px 8px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(39, 174, 96, 0.5);
-            box-shadow: 0 6px 15px rgba(39, 174, 96, 0.3);
+            border: 2px solid rgba(46, 125, 50, 0.5);
+            box-shadow: 0 6px 15px rgba(46, 125, 50, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -252,9 +216,9 @@
         }
         
         .btn:hover:not(:disabled) {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            background: linear-gradient(135deg, #43a047 0%, #2e7d32 100%);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(39, 174, 96, 0.5);
+            box-shadow: 0 10px 25px rgba(46, 125, 50, 0.5);
             color: #ffffff;
         }
         
@@ -278,6 +242,10 @@
             border-color: #d35400;
         }
         
+        .btn-success:hover:not(:disabled) {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+        }
+        
         .btn-container {
             text-align: center;
             margin-top: 35px;
@@ -291,7 +259,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #6ddb9e;
+            color: #bde2bd;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -300,7 +268,7 @@
             width: 100%;
             padding: 16px;
             background: rgba(10, 26, 10, 0.7);
-            border: 2px solid #5d7e9e;
+            border: 2px solid #5d7e5d;
             border-radius: 10px;
             font-size: 1.1rem;
             color: #e0f0e0;
@@ -309,9 +277,9 @@
         }
         
         input[type="text"]:focus {
-            border-color: #27ae60;
+            border-color: #2e7d32;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.3);
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.3);
             background: rgba(10, 26, 10, 0.9);
         }
         
@@ -324,18 +292,18 @@
         }
         
         .instructions {
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.08) 0%, rgba(26, 42, 26, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(67, 160, 71, 0.08) 0%, rgba(26, 42, 26, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid #2ecc71;
-            border: 1px solid rgba(46, 204, 113, 0.2);
+            border-left: 5px solid #43a047;
+            border: 1px solid rgba(67, 160, 71, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
         
         .instructions::before {
-            content: '📋';
+            content: '☪️';
             position: absolute;
             top: 20px;
             right: 20px;
@@ -345,7 +313,7 @@
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #2ecc71;
+            color: #43a047;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -358,7 +326,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #2ecc71;
+            background: #43a047;
             border-radius: 2px;
         }
         
@@ -375,7 +343,7 @@
         
         .instructions li::before {
             content: '•';
-            color: #2ecc71;
+            color: #43a047;
             font-size: 1.5rem;
             position: absolute;
             left: -20px;
@@ -385,19 +353,19 @@
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(39, 174, 96, 0.3);
+            border-bottom: 2px solid rgba(46, 125, 50, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #6ddb9e;
+            color: #bde2bd;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(46, 204, 113, 0.15) 100%);
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.1) 0%, rgba(67, 160, 71, 0.15) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(39, 174, 96, 0.3);
+            border: 1px solid rgba(46, 125, 50, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -410,29 +378,29 @@
             padding: 20px;
             background: rgba(10, 26, 10, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(39, 174, 96, 0.2);
+            border: 1px solid rgba(46, 125, 50, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #6ddb9e;
+            color: #bde2bd;
             font-weight: 600;
             padding: 10px 20px;
-            background: rgba(39, 174, 96, 0.1);
+            background: rgba(46, 125, 50, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(39, 174, 96, 0.3);
+            border: 1px solid rgba(46, 125, 50, 0.3);
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
             color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.4);
             display: none;
-            border: 2px solid rgba(39, 174, 96, 0.5);
+            border: 2px solid rgba(46, 125, 50, 0.5);
             font-family: 'Courier New', monospace;
             transition: background 0.5s ease;
         }
@@ -446,7 +414,7 @@
             background: rgba(10, 26, 10, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(39, 174, 96, 0.2);
+            border: 1px solid rgba(46, 125, 50, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -454,12 +422,12 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #6ddb9e;
+            color: #bde2bd;
             line-height: 1.6;
             padding: 20px;
-            background: rgba(46, 204, 113, 0.08);
+            background: rgba(67, 160, 71, 0.08);
             border-radius: 10px;
-            border-left: 4px solid #2ecc71;
+            border-left: 4px solid #43a047;
         }
         
         .options-container {
@@ -474,7 +442,7 @@
             border-radius: 10px;
             transition: all 0.3s;
             background: rgba(26, 42, 26, 0.4);
-            border: 1px solid rgba(93, 126, 158, 0.3);
+            border: 1px solid rgba(93, 126, 93, 0.3);
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -487,14 +455,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(39, 174, 96, 0.08), transparent);
+            background: linear-gradient(90deg, transparent, rgba(46, 125, 50, 0.08), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(39, 174, 96, 0.1);
-            border-color: #27ae60;
+            background: rgba(46, 125, 50, 0.1);
+            border-color: #2e7d32;
             transform: translateX(5px);
         }
         
@@ -507,7 +475,7 @@
             width: 22px;
             height: 22px;
             cursor: pointer;
-            accent-color: #27ae60;
+            accent-color: #2e7d32;
             flex-shrink: 0;
         }
         
@@ -524,12 +492,12 @@
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(39, 174, 96, 0.3);
+            border-top: 2px solid rgba(46, 125, 50, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #6ddb9e;
+            color: #bde2bd;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -546,7 +514,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: #2ecc71;
+            background: #43a047;
             border-radius: 2px;
         }
         
@@ -563,27 +531,27 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(26, 42, 26, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(93, 126, 93, 0.3) 0%, rgba(26, 42, 26, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(39, 174, 96, 0.3);
+            border: 1px solid rgba(46, 125, 50, 0.3);
             color: #e0f0e0;
             font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background: linear-gradient(135deg, rgba(39, 174, 96, 0.3) 0%, rgba(30, 132, 73, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.3) 0%, rgba(27, 94, 32, 0.5) 100%);
             transform: scale(1.1);
-            border-color: #27ae60;
+            border-color: #2e7d32;
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
             color: #ffffff;
-            border-color: #6ddb9e;
-            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.4);
+            border-color: #bde2bd;
+            box-shadow: 0 4px 10px rgba(46, 125, 50, 0.4);
             transform: scale(1.1);
         }
         
@@ -605,12 +573,12 @@
             border-radius: 10px;
             overflow: hidden;
             height: 10px;
-            border: 1px solid rgba(39, 174, 96, 0.3);
+            border: 1px solid rgba(46, 125, 50, 0.3);
         }
         
         .progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, #1e8449, #27ae60);
+            background: linear-gradient(90deg, #2e7d32, #43a047);
             width: 0%;
             transition: width 0.5s ease;
             border-radius: 10px;
@@ -619,18 +587,18 @@
         .progress-text {
             text-align: center;
             font-size: 0.9rem;
-            color: #a3d4b8;
+            color: #93c793;
             margin-top: 5px;
         }
         
         .topic-badge {
             display: inline-block;
             padding: 4px 12px;
-            background: rgba(39, 174, 96, 0.15);
-            border: 1px solid rgba(39, 174, 96, 0.3);
+            background: rgba(46, 125, 50, 0.15);
+            border: 1px solid rgba(46, 125, 50, 0.3);
             border-radius: 20px;
             font-size: 0.8rem;
-            color: #6ddb9e;
+            color: #bde2bd;
             margin-bottom: 10px;
             font-weight: 500;
         }
@@ -640,7 +608,7 @@
             padding: 40px;
             background: linear-gradient(135deg, rgba(10, 26, 10, 0.8) 0%, rgba(26, 42, 26, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #27ae60;
+            border: 2px solid #2e7d32;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
@@ -656,7 +624,7 @@
         }
         
         .results-container h2 {
-            color: #6ddb9e;
+            color: #bde2bd;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -681,7 +649,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #a3d4b8;
+            color: #93c793;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -692,19 +660,19 @@
             color: #e0f0e0;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(39, 174, 96, 0.08);
+            background: rgba(46, 125, 50, 0.08);
             border-radius: 12px;
-            border: 1px solid rgba(39, 174, 96, 0.3);
+            border: 1px solid rgba(46, 125, 50, 0.3);
         }
         
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.15) 0%, rgba(39, 174, 96, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(241, 196, 15, 0.15) 0%, rgba(243, 156, 18, 0.2) 100%);
             border-radius: 12px;
-            color: #2ecc71;
+            color: #f1c40f;
             font-size: 1.2rem;
-            border: 1px solid rgba(46, 204, 113, 0.4);
+            border: 1px solid rgba(241, 196, 15, 0.4);
         }
         
         @media (max-width: 768px) {
@@ -734,9 +702,6 @@
                 margin: 15px;
             }
             .welcome-message, .instructions, .exam-content {
-                padding: 20px;
-            }
-            .passage-box {
                 padding: 20px;
             }
         }
@@ -771,8 +736,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(39, 174, 96, 0.3);
-            border-top: 4px solid #27ae60;
+            border: 4px solid rgba(46, 125, 50, 0.3);
+            border-top: 4px solid #2e7d32;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -788,27 +753,22 @@
         .keyboard-hint {
             text-align: center;
             font-size: 0.85rem;
-            color: #5d7e9e;
+            color: #5d7e5d;
             margin-top: 15px;
             padding: 10px;
             background: rgba(10, 26, 10, 0.3);
             border-radius: 8px;
-            border: 1px dashed rgba(93, 126, 158, 0.3);
+            border: 1px dashed rgba(93, 126, 93, 0.3);
         }
         
         .keyboard-hint kbd {
-            background: rgba(39, 174, 96, 0.2);
-            border: 1px solid rgba(39, 174, 96, 0.4);
+            background: rgba(46, 125, 50, 0.2);
+            border: 1px solid rgba(46, 125, 50, 0.4);
             border-radius: 4px;
             padding: 2px 8px;
             font-family: 'Courier New', monospace;
             font-size: 0.85rem;
-            color: #6ddb9e;
-        }
-        
-        .arabic-translit {
-            font-style: italic;
-            color: #a3d4b8;
+            color: #bde2bd;
         }
     </style>
 </head>
@@ -817,23 +777,23 @@
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title">ISLAMIC STUDIES TEST</h1>
-            <div class="exam-info">Third Term | 2025/2026 Session</div>
+            <h1 class="subject-title">SS1 ISLAMIC STUDIES</h1>
+            <div class="exam-info">First Term | 2025/2026 Session</div>
             <div class="term-info">40 Objective Questions | 40 Minutes</div>
         </div>
         
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Islamic Studies Objective Test. This test covers Tayammum and Purification, Qur'anic Studies (Surahs, revelation, compilation, Tafsir), Hadith and Sunnah (Isnād, Matn, Rāwī, authenticity), Islamic History (Conquest of Makkah, Hijrah, spread of Islam in West Africa), Fiqh and Worship (Hajj types, Salat, Zakāt, Five Pillars), and Islamic Culture. Demonstrate your understanding of Islamic knowledge. Best of luck."
+                "Welcome to The Trustworthy College SS1 Islamic Studies First Term Examination. This examination covers Tayammum, Hadith, Qur'anic Studies, Hajj, Zakat, Islamic history, and Islamic culture in West Africa. Demonstrate your understanding of Islamic principles and practices. Best of luck."
             </div>
             <div class="btn-container">
-                <button id="start-exam-btn" class="btn">Start Objective Test</button>
+                <button id="start-exam-btn" class="btn">Start Examination</button>
             </div>
         </section>
         
         <section id="student-info-section" class="section">
             <h2>Student Information</h2>
-            <p>Please provide your details to continue with the test.</p>
+            <p>Please provide your details to continue with the examination.</p>
             
             <form id="student-info-form" autocomplete="off">
                 <div class="form-group">
@@ -862,36 +822,35 @@
         </section>
         
         <section id="instructions-section" class="section">
-            <h2>Test Instructions</h2>
+            <h2>Examination Instructions</h2>
             
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This Objective Test consists of <strong>40 multiple-choice questions</strong> covering various topics in Islamic Studies.</li>
-                    <li>Questions 1-3 are based on a <strong>comprehension passage</strong> about Tayammum.</li>
-                    <li>You have <strong>40 minutes</strong> to complete this test.</li>
+                    <li>This First Term Examination consists of <strong>40 multiple-choice objective questions</strong> covering Tayammum, Hadith, Qur'anic Studies, Hajj, Zakat, Islamic history, and Islamic culture.</li>
+                    <li>You have <strong>40 minutes</strong> to complete this examination.</li>
                     <li>Answer all questions to the best of your ability.</li>
                     <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
                     <li>You can also use <strong>keyboard shortcuts</strong>: Arrow keys to navigate, A/B/C/D keys to select answers.</li>
                     <li>Answered questions will be marked with <strong>orange</strong> in the question grid.</li>
                     <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
-                    <li>Ensure you have a stable internet connection throughout the test.</li>
+                    <li>Ensure you have a stable internet connection throughout the examination.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li><strong>Do not refresh the page</strong> during the test, or you may lose your progress.</li>
+                    <li><strong>Do not refresh the page</strong> during the examination, or you may lose your progress.</li>
                 </ul>
             </div>
             
             <div class="btn-container">
                 <button type="button" id="back-to-student-info" class="btn btn-secondary">Back</button>
-                <button type="button" id="begin-test" class="btn">Begin Test</button>
+                <button type="button" id="begin-test" class="btn">Begin Examination</button>
             </div>
         </section>
         
         <section id="exam-section" class="section">
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
-                <div class="topic-badge" id="topic-badge">Topic: Tayammum & Purification</div>
+                <div class="topic-badge" id="topic-badge">Topic: Islamic Studies</div>
                 <div class="progress-container">
                     <div class="progress-bar" id="progress-bar"></div>
                 </div>
@@ -902,17 +861,12 @@
                         ⏱ Time Left: <span id="timer">40:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success">Submit Test</button>
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Examination</button>
                     </div>
                 </div>
             </div>
             
             <div class="exam-content">
-                <!-- Passage will be shown for questions 1-3 -->
-                <div class="passage-box" id="passage-box" style="display:none;">
-                    <div class="passage-label">📖 Passage for Questions 1–3</div>
-                    <p>During a school trip to a remote area, the students encountered shortage of water since the only pond available was contaminated, making it impossible for them to perform <em>Wudu'</em>. The teacher explained how <em>Tayammum</em> can serve as an alternative form of purification in some conditions.</p>
-                </div>
                 <div class="question-text" id="question-text"></div>
                 <div class="options-container" id="options-container"></div>
             </div>
@@ -939,21 +893,21 @@
         
         <section id="results-section" class="section">
             <div class="results-container">
-                <h2>Test Completed</h2>
+                <h2>Examination Completed</h2>
                 <div class="completion-icon">✅</div>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">Islamic Studies - Third Term Objective Test 2025/2026</div>
+                <div class="subject" id="results-subject">SS1 Islamic Studies - First Term Examination 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the Islamic Studies Objective Test. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
+                    Thank you for completing the Islamic Studies First Term Examination. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    ✅ Your test has been successfully submitted.
+                    ✅ Your examination has been successfully submitted.
                 </div>
                 
                 <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn">Take Another Test</button>
+                    <button type="button" id="restart-exam" class="btn">Take Another Examination</button>
                     <div class="back-home">
                         <a href="../index.html" class="btn btn-secondary">Back to Home</a>
                     </div>
@@ -963,36 +917,44 @@
     </div>
 
     <script>
+        // All 40 questions with correct answers
         const originalQuestions = [
-            // PASSAGE-BASED QUESTIONS (Q1-3) - Tayammum Passage
+            // Questions 1-3: Based on the passage about Tayammum
             {
-                question: "What condition of the students permits <em>Tayammum</em>?",
+                question: "What condition of the students permits Tayammum?",
                 options: ["Unavailability of water", "Long journey", "For convenience in any situation", "During examinations period"],
                 answer: "A",
-                section: "Tayammum & Purification",
-                hasPassage: true
+                section: "Tayammum"
             },
             {
-                question: "What group of materials can the students use for <em>Tayammum</em>?",
+                question: "What group of materials can the students use for Tayammum?",
                 options: ["Clean surface, water or dust", "Sand, dust or stone", "Clean cloth, sand or water", "Plastic, metal or glass"],
                 answer: "B",
-                section: "Tayammum & Purification",
-                hasPassage: true
+                section: "Tayammum"
             },
             {
-                question: "How does <em>Tayammum</em> emphasise the flexibility of Islamic rulings to the students? It",
+                question: "How does Tayammum emphasise the flexibility of Islamic rulings to the students? It",
                 options: ["stresses the disadvantage in the use of water entirely.", "shows Islam's adaptability to individual circumstances.", "is allowed for both Muslims and non-Muslims.", "replaces all purification practices permanently."],
                 answer: "B",
-                section: "Tayammum & Purification",
-                hasPassage: true
+                section: "Tayammum"
             },
-            
-            // SECTION B: QUR'ANIC STUDIES (Q4, 7, 12, 23, 26, 27, 30, 32)
             {
-                question: "<em>\"Wa'ammā bi ni'mati Rabbika faḥaddith\"</em> is the last verse in Sūrah",
+                question: "\"Wa'ammā bi ni'mati Rabbika faḥaddith\" is the last verse in Sūrah",
                 options: ["at-Tīn", "al-Kāfirūn", "aḍ-Ḍuḥā", "al-Falaq"],
                 answer: "C",
                 section: "Qur'anic Studies"
+            },
+            {
+                question: "The purpose of Isnād in Hadith is to establish its",
+                options: ["beauty.", "authenticity.", "definition.", "scope."],
+                answer: "B",
+                section: "Hadith"
+            },
+            {
+                question: "The combination of both Hajj and 'Umrah in one Iḥrām is",
+                options: ["Tamattu'.", "Ifrād.", "Qirān.", "Marwa."],
+                answer: "C",
+                section: "Hajj"
             },
             {
                 question: "The Qur'an was compiled as a result of the Battle of",
@@ -1001,16 +963,112 @@
                 section: "Qur'anic Studies"
             },
             {
+                question: "The man who nominated Abū Bakr as the first Khalīf was",
+                options: ["'Uthmān b. 'Affān.", "Mu'āwiyah b. Abi Sufyān.", "'Umar b. Khaṭṭāb.", "'Amr b. al-'Āṣ."],
+                answer: "C",
+                section: "Islamic History"
+            },
+            {
+                question: "If arranged in descending order, Sūratun-Nasr comes before",
+                options: ["Falaq.", "Masad.", "Kāfirūn.", "Ikhlāṣ."],
+                answer: "C",
+                section: "Qur'anic Studies"
+            },
+            {
+                question: "The acts, deeds, practices and customs of Prophet Muhammad (S.A.W.) are",
+                options: ["Hadith.", "Sunnah.", "Āthār.", "'Urf."],
+                answer: "B",
+                section: "Hadith"
+            },
+            {
+                question: "Islam reached West Africa through",
+                options: ["traders.", "farmers.", "miners.", "poets."],
+                answer: "A",
+                section: "Islamic History"
+            },
+            {
                 question: "Pre-Hijrah Suwar are chapters revealed while Prophet Muhammad (S.A.W.) was in",
                 options: ["Hudaybiyyah.", "Madinah.", "Makkah.", "Syria."],
                 answer: "C",
                 section: "Qur'anic Studies"
             },
             {
+                question: "A worshipper who omits Sūratul-Fātiḥah in Salat should",
+                options: ["discard the Rak'ah.", "neglect the error.", "perform Sujūdu Qabli.", "perform Sujūdu Ba'di."],
+                answer: "A",
+                section: "Salat"
+            },
+            {
+                question: "Every tradition of Prophet Muhammad (S.A.W.) is a combination of",
+                options: ["Isnād, Matn and Rāwī.", "Sunnah, Hadith and Rāwī.", "Rāwī, Tafsīr and Sunnah.", "Sūrah, Matn and Sunnah."],
+                answer: "A",
+                section: "Hadith"
+            },
+            {
+                question: "Tafsīr is to the Qur'ān as Shūrā is to Islamic",
+                options: ["political system.", "economic system.", "banking system.", "social system."],
+                answer: "A",
+                section: "Islamic Studies"
+            },
+            {
+                question: "Dhul-Hijjah is to Hajj as Ramadān is to",
+                options: ["Tawāf.", "I'tikāf.", "'Iddah.", "Da'wah."],
+                answer: "B",
+                section: "Islamic Practices"
+            },
+            {
+                question: "Hadith 7 of an-Nawawī's collection teaches peaceful co-existence because",
+                options: ["no reasonable government wants problem.", "religion is sincerity to Muslim's community.", "development can take place anywhere.", "students can only go to school when there is no social unrest."],
+                answer: "B",
+                section: "Hadith"
+            },
+            {
+                question: "The authority of the Qur'ān is reflected in the following except that",
+                options: ["it is comprehensive because nothing is left out.", "the message is relevant to all periods.", "it is edited periodically by the scholars.", "it was revealed in a beautiful style."],
+                answer: "C",
+                section: "Qur'anic Studies"
+            },
+            {
+                question: "The contents of Sūratul Fātihah can be summed up to mean that",
+                options: ["mercy is always from Allah.", "man must always fear Allah and act righteously.", "man must worship Allah and seek His help.", "it is the first Sūrah that was revealed."],
+                answer: "C",
+                section: "Qur'anic Studies"
+            },
+            {
+                question: "Fāṭimah is to Muhammad as Ḥafṣah is to",
+                options: ["Abū Bakr.", "'Umar.", "'Uthmān.", "'Alī"],
+                answer: "B",
+                section: "Islamic History"
+            },
+            {
+                question: "Abū Hurayrah is best remembered in Islam for",
+                options: ["memorisation of Hadith.", "living with Prophet Muhammad (S.A.W.).", "his military skills.", "introducing the concept of Qiyās."],
+                answer: "A",
+                section: "Hadith"
+            },
+            {
+                question: "The Conquest of Makkah was as a result of the",
+                options: ["violation of the Treaty of Hudaybiyah.", "Makkans' willingness to co-operate with the Muslims.", "Muslims' extension of invitation to the Makkans.", "bloody battle which occured at the entrance of Makkah."],
+                answer: "A",
+                section: "Islamic History"
+            },
+            {
                 question: "Laylatul-Qadr is important because",
                 options: ["it coincides with the birth of Prophet Muhammad (S.A.W.).", "Prophet Muhammad (S.A.W.) ascended to heaven.", "it was the night that 'Umar b. Khaṭṭāb accepted Islam.", "it was the night that the revelation of the Qur'ān commenced."],
                 answer: "D",
                 section: "Qur'anic Studies"
+            },
+            {
+                question: "A spiritual purpose of Zakāt is",
+                options: ["purification of one's wealth.", "even distribution of wealth.", "appreciating Allah's blessing.", "poverty alleviation."],
+                answer: "A",
+                section: "Zakat"
+            },
+            {
+                question: "How did Islamic culture influence the social practices in West Africa? It",
+                options: ["had no effect on social structures, as local customs remained dominant.", "influenced education, law and social organisation.", "primarily changed the architecture and art but not the social customs.", "had no regard for African culture."],
+                answer: "B",
+                section: "Islamic History"
             },
             {
                 question: "Qur'ān 5:90 (Sūratul-Mā'idah) prohibits idol worshipping, gambling, divination and",
@@ -1025,10 +1083,22 @@
                 section: "Qur'anic Studies"
             },
             {
+                question: "Hadith is important because it provides the following except that it is",
+                options: ["an explanation of Qur'ānic verses.", "an application of legal rulings in the Qur'ān.", "of great use to the Mufassirūn.", "the first source of Sharī'ah."],
+                answer: "D",
+                section: "Hadith"
+            },
+            {
                 question: "The Qur'ān is described as a great scripture hence the name",
                 options: ["al-Aẓīm.", "al-Hakīm.", "al-Karīm.", "al-Kitāb."],
-                answer: "A",
+                answer: "D",
                 section: "Qur'anic Studies"
+            },
+            {
+                question: "Associating partners with Allah includes",
+                options: ["voluntary fasting.", "consulting oracles.", "engaging in indoor games.", "observing Tahajjud in the house."],
+                answer: "B",
+                section: "Tawheed"
             },
             {
                 question: "One of the importance of the first revelation was the",
@@ -1036,179 +1106,53 @@
                 answer: "B",
                 section: "Qur'anic Studies"
             },
-            
-            // SECTION C: HADITH & SUNNAH (Q5, 10, 14, 17, 21, 29, 33)
             {
-                question: "The purpose of <em>Isnād</em> in Hadith is to establish its",
-                options: ["beauty.", "authenticity.", "definition.", "scope."],
-                answer: "B",
-                section: "Hadith & Sunnah"
-            },
-            {
-                question: "The acts, deeds, practices and customs of Prophet Muhammad (S.A.W.) are",
-                options: ["Hadith.", "Sunnah.", "Āthār.", "'Urf."],
-                answer: "B",
-                section: "Hadith & Sunnah"
-            },
-            {
-                question: "Every tradition of Prophet Muhammad (S.A.W.) is a combination of",
-                options: ["Isnād, Matn and Rāwī.", "Sunnah, Hadith and Rāwī.", "Rāwī, Tafsīr and Sunnah.", "Sūrah, Matn and Sunnah."],
-                answer: "A",
-                section: "Hadith & Sunnah"
-            },
-            {
-                question: "Hadith 7 of an-Nawawī's collection teaches peaceful co-existence because",
-                options: ["no reasonable government wants problem.", "religion is sincerity to Muslim's community.", "development can take place anywhere.", "students can only go to school when there is no social unrest."],
-                answer: "B",
-                section: "Hadith & Sunnah"
-            },
-            {
-                question: "Abū Hurayrah is best remembered in Islam for",
-                options: ["memorisation of Hadith.", "living with Prophet Muhammad (S.A.W.).", "his military skills.", "introducing the concept of Qiyās."],
-                answer: "A",
-                section: "Hadith & Sunnah"
-            },
-            {
-                question: "Hadith is important because it provides the following except that it is",
-                options: ["an explanation of Qur'ānic verses.", "an application of legal rulings in the Qur'ān.", "of great use to the Mufassirūn.", "the first source of Sharī'ah."],
-                answer: "D",
-                section: "Hadith & Sunnah"
-            },
-            {
-                question: "The term <em>al-Mutawātir</em> refers to Hadith narrated by",
+                question: "The term al-Mutawātir refers to Hadith narrated by",
                 options: ["large number of narrators.", "the six sound collectors.", "Bukhārī and Muslim.", "Prophet Muhammad (S.A.W.)."],
                 answer: "A",
-                section: "Hadith & Sunnah"
-            },
-            
-            // SECTION D: FIQH & WORSHIP (Q6, 13, 16, 24, 34, 35, 36, 37, 38, 39, 40)
-            {
-                question: "The combination of both Hajj and 'Umrah in one Iḥrām is",
-                options: ["Tamattu'.", "Ifrād.", "Qirān.", "Marwa."],
-                answer: "C",
-                section: "Fiqh & Worship"
+                section: "Hadith"
             },
             {
-                question: "A worshipper who omits Sūratul-Fātiḥah in Salat should",
-                options: ["discard the Rak'ah.", "neglect the error.", "perform Sujūdu Qabli.", "perform Sujūdu Ba'di."],
-                answer: "A",
-                section: "Fiqh & Worship"
-            },
-            {
-                question: "Dhul-Hijjah is to Hajj as Ramadān is to",
-                options: ["Tawāf.", "I'tikāf.", "'Iddah.", "Da'wah."],
-                answer: "B",
-                section: "Fiqh & Worship"
-            },
-            {
-                question: "A spiritual purpose of Zakāt is",
-                options: ["purification of one's wealth.", "even distribution of wealth.", "appreciating Allah's blessing.", "poverty alleviation."],
-                answer: "A",
-                section: "Fiqh & Worship"
-            },
-            {
-                question: "What is the meaning of <em>Zakat</em>?",
+                question: "What is the meaning of Zakat?",
                 options: ["Prayer", "Fasting", "Purification and growth", "Pilgrimage"],
                 answer: "C",
-                section: "Fiqh & Worship"
+                section: "Zakat"
             },
             {
                 question: "Which of the following is one of the Five Pillars of Islam?",
                 options: ["Jihad", "Zakat", "Hijrah", "Dawah"],
                 answer: "B",
-                section: "Fiqh & Worship"
+                section: "Zakat"
             },
             {
-                question: "What is the standard rate of Zakat on savings and wealth that reach the <em>Nisab</em>?",
+                question: "What is the standard rate of Zakat on savings and wealth that reach the Nisab?",
                 options: ["1%", "2.5%", "5%", "10%"],
                 answer: "B",
-                section: "Fiqh & Worship"
+                section: "Zakat"
             },
             {
                 question: "What is the minimum amount of wealth a Muslim must possess before Zakat becomes obligatory?",
                 options: ["Hawl", "Sadaqah", "Nisab", "Fidyah"],
                 answer: "C",
-                section: "Fiqh & Worship"
+                section: "Zakat"
             },
             {
                 question: "How long must a Muslim possess wealth above the Nisab before paying Zakat?",
                 options: ["One month", "Six months", "One lunar year", "Two years"],
                 answer: "C",
-                section: "Fiqh & Worship"
+                section: "Zakat"
             },
             {
                 question: "Which of the following people is eligible to receive Zakat?",
                 options: ["The wealthy", "The poor and needy", "Parents and grandparents", "The Prophet's family"],
                 answer: "B",
-                section: "Fiqh & Worship"
+                section: "Zakat"
             },
             {
                 question: "In which Surah of the Qur'an are the categories of people entitled to receive Zakat mentioned?",
                 options: ["Surah Al-Fatihah", "Surah Al-Baqarah", "Surah At-Tawbah", "Surah Al-Ikhlas"],
                 answer: "C",
-                section: "Fiqh & Worship"
-            },
-            
-            // SECTION E: ISLAMIC HISTORY & CULTURE (Q8, 11, 15, 18, 19, 20, 22, 25, 28, 31)
-            {
-                question: "The man who nominated Abū Bakr as the first Khalīf was",
-                options: ["'Uthmān b. 'Affān.", "Mu'āwiyah b. Abi Sufyān.", "'Umar b. Khaṭṭāb.", "'Amr b. al-'Āṣ."],
-                answer: "C",
-                section: "Islamic History"
-            },
-            {
-                question: "Islam reached West Africa through",
-                options: ["traders.", "farmers.", "miners.", "poets."],
-                answer: "A",
-                section: "Islamic History"
-            },
-            {
-                question: "<em>Tafsīr</em> is to the Qur'ān as <em>Shūrā</em> is to Islamic",
-                options: ["political system.", "economic system.", "banking system.", "social system."],
-                answer: "A",
-                section: "Islamic History"
-            },
-            {
-                question: "The authority of the Qur'ān is reflected in the following except that",
-                options: ["it is comprehensive because nothing is left out.", "the message is relevant to all periods.", "it is edited periodically by the scholars.", "it was revealed in a beautiful style."],
-                answer: "C",
-                section: "Islamic History"
-            },
-            {
-                question: "The contents of Sūratul Fātihah can be summed up to mean that",
-                options: ["mercy is always from Allah.", "man must always fear Allah and act righteously.", "man must worship Allah and seek His help.", "it is the first Sūrah that was revealed."],
-                answer: "C",
-                section: "Islamic History"
-            },
-            {
-                question: "Fāṭimah is to Muhammad as Ḥafṣah is to",
-                options: ["Abū Bakr.", "'Umar.", "'Uthmān.", "'Alī"],
-                answer: "B",
-                section: "Islamic History"
-            },
-            {
-                question: "The Conquest of Makkah was as a result of the",
-                options: ["violation of the Treaty of Hudaybiyah.", "Makkans' willingness to co-operate with the Muslims.", "Muslims' extension of invitation to the Makkans.", "bloody battle which occured at the entrance of Makkah."],
-                answer: "A",
-                section: "Islamic History"
-            },
-            {
-                question: "How did Islamic culture influence the social practices in West Africa? It",
-                options: ["had no effect on social structures, as local customs remained dominant.", "influenced education, law and social organisation.", "primarily changed the architecture and art but not the social customs.", "had no regard for African culture."],
-                answer: "B",
-                section: "Islamic History"
-            },
-            {
-                question: "If arranged in descending order, Sūratun-Nasr comes before",
-                options: ["Falaq.", "Masad.", "Kāfirūn.", "Ikhlāṣ."],
-                answer: "B",
-                section: "Islamic History"
-            },
-            {
-                question: "Associating partners with Allah includes",
-                options: ["voluntary fasting.", "consulting oracles.", "engaging in indoor games.", "observing Tahajjud in the house."],
-                answer: "B",
-                section: "Islamic History"
+                section: "Zakat"
             }
         ];
 
@@ -1222,8 +1166,8 @@
 
         const backgroundImages = [
             'https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1564769625905-50e93615e769?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1597935258735-e254e183b0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80'
+            'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1598726668148-9992cc1e4e4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
         ];
 
         const sections = {
@@ -1243,9 +1187,8 @@
 
         function shuffleQuestions() {
             questions = [...originalQuestions];
-            // Keep passage questions (1-3) together at the beginning
-            for (let i = questions.length - 1; i > 3; i--) {
-                const j = Math.floor(Math.random() * (i - 3 + 1)) + 3;
+            for (let i = questions.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
                 [questions[i], questions[j]] = [questions[j], questions[i]];
             }
             userAnswers = Array(questions.length).fill(null);
@@ -1257,7 +1200,7 @@
             
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
-            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #27ae60 0%, #1e8449 100%)';
+            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%)';
             
             timerInterval = setInterval(() => {
                 timeLeft--;
@@ -1270,7 +1213,7 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    alert("Time's up! Your test will be submitted automatically.");
+                    alert("Time's up! Your examination will be submitted automatically.");
                     calculateScoreAndSubmit();
                 } else if (timeLeft <= 300) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
@@ -1296,7 +1239,7 @@
                         
                         if (timeLeft <= 0) {
                             clearInterval(timerInterval);
-                            alert("Time's up! Your test will be submitted automatically.");
+                            alert("Time's up! Your examination will be submitted automatically.");
                             calculateScoreAndSubmit();
                         }
                     }, 1000);
@@ -1307,7 +1250,7 @@
         window.addEventListener('beforeunload', (e) => {
             if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
                 e.preventDefault();
-                e.returnValue = 'You have an ongoing test. Are you sure you want to leave? Your progress may be lost.';
+                e.returnValue = 'You have an ongoing examination. Are you sure you want to leave? Your progress may be lost.';
                 return e.returnValue;
             }
         });
@@ -1360,7 +1303,7 @@
                 isValid = false;
             } else {
                 document.getElementById('first-name-error').style.display = 'none';
-                document.getElementById('first-name').style.borderColor = '#5d7e9e';
+                document.getElementById('first-name').style.borderColor = '#5d7e5d';
             }
             
             if (!middleName) {
@@ -1369,7 +1312,7 @@
                 isValid = false;
             } else {
                 document.getElementById('middle-name-error').style.display = 'none';
-                document.getElementById('middle-name').style.borderColor = '#5d7e9e';
+                document.getElementById('middle-name').style.borderColor = '#5d7e5d';
             }
             
             if (!lastName) {
@@ -1378,7 +1321,7 @@
                 isValid = false;
             } else {
                 document.getElementById('last-name-error').style.display = 'none';
-                document.getElementById('last-name').style.borderColor = '#5d7e9e';
+                document.getElementById('last-name').style.borderColor = '#5d7e5d';
             }
             
             if (isValid) {
@@ -1540,14 +1483,6 @@
             
             updateTopicBadge(index);
             
-            // Show/hide passage for questions 1-3
-            const passageBox = document.getElementById('passage-box');
-            if (question.hasPassage) {
-                passageBox.style.display = 'block';
-            } else {
-                passageBox.style.display = 'none';
-            }
-            
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
             
@@ -1612,8 +1547,8 @@
                 }
             }
             
-            // Submit score to Google Form ONLY - do NOT display to student
-            submitToGoogleForm(studentName, "Islamic Studies - Third Term Objective Test 2025/2026", `${score}/40`);
+            // Submit score to Google Form
+            submitToGoogleForm(studentName, "SS1 Islamic Studies - First Term Examination 2025/2026", `${score}/40`);
             
             document.getElementById('submission-status').style.display = 'block';
             showSection('results');
@@ -1623,7 +1558,7 @@
             const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
             const formData = new FormData();
             formData.append("entry.862885683", fullName);
-            formData.append("entry.1545021484", "SSS1");
+            formData.append("entry.1545021484", "SS1");
             formData.append("entry.1558221900", subject);
             formData.append("entry.2022160530", score);
 
