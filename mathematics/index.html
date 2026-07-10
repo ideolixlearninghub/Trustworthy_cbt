@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Mathematics SSS1 C.A Test</title>
+    <title>The Trustworthy College - Mathematics SSS1 Third Term Examination</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📐</text></svg>">
     <style>
         * {
@@ -14,8 +14,8 @@
         }
         
         body {
-            background-color: #1a1a2a;
-            color: #e0e0f0;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
@@ -28,11 +28,11 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.12;
+            opacity: 0.10;
             z-index: -1;
             transition: background-image 1.5s ease-in-out;
         }
@@ -41,14 +41,14 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #2a1a3a 0%, #1a2a4a 100%);
-            box-shadow: 0 15px 40px rgba(142, 68, 173, 0.25);
+            background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+            box-shadow: 0 15px 40px rgba(211, 84, 0, 0.25);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #9b59b6;
+            border: 3px solid #e67e22;
             backdrop-filter: blur(5px);
         }
         
@@ -59,8 +59,24 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #9b59b6, #3498db, #9b59b6);
+            background: linear-gradient(90deg, #e67e22, #f39c12, #e67e22);
             z-index: 2;
+        }
+        
+        .container::after {
+            content: '📐';
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 2.5rem;
+            opacity: 0.06;
+            z-index: 0;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
         }
         
         .header {
@@ -68,7 +84,8 @@
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #9b59b6;
+            border-bottom: 2px solid #e67e22;
+            z-index: 1;
         }
         
         .header::after {
@@ -79,7 +96,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #9b59b6, transparent);
+            background: linear-gradient(to right, transparent, #e67e22, transparent);
         }
         
         .logo {
@@ -88,7 +105,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #9b59b6;
+            border: 3px solid #e67e22;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -99,34 +116,36 @@
         }
         
         .subject-title {
-            color: #c39bd3;
-            font-size: 2.4rem;
+            color: #f5d6b8;
+            font-size: 2.2rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
             letter-spacing: 1px;
         }
         
         .exam-info {
-            color: #a3c6e4;
+            color: #e5b893;
             font-size: 1.1rem;
             margin-top: 5px;
         }
         
         .term-info {
-            background: linear-gradient(135deg, #9b59b620, #3498db40);
+            background: linear-gradient(135deg, #e67e2220, #f39c1240);
             display: inline-block;
             padding: 8px 20px;
             border-radius: 30px;
             margin-top: 10px;
             font-weight: bold;
-            color: #c39bd3;
-            border: 1px solid #9b59b660;
+            color: #f5d6b8;
+            border: 1px solid #e67e2260;
         }
         
         .section {
             display: none;
             padding: 25px;
             animation: fadeIn 0.5s ease;
+            position: relative;
+            z-index: 1;
         }
         
         @keyframes fadeIn {
@@ -139,18 +158,18 @@
         }
         
         .welcome-message {
-            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(26, 42, 74, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(230, 126, 34, 0.1) 0%, rgba(26, 26, 26, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #e0e0f0;
-            border-left: 5px solid #9b59b6;
-            border-right: 1px solid rgba(155, 89, 182, 0.3);
-            border-top: 1px solid rgba(155, 89, 182, 0.2);
-            border-bottom: 1px solid rgba(155, 89, 182, 0.3);
+            color: #e0e0e0;
+            border-left: 5px solid #e67e22;
+            border-right: 1px solid rgba(230, 126, 34, 0.3);
+            border-top: 1px solid rgba(230, 126, 34, 0.2);
+            border-bottom: 1px solid rgba(230, 126, 34, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
@@ -162,12 +181,12 @@
             top: 20px;
             right: 20px;
             font-size: 3rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: #ffffff;
             border: none;
             padding: 15px 32px;
@@ -178,8 +197,8 @@
             margin: 12px 8px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(155, 89, 182, 0.5);
-            box-shadow: 0 6px 15px rgba(155, 89, 182, 0.3);
+            border: 2px solid rgba(230, 126, 34, 0.5);
+            box-shadow: 0 6px 15px rgba(230, 126, 34, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -197,9 +216,9 @@
         }
         
         .btn:hover:not(:disabled) {
-            background: linear-gradient(135deg, #ae7ac9 0%, #9b59b6 100%);
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(155, 89, 182, 0.5);
+            box-shadow: 0 10px 25px rgba(230, 126, 34, 0.5);
             color: #ffffff;
         }
         
@@ -210,17 +229,21 @@
         }
         
         .btn-secondary {
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-            border-color: #3498db;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            border-color: #5d7e9e;
         }
         
         .btn-secondary:hover:not(:disabled) {
-            background: linear-gradient(135deg, #5dade2 0%, #3498db 100%);
+            background: linear-gradient(135deg, #3d566e 0%, #2c3e50 100%);
         }
         
         .btn-success {
-            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
-            border-color: #e67e22;
+            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+            border-color: #27ae60;
+        }
+        
+        .btn-success:hover:not(:disabled) {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
         }
         
         .btn-container {
@@ -236,7 +259,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #c39bd3;
+            color: #f5d6b8;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -244,20 +267,20 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(42, 26, 58, 0.7);
+            background: rgba(13, 13, 13, 0.7);
             border: 2px solid #5d7e9e;
             border-radius: 10px;
             font-size: 1.1rem;
-            color: #e0e0f0;
+            color: #e0e0e0;
             transition: all 0.3s;
             font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #9b59b6;
+            border-color: #e67e22;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.3);
-            background: rgba(42, 26, 58, 0.9);
+            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.3);
+            background: rgba(13, 13, 13, 0.9);
         }
         
         .error-message {
@@ -269,28 +292,28 @@
         }
         
         .instructions {
-            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(26, 42, 74, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.08) 0%, rgba(26, 26, 26, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid #3498db;
-            border: 1px solid rgba(52, 152, 219, 0.2);
+            border-left: 5px solid #f39c12;
+            border: 1px solid rgba(243, 156, 18, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
         
         .instructions::before {
-            content: '📏';
+            content: '📢';
             position: absolute;
             top: 20px;
             right: 20px;
             font-size: 2.5rem;
-            opacity: 0.1;
+            opacity: 0.08;
         }
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #3498db;
+            color: #f39c12;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -303,7 +326,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #3498db;
+            background: #f39c12;
             border-radius: 2px;
         }
         
@@ -320,7 +343,7 @@
         
         .instructions li::before {
             content: '•';
-            color: #3498db;
+            color: #f39c12;
             font-size: 1.5rem;
             position: absolute;
             left: -20px;
@@ -330,19 +353,19 @@
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(155, 89, 182, 0.3);
+            border-bottom: 2px solid rgba(230, 126, 34, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #c39bd3;
+            color: #f5d6b8;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(52, 152, 219, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(230, 126, 34, 0.1) 0%, rgba(243, 156, 18, 0.15) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(155, 89, 182, 0.3);
+            border: 1px solid rgba(230, 126, 34, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -353,31 +376,31 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(42, 26, 58, 0.5);
+            background: rgba(13, 13, 13, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(155, 89, 182, 0.2);
+            border: 1px solid rgba(230, 126, 34, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #c39bd3;
+            color: #f5d6b8;
             font-weight: 600;
             padding: 10px 20px;
-            background: rgba(155, 89, 182, 0.1);
+            background: rgba(230, 126, 34, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(155, 89, 182, 0.3);
+            border: 1px solid rgba(230, 126, 34, 0.3);
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(155, 89, 182, 0.4);
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.4);
             display: none;
-            border: 2px solid rgba(155, 89, 182, 0.5);
+            border: 2px solid rgba(230, 126, 34, 0.5);
             font-family: 'Courier New', monospace;
             transition: background 0.5s ease;
         }
@@ -388,10 +411,10 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(42, 26, 58, 0.4);
+            background: rgba(13, 13, 13, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(155, 89, 182, 0.2);
+            border: 1px solid rgba(230, 126, 34, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -399,12 +422,12 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #c39bd3;
+            color: #f5d6b8;
             line-height: 1.6;
             padding: 20px;
-            background: rgba(52, 152, 219, 0.1);
+            background: rgba(243, 156, 18, 0.08);
             border-radius: 10px;
-            border-left: 4px solid #3498db;
+            border-left: 4px solid #f39c12;
         }
         
         .options-container {
@@ -418,7 +441,7 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(26, 42, 74, 0.5);
+            background: rgba(26, 26, 26, 0.4);
             border: 1px solid rgba(93, 126, 158, 0.3);
             cursor: pointer;
             position: relative;
@@ -432,14 +455,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(155, 89, 182, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(230, 126, 34, 0.08), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(155, 89, 182, 0.1);
-            border-color: #9b59b6;
+            background: rgba(230, 126, 34, 0.1);
+            border-color: #e67e22;
             transform: translateX(5px);
         }
         
@@ -452,7 +475,7 @@
             width: 22px;
             height: 22px;
             cursor: pointer;
-            accent-color: #9b59b6;
+            accent-color: #e67e22;
             flex-shrink: 0;
         }
         
@@ -461,7 +484,7 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
-            color: #e0e0f0;
+            color: #e0e0e0;
             font-size: 1.1rem;
             line-height: 1.5;
         }
@@ -469,12 +492,12 @@
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(155, 89, 182, 0.3);
+            border-top: 2px solid rgba(230, 126, 34, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #c39bd3;
+            color: #f5d6b8;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -491,7 +514,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: #3498db;
+            background: #f39c12;
             border-radius: 2px;
         }
         
@@ -508,34 +531,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(26, 42, 74, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(26, 26, 26, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(155, 89, 182, 0.3);
-            color: #e0e0f0;
+            border: 1px solid rgba(230, 126, 34, 0.3);
+            color: #e0e0e0;
             font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background: linear-gradient(135deg, rgba(155, 89, 182, 0.3) 0%, rgba(142, 68, 173, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(230, 126, 34, 0.3) 0%, rgba(211, 84, 0, 0.5) 100%);
             transform: scale(1.1);
-            border-color: #9b59b6;
+            border-color: #e67e22;
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: #ffffff;
-            border-color: #c39bd3;
-            box-shadow: 0 4px 10px rgba(155, 89, 182, 0.4);
+            border-color: #f5d6b8;
+            box-shadow: 0 4px 10px rgba(230, 126, 34, 0.4);
             transform: scale(1.1);
         }
         
         .question-number.answered {
-            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
             color: white;
-            border-color: #f1c40f;
+            border-color: #2ecc71;
         }
         
         .navigation-buttons {
@@ -546,16 +569,16 @@
         
         .progress-container {
             margin: 20px 0;
-            background: rgba(26, 42, 74, 0.5);
+            background: rgba(26, 26, 26, 0.5);
             border-radius: 10px;
             overflow: hidden;
             height: 10px;
-            border: 1px solid rgba(155, 89, 182, 0.3);
+            border: 1px solid rgba(230, 126, 34, 0.3);
         }
         
         .progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, #9b59b6, #3498db);
+            background: linear-gradient(90deg, #e67e22, #f39c12);
             width: 0%;
             transition: width 0.5s ease;
             border-radius: 10px;
@@ -564,16 +587,28 @@
         .progress-text {
             text-align: center;
             font-size: 0.9rem;
-            color: #a3c6e4;
+            color: #e5b893;
             margin-top: 5px;
+        }
+        
+        .topic-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(230, 126, 34, 0.15);
+            border: 1px solid rgba(230, 126, 34, 0.3);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #f5d6b8;
+            margin-bottom: 10px;
+            font-weight: 500;
         }
         
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(42, 26, 58, 0.8) 0%, rgba(26, 42, 74, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(13, 13, 13, 0.8) 0%, rgba(26, 26, 26, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #9b59b6;
+            border: 2px solid #e67e22;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
@@ -585,11 +620,11 @@
             top: 20px;
             right: 20px;
             font-size: 4rem;
-            opacity: 0.1;
+            opacity: 0.06;
         }
         
         .results-container h2 {
-            color: #c39bd3;
+            color: #f5d6b8;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -614,7 +649,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #a3c6e4;
+            color: #e5b893;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -622,22 +657,22 @@
         .feedback {
             font-size: 1.3rem;
             margin: 25px 0;
-            color: #e0e0f0;
+            color: #e0e0e0;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(155, 89, 182, 0.1);
+            background: rgba(230, 126, 34, 0.08);
             border-radius: 12px;
-            border: 1px solid rgba(155, 89, 182, 0.3);
+            border: 1px solid rgba(230, 126, 34, 0.3);
         }
         
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(241, 196, 15, 0.2) 0%, rgba(243, 156, 18, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(241, 196, 15, 0.15) 0%, rgba(243, 156, 18, 0.2) 100%);
             border-radius: 12px;
             color: #f1c40f;
             font-size: 1.2rem;
-            border: 1px solid rgba(241, 196, 15, 0.5);
+            border: 1px solid rgba(241, 196, 15, 0.4);
         }
         
         @media (max-width: 768px) {
@@ -657,7 +692,7 @@
                 margin: 8px 0;
             }
             .subject-title {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
             .question-text {
                 font-size: 1.2rem;
@@ -682,7 +717,7 @@
                 font-size: 1rem;
             }
             .subject-title {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
             .results-container {
                 padding: 25px 15px;
@@ -701,8 +736,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(155, 89, 182, 0.3);
-            border-top: 4px solid #9b59b6;
+            border: 4px solid rgba(230, 126, 34, 0.3);
+            border-top: 4px solid #e67e22;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -721,19 +756,19 @@
             color: #5d7e9e;
             margin-top: 15px;
             padding: 10px;
-            background: rgba(42, 26, 58, 0.3);
+            background: rgba(13, 13, 13, 0.3);
             border-radius: 8px;
             border: 1px dashed rgba(93, 126, 158, 0.3);
         }
         
         .keyboard-hint kbd {
-            background: rgba(155, 89, 182, 0.2);
-            border: 1px solid rgba(155, 89, 182, 0.4);
+            background: rgba(230, 126, 34, 0.2);
+            border: 1px solid rgba(230, 126, 34, 0.4);
             border-radius: 4px;
             padding: 2px 8px;
             font-family: 'Courier New', monospace;
             font-size: 0.85rem;
-            color: #c39bd3;
+            color: #f5d6b8;
         }
     </style>
 </head>
@@ -742,23 +777,23 @@
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title">SSS1 MATHEMATICS C.A TEST</h1>
+            <h1 class="subject-title">SSS1 MATHEMATICS THIRD TERM EXAMINATION</h1>
             <div class="exam-info">Third Term | 2025/2026 Session</div>
-            <div class="term-info">40 Questions | ½ Mark Each | Total: 20 Marks | 40 Minutes</div>
+            <div class="term-info">60 Objective Questions | 90 Minutes</div>
         </div>
         
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Mathematics Continuous Assessment Test. This test covers Mensuration of Plane Shapes (Arc Length, Perimeter & Area of Sectors/Segments), Surface Areas and Volumes of Solids (Cube, Cuboid, Cylinder, Cone, Sphere, Hemisphere, Frustum), and Compound Solids. Demonstrate your understanding of mathematical principles and problem-solving. Best of luck."
+                "Welcome to The Trustworthy College Mathematics Third Term Examination. This examination covers Circles, Sectors, Arcs, Mensuration (Cube, Cuboid, Cylinder, Cone, Sphere, Frustum), and Statistics (Frequency Tables, Bar Charts, Histograms, Pie Charts, Frequency Polygons). Demonstrate your mathematical reasoning and problem-solving skills. Best of luck."
             </div>
             <div class="btn-container">
-                <button id="start-exam-btn" class="btn">Start C.A Test</button>
+                <button id="start-exam-btn" class="btn">Start Examination</button>
             </div>
         </section>
         
         <section id="student-info-section" class="section">
             <h2>Student Information</h2>
-            <p>Please provide your details to continue with the test.</p>
+            <p>Please provide your details to continue with the examination.</p>
             
             <form id="student-info-form" autocomplete="off">
                 <div class="form-group">
@@ -787,46 +822,47 @@
         </section>
         
         <section id="instructions-section" class="section">
-            <h2>Test Instructions</h2>
+            <h2>Examination Instructions</h2>
             
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This C.A Test consists of <strong>40 multiple-choice questions</strong> covering Mensuration and Solid Geometry.</li>
-                    <li>Each question carries <strong>½ mark</strong>, giving a total of <strong>20 marks</strong>.</li>
-                    <li>You have <strong>40 minutes</strong> to complete this test.</li>
+                    <li>This Third Term Examination consists of <strong>60 multiple-choice objective questions</strong> covering Circles, Sectors, Arcs, Mensuration, and Statistics.</li>
+                    <li>You have <strong>90 minutes</strong> to complete this examination.</li>
+                    <li>Each question carries <strong>½ mark</strong>.</li>
                     <li>Answer all questions to the best of your ability.</li>
                     <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
                     <li>You can also use <strong>keyboard shortcuts</strong>: Arrow keys to navigate, A/B/C/D keys to select answers.</li>
-                    <li>Answered questions will be marked with <strong>orange</strong> in the question grid.</li>
+                    <li>Answered questions will be marked with <strong>green</strong> in the question grid.</li>
                     <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
-                    <li>Ensure you have a stable internet connection throughout the test.</li>
+                    <li>Ensure you have a stable internet connection throughout the examination.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li><strong>Do not refresh the page</strong> during the test, or you may lose your progress.</li>
+                    <li><strong>Do not refresh the page</strong> during the examination, or you may lose your progress.</li>
                 </ul>
             </div>
             
             <div class="btn-container">
                 <button type="button" id="back-to-student-info" class="btn btn-secondary">Back</button>
-                <button type="button" id="begin-test" class="btn">Begin Test</button>
+                <button type="button" id="begin-test" class="btn">Begin Examination</button>
             </div>
         </section>
         
         <section id="exam-section" class="section">
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
+                <div class="topic-badge" id="topic-badge">Topic: Mathematics</div>
                 <div class="progress-container">
                     <div class="progress-bar" id="progress-bar"></div>
                 </div>
-                <div class="progress-text" id="progress-text">Progress: 0/40 answered</div>
+                <div class="progress-text" id="progress-text">Progress: 0/60 answered</div>
                 <div class="exam-controls">
-                    <div class="question-counter" id="question-counter">Question 1 of 40</div>
+                    <div class="question-counter" id="question-counter">Question 1 of 60</div>
                     <div class="timer-container" id="timer-container">
-                        ⏱ Time Left: <span id="timer">40:00</span>
+                        ⏱ Time Left: <span id="timer">90:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success">Submit Test</button>
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Examination</button>
                     </div>
                 </div>
             </div>
@@ -858,21 +894,21 @@
         
         <section id="results-section" class="section">
             <div class="results-container">
-                <h2>Test Completed</h2>
+                <h2>Examination Completed</h2>
                 <div class="completion-icon">✅</div>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SSS1 Mathematics - Third Term C.A Test 2025/2026</div>
+                <div class="subject" id="results-subject">SSS1 Mathematics - Third Term Examination 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the Mathematics C.A Test. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
+                    Thank you for completing the Mathematics Third Term Examination. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    ✅ Your test has been successfully submitted.
+                    ✅ Your examination has been successfully submitted.
                 </div>
                 
                 <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn">Take Another Test</button>
+                    <button type="button" id="restart-exam" class="btn">Take Another Examination</button>
                     <div class="back-home">
                         <a href="../index.html" class="btn btn-secondary">Back to Home</a>
                     </div>
@@ -883,205 +919,369 @@
 
     <script>
         const originalQuestions = [
+            // Circles, Sectors & Arcs (Q1-10)
             {
-                question: "The length of an arc subtending an angle of 60° in a circle of radius 21 cm is:",
-                options: ["11 cm", "22 cm", "33 cm", "44 cm"],
-                answer: "B"
+                question: "The length of an arc of a circle of radius 14 cm subtending an angle of 90° at the centre is",
+                options: ["11 cm", "22 cm", "44 cm", "88 cm"],
+                answer: "B",
+                section: "Circles & Sectors"
             },
             {
-                question: "The perimeter of a semicircle of radius 14 cm is:",
-                options: ["44 cm", "72 cm", "88 cm", "132 cm"],
-                answer: "B"
+                question: "The area of a sector of a circle of radius 21 cm and angle 120° is",
+                options: ["154 cm²", "308 cm²", "462 cm²", "924 cm²"],
+                answer: "C",
+                section: "Circles & Sectors"
             },
             {
-                question: "The area of a sector of angle 90° in a circle of radius 14 cm is:",
-                options: ["154 cm²", "308 cm²", "616 cm²", "77 cm²"],
-                answer: "A"
+                question: "A major segment of a circle is",
+                options: ["Always smaller than a semicircle", "The region bounded by a chord and the larger arc", "The region enclosed by two radii only", "Equal to the area of the circle"],
+                answer: "B",
+                section: "Circles & Sectors"
             },
             {
-                question: "A sector is a region bounded by:",
-                options: ["Two radii and an arc", "Two chords and an arc", "A chord and a radius", "Two diameters"],
-                answer: "A"
+                question: "The perimeter of a sector consists of",
+                options: ["Two chords", "One radius and one diameter", "Two radii and an arc", "One chord and one arc"],
+                answer: "C",
+                section: "Circles & Sectors"
             },
             {
-                question: "A segment of a circle is bounded by:",
-                options: ["Two radii", "A chord and an arc", "Two diameters", "A tangent and a radius"],
-                answer: "B"
+                question: "A circle has radius 7 cm. Its circumference is",
+                options: ["14 cm", "22 cm", "44 cm", "49 cm"],
+                answer: "C",
+                section: "Circles & Sectors"
             },
             {
-                question: "The angle subtended at the centre by an arc of length 11 cm in a circle of radius 21 cm is:",
+                question: "If the angle subtended at the centre of a circle is 180°, the sector formed is called",
+                options: ["Minor sector", "Major sector", "Quadrant", "Semicircle"],
+                answer: "D",
+                section: "Circles & Sectors"
+            },
+            {
+                question: "The formula for the length of an arc is",
+                options: ["(θ/360) × 2πr", "πr²", "2(l+b)", "πd"],
+                answer: "A",
+                section: "Circles & Sectors"
+            },
+            {
+                question: "The curved surface of a sector can be folded to form a",
+                options: ["Cube", "Cone", "Cylinder", "Prism"],
+                answer: "B",
+                section: "Circles & Sectors"
+            },
+            {
+                question: "When a sector forms a cone, the radius of the sector becomes the",
+                options: ["Radius of the base", "Diameter of the base", "Slant height of the cone", "Height of the cone"],
+                answer: "C",
+                section: "Circles & Sectors"
+            },
+            {
+                question: "The circumference of the base of a cone is equal to",
+                options: ["The radius of the sector", "The arc length of the sector", "The diameter of the sector", "Half the sector angle"],
+                answer: "B",
+                section: "Circles & Sectors"
+            },
+            // Mensuration - Cube, Cuboid, Cylinder, Cone, Sphere, Frustum (Q11-25)
+            {
+                question: "The total surface area of a cube of side 8 cm is",
+                options: ["64 cm²", "256 cm²", "384 cm²", "512 cm²"],
+                answer: "C",
+                section: "Mensuration"
+            },
+            {
+                question: "The curved surface area of a cylinder is",
+                options: ["2πr²", "πr²h", "2πrh", "2(l+b)"],
+                answer: "C",
+                section: "Mensuration"
+            },
+            {
+                question: "The total surface area of a closed cylinder is",
+                options: ["2πrh", "2πr(r+h)", "πr²h", "πrh"],
+                answer: "B",
+                section: "Mensuration"
+            },
+            {
+                question: "The total surface area of a sphere of radius r is",
+                options: ["πr²", "2πr²", "3πr²", "4πr²"],
+                answer: "D",
+                section: "Mensuration"
+            },
+            {
+                question: "The volume of a cube of side 5 cm is",
+                options: ["25 cm³", "75 cm³", "100 cm³", "125 cm³"],
+                answer: "D",
+                section: "Mensuration"
+            },
+            {
+                question: "The volume of a cuboid measuring 8 cm × 5 cm × 4 cm is",
+                options: ["80 cm³", "120 cm³", "160 cm³", "200 cm³"],
+                answer: "C",
+                section: "Mensuration"
+            },
+            {
+                question: "The volume of a cylinder of radius 7 cm and height 10 cm is",
+                options: ["1540 cm³", "770 cm³", "490 cm³", "3080 cm³"],
+                answer: "A",
+                section: "Mensuration"
+            },
+            {
+                question: "The formula for the volume of a cone is",
+                options: ["πr²h", "⅓πr²h", "½πr²h", "2πrh"],
+                answer: "B",
+                section: "Mensuration"
+            },
+            {
+                question: "A frustum is obtained when",
+                options: ["A cube is divided into two equal parts", "The top of a cone or pyramid is cut off by a plane parallel to its base", "A sphere is cut into halves", "A cylinder is folded"],
+                answer: "B",
+                section: "Mensuration"
+            },
+            {
+                question: "The volume of a frustum of a cone depends on",
+                options: ["Radius only", "Height only", "The two radii and the perpendicular height", "Diameter only"],
+                answer: "C",
+                section: "Mensuration"
+            },
+            {
+                question: "The volume of a sphere of radius 6 cm is",
+                options: ["144π cm³", "288π cm³", "432π cm³", "576π cm³"],
+                answer: "B",
+                section: "Mensuration"
+            },
+            {
+                question: "The slant height of a cone is 13 cm and its base radius is 5 cm. The height of the cone is",
+                options: ["8 cm", "10 cm", "12 cm", "15 cm"],
+                answer: "C",
+                section: "Mensuration"
+            },
+            {
+                question: "The curved surface area of a cone of radius 7 cm and slant height 10 cm is",
+                options: ["70π cm²", "140π cm²", "154π cm²", "220π cm²"],
+                answer: "A",
+                section: "Mensuration"
+            },
+            {
+                question: "The total surface area of the cone in Question 23 is",
+                options: ["70π cm²", "119π cm²", "140π cm²", "189π cm²"],
+                answer: "B",
+                section: "Mensuration"
+            },
+            {
+                question: "The formula for the volume of a frustum of a cone is",
+                options: ["⅓πh(R² + r² + Rr)", "πr²h", "½πrh", "2πrh"],
+                answer: "A",
+                section: "Mensuration"
+            },
+            // Statistics - Frequency Tables & Charts (Q26-40)
+            {
+                question: "The following marks were recorded: 8, 6, 7, 8, 9, 6, 8. The frequency of 8 is",
+                options: ["1", "2", "3", "4"],
+                answer: "C",
+                section: "Statistics"
+            },
+            {
+                question: "A frequency table is mainly used to",
+                options: ["Increase the values", "Arrange data systematically", "Change the units of data", "Estimate probabilities only"],
+                answer: "B",
+                section: "Statistics"
+            },
+            {
+                question: "The total frequency is equal to",
+                options: ["The smallest value", "The largest value", "The sum of all frequencies", "The class width"],
+                answer: "C",
+                section: "Statistics"
+            },
+            {
+                question: "A histogram differs from a bar chart because",
+                options: ["Histogram bars are separated.", "Histogram bars touch one another.", "Histograms use only percentages.", "Histograms have no axes."],
+                answer: "B",
+                section: "Statistics"
+            },
+            {
+                question: "A bar chart is mainly used to represent",
+                options: ["Continuous data", "Grouped data only", "Discrete or categorical data", "Circular data"],
+                answer: "C",
+                section: "Statistics"
+            },
+            {
+                question: "The horizontal axis of a bar chart usually represents",
+                options: ["Frequencies only", "Categories or class intervals", "Angles", "Percentages"],
+                answer: "B",
+                section: "Statistics"
+            },
+            {
+                question: "The vertical axis of a histogram represents",
+                options: ["Radius", "Class interval", "Frequency", "Diameter"],
+                answer: "C",
+                section: "Statistics"
+            },
+            {
+                question: "The angle for a sector in a pie chart is obtained by",
+                options: ["(Frequency ÷ Total Frequency) × 360°", "Frequency × 180°", "Total Frequency ÷ Frequency", "Frequency × 90°"],
+                answer: "A",
+                section: "Statistics"
+            },
+            {
+                question: "If a category has a frequency of 20 out of a total frequency of 80, the corresponding angle in a pie chart is",
+                options: ["45°", "60°", "90°", "120°"],
+                answer: "C",
+                section: "Statistics"
+            },
+            {
+                question: "A pie chart is also called",
+                options: ["Circular graph", "Linear graph", "Frequency graph", "Column graph"],
+                answer: "A",
+                section: "Statistics"
+            },
+            {
+                question: "A frequency polygon is obtained by joining",
+                options: ["The tops of histogram bars with straight lines", "The centres of the tops of histogram bars with straight lines", "The bases of histogram bars", "The edges of a pie chart"],
+                answer: "B",
+                section: "Statistics"
+            },
+            {
+                question: "A frequency polygon is useful for",
+                options: ["Comparing two or more data distributions", "Measuring volume", "Finding surface area", "Calculating circumference only"],
+                answer: "A",
+                section: "Statistics"
+            },
+            {
+                question: "In grouped data, the class mark is",
+                options: ["The lower class limit", "The upper class limit", "The midpoint of a class interval", "The class width"],
+                answer: "C",
+                section: "Statistics"
+            },
+            {
+                question: "The class mark of the interval 20–29 is",
+                options: ["20", "24.5", "25", "29"],
+                answer: "B",
+                section: "Statistics"
+            },
+            {
+                question: "A histogram is most appropriate for displaying",
+                options: ["Continuous grouped data", "Names of students", "Colours of cars", "Types of fruits"],
+                answer: "A",
+                section: "Statistics"
+            },
+            // Mixed Mensuration & Statistics (Q41-60)
+            {
+                question: "A sector of radius 21 cm has an arc length of 22 cm. The angle subtended at the centre is",
                 options: ["30°", "45°", "60°", "90°"],
-                answer: "A"
+                answer: "C",
+                section: "Mensuration"
             },
             {
-                question: "The area of a semicircle of radius 14 cm is:",
-                options: ["154 cm²", "308 cm²", "616 cm²", "77 cm²"],
-                answer: "B"
+                question: "The area of a circle of radius 14 cm is",
+                options: ["308 cm²", "616 cm²", "154 cm²", "44 cm²"],
+                answer: "B",
+                section: "Mensuration"
             },
             {
-                question: "A cone can be formed by folding:",
-                options: ["A circle", "A rectangle", "A sector", "A triangle"],
-                answer: "C"
+                question: "The area of the minor segment of a circle is obtained by",
+                options: ["Area of circle − area of triangle", "Area of sector − area of triangle", "Area of triangle − area of sector", "Area of sector + area of triangle"],
+                answer: "B",
+                section: "Mensuration"
             },
             {
-                question: "In the sector-cone relationship, the radius of the sector becomes the:",
-                options: ["Base radius of cone", "Height of cone", "Slant height of cone", "Diameter of cone"],
-                answer: "C"
+                question: "A sector of radius 15 cm and angle 144° is rolled into a cone. The slant height of the cone is",
+                options: ["6 cm", "10 cm", "12 cm", "15 cm"],
+                answer: "D",
+                section: "Mensuration"
             },
             {
-                question: "The arc length of a sector used to form a cone becomes the:",
-                options: ["Height of cone", "Circumference of cone base", "Diameter of cone", "Volume of cone"],
-                answer: "B"
+                question: "If the arc length of the sector in Question 44 is 12π cm, the radius of the base of the cone is",
+                options: ["4 cm", "5 cm", "6 cm", "8 cm"],
+                answer: "C",
+                section: "Mensuration"
             },
             {
-                question: "The curved surface area of a cone is:",
-                options: ["πr²", "2πrh", "πrl", "πr²h"],
-                answer: "C"
+                question: "The height of the cone in Questions 44–45 is",
+                options: ["6 cm", "9 cm", "12 cm", "15 cm"],
+                answer: "B",
+                section: "Mensuration"
             },
             {
-                question: "The total surface area of a cone is:",
-                options: ["πr² + πrl", "2πr²", "2πrh", "πrl"],
-                answer: "A"
+                question: "A solid metal sphere of radius 3 cm is melted and recast into a cylinder of radius 1 cm. The height of the cylinder is",
+                options: ["12 cm", "24 cm", "36 cm", "48 cm"],
+                answer: "C",
+                section: "Mensuration"
             },
             {
-                question: "The total surface area of a cube of side 5 cm is:",
-                options: ["25 cm²", "100 cm²", "150 cm²", "125 cm²"],
-                answer: "C"
+                question: "The volume of a hemisphere of radius r is",
+                options: ["(2/3)πr³", "(4/3)πr³", "2πr³", "πr³"],
+                answer: "A",
+                section: "Mensuration"
             },
             {
-                question: "The surface area of a cuboid measuring 4 cm × 3 cm × 2 cm is:",
-                options: ["52 cm²", "48 cm²", "24 cm²", "72 cm²"],
-                answer: "A"
+                question: "A frustum has upper radius 4 cm, lower radius 8 cm and height 9 cm. Its volume is",
+                options: ["336π cm³", "432π cm³", "504π cm³", "624π cm³"],
+                answer: "A",
+                section: "Mensuration"
             },
             {
-                question: "The curved surface area of a cylinder is:",
-                options: ["πr²", "2πrh", "πrl", "2πr²"],
-                answer: "B"
+                question: "The following frequency distribution is given: Class Interval 0–9:4, 10–19:8, 20–29:10, 30–39:6, 40–49:2. The total frequency is",
+                options: ["24", "28", "30", "32"],
+                answer: "C",
+                section: "Statistics"
             },
             {
-                question: "The total surface area of a cylinder is:",
-                options: ["2πr(h+r)", "πr²h", "πrh", "πr²"],
-                answer: "A"
+                question: "The modal class in Question 50 is",
+                options: ["0–9", "10–19", "20–29", "30–39"],
+                answer: "C",
+                section: "Statistics"
             },
             {
-                question: "The total surface area of a sphere of radius r is:",
-                options: ["2πr²", "3πr²", "4πr²", "6πr²"],
-                answer: "C"
+                question: "The class width of the interval 40–49 is",
+                options: ["5", "9", "10", "11"],
+                answer: "C",
+                section: "Statistics"
             },
             {
-                question: "The total surface area of a hemisphere is:",
-                options: ["2πr²", "3πr²", "4πr²", "πr²"],
-                answer: "B"
+                question: "The angle representing a frequency of 15 in a total frequency of 60 on a pie chart is",
+                options: ["45°", "60°", "90°", "120°"],
+                answer: "C",
+                section: "Statistics"
             },
             {
-                question: "The volume of a cube of side 6 cm is:",
-                options: ["36 cm³", "72 cm³", "216 cm³", "144 cm³"],
-                answer: "C"
+                question: "A pie chart represents data as",
+                options: ["Rectangles", "Straight lines", "Sectors of a circle", "Histograms"],
+                answer: "C",
+                section: "Statistics"
             },
             {
-                question: "The volume of a cuboid 8 cm × 4 cm × 3 cm is:",
-                options: ["96 cm³", "64 cm³", "84 cm³", "72 cm³"],
-                answer: "A"
+                question: "The graph best suited for showing continuous grouped data is",
+                options: ["Bar chart", "Histogram", "Pie chart", "Pictogram"],
+                answer: "B",
+                section: "Statistics"
             },
             {
-                question: "The volume of a cylinder of radius 7 cm and height 10 cm is:",
-                options: ["1540 cm³", "770 cm³", "490 cm³", "980 cm³"],
-                answer: "A"
+                question: "In a histogram, the width of each bar represents the",
+                options: ["Frequency", "Class interval", "Mean", "Mode"],
+                answer: "B",
+                section: "Statistics"
             },
             {
-                question: "The volume of a cone is:",
-                options: ["πr²h", "½πr²h", "⅓πr²h", "¼πr²h"],
-                answer: "C"
+                question: "A frequency polygon is drawn by joining",
+                options: ["Lower class limits", "Upper class limits", "Class marks", "Frequencies only"],
+                answer: "C",
+                section: "Statistics"
             },
             {
-                question: "The volume of a sphere is:",
-                options: ["4πr³", "⅔πr³", "⁴⁄₃πr³", "πr³"],
-                answer: "C"
+                question: "A student uses a bar chart instead of a histogram to represent grouped continuous data. The main error is that",
+                options: ["The bars should touch one another.", "The bars should be coloured.", "The bars should be vertical only.", "The graph should not have axes."],
+                answer: "A",
+                section: "Statistics"
             },
             {
-                question: "The volume of a hemisphere is:",
-                options: ["⁴⁄₃πr³", "⅔πr³", "πr³", "⅓πr³"],
-                answer: "B"
+                question: "Which of the following graphs is most appropriate for comparing the proportions of different categories?",
+                options: ["Histogram", "Frequency polygon", "Pie chart", "Line graph"],
+                answer: "C",
+                section: "Statistics"
             },
             {
-                question: "A cone and a cylinder having the same base radius and height are related by:",
-                options: ["Cone volume = Cylinder volume", "Cone volume = 2 × Cylinder volume", "Cone volume = ⅓ Cylinder volume", "Cone volume = ½ Cylinder volume"],
-                answer: "C"
-            },
-            {
-                question: "A frustum is obtained when:",
-                options: ["A cone is stretched", "The top of a cone is cut off parallel to the base", "Two cones are joined together", "A cylinder is divided"],
-                answer: "B"
-            },
-            {
-                question: "A frustum of a cone has:",
-                options: ["One circular face", "No circular face", "Two parallel circular faces", "Three circular faces"],
-                answer: "C"
-            },
-            {
-                question: "The volume of a frustum depends on:",
-                options: ["Only its height", "Only its radii", "Height and radii of both ends", "Diameter only"],
-                answer: "C"
-            },
-            {
-                question: "Which of the following is a compound solid?",
-                options: ["Cube", "Sphere", "Cylinder", "Cylinder joined to a hemisphere"],
-                answer: "D"
-            },
-            {
-                question: "The volume of a compound solid is obtained by:",
-                options: ["Multiplying all dimensions together", "Adding or subtracting volumes of simple solids", "Squaring dimensions", "Finding surface area only"],
-                answer: "B"
-            },
-            {
-                question: "The slant height of a cone of radius 5 cm and height 12 cm is:",
-                options: ["11 cm", "12 cm", "13 cm", "17 cm"],
-                answer: "C"
-            },
-            {
-                question: "The volume of a cone of radius 3 cm and height 7 cm is: (Take π = 22/7)",
-                options: ["66 cm³", "22 cm³", "44 cm³", "88 cm³"],
-                answer: "A"
-            },
-            {
-                question: "The volume of a sphere of radius 3 cm is approximately: (Take π = 3.14)",
-                options: ["113 cm³", "36 cm³", "226 cm³", "452 cm³"],
-                answer: "A"
-            },
-            {
-                question: "The curved surface area of a cylinder of radius 7 cm and height 10 cm is: (Take π = 22/7)",
-                options: ["440 cm²", "220 cm²", "154 cm²", "308 cm²"],
-                answer: "A"
-            },
-            {
-                question: "The total surface area of a cube with side 8 cm is:",
-                options: ["256 cm²", "384 cm²", "512 cm²", "768 cm²"],
-                answer: "B"
-            },
-            {
-                question: "A major sector is one whose central angle is:",
-                options: ["Less than 90°", "Less than 180°", "Greater than 180°", "Equal to 180°"],
-                answer: "C"
-            },
-            {
-                question: "A minor segment is smaller than:",
-                options: ["A sector of the same circle", "A major segment of the same circle", "A radius", "A diameter"],
-                answer: "B"
-            },
-            {
-                question: "The ratio of the volume of a sphere to that of a hemisphere of the same radius is:",
-                options: ["1 : 2", "2 : 1", "3 : 1", "4 : 1"],
-                answer: "B"
-            },
-            {
-                question: "The formula for the volume of a cylinder is:",
-                options: ["πr²h", "⅓πr²h", "2πrh", "πrl"],
-                answer: "A"
-            },
-            {
-                question: "The formula for the volume of a sphere is:",
-                options: ["πr²", "2πr²", "⁴⁄₃πr³", "πr³"],
-                answer: "C"
+                question: "A teacher records the number of books read by students in a class. The most suitable graphical representation is",
+                options: ["Bar chart", "Histogram", "Pie chart only", "Frequency polygon only"],
+                answer: "A",
+                section: "Statistics"
             }
         ];
 
@@ -1089,15 +1289,14 @@
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 40 * 60;
+        let timeLeft = 90 * 60; // 90 minutes
         let questions = [];
         let examStarted = false;
 
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80',
-            'https://images.unsplash.com/photo-1558021212-51b6ecfa0db1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2083&q=80'
+            'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
         ];
 
         const sections = {
@@ -1126,11 +1325,11 @@
 
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 40 * 60;
+            timeLeft = 90 * 60;
             
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
-            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%)';
+            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e67e22 0%, #d35400 100%)';
             
             timerInterval = setInterval(() => {
                 timeLeft--;
@@ -1143,12 +1342,12 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    alert("Time's up! Your test will be submitted automatically.");
+                    alert("Time's up! Your examination will be submitted automatically.");
                     calculateScoreAndSubmit();
                 } else if (timeLeft <= 300) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
                 } else if (timeLeft <= 600) {
-                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e67e22 0%, #d35400 100%)';
                 }
             }, 1000);
         }
@@ -1169,7 +1368,7 @@
                         
                         if (timeLeft <= 0) {
                             clearInterval(timerInterval);
-                            alert("Time's up! Your test will be submitted automatically.");
+                            alert("Time's up! Your examination will be submitted automatically.");
                             calculateScoreAndSubmit();
                         }
                     }, 1000);
@@ -1180,7 +1379,7 @@
         window.addEventListener('beforeunload', (e) => {
             if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
                 e.preventDefault();
-                e.returnValue = 'You have an ongoing test. Are you sure you want to leave? Your progress may be lost.';
+                e.returnValue = 'You have an ongoing examination. Are you sure you want to leave? Your progress may be lost.';
                 return e.returnValue;
             }
         });
@@ -1205,6 +1404,11 @@
             document.getElementById('progress-bar').style.width = percentage + '%';
             document.getElementById('progress-text').textContent = 
                 `Progress: ${answeredCount}/${questions.length} answered`;
+        }
+
+        function updateTopicBadge(index) {
+            const section = questions[index].section;
+            document.getElementById('topic-badge').textContent = `Topic: ${section}`;
         }
 
         document.getElementById('start-exam-btn').addEventListener('click', () => {
@@ -1271,6 +1475,7 @@
             loadQuestion(currentQuestionIndex);
             startTimer();
             updateProgress();
+            updateTopicBadge(currentQuestionIndex);
             showSection('exam');
         });
 
@@ -1363,7 +1568,7 @@
                 questionNumber.className = 'question-number';
                 questionNumber.textContent = i + 1;
                 questionNumber.dataset.index = i;
-                questionNumber.title = `Question ${i + 1}`;
+                questionNumber.title = `Question ${i + 1} - ${questions[i].section}`;
                 
                 if (userAnswers[i] !== null) {
                     questionNumber.classList.add('answered');
@@ -1403,7 +1608,9 @@
             const question = questions[index];
             
             document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
-            document.getElementById('question-text').textContent = question.question;
+            document.getElementById('question-text').innerHTML = question.question;
+            
+            updateTopicBadge(index);
             
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
@@ -1434,7 +1641,7 @@
                 
                 const label = document.createElement('label');
                 label.htmlFor = optionId;
-                label.textContent = `${labels[optionIndex]}. ${option}`;
+                label.innerHTML = `${labels[optionIndex]}. ${option}`;
                 
                 optionDiv.addEventListener('click', (e) => {
                     if (e.target !== radio) {
@@ -1469,11 +1676,7 @@
                 }
             }
             
-            // Calculate half marks (each question is ½ mark)
-            const totalMarks = score * 0.5;
-            
-            // Submit score to Google Form ONLY - do NOT display to student
-            submitToGoogleForm(studentName, "SSS1 Mathematics - Third Term C.A Test 2025/2026", `${totalMarks}/20`);
+            submitToGoogleForm(studentName, "SSS1 Mathematics - Third Term Examination 2025/2026", `${score}/60`);
             
             document.getElementById('submission-status').style.display = 'block';
             showSection('results');
