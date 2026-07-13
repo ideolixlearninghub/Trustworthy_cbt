@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Digital Technology SS1 Mid Term Test</title>
+    <title>The Trustworthy College - SS1 Data Processing Examination</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
     <style>
         * {
@@ -14,8 +14,8 @@
         }
         
         body {
-            background-color: #0a1628;
-            color: #e0e8f0;
+            background-color: #0a0a1a;
+            color: #e0e0f0;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
@@ -41,14 +41,14 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #0a1628 0%, #1a2a4a 100%);
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2a 100%);
             box-shadow: 0 15px 40px rgba(52, 152, 219, 0.25);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #3498db;
+            border: 3px solid #2980b9;
             backdrop-filter: blur(5px);
         }
         
@@ -64,7 +64,7 @@
         }
         
         .container::after {
-            content: '🖥️';
+            content: '💻';
             position: absolute;
             bottom: 15px;
             right: 20px;
@@ -84,7 +84,7 @@
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #3498db;
+            border-bottom: 2px solid #2980b9;
             z-index: 1;
         }
         
@@ -96,7 +96,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #3498db, transparent);
+            background: linear-gradient(to right, transparent, #2980b9, transparent);
         }
         
         .logo {
@@ -105,7 +105,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #3498db;
+            border: 3px solid #2980b9;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -116,7 +116,7 @@
         }
         
         .subject-title {
-            color: #85c1e9;
+            color: #bde2f0;
             font-size: 2.2rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
@@ -124,20 +124,20 @@
         }
         
         .exam-info {
-            color: #a3c6e4;
+            color: #93c3d7;
             font-size: 1.1rem;
             margin-top: 5px;
         }
         
         .term-info {
-            background: linear-gradient(135deg, #3498db20, #2980b940);
+            background: linear-gradient(135deg, #2980b920, #3498db40);
             display: inline-block;
             padding: 8px 20px;
             border-radius: 30px;
             margin-top: 10px;
             font-weight: bold;
-            color: #85c1e9;
-            border: 1px solid #3498db60;
+            color: #bde2f0;
+            border: 1px solid #2980b960;
         }
         
         .section {
@@ -158,25 +158,25 @@
         }
         
         .welcome-message {
-            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(26, 42, 74, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(41, 128, 185, 0.1) 0%, rgba(26, 26, 42, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #e0e8f0;
-            border-left: 5px solid #3498db;
-            border-right: 1px solid rgba(52, 152, 219, 0.3);
-            border-top: 1px solid rgba(52, 152, 219, 0.2);
-            border-bottom: 1px solid rgba(52, 152, 219, 0.3);
+            color: #e0e0f0;
+            border-left: 5px solid #2980b9;
+            border-right: 1px solid rgba(41, 128, 185, 0.3);
+            border-top: 1px solid rgba(41, 128, 185, 0.2);
+            border-bottom: 1px solid rgba(41, 128, 185, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
         }
         
         .welcome-message::before {
-            content: '💻';
+            content: '🖥️';
             position: absolute;
             top: 20px;
             right: 20px;
@@ -186,7 +186,7 @@
         
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #2980b9 0%, #2471a3 100%);
+            background: linear-gradient(135deg, #2980b9 0%, #1a6a9a 100%);
             color: #ffffff;
             border: none;
             padding: 15px 32px;
@@ -198,7 +198,7 @@
             font-weight: 700;
             letter-spacing: 0.5px;
             border: 2px solid rgba(41, 128, 185, 0.5);
-            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+            box-shadow: 0 6px 15px rgba(41, 128, 185, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -218,7 +218,7 @@
         .btn:hover:not(:disabled) {
             background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.5);
+            box-shadow: 0 10px 25px rgba(41, 128, 185, 0.5);
             color: #ffffff;
         }
         
@@ -242,6 +242,10 @@
             border-color: #d35400;
         }
         
+        .btn-success:hover:not(:disabled) {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+        }
+        
         .btn-container {
             text-align: center;
             margin-top: 35px;
@@ -255,7 +259,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #85c1e9;
+            color: #bde2f0;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -263,20 +267,20 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(10, 22, 40, 0.7);
+            background: rgba(10, 10, 26, 0.7);
             border: 2px solid #5d7e9e;
             border-radius: 10px;
             font-size: 1.1rem;
-            color: #e0e8f0;
+            color: #e0e0f0;
             transition: all 0.3s;
             font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #3498db;
+            border-color: #2980b9;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
-            background: rgba(10, 22, 40, 0.9);
+            box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.3);
+            background: rgba(10, 10, 26, 0.9);
         }
         
         .error-message {
@@ -288,7 +292,7 @@
         }
         
         .instructions {
-            background: linear-gradient(135deg, rgba(52, 152, 219, 0.08) 0%, rgba(26, 42, 74, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.08) 0%, rgba(26, 26, 42, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
@@ -299,7 +303,7 @@
         }
         
         .instructions::before {
-            content: '⌨️';
+            content: '📊';
             position: absolute;
             top: 20px;
             right: 20px;
@@ -349,19 +353,19 @@
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(52, 152, 219, 0.3);
+            border-bottom: 2px solid rgba(41, 128, 185, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #85c1e9;
+            color: #bde2f0;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(41, 128, 185, 0.15) 100%);
+            background: linear-gradient(135deg, rgba(41, 128, 185, 0.1) 0%, rgba(52, 152, 219, 0.15) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(52, 152, 219, 0.3);
+            border: 1px solid rgba(41, 128, 185, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -372,29 +376,29 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(10, 22, 40, 0.5);
+            background: rgba(10, 10, 26, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(52, 152, 219, 0.2);
+            border: 1px solid rgba(41, 128, 185, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #85c1e9;
+            color: #bde2f0;
             font-weight: 600;
             padding: 10px 20px;
-            background: rgba(52, 152, 219, 0.1);
+            background: rgba(41, 128, 185, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(52, 152, 219, 0.3);
+            border: 1px solid rgba(41, 128, 185, 0.3);
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #2980b9 0%, #2471a3 100%);
+            background: linear-gradient(135deg, #2980b9 0%, #1a6a9a 100%);
             color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+            box-shadow: 0 4px 12px rgba(41, 128, 185, 0.4);
             display: none;
             border: 2px solid rgba(41, 128, 185, 0.5);
             font-family: 'Courier New', monospace;
@@ -407,10 +411,10 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(10, 22, 40, 0.4);
+            background: rgba(10, 10, 26, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(52, 152, 219, 0.2);
+            border: 1px solid rgba(41, 128, 185, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -418,7 +422,7 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #85c1e9;
+            color: #bde2f0;
             line-height: 1.6;
             padding: 20px;
             background: rgba(52, 152, 219, 0.08);
@@ -437,7 +441,7 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(26, 42, 74, 0.4);
+            background: rgba(26, 26, 42, 0.4);
             border: 1px solid rgba(93, 126, 158, 0.3);
             cursor: pointer;
             position: relative;
@@ -451,14 +455,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.08), transparent);
+            background: linear-gradient(90deg, transparent, rgba(41, 128, 185, 0.08), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(52, 152, 219, 0.1);
-            border-color: #3498db;
+            background: rgba(41, 128, 185, 0.1);
+            border-color: #2980b9;
             transform: translateX(5px);
         }
         
@@ -471,7 +475,7 @@
             width: 22px;
             height: 22px;
             cursor: pointer;
-            accent-color: #3498db;
+            accent-color: #2980b9;
             flex-shrink: 0;
         }
         
@@ -480,7 +484,7 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
-            color: #e0e8f0;
+            color: #e0e0f0;
             font-size: 1.1rem;
             line-height: 1.5;
         }
@@ -488,12 +492,12 @@
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(52, 152, 219, 0.3);
+            border-top: 2px solid rgba(41, 128, 185, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #85c1e9;
+            color: #bde2f0;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -527,27 +531,27 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(26, 42, 74, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(26, 26, 42, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(52, 152, 219, 0.3);
-            color: #e0e8f0;
+            border: 1px solid rgba(41, 128, 185, 0.3);
+            color: #e0e0f0;
             font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background: linear-gradient(135deg, rgba(52, 152, 219, 0.3) 0%, rgba(41, 128, 185, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(41, 128, 185, 0.3) 0%, rgba(26, 106, 154, 0.5) 100%);
             transform: scale(1.1);
-            border-color: #3498db;
+            border-color: #2980b9;
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #2980b9 0%, #2471a3 100%);
+            background: linear-gradient(135deg, #2980b9 0%, #1a6a9a 100%);
             color: #ffffff;
-            border-color: #85c1e9;
-            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
+            border-color: #bde2f0;
+            box-shadow: 0 4px 10px rgba(41, 128, 185, 0.4);
             transform: scale(1.1);
         }
         
@@ -565,11 +569,11 @@
         
         .progress-container {
             margin: 20px 0;
-            background: rgba(26, 42, 74, 0.5);
+            background: rgba(26, 26, 42, 0.5);
             border-radius: 10px;
             overflow: hidden;
             height: 10px;
-            border: 1px solid rgba(52, 152, 219, 0.3);
+            border: 1px solid rgba(41, 128, 185, 0.3);
         }
         
         .progress-bar {
@@ -583,18 +587,18 @@
         .progress-text {
             text-align: center;
             font-size: 0.9rem;
-            color: #a3c6e4;
+            color: #93c3d7;
             margin-top: 5px;
         }
         
         .topic-badge {
             display: inline-block;
             padding: 4px 12px;
-            background: rgba(52, 152, 219, 0.15);
-            border: 1px solid rgba(52, 152, 219, 0.3);
+            background: rgba(41, 128, 185, 0.15);
+            border: 1px solid rgba(41, 128, 185, 0.3);
             border-radius: 20px;
             font-size: 0.8rem;
-            color: #85c1e9;
+            color: #bde2f0;
             margin-bottom: 10px;
             font-weight: 500;
         }
@@ -602,9 +606,9 @@
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(10, 22, 40, 0.8) 0%, rgba(26, 42, 74, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(10, 10, 26, 0.8) 0%, rgba(26, 26, 42, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #3498db;
+            border: 2px solid #2980b9;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
@@ -620,7 +624,7 @@
         }
         
         .results-container h2 {
-            color: #85c1e9;
+            color: #bde2f0;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -645,7 +649,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #a3c6e4;
+            color: #93c3d7;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -653,22 +657,22 @@
         .feedback {
             font-size: 1.3rem;
             margin: 25px 0;
-            color: #e0e8f0;
+            color: #e0e0f0;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(52, 152, 219, 0.08);
+            background: rgba(41, 128, 185, 0.08);
             border-radius: 12px;
-            border: 1px solid rgba(52, 152, 219, 0.3);
+            border: 1px solid rgba(41, 128, 185, 0.3);
         }
         
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.15) 0%, rgba(39, 174, 96, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(241, 196, 15, 0.15) 0%, rgba(243, 156, 18, 0.2) 100%);
             border-radius: 12px;
-            color: #2ecc71;
+            color: #f1c40f;
             font-size: 1.2rem;
-            border: 1px solid rgba(46, 204, 113, 0.4);
+            border: 1px solid rgba(241, 196, 15, 0.4);
         }
         
         @media (max-width: 768px) {
@@ -732,8 +736,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(52, 152, 219, 0.3);
-            border-top: 4px solid #3498db;
+            border: 4px solid rgba(41, 128, 185, 0.3);
+            border-top: 4px solid #2980b9;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -752,29 +756,19 @@
             color: #5d7e9e;
             margin-top: 15px;
             padding: 10px;
-            background: rgba(10, 22, 40, 0.3);
+            background: rgba(10, 10, 26, 0.3);
             border-radius: 8px;
             border: 1px dashed rgba(93, 126, 158, 0.3);
         }
         
         .keyboard-hint kbd {
-            background: rgba(52, 152, 219, 0.2);
-            border: 1px solid rgba(52, 152, 219, 0.4);
+            background: rgba(41, 128, 185, 0.2);
+            border: 1px solid rgba(41, 128, 185, 0.4);
             border-radius: 4px;
             padding: 2px 8px;
             font-family: 'Courier New', monospace;
             font-size: 0.85rem;
-            color: #85c1e9;
-        }
-        
-        .key-combo {
-            font-family: 'Courier New', monospace;
-            background: rgba(52, 152, 219, 0.15);
-            border: 1px solid rgba(52, 152, 219, 0.3);
-            border-radius: 4px;
-            padding: 2px 6px;
-            font-size: 0.9em;
-            white-space: nowrap;
+            color: #bde2f0;
         }
     </style>
 </head>
@@ -783,23 +777,23 @@
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title">SS1 DIGITAL TECHNOLOGY TEST</h1>
-            <div class="exam-info">Third Term | 2025/2026 Session</div>
-            <div class="term-info">40 Objective Questions | 40 Minutes</div>
+            <h1 class="subject-title">SS1 DATA PROCESSING</h1>
+            <div class="exam-info">End-of-Term Examination | 2025/2026 Session</div>
+            <div class="term-info">60 Objective Questions | 60 Minutes</div>
         </div>
         
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Digital Technology Mid Term Test. This test covers Word Processing (creating, editing, formatting, and printing documents), Spreadsheet Applications (cell addressing, workbooks, worksheets, formulas), and essential Computer Shortcut Keys. Demonstrate your understanding of digital productivity tools. Best of luck."
+                "Welcome to The Trustworthy College SS1 Data Processing End-of-Term Examination. This examination covers Spreadsheets, Word Processing, Presentations, Charts, Functions, Cell References, and Data Management. Demonstrate your understanding of digital tools and data processing concepts. Best of luck."
             </div>
             <div class="btn-container">
-                <button id="start-exam-btn" class="btn">Start Mid Term Test</button>
+                <button id="start-exam-btn" class="btn">Start Examination</button>
             </div>
         </section>
         
         <section id="student-info-section" class="section">
             <h2>Student Information</h2>
-            <p>Please provide your details to continue with the test.</p>
+            <p>Please provide your details to continue with the examination.</p>
             
             <form id="student-info-form" autocomplete="off">
                 <div class="form-group">
@@ -828,46 +822,46 @@
         </section>
         
         <section id="instructions-section" class="section">
-            <h2>Test Instructions</h2>
+            <h2>Examination Instructions</h2>
             
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This Mid Term Test consists of <strong>40 multiple-choice objective questions</strong> covering Word Processing, Spreadsheets, and Shortcut Keys.</li>
-                    <li>You have <strong>40 minutes</strong> to complete this test.</li>
+                    <li>This End-of-Term Examination consists of <strong>60 multiple-choice objective questions</strong> covering Spreadsheets, Word Processing, Presentations, Charts, Functions, Cell References, and Data Management.</li>
+                    <li>You have <strong>60 minutes</strong> to complete this examination.</li>
                     <li>Answer all questions to the best of your ability.</li>
                     <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
                     <li>You can also use <strong>keyboard shortcuts</strong>: Arrow keys to navigate, A/B/C/D keys to select answers.</li>
                     <li>Answered questions will be marked with <strong>orange</strong> in the question grid.</li>
                     <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
-                    <li>Ensure you have a stable internet connection throughout the test.</li>
+                    <li>Ensure you have a stable internet connection throughout the examination.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li><strong>Do not refresh the page</strong> during the test, or you may lose your progress.</li>
+                    <li><strong>Do not refresh the page</strong> during the examination, or you may lose your progress.</li>
                 </ul>
             </div>
             
             <div class="btn-container">
                 <button type="button" id="back-to-student-info" class="btn btn-secondary">Back</button>
-                <button type="button" id="begin-test" class="btn">Begin Test</button>
+                <button type="button" id="begin-test" class="btn">Begin Examination</button>
             </div>
         </section>
         
         <section id="exam-section" class="section">
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
-                <div class="topic-badge" id="topic-badge">Topic: Spreadsheet Basics</div>
+                <div class="topic-badge" id="topic-badge">Topic: Data Processing</div>
                 <div class="progress-container">
                     <div class="progress-bar" id="progress-bar"></div>
                 </div>
-                <div class="progress-text" id="progress-text">Progress: 0/40 answered</div>
+                <div class="progress-text" id="progress-text">Progress: 0/60 answered</div>
                 <div class="exam-controls">
-                    <div class="question-counter" id="question-counter">Question 1 of 40</div>
+                    <div class="question-counter" id="question-counter">Question 1 of 60</div>
                     <div class="timer-container" id="timer-container">
-                        ⏱ Time Left: <span id="timer">40:00</span>
+                        ⏱ Time Left: <span id="timer">60:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success">Submit Test</button>
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Examination</button>
                     </div>
                 </div>
             </div>
@@ -899,21 +893,21 @@
         
         <section id="results-section" class="section">
             <div class="results-container">
-                <h2>Test Completed</h2>
+                <h2>Examination Completed</h2>
                 <div class="completion-icon">✅</div>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SS1 Digital Technology - Third Term Mid Term Test 2025/2026</div>
+                <div class="subject" id="results-subject">SS1 Data Processing - End-of-Term Examination 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the Digital Technology Mid Term Test. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
+                    Thank you for completing the Data Processing End-of-Term Examination. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    ✅ Your test has been successfully submitted.
+                    ✅ Your examination has been successfully submitted.
                 </div>
                 
                 <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn">Take Another Test</button>
+                    <button type="button" id="restart-exam" class="btn">Take Another Examination</button>
                     <div class="back-home">
                         <a href="../index.html" class="btn btn-secondary">Back to Home</a>
                     </div>
@@ -923,251 +917,371 @@
     </div>
 
     <script>
+        // All 60 questions with correct answers
         const originalQuestions = [
-            // SECTION A: SPREADSHEET BASICS (Q1, 3, 5, 9, 10, 13, 15, 17, 21, 23, 27)
+            // Questions 1-15: Spreadsheets and Word Processing Basics
             {
-                question: "Which of the following is a valid cell address?",
-                options: ["B4", "4B", "BB", "44"],
-                answer: "A",
-                section: "Spreadsheet Basics"
-            },
-            {
-                question: "The entire spreadsheet file is called a ________.",
-                options: ["Worksheet", "Workbook", "Cell", "Column"],
+                question: "Which of the following is a spreadsheet application?",
+                options: ["Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint", "Paint"],
                 answer: "B",
-                section: "Spreadsheet Basics"
+                section: "Spreadsheets"
             },
             {
-                question: "Rows in a spreadsheet are identified by ________.",
-                options: ["Letters", "Numbers", "Colours", "Symbols"],
+                question: "The blinking vertical line in a document is called the ______.",
+                options: ["Pointer", "Cursor", "Ribbon", "Toolbar"],
                 answer: "B",
-                section: "Spreadsheet Basics"
+                section: "Word Processing"
             },
             {
-                question: "Which of the following is NOT a word processor?",
-                options: ["Microsoft Word", "Google Docs", "Paint", "LibreOffice Writer"],
+                question: "Which Excel function returns the highest value in a range?",
+                options: ["MIN()", "SUM()", "MAX()", "COUNT()"],
+                answer: "C",
+                section: "Functions"
+            },
+            {
+                question: "A presentation consists of a collection of ______.",
+                options: ["Cells", "Slides", "Pages", "Worksheets"],
+                answer: "B",
+                section: "Presentations"
+            },
+            {
+                question: "Every Excel formula begins with the ______ sign.",
+                options: ["+", "#", "=", "%"],
+                answer: "C",
+                section: "Spreadsheets"
+            },
+            {
+                question: "Which chart is best for showing percentages of a whole?",
+                options: ["Line Chart", "Pie Chart", "Column Chart", "Bar Chart"],
+                answer: "B",
+                section: "Charts"
+            },
+            {
+                question: "Which feature in MS Word checks spelling and grammar?",
+                options: ["Mail Merge", "Spell Check", "Find", "Replace"],
+                answer: "B",
+                section: "Word Processing"
+            },
+            {
+                question: "The intersection of a row and a column is called a ______.",
+                options: ["Workbook", "Cell", "Worksheet", "Formula"],
+                answer: "B",
+                section: "Spreadsheets"
+            },
+            {
+                question: "Which function calculates the average of selected numbers?",
+                options: ["SUM()", "MAX()", "AVERAGE()", "COUNT()"],
+                answer: "C",
+                section: "Functions"
+            },
+            {
+                question: "Which page orientation is wider than it is tall?",
+                options: ["Portrait", "Landscape", "Normal", "Vertical"],
+                answer: "B",
+                section: "Word Processing"
+            },
+            {
+                question: "Which function counts only cells containing numbers?",
+                options: ["COUNTA()", "COUNT()", "SUM()", "MIN()"],
+                answer: "B",
+                section: "Functions"
+            },
+            {
+                question: "The toolbar containing commands in Microsoft Word is known as the ______.",
+                options: ["Formula Bar", "Ribbon", "Status Bar", "Menu Box"],
+                answer: "B",
+                section: "Word Processing"
+            },
+            {
+                question: "Which chart is most suitable for showing trends over time?",
+                options: ["Pie Chart", "Line Chart", "Bar Chart", "Column Chart"],
+                answer: "B",
+                section: "Charts"
+            },
+            {
+                question: "Which of the following is an example of an absolute cell reference?",
+                options: ["A1", "$A$1", "A$1", "$A1"],
+                answer: "B",
+                section: "Spreadsheets"
+            },
+            {
+                question: "Mail Merge is mainly used for ______.",
+                options: ["Editing pictures", "Sending personalized letters to many recipients", "Creating charts", "Browsing the internet"],
+                answer: "B",
+                section: "Word Processing"
+            },
+            // Questions 16-30: Formatting, Sorting, Filtering
+            {
+                question: "Which alignment places text equally between the left and right margins?",
+                options: ["Left", "Centre", "Justify", "Right"],
                 answer: "C",
                 section: "Word Processing"
             },
             {
-                question: "The Formula Bar is used to ________.",
-                options: ["Delete rows", "Save files", "View and edit cell contents", "Print worksheets"],
-                answer: "C",
-                section: "Spreadsheet Basics"
+                question: "Which feature allows you to rearrange data in ascending or descending order?",
+                options: ["Filtering", "Sorting", "Formatting", "Animating"],
+                answer: "B",
+                section: "Data Management"
             },
             {
-                question: "The currently selected cell is known as the ________.",
-                options: ["Active Cell", "Formula Cell", "Current Sheet", "Reference Cell"],
+                question: "A workbook contains one or more ______.",
+                options: ["Slides", "Worksheets", "Documents", "Charts"],
+                answer: "B",
+                section: "Spreadsheets"
+            },
+            {
+                question: "Which function is used to add numbers in a range?",
+                options: ["MAX()", "SUM()", "IF()", "COUNT()"],
+                answer: "B",
+                section: "Functions"
+            },
+            {
+                question: "The feature used to add visual effects between slides is called ______.",
+                options: ["Animation", "Transition", "Theme", "Layout"],
+                answer: "B",
+                section: "Presentations"
+            },
+            {
+                question: "Which function returns the lowest value in a range?",
+                options: ["MIN()", "MAX()", "SUM()", "COUNT()"],
                 answer: "A",
-                section: "Spreadsheet Basics"
+                section: "Functions"
             },
             {
-                question: "Columns in a spreadsheet are identified by ________.",
-                options: ["Numbers", "Codes", "Symbols", "Letters"],
-                answer: "D",
-                section: "Spreadsheet Basics"
+                question: "Which of the following is a valid cell address?",
+                options: ["3A", "A3", "Row3", "ColumnA"],
+                answer: "B",
+                section: "Spreadsheets"
             },
             {
-                question: "The intersection of a row and a column is called a ________.",
-                options: ["Workbook", "Sheet", "Formula", "Cell"],
-                answer: "D",
-                section: "Spreadsheet Basics"
+                question: "Filtering data is used to ______.",
+                options: ["Delete rows", "Display only records that meet specific criteria", "Change font size", "Create charts"],
+                answer: "B",
+                section: "Data Management"
+            },
+            {
+                question: "The 'click to add text' box in PowerPoint is called a ______.",
+                options: ["Placeholder", "Template", "Slide", "Theme"],
+                answer: "A",
+                section: "Presentations"
+            },
+            {
+                question: "Which function is represented by the formula =IF(B2>=50,\"Pass\",\"Fail\")?",
+                options: ["SUM", "IF", "COUNT", "MAX"],
+                answer: "B",
+                section: "Functions"
+            },
+            {
+                question: "Which font style makes text slant?",
+                options: ["Bold", "Underline", "Italic", "Superscript"],
+                answer: "C",
+                section: "Word Processing"
+            },
+            {
+                question: "Which feature keeps the same design on every PowerPoint slide?",
+                options: ["Placeholder", "Slide Master", "Transition", "Animation"],
+                answer: "B",
+                section: "Presentations"
             },
             {
                 question: "Which type of cell reference changes automatically when copied?",
-                options: ["Absolute Reference", "Relative Reference", "Locked Reference", "Fixed Reference"],
+                options: ["Absolute Reference", "Relative Reference", "Mixed Reference", "Fixed Reference"],
                 answer: "B",
-                section: "Spreadsheet Basics"
+                section: "Spreadsheets"
             },
             {
-                question: "A single page or tab within a workbook is known as a ________.",
-                options: ["Row", "Worksheet", "Formula Bar", "Cell Address"],
+                question: "Which function counts all non-empty cells?",
+                options: ["COUNT()", "COUNTA()", "MAX()", "AVERAGE()"],
                 answer: "B",
-                section: "Spreadsheet Basics"
+                section: "Functions"
             },
             {
-                question: "In a spreadsheet, all formulas must begin with ________.",
-                options: ["#", "+", "=", "@"],
+                question: "Which feature hides rows that do not meet specified conditions?",
+                options: ["Sorting", "Filtering", "Formatting", "Merging"],
+                answer: "B",
+                section: "Data Management"
+            },
+            // Questions 31-45: More Functions and Features
+            {
+                question: "Which of the following is an example of a mixed cell reference?",
+                options: ["A1", "$A$1", "$A1", "B2"],
                 answer: "C",
-                section: "Spreadsheet Basics"
+                section: "Spreadsheets"
             },
-            
-            // SECTION B: WORD PROCESSING (Q2, 4, 7, 8, 12, 22, 24, 26, 28, 29, 31, 32, 33, 34, 37, 38, 40)
             {
-                question: "Word processing is the use of a computer to ________ documents.",
-                options: ["Destroy", "Create and edit", "Scan", "Draw"],
+                question: "Which function is used to determine the largest value in a selected range?",
+                options: ["MIN()", "MAX()", "SUM()", "COUNT()"],
                 answer: "B",
-                section: "Word Processing"
+                section: "Functions"
             },
             {
-                question: "The area where text is entered in a word processor is called the ________.",
-                options: ["Workspace", "Document Area", "Toolbar", "Status Bar"],
-                answer: "B",
-                section: "Word Processing"
-            },
-            {
-                question: "Which feature allows the same letter to be sent to many people with different names?",
-                options: ["Mail Merge", "Word Count", "Clipboard", "Find"],
-                answer: "A",
-                section: "Word Processing"
-            },
-            {
-                question: "The blinking vertical line on the screen is known as the ________.",
-                options: ["Pointer", "Cursor", "Icon", "Arrow"],
-                answer: "B",
-                section: "Word Processing"
-            },
-            {
-                question: "Which menu is used to create a new document?",
-                options: ["File", "Insert", "Review", "View"],
-                answer: "A",
-                section: "Word Processing"
-            },
-            {
-                question: "Which tab is used to insert tables into a document?",
-                options: ["Home", "Insert", "Review", "View"],
-                answer: "B",
-                section: "Word Processing"
-            },
-            {
-                question: "A collection of related pages in a word processor is called a ________.",
-                options: ["Workbook", "Spreadsheet", "Document", "Database"],
+                question: "A chart used to compare values among different categories is called a ______.",
+                options: ["Pie Chart", "Line Chart", "Column Chart", "Scatter Chart"],
                 answer: "C",
-                section: "Word Processing"
+                section: "Charts"
             },
             {
-                question: "The command used to view a document before printing is ________.",
-                options: ["Print Preview", "Save As", "Open", "Replace"],
-                answer: "A",
-                section: "Word Processing"
+                question: "Which chart is best used to show changes or trends over time?",
+                options: ["Pie Chart", "Line Chart", "Bar Chart", "Area Chart"],
+                answer: "B",
+                section: "Charts"
             },
             {
-                question: "Which of these is NOT part of a word processing window?",
-                options: ["Title Bar", "Status Bar", "Formula Bar", "Ribbon"],
+                question: "The process of arranging records alphabetically or numerically is known as ______.",
+                options: ["Filtering", "Sorting", "Formatting", "Merging"],
+                answer: "B",
+                section: "Data Management"
+            },
+            {
+                question: "Which feature displays only records that satisfy a specified condition?",
+                options: ["Sorting", "Filtering", "Freeze Panes", "Merge Cells"],
+                answer: "B",
+                section: "Data Management"
+            },
+            {
+                question: "Which function counts the number of cells containing numbers?",
+                options: ["COUNTA()", "COUNT()", "SUM()", "AVERAGE()"],
+                answer: "B",
+                section: "Functions"
+            },
+            {
+                question: "The COUNTA() function counts ______.",
+                options: ["Numbers only", "Blank cells", "All non-empty cells", "Formulae only"],
                 answer: "C",
-                section: "Word Processing"
+                section: "Functions"
             },
             {
-                question: "Which feature allows users to correct typing mistakes automatically?",
-                options: ["Save", "Print", "Exit", "Spell Check"],
+                question: "Which function returns the smallest value in a range?",
+                options: ["MAX()", "MIN()", "SUM()", "IF()"],
+                answer: "B",
+                section: "Functions"
+            },
+            {
+                question: "Which function calculates the arithmetic mean of a range of values?",
+                options: ["SUM()", "AVERAGE()", "COUNT()", "MAX()"],
+                answer: "B",
+                section: "Functions"
+            },
+            {
+                question: "Which function is used to make logical decisions in Excel?",
+                options: ["COUNT()", "IF()", "MAX()", "SUM()"],
+                answer: "B",
+                section: "Functions"
+            },
+            {
+                question: "Which of the following is the correct syntax of the IF function?",
+                options: ["=IF(condition, value_if_true, value_if_false)", "=IF(value, answer)", "=IF(sum, average)", "=IF(cell)"],
+                answer: "A",
+                section: "Functions"
+            },
+            {
+                question: "Microsoft PowerPoint is mainly used for creating ______.",
+                options: ["Databases", "Presentations", "Worksheets", "Web pages"],
+                answer: "B",
+                section: "Presentations"
+            },
+            {
+                question: "The predefined colour and design applied to a presentation is called a ______.",
+                options: ["Layout", "Theme", "Placeholder", "Animation"],
+                answer: "B",
+                section: "Presentations"
+            },
+            {
+                question: "The movement effect applied when changing from one slide to another is called ______.",
+                options: ["Animation", "Transition", "Layout", "Design"],
+                answer: "B",
+                section: "Presentations"
+            },
+            // Questions 46-60: Advanced Features and Best Practices
+            {
+                question: "Effects applied to objects such as text and pictures are known as ______.",
+                options: ["Themes", "Animations", "Placeholders", "Templates"],
+                answer: "B",
+                section: "Presentations"
+            },
+            {
+                question: "Which of the following controls the arrangement of items on a slide?",
+                options: ["Layout", "Chart", "Formula", "Workbook"],
+                answer: "A",
+                section: "Presentations"
+            },
+            {
+                question: "Which feature helps maintain a uniform design throughout a presentation?",
+                options: ["Slide Master", "Slide Show", "Notes Page", "Zoom"],
+                answer: "A",
+                section: "Presentations"
+            },
+            {
+                question: "Which view is used to display a presentation to an audience?",
+                options: ["Normal View", "Outline View", "Slide Show View", "Notes View"],
+                answer: "C",
+                section: "Presentations"
+            },
+            {
+                question: "Which keyboard key starts a Slide Show from the beginning?",
+                options: ["F1", "F2", "F5", "F12"],
+                answer: "C",
+                section: "Presentations"
+            },
+            {
+                question: "Which of the following is NOT a spreadsheet function?",
+                options: ["SUM()", "MAX()", "PRINT()", "AVERAGE()"],
+                answer: "C",
+                section: "Spreadsheets"
+            },
+            {
+                question: "The primary purpose of charts is to ______.",
+                options: ["Delete data", "Represent data graphically", "Create folders", "Save documents"],
+                answer: "B",
+                section: "Charts"
+            },
+            {
+                question: "Which chart is most suitable for showing parts of a whole?",
+                options: ["Pie Chart", "Line Chart", "Bar Chart", "Column Chart"],
+                answer: "A",
+                section: "Charts"
+            },
+            {
+                question: "Relative cell references change when they are ______.",
+                options: ["Deleted", "Copied to another location", "Printed", "Saved"],
+                answer: "B",
+                section: "Spreadsheets"
+            },
+            {
+                question: "An absolute reference remains unchanged because it contains ______.",
+                options: ["A colon (:)", "A dollar sign ($)", "An equal sign (=)", "A percentage sign (%)"],
+                answer: "B",
+                section: "Spreadsheets"
+            },
+            {
+                question: "Which Excel feature helps locate specific information quickly in a large worksheet?",
+                options: ["Filter", "Header", "Footer", "Margin"],
+                answer: "A",
+                section: "Data Management"
+            },
+            {
+                question: "Which of the following is NOT an example of presentation software?",
+                options: ["Microsoft PowerPoint", "Google Slides", "LibreOffice Impress", "Microsoft Excel"],
                 answer: "D",
-                section: "Word Processing"
+                section: "Presentations"
             },
             {
-                question: "Changing the appearance of text is known as ________.",
-                options: ["Formatting", "Saving", "Editing", "Printing"],
+                question: "Which of the following is a good presentation practice?",
+                options: ["Filling slides with long paragraphs", "Using many different fonts on one slide", "Using simple and readable text", "Reading every word from the slide"],
+                answer: "C",
+                section: "Presentations"
+            },
+            {
+                question: "Which feature allows selected cells to display the same formatting quickly?",
+                options: ["Format Painter", "Spell Check", "Mail Merge", "AutoSave"],
                 answer: "A",
-                section: "Word Processing"
+                section: "Spreadsheets"
             },
             {
-                question: "The feature used to find specific words in a document is ________.",
-                options: ["Replace", "Find", "Paste", "Cut"],
+                question: "Data Processing is important because it helps to ______.",
+                options: ["Waste storage space", "Organize and present information for decision-making", "Damage computer files", "Slow down business operations"],
                 answer: "B",
-                section: "Word Processing"
-            },
-            {
-                question: "A document prepared with a word processor can be ________.",
-                options: ["Saved", "Edited", "Printed", "All of the above"],
-                answer: "D",
-                section: "Word Processing"
-            },
-            {
-                question: "Which command can be used to change one word to another throughout a document?",
-                options: ["Replace", "Save", "Copy", "Undo"],
-                answer: "A",
-                section: "Word Processing"
-            },
-            {
-                question: "A word processor is mainly used for ________.",
-                options: ["Playing games", "Creating documents", "Watching movies", "Browsing only"],
-                answer: "B",
-                section: "Word Processing"
-            },
-            {
-                question: "The Ribbon in Microsoft Word contains ________.",
-                options: ["Commands and tools", "Documents", "Folders", "Drives"],
-                answer: "A",
-                section: "Word Processing"
-            },
-            {
-                question: "The default alignment of text in a new Microsoft Word document is ________.",
-                options: ["Center", "Right", "Justify", "Left"],
-                answer: "D",
-                section: "Word Processing"
-            },
-            
-            // SECTION C: SHORTCUT KEYS & COMMANDS (Q6, 11, 14, 16, 18, 19, 20, 25, 30, 35, 36, 39)
-            {
-                question: "Which key is used to move the cursor to a new line?",
-                options: ["Shift", "Enter", "Tab", "Alt"],
-                answer: "B",
-                section: "Shortcut Keys & Commands"
-            },
-            {
-                question: "The keyboard shortcut for copying selected text is ________.",
-                options: ["Ctrl + X", "Ctrl + V", "Ctrl + C", "Ctrl + P"],
-                answer: "C",
-                section: "Shortcut Keys & Commands"
-            },
-            {
-                question: "The shortcut key for selecting all text in a document is ________.",
-                options: ["Ctrl + S", "Ctrl + A", "Ctrl + P", "Ctrl + N"],
-                answer: "B",
-                section: "Shortcut Keys & Commands"
-            },
-            {
-                question: "Which of the following is used to underline text?",
-                options: ["Ctrl + B", "Ctrl + U", "Ctrl + I", "Ctrl + P"],
-                answer: "B",
-                section: "Shortcut Keys & Commands"
-            },
-            {
-                question: "The shortcut key for making text bold is ________.",
-                options: ["Ctrl + B", "Ctrl + U", "Ctrl + I", "Ctrl + N"],
-                answer: "A",
-                section: "Shortcut Keys & Commands"
-            },
-            {
-                question: "Which command is used to send a document to a printer?",
-                options: ["Save", "Open", "Print", "Copy"],
-                answer: "C",
-                section: "Shortcut Keys & Commands"
-            },
-            {
-                question: "The shortcut key for italicizing text is ________.",
-                options: ["Ctrl + P", "Ctrl + A", "Ctrl + I", "Ctrl + S"],
-                answer: "C",
-                section: "Shortcut Keys & Commands"
-            },
-            {
-                question: "The shortcut for printing a document is ________.",
-                options: ["Ctrl + P", "Ctrl + C", "Ctrl + N", "Ctrl + V"],
-                answer: "A",
-                section: "Shortcut Keys & Commands"
-            },
-            {
-                question: "The 'Save As' command is used to ________.",
-                options: ["Print a document", "Open a document", "Save a document with a new name", "Delete a document"],
-                answer: "C",
-                section: "Shortcut Keys & Commands"
-            },
-            {
-                question: "Which toolbar contains font size and font style commands?",
-                options: ["Review", "View", "Home", "Help"],
-                answer: "C",
-                section: "Shortcut Keys & Commands"
-            },
-            {
-                question: "Which of the following is an output device commonly used with word processing?",
-                options: ["Scanner", "Keyboard", "Printer", "Mouse"],
-                answer: "C",
-                section: "Shortcut Keys & Commands"
-            },
-            {
-                question: "The shortcut for saving a document is ________.",
-                options: ["Ctrl + A", "Ctrl + O", "Ctrl + P", "Ctrl + S"],
-                answer: "D",
-                section: "Shortcut Keys & Commands"
+                section: "Data Processing"
             }
         ];
 
@@ -1175,13 +1289,13 @@
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 40 * 60;
+        let timeLeft = 60 * 60;
         let questions = [];
         let examStarted = false;
 
         const backgroundImages = [
             'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1537498425277-c283d32ef9db?ixlib=rb-4.0.3&auto=format&fit=crop&w=2078&q=80',
+            'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
             'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
         ];
 
@@ -1211,11 +1325,11 @@
 
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 40 * 60;
+            timeLeft = 60 * 60;
             
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
-            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #2980b9 0%, #2471a3 100%)';
+            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #2980b9 0%, #1a6a9a 100%)';
             
             timerInterval = setInterval(() => {
                 timeLeft--;
@@ -1228,7 +1342,7 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    alert("Time's up! Your test will be submitted automatically.");
+                    alert("Time's up! Your examination will be submitted automatically.");
                     calculateScoreAndSubmit();
                 } else if (timeLeft <= 300) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
@@ -1254,7 +1368,7 @@
                         
                         if (timeLeft <= 0) {
                             clearInterval(timerInterval);
-                            alert("Time's up! Your test will be submitted automatically.");
+                            alert("Time's up! Your examination will be submitted automatically.");
                             calculateScoreAndSubmit();
                         }
                     }, 1000);
@@ -1265,7 +1379,7 @@
         window.addEventListener('beforeunload', (e) => {
             if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
                 e.preventDefault();
-                e.returnValue = 'You have an ongoing test. Are you sure you want to leave? Your progress may be lost.';
+                e.returnValue = 'You have an ongoing examination. Are you sure you want to leave? Your progress may be lost.';
                 return e.returnValue;
             }
         });
@@ -1494,7 +1608,7 @@
             const question = questions[index];
             
             document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
-            document.getElementById('question-text').textContent = question.question;
+            document.getElementById('question-text').innerHTML = question.question;
             
             updateTopicBadge(index);
             
@@ -1527,12 +1641,7 @@
                 
                 const label = document.createElement('label');
                 label.htmlFor = optionId;
-                // Display shortcut key combos in monospace
-                let displayOption = option;
-                if (option.includes('Ctrl')) {
-                    displayOption = `<span class="key-combo">${option}</span>`;
-                }
-                label.innerHTML = `${labels[optionIndex]}. ${displayOption}`;
+                label.innerHTML = `${labels[optionIndex]}. ${option}`;
                 
                 optionDiv.addEventListener('click', (e) => {
                     if (e.target !== radio) {
@@ -1567,8 +1676,8 @@
                 }
             }
             
-            // Submit score to Google Form ONLY - do NOT display to student
-            submitToGoogleForm(studentName, "SS1 Digital Technology - Third Term Mid Term Test 2025/2026", `${score}/40`);
+            // Submit score to Google Form
+            submitToGoogleForm(studentName, "SS1 Data Processing - End-of-Term Examination 2025/2026", `${score}/60`);
             
             document.getElementById('submission-status').style.display = 'block';
             showSection('results');
@@ -1578,7 +1687,7 @@
             const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
             const formData = new FormData();
             formData.append("entry.862885683", fullName);
-            formData.append("entry.1545021484", "SSS1");
+            formData.append("entry.1545021484", "SS1");
             formData.append("entry.1558221900", subject);
             formData.append("entry.2022160530", score);
 
