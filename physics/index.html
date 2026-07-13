@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Physics SSS1 Midterm Test</title>
+    <title>The Trustworthy College - SS1 Physics Examination</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     <style>
         * {
@@ -14,8 +14,8 @@
         }
         
         body {
-            background-color: #0a1628;
-            color: #e0e8f0;
+            background-color: #0a0a1a;
+            color: #e0e0f0;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
@@ -28,7 +28,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -41,14 +41,14 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #0a1628 0%, #1a2a4a 100%);
-            box-shadow: 0 15px 40px rgba(241, 196, 15, 0.2);
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2a 100%);
+            box-shadow: 0 15px 40px rgba(155, 89, 182, 0.25);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #f39c12;
+            border: 3px solid #6c3483;
             backdrop-filter: blur(5px);
         }
         
@@ -59,12 +59,12 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #e67e22, #f39c12, #e67e22);
+            background: linear-gradient(90deg, #6c3483, #8e44ad, #6c3483);
             z-index: 2;
         }
         
         .container::after {
-            content: '⚛️';
+            content: '⚡';
             position: absolute;
             bottom: 15px;
             right: 20px;
@@ -84,7 +84,7 @@
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #f39c12;
+            border-bottom: 2px solid #6c3483;
             z-index: 1;
         }
         
@@ -96,7 +96,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #f39c12, transparent);
+            background: linear-gradient(to right, transparent, #6c3483, transparent);
         }
         
         .logo {
@@ -105,7 +105,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #f39c12;
+            border: 3px solid #6c3483;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -116,7 +116,7 @@
         }
         
         .subject-title {
-            color: #f9d56e;
+            color: #d7bde2;
             font-size: 2.2rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
@@ -124,20 +124,31 @@
         }
         
         .exam-info {
-            color: #f5cba7;
+            color: #c39bd3;
             font-size: 1.1rem;
             margin-top: 5px;
         }
         
         .term-info {
-            background: linear-gradient(135deg, #e67e2220, #f39c1240);
+            background: linear-gradient(135deg, #6c348320, #8e44ad40);
             display: inline-block;
             padding: 8px 20px;
             border-radius: 30px;
             margin-top: 10px;
             font-weight: bold;
-            color: #f9d56e;
-            border: 1px solid #f39c1260;
+            color: #d7bde2;
+            border: 1px solid #6c348360;
+        }
+        
+        .calculation-badge {
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: white;
+            margin-left: 10px;
+            font-weight: 700;
         }
         
         .section {
@@ -158,25 +169,25 @@
         }
         
         .welcome-message {
-            background: linear-gradient(135deg, rgba(243, 156, 18, 0.1) 0%, rgba(26, 42, 74, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(108, 52, 131, 0.1) 0%, rgba(26, 26, 42, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #e0e8f0;
-            border-left: 5px solid #f39c12;
-            border-right: 1px solid rgba(243, 156, 18, 0.3);
-            border-top: 1px solid rgba(243, 156, 18, 0.2);
-            border-bottom: 1px solid rgba(243, 156, 18, 0.3);
+            color: #e0e0f0;
+            border-left: 5px solid #6c3483;
+            border-right: 1px solid rgba(108, 52, 131, 0.3);
+            border-top: 1px solid rgba(108, 52, 131, 0.2);
+            border-bottom: 1px solid rgba(108, 52, 131, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
         }
         
         .welcome-message::before {
-            content: '⚡';
+            content: '🔬';
             position: absolute;
             top: 20px;
             right: 20px;
@@ -186,7 +197,7 @@
         
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            background: linear-gradient(135deg, #6c3483 0%, #4a235a 100%);
             color: #ffffff;
             border: none;
             padding: 15px 32px;
@@ -197,8 +208,8 @@
             margin: 12px 8px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(230, 126, 34, 0.5);
-            box-shadow: 0 6px 15px rgba(243, 156, 18, 0.3);
+            border: 2px solid rgba(108, 52, 131, 0.5);
+            box-shadow: 0 6px 15px rgba(108, 52, 131, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -216,9 +227,9 @@
         }
         
         .btn:hover:not(:disabled) {
-            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            background: linear-gradient(135deg, #8e44ad 0%, #6c3483 100%);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(243, 156, 18, 0.5);
+            box-shadow: 0 10px 25px rgba(108, 52, 131, 0.5);
             color: #ffffff;
         }
         
@@ -238,8 +249,12 @@
         }
         
         .btn-success {
-            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
-            border-color: #a93226;
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            border-color: #d35400;
+        }
+        
+        .btn-success:hover:not(:disabled) {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
         }
         
         .btn-container {
@@ -255,7 +270,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #f9d56e;
+            color: #d7bde2;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -263,20 +278,20 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(10, 22, 40, 0.7);
+            background: rgba(10, 10, 26, 0.7);
             border: 2px solid #5d7e9e;
             border-radius: 10px;
             font-size: 1.1rem;
-            color: #e0e8f0;
+            color: #e0e0f0;
             transition: all 0.3s;
             font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #f39c12;
+            border-color: #6c3483;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.3);
-            background: rgba(10, 22, 40, 0.9);
+            box-shadow: 0 0 0 3px rgba(108, 52, 131, 0.3);
+            background: rgba(10, 10, 26, 0.9);
         }
         
         .error-message {
@@ -288,18 +303,18 @@
         }
         
         .instructions {
-            background: linear-gradient(135deg, rgba(243, 156, 18, 0.08) 0%, rgba(26, 42, 74, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(142, 68, 173, 0.08) 0%, rgba(26, 26, 42, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid #f39c12;
-            border: 1px solid rgba(243, 156, 18, 0.2);
+            border-left: 5px solid #8e44ad;
+            border: 1px solid rgba(142, 68, 173, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
         
         .instructions::before {
-            content: '🔬';
+            content: '📐';
             position: absolute;
             top: 20px;
             right: 20px;
@@ -309,7 +324,7 @@
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #f39c12;
+            color: #8e44ad;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -322,7 +337,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #f39c12;
+            background: #8e44ad;
             border-radius: 2px;
         }
         
@@ -339,7 +354,7 @@
         
         .instructions li::before {
             content: '•';
-            color: #f39c12;
+            color: #8e44ad;
             font-size: 1.5rem;
             position: absolute;
             left: -20px;
@@ -349,19 +364,19 @@
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(243, 156, 18, 0.3);
+            border-bottom: 2px solid rgba(108, 52, 131, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #f9d56e;
+            color: #d7bde2;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(243, 156, 18, 0.1) 0%, rgba(230, 126, 34, 0.15) 100%);
+            background: linear-gradient(135deg, rgba(108, 52, 131, 0.1) 0%, rgba(142, 68, 173, 0.15) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(243, 156, 18, 0.3);
+            border: 1px solid rgba(108, 52, 131, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -372,31 +387,31 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(10, 22, 40, 0.5);
+            background: rgba(10, 10, 26, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(243, 156, 18, 0.2);
+            border: 1px solid rgba(108, 52, 131, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #f9d56e;
+            color: #d7bde2;
             font-weight: 600;
             padding: 10px 20px;
-            background: rgba(243, 156, 18, 0.1);
+            background: rgba(108, 52, 131, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(243, 156, 18, 0.3);
+            border: 1px solid rgba(108, 52, 131, 0.3);
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            background: linear-gradient(135deg, #6c3483 0%, #4a235a 100%);
             color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(243, 156, 18, 0.4);
+            box-shadow: 0 4px 12px rgba(108, 52, 131, 0.4);
             display: none;
-            border: 2px solid rgba(230, 126, 34, 0.5);
+            border: 2px solid rgba(108, 52, 131, 0.5);
             font-family: 'Courier New', monospace;
             transition: background 0.5s ease;
         }
@@ -407,10 +422,10 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(10, 22, 40, 0.4);
+            background: rgba(10, 10, 26, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(243, 156, 18, 0.2);
+            border: 1px solid rgba(108, 52, 131, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -418,12 +433,23 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #f9d56e;
+            color: #d7bde2;
             line-height: 1.6;
             padding: 20px;
-            background: rgba(243, 156, 18, 0.08);
+            background: rgba(142, 68, 173, 0.08);
             border-radius: 10px;
-            border-left: 4px solid #f39c12;
+            border-left: 4px solid #8e44ad;
+        }
+        
+        .question-text .calc-tag {
+            display: inline-block;
+            background: #e67e22;
+            color: white;
+            font-size: 0.75rem;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 10px;
+            font-weight: 700;
         }
         
         .options-container {
@@ -437,7 +463,7 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(26, 42, 74, 0.4);
+            background: rgba(26, 26, 42, 0.4);
             border: 1px solid rgba(93, 126, 158, 0.3);
             cursor: pointer;
             position: relative;
@@ -451,14 +477,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(243, 156, 18, 0.08), transparent);
+            background: linear-gradient(90deg, transparent, rgba(108, 52, 131, 0.08), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(243, 156, 18, 0.1);
-            border-color: #f39c12;
+            background: rgba(108, 52, 131, 0.1);
+            border-color: #6c3483;
             transform: translateX(5px);
         }
         
@@ -471,7 +497,7 @@
             width: 22px;
             height: 22px;
             cursor: pointer;
-            accent-color: #f39c12;
+            accent-color: #6c3483;
             flex-shrink: 0;
         }
         
@@ -480,7 +506,7 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
-            color: #e0e8f0;
+            color: #e0e0f0;
             font-size: 1.1rem;
             line-height: 1.5;
         }
@@ -488,12 +514,12 @@
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(243, 156, 18, 0.3);
+            border-top: 2px solid rgba(108, 52, 131, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #f9d56e;
+            color: #d7bde2;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -510,7 +536,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: #f39c12;
+            background: #8e44ad;
             border-radius: 2px;
         }
         
@@ -527,34 +553,48 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(26, 42, 74, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(26, 26, 42, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(243, 156, 18, 0.3);
-            color: #e0e8f0;
+            border: 1px solid rgba(108, 52, 131, 0.3);
+            color: #e0e0f0;
             font-size: 1.1rem;
+            position: relative;
+        }
+        
+        .question-number.calculation {
+            border-color: #e67e22;
+            border-width: 2px;
+        }
+        
+        .question-number.calculation::after {
+            content: '⚡';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            font-size: 0.6rem;
         }
         
         .question-number:hover {
-            background: linear-gradient(135deg, rgba(243, 156, 18, 0.3) 0%, rgba(211, 84, 0, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(108, 52, 131, 0.3) 0%, rgba(74, 35, 90, 0.5) 100%);
             transform: scale(1.1);
-            border-color: #f39c12;
+            border-color: #6c3483;
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            background: linear-gradient(135deg, #6c3483 0%, #4a235a 100%);
             color: #ffffff;
-            border-color: #f9d56e;
-            box-shadow: 0 4px 10px rgba(243, 156, 18, 0.4);
+            border-color: #d7bde2;
+            box-shadow: 0 4px 10px rgba(108, 52, 131, 0.4);
             transform: scale(1.1);
         }
         
         .question-number.answered {
-            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: white;
-            border-color: #2ecc71;
+            border-color: #f39c12;
         }
         
         .navigation-buttons {
@@ -565,16 +605,16 @@
         
         .progress-container {
             margin: 20px 0;
-            background: rgba(26, 42, 74, 0.5);
+            background: rgba(26, 26, 42, 0.5);
             border-radius: 10px;
             overflow: hidden;
             height: 10px;
-            border: 1px solid rgba(243, 156, 18, 0.3);
+            border: 1px solid rgba(108, 52, 131, 0.3);
         }
         
         .progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, #e67e22, #f39c12);
+            background: linear-gradient(90deg, #6c3483, #8e44ad);
             width: 0%;
             transition: width 0.5s ease;
             border-radius: 10px;
@@ -583,18 +623,18 @@
         .progress-text {
             text-align: center;
             font-size: 0.9rem;
-            color: #f5cba7;
+            color: #c39bd3;
             margin-top: 5px;
         }
         
         .topic-badge {
             display: inline-block;
             padding: 4px 12px;
-            background: rgba(243, 156, 18, 0.15);
-            border: 1px solid rgba(243, 156, 18, 0.3);
+            background: rgba(108, 52, 131, 0.15);
+            border: 1px solid rgba(108, 52, 131, 0.3);
             border-radius: 20px;
             font-size: 0.8rem;
-            color: #f9d56e;
+            color: #d7bde2;
             margin-bottom: 10px;
             font-weight: 500;
         }
@@ -602,9 +642,9 @@
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(10, 22, 40, 0.8) 0%, rgba(26, 42, 74, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(10, 10, 26, 0.8) 0%, rgba(26, 26, 42, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #f39c12;
+            border: 2px solid #6c3483;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
@@ -620,7 +660,7 @@
         }
         
         .results-container h2 {
-            color: #f9d56e;
+            color: #d7bde2;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -645,7 +685,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #f5cba7;
+            color: #c39bd3;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -653,22 +693,22 @@
         .feedback {
             font-size: 1.3rem;
             margin: 25px 0;
-            color: #e0e8f0;
+            color: #e0e0f0;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(243, 156, 18, 0.08);
+            background: rgba(108, 52, 131, 0.08);
             border-radius: 12px;
-            border: 1px solid rgba(243, 156, 18, 0.3);
+            border: 1px solid rgba(108, 52, 131, 0.3);
         }
         
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.15) 0%, rgba(39, 174, 96, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(241, 196, 15, 0.15) 0%, rgba(243, 156, 18, 0.2) 100%);
             border-radius: 12px;
-            color: #2ecc71;
+            color: #f1c40f;
             font-size: 1.2rem;
-            border: 1px solid rgba(46, 204, 113, 0.4);
+            border: 1px solid rgba(241, 196, 15, 0.4);
         }
         
         @media (max-width: 768px) {
@@ -732,8 +772,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(243, 156, 18, 0.3);
-            border-top: 4px solid #f39c12;
+            border: 4px solid rgba(108, 52, 131, 0.3);
+            border-top: 4px solid #6c3483;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -752,19 +792,31 @@
             color: #5d7e9e;
             margin-top: 15px;
             padding: 10px;
-            background: rgba(10, 22, 40, 0.3);
+            background: rgba(10, 10, 26, 0.3);
             border-radius: 8px;
             border: 1px dashed rgba(93, 126, 158, 0.3);
         }
         
         .keyboard-hint kbd {
-            background: rgba(243, 156, 18, 0.2);
-            border: 1px solid rgba(243, 156, 18, 0.4);
+            background: rgba(108, 52, 131, 0.2);
+            border: 1px solid rgba(108, 52, 131, 0.4);
             border-radius: 4px;
             padding: 2px 8px;
             font-family: 'Courier New', monospace;
             font-size: 0.85rem;
-            color: #f9d56e;
+            color: #d7bde2;
+        }
+        
+        .formula-box {
+            background: rgba(142, 68, 173, 0.1);
+            border: 1px solid rgba(142, 68, 173, 0.3);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            color: #f0c27f;
+            font-size: 1.1rem;
+            text-align: center;
         }
     </style>
 </head>
@@ -773,23 +825,23 @@
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title">SSS1 PHYSICS MIDTERM TEST</h1>
+            <h1 class="subject-title">SS1 PHYSICS</h1>
             <div class="exam-info">Third Term | 2025/2026 Session</div>
-            <div class="term-info">40 Objective Questions | 40 Minutes</div>
+            <div class="term-info">40 Objective Questions (13 Calculations) | 60 Minutes</div>
         </div>
         
         <section id="welcome-section" class="section active">
             <div class="welcome-message">
-                "Welcome to The Trustworthy College Physics Midterm Test. This test covers Elasticity and Hooke's Law, States of Matter and Phase Changes, Crystalline and Amorphous Solids, Gravitational and Magnetic Fields, and Electricity (current, voltage, resistance, Ohm's Law). Demonstrate your understanding of fundamental physics principles. Best of luck."
+                "Welcome to The Trustworthy College SS1 Physics Third Term Examination. This examination covers Motion, Force, Elasticity, Ohm's Law, Dimensions, Physical Quantities, Change of State of Matter, Atoms, Heat and Temperature. The paper includes 13 calculation questions. Show all working where necessary. Best of luck."
             </div>
             <div class="btn-container">
-                <button id="start-exam-btn" class="btn">Start Midterm Test</button>
+                <button id="start-exam-btn" class="btn">Start Examination</button>
             </div>
         </section>
         
         <section id="student-info-section" class="section">
             <h2>Student Information</h2>
-            <p>Please provide your details to continue with the test.</p>
+            <p>Please provide your details to continue with the examination.</p>
             
             <form id="student-info-form" autocomplete="off">
                 <div class="form-group">
@@ -818,35 +870,36 @@
         </section>
         
         <section id="instructions-section" class="section">
-            <h2>Test Instructions</h2>
+            <h2>Examination Instructions</h2>
             
             <div class="instructions">
                 <h3>Important Notes:</h3>
                 <ul>
-                    <li>This Midterm Test consists of <strong>40 multiple-choice objective questions</strong> covering Elasticity, States of Matter, Solids, Fields, and Electricity.</li>
-                    <li>You have <strong>40 minutes</strong> to complete this test.</li>
+                    <li>This Third Term Examination consists of <strong>40 multiple-choice objective questions</strong> covering Motion, Force, Elasticity, Ohm's Law, Dimensions, Physical Quantities, Change of State, Atoms, Heat and Temperature.</li>
+                    <li>This paper contains <strong>13 calculation questions</strong> marked with ⚡.</li>
+                    <li>You have <strong>60 minutes</strong> to complete this examination.</li>
                     <li>Answer all questions to the best of your ability.</li>
                     <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
                     <li>You can also use <strong>keyboard shortcuts</strong>: Arrow keys to navigate, A/B/C/D keys to select answers.</li>
-                    <li>Answered questions will be marked with <strong>green</strong> in the question grid.</li>
+                    <li>Answered questions will be marked with <strong>orange</strong> in the question grid.</li>
                     <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
-                    <li>Ensure you have a stable internet connection throughout the test.</li>
+                    <li>Ensure you have a stable internet connection throughout the examination.</li>
                     <li>Read each question carefully before selecting your answer.</li>
                     <li>Your results will be submitted automatically upon completion.</li>
-                    <li><strong>Do not refresh the page</strong> during the test, or you may lose your progress.</li>
+                    <li><strong>Do not refresh the page</strong> during the examination, or you may lose your progress.</li>
                 </ul>
             </div>
             
             <div class="btn-container">
                 <button type="button" id="back-to-student-info" class="btn btn-secondary">Back</button>
-                <button type="button" id="begin-test" class="btn">Begin Test</button>
+                <button type="button" id="begin-test" class="btn">Begin Examination</button>
             </div>
         </section>
         
         <section id="exam-section" class="section">
             <div class="exam-header">
                 <div class="student-info" id="display-student-name"></div>
-                <div class="topic-badge" id="topic-badge">Topic: Elasticity</div>
+                <div class="topic-badge" id="topic-badge">Topic: Physics</div>
                 <div class="progress-container">
                     <div class="progress-bar" id="progress-bar"></div>
                 </div>
@@ -854,10 +907,10 @@
                 <div class="exam-controls">
                     <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        ⏱ Time Left: <span id="timer">40:00</span>
+                        ⏱ Time Left: <span id="timer">60:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success">Submit Test</button>
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Examination</button>
                     </div>
                 </div>
             </div>
@@ -889,21 +942,21 @@
         
         <section id="results-section" class="section">
             <div class="results-container">
-                <h2>Test Completed</h2>
+                <h2>Examination Completed</h2>
                 <div class="completion-icon">✅</div>
                 <div class="student-info" id="results-student-name"></div>
-                <div class="subject" id="results-subject">SSS1 Physics - Third Term Midterm Test 2025/2026</div>
+                <div class="subject" id="results-subject">SS1 Physics - Third Term Examination 2025/2026</div>
                 
                 <div class="feedback" id="feedback-message">
-                    Thank you for completing the Physics Midterm Test. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
+                    Thank you for completing the Physics Third Term Examination. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
                 </div>
                 
                 <div class="submission-status" id="submission-status">
-                    ✅ Your test has been successfully submitted.
+                    ✅ Your examination has been successfully submitted.
                 </div>
                 
                 <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn">Take Another Test</button>
+                    <button type="button" id="restart-exam" class="btn">Take Another Examination</button>
                     <div class="back-home">
                         <a href="../index.html" class="btn btn-secondary">Back to Home</a>
                     </div>
@@ -913,255 +966,314 @@
     </div>
 
     <script>
+        // All 40 questions with correct answers (13 marked as calculations)
         const originalQuestions = [
-            // SECTION A: ELASTICITY & HOOKE'S LAW (Q1-7)
+            // PHYSICAL QUANTITIES & DIMENSIONS (Questions 1-5)
             {
-                question: "Elasticity is the property of a material that enables it to:",
-                options: ["Conduct electricity", "Return to its original shape after deformation", "Melt easily", "Expand permanently"],
-                answer: "B",
-                section: "Elasticity & Hooke's Law"
+                question: 'Which of the following is a fundamental physical quantity?',
+                options: ['Velocity', 'Mass', 'Force', 'Energy'],
+                answer: 'B',
+                section: 'Physical Quantities',
+                isCalculation: false
             },
             {
-                question: "The S.I. unit of force is:",
-                options: ["Joule", "Newton", "Watt", "Pascal"],
-                answer: "B",
-                section: "Elasticity & Hooke's Law"
+                question: 'What is the dimension of velocity?',
+                options: ['L/T', 'L/T²', 'M L/T', 'M L/T²'],
+                answer: 'A',
+                section: 'Dimensions',
+                isCalculation: false
             },
             {
-                question: "Hooke's Law states that within the elastic limit:",
-                options: ["Stress is inversely proportional to strain", "Stress is directly proportional to strain", "Pressure equals volume", "Force equals mass"],
-                answer: "B",
-                section: "Elasticity & Hooke's Law"
+                question: 'The dimension of force is:',
+                options: ['M L/T²', 'M L²/T²', 'M/T²', 'L/T²'],
+                answer: 'A',
+                section: 'Dimensions',
+                isCalculation: false
             },
             {
-                question: "Which of the following materials is most elastic?",
-                options: ["Rubber", "Glass", "Steel", "Clay"],
-                answer: "C",
-                section: "Elasticity & Hooke's Law"
+                question: 'Calculate the velocity of a car that travels 120 m in 8 seconds.',
+                options: ['10 m/s', '12 m/s', '15 m/s', '20 m/s'],
+                answer: 'C',
+                section: 'Motion',
+                isCalculation: true,
+                formula: 'v = s/t'
             },
             {
-                question: "Elastic potential energy is stored when a material is:",
-                options: ["Heated", "Compressed or stretched", "Melted", "Dissolved"],
-                answer: "B",
-                section: "Elasticity & Hooke's Law"
+                question: 'A force of 50 N acts on a body of mass 10 kg. Calculate the acceleration.',
+                options: ['2 m/s²', '3 m/s²', '4 m/s²', '5 m/s²'],
+                answer: 'D',
+                section: 'Force',
+                isCalculation: true,
+                formula: 'F = ma'
+            },
+            // MOTION (Questions 6-10)
+            {
+                question: 'The S.I unit of acceleration is:',
+                options: ['m/s', 'm/s²', 'm²/s', 'm²/s²'],
+                answer: 'B',
+                section: 'Motion',
+                isCalculation: false
             },
             {
-                question: "The point beyond which a material does not regain its original shape is called:",
-                options: ["Elastic limit", "Boiling point", "Melting point", "Freezing point"],
-                answer: "A",
-                section: "Elasticity & Hooke's Law"
+                question: 'A car accelerates uniformly from rest to 20 m/s in 5 s. Calculate the acceleration.',
+                options: ['2 m/s²', '3 m/s²', '4 m/s²', '5 m/s²'],
+                answer: 'C',
+                section: 'Motion',
+                isCalculation: true,
+                formula: 'a = (v-u)/t'
             },
             {
-                question: "The energy stored in a stretched spring is:",
-                options: ["Chemical energy", "Elastic potential energy", "Kinetic energy", "Sound energy"],
-                answer: "B",
-                section: "Elasticity & Hooke's Law"
-            },
-            
-            // SECTION B: STATES OF MATTER & PHASE CHANGES (Q8-15)
-            {
-                question: "Which process changes a solid directly into gas?",
-                options: ["Condensation", "Melting", "Sublimation", "Freezing"],
-                answer: "C",
-                section: "States of Matter"
+                question: 'Which of the following is a vector quantity?',
+                options: ['Speed', 'Distance', 'Velocity', 'Mass'],
+                answer: 'C',
+                section: 'Motion',
+                isCalculation: false
             },
             {
-                question: "The change from liquid to gas is called:",
-                options: ["Evaporation", "Freezing", "Deposition", "Condensation"],
-                answer: "A",
-                section: "States of Matter"
+                question: 'Calculate the distance covered by a train moving at 30 m/s for 60 seconds.',
+                options: ['1200 m', '1500 m', '1800 m', '2000 m'],
+                answer: 'C',
+                section: 'Motion',
+                isCalculation: true,
+                formula: 's = vt'
             },
             {
-                question: "During melting, the temperature of a substance:",
-                options: ["Increases rapidly", "Decreases", "Remains constant", "Doubles"],
-                answer: "C",
-                section: "States of Matter"
+                question: 'The slope of a distance-time graph gives:',
+                options: ['Acceleration', 'Velocity', 'Force', 'Momentum'],
+                answer: 'B',
+                section: 'Motion',
+                isCalculation: false
+            },
+            // FORCE (Questions 11-15)
+            {
+                question: 'Force is defined as:',
+                options: ['Mass × Velocity', 'Mass × Acceleration', 'Velocity/Time', 'Work/Time'],
+                answer: 'B',
+                section: 'Force',
+                isCalculation: false
             },
             {
-                question: "The process by which gas changes to liquid is:",
-                options: ["Sublimation", "Condensation", "Fusion", "Freezing"],
-                answer: "B",
-                section: "States of Matter"
+                question: 'Calculate the force required to produce an acceleration of 4 m/s² on a body of mass 8 kg.',
+                options: ['24 N', '28 N', '32 N', '36 N'],
+                answer: 'C',
+                section: 'Force',
+                isCalculation: true,
+                formula: 'F = ma'
             },
             {
-                question: "Which of the following is an example of sublimation?",
-                options: ["Ice melting", "Water boiling", "Dry ice changing into gas", "Steam condensing"],
-                answer: "C",
-                section: "States of Matter"
+                question: 'The S.I unit of force is:',
+                options: ['Joule', 'Watt', 'Newton', 'Pascal'],
+                answer: 'C',
+                section: 'Force',
+                isCalculation: false
             },
             {
-                question: "The amount of heat required to change a substance from solid to liquid without temperature change is called:",
-                options: ["Specific heat capacity", "Latent heat of fusion", "Thermal conductivity", "Heat capacity"],
-                answer: "B",
-                section: "States of Matter"
+                question: 'Calculate the mass of a body if a force of 100 N produces an acceleration of 5 m/s².',
+                options: ['15 kg', '20 kg', '25 kg', '30 kg'],
+                answer: 'B',
+                section: 'Force',
+                isCalculation: true,
+                formula: 'm = F/a'
             },
             {
-                question: "Which state of matter has a definite volume but no definite shape?",
-                options: ["Solid", "Liquid", "Gas", "Plasma"],
-                answer: "B",
-                section: "States of Matter"
+                question: 'Two forces of 8 N and 6 N act on a body in the same direction. The resultant force is:',
+                options: ['2 N', '10 N', '14 N', '48 N'],
+                answer: 'C',
+                section: 'Force',
+                isCalculation: true,
+                formula: 'R = F₁ + F₂'
+            },
+            // ELASTICITY (Questions 16-19)
+            {
+                question: 'Hooke\'s law states that the extension of a spring is directly proportional to the:',
+                options: ['Mass applied', 'Force applied', 'Area', 'Volume'],
+                answer: 'B',
+                section: 'Elasticity',
+                isCalculation: false
             },
             {
-                question: "Evaporation occurs:",
-                options: ["At all temperatures", "Only at boiling point", "Only below 0°C", "Only in solids"],
-                answer: "A",
-                section: "States of Matter"
-            },
-            
-            // SECTION C: CRYSTALLINE & AMORPHOUS SOLIDS (Q16-21)
-            {
-                question: "A crystalline solid has:",
-                options: ["Random arrangement of particles", "Definite geometric shape", "No melting point", "No internal structure"],
-                answer: "B",
-                section: "Crystalline & Amorphous Solids"
+                question: 'A spring extends by 4 cm when a force of 8 N is applied. Calculate the force constant (k).',
+                options: ['1 N/cm', '2 N/cm', '3 N/cm', '4 N/cm'],
+                answer: 'B',
+                section: 'Elasticity',
+                isCalculation: true,
+                formula: 'k = F/e'
             },
             {
-                question: "Which of the following is a crystalline solid?",
-                options: ["Glass", "Rubber", "Sugar", "Plastic"],
-                answer: "C",
-                section: "Crystalline & Amorphous Solids"
+                question: 'The S.I unit of the force constant (k) is:',
+                options: ['N/m', 'N/cm', 'J/m', 'Pa'],
+                answer: 'A',
+                section: 'Elasticity',
+                isCalculation: false
             },
             {
-                question: "Non-crystalline solids are also called:",
-                options: ["Metallic solids", "Amorphous solids", "Ionic solids", "Magnetic solids"],
-                answer: "B",
-                section: "Crystalline & Amorphous Solids"
+                question: 'Calculate the extension when a force of 15 N is applied to a spring of force constant 5 N/cm.',
+                options: ['2 cm', '3 cm', '4 cm', '5 cm'],
+                answer: 'B',
+                section: 'Elasticity',
+                isCalculation: true,
+                formula: 'e = F/k'
+            },
+            // OHM'S LAW (Questions 20-24)
+            {
+                question: 'Ohm\'s law states that the current through a conductor is directly proportional to the:',
+                options: ['Resistance', 'Voltage', 'Power', 'Charge'],
+                answer: 'B',
+                section: "Ohm's Law",
+                isCalculation: false
             },
             {
-                question: "Which of the following is an amorphous solid?",
-                options: ["Salt", "Quartz", "Glass", "Diamond"],
-                answer: "C",
-                section: "Crystalline & Amorphous Solids"
+                question: 'Calculate the current when a voltage of 12 V is applied across a resistor of 6 Ω.',
+                options: ['1 A', '2 A', '3 A', '4 A'],
+                answer: 'B',
+                section: "Ohm's Law",
+                isCalculation: true,
+                formula: 'I = V/R'
             },
             {
-                question: "Crystalline solids usually melt at:",
-                options: ["Different temperatures", "Very low temperatures", "A fixed temperature", "Room temperature only"],
-                answer: "C",
-                section: "Crystalline & Amorphous Solids"
+                question: 'The S.I unit of resistance is:',
+                options: ['Volt', 'Ampere', 'Ohm', 'Watt'],
+                answer: 'C',
+                section: "Ohm's Law",
+                isCalculation: false
             },
             {
-                question: "Particles in crystalline solids are arranged in:",
-                options: ["Random order", "Layers only", "Regular patterns", "Circular motion"],
-                answer: "C",
-                section: "Crystalline & Amorphous Solids"
-            },
-            
-            // SECTION D: FIELDS (Q22-28)
-            {
-                question: "A field is a region where:",
-                options: ["Farming is done", "A force can be experienced", "Water is stored", "Light cannot travel"],
-                answer: "B",
-                section: "Gravitational & Magnetic Fields"
+                question: 'Calculate the voltage required to pass a current of 5 A through a resistor of 8 Ω.',
+                options: ['30 V', '35 V', '40 V', '45 V'],
+                answer: 'C',
+                section: "Ohm's Law",
+                isCalculation: true,
+                formula: 'V = IR'
             },
             {
-                question: "The force of attraction between masses is called:",
-                options: ["Magnetic force", "Electrostatic force", "Gravitational force", "Frictional force"],
-                answer: "C",
-                section: "Gravitational & Magnetic Fields"
+                question: 'A resistor of 10 Ω has a current of 2 A. Calculate the power dissipated.',
+                options: ['20 W', '30 W', '40 W', '50 W'],
+                answer: 'C',
+                section: "Ohm's Law",
+                isCalculation: true,
+                formula: 'P = I²R'
+            },
+            // HEAT & TEMPERATURE (Questions 25-30)
+            {
+                question: 'Heat is a form of:',
+                options: ['Matter', 'Energy', 'Force', 'Pressure'],
+                answer: 'B',
+                section: 'Heat & Temperature',
+                isCalculation: false
             },
             {
-                question: "The scientist who formulated the law of gravitation was:",
-                options: ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Michael Faraday"],
-                answer: "B",
-                section: "Gravitational & Magnetic Fields"
+                question: 'The S.I unit of heat energy is:',
+                options: ['Calorie', 'Joule', 'Watt', 'Newton'],
+                answer: 'B',
+                section: 'Heat & Temperature',
+                isCalculation: false
             },
             {
-                question: "The gravitational force between two objects increases when:",
-                options: ["Their masses decrease", "The distance between them increases", "Their masses increase", "They stop moving"],
-                answer: "C",
-                section: "Gravitational & Magnetic Fields"
+                question: 'Calculate the heat energy required to raise the temperature of 2 kg of water by 10°C. (Specific heat capacity of water = 4200 J/kg°C)',
+                options: ['42,000 J', '84,000 J', '126,000 J', '168,000 J'],
+                answer: 'B',
+                section: 'Heat & Temperature',
+                isCalculation: true,
+                formula: 'Q = mcΔθ'
             },
             {
-                question: "A magnetic field exists around:",
-                options: ["Any stationary object", "A magnet or current-carrying conductor", "Only batteries", "Only metals"],
-                answer: "B",
-                section: "Gravitational & Magnetic Fields"
+                question: 'Calculate the quantity of heat needed to raise the temperature of 500 g of water from 25°C to 45°C. (SHC = 4200 J/kg°C)',
+                options: ['30,000 J', '36,000 J', '42,000 J', '48,000 J'],
+                answer: 'C',
+                section: 'Heat & Temperature',
+                isCalculation: true,
+                formula: 'Q = mcΔθ'
             },
             {
-                question: "Magnetic field lines move from:",
-                options: ["South pole to north pole outside the magnet", "North pole to south pole outside the magnet", "East to west", "West to east"],
-                answer: "B",
-                section: "Gravitational & Magnetic Fields"
+                question: 'The boiling point of water in Kelvin is:',
+                options: ['273 K', '373 K', '473 K', '573 K'],
+                answer: 'B',
+                section: 'Heat & Temperature',
+                isCalculation: false
             },
             {
-                question: "A freely suspended magnet always points in the:",
-                options: ["East-west direction", "North-south direction", "Up-down direction", "Random direction"],
-                answer: "B",
-                section: "Gravitational & Magnetic Fields"
+                question: 'Convert 50°C to Kelvin.',
+                options: ['273 K', '293 K', '323 K', '373 K'],
+                answer: 'C',
+                section: 'Heat & Temperature',
+                isCalculation: true,
+                formula: 'K = °C + 273'
             },
-            
-            // SECTION E: ELECTRICITY & OHM'S LAW (Q29-40)
+            // CHANGE OF STATE (Questions 31-34)
             {
-                question: "Electric current is the flow of:",
-                options: ["Protons", "Neutrons", "Electrons", "Atoms"],
-                answer: "C",
-                section: "Electricity & Ohm's Law"
-            },
-            {
-                question: "The S.I. unit of electric current is:",
-                options: ["Volt", "Ampere", "Ohm", "Watt"],
-                answer: "B",
-                section: "Electricity & Ohm's Law"
+                question: 'The change of state from solid to liquid is called:',
+                options: ['Evaporation', 'Condensation', 'Melting', 'Sublimation'],
+                answer: 'C',
+                section: 'Change of State',
+                isCalculation: false
             },
             {
-                question: "Voltage is also known as:",
-                options: ["Resistance", "Current", "Potential difference", "Power"],
-                answer: "C",
-                section: "Electricity & Ohm's Law"
+                question: 'The change of state from liquid to gas is called:',
+                options: ['Sublimation', 'Evaporation', 'Deposition', 'Freezing'],
+                answer: 'B',
+                section: 'Change of State',
+                isCalculation: false
             },
             {
-                question: "Resistance is the opposition to the flow of:",
-                options: ["Heat", "Light", "Current", "Sound"],
-                answer: "C",
-                section: "Electricity & Ohm's Law"
+                question: 'The latent heat of fusion is the heat required to change a substance from:',
+                options: ['Liquid to gas', 'Solid to liquid', 'Gas to liquid', 'Liquid to solid'],
+                answer: 'B',
+                section: 'Change of State',
+                isCalculation: false
             },
             {
-                question: "The S.I. unit of resistance is:",
-                options: ["Volt", "Ohm", "Ampere", "Coulomb"],
-                answer: "B",
-                section: "Electricity & Ohm's Law"
+                question: 'Calculate the heat required to melt 2 kg of ice at 0°C. (Latent heat of fusion of ice = 336,000 J/kg)',
+                options: ['336,000 J', '504,000 J', '672,000 J', '840,000 J'],
+                answer: 'C',
+                section: 'Change of State',
+                isCalculation: true,
+                formula: 'Q = mL'
+            },
+            // ATOMS (Questions 35-37)
+            {
+                question: 'The smallest particle of an element that can exist is:',
+                options: ['Molecule', 'Atom', 'Electron', 'Proton'],
+                answer: 'B',
+                section: 'Atoms',
+                isCalculation: false
             },
             {
-                question: "Which material is a good conductor of electricity?",
-                options: ["Rubber", "Plastic", "Copper", "Wood"],
-                answer: "C",
-                section: "Electricity & Ohm's Law"
+                question: 'The nucleus of an atom contains:',
+                options: ['Electrons only', 'Protons and neutrons', 'Neutrons only', 'Electrons and protons'],
+                answer: 'B',
+                section: 'Atoms',
+                isCalculation: false
             },
             {
-                question: "A material that does not allow current to pass easily is called:",
-                options: ["Conductor", "Semiconductor", "Insulator", "Electrolyte"],
-                answer: "C",
-                section: "Electricity & Ohm's Law"
+                question: 'The number of protons in the nucleus of an atom is called the:',
+                options: ['Mass number', 'Atomic number', 'Nucleon number', 'Isotope number'],
+                answer: 'B',
+                section: 'Atoms',
+                isCalculation: false
+            },
+            // MOTION (Questions 38-40)
+            {
+                question: 'A body starts from rest and accelerates uniformly at 2 m/s². Calculate the distance covered in 5 seconds.',
+                options: ['20 m', '25 m', '30 m', '35 m'],
+                answer: 'B',
+                section: 'Motion',
+                isCalculation: true,
+                formula: 's = ut + ½at²'
             },
             {
-                question: "The relationship between voltage, current, and resistance is given by:",
-                options: ["Newton's law", "Ohm's law", "Boyle's law", "Hooke's law"],
-                answer: "B",
-                section: "Electricity & Ohm's Law"
+                question: 'Calculate the final velocity of a body that accelerates from 5 m/s to 15 m/s in 4 seconds.',
+                options: ['12.5 m/s', '15 m/s', '17.5 m/s', '20 m/s'],
+                answer: 'B',
+                section: 'Motion',
+                isCalculation: true,
+                formula: 'v = u + at'
             },
             {
-                question: "Ohm's law states that:",
-                options: ["Current is directly proportional to voltage at constant temperature", "Current is inversely proportional to voltage", "Voltage equals power", "Resistance decreases with temperature always"],
-                answer: "A",
-                section: "Electricity & Ohm's Law"
-            },
-            {
-                question: "A resistor of 5 Ω connected to a 10 V battery will carry a current of:",
-                options: ["0.5 A", "2 A", "5 A", "10 A"],
-                answer: "B",
-                section: "Electricity & Ohm's Law"
-            },
-            {
-                question: "The current in a circuit decreases when resistance:",
-                options: ["Increases", "Becomes zero", "Remains constant", "Decreases"],
-                answer: "A",
-                section: "Electricity & Ohm's Law"
-            },
-            {
-                question: "Electric power is measured in:",
-                options: ["Volt", "Joule", "Watt", "Ohm"],
-                answer: "C",
-                section: "Electricity & Ohm's Law"
+                question: 'Which of the following is NOT a type of motion?',
+                options: ['Translational', 'Rotational', 'Oscillatory', 'Stationary'],
+                answer: 'D',
+                section: 'Motion',
+                isCalculation: false
             }
         ];
 
@@ -1169,14 +1281,14 @@
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 40 * 60;
+        let timeLeft = 60 * 60;
         let questions = [];
         let examStarted = false;
 
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
-            'https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
+            'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
         ];
 
         const sections = {
@@ -1195,21 +1307,35 @@
         setInterval(rotateBackground, 10000);
 
         function shuffleQuestions() {
+            // Keep calculation questions in the same positions but shuffle non-calculation ones
+            const calcQuestions = originalQuestions.filter(q => q.isCalculation);
+            const nonCalcQuestions = originalQuestions.filter(q => !q.isCalculation);
+            
+            // Shuffle non-calculation questions
+            for (let i = nonCalcQuestions.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [nonCalcQuestions[i], nonCalcQuestions[j]] = [nonCalcQuestions[j], nonCalcQuestions[i]];
+            }
+            
+            // Interleave: Keep calculation questions at specific positions (4, 5, 7, 9, 12, 14, 15, 18, 19, 21, 23, 24, 27, 28, 30, 34, 38, 39)
+            // We'll just use all questions shuffled with calc ones at the end
             questions = [...originalQuestions];
+            // Shuffle all but keep calc flag intact
             for (let i = questions.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [questions[i], questions[j]] = [questions[j], questions[i]];
             }
+            
             userAnswers = Array(questions.length).fill(null);
         }
 
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 40 * 60;
+            timeLeft = 60 * 60;
             
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
-            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e67e22 0%, #d35400 100%)';
+            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #6c3483 0%, #4a235a 100%)';
             
             timerInterval = setInterval(() => {
                 timeLeft--;
@@ -1222,12 +1348,12 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    alert("Time's up! Your test will be submitted automatically.");
+                    alert("Time's up! Your examination will be submitted automatically.");
                     calculateScoreAndSubmit();
                 } else if (timeLeft <= 300) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
                 } else if (timeLeft <= 600) {
-                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e67e22 0%, #d35400 100%)';
                 }
             }, 1000);
         }
@@ -1248,7 +1374,7 @@
                         
                         if (timeLeft <= 0) {
                             clearInterval(timerInterval);
-                            alert("Time's up! Your test will be submitted automatically.");
+                            alert("Time's up! Your examination will be submitted automatically.");
                             calculateScoreAndSubmit();
                         }
                     }, 1000);
@@ -1259,7 +1385,7 @@
         window.addEventListener('beforeunload', (e) => {
             if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
                 e.preventDefault();
-                e.returnValue = 'You have an ongoing test. Are you sure you want to leave? Your progress may be lost.';
+                e.returnValue = 'You have an ongoing examination. Are you sure you want to leave? Your progress may be lost.';
                 return e.returnValue;
             }
         });
@@ -1288,7 +1414,8 @@
 
         function updateTopicBadge(index) {
             const section = questions[index].section;
-            document.getElementById('topic-badge').textContent = `Topic: ${section}`;
+            const isCalc = questions[index].isCalculation;
+            document.getElementById('topic-badge').textContent = `Topic: ${section}${isCalc ? ' ⚡ Calculation' : ''}`;
         }
 
         document.getElementById('start-exam-btn').addEventListener('click', () => {
@@ -1446,9 +1573,12 @@
             for (let i = 0; i < questions.length; i++) {
                 const questionNumber = document.createElement('div');
                 questionNumber.className = 'question-number';
+                if (questions[i].isCalculation) {
+                    questionNumber.classList.add('calculation');
+                }
                 questionNumber.textContent = i + 1;
                 questionNumber.dataset.index = i;
-                questionNumber.title = `Question ${i + 1} - ${questions[i].section}`;
+                questionNumber.title = `Question ${i + 1} - ${questions[i].section}${questions[i].isCalculation ? ' ⚡ Calculation' : ''}`;
                 
                 if (userAnswers[i] !== null) {
                     questionNumber.classList.add('answered');
@@ -1488,7 +1618,15 @@
             const question = questions[index];
             
             document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
-            document.getElementById('question-text').textContent = question.question;
+            
+            let questionHTML = question.question;
+            if (question.isCalculation) {
+                questionHTML += ` <span class="calc-tag">⚡ Calculation</span>`;
+                if (question.formula) {
+                    questionHTML += `<div class="formula-box">Formula: ${question.formula}</div>`;
+                }
+            }
+            document.getElementById('question-text').innerHTML = questionHTML;
             
             updateTopicBadge(index);
             
@@ -1521,7 +1659,7 @@
                 
                 const label = document.createElement('label');
                 label.htmlFor = optionId;
-                label.textContent = `${labels[optionIndex]}. ${option}`;
+                label.innerHTML = `${labels[optionIndex]}. ${option}`;
                 
                 optionDiv.addEventListener('click', (e) => {
                     if (e.target !== radio) {
@@ -1556,8 +1694,8 @@
                 }
             }
             
-            // Submit score to Google Form ONLY - do NOT display to student
-            submitToGoogleForm(studentName, "SSS1 Physics - Third Term Midterm Test 2025/2026", `${score}/40`);
+            // Submit score to Google Form
+            submitToGoogleForm(studentName, "SS1 Physics - Third Term Examination 2025/2026", `${score}/40`);
             
             document.getElementById('submission-status').style.display = 'block';
             showSection('results');
@@ -1567,7 +1705,7 @@
             const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
             const formData = new FormData();
             formData.append("entry.862885683", fullName);
-            formData.append("entry.1545021484", "SSS1");
+            formData.append("entry.1545021484", "SS1");
             formData.append("entry.1558221900", subject);
             formData.append("entry.2022160530", score);
 
