@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="yo">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trustworthy College - Yoruba SSS1 Objective Test</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+    <title>The Trustworthy College - SS1 Yoruba Examination</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
     <style>
         * {
             margin: 0;
@@ -14,8 +14,8 @@
         }
         
         body {
-            background-color: #1a0d0a;
-            color: #f5e8e0;
+            background-color: #1a0a0a;
+            color: #f0e0e0;
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
@@ -28,7 +28,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -41,14 +41,14 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 25px;
-            background: linear-gradient(135deg, #1a0d0a 0%, #2a1a0a 100%);
-            box-shadow: 0 15px 40px rgba(230, 126, 34, 0.25);
+            background: linear-gradient(135deg, #1a0a0a 0%, #2a1a1a 100%);
+            box-shadow: 0 15px 40px rgba(192, 57, 43, 0.25);
             border-radius: 16px;
             margin-top: 25px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
-            border: 3px solid #e67e22;
+            border: 3px solid #c0392b;
             backdrop-filter: blur(5px);
         }
         
@@ -59,12 +59,12 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #d35400, #e67e22, #d35400);
+            background: linear-gradient(90deg, #c0392b, #e74c3c, #c0392b);
             z-index: 2;
         }
         
         .container::after {
-            content: '🖋️';
+            content: '📜';
             position: absolute;
             bottom: 15px;
             right: 20px;
@@ -84,7 +84,7 @@
             padding-bottom: 25px;
             margin-bottom: 30px;
             position: relative;
-            border-bottom: 2px solid #e67e22;
+            border-bottom: 2px solid #c0392b;
             z-index: 1;
         }
         
@@ -96,7 +96,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 3px;
-            background: linear-gradient(to right, transparent, #e67e22, transparent);
+            background: linear-gradient(to right, transparent, #c0392b, transparent);
         }
         
         .logo {
@@ -105,7 +105,7 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             border-radius: 10px;
-            border: 3px solid #e67e22;
+            border: 3px solid #c0392b;
             padding: 5px;
             background: rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
@@ -116,7 +116,7 @@
         }
         
         .subject-title {
-            color: #f5cba7;
+            color: #f0bdbd;
             font-size: 2.2rem;
             margin: 10px 0 5px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
@@ -124,20 +124,20 @@
         }
         
         .exam-info {
-            color: #e8c8a0;
+            color: #d79393;
             font-size: 1.1rem;
             margin-top: 5px;
         }
         
         .term-info {
-            background: linear-gradient(135deg, #e67e2220, #d3540040);
+            background: linear-gradient(135deg, #c0392b20, #e74c3c40);
             display: inline-block;
             padding: 8px 20px;
             border-radius: 30px;
             margin-top: 10px;
             font-weight: bold;
-            color: #f5cba7;
-            border: 1px solid #e67e2260;
+            color: #f0bdbd;
+            border: 1px solid #c0392b60;
         }
         
         .section {
@@ -158,25 +158,25 @@
         }
         
         .welcome-message {
-            background: linear-gradient(135deg, rgba(230, 126, 34, 0.1) 0%, rgba(42, 26, 10, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(192, 57, 43, 0.1) 0%, rgba(42, 26, 26, 0.7) 100%);
             padding: 35px;
             border-radius: 12px;
             margin: 25px 0;
             text-align: center;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #f5e8e0;
-            border-left: 5px solid #e67e22;
-            border-right: 1px solid rgba(230, 126, 34, 0.3);
-            border-top: 1px solid rgba(230, 126, 34, 0.2);
-            border-bottom: 1px solid rgba(230, 126, 34, 0.3);
+            color: #f0e0e0;
+            border-left: 5px solid #c0392b;
+            border-right: 1px solid rgba(192, 57, 43, 0.3);
+            border-top: 1px solid rgba(192, 57, 43, 0.2);
+            border-bottom: 1px solid rgba(192, 57, 43, 0.3);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
         }
         
         .welcome-message::before {
-            content: '📜';
+            content: '🇳🇬';
             position: absolute;
             top: 20px;
             right: 20px;
@@ -186,7 +186,7 @@
         
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            background: linear-gradient(135deg, #c0392b 0%, #922b21 100%);
             color: #ffffff;
             border: none;
             padding: 15px 32px;
@@ -197,8 +197,8 @@
             margin: 12px 8px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(230, 126, 34, 0.5);
-            box-shadow: 0 6px 15px rgba(230, 126, 34, 0.3);
+            border: 2px solid rgba(192, 57, 43, 0.5);
+            box-shadow: 0 6px 15px rgba(192, 57, 43, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -216,9 +216,9 @@
         }
         
         .btn:hover:not(:disabled) {
-            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(230, 126, 34, 0.5);
+            box-shadow: 0 10px 25px rgba(192, 57, 43, 0.5);
             color: #ffffff;
         }
         
@@ -238,8 +238,12 @@
         }
         
         .btn-success {
-            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
-            border-color: #a93226;
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            border-color: #d35400;
+        }
+        
+        .btn-success:hover:not(:disabled) {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
         }
         
         .btn-container {
@@ -255,7 +259,7 @@
             display: block;
             margin-bottom: 12px;
             font-weight: 600;
-            color: #f5cba7;
+            color: #f0bdbd;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
@@ -263,20 +267,20 @@
         input[type="text"] {
             width: 100%;
             padding: 16px;
-            background: rgba(26, 13, 10, 0.7);
-            border: 2px solid #5d7e9e;
+            background: rgba(26, 10, 10, 0.7);
+            border: 2px solid #9e5d5d;
             border-radius: 10px;
             font-size: 1.1rem;
-            color: #f5e8e0;
+            color: #f0e0e0;
             transition: all 0.3s;
             font-family: inherit;
         }
         
         input[type="text"]:focus {
-            border-color: #e67e22;
+            border-color: #c0392b;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.3);
-            background: rgba(26, 13, 10, 0.9);
+            box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.3);
+            background: rgba(26, 10, 10, 0.9);
         }
         
         .error-message {
@@ -288,12 +292,12 @@
         }
         
         .instructions {
-            background: linear-gradient(135deg, rgba(243, 156, 18, 0.08) 0%, rgba(42, 26, 10, 0.7) 100%);
+            background: linear-gradient(135deg, rgba(231, 76, 60, 0.08) 0%, rgba(42, 26, 26, 0.7) 100%);
             padding: 30px;
             border-radius: 12px;
             margin: 25px 0;
-            border-left: 5px solid #f39c12;
-            border: 1px solid rgba(243, 156, 18, 0.2);
+            border-left: 5px solid #e74c3c;
+            border: 1px solid rgba(231, 76, 60, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             position: relative;
         }
@@ -309,7 +313,7 @@
         
         .instructions h3 {
             margin-bottom: 20px;
-            color: #f39c12;
+            color: #e74c3c;
             font-size: 1.5rem;
             position: relative;
             display: inline-block;
@@ -322,7 +326,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #f39c12;
+            background: #e74c3c;
             border-radius: 2px;
         }
         
@@ -339,7 +343,7 @@
         
         .instructions li::before {
             content: '•';
-            color: #f39c12;
+            color: #e74c3c;
             font-size: 1.5rem;
             position: absolute;
             left: -20px;
@@ -349,19 +353,19 @@
         .exam-header {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(230, 126, 34, 0.3);
+            border-bottom: 2px solid rgba(192, 57, 43, 0.3);
         }
         
         .student-info {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #f5cba7;
+            color: #f0bdbd;
             margin-bottom: 25px;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(230, 126, 34, 0.1) 0%, rgba(211, 84, 0, 0.15) 100%);
+            background: linear-gradient(135deg, rgba(192, 57, 43, 0.1) 0%, rgba(231, 76, 60, 0.15) 100%);
             border-radius: 12px;
-            border: 1px solid rgba(230, 126, 34, 0.3);
+            border: 1px solid rgba(192, 57, 43, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -372,31 +376,31 @@
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            background: rgba(26, 13, 10, 0.5);
+            background: rgba(26, 10, 10, 0.5);
             border-radius: 12px;
-            border: 1px solid rgba(230, 126, 34, 0.2);
+            border: 1px solid rgba(192, 57, 43, 0.2);
         }
         
         .question-counter {
             font-size: 1.2rem;
-            color: #f5cba7;
+            color: #f0bdbd;
             font-weight: 600;
             padding: 10px 20px;
-            background: rgba(230, 126, 34, 0.1);
+            background: rgba(192, 57, 43, 0.1);
             border-radius: 8px;
-            border: 1px solid rgba(230, 126, 34, 0.3);
+            border: 1px solid rgba(192, 57, 43, 0.3);
         }
         
         .timer-container {
-            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            background: linear-gradient(135deg, #c0392b 0%, #922b21 100%);
             color: #ffffff;
             padding: 12px 20px;
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.4);
+            box-shadow: 0 4px 12px rgba(192, 57, 43, 0.4);
             display: none;
-            border: 2px solid rgba(230, 126, 34, 0.5);
+            border: 2px solid rgba(192, 57, 43, 0.5);
             font-family: 'Courier New', monospace;
             transition: background 0.5s ease;
         }
@@ -407,10 +411,10 @@
         
         .exam-content {
             margin-bottom: 35px;
-            background: rgba(26, 13, 10, 0.4);
+            background: rgba(26, 10, 10, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(230, 126, 34, 0.2);
+            border: 1px solid rgba(192, 57, 43, 0.2);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
@@ -418,12 +422,12 @@
             font-size: 1.35rem;
             margin-bottom: 25px;
             font-weight: 600;
-            color: #f5cba7;
+            color: #f0bdbd;
             line-height: 1.6;
             padding: 20px;
-            background: rgba(243, 156, 18, 0.08);
+            background: rgba(231, 76, 60, 0.08);
             border-radius: 10px;
-            border-left: 4px solid #f39c12;
+            border-left: 4px solid #e74c3c;
         }
         
         .options-container {
@@ -437,8 +441,8 @@
             padding: 18px 20px;
             border-radius: 10px;
             transition: all 0.3s;
-            background: rgba(42, 26, 10, 0.4);
-            border: 1px solid rgba(93, 126, 158, 0.3);
+            background: rgba(42, 26, 26, 0.4);
+            border: 1px solid rgba(158, 93, 93, 0.3);
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -451,14 +455,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(230, 126, 34, 0.08), transparent);
+            background: linear-gradient(90deg, transparent, rgba(192, 57, 43, 0.08), transparent);
             transform: translateX(-100%);
             transition: transform 0.5s;
         }
         
         .option:hover {
-            background: rgba(230, 126, 34, 0.1);
-            border-color: #e67e22;
+            background: rgba(192, 57, 43, 0.1);
+            border-color: #c0392b;
             transform: translateX(5px);
         }
         
@@ -471,7 +475,7 @@
             width: 22px;
             height: 22px;
             cursor: pointer;
-            accent-color: #e67e22;
+            accent-color: #c0392b;
             flex-shrink: 0;
         }
         
@@ -480,7 +484,7 @@
             margin-bottom: 0;
             cursor: pointer;
             flex: 1;
-            color: #f5e8e0;
+            color: #f0e0e0;
             font-size: 1.1rem;
             line-height: 1.5;
         }
@@ -488,12 +492,12 @@
         .question-navigation {
             margin-top: 35px;
             padding-top: 25px;
-            border-top: 2px solid rgba(230, 126, 34, 0.3);
+            border-top: 2px solid rgba(192, 57, 43, 0.3);
         }
         
         .question-navigation h3 {
             margin-bottom: 20px;
-            color: #f5cba7;
+            color: #f0bdbd;
             text-align: center;
             font-size: 1.5rem;
             position: relative;
@@ -510,7 +514,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: #f39c12;
+            background: #e74c3c;
             border-radius: 2px;
         }
         
@@ -527,34 +531,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(93, 126, 158, 0.3) 0%, rgba(42, 26, 10, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(158, 93, 93, 0.3) 0%, rgba(42, 26, 26, 0.5) 100%);
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(230, 126, 34, 0.3);
-            color: #f5e8e0;
+            border: 1px solid rgba(192, 57, 43, 0.3);
+            color: #f0e0e0;
             font-size: 1.1rem;
         }
         
         .question-number:hover {
-            background: linear-gradient(135deg, rgba(230, 126, 34, 0.3) 0%, rgba(211, 84, 0, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(192, 57, 43, 0.3) 0%, rgba(146, 43, 33, 0.5) 100%);
             transform: scale(1.1);
-            border-color: #e67e22;
+            border-color: #c0392b;
         }
         
         .question-number.current {
-            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            background: linear-gradient(135deg, #c0392b 0%, #922b21 100%);
             color: #ffffff;
-            border-color: #f5cba7;
-            box-shadow: 0 4px 10px rgba(230, 126, 34, 0.4);
+            border-color: #f0bdbd;
+            box-shadow: 0 4px 10px rgba(192, 57, 43, 0.4);
             transform: scale(1.1);
         }
         
         .question-number.answered {
-            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: white;
-            border-color: #2ecc71;
+            border-color: #f39c12;
         }
         
         .navigation-buttons {
@@ -565,16 +569,16 @@
         
         .progress-container {
             margin: 20px 0;
-            background: rgba(42, 26, 10, 0.5);
+            background: rgba(42, 26, 26, 0.5);
             border-radius: 10px;
             overflow: hidden;
             height: 10px;
-            border: 1px solid rgba(230, 126, 34, 0.3);
+            border: 1px solid rgba(192, 57, 43, 0.3);
         }
         
         .progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, #d35400, #e67e22);
+            background: linear-gradient(90deg, #c0392b, #e74c3c);
             width: 0%;
             transition: width 0.5s ease;
             border-radius: 10px;
@@ -583,34 +587,28 @@
         .progress-text {
             text-align: center;
             font-size: 0.9rem;
-            color: #e8c8a0;
+            color: #d79393;
             margin-top: 5px;
         }
         
         .topic-badge {
             display: inline-block;
             padding: 4px 12px;
-            background: rgba(230, 126, 34, 0.15);
-            border: 1px solid rgba(230, 126, 34, 0.3);
+            background: rgba(192, 57, 43, 0.15);
+            border: 1px solid rgba(192, 57, 43, 0.3);
             border-radius: 20px;
             font-size: 0.8rem;
-            color: #f5cba7;
+            color: #f0bdbd;
             margin-bottom: 10px;
             font-weight: 500;
-        }
-        
-        .yoruba-text {
-            font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
-            font-size: 1.15em;
-            line-height: 1.7;
         }
         
         .results-container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(26, 13, 10, 0.8) 0%, rgba(42, 26, 10, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(26, 10, 10, 0.8) 0%, rgba(42, 26, 26, 0.9) 100%);
             border-radius: 16px;
-            border: 2px solid #e67e22;
+            border: 2px solid #c0392b;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
@@ -626,7 +624,7 @@
         }
         
         .results-container h2 {
-            color: #f5cba7;
+            color: #f0bdbd;
             font-size: 2.2rem;
             margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -651,7 +649,7 @@
         
         .subject {
             font-size: 1.3rem;
-            color: #e8c8a0;
+            color: #d79393;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -659,22 +657,22 @@
         .feedback {
             font-size: 1.3rem;
             margin: 25px 0;
-            color: #f5e8e0;
+            color: #f0e0e0;
             line-height: 1.7;
             padding: 25px;
-            background: rgba(230, 126, 34, 0.08);
+            background: rgba(192, 57, 43, 0.08);
             border-radius: 12px;
-            border: 1px solid rgba(230, 126, 34, 0.3);
+            border: 1px solid rgba(192, 57, 43, 0.3);
         }
         
         .submission-status {
             margin-top: 25px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.15) 0%, rgba(39, 174, 96, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(241, 196, 15, 0.15) 0%, rgba(243, 156, 18, 0.2) 100%);
             border-radius: 12px;
-            color: #2ecc71;
+            color: #f1c40f;
             font-size: 1.2rem;
-            border: 1px solid rgba(46, 204, 113, 0.4);
+            border: 1px solid rgba(241, 196, 15, 0.4);
         }
         
         @media (max-width: 768px) {
@@ -738,8 +736,8 @@
         }
         
         .spinner {
-            border: 4px solid rgba(230, 126, 34, 0.3);
-            border-top: 4px solid #e67e22;
+            border: 4px solid rgba(192, 57, 43, 0.3);
+            border-top: 4px solid #c0392b;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -755,22 +753,22 @@
         .keyboard-hint {
             text-align: center;
             font-size: 0.85rem;
-            color: #5d7e9e;
+            color: #9e5d5d;
             margin-top: 15px;
             padding: 10px;
-            background: rgba(26, 13, 10, 0.3);
+            background: rgba(26, 10, 10, 0.3);
             border-radius: 8px;
-            border: 1px dashed rgba(93, 126, 158, 0.3);
+            border: 1px dashed rgba(158, 93, 93, 0.3);
         }
         
         .keyboard-hint kbd {
-            background: rgba(230, 126, 34, 0.2);
-            border: 1px solid rgba(230, 126, 34, 0.4);
+            background: rgba(192, 57, 43, 0.2);
+            border: 1px solid rgba(192, 57, 43, 0.4);
             border-radius: 4px;
             padding: 2px 8px;
             font-family: 'Courier New', monospace;
             font-size: 0.85rem;
-            color: #f5cba7;
+            color: #f0bdbd;
         }
     </style>
 </head>
@@ -779,139 +777,139 @@
         <div class="header">
             <img src="https://raw.githubusercontent.com/ideolixlearninghub/Trustworthy_schoolsexam/main/The%20trustworthy%20school%20logo.jpg" 
                  alt="The Trustworthy College logo" class="logo">
-            <h1 class="subject-title yoruba-text">ÌDÁNWÒ Ẹ̀KỌ́ YORÙBÁ SSS1</h1>
-            <div class="exam-info">Third Term |  2025/2026 session </div>
-            <div class="term-info">20 Questions  | 25 minutes </div>
+            <h1 class="subject-title">SS1 YORUBA</h1>
+            <div class="exam-info">First Term | 2025/2026 Session</div>
+            <div class="term-info">40 Objective Questions | 40 Minutes</div>
         </div>
         
         <section id="welcome-section" class="section active">
-            <div class="welcome-message yoruba-text">
-                "Ẹ kú àbọ̀ sí Ìdánwò Ẹ̀kọ́ Yorùbá ti The Trustworthy College. Ìdánwò yìí dá lórí Ẹ̀sìn Òde Òní (ìwé mímọ́, ilé ìjọsìn, ànfààní), Ọ̀rọ̀-Ìṣe (ìtumọ̀, àpẹẹrẹ), Àròkọ Àyẹmọ́ Ìṣípáyà (ìtòlẹ́sẹẹsẹ, àkọlé, ìparí), àti Ọ̀gẹ̀ Sísẹ́ Ayé Àtijọ́ àti Ayé Òde Òní. Ẹ fi òye yín hàn. Ọlọ́run á ṣe é."
+            <div class="welcome-message">
+                "Welcome to The Trustworthy College SS1 Yoruba First Term Examination. This examination covers Àṣà ògè (Culture and Etiquette), Ọ̀rọ̀ (Parts of Speech), Àpólà (Phrases), Ẹ̀yà ara ìró èdè (Speech Organs), and Ẹ̀sìn (Religion). Demonstrate your understanding of Yoruba language and culture. Best of luck."
             </div>
             <div class="btn-container">
-                <button id="start-exam-btn" class="btn yoruba-text">Bẹ̀rẹ̀ Ìdánwò</button>
+                <button id="start-exam-btn" class="btn">Start Examination</button>
             </div>
         </section>
         
         <section id="student-info-section" class="section">
-            <h2 class="yoruba-text">Àwọn Ẹ̀kúnrẹ́rẹ́ Akẹ́kọ̀ọ́</h2>
-            <p class="yoruba-text">Jọ̀wọ́ fi àwọn ẹ̀kúnrẹ́rẹ́ rẹ sílẹ̀ láti tẹ̀síwájú nínú ìdánwò.</p>
+            <h2>Student Information</h2>
+            <p>Please provide your details to continue with the examination.</p>
             
             <form id="student-info-form" autocomplete="off">
                 <div class="form-group">
-                    <label for="first-name" class="yoruba-text">Orúkọ Àkọ́kọ́ *</label>
-                    <input type="text" id="first-name" required placeholder="Fi orúkọ àkọ́kọ́ rẹ sílẹ̀">
-                    <div class="error-message yoruba-text" id="first-name-error">Orúkọ àkọ́kọ́ nílò</div>
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" required placeholder="Enter your first name">
+                    <div class="error-message" id="first-name-error">First name is required</div>
                 </div>
                 
                 <div class="form-group">
-                    <label for="middle-name" class="yoruba-text">Orúkọ Àárín *</label>
-                    <input type="text" id="middle-name" required placeholder="Fi orúkọ àárín rẹ sílẹ̀">
-                    <div class="error-message yoruba-text" id="middle-name-error">Orúkọ àárín nílò</div>
+                    <label for="middle-name">Middle Name *</label>
+                    <input type="text" id="middle-name" required placeholder="Enter your middle name">
+                    <div class="error-message" id="middle-name-error">Middle name is required</div>
                 </div>
                 
                 <div class="form-group">
-                    <label for="last-name" class="yoruba-text">Orúkọ Ìdílé *</label>
-                    <input type="text" id="last-name" required placeholder="Fi orúkọ ìdílé rẹ sílẹ̀">
-                    <div class="error-message yoruba-text" id="last-name-error">Orúkọ ìdílé nílò</div>
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" required placeholder="Enter your last name">
+                    <div class="error-message" id="last-name-error">Last name is required</div>
                 </div>
                 
                 <div class="btn-container">
-                    <button type="button" id="back-to-welcome" class="btn btn-secondary yoruba-text">Ẹ̀yìn</button>
-                    <button type="button" id="continue-to-instructions" class="btn yoruba-text">Tẹ̀síwájú</button>
+                    <button type="button" id="back-to-welcome" class="btn btn-secondary">Back</button>
+                    <button type="button" id="continue-to-instructions" class="btn">Continue</button>
                 </div>
             </form>
         </section>
         
         <section id="instructions-section" class="section">
-            <h2 class="yoruba-text">Ìtọ́ni Ìdánwò</h2>
+            <h2>Examination Instructions</h2>
             
             <div class="instructions">
-                <h3 class="yoruba-text">Àkíyèsí Pàtàkì:</h3>
-                <ul class="yoruba-text">
-                    <li>Ìdánwò yìí ní <strong>20 ìbéèrè</strong> tí ó dá lórí Ẹ̀sìn Òde Òní, Ọ̀rọ̀-Ìṣe, Àròkọ, àti Ọ̀gẹ̀ Sísẹ́.</li>
-                    <li>Ẹ ní <strong>ìṣẹ́jú 25</strong> láti parí ìdánwò yìí.</li>
-                    <li>Ẹ dáhùn gbogbo ìbéèrè náà.</li>
-                    <li>Ẹ lo àwọn bọ́tìnì <strong>Previous</strong> àti <strong>Next</strong> láti lọ sí ìbéèrè mìíràn.</li>
-                    <li>Ẹ tún lè lo <strong>bọ́tìnì kọ̀ǹpútà</strong>: Arrow keys láti navigat, A/B/C/D láti yan ìdáhùn.</li>
-                    <li>Ìbéèrè tí a bá ti dáhùn yóò fi <strong>àwọ̀ ewé</strong> hàn.</li>
-                    <li>Tí ẹ bá ti fi ìdáhùn yín sílẹ̀, <strong>ẹ kò lè yí padà</strong>.</li>
-                    <li>Ẹ rí i pé ẹ ní internet tó dára.</li>
-                    <li>Ẹ ka ìbéèrè kọ̀ọ̀kan dáradára kí ẹ tó yan ìdáhùn.</li>
-                    <li>Èsì yín yóò jẹ́ fífi sílẹ̀ ní àdáṣe.</li>
-                    <li><strong>Ẹ má ṣe refresh ojú-ewé</strong> nígbà ìdánwò.</li>
+                <h3>Important Notes:</h3>
+                <ul>
+                    <li>This First Term Examination consists of <strong>40 multiple-choice objective questions</strong> covering Àṣà ògè (Culture), Ọ̀rọ̀ (Parts of Speech), Àpólà (Phrases), Ẹ̀yà ara ìró èdè (Speech Organs), and Ẹ̀sìn (Religion).</li>
+                    <li>You have <strong>40 minutes</strong> to complete this examination.</li>
+                    <li>Answer all questions to the best of your ability.</li>
+                    <li>Navigate between questions using the <strong>Previous</strong> and <strong>Next</strong> buttons or the question grid below.</li>
+                    <li>You can also use <strong>keyboard shortcuts</strong>: Arrow keys to navigate, A/B/C/D keys to select answers.</li>
+                    <li>Answered questions will be marked with <strong>orange</strong> in the question grid.</li>
+                    <li>Once you submit your answers, <strong>you cannot change them</strong>.</li>
+                    <li>Ensure you have a stable internet connection throughout the examination.</li>
+                    <li>Read each question carefully before selecting your answer.</li>
+                    <li>Your results will be submitted automatically upon completion.</li>
+                    <li><strong>Do not refresh the page</strong> during the examination, or you may lose your progress.</li>
                 </ul>
             </div>
             
             <div class="btn-container">
-                <button type="button" id="back-to-student-info" class="btn btn-secondary yoruba-text">Ẹ̀yìn</button>
-                <button type="button" id="begin-test" class="btn yoruba-text">Bẹ̀rẹ̀ Ìdánwò</button>
+                <button type="button" id="back-to-student-info" class="btn btn-secondary">Back</button>
+                <button type="button" id="begin-test" class="btn">Begin Examination</button>
             </div>
         </section>
         
         <section id="exam-section" class="section">
             <div class="exam-header">
-                <div class="student-info yoruba-text" id="display-student-name"></div>
-                <div class="topic-badge yoruba-text" id="topic-badge">Ẹ̀ka: Ẹ̀sìn Òde Òní</div>
+                <div class="student-info" id="display-student-name"></div>
+                <div class="topic-badge" id="topic-badge">Topic: Yoruba</div>
                 <div class="progress-container">
                     <div class="progress-bar" id="progress-bar"></div>
                 </div>
-                <div class="progress-text yoruba-text" id="progress-text">Progress: 0/20 answered</div>
+                <div class="progress-text" id="progress-text">Progress: 0/40 answered</div>
                 <div class="exam-controls">
-                    <div class="question-counter yoruba-text" id="question-counter">Ìbéèrè 1 nínú 20</div>
+                    <div class="question-counter" id="question-counter">Question 1 of 40</div>
                     <div class="timer-container" id="timer-container">
-                        ⏱ Àkókò: <span id="timer">25:00</span>
+                        ⏱ Time Left: <span id="timer">40:00</span>
                     </div>
                     <div class="submit-container" id="submit-container">
-                        <button type="button" id="submit-exam" class="btn btn-success yoruba-text">Fi Ìdáhùn Sílẹ̀</button>
+                        <button type="button" id="submit-exam" class="btn btn-success">Submit Examination</button>
                     </div>
                 </div>
             </div>
             
             <div class="exam-content">
-                <div class="question-text yoruba-text" id="question-text"></div>
+                <div class="question-text" id="question-text"></div>
                 <div class="options-container" id="options-container"></div>
             </div>
             
             <div class="keyboard-hint">
-                💡 Bọ́tìnì: <kbd>←</kbd> <kbd>→</kbd> Navigate | <kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd> Yan ìdáhùn
+                💡 Keyboard shortcuts: <kbd>←</kbd> <kbd>→</kbd> Navigate | <kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd> Select answer
             </div>
             
             <div class="question-navigation">
-                <h3 class="yoruba-text">Ìtọ́ka Ìbéèrè</h3>
+                <h3>Question Navigation</h3>
                 <div class="question-grid" id="question-grid"></div>
                 
                 <div class="navigation-buttons">
-                    <button type="button" id="prev-question" class="btn btn-secondary yoruba-text">← Ẹ̀yìn</button>
-                    <button type="button" id="next-question" class="btn yoruba-text">Iwájú →</button>
+                    <button type="button" id="prev-question" class="btn btn-secondary">← Previous</button>
+                    <button type="button" id="next-question" class="btn">Next →</button>
                 </div>
             </div>
             
             <div class="loading" id="loading">
                 <div class="spinner"></div>
-                <p class="yoruba-text">Ń fi èsì rẹ sílẹ̀...</p>
+                <p>Submitting your results...</p>
             </div>
         </section>
         
         <section id="results-section" class="section">
             <div class="results-container">
-                <h2 class="yoruba-text">Ìdánwò Parí</h2>
+                <h2>Examination Completed</h2>
                 <div class="completion-icon">✅</div>
-                <div class="student-info yoruba-text" id="results-student-name"></div>
-                <div class="subject yoruba-text" id="results-subject">SSS1 Yorùbá - Ìdánwò Ìgbà Kẹta 2025/2026</div>
+                <div class="student-info" id="results-student-name"></div>
+                <div class="subject" id="results-subject">SS1 Yoruba - First Term Examination 2025/2026</div>
                 
-                <div class="feedback yoruba-text" id="feedback-message">
-                    Ẹ ṣeun fún pípari ìdánwò Yorùbá. Èsì yín ti jẹ́ fífi sílẹ̀. Ẹ óò gbọ́ ìyọrísí yín láìpẹ́.
+                <div class="feedback" id="feedback-message">
+                    Thank you for completing the Yoruba First Term Examination. Your answers have been submitted successfully. Results will be communicated through appropriate channels.
                 </div>
                 
-                <div class="submission-status yoruba-text" id="submission-status">
-                    ✅ Ìdánwò yín ti jẹ́ fífi sílẹ̀.
+                <div class="submission-status" id="submission-status">
+                    ✅ Your examination has been successfully submitted.
                 </div>
                 
                 <div class="btn-container">
-                    <button type="button" id="restart-exam" class="btn yoruba-text">Ṣe Ìdánwò Mìíràn</button>
+                    <button type="button" id="restart-exam" class="btn">Take Another Examination</button>
                     <div class="back-home">
-                        <a href="../index.html" class="btn btn-secondary yoruba-text">Padà sí Ilé</a>
+                        <a href="../index.html" class="btn btn-secondary">Back to Home</a>
                     </div>
                 </div>
             </div>
@@ -919,133 +917,253 @@
     </div>
 
     <script>
+        // All 40 questions with correct answers
         const originalQuestions = [
-            // SECTION A: Ẹ̀SÌN ÒDE ÒNÍ (Q1-5)
+            // Questions 1-5: Culture and Etiquette
             {
-                question: "Ẹ̀sìn òde òní wọ ilẹ̀ Yorùbá láti ______.",
-                options: ["Oko", "Òkè òkun", "Ọjà", "Ilé ọba"],
+                question: "Àṣà ògè túmọ̀ sí ______.",
+                options: ["Bí a ṣe ń kọ́ ilé", "Bí ènìyàn ṣe ń wọ aṣọ àti ṣe ara rẹ̀ lẹ́wà", "Bí a ṣe ń ṣeré", "Bí a ṣe ń jẹun"],
                 answer: "B",
-                section: "Ẹ̀sìn Òde Òní"
-            },
-            {
-                question: "Èwo ni àpẹẹrẹ ẹ̀sìn òde òní?",
-                options: ["Ògún", "Sàngó", "Kristẹni", "Egúngún"],
-                answer: "C",
-                section: "Ẹ̀sìn Òde Òní"
-            },
-            {
-                question: "Ìwé mímọ́ àwọn Mùsùlùmí ni ______.",
-                options: ["Bibeli", "Kúrání", "Ifá", "Ìwé Òwe"],
-                answer: "B",
-                section: "Ẹ̀sìn Òde Òní"
-            },
-            {
-                question: "Ilé ìjọsìn àwọn Kristẹni ni ______.",
-                options: ["Mọ́ṣáláṣí", "Ojúbọ", "Ṣọ́ọ̀ṣì", "Ààfin"],
-                answer: "C",
-                section: "Ẹ̀sìn Òde Òní"
-            },
-            {
-                question: "Ọ̀kan lára ànfààní ẹ̀sìn òde òní ni pé ó ń kọ́ ènìyàn ní ______.",
-                options: ["Ìwà búburú", "Ìwà rere", "Ìjà", "Ìkórìíra"],
-                answer: "B",
-                section: "Ẹ̀sìn Òde Òní"
-            },
-            
-            // SECTION B: Ọ̀RỌ̀-ÌṢE (Q6-10)
-            {
-                question: "Ọ̀rọ̀-ìṣe ni ọ̀rọ̀ tí ó ń fi ______ hàn.",
-                options: ["Orúkọ", "Àwọ̀", "Ìṣe", "Ibi"],
-                answer: "C",
-                section: "Ọ̀rọ̀-Ìṣe"
-            },
-            {
-                question: "Nínú <em>'Adé ń jẹun'</em>, ọ̀rọ̀-ìṣe ni ______.",
-                options: ["Adé", "ń", "jẹun", "ni"],
-                answer: "C",
-                section: "Ọ̀rọ̀-Ìṣe"
-            },
-            {
-                question: "Èwo nínú wọ̀nyí jẹ́ ọ̀rọ̀-ìṣe?",
-                options: ["Ilé", "Rìn", "Adé", "Tábìlì"],
-                answer: "B",
-                section: "Ọ̀rọ̀-Ìṣe"
-            },
-            {
-                question: "<em>'Wọ́n ń ṣeré.'</em> Ọ̀rọ̀-ìṣe inú gbolóhùn náà ni ______.",
-                options: ["Wọ́n", "ń", "ṣeré", "náà"],
-                answer: "C",
-                section: "Ọ̀rọ̀-Ìṣe"
-            },
-            {
-                question: "Ọ̀rọ̀-ìṣe sábà máa ń tọ́ka sí ______.",
-                options: ["Ìṣe tàbí ìwà", "Orúkọ", "Ibi", "Àwọ̀"],
-                answer: "A",
-                section: "Ọ̀rọ̀-Ìṣe"
-            },
-            
-            // SECTION C: ÀRÒKỌ ÀYẸMỌ́ ÌṢÍPÁYÀ (Q11-15)
-            {
-                question: "Àròkọ àyẹmọ́ ìṣípáyà jẹ́ àròkọ tí ń sọ ______.",
-                options: ["Ìtàn ìṣẹ̀lẹ̀", "Òwe", "Orin", "Àdúrà"],
-                answer: "A",
-                section: "Àròkọ Àyẹmọ́ Ìṣípáyà"
-            },
-            {
-                question: "Àròkọ àyẹmọ́ ìṣípáyà gbọdọ̀ ní ______.",
-                options: ["Ìbẹ̀rẹ̀, àárín àti ìparí", "Àkọlé nìkan", "Àwòrán", "Orin"],
-                answer: "A",
-                section: "Àròkọ Àyẹmọ́ Ìṣípáyà"
-            },
-            {
-                question: "Nígbà tí a bá ń kọ àròkọ àyẹmọ́ ìṣípáyà, a gbọdọ̀ tẹ̀lé ______.",
-                options: ["Ìtòlẹ́sẹẹsẹ ìṣẹ̀lẹ̀", "Àwọ̀", "Àmì", "Ìṣirò"],
-                answer: "A",
-                section: "Àròkọ Àyẹmọ́ Ìṣípáyà"
-            },
-            {
-                question: "Èwo nínú wọ̀nyí lè jẹ́ àkọlé àròkọ àyẹmọ́ ìṣípáyà?",
-                options: ["Bí mo ṣe lo ìsinmi ọdún", "Àwọn àmì ohùn", "Òwe Yorùbá", "Ìṣirò"],
-                answer: "A",
-                section: "Àròkọ Àyẹmọ́ Ìṣípáyà"
-            },
-            {
-                question: "Apá ìkẹyìn àròkọ ni ______.",
-                options: ["Ìbẹ̀rẹ̀", "Àárín", "Ìparí", "Àkọlé"],
-                answer: "C",
-                section: "Àròkọ Àyẹmọ́ Ìṣípáyà"
-            },
-            
-            // SECTION D: Ọ̀GẸ̀ SÍSẸ́ AYÉ ÀTIJỌ́ ÀTI AYÉ ÒDE ÒNÍ (Q16-20)
-            {
-                question: "Ọ̀gẹ̀ sísẹ́ túmọ̀ sí ______.",
-                options: ["Ìṣòwò", "Ọ̀nà ìmúra ara", "Ogbin", "Kíkàwé"],
-                answer: "B",
-                section: "Ọ̀gẹ̀ Sísẹ́"
+                section: "Culture"
             },
             {
                 question: "Ní ayé àtijọ́, àwọn Yorùbá máa ń wọ ______.",
-                options: ["Bùbá àti Ìró", "Sùùtì", "Jínì", "T-shirt"],
-                answer: "A",
-                section: "Ọ̀gẹ̀ Sísẹ́"
+                options: ["Jeans", "Suit", "Aṣọ òwú", "T-shirt"],
+                answer: "C",
+                section: "Culture"
             },
             {
-                question: "Ọ̀kan lára aṣọ ayé òde òní ni ______.",
-                options: ["Jínì", "Aṣọ Òkè", "Kìjìpá", "Sányán"],
-                answer: "A",
-                section: "Ọ̀gẹ̀ Sísẹ́"
+                question: "Èwo ni aṣọ òde òní?",
+                options: ["Kíjìpá", "Agbádá", "Suit", "Aṣọ òkè"],
+                answer: "C",
+                section: "Culture"
             },
             {
-                question: "Aṣọ Kìjìpá jẹ́ aṣọ ______.",
-                options: ["Ayé Òde Òní", "Ayé Àtijọ́", "Ilé-ìwé", "Ologun"],
-                answer: "B",
-                section: "Ọ̀gẹ̀ Sísẹ́"
+                question: "Gèlè jẹ́ apá kan nínú ______.",
+                options: ["Àṣà ògè", "Oúnjẹ", "Ilé", "Eré"],
+                answer: "A",
+                section: "Culture"
             },
             {
-                question: "Ìyàtọ̀ pàtàkì láàárín ọ̀gẹ̀ ayé àtijọ́ àti ayé òde òní ni pé ______.",
-                options: ["Ọ̀gẹ̀ òde òní gba àṣà òkèèrè púpọ̀", "Kò sí ìyàtọ̀", "Gbogbo ènìyàn ń wọ aṣọ kan náà", "Aṣọ kò ṣe pàtàkì"],
+                question: "Ọ̀kan lára àwọn ohun ọ̀ṣọ́ ni ______.",
+                options: ["Ẹgba", "Abẹ́", "Àga", "Awo"],
                 answer: "A",
-                section: "Ọ̀gẹ̀ Sísẹ́"
+                section: "Culture"
+            },
+            // Questions 6-13: Parts of Speech
+            {
+                question: "Ìsọ̀rí ọ̀rọ̀ ni ______.",
+                options: ["Pípín ọ̀rọ̀ sí ẹ̀ka", "Ìtàn", "Òwe", "Àlọ́"],
+                answer: "A",
+                section: "Parts of Speech"
+            },
+            {
+                question: "Èwo ni ọ̀rọ̀ arọ́pò orúkọ?",
+                options: ["Òun", "Ilé", "Rìn", "Dára"],
+                answer: "A",
+                section: "Parts of Speech"
+            },
+            {
+                question: "Èwo ni ọ̀rọ̀ àtòkùn?",
+                options: ["Ní", "Jẹ", "Ilé", "Dára"],
+                answer: "A",
+                section: "Parts of Speech"
+            },
+            {
+                question: "Èwo ni ọ̀rọ̀ asàpèjúwe?",
+                options: ["Tóbi", "Ilé", "Jẹ", "Ní"],
+                answer: "A",
+                section: "Parts of Speech"
+            },
+            {
+                question: "Àpólà orúkọ jẹ́ ______.",
+                options: ["Àkójọpọ̀ ọ̀rọ̀ tí orúkọ jẹ́ olórí", "Gbólóhùn", "Ọ̀rọ̀ ìṣe", "Òwe"],
+                answer: "A",
+                section: "Phrases"
+            },
+            {
+                question: "\"Ọmọ rere\" jẹ́ ______.",
+                options: ["Àpólà orúkọ", "Àpólà ìṣe", "Àpólà àtòkùn", "Gbólóhùn"],
+                answer: "A",
+                section: "Phrases"
+            },
+            {
+                question: "Àpólà orúkọ lè jẹ́ olùṣe nínú gbólóhùn.",
+                options: ["Bẹ́ẹ̀ ni", "Rárá", "Kò dájú", "Kò sí"],
+                answer: "A",
+                section: "Phrases"
+            },
+            {
+                question: "\"Olùkọ́ wa\" jẹ́ ______.",
+                options: ["Àpólà orúkọ", "Àpólà ìṣe", "Àpólà àtòkùn", "Ọ̀rọ̀ ìṣe"],
+                answer: "A",
+                section: "Phrases"
+            },
+            // Questions 14-21: Verb Phrases and Prepositional Phrases
+            {
+                question: "Àpólà ìṣe ní ______ gẹ́gẹ́ bí olórí.",
+                options: ["Ọ̀rọ̀ ìṣe", "Ọ̀rọ̀ orúkọ", "Ọ̀rọ̀ àtòkùn", "Arọ́pò orúkọ"],
+                answer: "A",
+                section: "Phrases"
+            },
+            {
+                question: "\"Ń ṣiṣẹ́ dáadáa\" jẹ́ ______.",
+                options: ["Àpólà ìṣe", "Àpólà orúkọ", "Àpólà àtòkùn", "Gbólóhùn"],
+                answer: "A",
+                section: "Phrases"
+            },
+            {
+                question: "Àpólà ìṣe máa ń ṣàlàyé ______.",
+                options: ["Ìṣe", "Orúkọ", "Ohun ọ̀ṣọ́", "Àṣà"],
+                answer: "A",
+                section: "Phrases"
+            },
+            {
+                question: "\"Jẹun kíákíá\" jẹ́ ______.",
+                options: ["Àpólà ìṣe", "Àpólà orúkọ", "Àpólà àtòkùn", "Ọ̀rọ̀ orúkọ"],
+                answer: "A",
+                section: "Phrases"
+            },
+            {
+                question: "Àpólà àtòkùn bẹ̀rẹ̀ pẹ̀lú ______.",
+                options: ["Ọ̀rọ̀ àtòkùn", "Ọ̀rọ̀ ìṣe", "Ọ̀rọ̀ orúkọ", "Arọ́pò orúkọ"],
+                answer: "A",
+                section: "Phrases"
+            },
+            {
+                question: "\"Ní ilé\" jẹ́ ______.",
+                options: ["Àpólà àtòkùn", "Àpólà ìṣe", "Àpólà orúkọ", "Gbólóhùn"],
+                answer: "A",
+                section: "Phrases"
+            },
+            {
+                question: "\"Lórí tábìlì\" jẹ́ ______.",
+                options: ["Àpólà àtòkùn", "Àpólà orúkọ", "Àpólà ìṣe", "Òwe"],
+                answer: "A",
+                section: "Phrases"
+            },
+            {
+                question: "\"Sí ọjà\" jẹ́ ______.",
+                options: ["Àpólà àtòkùn", "Àpólà ìṣe", "Àpólà orúkọ", "Ọ̀rọ̀ ìṣe"],
+                answer: "A",
+                section: "Phrases"
+            },
+            // Questions 22-28: Parts of Speech and Speech Organs
+            {
+                question: "Èwo ni ọ̀rọ̀ àtòkùn?",
+                options: ["Sí", "Rìn", "Ilé", "Tóbi"],
+                answer: "A",
+                section: "Parts of Speech"
+            },
+            {
+                question: "Ètè jẹ́ ẹ̀yà ara fún ______.",
+                options: ["Ìró èdè", "Ìrìn", "Oorun", "Ìfọwọ́"],
+                answer: "A",
+                section: "Speech Organs"
+            },
+            {
+                question: "Ahọ́n ń ràn wa lọ́wọ́ láti ______.",
+                options: ["Dá ìró èdè", "Rìn", "Fọ aṣọ", "Kọ ilé"],
+                answer: "A",
+                section: "Speech Organs"
+            },
+            {
+                question: "Eyín ń kópa nínú ______.",
+                options: ["Ìró èdè", "Oorun", "Ojú", "Ẹsẹ̀"],
+                answer: "A",
+                section: "Speech Organs"
+            },
+            {
+                question: "Gọ́ọ̀mù jẹ́ ẹ̀yà ara fún ______.",
+                options: ["Ìró èdè", "Ìfọwọ́", "Ìrìn", "Ojú"],
+                answer: "A",
+                section: "Speech Organs"
+            },
+            {
+                question: "Àfà jẹ́ ______.",
+                options: ["Ẹ̀yà ara ìró èdè", "Irú aṣọ", "Eré", "Ilé"],
+                answer: "A",
+                section: "Speech Organs"
+            },
+            {
+                question: "Ohùn ń jáde láti inú ______.",
+                options: ["Apótí ohùn", "Ojú", "Imú", "Ẹsẹ̀"],
+                answer: "A",
+                section: "Speech Organs"
+            },
+            // Questions 29-38: Religion
+            {
+                question: "Ẹ̀sìn òde òní ni ______.",
+                options: ["Ẹ̀sìn Kristẹni àti Mùsùlùmí", "Òrìṣà nìkan", "Egúngún", "Gelede"],
+                answer: "A",
+                section: "Religion"
+            },
+            {
+                question: "Bíbélì jẹ́ ìwé mímọ́ àwọn ______.",
+                options: ["Kristẹni", "Mùsùlùmí", "Ifá", "Sàngó"],
+                answer: "A",
+                section: "Religion"
+            },
+            {
+                question: "Kùránì jẹ́ ìwé mímọ́ àwọn ______.",
+                options: ["Mùsùlùmí", "Kristẹni", "Egúngún", "Ògún"],
+                answer: "A",
+                section: "Religion"
+            },
+            {
+                question: "Ilé ìjọsìn Kristẹni ni ______.",
+                options: ["Ṣọ́ọ̀ṣì", "Mọ́sálásí", "Ọjà", "Ilé ẹjọ́"],
+                answer: "A",
+                section: "Religion"
+            },
+            {
+                question: "Ilé ìjọsìn Mùsùlùmí ni ______.",
+                options: ["Mọ́sálásí", "Ṣọ́ọ̀ṣì", "Ilé ìwé", "Ilé aláṣẹ"],
+                answer: "A",
+                section: "Religion"
+            },
+            {
+                question: "Àlùfáà ni aṣáájú ______.",
+                options: ["Kristẹni", "Mùsùlùmí", "Ìbílẹ̀", "Egúngún"],
+                answer: "A",
+                section: "Religion"
+            },
+            {
+                question: "Imámù ni aṣáájú ______.",
+                options: ["Mùsùlùmí", "Kristẹni", "Ifá", "Egúngún"],
+                answer: "A",
+                section: "Religion"
+            },
+            {
+                question: "Ẹ̀sìn ń kọ́ wa láti ______.",
+                options: ["Ní ìwà rere", "Jalè", "Ṣe ìjà", "Parọ́"],
+                answer: "A",
+                section: "Religion"
+            },
+            {
+                question: "Èwo ni kì í ṣe ẹ̀sìn òde òní?",
+                options: ["Egúngún", "Kristẹni", "Mùsùlùmí", "Kò sí"],
+                answer: "A",
+                section: "Religion"
+            },
+            {
+                question: "Ìdí pàtàkì ẹ̀sìn ni láti ______.",
+                options: ["Kọ́ ènìyàn sí ìwà rere", "Fa ìjà", "Kó owó", "Ṣe eré"],
+                answer: "A",
+                section: "Religion"
+            },
+            // Questions 39-40: Parts of Speech
+            {
+                question: "Èwo ni ọ̀rọ̀ orúkọ?",
+                options: ["Ilé", "Rìn", "Tóbi", "Ní"],
+                answer: "A",
+                section: "Parts of Speech"
+            },
+            {
+                question: "Èwo ni ọ̀rọ̀ ìṣe?",
+                options: ["Jẹ", "Ilé", "Dídùn", "Tí"],
+                answer: "A",
+                section: "Parts of Speech"
             }
         ];
 
@@ -1053,14 +1171,14 @@
         let userAnswers = [];
         let studentName = "";
         let timerInterval;
-        let timeLeft = 25 * 60;
+        let timeLeft = 40 * 60;
         let questions = [];
         let examStarted = false;
 
         const backgroundImages = [
-            'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-            'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80',
-            'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
+            'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
         ];
 
         const sections = {
@@ -1089,11 +1207,11 @@
 
         function startTimer() {
             clearInterval(timerInterval);
-            timeLeft = 25 * 60;
+            timeLeft = 40 * 60;
             
             document.getElementById('timer-container').style.display = 'block';
             document.getElementById('submit-container').style.display = 'block';
-            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e67e22 0%, #d35400 100%)';
+            document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #c0392b 0%, #922b21 100%)';
             
             timerInterval = setInterval(() => {
                 timeLeft--;
@@ -1106,12 +1224,12 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
-                    alert("Àkókò ti lo! Ìdánwò rẹ yóò jẹ́ fífi sílẹ̀ ní àdáṣe.");
+                    alert("Time's up! Your examination will be submitted automatically.");
                     calculateScoreAndSubmit();
                 } else if (timeLeft <= 300) {
                     document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
                 } else if (timeLeft <= 600) {
-                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
+                    document.getElementById('timer-container').style.background = 'linear-gradient(135deg, #e67e22 0%, #d35400 100%)';
                 }
             }, 1000);
         }
@@ -1132,7 +1250,7 @@
                         
                         if (timeLeft <= 0) {
                             clearInterval(timerInterval);
-                            alert("Àkókò ti lo! Ìdánwò rẹ yóò jẹ́ fífi sílẹ̀ ní àdáṣe.");
+                            alert("Time's up! Your examination will be submitted automatically.");
                             calculateScoreAndSubmit();
                         }
                     }, 1000);
@@ -1143,7 +1261,7 @@
         window.addEventListener('beforeunload', (e) => {
             if (examStarted && document.getElementById('exam-section').classList.contains('active')) {
                 e.preventDefault();
-                e.returnValue = 'O ní ìdánwò tí ń lọ lọ́wọ́. Ṣé ó dá ọ lójú pé o fẹ́ jáde?';
+                e.returnValue = 'You have an ongoing examination. Are you sure you want to leave? Your progress may be lost.';
                 return e.returnValue;
             }
         });
@@ -1172,7 +1290,7 @@
 
         function updateTopicBadge(index) {
             const section = questions[index].section;
-            document.getElementById('topic-badge').textContent = `Ẹ̀ka: ${section}`;
+            document.getElementById('topic-badge').textContent = `Topic: ${section}`;
         }
 
         document.getElementById('start-exam-btn').addEventListener('click', () => {
@@ -1196,7 +1314,7 @@
                 isValid = false;
             } else {
                 document.getElementById('first-name-error').style.display = 'none';
-                document.getElementById('first-name').style.borderColor = '#5d7e9e';
+                document.getElementById('first-name').style.borderColor = '#9e5d5d';
             }
             
             if (!middleName) {
@@ -1205,7 +1323,7 @@
                 isValid = false;
             } else {
                 document.getElementById('middle-name-error').style.display = 'none';
-                document.getElementById('middle-name').style.borderColor = '#5d7e9e';
+                document.getElementById('middle-name').style.borderColor = '#9e5d5d';
             }
             
             if (!lastName) {
@@ -1214,7 +1332,7 @@
                 isValid = false;
             } else {
                 document.getElementById('last-name-error').style.display = 'none';
-                document.getElementById('last-name').style.borderColor = '#5d7e9e';
+                document.getElementById('last-name').style.borderColor = '#9e5d5d';
             }
             
             if (isValid) {
@@ -1296,10 +1414,10 @@
 
         document.getElementById('submit-exam').addEventListener('click', () => {
             const unanswered = userAnswers.filter(a => a === null).length;
-            let confirmMessage = "Ṣé ó dá ọ lójú pé o fẹ́ fi sílẹ̀? O kò lè yí ìdáhùn rẹ padà mọ́.";
+            let confirmMessage = "Are you sure you want to submit? You will not be able to change your answers after this.";
             
             if (unanswered > 0) {
-                confirmMessage += `\n\n⚠️ Ìkìlọ̀: O ní ${unanswered} ìbéèrè tí kò tíì dáhùn.`;
+                confirmMessage += `\n\n⚠️ Warning: You have ${unanswered} unanswered question(s).`;
             }
             
             const confirmed = confirm(confirmMessage);
@@ -1332,7 +1450,7 @@
                 questionNumber.className = 'question-number';
                 questionNumber.textContent = i + 1;
                 questionNumber.dataset.index = i;
-                questionNumber.title = `Ìbéèrè ${i + 1} - ${questions[i].section}`;
+                questionNumber.title = `Question ${i + 1} - ${questions[i].section}`;
                 
                 if (userAnswers[i] !== null) {
                     questionNumber.classList.add('answered');
@@ -1371,7 +1489,7 @@
         function loadQuestion(index) {
             const question = questions[index];
             
-            document.getElementById('question-counter').textContent = `Ìbéèrè ${index + 1} nínú ${questions.length}`;
+            document.getElementById('question-counter').textContent = `Question ${index + 1} of ${questions.length}`;
             document.getElementById('question-text').innerHTML = question.question;
             
             updateTopicBadge(index);
@@ -1405,8 +1523,7 @@
                 
                 const label = document.createElement('label');
                 label.htmlFor = optionId;
-                label.className = 'yoruba-text';
-                label.textContent = `${labels[optionIndex]}. ${option}`;
+                label.innerHTML = `${labels[optionIndex]}. ${option}`;
                 
                 optionDiv.addEventListener('click', (e) => {
                     if (e.target !== radio) {
@@ -1441,8 +1558,8 @@
                 }
             }
             
-            // Submit score to Google Form ONLY - do NOT display to student
-            submitToGoogleForm(studentName, "SSS1 Yorùbá - Ìdánwò Ìgbà Kẹta 2025/2026", `${score}/20`);
+            // Submit score to Google Form
+            submitToGoogleForm(studentName, "SS1 Yoruba - First Term Examination 2025/2026", `${score}/40`);
             
             document.getElementById('submission-status').style.display = 'block';
             showSection('results');
@@ -1452,7 +1569,7 @@
             const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSc-ceYVrOpCcsDj21HIqO3uq69Xrm0ue6CzNL-1x5zFIslfWw/formResponse";
             const formData = new FormData();
             formData.append("entry.862885683", fullName);
-            formData.append("entry.1545021484", "SSS1");
+            formData.append("entry.1545021484", "SS1");
             formData.append("entry.1558221900", subject);
             formData.append("entry.2022160530", score);
 
